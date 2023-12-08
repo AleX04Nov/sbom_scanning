@@ -1,0 +1,84 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:56:24Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.stephenmcd/django-socketio",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.stephenmcd-django-socketio"
+    ],
+    "documentNamespace": "https://github.com/stephenmcd/django-socketio/dependency_graph/sbom-aaa0bd921e064a72",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.stephenmcd-django-socketio",
+            "name": "com.github.stephenmcd/django-socketio",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/stephenmcd/django-socketio",
+            "licenseDeclared": "BSD-2-Clause",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/stephenmcd/django-socketio"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-pip-django",
+            "name": "pip:django",
+            "versionInfo": ">= 1.4.8",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-pip-gevent-socketio-0.2.1",
+            "name": "pip:gevent-socketio",
+            "versionInfo": "0.2.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "BSD-2-Clause",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:pypi/gevent-socketio@0.2.1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-pip-sphinx-me",
+            "name": "pip:sphinx-me",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.stephenmcd-django-socketio",
+            "relatedSpdxElement": "SPDXRef-pip-django"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.stephenmcd-django-socketio",
+            "relatedSpdxElement": "SPDXRef-pip-gevent-socketio-0.2.1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.stephenmcd-django-socketio",
+            "relatedSpdxElement": "SPDXRef-pip-sphinx-me"
+        }
+    ]
+}

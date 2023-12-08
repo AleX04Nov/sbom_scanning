@@ -1,0 +1,56 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:54:00Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.KieSun/Dream",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.KieSun-Dream"
+    ],
+    "documentNamespace": "https://github.com/KieSun/Dream/dependency_graph/sbom-2e0cec619a3a74e2",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.KieSun-Dream",
+            "name": "com.github.KieSun/Dream",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/KieSun/Dream",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/KieSun/Dream"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-buckets-js-1.98.2",
+            "name": "npm:buckets-js",
+            "versionInfo": "1.98.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/buckets-js@1.98.2",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.KieSun-Dream",
+            "relatedSpdxElement": "SPDXRef-npm-buckets-js-1.98.2"
+        }
+    ]
+}

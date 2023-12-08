@@ -1,0 +1,2040 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "addressable",
+            "version": "2.3.8",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:59Z",
+              "published": "2021-07-12T16:58:33Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jxhc-q857-3j6g",
+              "aliases": [
+                "CVE-2021-32740"
+              ],
+              "summary": "Regular Expression Denial of Service in Addressable templates",
+              "details": "### Impact\n\nWithin the URI template implementation in Addressable, a maliciously crafted template may result in uncontrolled resource consumption, leading to denial of service when matched against a URI. In typical usage, templates would not normally be read from untrusted user input, but nonetheless, no previous security advisory for Addressable has cautioned against doing this. Users of the parsing capabilities in Addressable but not the URI template capabilities are unaffected.\n\n### Patches\n\nThe vulnerability was introduced in version 2.3.0 (previously yanked) and has been present in all subsequent versions up to, and including, 2.7.0. It is fixed in version 2.8.0.\n\n### Workarounds\n\nThe vulnerability can be avoided by only creating Template objects from trusted sources that have been validated not to produce catastrophic backtracking.\n\n### References\n\n- https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS\n- https://cwe.mitre.org/data/definitions/1333.html\n- https://www.regular-expressions.info/catastrophic.html\n\n### For more information\nIf you have any questions or comments about this advisory:\n* [Open an issue](https://github.com/sporkmonger/addressable/issues)\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "addressable",
+                    "purl": "pkg:gem/addressable"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.3.0"
+                        },
+                        {
+                          "fixed": "2.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.7.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.7.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/07/GHSA-jxhc-q857-3j6g/GHSA-jxhc-q857-3j6g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/security/advisories/GHSA-jxhc-q857-3j6g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32740"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/commit/0d8a3127e35886ce9284810a7f2438bff6b43cbc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/commit/89c76130ce255c601f642a018cb5fb5a80e679a7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/commit/92685096b1f7235ed8986c03ce30a24972eed848#diff-fb36d3dc67e6565ffde17e666a98697f48e76dac38fabf1bb9e97cdf3b583d76"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jxhc-q857-3j6g"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/addressable/CVE-2021-32740.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sporkmonger/addressable"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SDFQM2NHNAZ3NNUQZEJTYECYZYXV4UDS/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WYPVOOQU7UB277UUERJMCNQLRCXRCIQ5/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-07-06T15:25:32Z",
+                "nvd_published_at": "2021-07-06T15:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jxhc-q857-3j6g"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jmespath",
+            "version": "1.0.2",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:09:36Z",
+              "published": "2022-06-07T00:00:31Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5c5f-7vfq-3732",
+              "aliases": [
+                "CVE-2022-32511"
+              ],
+              "summary": "JMESPath for Ruby uses unsafe JSON.load when safe JSON.parse is preferable",
+              "details": "jmespath.rb (aka JMESPath for Ruby) before 1.6.1 uses JSON.load in a situation where JSON.parse is preferable.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "jmespath",
+                    "purl": "pkg:gem/jmespath"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.0",
+                    "0.9.0",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.6.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/06/GHSA-5c5f-7vfq-3732/GHSA-5c5f-7vfq-3732.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-32511"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jmespath/jmespath.rb/pull/55"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jmespath/jmespath.rb/commit/e8841280053a9d9a0c90f36223f926c8b9e4ec49"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jmespath/jmespath.rb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jmespath/jmespath.rb/compare/v1.6.0...v1.6.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jmespath/CVE-2022-32511.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/376NUPIPTYBWWGS33GO4UOLQRI4D3BTP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AGZ2YWONVFFOPACHAT4MM7ZBT4DNHOF5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackoverflow.com/a/30050571/580231"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-07T21:14:51Z",
+                "nvd_published_at": "2022-06-06T22:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5c5f-7vfq-3732"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "json",
+            "version": "2.1.0",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:01:58Z",
+              "published": "2020-07-27T18:08:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jphg-qwrw-7w9g",
+              "aliases": [
+                "CVE-2020-10663"
+              ],
+              "summary": "Unsafe object creation in json RubyGem",
+              "details": "The JSON gem through 2.2.0 for Ruby, as used in Ruby 2.4 through 2.4.9, 2.5 through 2.5.7, and 2.6 through 2.6.5, has an Unsafe Object Creation Vulnerability. This is quite similar to CVE-2013-0269/GHSA-x457-cw4h-hq5f, but does not rely on poor garbage-collection behavior within Ruby. Specifically, use of JSON parsing methods can lead to creation of a malicious object within the interpreter, with adverse effects that are application-dependent.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "json",
+                    "purl": "pkg:gem/json"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.1",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.7.4",
+                    "1.7.5",
+                    "1.7.6",
+                    "1.7.7",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.5",
+                    "1.8.6",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.1.0",
+                    "2.2.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-jphg-qwrw-7w9g/GHSA-jphg-qwrw-7w9g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-10663"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/flori/json"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/flori/json/blob/master/CHANGES.md#2019-12-11-230"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/json/CVE-2020-10663.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r37c0e1807da7ff2bdd028bbe296465a6bbb99e2320dbe661d5d8b33b@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3b04f4e99a19613f88ae088aa18cd271231a3c79dfff8f5efa8cda61@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5f17bfca1d6e7f4b33ae978725b2fd62a9f1b3111696eafa9add802d@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8d2e174230f6d26e16c007546e804c343f1f68956f526daaafa4aaae@%3Cdev.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb023d54a46da1ac0d8969097f5fecc79636b07d3b80db7b818a5c55c@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2b981912446a74e14fe6076c4b7c7d8502727ea0718e6a65a9b1be5@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd9b9cc843f5cf5b532bdad9e87a817967efcf52b917e8c43b6df4cc7@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rec8bb4d637b04575da41cfae49118e108e95d43bfac39b7b698ee4db@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ree3abcd33c06ee95ab59faa1751198a1186d8941ddc2c2562c12966c@%3Cissues.zookeeper.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/04/msg00030.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7QL6MJD2BO4IRJ5CJFNMCDYMQQFT24BJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/F4TNVTT66VPRMX5UZYSDGSVRXKKDDDU5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NK2PBXWMFRUD7U7Q7LHV4KYLYID77RI4/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20210129-0003/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://support.apple.com/kb/HT211931"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2020/dsa-4721"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2020/03/19/json-dos-cve-2020-10663/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-05/msg00004.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2020/Dec/32"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-07-27T18:07:46Z",
+                "nvd_published_at": "2020-04-28T21:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jphg-qwrw-7w9g"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "puppet",
+            "version": "3.7.1",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:23Z",
+              "published": "2021-12-02T17:52:45Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-93j5-g845-9wqp",
+              "aliases": [
+                "CVE-2021-27023"
+              ],
+              "summary": "Unsafe HTTP Redirect in Puppet Agent and Puppet Server",
+              "details": "A flaw was discovered in Puppet Agent and Puppet Server that may result in a leak of HTTP credentials when following HTTP redirects to a different host. This is similar to CVE-2018-1000007",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.12.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.1.0",
+                    "7.10.0",
+                    "7.11.0",
+                    "7.12.0",
+                    "7.3.0",
+                    "7.4.0",
+                    "7.4.1",
+                    "7.5.0",
+                    "7.6.1",
+                    "7.7.0",
+                    "7.8.0",
+                    "7.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-93j5-g845-9wqp/GHSA-93j5-g845-9wqp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.25.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.6",
+                    "0.16.0",
+                    "0.18.4",
+                    "0.22.4",
+                    "0.23.0",
+                    "0.23.1",
+                    "0.23.2",
+                    "0.24.0",
+                    "0.24.1",
+                    "0.24.2",
+                    "0.24.3",
+                    "0.24.4",
+                    "0.24.5",
+                    "0.24.6",
+                    "0.24.7",
+                    "0.24.8",
+                    "0.24.9",
+                    "0.25.0",
+                    "0.25.1",
+                    "0.25.2",
+                    "0.25.3",
+                    "0.25.4",
+                    "0.25.5",
+                    "0.9.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.10",
+                    "2.6.11",
+                    "2.6.12",
+                    "2.6.13",
+                    "2.6.14",
+                    "2.6.15",
+                    "2.6.16",
+                    "2.6.17",
+                    "2.6.18",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.8",
+                    "2.6.9",
+                    "2.7.1",
+                    "2.7.11",
+                    "2.7.12",
+                    "2.7.13",
+                    "2.7.14",
+                    "2.7.16",
+                    "2.7.17",
+                    "2.7.18",
+                    "2.7.19",
+                    "2.7.20",
+                    "2.7.20.rc1",
+                    "2.7.21",
+                    "2.7.22",
+                    "2.7.23",
+                    "2.7.24",
+                    "2.7.25",
+                    "2.7.26",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.7.5",
+                    "2.7.6",
+                    "2.7.8",
+                    "2.7.9",
+                    "3.0.0",
+                    "3.0.0.rc4",
+                    "3.0.0.rc5",
+                    "3.0.0.rc7",
+                    "3.0.0.rc8",
+                    "3.0.1",
+                    "3.0.1.rc1",
+                    "3.0.2",
+                    "3.0.2.rc1",
+                    "3.0.2.rc2",
+                    "3.0.2.rc3",
+                    "3.1.0",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.1",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.1.rc1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.4",
+                    "3.3.0",
+                    "3.3.0.rc2",
+                    "3.3.0.rc3",
+                    "3.3.1",
+                    "3.3.1.rc1",
+                    "3.3.1.rc2",
+                    "3.3.1.rc3",
+                    "3.3.2",
+                    "3.4.0",
+                    "3.4.0.rc1",
+                    "3.4.0.rc2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.5.0.rc1",
+                    "3.5.0.rc2",
+                    "3.5.0.rc3",
+                    "3.5.1",
+                    "3.5.1.rc1",
+                    "3.6.0",
+                    "3.6.0.rc1",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.5",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.8.7",
+                    "4.0.0",
+                    "4.0.0.rc1",
+                    "4.1.0",
+                    "4.10.0",
+                    "4.10.1",
+                    "4.10.10",
+                    "4.10.11",
+                    "4.10.12",
+                    "4.10.4",
+                    "4.10.5",
+                    "4.10.6",
+                    "4.10.7",
+                    "4.10.8",
+                    "4.10.9",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.3.0",
+                    "4.3.1",
+                    "4.3.2",
+                    "4.4.0",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.8.0",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9.0",
+                    "4.9.1",
+                    "4.9.2",
+                    "4.9.3",
+                    "4.9.4",
+                    "5.0.0",
+                    "5.0.1",
+                    "5.1.0",
+                    "5.2.0",
+                    "5.3.1",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.5.1",
+                    "5.5.10",
+                    "5.5.12",
+                    "5.5.13",
+                    "5.5.14",
+                    "5.5.16",
+                    "5.5.17",
+                    "5.5.18",
+                    "5.5.19",
+                    "5.5.2",
+                    "5.5.20",
+                    "5.5.21",
+                    "5.5.22",
+                    "5.5.3",
+                    "5.5.6",
+                    "5.5.7",
+                    "5.5.8",
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9",
+                    "6.1.0",
+                    "6.10.0",
+                    "6.10.1",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.13.0",
+                    "6.14.0",
+                    "6.15.0",
+                    "6.16.0",
+                    "6.17.0",
+                    "6.18.0",
+                    "6.19.0",
+                    "6.19.1",
+                    "6.2.0",
+                    "6.20.0",
+                    "6.21.0",
+                    "6.21.1",
+                    "6.22.1",
+                    "6.23.0",
+                    "6.24.0",
+                    "6.25.0",
+                    "6.3.0",
+                    "6.4.0",
+                    "6.4.1",
+                    "6.4.2",
+                    "6.4.3",
+                    "6.4.4",
+                    "6.4.5",
+                    "6.5.0",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.2",
+                    "6.8.0",
+                    "6.8.1",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-93j5-g845-9wqp/GHSA-93j5-g845-9wqp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27023"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/puppetlabs/puppet"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/puppet/CVE-2021-27023.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/62SELE7EKVKZL4GABFMVYMIIUZ7FPEF7/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://puppet.com/security/cve/CVE-2021-27023"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-11-30T14:35:48Z",
+                "nvd_published_at": "2021-11-18T15:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:04:11Z",
+              "published": "2021-04-13T15:42:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gqvf-892r-vjm5",
+              "aliases": [
+                "CVE-2020-7942"
+              ],
+              "summary": "Improper Certificate Validation in Puppet",
+              "details": "Previously, Puppet operated on the model that a node with a valid certificate was entitled to all information in the system and that a compromised certificate allowed access to everything in the infrastructure. When a node's catalog falls back to the `default` node, the catalog can be retrieved for a different node by modifying facts for the Puppet run. This issue can be mitigated by setting `strict_hostname_checking = true` in `puppet.conf` on your Puppet master. Puppet 6.13.0 changes the default behavior for strict_hostname_checking from false to true. It is recommended that Puppet Open Source and Puppet Enterprise users that are not upgrading still set strict_hostname_checking to true to ensure secure behavior.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.13.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9",
+                    "6.1.0",
+                    "6.10.0",
+                    "6.10.1",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.2.0",
+                    "6.3.0",
+                    "6.4.0",
+                    "6.4.1",
+                    "6.4.2",
+                    "6.4.3",
+                    "6.4.4",
+                    "6.4.5",
+                    "6.5.0",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.2",
+                    "6.8.0",
+                    "6.8.1",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-gqvf-892r-vjm5/GHSA-gqvf-892r-vjm5.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.5.19"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.6",
+                    "0.16.0",
+                    "0.18.4",
+                    "0.22.4",
+                    "0.23.0",
+                    "0.23.1",
+                    "0.23.2",
+                    "0.24.0",
+                    "0.24.1",
+                    "0.24.2",
+                    "0.24.3",
+                    "0.24.4",
+                    "0.24.5",
+                    "0.24.6",
+                    "0.24.7",
+                    "0.24.8",
+                    "0.24.9",
+                    "0.25.0",
+                    "0.25.1",
+                    "0.25.2",
+                    "0.25.3",
+                    "0.25.4",
+                    "0.25.5",
+                    "0.9.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.10",
+                    "2.6.11",
+                    "2.6.12",
+                    "2.6.13",
+                    "2.6.14",
+                    "2.6.15",
+                    "2.6.16",
+                    "2.6.17",
+                    "2.6.18",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.8",
+                    "2.6.9",
+                    "2.7.1",
+                    "2.7.11",
+                    "2.7.12",
+                    "2.7.13",
+                    "2.7.14",
+                    "2.7.16",
+                    "2.7.17",
+                    "2.7.18",
+                    "2.7.19",
+                    "2.7.20",
+                    "2.7.20.rc1",
+                    "2.7.21",
+                    "2.7.22",
+                    "2.7.23",
+                    "2.7.24",
+                    "2.7.25",
+                    "2.7.26",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.7.5",
+                    "2.7.6",
+                    "2.7.8",
+                    "2.7.9",
+                    "3.0.0",
+                    "3.0.0.rc4",
+                    "3.0.0.rc5",
+                    "3.0.0.rc7",
+                    "3.0.0.rc8",
+                    "3.0.1",
+                    "3.0.1.rc1",
+                    "3.0.2",
+                    "3.0.2.rc1",
+                    "3.0.2.rc2",
+                    "3.0.2.rc3",
+                    "3.1.0",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.1",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.1.rc1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.4",
+                    "3.3.0",
+                    "3.3.0.rc2",
+                    "3.3.0.rc3",
+                    "3.3.1",
+                    "3.3.1.rc1",
+                    "3.3.1.rc2",
+                    "3.3.1.rc3",
+                    "3.3.2",
+                    "3.4.0",
+                    "3.4.0.rc1",
+                    "3.4.0.rc2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.5.0.rc1",
+                    "3.5.0.rc2",
+                    "3.5.0.rc3",
+                    "3.5.1",
+                    "3.5.1.rc1",
+                    "3.6.0",
+                    "3.6.0.rc1",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.5",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.8.7",
+                    "4.0.0",
+                    "4.0.0.rc1",
+                    "4.1.0",
+                    "4.10.0",
+                    "4.10.1",
+                    "4.10.10",
+                    "4.10.11",
+                    "4.10.12",
+                    "4.10.4",
+                    "4.10.5",
+                    "4.10.6",
+                    "4.10.7",
+                    "4.10.8",
+                    "4.10.9",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.3.0",
+                    "4.3.1",
+                    "4.3.2",
+                    "4.4.0",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.8.0",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9.0",
+                    "4.9.1",
+                    "4.9.2",
+                    "4.9.3",
+                    "4.9.4",
+                    "5.0.0",
+                    "5.0.1",
+                    "5.1.0",
+                    "5.2.0",
+                    "5.3.1",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.5.1",
+                    "5.5.10",
+                    "5.5.12",
+                    "5.5.13",
+                    "5.5.14",
+                    "5.5.16",
+                    "5.5.17",
+                    "5.5.18",
+                    "5.5.2",
+                    "5.5.3",
+                    "5.5.6",
+                    "5.5.7",
+                    "5.5.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-gqvf-892r-vjm5/GHSA-gqvf-892r-vjm5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7942"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/puppet/CVE-2020-7942.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://puppet.com/security/cve/CVE-2020-7942/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-04-07T23:15:22Z",
+                "nvd_published_at": "2020-02-19T21:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:05:23Z",
+              "published": "2021-12-02T17:54:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q4g7-jrxv-67r9",
+              "aliases": [
+                "CVE-2021-27025"
+              ],
+              "summary": "Silent Configuration Failure in Puppet Agent",
+              "details": "A flaw was discovered in Puppet Agent where the agent may silently ignore Augeas settings or may be vulnerable to a Denial of Service condition prior to the first 'pluginsync'.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.12.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.1.0",
+                    "7.10.0",
+                    "7.11.0",
+                    "7.12.0",
+                    "7.3.0",
+                    "7.4.0",
+                    "7.4.1",
+                    "7.5.0",
+                    "7.6.1",
+                    "7.7.0",
+                    "7.8.0",
+                    "7.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-q4g7-jrxv-67r9/GHSA-q4g7-jrxv-67r9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.25.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.6",
+                    "0.16.0",
+                    "0.18.4",
+                    "0.22.4",
+                    "0.23.0",
+                    "0.23.1",
+                    "0.23.2",
+                    "0.24.0",
+                    "0.24.1",
+                    "0.24.2",
+                    "0.24.3",
+                    "0.24.4",
+                    "0.24.5",
+                    "0.24.6",
+                    "0.24.7",
+                    "0.24.8",
+                    "0.24.9",
+                    "0.25.0",
+                    "0.25.1",
+                    "0.25.2",
+                    "0.25.3",
+                    "0.25.4",
+                    "0.25.5",
+                    "0.9.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.10",
+                    "2.6.11",
+                    "2.6.12",
+                    "2.6.13",
+                    "2.6.14",
+                    "2.6.15",
+                    "2.6.16",
+                    "2.6.17",
+                    "2.6.18",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.8",
+                    "2.6.9",
+                    "2.7.1",
+                    "2.7.11",
+                    "2.7.12",
+                    "2.7.13",
+                    "2.7.14",
+                    "2.7.16",
+                    "2.7.17",
+                    "2.7.18",
+                    "2.7.19",
+                    "2.7.20",
+                    "2.7.20.rc1",
+                    "2.7.21",
+                    "2.7.22",
+                    "2.7.23",
+                    "2.7.24",
+                    "2.7.25",
+                    "2.7.26",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.7.5",
+                    "2.7.6",
+                    "2.7.8",
+                    "2.7.9",
+                    "3.0.0",
+                    "3.0.0.rc4",
+                    "3.0.0.rc5",
+                    "3.0.0.rc7",
+                    "3.0.0.rc8",
+                    "3.0.1",
+                    "3.0.1.rc1",
+                    "3.0.2",
+                    "3.0.2.rc1",
+                    "3.0.2.rc2",
+                    "3.0.2.rc3",
+                    "3.1.0",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.1",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.1.rc1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.4",
+                    "3.3.0",
+                    "3.3.0.rc2",
+                    "3.3.0.rc3",
+                    "3.3.1",
+                    "3.3.1.rc1",
+                    "3.3.1.rc2",
+                    "3.3.1.rc3",
+                    "3.3.2",
+                    "3.4.0",
+                    "3.4.0.rc1",
+                    "3.4.0.rc2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.5.0.rc1",
+                    "3.5.0.rc2",
+                    "3.5.0.rc3",
+                    "3.5.1",
+                    "3.5.1.rc1",
+                    "3.6.0",
+                    "3.6.0.rc1",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.5",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.8.7",
+                    "4.0.0",
+                    "4.0.0.rc1",
+                    "4.1.0",
+                    "4.10.0",
+                    "4.10.1",
+                    "4.10.10",
+                    "4.10.11",
+                    "4.10.12",
+                    "4.10.4",
+                    "4.10.5",
+                    "4.10.6",
+                    "4.10.7",
+                    "4.10.8",
+                    "4.10.9",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.3.0",
+                    "4.3.1",
+                    "4.3.2",
+                    "4.4.0",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.8.0",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9.0",
+                    "4.9.1",
+                    "4.9.2",
+                    "4.9.3",
+                    "4.9.4",
+                    "5.0.0",
+                    "5.0.1",
+                    "5.1.0",
+                    "5.2.0",
+                    "5.3.1",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.5.1",
+                    "5.5.10",
+                    "5.5.12",
+                    "5.5.13",
+                    "5.5.14",
+                    "5.5.16",
+                    "5.5.17",
+                    "5.5.18",
+                    "5.5.19",
+                    "5.5.2",
+                    "5.5.20",
+                    "5.5.21",
+                    "5.5.22",
+                    "5.5.3",
+                    "5.5.6",
+                    "5.5.7",
+                    "5.5.8",
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9",
+                    "6.1.0",
+                    "6.10.0",
+                    "6.10.1",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.13.0",
+                    "6.14.0",
+                    "6.15.0",
+                    "6.16.0",
+                    "6.17.0",
+                    "6.18.0",
+                    "6.19.0",
+                    "6.19.1",
+                    "6.2.0",
+                    "6.20.0",
+                    "6.21.0",
+                    "6.21.1",
+                    "6.22.1",
+                    "6.23.0",
+                    "6.24.0",
+                    "6.25.0",
+                    "6.3.0",
+                    "6.4.0",
+                    "6.4.1",
+                    "6.4.2",
+                    "6.4.3",
+                    "6.4.4",
+                    "6.4.5",
+                    "6.5.0",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.2",
+                    "6.8.0",
+                    "6.8.1",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-q4g7-jrxv-67r9/GHSA-q4g7-jrxv-67r9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27025"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/puppetlabs/puppet"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/puppet/CVE-2021-27025.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/62SELE7EKVKZL4GABFMVYMIIUZ7FPEF7/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://puppet.com/security/cve/cve-2021-27025"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-11-30T14:35:55Z",
+                "nvd_published_at": "2021-11-18T15:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:48Z",
+              "published": "2022-05-13T01:41:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vw22-465p-8j5w",
+              "aliases": [
+                "CVE-2017-10689"
+              ],
+              "summary": "Tarball permission preservation in puppet",
+              "details": "When installing a module using the system tar, the PMT will filter filesystem permissions to a sane value. This may just be based on the user's umask.\n\nWhen using minitar, files are unpacked with whatever permissions are in the tarball. This is potentially unsafe, as tarballs can be easily created with weird permissions.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.10.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.6",
+                    "0.16.0",
+                    "0.18.4",
+                    "0.22.4",
+                    "0.23.0",
+                    "0.23.1",
+                    "0.23.2",
+                    "0.24.0",
+                    "0.24.1",
+                    "0.24.2",
+                    "0.24.3",
+                    "0.24.4",
+                    "0.24.5",
+                    "0.24.6",
+                    "0.24.7",
+                    "0.24.8",
+                    "0.24.9",
+                    "0.25.0",
+                    "0.25.1",
+                    "0.25.2",
+                    "0.25.3",
+                    "0.25.4",
+                    "0.25.5",
+                    "0.9.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.10",
+                    "2.6.11",
+                    "2.6.12",
+                    "2.6.13",
+                    "2.6.14",
+                    "2.6.15",
+                    "2.6.16",
+                    "2.6.17",
+                    "2.6.18",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.8",
+                    "2.6.9",
+                    "2.7.1",
+                    "2.7.11",
+                    "2.7.12",
+                    "2.7.13",
+                    "2.7.14",
+                    "2.7.16",
+                    "2.7.17",
+                    "2.7.18",
+                    "2.7.19",
+                    "2.7.20",
+                    "2.7.20.rc1",
+                    "2.7.21",
+                    "2.7.22",
+                    "2.7.23",
+                    "2.7.24",
+                    "2.7.25",
+                    "2.7.26",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.7.5",
+                    "2.7.6",
+                    "2.7.8",
+                    "2.7.9",
+                    "3.0.0",
+                    "3.0.0.rc4",
+                    "3.0.0.rc5",
+                    "3.0.0.rc7",
+                    "3.0.0.rc8",
+                    "3.0.1",
+                    "3.0.1.rc1",
+                    "3.0.2",
+                    "3.0.2.rc1",
+                    "3.0.2.rc2",
+                    "3.0.2.rc3",
+                    "3.1.0",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.1",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.1.rc1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.4",
+                    "3.3.0",
+                    "3.3.0.rc2",
+                    "3.3.0.rc3",
+                    "3.3.1",
+                    "3.3.1.rc1",
+                    "3.3.1.rc2",
+                    "3.3.1.rc3",
+                    "3.3.2",
+                    "3.4.0",
+                    "3.4.0.rc1",
+                    "3.4.0.rc2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.5.0.rc1",
+                    "3.5.0.rc2",
+                    "3.5.0.rc3",
+                    "3.5.1",
+                    "3.5.1.rc1",
+                    "3.6.0",
+                    "3.6.0.rc1",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.5",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.8.7",
+                    "4.0.0",
+                    "4.0.0.rc1",
+                    "4.1.0",
+                    "4.10.0",
+                    "4.10.1",
+                    "4.10.4",
+                    "4.10.5",
+                    "4.10.6",
+                    "4.10.7",
+                    "4.10.8",
+                    "4.10.9",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.3.0",
+                    "4.3.1",
+                    "4.3.2",
+                    "4.4.0",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.8.0",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9.0",
+                    "4.9.1",
+                    "4.9.2",
+                    "4.9.3",
+                    "4.9.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vw22-465p-8j5w/GHSA-vw22-465p-8j5w.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "puppet",
+                    "purl": "pkg:gem/puppet"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.3.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0",
+                    "5.0.1",
+                    "5.1.0",
+                    "5.2.0",
+                    "5.3.1",
+                    "5.3.2",
+                    "5.3.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-vw22-465p-8j5w/GHSA-vw22-465p-8j5w.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-10689"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/puppetlabs/puppet/commit/17d9e02da3882e44c1876e2805cf9708481715ee"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/puppetlabs/puppet/commit/2f1047f85e22cde139a421bc25d371f2ffc92cb1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2927"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/puppetlabs/puppet"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/puppet/CVE-2017-10689.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://puppet.com/security/cve/CVE-2017-10689"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tickets.puppetlabs.com/browse/PUP-7866"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3567-1/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-269"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-21T22:29:32Z",
+                "nvd_published_at": "2018-02-09T20:29:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-93j5-g845-9wqp"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-gqvf-892r-vjm5"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-q4g7-jrxv-67r9"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-vw22-465p-8j5w"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rake",
+            "version": "10.3.2",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:13Z",
+              "published": "2020-02-28T16:54:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jppv-gw3r-w3q8",
+              "aliases": [
+                "CVE-2020-8130"
+              ],
+              "summary": "OS Command Injection in Rake",
+              "details": "There is an OS command injection vulnerability in Ruby Rake before 12.3.3 in `Rake::FileList` when supplying a filename that begins with the pipe character `|`.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rake",
+                    "purl": "pkg:gem/rake"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "12.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.4.10",
+                    "0.4.11",
+                    "0.4.12",
+                    "0.4.13",
+                    "0.4.14",
+                    "0.4.15",
+                    "0.4.8",
+                    "0.4.9",
+                    "0.5.0",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.6.0",
+                    "0.6.2",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.9.0",
+                    "0.9.0.beta.0",
+                    "0.9.0.beta.1",
+                    "0.9.0.beta.2",
+                    "0.9.0.beta.4",
+                    "0.9.0.beta.5",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.2.2",
+                    "0.9.3",
+                    "0.9.3.beta.1",
+                    "0.9.3.beta.2",
+                    "0.9.3.beta.3",
+                    "0.9.3.beta.4",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "10.0.0",
+                    "10.0.0.beta.1",
+                    "10.0.0.beta.2",
+                    "10.0.1",
+                    "10.0.2",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.1.0",
+                    "10.1.0.beta.1",
+                    "10.1.0.beta.2",
+                    "10.1.0.beta.3",
+                    "10.1.1",
+                    "10.2.0",
+                    "10.2.1",
+                    "10.2.2",
+                    "10.3.0",
+                    "10.3.1",
+                    "10.3.2",
+                    "10.4.0",
+                    "10.4.1",
+                    "10.4.2",
+                    "10.5.0",
+                    "11.0.1",
+                    "11.1.0",
+                    "11.1.1",
+                    "11.1.2",
+                    "11.2.0",
+                    "11.2.2",
+                    "11.3.0",
+                    "12.0.0",
+                    "12.0.0.beta1",
+                    "12.1.0",
+                    "12.2.0",
+                    "12.2.1",
+                    "12.3.0",
+                    "12.3.1",
+                    "12.3.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.3.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-jppv-gw3r-w3q8/GHSA-jppv-gw3r-w3q8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8130"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rake/commit/5b8f8fc41a5d7d7d6a5d767e48464c60884d3aee"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/651518"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jppv-gw3r-w3q8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rake"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rake/CVE-2020-8130.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/02/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/523CLQ62VRN3VVC52KMPTROCCKY4Z36B/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VXMX4ARNX2JLRJMSH4N3J3UBMUT5CI44/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4295-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-02-25T15:50:03Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jppv-gw3r-w3q8"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

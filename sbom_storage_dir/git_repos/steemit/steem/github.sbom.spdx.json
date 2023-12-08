@@ -1,0 +1,175 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:52:10Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.steemit/steem",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.steemit-steem"
+    ],
+    "documentNamespace": "https://github.com/steemit/steem/dependency_graph/sbom-93727eed38472222",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.steemit-steem",
+            "name": "com.github.steemit/steem",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/steemit/steem",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/steemit/steem"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-checkout-2",
+            "name": "actions:actions/checkout",
+            "versionInfo": "2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/checkout@2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-aws-actions-configure-aws-credentials-1",
+            "name": "actions:aws-actions/configure-aws-credentials",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/aws-actions/configure-aws-credentials@1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-docker-build-push-action-2",
+            "name": "actions:docker/build-push-action",
+            "versionInfo": "2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/docker/build-push-action@2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-docker-login-action-1",
+            "name": "actions:docker/login-action",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/docker/login-action@1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-docker-setup-buildx-action-1",
+            "name": "actions:docker/setup-buildx-action",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/docker/setup-buildx-action@1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-docker-setup-qemu-action-1",
+            "name": "actions:docker/setup-qemu-action",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/docker/setup-qemu-action@1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-ety001-ec2-github-runner-2",
+            "name": "actions:ety001/ec2-github-runner",
+            "versionInfo": "2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/ety001/ec2-github-runner@2",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-actions-checkout-2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-aws-actions-configure-aws-credentials-1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-docker-build-push-action-2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-docker-login-action-1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-docker-setup-buildx-action-1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-docker-setup-qemu-action-1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.steemit-steem",
+            "relatedSpdxElement": "SPDXRef-actions-ety001-ec2-github-runner-2"
+        }
+    ]
+}

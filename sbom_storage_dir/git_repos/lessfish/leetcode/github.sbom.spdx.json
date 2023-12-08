@@ -1,0 +1,75 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:55:04Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.lessfish/leetcode",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.lessfish-leetcode"
+    ],
+    "documentNamespace": "https://github.com/lessfish/leetcode/dependency_graph/sbom-3d32591f99ae144a",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.lessfish-leetcode",
+            "name": "com.github.lessfish/leetcode",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/lessfish/leetcode",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/lessfish/leetcode"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-cheerio",
+            "name": "npm:cheerio",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-eventproxy",
+            "name": "npm:eventproxy",
+            "versionInfo": "^ 0.3.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-superagent",
+            "name": "npm:superagent",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lessfish-leetcode",
+            "relatedSpdxElement": "SPDXRef-npm-cheerio"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lessfish-leetcode",
+            "relatedSpdxElement": "SPDXRef-npm-eventproxy"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lessfish-leetcode",
+            "relatedSpdxElement": "SPDXRef-npm-superagent"
+        }
+    ]
+}

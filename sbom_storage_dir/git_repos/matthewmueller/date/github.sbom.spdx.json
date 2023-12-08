@@ -1,0 +1,101 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:54:39Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.matthewmueller/date",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.matthewmueller-date"
+    ],
+    "documentNamespace": "https://github.com/matthewmueller/date/dependency_graph/sbom-df5ce0f6c4b24f85",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.matthewmueller-date",
+            "name": "com.github.matthewmueller/date",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/matthewmueller/date",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/matthewmueller/date"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-better-assert",
+            "name": "npm:better-assert",
+            "versionInfo": "~ 1.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-browserify",
+            "name": "npm:browserify",
+            "versionInfo": "^ 16.1.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-debug",
+            "name": "npm:debug",
+            "versionInfo": "~ 3.1.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha",
+            "name": "npm:mocha",
+            "versionInfo": "~ 4.0.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js",
+            "name": "npm:uglify-js",
+            "versionInfo": "^ 3.3.20",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.matthewmueller-date",
+            "relatedSpdxElement": "SPDXRef-npm-better-assert"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.matthewmueller-date",
+            "relatedSpdxElement": "SPDXRef-npm-browserify"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.matthewmueller-date",
+            "relatedSpdxElement": "SPDXRef-npm-debug"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.matthewmueller-date",
+            "relatedSpdxElement": "SPDXRef-npm-mocha"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.matthewmueller-date",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js"
+        }
+    ]
+}

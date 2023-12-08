@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:57:09Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.nathanl/authority",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.nathanl-authority"
+    ],
+    "documentNamespace": "https://github.com/nathanl/authority/dependency_graph/sbom-d2b7993da0cefa9d",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.nathanl-authority",
+            "name": "com.github.nathanl/authority",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/nathanl/authority",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/nathanl/authority"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-activesupport",
+            "name": "rubygems:activesupport",
+            "versionInfo": ">= 3.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rake",
+            "name": "rubygems:rake",
+            "versionInfo": ">= 0.8.7",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec",
+            "name": "rubygems:rspec",
+            "versionInfo": "~> 3.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.nathanl-authority",
+            "relatedSpdxElement": "SPDXRef-rubygems-activesupport"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.nathanl-authority",
+            "relatedSpdxElement": "SPDXRef-rubygems-rake"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.nathanl-authority",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec"
+        }
+    ]
+}

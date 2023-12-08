@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:56:38Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.bradleyjkemp/memviz",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.bradleyjkemp-memviz"
+    ],
+    "documentNamespace": "https://github.com/bradleyjkemp/memviz/dependency_graph/sbom-8d53b3ba48e0f5e1",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.bradleyjkemp-memviz",
+            "name": "com.github.bradleyjkemp/memviz",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/bradleyjkemp/memviz",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/bradleyjkemp/memviz"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-go-github.com-bradleyjkemp-cupaloy-v2-2.5.0",
+            "name": "go:github.com/bradleyjkemp/cupaloy/v2",
+            "versionInfo": "2.5.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/bradleyjkemp/cupaloy/v2@2.5.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-go-github.com-stretchr-testify-1.6.1",
+            "name": "go:github.com/stretchr/testify",
+            "versionInfo": "1.6.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:golang/github.com/stretchr/testify@1.6.1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.bradleyjkemp-memviz",
+            "relatedSpdxElement": "SPDXRef-go-github.com-bradleyjkemp-cupaloy-v2-2.5.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.bradleyjkemp-memviz",
+            "relatedSpdxElement": "SPDXRef-go-github.com-stretchr-testify-1.6.1"
+        }
+    ]
+}

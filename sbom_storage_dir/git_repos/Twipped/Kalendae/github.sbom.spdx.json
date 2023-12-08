@@ -1,0 +1,99 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:52:04Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.Twipped/Kalendae",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.Twipped-Kalendae"
+    ],
+    "documentNamespace": "https://github.com/Twipped/Kalendae/dependency_graph/sbom-71a16cb0bb55713e",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.Twipped-Kalendae",
+            "name": "com.github.Twipped/Kalendae",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/Twipped/Kalendae",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/Twipped/Kalendae"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-commander-2.20.3",
+            "name": "npm:commander",
+            "versionInfo": "2.20.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/commander@2.20.3",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-source-map-0.6.1",
+            "name": "npm:source-map",
+            "versionInfo": "0.6.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "BSD-3-Clause",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/source-map@0.6.1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js-3.7.4",
+            "name": "npm:uglify-js",
+            "versionInfo": "3.7.4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "BSD-2-Clause",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/uglify-js@3.7.4",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Twipped-Kalendae",
+            "relatedSpdxElement": "SPDXRef-npm-commander-2.20.3"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Twipped-Kalendae",
+            "relatedSpdxElement": "SPDXRef-npm-source-map-0.6.1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Twipped-Kalendae",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js-3.7.4"
+        }
+    ]
+}

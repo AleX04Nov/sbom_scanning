@@ -1,0 +1,75 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:00:23Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.maqetta/maqetta",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.maqetta-maqetta"
+    ],
+    "documentNamespace": "https://github.com/maqetta/maqetta/dependency_graph/sbom-c8cc0e1ccc8d0638",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.maqetta-maqetta",
+            "name": "com.github.maqetta/maqetta",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/maqetta/maqetta",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/maqetta/maqetta"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-dojo-1.8",
+            "name": "npm:dojo",
+            "versionInfo": "1.8",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/dojo@1.8",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-dojo-1.7",
+            "name": "npm:dojo",
+            "versionInfo": "1.7",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/dojo@1.7",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.maqetta-maqetta",
+            "relatedSpdxElement": "SPDXRef-npm-dojo-1.8"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.maqetta-maqetta",
+            "relatedSpdxElement": "SPDXRef-npm-dojo-1.7"
+        }
+    ]
+}

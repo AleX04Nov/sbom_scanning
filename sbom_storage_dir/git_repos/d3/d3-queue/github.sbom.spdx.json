@@ -1,0 +1,129 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:55:15Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.d3/d3-queue",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.d3-d3-queue"
+    ],
+    "documentNamespace": "https://github.com/d3/d3-queue/dependency_graph/sbom-27ee887379e77e12",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.d3-d3-queue",
+            "name": "com.github.d3/d3-queue",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/d3/d3-queue",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/d3/d3-queue"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-eslint-3",
+            "name": "npm:eslint",
+            "versionInfo": "3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/eslint@3",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-package-preamble-0.1",
+            "name": "npm:package-preamble",
+            "versionInfo": "0.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/package-preamble@0.1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-rollup-0.41",
+            "name": "npm:rollup",
+            "versionInfo": "0.41",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/rollup@0.41",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-tape-4",
+            "name": "npm:tape",
+            "versionInfo": "4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/tape@4",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js",
+            "name": "npm:uglify-js",
+            "versionInfo": "^ 2.8.11",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.d3-d3-queue",
+            "relatedSpdxElement": "SPDXRef-npm-eslint-3"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.d3-d3-queue",
+            "relatedSpdxElement": "SPDXRef-npm-package-preamble-0.1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.d3-d3-queue",
+            "relatedSpdxElement": "SPDXRef-npm-rollup-0.41"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.d3-d3-queue",
+            "relatedSpdxElement": "SPDXRef-npm-tape-4"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.d3-d3-queue",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js"
+        }
+    ]
+}

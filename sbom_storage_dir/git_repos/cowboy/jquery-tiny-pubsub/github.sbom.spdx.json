@@ -1,0 +1,170 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:02:06Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.cowboy/jquery-tiny-pubsub",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.cowboy-jquery-tiny-pubsub"
+    ],
+    "documentNamespace": "https://github.com/cowboy/jquery-tiny-pubsub/dependency_graph/sbom-cec0a34c014a68c2",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "name": "com.github.cowboy/jquery-tiny-pubsub",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/cowboy/jquery-tiny-pubsub",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/cowboy/jquery-tiny-pubsub"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-0.4.0rc7",
+            "name": "npm:grunt",
+            "versionInfo": "0.4.0rc7",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/grunt@0.4.0rc7",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-clean",
+            "name": "npm:grunt-contrib-clean",
+            "versionInfo": "~ 0.4.0rc6",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-concat-0.1.2rc6",
+            "name": "npm:grunt-contrib-concat",
+            "versionInfo": "0.1.2rc6",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/grunt-contrib-concat@0.1.2rc6",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-jshint-0.1.1rc6",
+            "name": "npm:grunt-contrib-jshint",
+            "versionInfo": "0.1.1rc6",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/grunt-contrib-jshint@0.1.1rc6",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-qunit-0.1.1rc6",
+            "name": "npm:grunt-contrib-qunit",
+            "versionInfo": "0.1.1rc6",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/grunt-contrib-qunit@0.1.1rc6",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-uglify-0.1.1rc6",
+            "name": "npm:grunt-contrib-uglify",
+            "versionInfo": "0.1.1rc6",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/grunt-contrib-uglify@0.1.1rc6",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-watch-0.2.0rc5",
+            "name": "npm:grunt-contrib-watch",
+            "versionInfo": "0.2.0rc5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/grunt-contrib-watch@0.2.0rc5",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-0.4.0rc7"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-clean"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-concat-0.1.2rc6"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-jshint-0.1.1rc6"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-qunit-0.1.1rc6"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-uglify-0.1.1rc6"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.cowboy-jquery-tiny-pubsub",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-watch-0.2.0rc5"
+        }
+    ]
+}

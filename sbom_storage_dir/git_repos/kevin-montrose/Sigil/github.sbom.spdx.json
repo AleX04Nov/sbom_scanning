@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:02:43Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.kevin-montrose/Sigil",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.kevin-montrose-Sigil"
+    ],
+    "documentNamespace": "https://github.com/kevin-montrose/Sigil/dependency_graph/sbom-683db45c5382f8fb",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.kevin-montrose-Sigil",
+            "name": "com.github.kevin-montrose/Sigil",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/kevin-montrose/Sigil",
+            "licenseDeclared": "MS-PL",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/kevin-montrose/Sigil"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-System.Reflection.Emit-4.3.0",
+            "name": "nuget:System.Reflection.Emit",
+            "versionInfo": "4.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/System.Reflection.Emit@4.3.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-System.Reflection.Emit.Lightweight-4.3.0",
+            "name": "nuget:System.Reflection.Emit.Lightweight",
+            "versionInfo": "4.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/System.Reflection.Emit.Lightweight@4.3.0",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevin-montrose-Sigil",
+            "relatedSpdxElement": "SPDXRef-nuget-System.Reflection.Emit-4.3.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevin-montrose-Sigil",
+            "relatedSpdxElement": "SPDXRef-nuget-System.Reflection.Emit.Lightweight-4.3.0"
+        }
+    ]
+}

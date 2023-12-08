@@ -1,0 +1,550 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "hapi",
+            "version": "15.0.3",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:59Z",
+              "published": "2018-10-09T00:57:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cqjg-whmm-8gv6",
+              "aliases": [
+                "CVE-2017-16013"
+              ],
+              "summary": "Denial of Service via malformed accept-encoding header in hapi",
+              "details": "Affected versions of `hapi` will crash or lock the event loop when a malformed `accept-encoding` header is recieved.\n\n\n## Recommendation\n\nUpdate to version 16.1.1 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hapi",
+                    "purl": "pkg:npm/hapi"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "15.0.0"
+                        },
+                        {
+                          "fixed": "16.1.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 16.1.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-cqjg-whmm-8gv6/GHSA-cqjg-whmm-8gv6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16013"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hapijs/hapi/issues/3466"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-cqjg-whmm-8gv6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/335"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:32:25Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2020-08-31T19:00:54Z",
+              "published": "2020-09-03T15:48:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7hx8-2rxv-66xv",
+              "summary": "Denial of Service in hapi",
+              "details": "All Versions of `hapi` are vulnerable to Denial of Service. The CORS request handler has a vulnerability which will cause the function to throw a system error if the header contains some invalid values. If no unhandled exception handler is available, the application will exist, allowing an attacker to shut down services.\n\n\n## Recommendation\n\nThis package is deprecated and is now maintained as `@hapi/hapi`. Please update your dependencies to use `@hapi/hapi`. ",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "hapi",
+                    "purl": "pkg:npm/hapi"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-7hx8-2rxv-66xv/GHSA-7hx8-2rxv-66xv.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1481"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-08-31T19:00:54Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cqjg-whmm-8gv6"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-7hx8-2rxv-66xv"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mongoose",
+            "version": "4.5.7",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-29T22:07:26Z",
+              "published": "2019-10-22T20:19:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8687-vv9j-hgph",
+              "aliases": [
+                "CVE-2019-17426"
+              ],
+              "summary": "Improper Input Validation in Automattic Mongoose",
+              "details": "Automattic Mongoose through 5.7.4 allows attackers to bypass access control (in some applications) because any query object with a `_bsontype` attribute is ignored. For example, adding `\"_bsontype\":\"a\"` can sometimes interfere with a query filter. NOTE: this CVE is about Mongoose's failure to work around this _bsontype special case that exists in older versions of the bson parser (aka the mongodb/js-bson project).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.7.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/10/GHSA-8687-vv9j-hgph/GHSA-8687-vv9j-hgph.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).cast"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.13.21"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/10/GHSA-8687-vv9j-hgph/GHSA-8687-vv9j-hgph.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).cast"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17426"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/issues/8222"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/commit/f3eca5b94d822225c04e96cbeed9f095afb3c31c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/commit/f88eb2524b65a68ff893c90a03c04f0913c1913e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/Automattic/mongoose"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/commits/4.13.21"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/releases/tag/4.13.21"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-10-14T18:05:37Z",
+                "nvd_published_at": "2019-10-10T02:05:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:07Z",
+              "published": "2022-07-29T00:00:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-f825-f98c-gj3g",
+              "aliases": [
+                "BIT-mongoose-2022-2564",
+                "CVE-2022-2564"
+              ],
+              "summary": "automattic/mongoose vulnerable to Prototype pollution via Schema.path",
+              "details": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Affected versions of this package are vulnerable to Prototype Pollution. The `Schema.path()` function is vulnerable to prototype pollution when setting the schema object. This vulnerability allows modification of the Object prototype and could be manipulated into a Denial of Service (DoS) attack.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.4.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-f825-f98c-gj3g/GHSA-f825-f98c-gj3g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).Schema"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.13.15"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-f825-f98c-gj3g/GHSA-f825-f98c-gj3g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).Schema"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/commit/99b418941e2fc974199b8e5bd9d382bb50bf680a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/automattic/mongoose/commit/a45cfb6b0ce0067ae9794cfa80f7917e1fb3c6f8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/blob/51e758541763b6f14569744ced15cc23ab8b50c6/lib/schema.js#L88-L141"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/compare/6.4.5...6.4.6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/automattic/mongoose/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/055be524-9296-4b2f-b68d-6d5b810d1ddd"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-08-04T14:22:23Z",
+                "nvd_published_at": "2022-07-28T20:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:07Z",
+              "published": "2023-07-17T03:30:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9m93-w8w6-76hh",
+              "aliases": [
+                "BIT-mongoose-2023-3696",
+                "CVE-2023-3696"
+              ],
+              "summary": "Mongoose Prototype Pollution vulnerability",
+              "details": "Prototype Pollution in GitHub repository automattic/mongoose prior to 7.3.3, 6.11.3, and 5.13.20.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9m93-w8w6-76hh/GHSA-9m93-w8w6-76hh.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).Model.findByIdAndUpdate"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.11.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9m93-w8w6-76hh/GHSA-9m93-w8w6-76hh.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).Model.findByIdAndUpdate"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongoose",
+                    "purl": "pkg:npm/mongoose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.13.20"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9m93-w8w6-76hh/GHSA-9m93-w8w6-76hh.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(mongoose).Model.findByIdAndUpdate"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-3696"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/commit/e29578d2ec18a68aeb4717d66dd5eb66bae53de1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/commit/f1efabf350522257364aa5c2cb36e441cf08f1a2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/automattic/mongoose/commit/305ce4ff789261df7e3f6e72363d0703e025f80d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/Automattic/mongoose"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Automattic/mongoose/releases/tag/7.3.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/1eef5a72-f6ab-4f61-b31d-fc66f5b4b467"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-18T16:57:08Z",
+                "nvd_published_at": "2023-07-17T01:15:08Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8687-vv9j-hgph"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-f825-f98c-gj3g"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-9m93-w8w6-76hh"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

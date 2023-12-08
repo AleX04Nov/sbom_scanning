@@ -1,0 +1,102 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:52:14Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.Flotype/now",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.Flotype-now"
+    ],
+    "documentNamespace": "https://github.com/Flotype/now/dependency_graph/sbom-ead8aefde6dab02a",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.Flotype-now",
+            "name": "com.github.Flotype/now",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/Flotype/now",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/Flotype/now"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-node-proxy",
+            "name": "npm:node-proxy",
+            "versionInfo": ">= 0.4.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-socket.io",
+            "name": "npm:socket.io",
+            "versionInfo": ">= 0.8.7",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-ejs",
+            "name": "npm:ejs",
+            "versionInfo": ">= 0.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-express",
+            "name": "npm:express",
+            "versionInfo": ">= 2.4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-now",
+            "name": "npm:now",
+            "versionInfo": ">= 0.7",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Flotype-now",
+            "relatedSpdxElement": "SPDXRef-npm-node-proxy"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Flotype-now",
+            "relatedSpdxElement": "SPDXRef-npm-socket.io"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Flotype-now",
+            "relatedSpdxElement": "SPDXRef-npm-ejs"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Flotype-now",
+            "relatedSpdxElement": "SPDXRef-npm-express"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.Flotype-now",
+            "relatedSpdxElement": "SPDXRef-npm-now"
+        }
+    ]
+}

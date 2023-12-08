@@ -1,0 +1,50 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:52:09Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.letsgetrandy/brototype",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.letsgetrandy-brototype"
+    ],
+    "documentNamespace": "https://github.com/letsgetrandy/brototype/dependency_graph/sbom-adf64e98b03969af",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.letsgetrandy-brototype",
+            "name": "com.github.letsgetrandy/brototype",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/letsgetrandy/brototype",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/letsgetrandy/brototype"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha",
+            "name": "npm:mocha",
+            "versionInfo": "~ 2.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.letsgetrandy-brototype",
+            "relatedSpdxElement": "SPDXRef-npm-mocha"
+        }
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:56:26Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.lloyd/node-toobusy",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.lloyd-node-toobusy"
+    ],
+    "documentNamespace": "https://github.com/lloyd/node-toobusy/dependency_graph/sbom-8d83e3a307c795d6",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.lloyd-node-toobusy",
+            "name": "com.github.lloyd/node-toobusy",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/lloyd/node-toobusy",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/lloyd/node-toobusy"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-bindings-1.1.0",
+            "name": "npm:bindings",
+            "versionInfo": "1.1.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/bindings@1.1.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha-1.7.0",
+            "name": "npm:mocha",
+            "versionInfo": "1.7.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/mocha@1.7.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-should-1.2.1",
+            "name": "npm:should",
+            "versionInfo": "1.2.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/should@1.2.1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-express-2",
+            "name": "npm:express",
+            "versionInfo": "2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/express@2",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lloyd-node-toobusy",
+            "relatedSpdxElement": "SPDXRef-npm-bindings-1.1.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lloyd-node-toobusy",
+            "relatedSpdxElement": "SPDXRef-npm-mocha-1.7.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lloyd-node-toobusy",
+            "relatedSpdxElement": "SPDXRef-npm-should-1.2.1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lloyd-node-toobusy",
+            "relatedSpdxElement": "SPDXRef-npm-express-2"
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:51:34Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.madebysource/lesshat",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.madebysource-lesshat"
+    ],
+    "documentNamespace": "https://github.com/madebysource/lesshat/dependency_graph/sbom-9b0d665fd6074a23",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.madebysource-lesshat",
+            "name": "com.github.madebysource/lesshat",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/madebysource/lesshat",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/madebysource/lesshat"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt",
+            "name": "npm:grunt",
+            "versionInfo": "^ 1.0.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-clean",
+            "name": "npm:grunt-contrib-clean",
+            "versionInfo": "^ 1.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-mkdir",
+            "name": "npm:grunt-mkdir",
+            "versionInfo": "^ 1.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-prompt",
+            "name": "npm:grunt-prompt",
+            "versionInfo": "^ 1.3.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-less",
+            "name": "npm:less",
+            "versionInfo": "^ 2.7.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha-2.5.3",
+            "name": "npm:mocha",
+            "versionInfo": "2.5.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/mocha@2.5.3",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js",
+            "name": "npm:uglify-js",
+            "versionInfo": "~ 2.6.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-grunt"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-clean"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-mkdir"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-prompt"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-less"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-mocha-2.5.3"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.madebysource-lesshat",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js"
+        }
+    ]
+}

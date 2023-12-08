@@ -1,0 +1,101 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:54:36Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.ebidel/filer.js",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.ebidel-filer.js"
+    ],
+    "documentNamespace": "https://github.com/ebidel/filer.js/dependency_graph/sbom-4e0e30d18a3e7fb0",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.ebidel-filer.js",
+            "name": "com.github.ebidel/filer.js",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/ebidel/filer.js",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/ebidel/filer.js"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-google-closure-compiler-js",
+            "name": "npm:google-closure-compiler-js",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp",
+            "name": "npm:gulp",
+            "versionInfo": "^ 3.9.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp-inject-version",
+            "name": "npm:gulp-inject-version",
+            "versionInfo": "^ 1.0.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp-license",
+            "name": "npm:gulp-license",
+            "versionInfo": "^ 1.1.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp-load-plugins",
+            "name": "npm:gulp-load-plugins",
+            "versionInfo": "^ 1.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.ebidel-filer.js",
+            "relatedSpdxElement": "SPDXRef-npm-google-closure-compiler-js"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.ebidel-filer.js",
+            "relatedSpdxElement": "SPDXRef-npm-gulp"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.ebidel-filer.js",
+            "relatedSpdxElement": "SPDXRef-npm-gulp-inject-version"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.ebidel-filer.js",
+            "relatedSpdxElement": "SPDXRef-npm-gulp-license"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.ebidel-filer.js",
+            "relatedSpdxElement": "SPDXRef-npm-gulp-load-plugins"
+        }
+    ]
+}

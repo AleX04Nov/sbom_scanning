@@ -1,0 +1,91 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:02:15Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.YoSmudge/dnsyo",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.YoSmudge-dnsyo"
+    ],
+    "documentNamespace": "https://github.com/YoSmudge/dnsyo/dependency_graph/sbom-252b4427a1a34043",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.YoSmudge-dnsyo",
+            "name": "com.github.YoSmudge/dnsyo",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/YoSmudge/dnsyo",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/YoSmudge/dnsyo"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-pip-dnspython-1.12.0",
+            "name": "pip:dnspython",
+            "versionInfo": "1.12.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:pypi/dnspython@1.12.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-pip-pyyaml-3.10",
+            "name": "pip:pyyaml",
+            "versionInfo": "3.10",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:pypi/pyyaml@3.10",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-pip-requests",
+            "name": "pip:requests",
+            "versionInfo": ">= 2.7.0,< 3.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.YoSmudge-dnsyo",
+            "relatedSpdxElement": "SPDXRef-pip-dnspython-1.12.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.YoSmudge-dnsyo",
+            "relatedSpdxElement": "SPDXRef-pip-pyyaml-3.10"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.YoSmudge-dnsyo",
+            "relatedSpdxElement": "SPDXRef-pip-requests"
+        }
+    ]
+}

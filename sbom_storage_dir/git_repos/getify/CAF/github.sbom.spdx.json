@@ -1,0 +1,115 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:56:19Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.getify/CAF",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.getify-CAF"
+    ],
+    "documentNamespace": "https://github.com/getify/CAF/dependency_graph/sbom-032c41f16e3fadff",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.getify-CAF",
+            "name": "com.github.getify/CAF",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/getify/CAF",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/getify/CAF"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-abortcontroller-polyfill",
+            "name": "npm:abortcontroller-polyfill",
+            "versionInfo": "~ 1.7.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-coveralls",
+            "name": "npm:coveralls",
+            "versionInfo": "~ 3.1.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-moduloze",
+            "name": "npm:moduloze",
+            "versionInfo": "~ 0.9.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-nyc",
+            "name": "npm:nyc",
+            "versionInfo": "~ 15.1.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-qunit",
+            "name": "npm:qunit",
+            "versionInfo": "~ 2.19.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-terser",
+            "name": "npm:terser",
+            "versionInfo": "~ 5.15.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-CAF",
+            "relatedSpdxElement": "SPDXRef-npm-abortcontroller-polyfill"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-CAF",
+            "relatedSpdxElement": "SPDXRef-npm-coveralls"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-CAF",
+            "relatedSpdxElement": "SPDXRef-npm-moduloze"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-CAF",
+            "relatedSpdxElement": "SPDXRef-npm-nyc"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-CAF",
+            "relatedSpdxElement": "SPDXRef-npm-qunit"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-CAF",
+            "relatedSpdxElement": "SPDXRef-npm-terser"
+        }
+    ]
+}

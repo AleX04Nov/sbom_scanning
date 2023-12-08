@@ -1,0 +1,2212 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/pkg_parser_custom_sbom_spdx_fixtures_osv-scanner_google_3cab6.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "activesupport",
+            "version": "7.0.7",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:13:06Z",
+              "published": "2023-08-23T20:36:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cr5q-6q9f-rq6q",
+              "aliases": [
+                "CVE-2023-38037"
+              ],
+              "summary": "Active Support Possibly Discloses Locally Encrypted Files",
+              "details": "There is a possible file disclosure of locally encrypted files in Active Support. This vulnerability has been assigned the CVE identifier CVE-2023-38037.\n\nVersions Affected: \u003e= 5.2.0 Not affected: \u003c 5.2.0 Fixed Versions: 7.0.7.1, 6.1.7.5\n\n# Impact\nActiveSupport::EncryptedFile writes contents that will be encrypted to a temporary file. The temporary file’s permissions are defaulted to the user’s current umask settings, meaning that it’s possible for other users on the same system to read the contents of the temporary file.\n\nAttackers that have access to the file system could possibly read the contents of this temporary file while a user is editing it.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\n# Releases\nThe fixed releases are available at the normal locations.\n\n# Workarounds\nTo work around this issue, you can set your umask to be more restrictive like this:\n\n```ruby\n$ umask 0077\n```\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.2.0"
+                        },
+                        {
+                          "fixed": "6.1.7.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.2.0",
+                    "5.2.1",
+                    "5.2.1.1",
+                    "5.2.1.rc1",
+                    "5.2.2",
+                    "5.2.2.1",
+                    "5.2.2.rc1",
+                    "5.2.3",
+                    "5.2.3.rc1",
+                    "5.2.4",
+                    "5.2.4.1",
+                    "5.2.4.2",
+                    "5.2.4.3",
+                    "5.2.4.4",
+                    "5.2.4.5",
+                    "5.2.4.6",
+                    "5.2.4.rc1",
+                    "5.2.5",
+                    "5.2.6",
+                    "5.2.6.1",
+                    "5.2.6.2",
+                    "5.2.6.3",
+                    "5.2.7",
+                    "5.2.7.1",
+                    "5.2.8",
+                    "5.2.8.1",
+                    "6.0.0",
+                    "6.0.0.beta1",
+                    "6.0.0.beta2",
+                    "6.0.0.beta3",
+                    "6.0.0.rc1",
+                    "6.0.0.rc2",
+                    "6.0.1",
+                    "6.0.1.rc1",
+                    "6.0.2",
+                    "6.0.2.1",
+                    "6.0.2.2",
+                    "6.0.2.rc1",
+                    "6.0.2.rc2",
+                    "6.0.3",
+                    "6.0.3.1",
+                    "6.0.3.2",
+                    "6.0.3.3",
+                    "6.0.3.4",
+                    "6.0.3.5",
+                    "6.0.3.6",
+                    "6.0.3.7",
+                    "6.0.3.rc1",
+                    "6.0.4",
+                    "6.0.4.1",
+                    "6.0.4.2",
+                    "6.0.4.3",
+                    "6.0.4.4",
+                    "6.0.4.5",
+                    "6.0.4.6",
+                    "6.0.4.7",
+                    "6.0.4.8",
+                    "6.0.5",
+                    "6.0.5.1",
+                    "6.0.6",
+                    "6.0.6.1",
+                    "6.1.0",
+                    "6.1.0.rc1",
+                    "6.1.0.rc2",
+                    "6.1.1",
+                    "6.1.2",
+                    "6.1.2.1",
+                    "6.1.3",
+                    "6.1.3.1",
+                    "6.1.3.2",
+                    "6.1.4",
+                    "6.1.4.1",
+                    "6.1.4.2",
+                    "6.1.4.3",
+                    "6.1.4.4",
+                    "6.1.4.5",
+                    "6.1.4.6",
+                    "6.1.4.7",
+                    "6.1.5",
+                    "6.1.5.1",
+                    "6.1.6",
+                    "6.1.6.1",
+                    "6.1.7",
+                    "6.1.7.1",
+                    "6.1.7.2",
+                    "6.1.7.3",
+                    "6.1.7.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-cr5q-6q9f-rq6q/GHSA-cr5q-6q9f-rq6q.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.2.1",
+                    "7.0.2.2",
+                    "7.0.2.3",
+                    "7.0.2.4",
+                    "7.0.3",
+                    "7.0.3.1",
+                    "7.0.4",
+                    "7.0.4.1",
+                    "7.0.4.2",
+                    "7.0.4.3",
+                    "7.0.5",
+                    "7.0.5.1",
+                    "7.0.6",
+                    "7.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-cr5q-6q9f-rq6q/GHSA-cr5q-6q9f-rq6q.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/a21d6edf35a60383dfa6c4da49e4b1aef5f00731"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rails/rails"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/releases/tag/v7.0.7.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activesupport/CVE-2023-38037.yml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-377"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-08-23T20:36:24Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cr5q-6q9f-rq6q"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ansi-html",
+            "version": "0.0.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:08Z",
+              "published": "2021-09-02T17:15:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-whgm-jr23-g3j9",
+              "aliases": [
+                "CVE-2021-23424"
+              ],
+              "summary": "Uncontrolled Resource Consumption in ansi-html",
+              "details": "This affects all versions of package ansi-html. If an attacker provides a malicious string, it will get stuck processing the input for an extremely long time.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ansi-html",
+                    "purl": "pkg:npm/ansi-html"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-whgm-jr23-g3j9/GHSA-whgm-jr23-g3j9.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(ansi-html)"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ioet/time-tracker-ui/security/advisories/GHSA-4fjc-8q3h-8r69"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23424"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Tjatse/ansi-html/issues/19"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Tjatse/ansi-html/commit/8142b25bca3133ea060bcc1889277dc482327a63"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/Tjatse/ansi-html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1567198"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANSIHTML-1296849"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-26T14:50:45Z",
+                "nvd_published_at": "2021-08-18T17:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-whgm-jr23-g3j9"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "golang.org/x/net",
+            "version": "0.14.0",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-07T23:00:43Z",
+              "published": "2023-10-11T20:35:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4374-p667-p6c8",
+              "aliases": [
+                "BIT-golang-2023-39325",
+                "CVE-2023-39325",
+                "GO-2023-2102"
+              ],
+              "summary": "HTTP/2 rapid reset can cause excessive work in net/http",
+              "details": "A malicious HTTP/2 client which rapidly creates requests and immediately resets them can cause excessive server resource consumption. While the total number of requests is bounded by the http2.Server.MaxConcurrentStreams setting, resetting an in-progress request allows the attacker to create a new request while the existing one is still executing. \n\nWith the fix applied, HTTP/2 servers now bound the number of simultaneously executing handler goroutines to the stream concurrency limit (MaxConcurrentStreams). New requests arriving when at the limit (which can only happen after the client has reset an existing, in-flight request) will be queued until a handler exits. If the request queue grows too large, the server will terminate the connection. \n\nThis issue is also fixed in golang.org/x/net/http2 for users manually configuring HTTP/2.\n\nThe default stream concurrency limit is 250 streams (requests) per HTTP/2 connection. This value may be adjusted using the golang.org/x/net/http2 package; see the Server.MaxConcurrentStreams setting and the ConfigureServer function.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/net",
+                    "purl": "pkg:golang/golang.org/x/net"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-4374-p667-p6c8/GHSA-4374-p667-p6c8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-39325"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/golang/go/issues/63417"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/534215"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/534235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/issue/63417"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/iNNxDTCjZvo/m/UDd7VKQuAAAJ"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3SZN67IL7HMGMNAVLOTIXLIHUDXZK4LH/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4BUK2ZIAGCULOOYDNH25JPU6JBES5NF2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AVZDNSMVDAQJ64LJC5I5U5LDM5753647/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CLB4TW7KALB3EEQWNWCN7OUIWWVWWCG2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/D2BBIDR2ZMB3X5BC7SR4SLQMHRMVPY6L/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ECRC75BQJP6FJN2L7KCKYZW4DSBD7QSD/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GSY7SXFFTPZFWDM6XELSDSHZLVW3AHK7/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HZQIELEIRSZUYTFFH5KTH2YJ4IIQG2KE/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSEGD2IWKNUO3DWY4KQGUQM5BISRWHQE/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NG7IMPL55MVWU3LCI4JQJT3K2U5CHDV7/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OXGWPQOJ3JNDW2XIYKIVJ7N7QUIFNM2Q/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QF5QSYAOPDOWLY6DUHID56Q4HQFYB45I/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/R3UETKPUB3V5JS5TLZOF3SMTGT5K5APS/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/REMHVVIBDNKSRKNOTV7EQSB7CYQWOUOU/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/T7N5GV4CHH6WAGX3GFMDD3COEOVCZ4RI/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ULQQONMSCQSH5Z5OWFFQHCGEZ3NL4DRJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UTT7DG3QOF5ZNJLUGHDNLRUIN6OWZARP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WCNCBYKZXLDFGAJUB7ZP5VLC3YTHJNVH/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XFOIBB4YFICHDM7IBOP7PWXW3FX4HLL2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XTNLSL44Y5FB6JWADSZH6DCV4JJAAEQY/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YRKEXKANQ7BKJW2YTAMP625LJUJZLJ4P/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2023-2102"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202311-09"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20231110-0008/"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "golang.org/x/net"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-11T20:35:43Z",
+                "nvd_published_at": "2023-10-11T22:15:09Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:14Z",
+              "published": "2023-10-10T21:28:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qppj-fm5r-hxr3",
+              "aliases": [
+                "BIT-apisix-2023-44487",
+                "BIT-aspnet-core-2023-44487",
+                "BIT-contour-2023-44487",
+                "BIT-dotnet-2023-44487",
+                "BIT-dotnet-sdk-2023-44487",
+                "BIT-envoy-2023-44487",
+                "BIT-golang-2023-44487",
+                "BIT-jenkins-2023-44487",
+                "BIT-kong-2023-44487",
+                "BIT-nginx-2023-44487",
+                "BIT-nginx-ingress-controller-2023-44487",
+                "BIT-node-2023-44487",
+                "BIT-solr-2023-44487",
+                "BIT-tomcat-2023-44487",
+                "BIT-varnish-2023-44487",
+                "CVE-2023-44487",
+                "GHSA-2m7v-gc89-fjqf",
+                "GHSA-vx74-f528-fxqg",
+                "GHSA-xpw8-rcwv-8f8p"
+              ],
+              "summary": "swift-nio-http2 vulnerable to HTTP/2 Stream Cancellation Attack",
+              "details": "swift-nio-http2 is vulnerable to a denial-of-service vulnerability in which a malicious client can create and then reset a large number of HTTP/2 streams in a short period of time. This causes swift-nio-http2 to commit to a large amount of expensive work which it then throws away, including creating entirely new `Channel`s to serve the traffic. This can easily overwhelm an `EventLoop` and prevent it from making forward progress.\n\nswift-nio-http2 1.28 contains a remediation for this issue that applies reset counter using a sliding window. This constrains the number of stream resets that may occur in a given window of time. Clients violating this limit will have their connections torn down. This allows clients to continue to cancel streams for legitimate reasons, while constraining malicious actors.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "SwiftURL",
+                    "name": "https://github.com/apple/swift-nio-http2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.28.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-qppj-fm5r-hxr3/GHSA-qppj-fm5r-hxr3.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/net",
+                    "purl": "pkg:golang/golang.org/x/net"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-qppj-fm5r-hxr3/GHSA-qppj-fm5r-hxr3.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "google.golang.org/grpc",
+                    "purl": "pkg:golang/google.golang.org/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.58.0"
+                        },
+                        {
+                          "fixed": "1.58.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-qppj-fm5r-hxr3/GHSA-qppj-fm5r-hxr3.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "google.golang.org/grpc",
+                    "purl": "pkg:golang/google.golang.org/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.57.0"
+                        },
+                        {
+                          "fixed": "1.57.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-qppj-fm5r-hxr3/GHSA-qppj-fm5r-hxr3.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "google.golang.org/grpc",
+                    "purl": "pkg:golang/google.golang.org/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.56.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-qppj-fm5r-hxr3/GHSA-qppj-fm5r-hxr3.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apple/swift-nio-http2/security/advisories/GHSA-qppj-fm5r-hxr3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/h2o/h2o/security/advisories/GHSA-2m7v-gc89-fjqf"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/AKS/issues/3947"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/akka/akka-http/issues/4323"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/alibaba/tengine/issues/1872"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/apisix/issues/10320"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/caddyserver/caddy/issues/5877"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/277"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/eclipse/jetty.project/issues/10679"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/etcd-io/etcd/issues/16740"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/golang/go/issues/63417"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/haproxy/haproxy/issues/2312"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hyperium/hyper/issues/3337"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junkurihara/rust-rpxy/issues/97"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/kazu-yamamoto/http2/issues/93"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ninenines/cowboy/issues/1615"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/openresty/openresty/issues/930"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/opensearch-project/data-prepper/issues/3474"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tempesta-tech/tempesta/issues/1986"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/varnishcache/varnish-cache/issues/3996"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/httpd-site/pull/10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/trafficserver/pull/10564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/envoyproxy/envoy/pull/30055"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facebook/proxygen/pull/466"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc-go/pull/6703"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/h2o/h2o/pull/3291"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/kubernetes/kubernetes/pull/121120"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/line/armeria/pull/5232"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/linkerd/website/pull/1695/commits/4b9c6836471bc8270ab48aae6fd2181bc73fd632"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/microsoft/CBL-Mariner/pull/6381"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nghttp2/nghttp2/pull/1961"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodejs/node/pull/50121"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/projectcontour/contour/pull/5826"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/kazu-yamamoto/http2/commit/f61d41a502bd0f60eb24e1ce14edc7b6df6722a1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/netty/netty/commit/58f75f665aa81a8cbcf6ffa74820042a285c5e61"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/cve-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://arstechnica.com/security/2023/10/how-ddosers-used-the-http-2-protocol-to-deliver-attacks-of-unprecedented-size/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://aws.amazon.com/security/security-bulletins/AWS-2023-011/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.cloudflare.com/technical-breakdown-http2-rapid-reset-ddos-attack/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.cloudflare.com/zero-day-rapid-reset-http2-record-breaking-ddos-attack/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.litespeedtech.com/2023/10/11/rapid-reset-http-2-vulnerablilty/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.qualys.com/vulnerabilities-threat-research/2023/10/10/cve-2023-44487-http-2-rapid-reset-attack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.vespa.ai/cve-2023-44487/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.proxmox.com/show_bug.cgi?id=4988"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2242803"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.suse.com/show_bug.cgi?id=1216123"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cgit.freebsd.org/ports/commit/?id=c64c329c2c1752f46b73e3e6ce9f4329be6629f9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://chaos.social/@icing/111210915918780532"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cloud.google.com/blog/products/identity-security/google-cloud-mitigated-largest-ddos-attack-peaking-above-398-million-rps/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cloud.google.com/blog/products/identity-security/how-it-works-the-novel-http2-rapid-reset-ddos-attack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://community.traefik.io/t/is-traefik-vulnerable-to-cve-2023-44487/20125"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2023-32-vault-consul-and-boundary-affected-by-http-2-rapid-reset-denial-of-service-vulnerability-cve-2023-44487/59715"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://edg.io/lp/blog/resets-leaks-ddos-and-the-tale-of-a-hidden-cve"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://forums.swift.org/t/swift-nio-http2-security-update-cve-2023-44487-http-2-dos/67764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/adulau/7c2bfb8e9cdbe4b35a5e131c66a0c088"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Kong/kong/discussions/11741"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-qppj-fm5r-hxr3"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-vx74-f528-fxqg"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-xpw8-rcwv-8f8p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/httpd/blob/afcdbeebbff4b0c50ea26cdd16e178c0d1f24152/modules/http2/h2_mplx.c#L1101-L1113"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/tomcat/tree/main/java/org/apache/coyote/http2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apple/swift-nio-http2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/arkrwn/PoC/tree/main/CVE-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcdannyboy/CVE-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/core/blob/e4613450ea0da7fd2fc6b61dfb2c1c1dec1ce9ec/release-notes/6.0/6.0.23/6.0.23.md?plain=1#L73"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc-go/releases"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/icing/mod_h2/blob/0a864782af0a942aa2ad4ed960a6b32cd35bcf0a/mod_http2/README.md?plain=1#L239-L244"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micrictor/http2-rst-stream"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nghttp2/nghttp2/releases/tag/v1.57.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/oqtane/oqtane.framework/discussions/3367"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/534215"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/534235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/issue/63417"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/iNNxDTCjZvo"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/iNNxDTCjZvo/m/UDd7VKQuAAAJ"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://istio.io/latest/news/security/istio-security-2023-004/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://linkerd.io/2023/10/12/linkerd-cve-2023-44487/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/5py8h42mxfsn8l1wy6o41xwhsjlsd87q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00023.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00024.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00045.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00047.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/11/msg00001.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3N4NJ7FR4X4FPZUGNTQAPSTVB2HB2Y4A/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BFQD3KUEMFBHPAPBGLWQC34L4OWL5HAZ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CLB4TW7KALB3EEQWNWCN7OUIWWVWWCG2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/E72T67UPDRXHIDLO3OROR25YAMN4GGW5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FNA62Q767CFAFHBCDKYNPBMZWB7TWYVU/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HT7T2R4MQKLIF4ODV4BDLPARWFPCJ5CZ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JIZSEFC3YKCGABA2BZW6ZJRMDZJMB7PJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JMEXY22BFG5Q64HQCM5CK2Q7KDKVV4TY/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KSEGD2IWKNUO3DWY4KQGUQM5BISRWHQE/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LKYHSZQFDNR7RSA7LHVLLIAQMVYCUGBG/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/LNMZJCDHGLJJLXO4OXWJMTVQRNWOC7UL/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VHUHTSXLXGXS7JYKBXTA3VINUPHTNGVU/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VSRDIV77HNKUSM7SJC5BKE5JSHLHU2NK/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WLPRQ5TWUQQXYWBJM7ECYDAIL2YVKIUH/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/X6QXN4ORIVF6XBW4WWFE7VNPVC74S45Y/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XFOIBB4YFICHDM7IBOP7PWXW3FX4HLL2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZB43REMKRQR62NJEI7I5NQ4FSXNLBKRT/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZKQSIKIAT5TJ3WSLU3RDBQ35YX4GY4V3/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZLU6U2R2IC2K64NDPNMV55AUAO65MAF4/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.w3.org/Archives/Public/ietf-http-wg/2023OctDec/0025.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://mailman.nginx.org/pipermail/nginx-devel/2023-October/S36Q5HBXR7CAIMPLLPRSSSYR4PCMWILK.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://martinthomson.github.io/h2-stream-limits/draft-thomson-httpbis-h2-stream-limits.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/blog/2023/10/microsoft-response-to-distributed-denial-of-service-ddos-attacks-against-http/2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://my.f5.com/manage/s/article/K000137106"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://netty.io/news/2023/10/10/4-1-100-Final.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=37830987"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=37830998"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=37831062"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=37837043"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://openssf.org/blog/2023/10/10/http-2-rapid-reset-vulnerability-highlights-need-for-rapid-response/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seanmonstar.com/post/730794151136935936/hyper-http2-rapid-reset-unaffected"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20231016-0001/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.paloaltonetworks.com/CVE-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://ubuntu.com/security/CVE-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.bleepingcomputer.com/news/security/new-http-2-rapid-reset-zero-day-attack-breaks-ddos-records/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.cisa.gov/news-events/alerts/2023/10/10/http2-rapid-reset-vulnerability-cve-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.darkreading.com/cloud/internet-wide-zero-day-bug-fuels-largest-ever-ddos-event"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5521"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5522"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5540"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5549"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.haproxy.com/blog/haproxy-is-not-affected-by-the-http-2-rapid-reset-attack-cve-2023-44487"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.netlify.com/blog/netlify-successfully-mitigates-cve-2023-44487/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.nginx.com/blog/http-2-rapid-reset-attack-impacting-f5-nginx-products/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openwall.com/lists/oss-security/2023/10/10/6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.phoronix.com/news/HTTP2-Rapid-Reset-Attack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.theregister.com/2023/10/10/http2_rapid_reset_zeroday/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/13/4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/13/9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/18/4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/18/8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/19/6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/20/8"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-10T21:28:24Z",
+                "nvd_published_at": "2023-10-10T14:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:10Z",
+              "published": "2023-10-11T16:49:53Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2102",
+              "aliases": [
+                "BIT-golang-2023-39325",
+                "CVE-2023-39325",
+                "GHSA-4374-p667-p6c8"
+              ],
+              "related": [
+                "CVE-2023-44487"
+              ],
+              "summary": "HTTP/2 rapid reset can cause excessive work in net/http",
+              "details": "A malicious HTTP/2 client which rapidly creates requests and immediately resets them can cause excessive server resource consumption. While the total number of requests is bounded by the http2.Server.MaxConcurrentStreams setting, resetting an in-progress request allows the attacker to create a new request while the existing one is still executing.\n\nWith the fix applied, HTTP/2 servers now bound the number of simultaneously executing handler goroutines to the stream concurrency limit (MaxConcurrentStreams). New requests arriving when at the limit (which can only happen after the client has reset an existing, in-flight request) will be queued until a handler exits. If the request queue grows too large, the server will terminate the connection.\n\nThis issue is also fixed in golang.org/x/net/http2 for users manually configuring HTTP/2.\n\nThe default stream concurrency limit is 250 streams (requests) per HTTP/2 connection. This value may be adjusted using the golang.org/x/net/http2 package; see the Server.MaxConcurrentStreams setting and the ConfigureServer function.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.10"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2102.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http",
+                        "symbols": [
+                          "ListenAndServe",
+                          "ListenAndServeTLS",
+                          "Serve",
+                          "ServeTLS",
+                          "Server.ListenAndServe",
+                          "Server.ListenAndServeTLS",
+                          "Server.Serve",
+                          "Server.ServeTLS",
+                          "http2Server.ServeConn",
+                          "http2serverConn.processHeaders",
+                          "http2serverConn.runHandler",
+                          "http2serverConn.serve",
+                          "http2serverConn.upgradeRequest"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/net",
+                    "purl": "pkg:golang/golang.org/x/net"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2102.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/net/http2",
+                        "symbols": [
+                          "Server.ServeConn",
+                          "serverConn.processHeaders",
+                          "serverConn.runHandler",
+                          "serverConn.serve",
+                          "serverConn.upgradeRequest"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63417"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/534215"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/534235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/iNNxDTCjZvo/m/UDd7VKQuAAAJ"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2102"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4374-p667-p6c8",
+                "GO-2023-2102"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-qppj-fm5r-hxr3"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/gogo/protobuf",
+            "version": "1.3.1",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:01:11Z",
+              "published": "2022-03-28T20:28:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c3h9-896r-86jm",
+              "aliases": [
+                "BIT-consul-2021-3121",
+                "BIT-protobuf-2021-3121",
+                "CVE-2021-3121",
+                "GO-2021-0053"
+              ],
+              "summary": "Improper Input Validation in GoGo Protobuf",
+              "details": "An issue was discovered in GoGo Protobuf before 1.3.2. plugin/unmarshal/unmarshal.go lacks certain index validation, aka the \"skippy peanut butter\" issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/gogo/protobuf",
+                    "purl": "pkg:golang/github.com/gogo/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-c3h9-896r-86jm/GHSA-c3h9-896r-86jm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3121"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gogo/protobuf/commit/b03c65ea87cdc3521ede29f62fe3ce239267c1bc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2021-23-consul-exposed-to-denial-of-service-in-gogo-protobuf-dependency/29025"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/gogo/protobuf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gogo/protobuf/compare/v1.3.1...v1.3.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r68032132c0399c29d6cdc7bd44918535da54060a10a12b1591328bff@%3Cnotifications.skywalking.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r88d69555cb74a129a7bf84838073b61259b4a3830190e05a3b87994e@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc1e9ff22c5641d73701ba56362fb867d40ed287cca000b131dcf4a44@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2021-0053"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20210219-0006/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-129",
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-28T20:28:00Z",
+                "nvd_published_at": "2021-01-11T06:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:01:11Z",
+              "published": "2021-04-14T20:04:52Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2021-0053",
+              "aliases": [
+                "BIT-consul-2021-3121",
+                "BIT-protobuf-2021-3121",
+                "CVE-2021-3121",
+                "GHSA-c3h9-896r-86jm"
+              ],
+              "summary": "Panic due to improper input validation in github.com/gogo/protobuf",
+              "details": "Due to improper bounds checking, maliciously crafted input to generated Unmarshal methods can cause an out-of-bounds panic. If parsing messages from untrusted parties, this may be used as a denial of service vector.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/gogo/protobuf",
+                    "purl": "pkg:golang/github.com/gogo/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2021-0053.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/gogo/protobuf/plugin/unmarshal",
+                        "symbols": [
+                          "unmarshal.Generate",
+                          "unmarshal.field"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/gogo/protobuf/commit/b03c65ea87cdc3521ede29f62fe3ce239267c1bc"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2021-0053"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c3h9-896r-86jm",
+                "GO-2021-0053"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/ipfs/go-bitfield",
+            "version": "1.0.0",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:41Z",
+              "published": "2023-02-10T19:52:45Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2h6c-j3gf-xp9r",
+              "aliases": [
+                "CVE-2023-23626",
+                "GO-2023-1558"
+              ],
+              "summary": "IPFS go-bitfield vulnerable to DoS via malformed size arguments",
+              "details": "### Impact\nWhen feeding untrusted user input into the size parameter of `NewBitfield` and `FromBytes` functions, an attacker can trigger `panic`s.\n\nThis happen when the `size` is a not a multiple of `8` or is negative.\nThere were already a note in the `NewBitfield` documentation:\n\u003e ```\n\u003e Panics if size is not a multiple of 8.\n\u003e ````\n\nBut it incomplete and missing from `FromBytes`'s documentation.\n\nThis has been replaced by returning an `(Bitfield, error)` and returning a non nil error if the size is wrong.\n\n### Patches\n- https://github.com/ipfs/go-bitfield/commit/5e1d256fe043fc4163343ccca83862c69c52e579\n\n### Workarounds\n- Ensure `size%8 == 0 \u0026\u0026 size \u003e= 0` yourself before calling `NewBitfield` or `FromBytes`\n\n### References\n- https://github.com/ipfs/go-unixfs/security/advisories/GHSA-q264-w97q-q778\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/ipfs/go-bitfield",
+                    "purl": "pkg:golang/github.com/ipfs/go-bitfield"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-2h6c-j3gf-xp9r/GHSA-2h6c-j3gf-xp9r.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ipfs/go-bitfield/security/advisories/GHSA-2h6c-j3gf-xp9r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23626"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ipfs/go-bitfield/commit/5e1d256fe043fc4163343ccca83862c69c52e579"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ipfs/go-bitfield"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2023-1558"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1284",
+                  "CWE-754"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-02-10T19:52:45Z",
+                "nvd_published_at": "2023-02-09T21:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:41Z",
+              "published": "2023-02-14T19:41:21Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1558",
+              "aliases": [
+                "CVE-2023-23626",
+                "GHSA-2h6c-j3gf-xp9r"
+              ],
+              "summary": "Denial of service via malformed size parameters in github.com/ipfs/go-bitfield",
+              "details": "When feeding untrusted user input into the size parameter of `NewBitfield` and FromBytes functions, an attacker can trigger panics.\n\nThis happens when the size is a not a multiple of 8 or is negative.\n\nA workaround is to ensure size%8 == 0 \u0026\u0026 size \u003e= 0 yourself before calling NewBitfield or FromBytes.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/ipfs/go-bitfield",
+                    "purl": "pkg:golang/github.com/ipfs/go-bitfield"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1558.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/ipfs/go-bitfield",
+                        "symbols": [
+                          "FromBytes",
+                          "NewBitfield"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/ipfs/go-bitfield/security/advisories/GHSA-2h6c-j3gf-xp9r"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/ipfs/go-bitfield/commit/5e1d256fe043fc4163343ccca83862c69c52e579"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Jorropo"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1558"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2h6c-j3gf-xp9r",
+                "GO-2023-1558"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "golang.org/x/image",
+            "version": "0.4.0",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:32Z",
+              "published": "2023-02-17T13:59:44Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qgc7-mgm3-q253",
+              "aliases": [
+                "CVE-2022-41727",
+                "GO-2023-1572"
+              ],
+              "summary": "Uncontrolled Resource Consumption in golang.org/x/image",
+              "details": "An attacker can craft a malformed TIFF image which will consume a significant amount of memory when passed to DecodeConfig. This could lead to a denial of service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/image",
+                    "purl": "pkg:golang/golang.org/x/image"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-qgc7-mgm3-q253/GHSA-qgc7-mgm3-q253.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-41727"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/468195"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/issue/58003"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/ag-FiyjlD5o"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KO54NBDUJXKAZNGCFOEYL2LKK2RQP6K6/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XWH6Q7NVM4MV3GWFEU4PA67AWZHVFJQ2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XZTEP6JYILRBNDTNWTEQ5D4QUUVQBESK/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2023-1572"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-02-17T13:59:44Z",
+                "nvd_published_at": "2023-02-28T18:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:32Z",
+              "published": "2023-02-16T22:25:24Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1572",
+              "aliases": [
+                "CVE-2022-41727",
+                "GHSA-qgc7-mgm3-q253"
+              ],
+              "summary": "Denial of service via crafted TIFF image in golang.org/x/image/tiff",
+              "details": "An attacker can craft a malformed TIFF image which will consume a significant amount of memory when passed to DecodeConfig. This could lead to a denial of service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/image",
+                    "purl": "pkg:golang/golang.org/x/image"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1572.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/image/tiff",
+                        "symbols": [
+                          "Decode",
+                          "DecodeConfig",
+                          "decoder.ifdUint",
+                          "newDecoder"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/58003"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/468195"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/ag-FiyjlD5o"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Philippe Antoine (Catena cyber)"
+                },
+                {
+                  "name": "OSS Fuzz"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1572"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:19Z",
+              "published": "2023-08-02T21:30:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j3p8-6mrq-6g7h",
+              "aliases": [
+                "CVE-2023-29407",
+                "GO-2023-1990"
+              ],
+              "summary": "Golang TIFF decoder vulnerable to excessive CPU consumption",
+              "details": "A maliciously-crafted image can cause excessive CPU consumption in decoding. A tiled image with a height of 0 and a very large width can cause excessive CPU consumption, despite the image size (width * height) appearing to be zero.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/image",
+                    "purl": "pkg:golang/golang.org/x/image"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.10.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-j3p8-6mrq-6g7h/GHSA-j3p8-6mrq-6g7h.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29407"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/514897"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/issue/61581"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KO54NBDUJXKAZNGCFOEYL2LKK2RQP6K6/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XWH6Q7NVM4MV3GWFEU4PA67AWZHVFJQ2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XZTEP6JYILRBNDTNWTEQ5D4QUUVQBESK/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2023-1990"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230831-0009/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-834"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-02T21:22:21Z",
+                "nvd_published_at": "2023-08-02T20:15:11Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:19Z",
+              "published": "2023-08-02T21:30:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x92r-3vfx-4cv3",
+              "aliases": [
+                "CVE-2023-29408",
+                "GO-2023-1989"
+              ],
+              "summary": "Golang TIFF decoder does not place a limit on the size of compressed tile data",
+              "details": "The TIFF decoder does not place a limit on the size of compressed tile data. A maliciously-crafted image can exploit this to cause a small image (both in terms of pixel width/height, and encoded size) to make the decoder decode large amounts of compressed data, consuming excessive memory and CPU.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/image",
+                    "purl": "pkg:golang/golang.org/x/image"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.10.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-x92r-3vfx-4cv3/GHSA-x92r-3vfx-4cv3.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29408"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/514897"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/issue/61582"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KO54NBDUJXKAZNGCFOEYL2LKK2RQP6K6/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XWH6Q7NVM4MV3GWFEU4PA67AWZHVFJQ2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XZTEP6JYILRBNDTNWTEQ5D4QUUVQBESK/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2023-1989"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230831-0009/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-02T21:22:24Z",
+                "nvd_published_at": "2023-08-02T20:15:11Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-09T18:56:13Z",
+              "published": "2023-08-02T15:06:02Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1989",
+              "aliases": [
+                "CVE-2023-29408",
+                "GHSA-x92r-3vfx-4cv3"
+              ],
+              "summary": "Excessive resource consumption in golang.org/x/image/tiff",
+              "details": "The TIFF decoder does not place a limit on the size of compressed tile data. A maliciously-crafted image can exploit this to cause a small image (both in terms of pixel width/height, and encoded size) to make the decoder decode large amounts of compressed data, consuming excessive memory and CPU.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/image",
+                    "purl": "pkg:golang/golang.org/x/image"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.10.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1989.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/image/tiff",
+                        "symbols": [
+                          "Decode",
+                          "DecodeConfig",
+                          "newDecoder"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/61582"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/514897"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Philippe Antoine (Catena cyber)"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1989"
+              }
+            },
+            {
+              "modified": "2023-11-09T18:56:13Z",
+              "published": "2023-08-02T15:06:21Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1990",
+              "aliases": [
+                "CVE-2023-29407",
+                "GHSA-j3p8-6mrq-6g7h"
+              ],
+              "summary": "Excessive CPU consumption when decoding 0-height images in golang.org/x/image/tiff",
+              "details": "A maliciously-crafted image can cause excessive CPU consumption in decoding.\n\nA tiled image with a height of 0 and a very large width can cause excessive CPU consumption, despite the image size (width * height) appearing to be zero.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/image",
+                    "purl": "pkg:golang/golang.org/x/image"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.10.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1990.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/image/tiff",
+                        "symbols": [
+                          "Decode",
+                          "DecodeConfig",
+                          "newDecoder"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/61581"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/514897"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Philippe Antoine (Catena cyber)"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1990"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qgc7-mgm3-q253",
+                "GO-2023-1572"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-j3p8-6mrq-6g7h",
+                "GO-2023-1990"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-x92r-3vfx-4cv3",
+                "GO-2023-1989"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

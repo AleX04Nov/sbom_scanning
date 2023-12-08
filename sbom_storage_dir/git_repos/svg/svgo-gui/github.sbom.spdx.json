@@ -1,0 +1,49 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:53:08Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.svg/svgo-gui",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.svg-svgo-gui"
+    ],
+    "documentNamespace": "https://github.com/svg/svgo-gui/dependency_graph/sbom-314a925bf9670b24",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.svg-svgo-gui",
+            "name": "com.github.svg/svgo-gui",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/svg/svgo-gui",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/svg/svgo-gui"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-svgo",
+            "name": "npm:svgo",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.svg-svgo-gui",
+            "relatedSpdxElement": "SPDXRef-npm-svgo"
+        }
+    ]
+}

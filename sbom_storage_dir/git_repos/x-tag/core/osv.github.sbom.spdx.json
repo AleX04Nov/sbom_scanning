@@ -1,0 +1,1485 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "braces",
+            "version": "1.8.5",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:45Z",
+              "published": "2022-01-06T20:42:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cwfw-4gq5-mrqx",
+              "aliases": [
+                "CVE-2018-1109"
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in braces",
+              "details": "A vulnerability was found in Braces versions prior to 2.3.1. Affected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) attacks.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-cwfw-4gq5-mrqx/GHSA-cwfw-4gq5-mrqx.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1109"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/abdafb0cae1e0c00f184abbadc692f4eaa98f451"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1547272"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/npm:braces:20180219"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-31T21:35:00Z",
+                "nvd_published_at": "2021-03-30T02:15:00Z",
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2021-08-04T21:35:07Z",
+              "published": "2019-06-06T15:30:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-g95f-p29q-9xw4",
+              "summary": "Regular Expression Denial of Service in braces",
+              "details": "Versions of `braces` prior to 2.3.1 are vulnerable to Regular Expression Denial of Service (ReDoS). Untrusted input may cause catastrophic backtracking while matching regular expressions. This can cause the application to be unresponsive leading to Denial of Service.\n\n\n## Recommendation\n\nUpgrade to version 2.3.1 or higher.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/06/GHSA-g95f-p29q-9xw4/GHSA-g95f-p29q-9xw4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/abdafb0cae1e0c00f184abbadc692f4eaa98f451"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/npm:braces:20180219"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/786"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-185",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-06-06T09:40:51Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cwfw-4gq5-mrqx"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-g95f-p29q-9xw4"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "concat-with-sourcemaps",
+            "version": "1.0.4",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2020-08-31T18:31:05Z",
+              "published": "2019-05-29T19:18:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2xv3-h762-ccxv",
+              "summary": "Out-of-bounds Read in concat-with-sourcemaps",
+              "details": "Versions of `concat-with-sourcemaps` before 1.0.6 allocates uninitialized Buffers when a number is passed as a separator.\n\n\n## Recommendation\n\nUpdate to version 1.0.6 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "concat-with-sourcemaps",
+                    "purl": "pkg:npm/concat-with-sourcemaps"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/05/GHSA-2xv3-h762-ccxv/GHSA-2xv3-h762-ccxv.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/320166"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/floridoo/concat-with-sourcemaps/blob/v1.0.5/index.js#L18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/644"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-125"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-05-29T19:17:27Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2xv3-h762-ccxv"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "extend",
+            "version": "3.0.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:00:01Z",
+              "published": "2019-02-07T18:03:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qrmc-fj45-qfc2",
+              "aliases": [
+                "CVE-2018-16492"
+              ],
+              "summary": "Prototype Pollution in extend",
+              "details": "Versions of `extend` prior to 3.0.2 (for 3.x) and 2.0.2 (for 2.x) are vulnerable to Prototype Pollution. The `extend()` function allows attackers to modify the prototype of Object causing the addition or modification of an existing property that will exist on all objects.\n\n\n\n\n## Recommendation\n\nIf you're using `extend` 3.x upgrade to 3.0.2 or later.\nIf you're using `extend` 2.x upgrade to 2.0.2 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "extend",
+                    "purl": "pkg:npm/extend"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/02/GHSA-qrmc-fj45-qfc2/GHSA-qrmc-fj45-qfc2.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "extend",
+                    "purl": "pkg:npm/extend"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/02/GHSA-qrmc-fj45-qfc2/GHSA-qrmc-fj45-qfc2.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-16492"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/381185"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-qrmc-fj45-qfc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/996"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:52:44Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qrmc-fj45-qfc2"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "glob-parent",
+            "version": "2.0.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:00:30Z",
+              "published": "2021-06-07T21:56:34Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-ww39-953v-wcq6",
+              "aliases": [
+                "BIT-gulp-2020-28469",
+                "CVE-2020-28469",
+                "SNYK-JAVA-ORGWEBJARSBOWERGITHUBES128-1059093",
+                "SNYK-JAVA-ORGWEBJARSNPM-1059092",
+                "SNYK-JS-GLOBPARENT-1016905"
+              ],
+              "summary": "glob-parent vulnerable to Regular Expression Denial of Service in enclosure regex",
+              "details": "This affects the package glob-parent before 5.1.2. The enclosure regex used to check for strings ending in enclosure containing path separator.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob-parent",
+                    "purl": "pkg:npm/glob-parent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-ww39-953v-wcq6/GHSA-ww39-953v-wcq6.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(glob-parent).globParent"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28469"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/pull/36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/pull/36/commits/c6db86422a9731d4f3d332ce4a81c27ea6b0ee46"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/gulpjs/glob-parent"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/blob/6ce8d11f2f1ed8e80a9526b1dc8cf3aa71f43474/index.js%23L9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/releases/tag/v5.1.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBES128-1059093"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1059092"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-GLOBPARENT-1016905"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-06-04T18:30:45Z",
+                "nvd_published_at": "2021-06-03T16:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-ww39-953v-wcq6"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ini",
+            "version": "1.3.4",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:10Z",
+              "published": "2020-12-10T16:53:45Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qqgx-2p2h-9c37",
+              "aliases": [
+                "CVE-2020-7788",
+                "SNYK-JS-INI-1048974"
+              ],
+              "summary": "ini before 1.3.6 vulnerable to Prototype Pollution via ini.parse",
+              "details": "### Overview\nThe `ini` npm package before version 1.3.6 has a Prototype Pollution vulnerability.\n\nIf an attacker submits a malicious INI file to an application that parses it with `ini.parse`, they will pollute the prototype on the application. This can be exploited further depending on the context.\n\n### Patches\n\nThis has been patched in 1.3.6.\n\n### Steps to reproduce\n\npayload.ini\n```\n[__proto__]\npolluted = \"polluted\"\n```\n\npoc.js:\n```\nvar fs = require('fs')\nvar ini = require('ini')\n\nvar parsed = ini.parse(fs.readFileSync('./payload.ini', 'utf-8'))\nconsole.log(parsed)\nconsole.log(parsed.__proto__)\nconsole.log(polluted)\n```\n\n```\n\u003e node poc.js\n{}\n{ polluted: 'polluted' }\n{ polluted: 'polluted' }\npolluted\n```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ini",
+                    "purl": "pkg:npm/ini"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/12/GHSA-qqgx-2p2h-9c37/GHSA-qqgx-2p2h-9c37.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7788"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/ini/commit/56d2805e07ccd94e2ba0984ac9240ff02d44b6f1"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/ini"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/12/msg00032.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-INI-1048974"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1589"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-12-10T16:51:39Z",
+                "nvd_published_at": "2020-12-11T11:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qqgx-2p2h-9c37"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "minimist",
+            "version": "0.0.8",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:03:59Z",
+              "published": "2020-04-03T21:48:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vh95-rmgr-6w4m",
+              "aliases": [
+                "CVE-2020-7598"
+              ],
+              "summary": "Prototype Pollution in minimist",
+              "details": "Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  \nThis is exploitable if attackers have control over the arguments being passed to `minimist`.\n\n\n\n## Recommendation\n\nUpgrade to versions 0.2.1, 1.2.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/04/GHSA-vh95-rmgr-6w4m/GHSA-vh95-rmgr-6w4m.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(minimist)"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.2.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/04/GHSA-vh95-rmgr-6w4m/GHSA-vh95-rmgr-6w4m.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(minimist)"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7598"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/10bd4cdf49d9686d48214be9d579a9cdfda37c68"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/38a4d1caead72ef99e824bb420a2528eec03d9ab"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/substack/minimist"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1179"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-04-03T21:42:08Z",
+                "nvd_published_at": "2020-03-11T23:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:07:19Z",
+              "published": "2022-03-18T00:01:09Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xvch-5gv4-984h",
+              "aliases": [
+                "CVE-2021-44906"
+              ],
+              "summary": "Prototype Pollution in minimist",
+              "details": "Minimist prior to 1.2.6 and 0.2.4 is vulnerable to Prototype Pollution via file `index.js`, function `setKey()` (lines 69-95).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.2.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(minimist)"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "minimist",
+                    "purl": "pkg:npm/minimist"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.2.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-xvch-5gv4-984h/GHSA-xvch-5gv4-984h.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(minimist)"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44906"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/issues/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/issues/164"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/pull/24"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/minimistjs/minimist/commits/v0.2.4"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/substack/minimist"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/substack/minimist/blob/master/index.js#L69"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-18T23:13:40Z",
+                "nvd_published_at": "2022-03-17T16:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vh95-rmgr-6w4m"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-xvch-5gv4-984h"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "npm",
+            "version": "5.8.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-13T15:39:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m6cx-g6qm-p2cx",
+              "aliases": [
+                "CVE-2019-16775"
+              ],
+              "summary": "Arbitrary File Write in npm",
+              "details": "Versions of the npm CLI prior to 6.13.3 are vulnerable to an Arbitrary File Write. It fails to prevent access to folders outside of the intended node_modules folder through the bin field. A properly constructed entry in the package.json bin field would allow a package publisher to create files on a user's system when the package is installed. It is only possible to affect files that the user running `npm install` has access to and it is not possible to over write files that already exist on disk.\n\nThis behavior is still possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.13.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-m6cx-g6qm-p2cx/GHSA-m6cx-g6qm-p2cx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-m6cx-g6qm-p2cx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16775"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHEA-2020:0330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0602"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-m6cx-g6qm-p2cx"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/cli"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z36UKPO5F3PQ3Q2POMF5LEKXWAH5RUFP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1434"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00027.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59",
+                  "CWE-61"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-17T16:30:50Z",
+                "nvd_published_at": "2019-12-13T01:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-13T15:39:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x8qc-rrcw-4r46",
+              "aliases": [
+                "CVE-2019-16776"
+              ],
+              "summary": "npm symlink reference outside of node_modules",
+              "details": "Versions of the npm CLI prior to 6.13.3 are vulnerable to a symlink reference outside of node_modules. It is possible for packages to create symlinks to files outside of the`node_modules` folder through the `bin` field upon installation. A properly constructed entry in the package.json bin field would allow a package publisher to create a symlink pointing to arbitrary files on a user’s system when the package is installed. Only files accessible by the user running the `npm install` are affected.  \n\nThis behavior is still possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.13.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-x8qc-rrcw-4r46/GHSA-x8qc-rrcw-4r46.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-x8qc-rrcw-4r46"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16776"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHEA-2020:0330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0602"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-x8qc-rrcw-4r46"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z36UKPO5F3PQ3Q2POMF5LEKXWAH5RUFP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1436"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00027.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T22:02:49Z",
+                "nvd_published_at": "2019-12-13T01:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-13T15:39:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4328-8hgf-7wjr",
+              "aliases": [
+                "CVE-2019-16777"
+              ],
+              "summary": "npm Vulnerable to Global node_modules Binary Overwrite",
+              "details": "Versions of  the npm CLI prior to 6.13.4 are vulnerable to a Global node_modules Binary Overwrite. It fails to prevent existing globally-installed binaries to be overwritten by other package installations. \n\nFor example, if a package was installed globally and created a `serve` binary, any subsequent installs of packages that also create a `serve` binary would overwrite the first binary. This will not overwrite system binaries but only binaries put into the global node_modules directory.\n\nThis behavior is still allowed in local installations and also through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.4 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.13.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-4328-8hgf-7wjr/GHSA-4328-8hgf-7wjr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-4328-8hgf-7wjr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16777"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHEA-2020:0330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0602"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-4328-8hgf-7wjr"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/cli"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z36UKPO5F3PQ3Q2POMF5LEKXWAH5RUFP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202003-48"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1437"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00027.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-269"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:57:02Z",
+                "nvd_published_at": "2019-12-13T01:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:02:28Z",
+              "published": "2020-07-07T18:56:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-93f3-23rq-pjfp",
+              "aliases": [
+                "CVE-2020-15095"
+              ],
+              "summary": "npm CLI exposing sensitive information through logs",
+              "details": "Versions of the npm CLI prior to 6.14.6 are vulnerable to an information exposure vulnerability through log files. The CLI supports URLs like `\u003cprotocol\u003e://[\u003cuser\u003e[:\u003cpassword\u003e]@]\u003chostname\u003e[:\u003cport\u003e][:][/]\u003cpath\u003e`. The password value is not redacted and is printed to stdout and also to any generated log files.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.14.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-93f3-23rq-pjfp/GHSA-93f3-23rq-pjfp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-93f3-23rq-pjfp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15095"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/commit/a9857b8f6869451ff058789c4631fadfde5bbcbc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/blob/66aab417f836a901f8afb265251f761bb0422463/CHANGELOG.md#6146-2020-07-07"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4OOYAMJVLLCLXDTHW3V5UXNULZBBK4O6/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202101-07"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00011.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00015.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00023.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-07-07T18:30:59Z",
+                "nvd_published_at": "2020-07-07T19:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m6cx-g6qm-p2cx"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-x8qc-rrcw-4r46"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-4328-8hgf-7wjr"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-93f3-23rq-pjfp"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "path-parse",
+            "version": "1.0.5",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:04Z",
+              "published": "2021-08-10T15:33:47Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hj48-42vr-x3v9",
+              "aliases": [
+                "CVE-2021-23343",
+                "SNYK-JAVA-ORGWEBJARSNPM-1279028",
+                "SNYK-JS-PATHPARSE-1077067"
+              ],
+              "summary": "Regular Expression Denial of Service in path-parse",
+              "details": "Affected versions of npm package `path-parse` are vulnerable to Regular Expression Denial of Service (ReDoS) via splitDeviceRe, splitTailRe, and splitPathRe regular expressions. ReDoS exhibits polynomial worst-case time complexity.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "path-parse",
+                    "purl": "pkg:npm/path-parse"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-hj48-42vr-x3v9/GHSA-hj48-42vr-x3v9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23343"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jbgutierrez/path-parse/issues/8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jbgutierrez/path-parse/pull/10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jbgutierrez/path-parse/commit/eca63a7b9a473bf6978a2f5b7b3343662d1506f7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jbgutierrez/path-parse"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6a32cb3eda3b19096ad48ef1e7aa8f26e005f2f63765abb69ce08b85@%3Cdev.myfaces.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1279028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-PATHPARSE-1077067"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-05-19T21:02:21Z",
+                "nvd_published_at": "2021-05-04T09:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-hj48-42vr-x3v9"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "randomatic",
+            "version": "1.1.7",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:00Z",
+              "published": "2018-10-09T00:57:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6g33-f262-xjp4",
+              "aliases": [
+                "CVE-2017-16028"
+              ],
+              "summary": "Cryptographically Weak PRNG in randomatic",
+              "details": "Affected versions of `randomatic` generate random values using a cryptographically weak psuedo-random number generator. This may result in predictable values instead of random values as intended.\n\n\n\n\n## Recommendation\n\nUpdate to version 3.0.0 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "randomatic",
+                    "purl": "pkg:npm/randomatic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-6g33-f262-xjp4/GHSA-6g33-f262-xjp4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jonschlinkert/randomatic/commit/4a526959b3a246ae8e4a82f9c182180907227fe1#diff-b9cfc7f2cdf78a7f4b91a753d10865a2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-6g33-f262-xjp4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tableflip/react-native-meteor-oauth/blob/a7eb738b74c469f5db20296b44b7cae4e2337435/src/meteor-oauth.js#L66"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/157"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-330",
+                  "CWE-338"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:19:13Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6g33-f262-xjp4"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

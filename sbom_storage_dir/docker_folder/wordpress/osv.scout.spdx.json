@@ -1,0 +1,194 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/scout.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "nghttp2",
+            "version": "1.43.0-1",
+            "ecosystem": "Debian",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-02T00:18:58Z",
+              "published": "2023-12-01T00:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "DSA-5570-1",
+              "related": [
+                "CVE-2023-44487"
+              ],
+              "summary": "nghttp2 - security update",
+              "details": "\nIt was discovered that libnghttp2, a library implementing the HTTP/2\nprotocol, handled request cancellation incorrectly. This could result\nin denial of service.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 1.43.0-1+deb11u1.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 1.52.0-1+deb12u1.\n\n\nWe recommend that you upgrade your nghttp2 packages.\n\n\nFor the detailed security status of nghttp2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/nghttp2](https://security-tracker.debian.org/tracker/nghttp2)\n\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Debian:11",
+                    "name": "nghttp2",
+                    "purl": "pkg:deb/debian/nghttp2?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.43.0-1+deb11u1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.43.0-1"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5570-1.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Debian:12",
+                    "name": "nghttp2",
+                    "purl": "pkg:deb/debian/nghttp2?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.52.0-1+deb12u1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.52.0-1"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5570-1.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://www.debian.org/security/2023/dsa-5570"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "DSA-5570-1"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tiff",
+            "version": "4.2.0-1+deb11u4",
+            "ecosystem": "Debian",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-27T19:15:46Z",
+              "published": "2023-11-27T00:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "DSA-5567-1",
+              "related": [
+                "CVE-2023-3576",
+                "CVE-2023-40745",
+                "CVE-2023-41175"
+              ],
+              "summary": "tiff - security update",
+              "details": "\nMultiple buffer overflows and memory leak issues have been found in tiff,\nthe Tag Image File Format (TIFF) library and tools, which may cause denial\nof service when processing a crafted TIFF image.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 4.2.0-1+deb11u5.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 4.5.0-6+deb12u1.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFor the detailed security status of tiff please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tiff](https://security-tracker.debian.org/tracker/tiff)\n\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Debian:11",
+                    "name": "tiff",
+                    "purl": "pkg:deb/debian/tiff?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.0-1+deb11u5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.2.0-1",
+                    "4.2.0-1+deb11u1",
+                    "4.2.0-1+deb11u2",
+                    "4.2.0-1+deb11u3",
+                    "4.2.0-1+deb11u4"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5567-1.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Debian:12",
+                    "name": "tiff",
+                    "purl": "pkg:deb/debian/tiff?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.5.0-6+deb12u1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.5.0-6"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5567-1.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://www.debian.org/security/2023/dsa-5567"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "DSA-5567-1"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

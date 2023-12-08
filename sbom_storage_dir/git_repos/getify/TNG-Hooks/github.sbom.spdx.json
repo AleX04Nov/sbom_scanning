@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:01:44Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.getify/TNG-Hooks",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.getify-TNG-Hooks"
+    ],
+    "documentNamespace": "https://github.com/getify/TNG-Hooks/dependency_graph/sbom-0b4cf966ecafaf20",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.getify-TNG-Hooks",
+            "name": "com.github.getify/TNG-Hooks",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/getify/TNG-Hooks",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/getify/TNG-Hooks"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-coveralls",
+            "name": "npm:coveralls",
+            "versionInfo": "~ 3.1.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-qunit",
+            "name": "npm:qunit",
+            "versionInfo": "~ 2.19.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-terser",
+            "name": "npm:terser",
+            "versionInfo": "~ 5.15.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-TNG-Hooks",
+            "relatedSpdxElement": "SPDXRef-npm-coveralls"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-TNG-Hooks",
+            "relatedSpdxElement": "SPDXRef-npm-qunit"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.getify-TNG-Hooks",
+            "relatedSpdxElement": "SPDXRef-npm-terser"
+        }
+    ]
+}

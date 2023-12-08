@@ -1,0 +1,96 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:54:02Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.aNNiMON/Lightweight-Stream-API",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.aNNiMON-Lightweight-Stream-API"
+    ],
+    "documentNamespace": "https://github.com/aNNiMON/Lightweight-Stream-API/dependency_graph/sbom-751633f1a243fa5c",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.aNNiMON-Lightweight-Stream-API",
+            "name": "com.github.aNNiMON/Lightweight-Stream-API",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/aNNiMON/Lightweight-Stream-API",
+            "licenseDeclared": "Apache-2.0",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/aNNiMON/Lightweight-Stream-API"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-cache-1",
+            "name": "actions:actions/cache",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/cache@1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-checkout-2",
+            "name": "actions:actions/checkout",
+            "versionInfo": "2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/checkout@2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-setup-java-1",
+            "name": "actions:actions/setup-java",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/setup-java@1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.aNNiMON-Lightweight-Stream-API",
+            "relatedSpdxElement": "SPDXRef-actions-actions-cache-1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.aNNiMON-Lightweight-Stream-API",
+            "relatedSpdxElement": "SPDXRef-actions-actions-checkout-2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.aNNiMON-Lightweight-Stream-API",
+            "relatedSpdxElement": "SPDXRef-actions-actions-setup-java-1"
+        }
+    ]
+}

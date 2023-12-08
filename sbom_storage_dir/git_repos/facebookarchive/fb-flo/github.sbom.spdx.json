@@ -1,0 +1,75 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:53:04Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.facebookarchive/fb-flo",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.facebookarchive-fb-flo"
+    ],
+    "documentNamespace": "https://github.com/facebookarchive/fb-flo/dependency_graph/sbom-b573db526d2afda0",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.facebookarchive-fb-flo",
+            "name": "com.github.facebookarchive/fb-flo",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/facebookarchive/fb-flo",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/facebookarchive/fb-flo"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha",
+            "name": "npm:mocha",
+            "versionInfo": "~ 1.17.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-sane",
+            "name": "npm:sane",
+            "versionInfo": "~ 1.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-websocket",
+            "name": "npm:websocket",
+            "versionInfo": "~ 1.0.8",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.facebookarchive-fb-flo",
+            "relatedSpdxElement": "SPDXRef-npm-mocha"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.facebookarchive-fb-flo",
+            "relatedSpdxElement": "SPDXRef-npm-sane"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.facebookarchive-fb-flo",
+            "relatedSpdxElement": "SPDXRef-npm-websocket"
+        }
+    ]
+}

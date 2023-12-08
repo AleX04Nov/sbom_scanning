@@ -1,0 +1,153 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:50:28Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.square/cube",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.square-cube"
+    ],
+    "documentNamespace": "https://github.com/square/cube/dependency_graph/sbom-f34b28bbbc7b076e",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.square-cube",
+            "name": "com.github.square/cube",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/square/cube",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/square/cube"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mongodb",
+            "name": "npm:mongodb",
+            "versionInfo": "~ 1.3.18",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-node-static-0.6.5",
+            "name": "npm:node-static",
+            "versionInfo": "0.6.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/node-static@0.6.5",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-pegjs-0.7.0",
+            "name": "npm:pegjs",
+            "versionInfo": "0.7.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/pegjs@0.7.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-vows-0.7.0",
+            "name": "npm:vows",
+            "versionInfo": "0.7.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/vows@0.7.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-websocket-1.0.8",
+            "name": "npm:websocket",
+            "versionInfo": "1.0.8",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/websocket@1.0.8",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-websocket-server-1.4.04",
+            "name": "npm:websocket-server",
+            "versionInfo": "1.4.04",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/websocket-server@1.4.04",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cube",
+            "relatedSpdxElement": "SPDXRef-npm-mongodb"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cube",
+            "relatedSpdxElement": "SPDXRef-npm-node-static-0.6.5"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cube",
+            "relatedSpdxElement": "SPDXRef-npm-pegjs-0.7.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cube",
+            "relatedSpdxElement": "SPDXRef-npm-vows-0.7.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cube",
+            "relatedSpdxElement": "SPDXRef-npm-websocket-1.0.8"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cube",
+            "relatedSpdxElement": "SPDXRef-npm-websocket-server-1.4.04"
+        }
+    ]
+}

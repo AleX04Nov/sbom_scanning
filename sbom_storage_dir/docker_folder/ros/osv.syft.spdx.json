@@ -1,0 +1,3489 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/syft.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "pygments",
+            "version": "2.11.2",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:25Z",
+              "published": "2023-07-19T15:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mrwq-x4v8-fh7p",
+              "aliases": [
+                "CVE-2022-40896",
+                "PYSEC-2023-117"
+              ],
+              "summary": "Pygments vulnerable to ReDoS",
+              "details": "A ReDoS issue was discovered in `pygments/lexers/smithy.py` in Pygments until 2.15.0 via SmithyLexer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-mrwq-x4v8-fh7p/GHSA-mrwq-x4v8-fh7p.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "pygments.lexers.templates.SqlJinjaLexer.analyse_text",
+                      "pygments.lexers.smithy.SmithyLexer",
+                      "pygments.lexers.configs.PropertiesLexer"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40896"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/97eb3d5ec7c1b3ea4fcf9dee30a2309cf92bd194"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/dd52102c38ebe78cd57748e09f38929fd283ad04"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/fdf182a7af85b1deeeb637ca970d31935e7c9d52"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pygments/pygments"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/blob/master/pygments/lexers/smithy.py#L61"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pygments/PYSEC-2023-117.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pypi.org/project/Pygments/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages-part-2/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-434"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-20T11:00:04Z",
+                "nvd_published_at": "2023-07-19T15:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:25Z",
+              "published": "2023-07-19T15:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2023-117",
+              "aliases": [
+                "CVE-2022-40896",
+                "GHSA-mrwq-x4v8-fh7p"
+              ],
+              "details": "A ReDoS issue was discovered in pygments/lexers/smithy.py in pygments through 2.15.0 via SmithyLexer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.15.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pygments/PYSEC-2023-117.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://pypi.org/project/Pygments/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages-part-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/blob/master/pygments/lexers/smithy.py#L61"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mrwq-x4v8-fh7p",
+                "PYSEC-2023-117"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cryptography",
+            "version": "3.4.8",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-06-02T17:29:11Z",
+              "published": "2023-06-02T17:13:10Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5cpq-8wj7-hf2v",
+              "summary": "Vulnerable OpenSSL included in cryptography wheels",
+              "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0.5"
+                        },
+                        {
+                          "fixed": "41.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.5",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.6",
+                    "0.6.1",
+                    "0.7",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.8",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.4",
+                    "1.5",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.2",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5",
+                    "2.6",
+                    "2.6.1",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "35.0.0",
+                    "36.0.0",
+                    "36.0.1",
+                    "36.0.2",
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.0.2",
+                    "40.0.0",
+                    "40.0.1",
+                    "40.0.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 40.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-5cpq-8wj7-hf2v/GHSA-5cpq-8wj7-hf2v.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-5cpq-8wj7-hf2v"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/8708245ccdeaff21d65eea68a4f8d2a7c5949a22"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cryptography.io/en/latest/changelog/#v41-0-0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-02T17:13:10Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-12-05T01:33:21Z",
+              "published": "2023-11-28T20:46:46Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jfhm-5ghh-2f97",
+              "aliases": [
+                "CVE-2023-49083"
+              ],
+              "summary": "cryptography vulnerable to NULL-dereference when loading PKCS7 certificates",
+              "details": "### Summary\n\nCalling `load_pem_pkcs7_certificates` or `load_der_pkcs7_certificates` could lead to a NULL-pointer dereference and segfault.\n\n### PoC\nHere is a Python code that triggers the issue:\n```python\nfrom cryptography.hazmat.primitives.serialization.pkcs7 import load_der_pkcs7_certificates, load_pem_pkcs7_certificates\n\npem_p7 = b\"\"\"\n-----BEGIN PKCS7-----\nMAsGCSqGSIb3DQEHAg==\n-----END PKCS7-----\n\"\"\"\n\nder_p7 = b\"\\x30\\x0B\\x06\\x09\\x2A\\x86\\x48\\x86\\xF7\\x0D\\x01\\x07\\x02\"\n\nload_pem_pkcs7_certificates(pem_p7)\nload_der_pkcs7_certificates(der_p7)\n```\n\n### Impact\nExploitation of this vulnerability poses a serious risk of Denial of Service (DoS) for any application attempting to deserialize a PKCS7 blob/certificate. The consequences extend to potential disruptions in system availability and stability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1"
+                        },
+                        {
+                          "fixed": "41.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "35.0.0",
+                    "36.0.0",
+                    "36.0.1",
+                    "36.0.2",
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.0.2",
+                    "40.0.0",
+                    "40.0.1",
+                    "40.0.2",
+                    "41.0.0",
+                    "41.0.1",
+                    "41.0.2",
+                    "41.0.3",
+                    "41.0.4",
+                    "41.0.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-jfhm-5ghh-2f97/GHSA-jfhm-5ghh-2f97.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-jfhm-5ghh-2f97"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49083"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/pull/9926"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/f09c261ca10a31fe41b1262306db7f8f1da0e48a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/11/29/2"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-476"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-28T20:46:46Z",
+                "nvd_published_at": "2023-11-29T19:15:07Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-08-01T22:46:29Z",
+              "published": "2023-08-01T22:34:41Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jm77-qphf-c4w8",
+              "summary": "pyca/cryptography's wheels include vulnerable OpenSSL",
+              "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0.8"
+                        },
+                        {
+                          "fixed": "41.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.8",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.4",
+                    "1.5",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.2",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5",
+                    "2.6",
+                    "2.6.1",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "35.0.0",
+                    "36.0.0",
+                    "36.0.1",
+                    "36.0.2",
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.0.2",
+                    "40.0.0",
+                    "40.0.1",
+                    "40.0.2",
+                    "41.0.0",
+                    "41.0.1",
+                    "41.0.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-jm77-qphf-c4w8/GHSA-jm77-qphf-c4w8.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-jm77-qphf-c4w8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/b22271cf3c3dd8dc8978f8f4b00b5c7060b6538d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/bfa4d95f0f356f2d535efd5c775e0fb3efe90ef2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssl.org/news/secadv/20230714.txt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssl.org/news/secadv/20230719.txt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssl.org/news/secadv/20230731.txt"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-08-01T22:34:41Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-10-26T05:33:16Z",
+              "published": "2023-09-21T17:07:01Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v8gr-m533-ghj9",
+              "summary": "Vulnerable OpenSSL included in cryptography wheels",
+              "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 2.5-41.0.3 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230908.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.5"
+                        },
+                        {
+                          "fixed": "41.0.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.5",
+                    "2.6",
+                    "2.6.1",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "35.0.0",
+                    "36.0.0",
+                    "36.0.1",
+                    "36.0.2",
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.0.2",
+                    "40.0.0",
+                    "40.0.1",
+                    "40.0.2",
+                    "41.0.0",
+                    "41.0.1",
+                    "41.0.2",
+                    "41.0.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-v8gr-m533-ghj9/GHSA-v8gr-m533-ghj9.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-v8gr-m533-ghj9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/fc11bce6930e591ce26a2317b31b9ce2b3e25512"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-09-21T17:07:01Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:43Z",
+              "published": "2023-02-07T20:54:10Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-w7pp-m8wf-vj6r",
+              "aliases": [
+                "CVE-2023-23931"
+              ],
+              "summary": "Cipher.update_into can corrupt memory if passed an immutable python object as the outbuf",
+              "details": "Previously, `Cipher.update_into` would accept Python objects which implement the buffer protocol, but provide only immutable buffers:\n\n```pycon\n\u003e\u003e\u003e outbuf = b\"\\x00\" * 32\n\u003e\u003e\u003e c = ciphers.Cipher(AES(b\"\\x00\" * 32), modes.ECB()).encryptor()\n\u003e\u003e\u003e c.update_into(b\"\\x00\" * 16, outbuf)\n16\n\u003e\u003e\u003e outbuf\nb'\\xdc\\x95\\xc0x\\xa2@\\x89\\x89\\xadH\\xa2\\x14\\x92\\x84 \\x87\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00'\n```\n\nThis would allow immutable objects (such as `bytes`) to be mutated, thus violating fundamental rules of Python. This is a soundness bug -- it allows programmers to misuse an API, it cannot be exploited by attacker controlled data alone.\n\nThis now correctly raises an exception.\n\nThis issue has been present since `update_into` was originally introduced in cryptography 1.8.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.8"
+                        },
+                        {
+                          "fixed": "39.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.8",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.2",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5",
+                    "2.6",
+                    "2.6.1",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "35.0.0",
+                    "36.0.0",
+                    "36.0.1",
+                    "36.0.2",
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-w7pp-m8wf-vj6r/GHSA-w7pp-m8wf-vj6r.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "cryptography.hazmat.primitives.ciphers.Cipher"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-w7pp-m8wf-vj6r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-23931"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/pull/8230/commits/94a50a9731f35405f0357fa5f3b177d46a726ab3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/commit/d6951dca25de45abd52da51b608055371fbcde4e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-754"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-02-07T20:54:10Z",
+                "nvd_published_at": "2023-02-07T21:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:06Z",
+              "published": "2023-02-08T22:17:06Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x4qr-2fvf-3mr5",
+              "aliases": [
+                "CVE-2023-0286",
+                "RUSTSEC-2023-0006"
+              ],
+              "summary": "Vulnerable OpenSSL included in cryptography wheels",
+              "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8.1-39.0.0  are vulnerable to a security issue. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20221213.txt and https://www.openssl.org/news/secadv/20230207.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0.8.1"
+                        },
+                        {
+                          "fixed": "39.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.8.1",
+                    "0.8.2",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.4",
+                    "1.5",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.2",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5",
+                    "2.6",
+                    "2.6.1",
+                    "2.7",
+                    "2.8",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "3.0",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "35.0.0",
+                    "36.0.0",
+                    "36.0.1",
+                    "36.0.2",
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-x4qr-2fvf-3mr5/GHSA-x4qr-2fvf-3mr5.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "openssl-src",
+                    "purl": "pkg:cargo/openssl-src"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "111.25.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-x4qr-2fvf-3mr5/GHSA-x4qr-2fvf-3mr5.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "openssl-src",
+                    "purl": "pkg:cargo/openssl-src"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "300.0.0"
+                        },
+                        {
+                          "fixed": "300.0.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/02/GHSA-x4qr-2fvf-3mr5/GHSA-x4qr-2fvf-3mr5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-x4qr-2fvf-3mr5"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/cve-2023-0286"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.6.2-relnotes.txt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://ftp.openbsd.org/pub/OpenBSD/patches/7.2/common/018_x509.patch.sig"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2c6c9d439b484e1ba9830d8454a34fa4f80fdfe9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2f7530077e0ef79d98718138716bc51ca0cad658"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=fd2af07dc083a350c959147097003a14a5e8ac4d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0006.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssl.org/news/secadv/20230207.txt"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-843"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-02-08T22:17:06Z",
+                "nvd_published_at": "2023-02-08T20:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5cpq-8wj7-hf2v"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-jfhm-5ghh-2f97"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-jm77-qphf-c4w8"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-v8gr-m533-ghj9"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-w7pp-m8wf-vj6r"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-x4qr-2fvf-3mr5"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "lxml",
+            "version": "4.8.0",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:16Z",
+              "published": "2022-07-06T00:00:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wrxv-2j5q-m38w",
+              "aliases": [
+                "CVE-2022-2309",
+                "PYSEC-2022-230"
+              ],
+              "summary": "lxml NULL Pointer Dereference allows attackers to cause a denial of service",
+              "details": "NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. libxml2 2.9.9 and earlier are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serialises to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "lxml",
+                    "purl": "pkg:pypi/lxml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.9.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.beta",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1alpha",
+                    "1.1beta",
+                    "1.2",
+                    "1.2.1",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3beta",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.10",
+                    "2.0.11",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.0alpha1",
+                    "2.0alpha2",
+                    "2.0alpha3",
+                    "2.0alpha4",
+                    "2.0alpha5",
+                    "2.0alpha6",
+                    "2.0beta1",
+                    "2.0beta2",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.1.5",
+                    "2.1alpha1",
+                    "2.1beta1",
+                    "2.1beta2",
+                    "2.1beta3",
+                    "2.2",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.7",
+                    "2.2.8",
+                    "2.2alpha1",
+                    "2.2beta1",
+                    "2.2beta2",
+                    "2.2beta3",
+                    "2.2beta4",
+                    "2.3",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3alpha1",
+                    "2.3alpha2",
+                    "2.3beta1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1beta1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.3.0",
+                    "3.3.0beta1",
+                    "3.3.0beta2",
+                    "3.3.0beta3",
+                    "3.3.0beta4",
+                    "3.3.0beta5",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.3",
+                    "3.3.4",
+                    "3.3.5",
+                    "3.3.6",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0b1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.6.3",
+                    "3.6.4",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.8.0",
+                    "4.0.0",
+                    "4.1.0",
+                    "4.1.1",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.2.4",
+                    "4.2.5",
+                    "4.2.6",
+                    "4.3.0",
+                    "4.3.1",
+                    "4.3.2",
+                    "4.3.3",
+                    "4.3.4",
+                    "4.3.5",
+                    "4.4.0",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.4.3",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.6.0",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.6.3",
+                    "4.6.4",
+                    "4.6.5",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.8.0",
+                    "4.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wrxv-2j5q-m38w/GHSA-wrxv-2j5q-m38w.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2309"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lxml/lxml/commit/86368e9cf70a0ad23cccd5ee32de847149af0c6f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-wrxv-2j5q-m38w"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/lxml/lxml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lxml/lxml/blob/master/CHANGES.txt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/lxml/PYSEC-2022-230.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/8264e74f-edda-4c40-9956-49de635105ba"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HGYC6L7ENH5VEGN3YWFBYMGKX6WNS7HZ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/URHHSIBTPTALXMECRLAC2EVDNAFSR5NO/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202208-06"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220915-0006/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-476"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:14:23Z",
+                "nvd_published_at": "2022-07-05T10:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:16Z",
+              "published": "2022-07-05T10:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2022-230",
+              "aliases": [
+                "CVE-2022-2309",
+                "GHSA-wrxv-2j5q-m38w"
+              ],
+              "details": "NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. libxml2 2.9.9 and earlier are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serialises to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "lxml",
+                    "purl": "pkg:pypi/lxml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "86368e9cf70a0ad23cccd5ee32de847149af0c6f"
+                        }
+                      ],
+                      "repo": "https://github.com/lxml/lxml"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.9.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.beta",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1alpha",
+                    "1.1beta",
+                    "1.2",
+                    "1.2.1",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3beta",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.10",
+                    "2.0.11",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.0alpha1",
+                    "2.0alpha2",
+                    "2.0alpha3",
+                    "2.0alpha4",
+                    "2.0alpha5",
+                    "2.0alpha6",
+                    "2.0beta1",
+                    "2.0beta2",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.1.5",
+                    "2.1alpha1",
+                    "2.1beta1",
+                    "2.1beta2",
+                    "2.1beta3",
+                    "2.2",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.7",
+                    "2.2.8",
+                    "2.2alpha1",
+                    "2.2beta1",
+                    "2.2beta2",
+                    "2.2beta3",
+                    "2.2beta4",
+                    "2.3",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3alpha1",
+                    "2.3alpha2",
+                    "2.3beta1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1beta1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.3.0",
+                    "3.3.0beta1",
+                    "3.3.0beta2",
+                    "3.3.0beta3",
+                    "3.3.0beta4",
+                    "3.3.0beta5",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.3",
+                    "3.3.4",
+                    "3.3.5",
+                    "3.3.6",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0b1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.6.3",
+                    "3.6.4",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.8.0",
+                    "4.0.0",
+                    "4.1.0",
+                    "4.1.1",
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.2.4",
+                    "4.2.5",
+                    "4.2.6",
+                    "4.3.0",
+                    "4.3.1",
+                    "4.3.2",
+                    "4.3.3",
+                    "4.3.4",
+                    "4.3.5",
+                    "4.4.0",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.4.3",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.6.0",
+                    "4.6.1",
+                    "4.6.2",
+                    "4.6.3",
+                    "4.6.4",
+                    "4.6.5",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.8.0",
+                    "4.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/lxml/PYSEC-2022-230.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/8264e74f-edda-4c40-9956-49de635105ba"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/lxml/lxml/commit/86368e9cf70a0ad23cccd5ee32de847149af0c6f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-wrxv-2j5q-m38w"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wrxv-2j5q-m38w",
+                "PYSEC-2022-230"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "numpy",
+            "version": "1.21.5",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:06:07Z",
+              "published": "2021-12-18T00:00:41Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-fpfv-jqm9-f5jm",
+              "aliases": [
+                "CVE-2021-34141",
+                "PYSEC-2021-855"
+              ],
+              "summary": "Incorrect Comparison in NumPy",
+              "details": "Incomplete string comparison in the numpy.core component in NumPy1.9.x, which allows attackers to fail the APIs via constructing specific string objects.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "numpy",
+                    "purl": "pkg:pypi/numpy"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.9.6",
+                    "0.9.8",
+                    "1.0",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0b1",
+                    "1.0b4",
+                    "1.0b5",
+                    "1.0rc1",
+                    "1.0rc2",
+                    "1.0rc3",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.3",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.14.5",
+                    "1.14.6",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.16.0",
+                    "1.16.1",
+                    "1.16.2",
+                    "1.16.3",
+                    "1.16.4",
+                    "1.16.5",
+                    "1.16.6",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.17.2",
+                    "1.17.3",
+                    "1.17.4",
+                    "1.17.5",
+                    "1.18.0",
+                    "1.18.1",
+                    "1.18.2",
+                    "1.18.3",
+                    "1.18.4",
+                    "1.18.5",
+                    "1.19.0",
+                    "1.19.1",
+                    "1.19.2",
+                    "1.19.3",
+                    "1.19.4",
+                    "1.19.5",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.20.0",
+                    "1.20.1",
+                    "1.20.2",
+                    "1.20.3",
+                    "1.21.0",
+                    "1.21.1",
+                    "1.21.2",
+                    "1.21.3",
+                    "1.21.4",
+                    "1.21.5",
+                    "1.21.6",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/12/GHSA-fpfv-jqm9-f5jm/GHSA-fpfv-jqm9-f5jm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-34141"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/numpy/numpy/issues/18993"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/numpy/numpy/issues/18993#issuecomment-1010735102"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-fpfv-jqm9-f5jm"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/numpy/numpy"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/numpy/PYSEC-2021-855.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-697"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-21T20:12:53Z",
+                "nvd_published_at": "2021-12-17T19:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fpfv-jqm9-f5jm"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "py",
+            "version": "1.10.0",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:40Z",
+              "published": "2022-10-16T12:00:23Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-w596-4wvx-j9j6",
+              "aliases": [
+                "CVE-2022-42969",
+                "PYSEC-2022-42969"
+              ],
+              "summary": "ReDoS in py library when used with subversion ",
+              "details": "The py library through 1.11.0 for Python allows remote attackers to conduct a ReDoS (Regular expression Denial of Service) attack via a Subversion repository with crafted info data, because the InfoSvnCommand argument is mishandled.\n\nThe particular codepath in question is the regular expression at `py._path.svnurl.InfoSvnCommand.lspattern` and is only relevant when dealing with subversion (svn) projects. Notably the codepath is not used in the popular pytest project. The developers of the pytest package have released version `7.2.0` which removes their dependency on `py`. Users of `pytest` seeing alerts relating to this advisory may update to version `7.2.0` of `pytest` to resolve this issue. See https://github.com/pytest-dev/py/issues/287#issuecomment-1290407715 for additional context.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "py",
+                    "purl": "pkg:pypi/py"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.11.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.8.0-alpha2",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.11.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.12",
+                    "1.4.13",
+                    "1.4.14",
+                    "1.4.15",
+                    "1.4.16",
+                    "1.4.17",
+                    "1.4.18",
+                    "1.4.19",
+                    "1.4.2",
+                    "1.4.20",
+                    "1.4.21",
+                    "1.4.22",
+                    "1.4.23",
+                    "1.4.24",
+                    "1.4.25",
+                    "1.4.26",
+                    "1.4.27",
+                    "1.4.28",
+                    "1.4.29",
+                    "1.4.3",
+                    "1.4.30",
+                    "1.4.31",
+                    "1.4.32",
+                    "1.4.32.dev1",
+                    "1.4.33",
+                    "1.4.34",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.7.dev3",
+                    "1.4.8",
+                    "1.4.9",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.6.0",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-w596-4wvx-j9j6/GHSA-w596-4wvx-j9j6.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "py._path.svnurl.InfoSvnCommand.lspattern",
+                      "py._path.svnurl.InfoSvnCommand"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42969"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pytest-dev/py/issues/287"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pytest-dev/py/issues/288"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pytest-dev/pytest/issues/10392"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pytest-dev/py"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pytest-dev/py/blob/cb87a83960523a2367d0f19226a73aed4ce4291d/py/_path/svnurl.py#L316"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=34163710"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pypi.org/project/py"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-10-18T18:03:13Z",
+                "nvd_published_at": "2022-10-16T06:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:40Z",
+              "published": "2022-11-04T11:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2022-42969",
+              "aliases": [
+                "CVE-2022-42969",
+                "GHSA-w596-4wvx-j9j6"
+              ],
+              "details": "The py library through 1.11.0 for Python allows remote attackers to conduct a ReDoS (Regular expression Denial of Service) attack via a Subversion repository with crafted info data, because the InfoSvnCommand argument is mishandled.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "py",
+                    "purl": "pkg:pypi/py"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.11.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.8.0-alpha2",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7.dev3",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.12",
+                    "1.4.13",
+                    "1.4.14",
+                    "1.4.15",
+                    "1.4.16",
+                    "1.4.17",
+                    "1.4.18",
+                    "1.4.19",
+                    "1.4.20",
+                    "1.4.21",
+                    "1.4.22",
+                    "1.4.23",
+                    "1.4.24",
+                    "1.4.25",
+                    "1.4.26",
+                    "1.4.27",
+                    "1.4.28",
+                    "1.4.29",
+                    "1.4.30",
+                    "1.4.31",
+                    "1.4.32.dev1",
+                    "1.4.32",
+                    "1.4.33",
+                    "1.4.34",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.6.0",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0",
+                    "1.10.0",
+                    "1.11.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/py/PYSEC-2022-42969.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-w596-4wvx-j9j6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42969"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/pytest-dev/py/issues/287"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/pytest-dev/py/issues/288"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/pytest-dev/pytest/issues/10392"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-w596-4wvx-j9j6",
+                "PYSEC-2022-42969"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "setuptools",
+            "version": "59.6.0",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:02:35Z",
+              "published": "2022-12-23T00:30:23Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r9hx-vwmv-q579",
+              "aliases": [
+                "BIT-setuptools-2022-40897",
+                "CVE-2022-40897",
+                "PYSEC-2022-43012"
+              ],
+              "summary": "pypa/setuptools vulnerable to Regular Expression Denial of Service (ReDoS)",
+              "details": "Python Packaging Authority (PyPA)'s setuptools is a library designed to facilitate packaging Python projects. Setuptools version 65.5.0 and earlier could allow remote attackers to cause a denial of service by fetching malicious HTML from a PyPI package or custom PackageIndex page due to a vulnerable Regular Expression in `package_index`. This has been patched in version 65.5.1.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "setuptools",
+                    "purl": "pkg:pypi/setuptools"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "65.5.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.6b1",
+                    "0.6b2",
+                    "0.6b3",
+                    "0.6b4",
+                    "0.6c1",
+                    "0.6c10",
+                    "0.6c11",
+                    "0.6c2",
+                    "0.6c3",
+                    "0.6c4",
+                    "0.6c5",
+                    "0.6c6",
+                    "0.6c7",
+                    "0.6c8",
+                    "0.6c9",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.7.7",
+                    "0.7.8",
+                    "0.8",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4",
+                    "1.4.1",
+                    "1.4.2",
+                    "10.0",
+                    "10.0.1",
+                    "10.1",
+                    "10.2",
+                    "10.2.1",
+                    "11.0",
+                    "11.1",
+                    "11.2",
+                    "11.3",
+                    "11.3.1",
+                    "12.0",
+                    "12.0.1",
+                    "12.0.2",
+                    "12.0.3",
+                    "12.0.4",
+                    "12.0.5",
+                    "12.1",
+                    "12.2",
+                    "12.3",
+                    "12.4",
+                    "13.0",
+                    "13.0.1",
+                    "13.0.2",
+                    "14.0",
+                    "14.1",
+                    "14.1.1",
+                    "14.2",
+                    "14.3",
+                    "14.3.1",
+                    "15.0",
+                    "15.1",
+                    "15.2",
+                    "16.0",
+                    "17.0",
+                    "17.1",
+                    "17.1.1",
+                    "18.0",
+                    "18.0.1",
+                    "18.1",
+                    "18.2",
+                    "18.3",
+                    "18.3.1",
+                    "18.3.2",
+                    "18.4",
+                    "18.5",
+                    "18.6",
+                    "18.6.1",
+                    "18.7",
+                    "18.7.1",
+                    "18.8",
+                    "18.8.1",
+                    "19.0",
+                    "19.1",
+                    "19.1.1",
+                    "19.2",
+                    "19.3",
+                    "19.4",
+                    "19.4.1",
+                    "19.5",
+                    "19.6",
+                    "19.6.1",
+                    "19.6.2",
+                    "19.7",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2",
+                    "20.0",
+                    "20.1",
+                    "20.1.1",
+                    "20.10.1",
+                    "20.2.2",
+                    "20.3",
+                    "20.3.1",
+                    "20.4",
+                    "20.6.6",
+                    "20.6.7",
+                    "20.6.8",
+                    "20.7.0",
+                    "20.8.0",
+                    "20.8.1",
+                    "20.9.0",
+                    "21.0.0",
+                    "21.1.0",
+                    "21.2.0",
+                    "21.2.1",
+                    "21.2.2",
+                    "22.0.0",
+                    "22.0.1",
+                    "22.0.2",
+                    "22.0.4",
+                    "22.0.5",
+                    "23.0.0",
+                    "23.1.0",
+                    "23.2.0",
+                    "23.2.1",
+                    "24.0.0",
+                    "24.0.1",
+                    "24.0.2",
+                    "24.0.3",
+                    "24.1.0",
+                    "24.1.1",
+                    "24.2.0",
+                    "24.2.1",
+                    "24.3.0",
+                    "24.3.1",
+                    "25.0.0",
+                    "25.0.1",
+                    "25.0.2",
+                    "25.1.0",
+                    "25.1.1",
+                    "25.1.2",
+                    "25.1.3",
+                    "25.1.4",
+                    "25.1.5",
+                    "25.1.6",
+                    "25.2.0",
+                    "25.3.0",
+                    "25.4.0",
+                    "26.0.0",
+                    "26.1.0",
+                    "26.1.1",
+                    "27.0.0",
+                    "27.1.0",
+                    "27.1.2",
+                    "27.2.0",
+                    "27.3.0",
+                    "27.3.1",
+                    "28.0.0",
+                    "28.1.0",
+                    "28.2.0",
+                    "28.3.0",
+                    "28.4.0",
+                    "28.5.0",
+                    "28.6.0",
+                    "28.6.1",
+                    "28.7.0",
+                    "28.7.1",
+                    "28.8.0",
+                    "28.8.1",
+                    "29.0.0",
+                    "29.0.1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1",
+                    "3.2",
+                    "3.3",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.6",
+                    "3.7",
+                    "3.7.1",
+                    "3.8",
+                    "3.8.1",
+                    "30.0.0",
+                    "30.1.0",
+                    "30.2.0",
+                    "30.2.1",
+                    "30.3.0",
+                    "30.4.0",
+                    "31.0.0",
+                    "31.0.1",
+                    "32.0.0",
+                    "32.1.0",
+                    "32.1.1",
+                    "32.1.2",
+                    "32.1.3",
+                    "32.2.0",
+                    "32.3.0",
+                    "32.3.1",
+                    "33.1.0",
+                    "33.1.1",
+                    "34.0.0",
+                    "34.0.1",
+                    "34.0.2",
+                    "34.0.3",
+                    "34.1.0",
+                    "34.1.1",
+                    "34.2.0",
+                    "34.3.0",
+                    "34.3.1",
+                    "34.3.2",
+                    "34.3.3",
+                    "34.4.0",
+                    "34.4.1",
+                    "35.0.0",
+                    "35.0.1",
+                    "35.0.2",
+                    "36.0.1",
+                    "36.1.0",
+                    "36.1.1",
+                    "36.2.0",
+                    "36.2.1",
+                    "36.2.2",
+                    "36.2.3",
+                    "36.2.4",
+                    "36.2.5",
+                    "36.2.6",
+                    "36.2.7",
+                    "36.3.0",
+                    "36.4.0",
+                    "36.5.0",
+                    "36.6.0",
+                    "36.6.1",
+                    "36.7.0",
+                    "36.7.1",
+                    "36.7.2",
+                    "36.8.0",
+                    "37.0.0",
+                    "38.0.0",
+                    "38.1.0",
+                    "38.2.0",
+                    "38.2.1",
+                    "38.2.3",
+                    "38.2.4",
+                    "38.2.5",
+                    "38.3.0",
+                    "38.4.0",
+                    "38.4.1",
+                    "38.5.0",
+                    "38.5.1",
+                    "38.5.2",
+                    "38.6.0",
+                    "38.6.1",
+                    "38.7.0",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.1.0",
+                    "39.2.0",
+                    "4.0",
+                    "4.0.1",
+                    "40.0.0",
+                    "40.1.0",
+                    "40.1.1",
+                    "40.2.0",
+                    "40.3.0",
+                    "40.4.0",
+                    "40.4.1",
+                    "40.4.2",
+                    "40.4.3",
+                    "40.5.0",
+                    "40.6.0",
+                    "40.6.1",
+                    "40.6.2",
+                    "40.6.3",
+                    "40.7.0",
+                    "40.7.1",
+                    "40.7.2",
+                    "40.7.3",
+                    "40.8.0",
+                    "40.9.0",
+                    "41.0.0",
+                    "41.0.1",
+                    "41.1.0",
+                    "41.2.0",
+                    "41.3.0",
+                    "41.4.0",
+                    "41.5.0",
+                    "41.5.1",
+                    "41.6.0",
+                    "42.0.0",
+                    "42.0.1",
+                    "42.0.2",
+                    "43.0.0",
+                    "44.0.0",
+                    "44.1.0",
+                    "44.1.1",
+                    "45.0.0",
+                    "45.1.0",
+                    "45.2.0",
+                    "45.3.0",
+                    "46.0.0",
+                    "46.1.0",
+                    "46.1.1",
+                    "46.1.2",
+                    "46.1.3",
+                    "46.2.0",
+                    "46.3.0",
+                    "46.3.1",
+                    "46.4.0",
+                    "47.0.0",
+                    "47.1.0",
+                    "47.1.1",
+                    "47.2.0",
+                    "47.3.0",
+                    "47.3.1",
+                    "47.3.2",
+                    "48.0.0",
+                    "49.0.0",
+                    "49.0.1",
+                    "49.1.0",
+                    "49.1.1",
+                    "49.1.2",
+                    "49.1.3",
+                    "49.2.0",
+                    "49.2.1",
+                    "49.3.0",
+                    "49.3.1",
+                    "49.3.2",
+                    "49.4.0",
+                    "49.5.0",
+                    "49.6.0",
+                    "5.0",
+                    "5.0.1",
+                    "5.0.2",
+                    "5.1",
+                    "5.2",
+                    "5.3",
+                    "5.4",
+                    "5.4.1",
+                    "5.4.2",
+                    "5.5",
+                    "5.5.1",
+                    "5.6",
+                    "5.7",
+                    "5.8",
+                    "50.0.0",
+                    "50.0.1",
+                    "50.0.2",
+                    "50.0.3",
+                    "50.1.0",
+                    "50.2.0",
+                    "50.3.0",
+                    "50.3.1",
+                    "50.3.2",
+                    "51.0.0",
+                    "51.1.0",
+                    "51.1.0.post20201221",
+                    "51.1.1",
+                    "51.1.2",
+                    "51.2.0",
+                    "51.3.0",
+                    "51.3.1",
+                    "51.3.2",
+                    "51.3.3",
+                    "52.0.0",
+                    "53.0.0",
+                    "53.1.0",
+                    "54.0.0",
+                    "54.1.0",
+                    "54.1.1",
+                    "54.1.2",
+                    "54.1.3",
+                    "54.2.0",
+                    "56.0.0",
+                    "56.1.0",
+                    "56.2.0",
+                    "57.0.0",
+                    "57.1.0",
+                    "57.2.0",
+                    "57.3.0",
+                    "57.4.0",
+                    "57.5.0",
+                    "58.0.0",
+                    "58.0.1",
+                    "58.0.2",
+                    "58.0.3",
+                    "58.0.4",
+                    "58.1.0",
+                    "58.2.0",
+                    "58.3.0",
+                    "58.4.0",
+                    "58.5.0",
+                    "58.5.1",
+                    "58.5.2",
+                    "58.5.3",
+                    "59.0.1",
+                    "59.1.0",
+                    "59.1.1",
+                    "59.2.0",
+                    "59.3.0",
+                    "59.4.0",
+                    "59.5.0",
+                    "59.6.0",
+                    "59.7.0",
+                    "59.8.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.1",
+                    "60.0.0",
+                    "60.0.1",
+                    "60.0.2",
+                    "60.0.3",
+                    "60.0.4",
+                    "60.0.5",
+                    "60.1.0",
+                    "60.1.1",
+                    "60.10.0",
+                    "60.2.0",
+                    "60.3.0",
+                    "60.3.1",
+                    "60.4.0",
+                    "60.5.0",
+                    "60.6.0",
+                    "60.7.0",
+                    "60.7.1",
+                    "60.8.0",
+                    "60.8.1",
+                    "60.8.2",
+                    "60.9.0",
+                    "60.9.1",
+                    "60.9.2",
+                    "60.9.3",
+                    "61.0.0",
+                    "61.1.0",
+                    "61.1.1",
+                    "61.2.0",
+                    "61.3.0",
+                    "61.3.1",
+                    "62.0.0",
+                    "62.1.0",
+                    "62.2.0",
+                    "62.3.0",
+                    "62.3.1",
+                    "62.3.2",
+                    "62.3.3",
+                    "62.3.4",
+                    "62.4.0",
+                    "62.5.0",
+                    "62.6.0",
+                    "63.0.0",
+                    "63.0.0b1",
+                    "63.1.0",
+                    "63.2.0",
+                    "63.3.0",
+                    "63.4.0",
+                    "63.4.1",
+                    "63.4.2",
+                    "63.4.3",
+                    "64.0.0",
+                    "64.0.1",
+                    "64.0.2",
+                    "64.0.3",
+                    "65.0.0",
+                    "65.0.1",
+                    "65.0.2",
+                    "65.1.0",
+                    "65.1.1",
+                    "65.2.0",
+                    "65.3.0",
+                    "65.4.0",
+                    "65.4.1",
+                    "65.5.0",
+                    "7.0",
+                    "8.0",
+                    "8.0.1",
+                    "8.0.2",
+                    "8.0.3",
+                    "8.0.4",
+                    "8.1",
+                    "8.2",
+                    "8.2.1",
+                    "8.3",
+                    "9.0",
+                    "9.0.1",
+                    "9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-r9hx-vwmv-q579/GHSA-r9hx-vwmv-q579.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40897"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/setuptools/issues/3659"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/setuptools/commit/43a9c9bfa6aa626ec2a22540bea28d2ca77964be"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pypa/setuptools/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/setuptools/blob/fe8a98e696241487ba6ac9f91faa38ade939ec5d/setuptools/package_index.py#L200"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/setuptools/compare/v65.5.0...v65.5.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ADES3NLOE5QJKBLGNZNI2RGVOSQXA37R/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YNA2BAH2ACBZ4TVJZKFLCR7L23BG5C3H/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/vulnerabilities/CVE-2022-40897/52495/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230214-0001/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://setuptools.pypa.io/en/latest/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-12-27T14:51:05Z",
+                "nvd_published_at": "2022-12-23T00:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:35Z",
+              "published": "2022-12-23T00:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2022-43012",
+              "aliases": [
+                "BIT-setuptools-2022-40897",
+                "CVE-2022-40897",
+                "GHSA-r9hx-vwmv-q579"
+              ],
+              "details": "Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "setuptools",
+                    "purl": "pkg:pypi/setuptools"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "43a9c9bfa6aa626ec2a22540bea28d2ca77964be"
+                        }
+                      ],
+                      "repo": "https://github.com/pypa/setuptools"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "65.5.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.6b1",
+                    "0.6b2",
+                    "0.6b3",
+                    "0.6b4",
+                    "0.6c1",
+                    "0.6c10",
+                    "0.6c11",
+                    "0.6c2",
+                    "0.6c3",
+                    "0.6c4",
+                    "0.6c5",
+                    "0.6c6",
+                    "0.6c7",
+                    "0.6c8",
+                    "0.6c9",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.7.7",
+                    "0.7.8",
+                    "0.8",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4",
+                    "1.4.1",
+                    "1.4.2",
+                    "10.0",
+                    "10.0.1",
+                    "10.1",
+                    "10.2",
+                    "10.2.1",
+                    "11.0",
+                    "11.1",
+                    "11.2",
+                    "11.3",
+                    "11.3.1",
+                    "12.0",
+                    "12.0.1",
+                    "12.0.2",
+                    "12.0.3",
+                    "12.0.4",
+                    "12.0.5",
+                    "12.1",
+                    "12.2",
+                    "12.3",
+                    "12.4",
+                    "13.0",
+                    "13.0.1",
+                    "13.0.2",
+                    "14.0",
+                    "14.1",
+                    "14.1.1",
+                    "14.2",
+                    "14.3",
+                    "14.3.1",
+                    "15.0",
+                    "15.1",
+                    "15.2",
+                    "16.0",
+                    "17.0",
+                    "17.1",
+                    "17.1.1",
+                    "18.0",
+                    "18.0.1",
+                    "18.1",
+                    "18.2",
+                    "18.3",
+                    "18.3.1",
+                    "18.3.2",
+                    "18.4",
+                    "18.5",
+                    "18.6",
+                    "18.6.1",
+                    "18.7",
+                    "18.7.1",
+                    "18.8",
+                    "18.8.1",
+                    "19.0",
+                    "19.1",
+                    "19.1.1",
+                    "19.2",
+                    "19.3",
+                    "19.4",
+                    "19.4.1",
+                    "19.5",
+                    "19.6",
+                    "19.6.1",
+                    "19.6.2",
+                    "19.7",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2",
+                    "20.0",
+                    "20.1",
+                    "20.1.1",
+                    "20.10.1",
+                    "20.2.2",
+                    "20.3",
+                    "20.3.1",
+                    "20.4",
+                    "20.6.6",
+                    "20.6.7",
+                    "20.6.8",
+                    "20.7.0",
+                    "20.8.0",
+                    "20.8.1",
+                    "20.9.0",
+                    "21.0.0",
+                    "21.1.0",
+                    "21.2.0",
+                    "21.2.1",
+                    "21.2.2",
+                    "22.0.0",
+                    "22.0.1",
+                    "22.0.2",
+                    "22.0.4",
+                    "22.0.5",
+                    "23.0.0",
+                    "23.1.0",
+                    "23.2.0",
+                    "23.2.1",
+                    "24.0.0",
+                    "24.0.1",
+                    "24.0.2",
+                    "24.0.3",
+                    "24.1.0",
+                    "24.1.1",
+                    "24.2.0",
+                    "24.2.1",
+                    "24.3.0",
+                    "24.3.1",
+                    "25.0.0",
+                    "25.0.1",
+                    "25.0.2",
+                    "25.1.0",
+                    "25.1.1",
+                    "25.1.2",
+                    "25.1.3",
+                    "25.1.4",
+                    "25.1.5",
+                    "25.1.6",
+                    "25.2.0",
+                    "25.3.0",
+                    "25.4.0",
+                    "26.0.0",
+                    "26.1.0",
+                    "26.1.1",
+                    "27.0.0",
+                    "27.1.0",
+                    "27.1.2",
+                    "27.2.0",
+                    "27.3.0",
+                    "27.3.1",
+                    "28.0.0",
+                    "28.1.0",
+                    "28.2.0",
+                    "28.3.0",
+                    "28.4.0",
+                    "28.5.0",
+                    "28.6.0",
+                    "28.6.1",
+                    "28.7.0",
+                    "28.7.1",
+                    "28.8.0",
+                    "28.8.1",
+                    "29.0.0",
+                    "29.0.1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1",
+                    "3.2",
+                    "3.3",
+                    "3.4",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.6",
+                    "3.7",
+                    "3.7.1",
+                    "3.8",
+                    "3.8.1",
+                    "30.0.0",
+                    "30.1.0",
+                    "30.2.0",
+                    "30.2.1",
+                    "30.3.0",
+                    "30.4.0",
+                    "31.0.0",
+                    "31.0.1",
+                    "32.0.0",
+                    "32.1.0",
+                    "32.1.1",
+                    "32.1.2",
+                    "32.1.3",
+                    "32.2.0",
+                    "32.3.0",
+                    "32.3.1",
+                    "33.1.0",
+                    "33.1.1",
+                    "34.0.0",
+                    "34.0.1",
+                    "34.0.2",
+                    "34.0.3",
+                    "34.1.0",
+                    "34.1.1",
+                    "34.2.0",
+                    "34.3.0",
+                    "34.3.1",
+                    "34.3.2",
+                    "34.3.3",
+                    "34.4.0",
+                    "34.4.1",
+                    "35.0.0",
+                    "35.0.1",
+                    "35.0.2",
+                    "36.0.1",
+                    "36.1.0",
+                    "36.1.1",
+                    "36.2.0",
+                    "36.2.1",
+                    "36.2.2",
+                    "36.2.3",
+                    "36.2.4",
+                    "36.2.5",
+                    "36.2.6",
+                    "36.2.7",
+                    "36.3.0",
+                    "36.4.0",
+                    "36.5.0",
+                    "36.6.0",
+                    "36.6.1",
+                    "36.7.0",
+                    "36.7.1",
+                    "36.7.2",
+                    "36.8.0",
+                    "37.0.0",
+                    "38.0.0",
+                    "38.1.0",
+                    "38.2.0",
+                    "38.2.1",
+                    "38.2.3",
+                    "38.2.4",
+                    "38.2.5",
+                    "38.3.0",
+                    "38.4.0",
+                    "38.4.1",
+                    "38.5.0",
+                    "38.5.1",
+                    "38.5.2",
+                    "38.6.0",
+                    "38.6.1",
+                    "38.7.0",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.1.0",
+                    "39.2.0",
+                    "4.0",
+                    "4.0.1",
+                    "40.0.0",
+                    "40.1.0",
+                    "40.1.1",
+                    "40.2.0",
+                    "40.3.0",
+                    "40.4.0",
+                    "40.4.1",
+                    "40.4.2",
+                    "40.4.3",
+                    "40.5.0",
+                    "40.6.0",
+                    "40.6.1",
+                    "40.6.2",
+                    "40.6.3",
+                    "40.7.0",
+                    "40.7.1",
+                    "40.7.2",
+                    "40.7.3",
+                    "40.8.0",
+                    "40.9.0",
+                    "41.0.0",
+                    "41.0.1",
+                    "41.1.0",
+                    "41.2.0",
+                    "41.3.0",
+                    "41.4.0",
+                    "41.5.0",
+                    "41.5.1",
+                    "41.6.0",
+                    "42.0.0",
+                    "42.0.1",
+                    "42.0.2",
+                    "43.0.0",
+                    "44.0.0",
+                    "44.1.0",
+                    "44.1.1",
+                    "45.0.0",
+                    "45.1.0",
+                    "45.2.0",
+                    "45.3.0",
+                    "46.0.0",
+                    "46.1.0",
+                    "46.1.1",
+                    "46.1.2",
+                    "46.1.3",
+                    "46.2.0",
+                    "46.3.0",
+                    "46.3.1",
+                    "46.4.0",
+                    "47.0.0",
+                    "47.1.0",
+                    "47.1.1",
+                    "47.2.0",
+                    "47.3.0",
+                    "47.3.1",
+                    "47.3.2",
+                    "48.0.0",
+                    "49.0.0",
+                    "49.0.1",
+                    "49.1.0",
+                    "49.1.1",
+                    "49.1.2",
+                    "49.1.3",
+                    "49.2.0",
+                    "49.2.1",
+                    "49.3.0",
+                    "49.3.1",
+                    "49.3.2",
+                    "49.4.0",
+                    "49.5.0",
+                    "49.6.0",
+                    "5.0",
+                    "5.0.1",
+                    "5.0.2",
+                    "5.1",
+                    "5.2",
+                    "5.3",
+                    "5.4",
+                    "5.4.1",
+                    "5.4.2",
+                    "5.5",
+                    "5.5.1",
+                    "5.6",
+                    "5.7",
+                    "5.8",
+                    "50.0.0",
+                    "50.0.1",
+                    "50.0.2",
+                    "50.0.3",
+                    "50.1.0",
+                    "50.2.0",
+                    "50.3.0",
+                    "50.3.1",
+                    "50.3.2",
+                    "51.0.0",
+                    "51.1.0",
+                    "51.1.0.post20201221",
+                    "51.1.1",
+                    "51.1.2",
+                    "51.2.0",
+                    "51.3.0",
+                    "51.3.1",
+                    "51.3.2",
+                    "51.3.3",
+                    "52.0.0",
+                    "53.0.0",
+                    "53.1.0",
+                    "54.0.0",
+                    "54.1.0",
+                    "54.1.1",
+                    "54.1.2",
+                    "54.1.3",
+                    "54.2.0",
+                    "56.0.0",
+                    "56.1.0",
+                    "56.2.0",
+                    "57.0.0",
+                    "57.1.0",
+                    "57.2.0",
+                    "57.3.0",
+                    "57.4.0",
+                    "57.5.0",
+                    "58.0.0",
+                    "58.0.1",
+                    "58.0.2",
+                    "58.0.3",
+                    "58.0.4",
+                    "58.1.0",
+                    "58.2.0",
+                    "58.3.0",
+                    "58.4.0",
+                    "58.5.0",
+                    "58.5.1",
+                    "58.5.2",
+                    "58.5.3",
+                    "59.0.1",
+                    "59.1.0",
+                    "59.1.1",
+                    "59.2.0",
+                    "59.3.0",
+                    "59.4.0",
+                    "59.5.0",
+                    "59.6.0",
+                    "59.7.0",
+                    "59.8.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.1",
+                    "60.0.0",
+                    "60.0.1",
+                    "60.0.2",
+                    "60.0.3",
+                    "60.0.4",
+                    "60.0.5",
+                    "60.1.0",
+                    "60.1.1",
+                    "60.10.0",
+                    "60.2.0",
+                    "60.3.0",
+                    "60.3.1",
+                    "60.4.0",
+                    "60.5.0",
+                    "60.6.0",
+                    "60.7.0",
+                    "60.7.1",
+                    "60.8.0",
+                    "60.8.1",
+                    "60.8.2",
+                    "60.9.0",
+                    "60.9.1",
+                    "60.9.2",
+                    "60.9.3",
+                    "61.0.0",
+                    "61.1.0",
+                    "61.1.1",
+                    "61.2.0",
+                    "61.3.0",
+                    "61.3.1",
+                    "62.0.0",
+                    "62.1.0",
+                    "62.2.0",
+                    "62.3.0",
+                    "62.3.1",
+                    "62.3.2",
+                    "62.3.3",
+                    "62.3.4",
+                    "62.4.0",
+                    "62.5.0",
+                    "62.6.0",
+                    "63.0.0",
+                    "63.0.0b1",
+                    "63.1.0",
+                    "63.2.0",
+                    "63.3.0",
+                    "63.4.0",
+                    "63.4.1",
+                    "63.4.2",
+                    "63.4.3",
+                    "64.0.0",
+                    "64.0.1",
+                    "64.0.2",
+                    "64.0.3",
+                    "65.0.0",
+                    "65.0.1",
+                    "65.0.2",
+                    "65.1.0",
+                    "65.1.1",
+                    "65.2.0",
+                    "65.3.0",
+                    "65.4.0",
+                    "65.4.1",
+                    "65.5.0",
+                    "7.0",
+                    "8.0",
+                    "8.0.1",
+                    "8.0.2",
+                    "8.0.3",
+                    "8.0.4",
+                    "8.1",
+                    "8.2",
+                    "8.2.1",
+                    "8.3",
+                    "9.0",
+                    "9.0.1",
+                    "9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/setuptools/PYSEC-2022-43012.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/setuptools/blob/fe8a98e696241487ba6ac9f91faa38ade939ec5d/setuptools/package_index.py#L200"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/setuptools/compare/v65.5.0...v65.5.1"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/pypa/setuptools/commit/43a9c9bfa6aa626ec2a22540bea28d2ca77964be"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/vulnerabilities/CVE-2022-40897/52495/"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-r9hx-vwmv-q579",
+                "PYSEC-2022-43012"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

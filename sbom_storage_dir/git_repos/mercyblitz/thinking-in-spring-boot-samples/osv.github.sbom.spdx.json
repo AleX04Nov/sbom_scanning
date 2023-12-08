@@ -1,0 +1,4742 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "commons-beanutils:commons-beanutils",
+            "version": "1.9.3",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:00:39Z",
+              "published": "2020-06-15T20:36:17Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6phf-73q6-gh87",
+              "aliases": [
+                "CVE-2019-10086"
+              ],
+              "summary": "Insecure Deserialization in Apache Commons Beanutils",
+              "details": "In Apache Commons Beanutils 1.9.2, a special BeanIntrospector class was added which allows suppressing the ability for an attacker to access the classloader via the class property available on all Java objects. We, however were not using this by default characteristic of the PropertyUtilsBean.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "commons-beanutils:commons-beanutils",
+                    "purl": "pkg:maven/commons-beanutils/commons-beanutils"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.9.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.2",
+                    "1.3",
+                    "1.4",
+                    "1.4.1",
+                    "1.5",
+                    "1.6",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.0-BETA",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9.0",
+                    "1.9.1",
+                    "1.9.2",
+                    "1.9.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-6phf-73q6-gh87/GHSA-6phf-73q6-gh87.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10086"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:4317"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0057"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0194"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0804"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0805"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0806"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0811"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-beanutils"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/02094ad226dbc17a2368beaf27e61d8b1432f5baf77d0ca995bb78bc@%3Cissues.commons.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/1f78f1e32cc5614ec0c5b822ba4bd7fc8e8b5c46c8e038b6bd609cb5@%3Cissues.commons.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/2fd61dc89df9aeab738d2b49f48d42c76f7d53b980ba04e1d48bce48@%3Cdev.shiro.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d1ed1a1596c08c4d5fea97b36c651ce167b773f1afc75251ce7a125@%3Ccommits.tinkerpop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/5261066cd7adee081ee05c8bf0e96cf0b2eeaced391e19117ae4daa6@%3Cdev.shiro.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/956995acee0d8bc046f1df0a55b7fbeb65dd2f82864e5de1078bacb0@%3Cissues.commons.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/a684107d3a78e431cf0fbb90629e8559a36ff8fe94c3a76e620b39fa@%3Cdev.shiro.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/c94bc9649d5109a663b2129371dc45753fbdeacd340105548bbe93c3@%3Cdev.shiro.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/d6ca9439c53374b597f33b7ec180001625597db48ea30356af01145f@%3Cdev.shiro.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r18d8b4f9263e5cad3bbaef0cdba0e2ccdf9201316ac4b85e23eb7ee4@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2d5f1d88c39bd615271abda63964a0bee9b2b57fef1f84cb4c43032e@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r306c0322aa5c0da731e03f3ce9f07f4745c052c6b73f4e78faf232ca@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r43de02fd4a4f52c4bdeff8c02f09625d83cd047498009c1cdab857db@%3Cdev.rocketmq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r46e536fc98942dce99fadd2e313aeefe90c1a769c5cd85d98df9d098@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r513a7a21c422170318115463b399dd58ab447fe0990b13e5884f0825@%3Ccommits.dolphinscheduler.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6194ced4828deb32023cd314e31f41c61d388b58935d102c7de91f58@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r967953a14e05016bc4bcae9ef3dd92e770181158b4246976ed8295c9@%3Cdev.brooklyn.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra41fd0ad4b7e1d675c03a5081a16a6603085a4e37d30b866067566fe@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra87ac17410a62e813cba901fdd4e9a674dd53daaf714870f28e905f1@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra9a139fdc0999750dcd519e81384bc1fe3946f311b1796221205f51c@%3Ccommits.dolphinscheduler.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/racd3e7b2149fa2f255f016bd6bffab0fea77b6fb81c50db9a17f78e6@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rae81e0c8ebdf47ffaa85a01240836bfece8a990c48f55c7933162b5c@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb1f76c2c0a4d6efb8a3523974f9d085d5838b73e7bffdf9a8f212997@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb8dac04cb7e9cc5dedee8dabaa1c92614f590642e5ebf02a145915ba@%3Ccommits.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rcc029be4edaaf5b8bb85818aab494e16f312fced07a0f4a202771ba2@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd2d2493f4f1af6980d265b8d84c857e2b7ab80a46e1423710c448957@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re2028d4d76ba1db3e3c3a722d6c6034e801cc3b309f69cc166eaa32b@%3Ccommits.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re3cd7cb641d7fc6684e4fc3c336a8bad4a01434bb5625a06e3600fd1@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rec74f3a94dd850259c730b4ba6f7b6211222b58900ec088754aa0534@%3Cissues.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reee57101464cf7622d640ae013b2162eb864f603ec4093de8240bb8f@%3Cdev.atlas.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2019/08/msg00030.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4APPGLBWMFAS4WHNLR4LIJ65DJGPV7TF/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/JIUYSL2RSIWZVNSUIXJTIFPIPIF6OAIO/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-09/msg00007.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://mail-archives.apache.org/mod_mbox/www-announce/201908.mbox/%3cC628798F-315D-4428-8CB1-4ED1ECC958E4@apache.org%3e"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-11T15:08:49Z",
+                "nvd_published_at": "2019-08-20T21:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6phf-73q6-gh87"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.springframework.boot:spring-boot-autoconfigure",
+            "version": "1.0.2.RELEASE",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:22Z",
+              "published": "2023-05-26T18:30:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xf96-w227-r7c4",
+              "aliases": [
+                "CVE-2023-20883"
+              ],
+              "summary": "Spring Boot Welcome Page Denial of Service",
+              "details": "In Spring Boot versions 3.0.0 - 3.0.6, 2.7.0 - 2.7.11, 2.6.0 - 2.6.14, 2.5.0 - 2.5.14 and older unsupported versions, there is potential for a denial-of-service (DoS) attack if Spring MVC is used together with a reverse proxy cache.\n\nSpecifically, an application is vulnerable if all of the conditions are true:\n\n* The application has Spring MVC auto-configuration enabled. This is the case by default if Spring MVC is on the classpath.\n* The application makes use of Spring Boot's welcome page support, either static or templated.\n* Your application is deployed behind a proxy which caches 404 responses.\n\nYour application is NOT vulnerable if any of the following are true:\n\n* Spring MVC auto-configuration is disabled. This is true if WebMvcAutoConfiguration is explicitly excluded, if Spring MVC is not on the classpath, or if spring.main.web-application-type is set to a value other than SERVLET.\n* The application does not use Spring Boot's welcome page support.\n* You do not have a proxy which caches 404 responses.\n\n\nAffected Spring Products and Versions\n\nSpring Boot\n\n3.0.0 to 3.0.6 2.7.0 to 2.7.11 2.6.0 to 2.6.14 2.5.0 to 2.5.14\n\nOlder, unsupported versions are also affected\nMitigation\n\nUsers of affected versions should apply the following mitigations:\n\n* 3.0.x users should upgrade to 3.0.7+\n* 2.7.x users should upgrade to 2.7.12+\n* 2.6.x users should upgrade to 2.6.15+\n* 2.5.x users should upgrade to 2.5.15+\n\nUsers of older, unsupported versions should upgrade to 3.0.7+ or 2.7.12+.\n\nWorkarounds: configure the reverse proxy not to cache 404 responses and/or not to cache responses to requests to the root (/) of the application.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-autoconfigure",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-xf96-w227-r7c4/GHSA-xf96-w227-r7c4.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-autoconfigure",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.7.0"
+                        },
+                        {
+                          "fixed": "2.7.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.10",
+                    "2.7.11",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.7.5",
+                    "2.7.6",
+                    "2.7.7",
+                    "2.7.8",
+                    "2.7.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-xf96-w227-r7c4/GHSA-xf96-w227-r7c4.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-autoconfigure",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.15"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.10",
+                    "2.6.11",
+                    "2.6.12",
+                    "2.6.13",
+                    "2.6.14",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.8",
+                    "2.6.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-xf96-w227-r7c4/GHSA-xf96-w227-r7c4.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-autoconfigure",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.15"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0.RELEASE",
+                    "1.0.1.RELEASE",
+                    "1.0.2.RELEASE",
+                    "1.1.0.RELEASE",
+                    "1.1.1.RELEASE",
+                    "1.1.10.RELEASE",
+                    "1.1.11.RELEASE",
+                    "1.1.12.RELEASE",
+                    "1.1.2.RELEASE",
+                    "1.1.3.RELEASE",
+                    "1.1.4.RELEASE",
+                    "1.1.5.RELEASE",
+                    "1.1.6.RELEASE",
+                    "1.1.7.RELEASE",
+                    "1.1.8.RELEASE",
+                    "1.1.9.RELEASE",
+                    "1.2.0.RELEASE",
+                    "1.2.1.RELEASE",
+                    "1.2.2.RELEASE",
+                    "1.2.3.RELEASE",
+                    "1.2.4.RELEASE",
+                    "1.2.5.RELEASE",
+                    "1.2.6.RELEASE",
+                    "1.2.7.RELEASE",
+                    "1.2.8.RELEASE",
+                    "1.3.0.RELEASE",
+                    "1.3.1.RELEASE",
+                    "1.3.2.RELEASE",
+                    "1.3.3.RELEASE",
+                    "1.3.4.RELEASE",
+                    "1.3.5.RELEASE",
+                    "1.3.6.RELEASE",
+                    "1.3.7.RELEASE",
+                    "1.3.8.RELEASE",
+                    "1.4.0.RELEASE",
+                    "1.4.1.RELEASE",
+                    "1.4.2.RELEASE",
+                    "1.4.3.RELEASE",
+                    "1.4.4.RELEASE",
+                    "1.4.5.RELEASE",
+                    "1.4.6.RELEASE",
+                    "1.4.7.RELEASE",
+                    "1.5.0.RELEASE",
+                    "1.5.1.RELEASE",
+                    "1.5.10.RELEASE",
+                    "1.5.11.RELEASE",
+                    "1.5.12.RELEASE",
+                    "1.5.13.RELEASE",
+                    "1.5.14.RELEASE",
+                    "1.5.15.RELEASE",
+                    "1.5.16.RELEASE",
+                    "1.5.17.RELEASE",
+                    "1.5.18.RELEASE",
+                    "1.5.19.RELEASE",
+                    "1.5.2.RELEASE",
+                    "1.5.20.RELEASE",
+                    "1.5.21.RELEASE",
+                    "1.5.22.RELEASE",
+                    "1.5.3.RELEASE",
+                    "1.5.4.RELEASE",
+                    "1.5.5.RELEASE",
+                    "1.5.6.RELEASE",
+                    "1.5.7.RELEASE",
+                    "1.5.8.RELEASE",
+                    "1.5.9.RELEASE",
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.12",
+                    "2.5.13",
+                    "2.5.14",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-xf96-w227-r7c4/GHSA-xf96-w227-r7c4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-20883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/issues/35552"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/commit/418dd1ba5bdad79b55a043000164bfcbda2acd78"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/spring-projects/spring-boot"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.5.15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.6.15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.7.12"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230703-0008/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://spring.io/security/cve-2023-20883"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-05-26T22:09:06Z",
+                "nvd_published_at": "2023-05-26T17:15:14Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xf96-w227-r7c4"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.springframework.boot:spring-boot-starter-web",
+            "version": "1.0.2.RELEASE",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:14Z",
+              "published": "2022-03-31T18:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-36p3-wjmg-h94x",
+              "aliases": [
+                "CVE-2022-22965"
+              ],
+              "summary": "Remote Code Execution in Spring Framework",
+              "details": "Spring Framework prior to versions 5.2.20 and 5.3.18 contains a remote code execution vulnerability known as `Spring4Shell`. \n\n## Impact\n\nA Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it.\n\nThese are the prerequisites for the exploit:\n- JDK 9 or higher\n- Apache Tomcat as the Servlet container\n- Packaged as WAR\n- `spring-webmvc` or `spring-webflux` dependency\n\n## Patches\n\n- Spring Framework [5.3.18](https://github.com/spring-projects/spring-framework/releases/tag/v5.3.18) and [5.2.20](https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE)\n- Spring Boot [2.6.6](https://github.com/spring-projects/spring-boot/releases/tag/v2.6.6) and [2.5.12](https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12)\n\n## Workarounds\n\nFor those who are unable to upgrade, leaked reports recommend setting `disallowedFields` on `WebDataBinder` through an `@ControllerAdvice`. This works generally, but as a centrally applied workaround fix, may leave some loopholes, in particular if a controller sets `disallowedFields` locally through its own `@InitBinder` method, which overrides the global setting.\n\nTo apply the workaround in a more fail-safe way, applications could extend `RequestMappingHandlerAdapter` to update the `WebDataBinder` at the end after all other initialization. In order to do that, a Spring Boot application can declare a `WebMvcRegistrations` bean (Spring MVC) or a `WebFluxRegistrations` bean (Spring WebFlux).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-beans",
+                    "purl": "pkg:maven/org.springframework/spring-beans"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0-m4",
+                    "1.0-rc1",
+                    "1.0.1",
+                    "1.2",
+                    "1.2-rc1",
+                    "1.2-rc2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "2.0",
+                    "2.0-m1",
+                    "2.0-m2",
+                    "2.0-m3",
+                    "2.0-m4",
+                    "2.0-m5",
+                    "2.0-rc1",
+                    "2.0-rc2",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.6.SEC01",
+                    "2.5.6.SEC02",
+                    "2.5.6.SEC03",
+                    "3.0.0.RELEASE",
+                    "3.0.1.RELEASE",
+                    "3.0.2.RELEASE",
+                    "3.0.3.RELEASE",
+                    "3.0.4.RELEASE",
+                    "3.0.5.RELEASE",
+                    "3.0.6.RELEASE",
+                    "3.0.7.RELEASE",
+                    "3.1.0.RELEASE",
+                    "3.1.1.RELEASE",
+                    "3.1.2.RELEASE",
+                    "3.1.3.RELEASE",
+                    "3.1.4.RELEASE",
+                    "3.2.0.RELEASE",
+                    "3.2.1.RELEASE",
+                    "3.2.10.RELEASE",
+                    "3.2.11.RELEASE",
+                    "3.2.12.RELEASE",
+                    "3.2.13.RELEASE",
+                    "3.2.14.RELEASE",
+                    "3.2.15.RELEASE",
+                    "3.2.16.RELEASE",
+                    "3.2.17.RELEASE",
+                    "3.2.18.RELEASE",
+                    "3.2.2.RELEASE",
+                    "3.2.3.RELEASE",
+                    "3.2.4.RELEASE",
+                    "3.2.5.RELEASE",
+                    "3.2.6.RELEASE",
+                    "3.2.7.RELEASE",
+                    "3.2.8.RELEASE",
+                    "3.2.9.RELEASE",
+                    "4.0.0.RELEASE",
+                    "4.0.1.RELEASE",
+                    "4.0.2.RELEASE",
+                    "4.0.3.RELEASE",
+                    "4.0.4.RELEASE",
+                    "4.0.5.RELEASE",
+                    "4.0.6.RELEASE",
+                    "4.0.7.RELEASE",
+                    "4.0.8.RELEASE",
+                    "4.0.9.RELEASE",
+                    "4.1.0.RELEASE",
+                    "4.1.1.RELEASE",
+                    "4.1.2.RELEASE",
+                    "4.1.3.RELEASE",
+                    "4.1.4.RELEASE",
+                    "4.1.5.RELEASE",
+                    "4.1.6.RELEASE",
+                    "4.1.7.RELEASE",
+                    "4.1.8.RELEASE",
+                    "4.1.9.RELEASE",
+                    "4.2.0.RELEASE",
+                    "4.2.1.RELEASE",
+                    "4.2.2.RELEASE",
+                    "4.2.3.RELEASE",
+                    "4.2.4.RELEASE",
+                    "4.2.5.RELEASE",
+                    "4.2.6.RELEASE",
+                    "4.2.7.RELEASE",
+                    "4.2.8.RELEASE",
+                    "4.2.9.RELEASE",
+                    "4.3.0.RELEASE",
+                    "4.3.1.RELEASE",
+                    "4.3.10.RELEASE",
+                    "4.3.11.RELEASE",
+                    "4.3.12.RELEASE",
+                    "4.3.13.RELEASE",
+                    "4.3.14.RELEASE",
+                    "4.3.15.RELEASE",
+                    "4.3.16.RELEASE",
+                    "4.3.17.RELEASE",
+                    "4.3.18.RELEASE",
+                    "4.3.19.RELEASE",
+                    "4.3.2.RELEASE",
+                    "4.3.20.RELEASE",
+                    "4.3.21.RELEASE",
+                    "4.3.22.RELEASE",
+                    "4.3.23.RELEASE",
+                    "4.3.24.RELEASE",
+                    "4.3.25.RELEASE",
+                    "4.3.26.RELEASE",
+                    "4.3.27.RELEASE",
+                    "4.3.28.RELEASE",
+                    "4.3.29.RELEASE",
+                    "4.3.3.RELEASE",
+                    "4.3.30.RELEASE",
+                    "4.3.4.RELEASE",
+                    "4.3.5.RELEASE",
+                    "4.3.6.RELEASE",
+                    "4.3.7.RELEASE",
+                    "4.3.8.RELEASE",
+                    "4.3.9.RELEASE",
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-beans",
+                    "purl": "pkg:maven/org.springframework/spring-beans"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0-rc1",
+                    "1.0.1",
+                    "1.1",
+                    "1.1-rc1",
+                    "1.1-rc2",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.2",
+                    "1.2-rc1",
+                    "1.2-rc2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "2.0",
+                    "2.0-m1",
+                    "2.0-m2",
+                    "2.0-m3",
+                    "2.0-m4",
+                    "2.0-m5",
+                    "2.0-rc1",
+                    "2.0-rc2",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.6.SEC01",
+                    "2.5.6.SEC02",
+                    "2.5.6.SEC03",
+                    "3.0.0.RELEASE",
+                    "3.0.1.RELEASE",
+                    "3.0.2.RELEASE",
+                    "3.0.3.RELEASE",
+                    "3.0.4.RELEASE",
+                    "3.0.5.RELEASE",
+                    "3.0.6.RELEASE",
+                    "3.0.7.RELEASE",
+                    "3.1.0.RELEASE",
+                    "3.1.1.RELEASE",
+                    "3.1.2.RELEASE",
+                    "3.1.3.RELEASE",
+                    "3.1.4.RELEASE",
+                    "3.2.0.RELEASE",
+                    "3.2.1.RELEASE",
+                    "3.2.10.RELEASE",
+                    "3.2.11.RELEASE",
+                    "3.2.12.RELEASE",
+                    "3.2.13.RELEASE",
+                    "3.2.14.RELEASE",
+                    "3.2.15.RELEASE",
+                    "3.2.16.RELEASE",
+                    "3.2.17.RELEASE",
+                    "3.2.18.RELEASE",
+                    "3.2.2.RELEASE",
+                    "3.2.3.RELEASE",
+                    "3.2.4.RELEASE",
+                    "3.2.5.RELEASE",
+                    "3.2.6.RELEASE",
+                    "3.2.7.RELEASE",
+                    "3.2.8.RELEASE",
+                    "3.2.9.RELEASE",
+                    "4.0.0.RELEASE",
+                    "4.0.1.RELEASE",
+                    "4.0.2.RELEASE",
+                    "4.0.3.RELEASE",
+                    "4.0.4.RELEASE",
+                    "4.0.5.RELEASE",
+                    "4.0.6.RELEASE",
+                    "4.0.7.RELEASE",
+                    "4.0.8.RELEASE",
+                    "4.0.9.RELEASE",
+                    "4.1.0.RELEASE",
+                    "4.1.1.RELEASE",
+                    "4.1.2.RELEASE",
+                    "4.1.3.RELEASE",
+                    "4.1.4.RELEASE",
+                    "4.1.5.RELEASE",
+                    "4.1.6.RELEASE",
+                    "4.1.7.RELEASE",
+                    "4.1.8.RELEASE",
+                    "4.1.9.RELEASE",
+                    "4.2.0.RELEASE",
+                    "4.2.1.RELEASE",
+                    "4.2.2.RELEASE",
+                    "4.2.3.RELEASE",
+                    "4.2.4.RELEASE",
+                    "4.2.5.RELEASE",
+                    "4.2.6.RELEASE",
+                    "4.2.7.RELEASE",
+                    "4.2.8.RELEASE",
+                    "4.2.9.RELEASE",
+                    "4.3.0.RELEASE",
+                    "4.3.1.RELEASE",
+                    "4.3.10.RELEASE",
+                    "4.3.11.RELEASE",
+                    "4.3.12.RELEASE",
+                    "4.3.13.RELEASE",
+                    "4.3.14.RELEASE",
+                    "4.3.15.RELEASE",
+                    "4.3.16.RELEASE",
+                    "4.3.17.RELEASE",
+                    "4.3.18.RELEASE",
+                    "4.3.19.RELEASE",
+                    "4.3.2.RELEASE",
+                    "4.3.20.RELEASE",
+                    "4.3.21.RELEASE",
+                    "4.3.22.RELEASE",
+                    "4.3.23.RELEASE",
+                    "4.3.24.RELEASE",
+                    "4.3.25.RELEASE",
+                    "4.3.26.RELEASE",
+                    "4.3.27.RELEASE",
+                    "4.3.28.RELEASE",
+                    "4.3.29.RELEASE",
+                    "4.3.3.RELEASE",
+                    "4.3.30.RELEASE",
+                    "4.3.4.RELEASE",
+                    "4.3.5.RELEASE",
+                    "4.3.6.RELEASE",
+                    "4.3.7.RELEASE",
+                    "4.3.8.RELEASE",
+                    "4.3.9.RELEASE",
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-web",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0.RELEASE",
+                    "1.0.1.RELEASE",
+                    "1.0.2.RELEASE",
+                    "1.1.0.RELEASE",
+                    "1.1.1.RELEASE",
+                    "1.1.10.RELEASE",
+                    "1.1.11.RELEASE",
+                    "1.1.12.RELEASE",
+                    "1.1.2.RELEASE",
+                    "1.1.3.RELEASE",
+                    "1.1.4.RELEASE",
+                    "1.1.5.RELEASE",
+                    "1.1.6.RELEASE",
+                    "1.1.7.RELEASE",
+                    "1.1.8.RELEASE",
+                    "1.1.9.RELEASE",
+                    "1.2.0.RELEASE",
+                    "1.2.1.RELEASE",
+                    "1.2.2.RELEASE",
+                    "1.2.3.RELEASE",
+                    "1.2.4.RELEASE",
+                    "1.2.5.RELEASE",
+                    "1.2.6.RELEASE",
+                    "1.2.7.RELEASE",
+                    "1.2.8.RELEASE",
+                    "1.3.0.RELEASE",
+                    "1.3.1.RELEASE",
+                    "1.3.2.RELEASE",
+                    "1.3.3.RELEASE",
+                    "1.3.4.RELEASE",
+                    "1.3.5.RELEASE",
+                    "1.3.6.RELEASE",
+                    "1.3.7.RELEASE",
+                    "1.3.8.RELEASE",
+                    "1.4.0.RELEASE",
+                    "1.4.1.RELEASE",
+                    "1.4.2.RELEASE",
+                    "1.4.3.RELEASE",
+                    "1.4.4.RELEASE",
+                    "1.4.5.RELEASE",
+                    "1.4.6.RELEASE",
+                    "1.4.7.RELEASE",
+                    "1.5.0.RELEASE",
+                    "1.5.1.RELEASE",
+                    "1.5.10.RELEASE",
+                    "1.5.11.RELEASE",
+                    "1.5.12.RELEASE",
+                    "1.5.13.RELEASE",
+                    "1.5.14.RELEASE",
+                    "1.5.15.RELEASE",
+                    "1.5.16.RELEASE",
+                    "1.5.17.RELEASE",
+                    "1.5.18.RELEASE",
+                    "1.5.19.RELEASE",
+                    "1.5.2.RELEASE",
+                    "1.5.20.RELEASE",
+                    "1.5.21.RELEASE",
+                    "1.5.22.RELEASE",
+                    "1.5.3.RELEASE",
+                    "1.5.4.RELEASE",
+                    "1.5.5.RELEASE",
+                    "1.5.6.RELEASE",
+                    "1.5.7.RELEASE",
+                    "1.5.8.RELEASE",
+                    "1.5.9.RELEASE",
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-web",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-webflux",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-webflux",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-22965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/commit/002546b3e4b8d791ea6acccb81eb3168f51abb15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-254054.pdf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.6.6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/spring-projects/spring-framework"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/releases/tag/v5.3.18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2022-0005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tanzu.vmware.com/security/cve-2022-22965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/166713/Spring4Shell-Code-Execution.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/167011/Spring4Shell-Spring-Framework-Class-Property-Remote-Code-Execution.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-31T18:30:50Z",
+                "nvd_published_at": "2022-04-01T23:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-36p3-wjmg-h94x"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "junit:junit",
+            "version": "4.12",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:35Z",
+              "published": "2020-10-12T17:33:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-269g-pwp5-87pp",
+              "aliases": [
+                "CVE-2020-15250"
+              ],
+              "summary": "TemporaryFolder on unix-like systems does not limit access to created files",
+              "details": "### Vulnerability\n\nThe JUnit4 test rule [TemporaryFolder](https://junit.org/junit4/javadoc/4.13/org/junit/rules/TemporaryFolder.html) contains a local information disclosure vulnerability.\n\nExample of vulnerable code:\n```java\npublic static class HasTempFolder {\n    @Rule\n    public TemporaryFolder folder = new TemporaryFolder();\n\n    @Test\n    public void testUsingTempFolder() throws IOException {\n        folder.getRoot(); // Previous file permissions: `drwxr-xr-x`; After fix:`drwx------`\n        File createdFile= folder.newFile(\"myfile.txt\"); // unchanged/irrelevant file permissions\n        File createdFolder= folder.newFolder(\"subfolder\"); // unchanged/irrelevant file permissions\n        // ...\n    }\n}\n```\n\n### Impact\n\nOn Unix like systems, the system's temporary directory is shared between all users on that system. Because of this, when files and directories are written into this directory they are, by default, readable by other users on that same system.\n\nThis vulnerability **does not** allow other users to overwrite the contents of these directories or files. This is purely an information disclosure vulnerability.\n\nWhen analyzing the impact of this vulnerability, here are the important questions to ask:\n\n1. Do the JUnit tests write sensitive information, like API keys or passwords, into the temporary folder?\n    - If yes, this vulnerability impacts you, but only if you also answer 'yes' to question 2.\n    - If no, this vulnerability does not impact you.\n2. Do the JUnit tests ever execute in an environment where the OS has other untrusted users. \n    _This may apply in CI/CD environments but normally won't be 'yes' for personal developer machines._\n    - If yes, and you answered 'yes' to question 1, this vulnerability impacts you.\n    - If no, this vulnerability does not impact you.\n\n### Patches\n\nBecause certain JDK file system APIs were only added in JDK 1.7, this this fix is dependent upon the version of the JDK you are using.\n - Java 1.7 and higher users: this vulnerability is fixed in 4.13.1.\n - Java 1.6 and lower users: **no patch is available, you must use the workaround below.**\n\n### Workarounds\n\nIf you are unable to patch, or are stuck running on Java 1.6, specifying the `java.io.tmpdir` system environment variable to a directory that is exclusively owned by the executing user will fix this vulnerability.\n\n### References\n- [CWE-200: Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)\n- Fix commit https://github.com/junit-team/junit4/commit/610155b8c22138329f0723eec22521627dbc52ae\n\n#### Similar Vulnerabilities\n - Google Guava - https://github.com/google/guava/issues/4011\n - Apache Ant - https://nvd.nist.gov/vuln/detail/CVE-2020-1945\n - JetBrains Kotlin Compiler - https://nvd.nist.gov/vuln/detail/CVE-2020-15824\n\n### For more information\nIf you have any questions or comments about this advisory, please pen an issue in [junit-team/junit4](https://github.com/junit-team/junit4/issues).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "junit:junit",
+                    "purl": "pkg:maven/junit/junit"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.7"
+                        },
+                        {
+                          "fixed": "4.13.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.10",
+                    "4.11",
+                    "4.11-beta-1",
+                    "4.12",
+                    "4.12-beta-1",
+                    "4.12-beta-2",
+                    "4.12-beta-3",
+                    "4.13",
+                    "4.13-beta-1",
+                    "4.13-beta-2",
+                    "4.13-beta-3",
+                    "4.13-rc-1",
+                    "4.13-rc-2",
+                    "4.7",
+                    "4.8",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/10/GHSA-269g-pwp5-87pp/GHSA-269g-pwp5-87pp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/security/advisories/GHSA-269g-pwp5-87pp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15250"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/issues/1676"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/commit/610155b8c22138329f0723eec22521627dbc52ae"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/junit-team/junit4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/blob/7852b90cfe1cea1e0cdaa19d490c83f0d8684b50/doc/ReleaseNotes4.13.1.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://junit.org/junit4/javadoc/4.13/org/junit/rules/TemporaryFolder.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r01110833b63616ddbef59ae4e10c0fbd0060f0a51206defd4cb4d917@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r09cfbb5aedd76023691bbce9ca4ce2e16bb07dd37554a17efc19935d@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1209986f79359b518d09513ff05a88e5b3c398540e775edea76a4774@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r29d703d1986d9b871466ff24082a1828ac8ad27bb0965a93a383872e@%3Cpluto-scm.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2b78f23bc2711a76a7fc73ad67b7fcd6817c5cfccefd6f30a4f54943@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r30f502d2f79e8d635361adb8108dcbb73095163fcbd776ee7984a094@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r500517c23200fb2fdb0b82770a62dd6c88b3521cfb01cfd0c76e3f8b@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5f8841507576f595bb783ccec6a7cb285ea90d4e6f5043eae0e61a41@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r687f489b10b0d14e46f626aa88476545e1a2600b24c4ebd3c0d2a10b@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r717877028482c55acf604d7a0106af4ca05da4208c708fb157b53672@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r742b44fd75215fc75963b8ecc22b2e4372e68d67d3d859d2b5e8743f@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8b02dc6f18df11ff39eedb3038f1e31e6f90a779b1959bae65107279@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r925eaae7dd8f77dd61eefc49c1fcf54bd9ecfe605486870d7b1e9390@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r934208a520b38f5cf0cae199b6b076bfe7d081809528b0eff2459e40@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r95f8ef60c4b3a5284b647bb3132cda08e6fadad888a66b84f49da0b0@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9710067c7096b83cb6ae8f53a2f6f94e9c042d1bf1d6929f8f2a2b7a@%3Ccommits.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra1bdb9efae84794e8ffa2f8474be8290ba57830eefe9714b95da714b@%3Cdev.pdfbox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/raebf13f53cd5d23d990712e3d11c80da9a7bae94a6284050f148ed99@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2771949c676ca984e58a5cd5ca79c2634dee1945e0406e48e0f8457@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2ffe2993f4dccc48d832e1a0f1c419477781b6ea16e725ca2276dbb@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb33212dab7beccaf1ffef9b88610047c644f644c7a0ebdc44d77e381@%3Ccommits.turbine.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbaec90e699bc7c7bd9a053f76707a36fda48b6d558f31dc79147dbf9@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc49cf1547ef6cac1be4b3c92339b2cae0acacf5acaba13cfa429a872@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdbdd30510a7c4d0908fd22075c02b75bbc2e0d977ec22249ef3133cb@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rde385b8b53ed046600ef68dd6b4528dea7566aaddb02c3e702cc28bc@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rde8e70b95c992378e8570e4df400c6008a9839eabdfb8f800a3e5af6@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdef7d1380c86e7c0edf8a0f89a2a8db86fce5e363457d56b722691b4@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rea812d8612fdc46842a2a57248cad4b01ddfdb1e9b037c49e68fdbfb@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reb700e60b9642eafa4b7922bfee80796394135aa09c7a239ef9f7486@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf2ec93f4ca9a97d1958eb4a31b1830f723419ce9bf2018a6e5741d5b@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf6e5d894d4b03bef537c9d6641272e0197c047c0d1982b4e176d0353@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf797d119cc3f51a8d7c3c5cbe50cb4524c8487282b986edde83a9467@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/11/msg00003.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-732"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-10-12T17:32:34Z",
+                "nvd_published_at": "2020-10-12T18:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-269g-pwp5-87pp"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.springframework.boot:spring-boot-starter-web",
+            "version": "2.0.2",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:14Z",
+              "published": "2022-03-31T18:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-36p3-wjmg-h94x",
+              "aliases": [
+                "CVE-2022-22965"
+              ],
+              "summary": "Remote Code Execution in Spring Framework",
+              "details": "Spring Framework prior to versions 5.2.20 and 5.3.18 contains a remote code execution vulnerability known as `Spring4Shell`. \n\n## Impact\n\nA Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it.\n\nThese are the prerequisites for the exploit:\n- JDK 9 or higher\n- Apache Tomcat as the Servlet container\n- Packaged as WAR\n- `spring-webmvc` or `spring-webflux` dependency\n\n## Patches\n\n- Spring Framework [5.3.18](https://github.com/spring-projects/spring-framework/releases/tag/v5.3.18) and [5.2.20](https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE)\n- Spring Boot [2.6.6](https://github.com/spring-projects/spring-boot/releases/tag/v2.6.6) and [2.5.12](https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12)\n\n## Workarounds\n\nFor those who are unable to upgrade, leaked reports recommend setting `disallowedFields` on `WebDataBinder` through an `@ControllerAdvice`. This works generally, but as a centrally applied workaround fix, may leave some loopholes, in particular if a controller sets `disallowedFields` locally through its own `@InitBinder` method, which overrides the global setting.\n\nTo apply the workaround in a more fail-safe way, applications could extend `RequestMappingHandlerAdapter` to update the `WebDataBinder` at the end after all other initialization. In order to do that, a Spring Boot application can declare a `WebMvcRegistrations` bean (Spring MVC) or a `WebFluxRegistrations` bean (Spring WebFlux).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-beans",
+                    "purl": "pkg:maven/org.springframework/spring-beans"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0-m4",
+                    "1.0-rc1",
+                    "1.0.1",
+                    "1.2",
+                    "1.2-rc1",
+                    "1.2-rc2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "2.0",
+                    "2.0-m1",
+                    "2.0-m2",
+                    "2.0-m3",
+                    "2.0-m4",
+                    "2.0-m5",
+                    "2.0-rc1",
+                    "2.0-rc2",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.6.SEC01",
+                    "2.5.6.SEC02",
+                    "2.5.6.SEC03",
+                    "3.0.0.RELEASE",
+                    "3.0.1.RELEASE",
+                    "3.0.2.RELEASE",
+                    "3.0.3.RELEASE",
+                    "3.0.4.RELEASE",
+                    "3.0.5.RELEASE",
+                    "3.0.6.RELEASE",
+                    "3.0.7.RELEASE",
+                    "3.1.0.RELEASE",
+                    "3.1.1.RELEASE",
+                    "3.1.2.RELEASE",
+                    "3.1.3.RELEASE",
+                    "3.1.4.RELEASE",
+                    "3.2.0.RELEASE",
+                    "3.2.1.RELEASE",
+                    "3.2.10.RELEASE",
+                    "3.2.11.RELEASE",
+                    "3.2.12.RELEASE",
+                    "3.2.13.RELEASE",
+                    "3.2.14.RELEASE",
+                    "3.2.15.RELEASE",
+                    "3.2.16.RELEASE",
+                    "3.2.17.RELEASE",
+                    "3.2.18.RELEASE",
+                    "3.2.2.RELEASE",
+                    "3.2.3.RELEASE",
+                    "3.2.4.RELEASE",
+                    "3.2.5.RELEASE",
+                    "3.2.6.RELEASE",
+                    "3.2.7.RELEASE",
+                    "3.2.8.RELEASE",
+                    "3.2.9.RELEASE",
+                    "4.0.0.RELEASE",
+                    "4.0.1.RELEASE",
+                    "4.0.2.RELEASE",
+                    "4.0.3.RELEASE",
+                    "4.0.4.RELEASE",
+                    "4.0.5.RELEASE",
+                    "4.0.6.RELEASE",
+                    "4.0.7.RELEASE",
+                    "4.0.8.RELEASE",
+                    "4.0.9.RELEASE",
+                    "4.1.0.RELEASE",
+                    "4.1.1.RELEASE",
+                    "4.1.2.RELEASE",
+                    "4.1.3.RELEASE",
+                    "4.1.4.RELEASE",
+                    "4.1.5.RELEASE",
+                    "4.1.6.RELEASE",
+                    "4.1.7.RELEASE",
+                    "4.1.8.RELEASE",
+                    "4.1.9.RELEASE",
+                    "4.2.0.RELEASE",
+                    "4.2.1.RELEASE",
+                    "4.2.2.RELEASE",
+                    "4.2.3.RELEASE",
+                    "4.2.4.RELEASE",
+                    "4.2.5.RELEASE",
+                    "4.2.6.RELEASE",
+                    "4.2.7.RELEASE",
+                    "4.2.8.RELEASE",
+                    "4.2.9.RELEASE",
+                    "4.3.0.RELEASE",
+                    "4.3.1.RELEASE",
+                    "4.3.10.RELEASE",
+                    "4.3.11.RELEASE",
+                    "4.3.12.RELEASE",
+                    "4.3.13.RELEASE",
+                    "4.3.14.RELEASE",
+                    "4.3.15.RELEASE",
+                    "4.3.16.RELEASE",
+                    "4.3.17.RELEASE",
+                    "4.3.18.RELEASE",
+                    "4.3.19.RELEASE",
+                    "4.3.2.RELEASE",
+                    "4.3.20.RELEASE",
+                    "4.3.21.RELEASE",
+                    "4.3.22.RELEASE",
+                    "4.3.23.RELEASE",
+                    "4.3.24.RELEASE",
+                    "4.3.25.RELEASE",
+                    "4.3.26.RELEASE",
+                    "4.3.27.RELEASE",
+                    "4.3.28.RELEASE",
+                    "4.3.29.RELEASE",
+                    "4.3.3.RELEASE",
+                    "4.3.30.RELEASE",
+                    "4.3.4.RELEASE",
+                    "4.3.5.RELEASE",
+                    "4.3.6.RELEASE",
+                    "4.3.7.RELEASE",
+                    "4.3.8.RELEASE",
+                    "4.3.9.RELEASE",
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-beans",
+                    "purl": "pkg:maven/org.springframework/spring-beans"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0-rc1",
+                    "1.0.1",
+                    "1.1",
+                    "1.1-rc1",
+                    "1.1-rc2",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.2",
+                    "1.2-rc1",
+                    "1.2-rc2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "2.0",
+                    "2.0-m1",
+                    "2.0-m2",
+                    "2.0-m3",
+                    "2.0-m4",
+                    "2.0-m5",
+                    "2.0-rc1",
+                    "2.0-rc2",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.6.SEC01",
+                    "2.5.6.SEC02",
+                    "2.5.6.SEC03",
+                    "3.0.0.RELEASE",
+                    "3.0.1.RELEASE",
+                    "3.0.2.RELEASE",
+                    "3.0.3.RELEASE",
+                    "3.0.4.RELEASE",
+                    "3.0.5.RELEASE",
+                    "3.0.6.RELEASE",
+                    "3.0.7.RELEASE",
+                    "3.1.0.RELEASE",
+                    "3.1.1.RELEASE",
+                    "3.1.2.RELEASE",
+                    "3.1.3.RELEASE",
+                    "3.1.4.RELEASE",
+                    "3.2.0.RELEASE",
+                    "3.2.1.RELEASE",
+                    "3.2.10.RELEASE",
+                    "3.2.11.RELEASE",
+                    "3.2.12.RELEASE",
+                    "3.2.13.RELEASE",
+                    "3.2.14.RELEASE",
+                    "3.2.15.RELEASE",
+                    "3.2.16.RELEASE",
+                    "3.2.17.RELEASE",
+                    "3.2.18.RELEASE",
+                    "3.2.2.RELEASE",
+                    "3.2.3.RELEASE",
+                    "3.2.4.RELEASE",
+                    "3.2.5.RELEASE",
+                    "3.2.6.RELEASE",
+                    "3.2.7.RELEASE",
+                    "3.2.8.RELEASE",
+                    "3.2.9.RELEASE",
+                    "4.0.0.RELEASE",
+                    "4.0.1.RELEASE",
+                    "4.0.2.RELEASE",
+                    "4.0.3.RELEASE",
+                    "4.0.4.RELEASE",
+                    "4.0.5.RELEASE",
+                    "4.0.6.RELEASE",
+                    "4.0.7.RELEASE",
+                    "4.0.8.RELEASE",
+                    "4.0.9.RELEASE",
+                    "4.1.0.RELEASE",
+                    "4.1.1.RELEASE",
+                    "4.1.2.RELEASE",
+                    "4.1.3.RELEASE",
+                    "4.1.4.RELEASE",
+                    "4.1.5.RELEASE",
+                    "4.1.6.RELEASE",
+                    "4.1.7.RELEASE",
+                    "4.1.8.RELEASE",
+                    "4.1.9.RELEASE",
+                    "4.2.0.RELEASE",
+                    "4.2.1.RELEASE",
+                    "4.2.2.RELEASE",
+                    "4.2.3.RELEASE",
+                    "4.2.4.RELEASE",
+                    "4.2.5.RELEASE",
+                    "4.2.6.RELEASE",
+                    "4.2.7.RELEASE",
+                    "4.2.8.RELEASE",
+                    "4.2.9.RELEASE",
+                    "4.3.0.RELEASE",
+                    "4.3.1.RELEASE",
+                    "4.3.10.RELEASE",
+                    "4.3.11.RELEASE",
+                    "4.3.12.RELEASE",
+                    "4.3.13.RELEASE",
+                    "4.3.14.RELEASE",
+                    "4.3.15.RELEASE",
+                    "4.3.16.RELEASE",
+                    "4.3.17.RELEASE",
+                    "4.3.18.RELEASE",
+                    "4.3.19.RELEASE",
+                    "4.3.2.RELEASE",
+                    "4.3.20.RELEASE",
+                    "4.3.21.RELEASE",
+                    "4.3.22.RELEASE",
+                    "4.3.23.RELEASE",
+                    "4.3.24.RELEASE",
+                    "4.3.25.RELEASE",
+                    "4.3.26.RELEASE",
+                    "4.3.27.RELEASE",
+                    "4.3.28.RELEASE",
+                    "4.3.29.RELEASE",
+                    "4.3.3.RELEASE",
+                    "4.3.30.RELEASE",
+                    "4.3.4.RELEASE",
+                    "4.3.5.RELEASE",
+                    "4.3.6.RELEASE",
+                    "4.3.7.RELEASE",
+                    "4.3.8.RELEASE",
+                    "4.3.9.RELEASE",
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-web",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0.RELEASE",
+                    "1.0.1.RELEASE",
+                    "1.0.2.RELEASE",
+                    "1.1.0.RELEASE",
+                    "1.1.1.RELEASE",
+                    "1.1.10.RELEASE",
+                    "1.1.11.RELEASE",
+                    "1.1.12.RELEASE",
+                    "1.1.2.RELEASE",
+                    "1.1.3.RELEASE",
+                    "1.1.4.RELEASE",
+                    "1.1.5.RELEASE",
+                    "1.1.6.RELEASE",
+                    "1.1.7.RELEASE",
+                    "1.1.8.RELEASE",
+                    "1.1.9.RELEASE",
+                    "1.2.0.RELEASE",
+                    "1.2.1.RELEASE",
+                    "1.2.2.RELEASE",
+                    "1.2.3.RELEASE",
+                    "1.2.4.RELEASE",
+                    "1.2.5.RELEASE",
+                    "1.2.6.RELEASE",
+                    "1.2.7.RELEASE",
+                    "1.2.8.RELEASE",
+                    "1.3.0.RELEASE",
+                    "1.3.1.RELEASE",
+                    "1.3.2.RELEASE",
+                    "1.3.3.RELEASE",
+                    "1.3.4.RELEASE",
+                    "1.3.5.RELEASE",
+                    "1.3.6.RELEASE",
+                    "1.3.7.RELEASE",
+                    "1.3.8.RELEASE",
+                    "1.4.0.RELEASE",
+                    "1.4.1.RELEASE",
+                    "1.4.2.RELEASE",
+                    "1.4.3.RELEASE",
+                    "1.4.4.RELEASE",
+                    "1.4.5.RELEASE",
+                    "1.4.6.RELEASE",
+                    "1.4.7.RELEASE",
+                    "1.5.0.RELEASE",
+                    "1.5.1.RELEASE",
+                    "1.5.10.RELEASE",
+                    "1.5.11.RELEASE",
+                    "1.5.12.RELEASE",
+                    "1.5.13.RELEASE",
+                    "1.5.14.RELEASE",
+                    "1.5.15.RELEASE",
+                    "1.5.16.RELEASE",
+                    "1.5.17.RELEASE",
+                    "1.5.18.RELEASE",
+                    "1.5.19.RELEASE",
+                    "1.5.2.RELEASE",
+                    "1.5.20.RELEASE",
+                    "1.5.21.RELEASE",
+                    "1.5.22.RELEASE",
+                    "1.5.3.RELEASE",
+                    "1.5.4.RELEASE",
+                    "1.5.5.RELEASE",
+                    "1.5.6.RELEASE",
+                    "1.5.7.RELEASE",
+                    "1.5.8.RELEASE",
+                    "1.5.9.RELEASE",
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-web",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-webflux",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-webflux",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-22965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/commit/002546b3e4b8d791ea6acccb81eb3168f51abb15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-254054.pdf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.6.6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/spring-projects/spring-framework"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/releases/tag/v5.3.18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2022-0005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tanzu.vmware.com/security/cve-2022-22965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/166713/Spring4Shell-Code-Execution.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/167011/Spring4Shell-Spring-Framework-Class-Property-Remote-Code-Execution.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-31T18:30:50Z",
+                "nvd_published_at": "2022-04-01T23:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-36p3-wjmg-h94x"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.springframework:spring-webmvc",
+            "version": "5.0.6.RELEASE",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:14Z",
+              "published": "2022-03-31T18:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-36p3-wjmg-h94x",
+              "aliases": [
+                "CVE-2022-22965"
+              ],
+              "summary": "Remote Code Execution in Spring Framework",
+              "details": "Spring Framework prior to versions 5.2.20 and 5.3.18 contains a remote code execution vulnerability known as `Spring4Shell`. \n\n## Impact\n\nA Spring MVC or Spring WebFlux application running on JDK 9+ may be vulnerable to remote code execution (RCE) via data binding. The specific exploit requires the application to run on Tomcat as a WAR deployment. If the application is deployed as a Spring Boot executable jar, i.e. the default, it is not vulnerable to the exploit. However, the nature of the vulnerability is more general, and there may be other ways to exploit it.\n\nThese are the prerequisites for the exploit:\n- JDK 9 or higher\n- Apache Tomcat as the Servlet container\n- Packaged as WAR\n- `spring-webmvc` or `spring-webflux` dependency\n\n## Patches\n\n- Spring Framework [5.3.18](https://github.com/spring-projects/spring-framework/releases/tag/v5.3.18) and [5.2.20](https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE)\n- Spring Boot [2.6.6](https://github.com/spring-projects/spring-boot/releases/tag/v2.6.6) and [2.5.12](https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12)\n\n## Workarounds\n\nFor those who are unable to upgrade, leaked reports recommend setting `disallowedFields` on `WebDataBinder` through an `@ControllerAdvice`. This works generally, but as a centrally applied workaround fix, may leave some loopholes, in particular if a controller sets `disallowedFields` locally through its own `@InitBinder` method, which overrides the global setting.\n\nTo apply the workaround in a more fail-safe way, applications could extend `RequestMappingHandlerAdapter` to update the `WebDataBinder` at the end after all other initialization. In order to do that, a Spring Boot application can declare a `WebMvcRegistrations` bean (Spring MVC) or a `WebFluxRegistrations` bean (Spring WebFlux).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-beans",
+                    "purl": "pkg:maven/org.springframework/spring-beans"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0-m4",
+                    "1.0-rc1",
+                    "1.0.1",
+                    "1.2",
+                    "1.2-rc1",
+                    "1.2-rc2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "2.0",
+                    "2.0-m1",
+                    "2.0-m2",
+                    "2.0-m3",
+                    "2.0-m4",
+                    "2.0-m5",
+                    "2.0-rc1",
+                    "2.0-rc2",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.6.SEC01",
+                    "2.5.6.SEC02",
+                    "2.5.6.SEC03",
+                    "3.0.0.RELEASE",
+                    "3.0.1.RELEASE",
+                    "3.0.2.RELEASE",
+                    "3.0.3.RELEASE",
+                    "3.0.4.RELEASE",
+                    "3.0.5.RELEASE",
+                    "3.0.6.RELEASE",
+                    "3.0.7.RELEASE",
+                    "3.1.0.RELEASE",
+                    "3.1.1.RELEASE",
+                    "3.1.2.RELEASE",
+                    "3.1.3.RELEASE",
+                    "3.1.4.RELEASE",
+                    "3.2.0.RELEASE",
+                    "3.2.1.RELEASE",
+                    "3.2.10.RELEASE",
+                    "3.2.11.RELEASE",
+                    "3.2.12.RELEASE",
+                    "3.2.13.RELEASE",
+                    "3.2.14.RELEASE",
+                    "3.2.15.RELEASE",
+                    "3.2.16.RELEASE",
+                    "3.2.17.RELEASE",
+                    "3.2.18.RELEASE",
+                    "3.2.2.RELEASE",
+                    "3.2.3.RELEASE",
+                    "3.2.4.RELEASE",
+                    "3.2.5.RELEASE",
+                    "3.2.6.RELEASE",
+                    "3.2.7.RELEASE",
+                    "3.2.8.RELEASE",
+                    "3.2.9.RELEASE",
+                    "4.0.0.RELEASE",
+                    "4.0.1.RELEASE",
+                    "4.0.2.RELEASE",
+                    "4.0.3.RELEASE",
+                    "4.0.4.RELEASE",
+                    "4.0.5.RELEASE",
+                    "4.0.6.RELEASE",
+                    "4.0.7.RELEASE",
+                    "4.0.8.RELEASE",
+                    "4.0.9.RELEASE",
+                    "4.1.0.RELEASE",
+                    "4.1.1.RELEASE",
+                    "4.1.2.RELEASE",
+                    "4.1.3.RELEASE",
+                    "4.1.4.RELEASE",
+                    "4.1.5.RELEASE",
+                    "4.1.6.RELEASE",
+                    "4.1.7.RELEASE",
+                    "4.1.8.RELEASE",
+                    "4.1.9.RELEASE",
+                    "4.2.0.RELEASE",
+                    "4.2.1.RELEASE",
+                    "4.2.2.RELEASE",
+                    "4.2.3.RELEASE",
+                    "4.2.4.RELEASE",
+                    "4.2.5.RELEASE",
+                    "4.2.6.RELEASE",
+                    "4.2.7.RELEASE",
+                    "4.2.8.RELEASE",
+                    "4.2.9.RELEASE",
+                    "4.3.0.RELEASE",
+                    "4.3.1.RELEASE",
+                    "4.3.10.RELEASE",
+                    "4.3.11.RELEASE",
+                    "4.3.12.RELEASE",
+                    "4.3.13.RELEASE",
+                    "4.3.14.RELEASE",
+                    "4.3.15.RELEASE",
+                    "4.3.16.RELEASE",
+                    "4.3.17.RELEASE",
+                    "4.3.18.RELEASE",
+                    "4.3.19.RELEASE",
+                    "4.3.2.RELEASE",
+                    "4.3.20.RELEASE",
+                    "4.3.21.RELEASE",
+                    "4.3.22.RELEASE",
+                    "4.3.23.RELEASE",
+                    "4.3.24.RELEASE",
+                    "4.3.25.RELEASE",
+                    "4.3.26.RELEASE",
+                    "4.3.27.RELEASE",
+                    "4.3.28.RELEASE",
+                    "4.3.29.RELEASE",
+                    "4.3.3.RELEASE",
+                    "4.3.30.RELEASE",
+                    "4.3.4.RELEASE",
+                    "4.3.5.RELEASE",
+                    "4.3.6.RELEASE",
+                    "4.3.7.RELEASE",
+                    "4.3.8.RELEASE",
+                    "4.3.9.RELEASE",
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-beans",
+                    "purl": "pkg:maven/org.springframework/spring-beans"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0-rc1",
+                    "1.0.1",
+                    "1.1",
+                    "1.1-rc1",
+                    "1.1-rc2",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.2",
+                    "1.2-rc1",
+                    "1.2-rc2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "2.0",
+                    "2.0-m1",
+                    "2.0-m2",
+                    "2.0-m3",
+                    "2.0-m4",
+                    "2.0-m5",
+                    "2.0-rc1",
+                    "2.0-rc2",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.6.SEC01",
+                    "2.5.6.SEC02",
+                    "2.5.6.SEC03",
+                    "3.0.0.RELEASE",
+                    "3.0.1.RELEASE",
+                    "3.0.2.RELEASE",
+                    "3.0.3.RELEASE",
+                    "3.0.4.RELEASE",
+                    "3.0.5.RELEASE",
+                    "3.0.6.RELEASE",
+                    "3.0.7.RELEASE",
+                    "3.1.0.RELEASE",
+                    "3.1.1.RELEASE",
+                    "3.1.2.RELEASE",
+                    "3.1.3.RELEASE",
+                    "3.1.4.RELEASE",
+                    "3.2.0.RELEASE",
+                    "3.2.1.RELEASE",
+                    "3.2.10.RELEASE",
+                    "3.2.11.RELEASE",
+                    "3.2.12.RELEASE",
+                    "3.2.13.RELEASE",
+                    "3.2.14.RELEASE",
+                    "3.2.15.RELEASE",
+                    "3.2.16.RELEASE",
+                    "3.2.17.RELEASE",
+                    "3.2.18.RELEASE",
+                    "3.2.2.RELEASE",
+                    "3.2.3.RELEASE",
+                    "3.2.4.RELEASE",
+                    "3.2.5.RELEASE",
+                    "3.2.6.RELEASE",
+                    "3.2.7.RELEASE",
+                    "3.2.8.RELEASE",
+                    "3.2.9.RELEASE",
+                    "4.0.0.RELEASE",
+                    "4.0.1.RELEASE",
+                    "4.0.2.RELEASE",
+                    "4.0.3.RELEASE",
+                    "4.0.4.RELEASE",
+                    "4.0.5.RELEASE",
+                    "4.0.6.RELEASE",
+                    "4.0.7.RELEASE",
+                    "4.0.8.RELEASE",
+                    "4.0.9.RELEASE",
+                    "4.1.0.RELEASE",
+                    "4.1.1.RELEASE",
+                    "4.1.2.RELEASE",
+                    "4.1.3.RELEASE",
+                    "4.1.4.RELEASE",
+                    "4.1.5.RELEASE",
+                    "4.1.6.RELEASE",
+                    "4.1.7.RELEASE",
+                    "4.1.8.RELEASE",
+                    "4.1.9.RELEASE",
+                    "4.2.0.RELEASE",
+                    "4.2.1.RELEASE",
+                    "4.2.2.RELEASE",
+                    "4.2.3.RELEASE",
+                    "4.2.4.RELEASE",
+                    "4.2.5.RELEASE",
+                    "4.2.6.RELEASE",
+                    "4.2.7.RELEASE",
+                    "4.2.8.RELEASE",
+                    "4.2.9.RELEASE",
+                    "4.3.0.RELEASE",
+                    "4.3.1.RELEASE",
+                    "4.3.10.RELEASE",
+                    "4.3.11.RELEASE",
+                    "4.3.12.RELEASE",
+                    "4.3.13.RELEASE",
+                    "4.3.14.RELEASE",
+                    "4.3.15.RELEASE",
+                    "4.3.16.RELEASE",
+                    "4.3.17.RELEASE",
+                    "4.3.18.RELEASE",
+                    "4.3.19.RELEASE",
+                    "4.3.2.RELEASE",
+                    "4.3.20.RELEASE",
+                    "4.3.21.RELEASE",
+                    "4.3.22.RELEASE",
+                    "4.3.23.RELEASE",
+                    "4.3.24.RELEASE",
+                    "4.3.25.RELEASE",
+                    "4.3.26.RELEASE",
+                    "4.3.27.RELEASE",
+                    "4.3.28.RELEASE",
+                    "4.3.29.RELEASE",
+                    "4.3.3.RELEASE",
+                    "4.3.30.RELEASE",
+                    "4.3.4.RELEASE",
+                    "4.3.5.RELEASE",
+                    "4.3.6.RELEASE",
+                    "4.3.7.RELEASE",
+                    "4.3.8.RELEASE",
+                    "4.3.9.RELEASE",
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-web",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0.RELEASE",
+                    "1.0.1.RELEASE",
+                    "1.0.2.RELEASE",
+                    "1.1.0.RELEASE",
+                    "1.1.1.RELEASE",
+                    "1.1.10.RELEASE",
+                    "1.1.11.RELEASE",
+                    "1.1.12.RELEASE",
+                    "1.1.2.RELEASE",
+                    "1.1.3.RELEASE",
+                    "1.1.4.RELEASE",
+                    "1.1.5.RELEASE",
+                    "1.1.6.RELEASE",
+                    "1.1.7.RELEASE",
+                    "1.1.8.RELEASE",
+                    "1.1.9.RELEASE",
+                    "1.2.0.RELEASE",
+                    "1.2.1.RELEASE",
+                    "1.2.2.RELEASE",
+                    "1.2.3.RELEASE",
+                    "1.2.4.RELEASE",
+                    "1.2.5.RELEASE",
+                    "1.2.6.RELEASE",
+                    "1.2.7.RELEASE",
+                    "1.2.8.RELEASE",
+                    "1.3.0.RELEASE",
+                    "1.3.1.RELEASE",
+                    "1.3.2.RELEASE",
+                    "1.3.3.RELEASE",
+                    "1.3.4.RELEASE",
+                    "1.3.5.RELEASE",
+                    "1.3.6.RELEASE",
+                    "1.3.7.RELEASE",
+                    "1.3.8.RELEASE",
+                    "1.4.0.RELEASE",
+                    "1.4.1.RELEASE",
+                    "1.4.2.RELEASE",
+                    "1.4.3.RELEASE",
+                    "1.4.4.RELEASE",
+                    "1.4.5.RELEASE",
+                    "1.4.6.RELEASE",
+                    "1.4.7.RELEASE",
+                    "1.5.0.RELEASE",
+                    "1.5.1.RELEASE",
+                    "1.5.10.RELEASE",
+                    "1.5.11.RELEASE",
+                    "1.5.12.RELEASE",
+                    "1.5.13.RELEASE",
+                    "1.5.14.RELEASE",
+                    "1.5.15.RELEASE",
+                    "1.5.16.RELEASE",
+                    "1.5.17.RELEASE",
+                    "1.5.18.RELEASE",
+                    "1.5.19.RELEASE",
+                    "1.5.2.RELEASE",
+                    "1.5.20.RELEASE",
+                    "1.5.21.RELEASE",
+                    "1.5.22.RELEASE",
+                    "1.5.3.RELEASE",
+                    "1.5.4.RELEASE",
+                    "1.5.5.RELEASE",
+                    "1.5.6.RELEASE",
+                    "1.5.7.RELEASE",
+                    "1.5.8.RELEASE",
+                    "1.5.9.RELEASE",
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-web",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.20.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.16.RELEASE",
+                    "5.0.17.RELEASE",
+                    "5.0.18.RELEASE",
+                    "5.0.19.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.20.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE",
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.13.RELEASE",
+                    "5.1.14.RELEASE",
+                    "5.1.15.RELEASE",
+                    "5.1.16.RELEASE",
+                    "5.1.17.RELEASE",
+                    "5.1.18.RELEASE",
+                    "5.1.19.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.20.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE",
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.10.RELEASE",
+                    "5.2.11.RELEASE",
+                    "5.2.12.RELEASE",
+                    "5.2.13.RELEASE",
+                    "5.2.14.RELEASE",
+                    "5.2.15.RELEASE",
+                    "5.2.16.RELEASE",
+                    "5.2.17.RELEASE",
+                    "5.2.18.RELEASE",
+                    "5.2.19.RELEASE",
+                    "5.2.2.RELEASE",
+                    "5.2.3.RELEASE",
+                    "5.2.4.RELEASE",
+                    "5.2.5.RELEASE",
+                    "5.2.6.RELEASE",
+                    "5.2.7.RELEASE",
+                    "5.2.8.RELEASE",
+                    "5.2.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.3.0"
+                        },
+                        {
+                          "fixed": "5.3.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.3.0",
+                    "5.3.1",
+                    "5.3.10",
+                    "5.3.11",
+                    "5.3.12",
+                    "5.3.13",
+                    "5.3.14",
+                    "5.3.15",
+                    "5.3.16",
+                    "5.3.17",
+                    "5.3.2",
+                    "5.3.3",
+                    "5.3.4",
+                    "5.3.5",
+                    "5.3.6",
+                    "5.3.7",
+                    "5.3.8",
+                    "5.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-webflux",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.5.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0.RELEASE",
+                    "2.0.1.RELEASE",
+                    "2.0.2.RELEASE",
+                    "2.0.3.RELEASE",
+                    "2.0.4.RELEASE",
+                    "2.0.5.RELEASE",
+                    "2.0.6.RELEASE",
+                    "2.0.7.RELEASE",
+                    "2.0.8.RELEASE",
+                    "2.0.9.RELEASE",
+                    "2.1.0.RELEASE",
+                    "2.1.1.RELEASE",
+                    "2.1.10.RELEASE",
+                    "2.1.11.RELEASE",
+                    "2.1.12.RELEASE",
+                    "2.1.13.RELEASE",
+                    "2.1.14.RELEASE",
+                    "2.1.15.RELEASE",
+                    "2.1.16.RELEASE",
+                    "2.1.17.RELEASE",
+                    "2.1.18.RELEASE",
+                    "2.1.2.RELEASE",
+                    "2.1.3.RELEASE",
+                    "2.1.4.RELEASE",
+                    "2.1.5.RELEASE",
+                    "2.1.6.RELEASE",
+                    "2.1.7.RELEASE",
+                    "2.1.8.RELEASE",
+                    "2.1.9.RELEASE",
+                    "2.2.0.RELEASE",
+                    "2.2.1.RELEASE",
+                    "2.2.10.RELEASE",
+                    "2.2.11.RELEASE",
+                    "2.2.12.RELEASE",
+                    "2.2.13.RELEASE",
+                    "2.2.2.RELEASE",
+                    "2.2.3.RELEASE",
+                    "2.2.4.RELEASE",
+                    "2.2.5.RELEASE",
+                    "2.2.6.RELEASE",
+                    "2.2.7.RELEASE",
+                    "2.2.8.RELEASE",
+                    "2.2.9.RELEASE",
+                    "2.3.0.RELEASE",
+                    "2.3.1.RELEASE",
+                    "2.3.10.RELEASE",
+                    "2.3.11.RELEASE",
+                    "2.3.12.RELEASE",
+                    "2.3.2.RELEASE",
+                    "2.3.3.RELEASE",
+                    "2.3.4.RELEASE",
+                    "2.3.5.RELEASE",
+                    "2.3.6.RELEASE",
+                    "2.3.7.RELEASE",
+                    "2.3.8.RELEASE",
+                    "2.3.9.RELEASE",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.12",
+                    "2.4.13",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.11",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework.boot:spring-boot-starter-webflux",
+                    "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "2.6.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/03/GHSA-36p3-wjmg-h94x/GHSA-36p3-wjmg-h94x.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-22965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/commit/002546b3e4b8d791ea6acccb81eb3168f51abb15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-254054.pdf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.5.12"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-boot/releases/tag/v2.6.6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/spring-projects/spring-framework"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/releases/tag/v5.2.20.RELEASE"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/spring-projects/spring-framework/releases/tag/v5.3.18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2022-0005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tanzu.vmware.com/security/cve-2022-22965"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-java-spring-rce-Zx9GUc67"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/166713/Spring4Shell-Code-Execution.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/167011/Spring4Shell-Spring-Framework-Class-Property-Remote-Code-Execution.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-31T18:30:50Z",
+                "nvd_published_at": "2022-04-01T23:15:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:03:54Z",
+              "published": "2020-01-21T20:59:09Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8wx2-9q48-vm9r",
+              "aliases": [
+                "CVE-2020-5398"
+              ],
+              "summary": "RFD attack via Content-Disposition header sourced from request input by Spring MVC or Spring WebFlux Application",
+              "details": "In Spring Framework, versions 5.2.x prior to 5.2.3, versions 5.1.x prior to 5.1.13, and versions 5.0.x prior to 5.0.16, an application is vulnerable to a reflected file download (RFD) attack when it sets a \"Content-Disposition\" header in the response where the filename attribute is derived from user supplied input.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.2.0.RELEASE"
+                        },
+                        {
+                          "fixed": "5.2.3.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.2.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-8wx2-9q48-vm9r/GHSA-8wx2-9q48-vm9r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.1.0.RELEASE"
+                        },
+                        {
+                          "fixed": "5.1.13.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-8wx2-9q48-vm9r/GHSA-8wx2-9q48-vm9r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webmvc",
+                    "purl": "pkg:maven/org.springframework/spring-webmvc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.0.0.RELEASE"
+                        },
+                        {
+                          "fixed": "5.0.16.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-8wx2-9q48-vm9r/GHSA-8wx2-9q48-vm9r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.2.0.RELEASE"
+                        },
+                        {
+                          "fixed": "5.2.3.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.2.0.RELEASE",
+                    "5.2.1.RELEASE",
+                    "5.2.2.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-8wx2-9q48-vm9r/GHSA-8wx2-9q48-vm9r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.1.0.RELEASE"
+                        },
+                        {
+                          "fixed": "5.1.13.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.1.0.RELEASE",
+                    "5.1.1.RELEASE",
+                    "5.1.10.RELEASE",
+                    "5.1.11.RELEASE",
+                    "5.1.12.RELEASE",
+                    "5.1.2.RELEASE",
+                    "5.1.3.RELEASE",
+                    "5.1.4.RELEASE",
+                    "5.1.5.RELEASE",
+                    "5.1.6.RELEASE",
+                    "5.1.7.RELEASE",
+                    "5.1.8.RELEASE",
+                    "5.1.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-8wx2-9q48-vm9r/GHSA-8wx2-9q48-vm9r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.springframework:spring-webflux",
+                    "purl": "pkg:maven/org.springframework/spring-webflux"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.0.0.RELEASE"
+                        },
+                        {
+                          "fixed": "5.0.16.RELEASE"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0.RELEASE",
+                    "5.0.1.RELEASE",
+                    "5.0.10.RELEASE",
+                    "5.0.11.RELEASE",
+                    "5.0.12.RELEASE",
+                    "5.0.13.RELEASE",
+                    "5.0.14.RELEASE",
+                    "5.0.15.RELEASE",
+                    "5.0.2.RELEASE",
+                    "5.0.3.RELEASE",
+                    "5.0.4.RELEASE",
+                    "5.0.5.RELEASE",
+                    "5.0.6.RELEASE",
+                    "5.0.7.RELEASE",
+                    "5.0.8.RELEASE",
+                    "5.0.9.RELEASE"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/01/GHSA-8wx2-9q48-vm9r/GHSA-8wx2-9q48-vm9r.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-5398"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r028977b9b9d44a89823639aa3296fb0f0cfdd76b4450df89d3c4fbbf@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r0f2d0ae1bad2edb3d4a863d77f3097b5e88cfbdae7b809f4f42d6aad@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r0f3530f7cb510036e497532ffc4e0bd0b882940448cf4e233994b08b@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1accbd4f31ad2f40e1661d70a4510a584eb3efd1e32e8660ccf46676@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1bc5d673c01cfbb8e4a91914e9748ead3e5f56b61bca54d314c0419b@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1c679c43fa4f7846d748a937955c7921436d1b315445978254442163@%3Ccommits.ambari.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1eccdbd7986618a7319ee7a533bd9d9bf6e8678e59dd4cca9b5b2d7a@%3Cissues.ambari.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r27552d2fa10d96f2810c50d16ad1fd1899e37796c81a0c5e7585a02d@%3Cdev.rocketmq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2dfd5b331b46d3f90c4dd63a060e9f04300468293874bd7e41af7163@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3765353ff434fd00d8fa5a44734b3625a06eeb2a3fb468da7dfae134@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4639e821ef9ca6ca10887988f410a60261400a7766560e7a97a22efc@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4b1886e82cc98ef38f582fef7d4ea722e3fcf46637cd4674926ba682@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5c95eff679dfc642e9e4ab5ac6d202248a59cb1e9457cfbe8b729ac5@%3Cissues.ambari.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r645408661a8df9158f49e337072df39838fa76da629a7e25a20928a6@%3Cdev.rocketmq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r6dac0e365d1b2df9a7ffca12b4195181ec14ff0abdf59e1fdb088ce5@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r712a6fce928e24e7b6ec30994a7e115a70f1f6e4cf2c2fbf0347ce46@%3Ccommits.servicecomb.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7361bfe84bde9d233f9800c3a96673e7bd81207549ced0236f07a29d@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r74f81f93a9b69140fe41e236afa7cbe8dfa75692e7ab31a468fddaa0@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7d5e518088e2e778928b02bcd3be3b948b59acefe2f0ebb57ec2ebb0@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8736185eb921022225a83e56d7285a217fd83f5524bd64a6ca3bf5cc@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r881fb5a95ab251106fed38f836257276feb026bfe01290e72ff91c2a@%3Ccommits.servicecomb.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8b496b1743d128e6861ee0ed3c3c48cc56c505b38f84fa5baf7ae33a@%3Cdev.ambari.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8cc37a60a5056351377ee5f1258f2a4fdd39822a257838ba6bcc1e88@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9f13cccb214495e14648d2c9b8f2c6072fd5219e74502dd35ede81e1@%3Cdev.ambari.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9fb1ee08cf337d16c3364feb0f35a072438c1a956afd7b77859aa090@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra996b56e1f5ab2fed235a8b91fa0cc3cf34c2e9fee290b7fa4380a0d@%3Ccommits.servicecomb.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rab0de39839b4c208dcd73f01e12899dc453361935a816a784548e048@%3Cissues.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb4d1fc078f086ec2e98b2693e8b358e58a6a4ef903ceed93a1ee2b18@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc05acaacad089613e9642f939b3a44f7199b5537493945c3e045287f@%3Cdev.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc9c7f96f08c8554225dba9050ea5e64bebc129d0d836303143fe3160@%3Cdev.rocketmq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdcaadaa9a68b31b7d093d76eacfaacf6c7a819f976b595c75ad2d4dc@%3Cdev.geode.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rded5291e25a4c4085a6d43cf262e479140198bf4eabb84986e0a1ef3@%3Cdev.rocketmq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reaa8a6674baf2724b1b88a621b0d72d9f7a6f5577c88759842c16eb6@%3Ccommits.karaf.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf8dc72b974ee74f17bce661ea7d124e733a1f4c4f236354ac0cf48e8@%3Ccommits.camel.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pivotal.io/security/cve-2020-5398"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20210917-0006/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-494",
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-01-21T20:49:17Z",
+                "nvd_published_at": "2020-01-17T00:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-36p3-wjmg-h94x"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8wx2-9q48-vm9r"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

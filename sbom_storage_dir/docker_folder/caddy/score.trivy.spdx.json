@@ -1,0 +1,200 @@
+{
+    "run_id": "04ad4e65-98bb-49d2-a33a-4f917576450b",
+    "timestamp": "2023-12-08T04:09:35Z",
+    "creation_info": {
+        "name": "sbomqs",
+        "version": "v0.0.27",
+        "scoring_engine_version": "5"
+    },
+    "files": [
+        {
+            "file_name": "/docker_folder/caddy/trivy.spdx.json",
+            "spec": "spdx",
+            "spec_version": "SPDX-2.3",
+            "file_format": "json",
+            "avg_score": 7.658492822966507,
+            "num_components": 152,
+            "creation_time": "2023-12-07T07:34:00Z",
+            "gen_tool_name": "trivy",
+            "gen_tool_version": "0.47.0",
+            "scores": [
+                {
+                    "category": "Structural",
+                    "feature": "sbom_spec",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "provided sbom is in a supported sbom format of spdx,cyclonedx",
+                    "ignored": false
+                },
+                {
+                    "category": "Structural",
+                    "feature": "sbom_spec_version",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "provided sbom should be in supported spec version for spec:SPDX-2.3 and versions: SPDX-2.1,SPDX-2.2,SPDX-2.3",
+                    "ignored": false
+                },
+                {
+                    "category": "Structural",
+                    "feature": "sbom_spec_file_format",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "provided sbom should be in supported file format for spec: json and version: json,yaml,rdf,tag-value",
+                    "ignored": false
+                },
+                {
+                    "category": "Structural",
+                    "feature": "sbom_parsable",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "provided sbom is parsable",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "comp_with_supplier",
+                    "score": 0,
+                    "max_score": 10,
+                    "description": "0/152 have supplier names",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "comp_with_name",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "152/152 have names",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "comp_with_version",
+                    "score": 9.868421052631579,
+                    "max_score": 10,
+                    "description": "150/152 have versions",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "comp_with_uniq_ids",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "152/152 have unique ID's",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "sbom_dependencies",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "doc has 152 relationships ",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "sbom_authors",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "doc has 2 authors",
+                    "ignored": false
+                },
+                {
+                    "category": "NTIA-minimum-elements",
+                    "feature": "sbom_creation_timestamp",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "doc has creation timestamp 2023-12-07T07:34:00Z",
+                    "ignored": false
+                },
+                {
+                    "category": "Semantic",
+                    "feature": "sbom_required_fields",
+                    "score": 5,
+                    "max_score": 10,
+                    "description": "Doc Fields:true Pkg Fields:false",
+                    "ignored": false
+                },
+                {
+                    "category": "Semantic",
+                    "feature": "comp_with_licenses",
+                    "score": 1.3157894736842104,
+                    "max_score": 10,
+                    "description": "20/152 have licenses",
+                    "ignored": false
+                },
+                {
+                    "category": "Semantic",
+                    "feature": "comp_with_checksums",
+                    "score": 1.3157894736842104,
+                    "max_score": 10,
+                    "description": "20/152 have checksums",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "comp_valid_licenses",
+                    "score": 1.25,
+                    "max_score": 10,
+                    "description": "19/152 components with valid license ",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "comp_with_primary_purpose",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "152/152 components have primary purpose specified",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "comp_with_deprecated_licenses",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "0/152 components have deprecated licenses",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "comp_with_restrictive_licenses",
+                    "score": 9.93421052631579,
+                    "max_score": 10,
+                    "description": "1/152 components have restricted licenses",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "comp_with_any_vuln_lookup_id",
+                    "score": 9.802631578947368,
+                    "max_score": 10,
+                    "description": "149/152 components have any lookup id",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "comp_with_multi_vuln_lookup_id",
+                    "score": 0,
+                    "max_score": 10,
+                    "description": "0/152 components have multiple lookup id",
+                    "ignored": false
+                },
+                {
+                    "category": "Quality",
+                    "feature": "sbom_with_creator_and_version",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "1/1 tools have creator and version",
+                    "ignored": false
+                },
+                {
+                    "category": "Sharing",
+                    "feature": "sbom_sharable",
+                    "score": 10,
+                    "max_score": 10,
+                    "description": "doc has a sharable license free 1 :: of 1",
+                    "ignored": false
+                }
+            ]
+        }
+    ]
+}

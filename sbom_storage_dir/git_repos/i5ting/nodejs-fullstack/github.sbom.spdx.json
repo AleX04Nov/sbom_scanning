@@ -1,0 +1,102 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:53:55Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.i5ting/nodejs-fullstack",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.i5ting-nodejs-fullstack"
+    ],
+    "documentNamespace": "https://github.com/i5ting/nodejs-fullstack/dependency_graph/sbom-da7601d42bb0f0dd",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.i5ting-nodejs-fullstack",
+            "name": "com.github.i5ting/nodejs-fullstack",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/i5ting/nodejs-fullstack",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/i5ting/nodejs-fullstack"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp",
+            "name": "npm:gulp",
+            "versionInfo": "^ 3.8.10",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp-gh-pages",
+            "name": "npm:gulp-gh-pages",
+            "versionInfo": "^ 0.4.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp-open",
+            "name": "npm:gulp-open",
+            "versionInfo": "^ 0.3.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-gulp-rename",
+            "name": "npm:gulp-rename",
+            "versionInfo": "^ 1.2.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-shelljs",
+            "name": "npm:shelljs",
+            "versionInfo": "^ 0.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.i5ting-nodejs-fullstack",
+            "relatedSpdxElement": "SPDXRef-npm-gulp"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.i5ting-nodejs-fullstack",
+            "relatedSpdxElement": "SPDXRef-npm-gulp-gh-pages"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.i5ting-nodejs-fullstack",
+            "relatedSpdxElement": "SPDXRef-npm-gulp-open"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.i5ting-nodejs-fullstack",
+            "relatedSpdxElement": "SPDXRef-npm-gulp-rename"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.i5ting-nodejs-fullstack",
+            "relatedSpdxElement": "SPDXRef-npm-shelljs"
+        }
+    ]
+}

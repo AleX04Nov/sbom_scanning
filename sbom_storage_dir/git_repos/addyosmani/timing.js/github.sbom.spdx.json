@@ -1,0 +1,62 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:54:11Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.addyosmani/timing.js",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.addyosmani-timing.js"
+    ],
+    "documentNamespace": "https://github.com/addyosmani/timing.js/dependency_graph/sbom-99ec8a1aa9d02c53",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.addyosmani-timing.js",
+            "name": "com.github.addyosmani/timing.js",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/addyosmani/timing.js",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/addyosmani/timing.js"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-jshint",
+            "name": "npm:jshint",
+            "versionInfo": "^ 2.5.6",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js",
+            "name": "npm:uglify-js",
+            "versionInfo": "^ 2.4.16",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.addyosmani-timing.js",
+            "relatedSpdxElement": "SPDXRef-npm-jshint"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.addyosmani-timing.js",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js"
+        }
+    ]
+}

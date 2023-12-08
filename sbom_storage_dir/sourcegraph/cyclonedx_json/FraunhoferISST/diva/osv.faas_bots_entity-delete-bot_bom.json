@@ -1,0 +1,356 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/faas_bots_entity-delete-bot_bom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "axios",
+            "version": "0.26.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-16T19:59:08Z",
+              "published": "2023-11-08T21:30:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wf5p-g6vw-rhxx",
+              "aliases": [
+                "CVE-2023-45857"
+              ],
+              "summary": "Axios Cross-Site Request Forgery Vulnerability",
+              "details": "An issue discovered in Axios 0.8.1 through 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "axios",
+                    "purl": "pkg:npm/axios"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.8.1"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45857"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/pull/6028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/axios/axios"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/releases/tag/v1.6.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-AXIOS-6032459"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-352"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-10T00:35:37Z",
+                "nvd_published_at": "2023-11-08T21:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wf5p-g6vw-rhxx"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mongodb",
+            "version": "4.3.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-10T05:32:32Z",
+              "published": "2023-08-29T18:31:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vxvm-qww3-2fh7",
+              "aliases": [
+                "CVE-2021-32050"
+              ],
+              "summary": "MongoDB Driver may publish events containing authentication-related data",
+              "details": "Some MongoDB Drivers may erroneously publish events containing authentication-related data to a command listener configured by an application. The published events may contain security-sensitive data when specific authentication-related commands are executed.\n\nWithout due care, an application may inadvertently expose this sensitive information, e.g., by writing it to a log file. This issue only arises if an application enables the command listener feature (this is not enabled by default).\n\nThis issue affects the MongoDB C Driver 1.0.0 prior to 1.17.7, MongoDB PHP Driver 1.0.0 prior to 1.9.2, MongoDB Swift Driver 1.0.0 prior to 1.1.1, MongoDB Node.js Driver 3.6 prior to 3.6.10, MongoDB Node.js Driver 4.0 prior to 4.17.0 and MongoDB Node.js Driver 5.0 prior to 5.8.0. This issue also affects users of the MongoDB C++ Driver dependent on the C driver 1.0.0 prior to 1.17.7 (C++ driver prior to 3.7.0).\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Packagist",
+                    "name": "mongodb/mongodb",
+                    "purl": "pkg:composer/mongodb/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.0-alpha1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.2.0",
+                    "1.2.0-alpha1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta1",
+                    "1.7.0-beta2",
+                    "1.7.0-rc1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.0-RC1",
+                    "1.9.0",
+                    "1.9.0-alpha1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.6.0"
+                        },
+                        {
+                          "fixed": "3.6.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "SwiftURL",
+                    "name": "https://github.com/mongodb/mongo-swift-driver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.1.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32050"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-php-driver/pull/1235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-swift-driver/pull/643"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-php-driver/commit/4495de8313c0d313e4dde906fc7aedf998ee3748"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/node-mongodb-native/commit/8c8b4c3b8c55f10fb96f63d3bbfa5d408b4ed7d0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/CDRIVER-3797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/CXX-2028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/NODE-3356"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/PHPC-1869"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/SWIFT-1229"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20231006-0001/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-08-30T21:20:44Z",
+                "nvd_published_at": "2023-08-29T16:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vxvm-qww3-2fh7"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

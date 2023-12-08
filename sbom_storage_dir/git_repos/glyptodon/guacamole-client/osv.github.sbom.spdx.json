@@ -1,0 +1,4830 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "engine.io",
+            "version": "6.4.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:12:29Z",
+              "published": "2023-05-03T21:56:51Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q9mw-68c2-j6m5",
+              "aliases": [
+                "CVE-2023-31125"
+              ],
+              "summary": "engine.io Uncaught Exception vulnerability",
+              "details": "### Impact\n\nA specially crafted HTTP request can trigger an uncaught exception on the Engine.IO server, thus killing the Node.js process.\n\n```\nTypeError: Cannot read properties of undefined (reading 'handlesUpgrades')\n    at Server.onWebSocket (build/server.js:515:67)\n```\n\nThis impacts all the users of the [`engine.io`](https://www.npmjs.com/package/engine.io) package, including those who uses depending packages like [`socket.io`](https://www.npmjs.com/package/socket.io).\n\n### Patches\n\nA fix has been released today (2023/05/02): [6.4.2](https://github.com/socketio/engine.io/releases/tag/6.4.2)\n\nThis bug was introduced in version 5.1.0 and included in version 4.1.0 of the `socket.io` parent package. Older versions are not impacted.\n\nFor `socket.io` users:\n\n| Version range               | `engine.io` version | Needs minor update?                                                                                    |\n|-----------------------------|---------------------|--------------------------------------------------------------------------------------------------------|\n| `socket.io@4.6.x`           | `~6.4.0`            | `npm audit fix` should be sufficient                                                                   |\n| `socket.io@4.5.x`           | `~6.2.0`            | Please upgrade to `socket.io@4.6.x`                                                                    |\n| `socket.io@4.4.x`           | `~6.1.0`            | Please upgrade to `socket.io@4.6.x`                                                                    |\n| `socket.io@4.3.x`           | `~6.0.0`            | Please upgrade to `socket.io@4.6.x`                                                                    |\n| `socket.io@4.2.x`           | `~5.2.0`            | Please upgrade to `socket.io@4.6.x`                                                                    |\n| `socket.io@4.1.x`           | `~5.1.1`            | Please upgrade to `socket.io@4.6.x`                                                                    |\n| `socket.io@4.0.x`           | `~5.0.0`            | Not impacted |\n| `socket.io@3.1.x`           | `~4.1.0`            | Not impacted |\n| `socket.io@3.0.x`           | `~4.0.0`            | Not impacted |\n| `socket.io@2.5.0`           | `~3.6.0`            | Not impacted |\n| `socket.io@2.4.x` and below | `~3.5.0`            | Not impacted |\n\n### Workarounds\n\nThere is no known workaround except upgrading to a safe version.\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n* Open an issue in [`engine.io`](https://github.com/socketio/engine.io)\n\nThanks to Thomas Rinsma from Codean for the responsible disclosure.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "engine.io",
+                    "purl": "pkg:npm/engine.io"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.1.0"
+                        },
+                        {
+                          "fixed": "6.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-q9mw-68c2-j6m5/GHSA-q9mw-68c2-j6m5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/engine.io/security/advisories/GHSA-q9mw-68c2-j6m5"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-31125"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/engine.io/commit/fc480b4f305e16fe5972cf337d055e598372dc44"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/socketio/engine.io"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/engine.io/releases/tag/6.4.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230622-0002/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-05-03T21:56:51Z",
+                "nvd_published_at": "2023-05-08T21:15:11Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-q9mw-68c2-j6m5"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "socket.io-parser",
+            "version": "4.2.2",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:12:36Z",
+              "published": "2023-05-23T19:55:13Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cqmj-92xf-r6r9",
+              "aliases": [
+                "CVE-2023-32695"
+              ],
+              "summary": "Insufficient validation when decoding a Socket.IO packet",
+              "details": "### Impact\n\nA specially crafted Socket.IO packet can trigger an uncaught exception on the Socket.IO server, thus killing the Node.js process.\n\n```\nTypeError: Cannot convert object to primitive value\n       at Socket.emit (node:events:507:25)\n       at .../node_modules/socket.io/lib/socket.js:531:14\n```\n\n### Patches\n\nA fix has been released today (2023/05/22):\n\n- https://github.com/socketio/socket.io-parser/commit/3b78117bf6ba7e99d7a5cfc1ba54d0477554a7f3, included in `socket.io-parser@4.2.3`\n- https://github.com/socketio/socket.io-parser/commit/2dc3c92622dad113b8676be06f23b1ed46b02ced, included in `socket.io-parser@3.4.3`\n\n| `socket.io` version | `socket.io-parser` version                                                                              | Needs minor update?                  |\n|---------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------|\n| `4.5.2...latest`    | `~4.2.0` ([ref](https://github.com/socketio/socket.io/commit/9890b036cf942f6b6ad2afeb6a8361c32cd5d528)) | `npm audit fix` should be sufficient |\n| `4.1.3...4.5.1`     | `~4.1.1` ([ref](https://github.com/socketio/socket.io/commit/7c44893d7878cd5bba1eff43150c3e664f88fb57)) | Please upgrade to `socket.io@4.6.x`  |\n| `3.0.5...4.1.2`     | `~4.0.3` ([ref](https://github.com/socketio/socket.io/commit/752dfe3b1e5fecda53dae899b4a39e6fed5a1a17)) | Please upgrade to `socket.io@4.6.x`  |\n| `3.0.0...3.0.4`     | `~4.0.1` ([ref](https://github.com/socketio/socket.io/commit/1af3267e3f5f7884214cf2ca4d5282d620092fb0)) | Please upgrade to `socket.io@4.6.x`  |\n| `2.3.0...2.5.0`     | `~3.4.0` ([ref](https://github.com/socketio/socket.io/commit/cf39362014f5ff13a17168b74772c43920d6e4fd)) | `npm audit fix` should be sufficient |\n\n\n### Workarounds\n\nThere is no known workaround except upgrading to a safe version.\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n- Open a discussion [here](https://github.com/socketio/socket.io/discussions)\n\nThanks to [@rafax00](https://github.com/rafax00) for the responsible disclosure.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.4"
+                        },
+                        {
+                          "fixed": "4.2.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-cqmj-92xf-r6r9/GHSA-cqmj-92xf-r6r9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.4.0"
+                        },
+                        {
+                          "fixed": "3.4.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-cqmj-92xf-r6r9/GHSA-cqmj-92xf-r6r9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/security/advisories/GHSA-cqmj-92xf-r6r9"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32695"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/1c220ddbf45ea4b44bc8dbf6f9ae245f672ba1b9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/2dc3c92622dad113b8676be06f23b1ed46b02ced"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/3b78117bf6ba7e99d7a5cfc1ba54d0477554a7f3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/socketio/socket.io-parser"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/releases/tag/4.2.3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-754"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-05-23T19:55:13Z",
+                "nvd_published_at": "2023-05-27T16:15:09Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cqmj-92xf-r6r9"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "@babel/traverse",
+            "version": "7.20.13",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:13:36Z",
+              "published": "2023-10-16T13:55:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-67hx-6x53-jw92",
+              "aliases": [
+                "CVE-2023-45133"
+              ],
+              "summary": "Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code",
+              "details": "### Impact\n\nUsing Babel to compile code that was specifically crafted by an attacker can lead to arbitrary code execution during compilation, when using plugins that rely on the `path.evaluate()`or `path.evaluateTruthy()` internal Babel methods.\n\nKnown affected plugins are:\n- `@babel/plugin-transform-runtime`\n- `@babel/preset-env` when using its [`useBuiltIns`](https://babeljs.io/docs/babel-preset-env#usebuiltins) option\n- Any \"polyfill provider\" plugin that depends on `@babel/helper-define-polyfill-provider`, such as `babel-plugin-polyfill-corejs3`, `babel-plugin-polyfill-corejs2`, `babel-plugin-polyfill-es-shims`, `babel-plugin-polyfill-regenerator`\n\nNo other plugins under the `@babel/` namespace are impacted, but third-party plugins might be.\n\n**Users that only compile trusted code are not impacted.**\n\n### Patches\n\nThe vulnerability has been fixed in `@babel/traverse@7.23.2`.\n\nBabel 6 does not receive security fixes anymore (see [Babel's security policy](https://github.com/babel/babel/security/policy)), hence there is no patch planned for `babel-traverse@6`.\n\n### Workarounds\n\n- Upgrade `@babel/traverse` to v7.23.2 or higher. You can do this by deleting it from your package manager's lockfile and re-installing the dependencies. `@babel/core` \u003e=7.23.2 will automatically pull in a non-vulnerable version.\n- If you cannot upgrade `@babel/traverse` and are using one of the affected packages mentioned above, upgrade them to their latest version to avoid triggering the vulnerable code path in affected `@babel/traverse` versions:\n  - `@babel/plugin-transform-runtime` v7.23.2\n  - `@babel/preset-env` v7.23.2\n  - `@babel/helper-define-polyfill-provider` v0.4.3\n  - `babel-plugin-polyfill-corejs2` v0.4.6\n  - `babel-plugin-polyfill-corejs3` v0.8.5\n  - `babel-plugin-polyfill-es-shims` v0.10.0\n  - `babel-plugin-polyfill-regenerator` v0.5.3",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/traverse",
+                    "purl": "pkg:npm/%40babel/traverse"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.23.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-67hx-6x53-jw92/GHSA-67hx-6x53-jw92.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/traverse",
+                    "purl": "pkg:npm/%40babel/traverse"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "8.0.0-alpha.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-67hx-6x53-jw92/GHSA-67hx-6x53-jw92.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/security/advisories/GHSA-67hx-6x53-jw92"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45133"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/pull/16033"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/commit/b13376b346946e3f62fc0848c1d2a23223314c82"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://babeljs.io/blog/2023/10/16/cve-2023-45133"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/babel/babel"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/releases/tag/v7.23.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/releases/tag/v8.0.0-alpha.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5528"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-184",
+                  "CWE-697"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-16T13:55:36Z",
+                "nvd_published_at": "2023-10-12T17:15:09Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67hx-6x53-jw92"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "angular",
+            "version": "1.8.3",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-30T06:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2qqx-w9hr-q5gx",
+              "aliases": [
+                "CVE-2023-26117"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service via the $resource service",
+              "details": "All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the $resource service due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-2qqx-w9hr-q5gx/GHSA-2qqx-w9hr-q5gx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26117"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQWJLE5WE33WNMA54XSJIDXBRK2KL3XJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UDKFLKJ6VZKL52AFVW2OVZRMJWHMW55K/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-5406323"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-5406325"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-5406324"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-3373045"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-vulnerability-resource-trailing-slashes-redos"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-03T13:07:46Z",
+                "nvd_published_at": "2023-03-30T05:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-30T06:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2vrf-hf26-jrp5",
+              "aliases": [
+                "CVE-2023-26116"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service via the angular.copy() utility",
+              "details": "All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the angular.copy() utility function due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-2vrf-hf26-jrp5/GHSA-2vrf-hf26-jrp5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26116"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQWJLE5WE33WNMA54XSJIDXBRK2KL3XJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UDKFLKJ6VZKL52AFVW2OVZRMJWHMW55K/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-5406320"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-5406322"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-5406321"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-3373044"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-vulnerability-angular-copy-redos"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-03T13:07:51Z",
+                "nvd_published_at": "2023-03-30T05:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:48Z",
+              "published": "2022-05-03T00:00:44Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m2h2-264f-f486",
+              "aliases": [
+                "CVE-2022-25844",
+                "SNYK-JAVA-ORGWEBJARSBOWER-2772736",
+                "SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-2772738",
+                "SNYK-JAVA-ORGWEBJARSNPM-2772737",
+                "SNYK-JS-ANGULAR-2772735"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service (ReDoS)",
+              "details": "AngularJS lets users write client-side web applications. The package angular after 1.7.0 is vulnerable to Regular Expression Denial of Service (ReDoS) by providing a custom locale rule that makes it possible to assign the parameter in posPre: ' '.repeat() of NUMBER_FORMATS.PATTERNS[1].posPre with a very high value.\n\n**Note:**\n1. This package has been deprecated and is no longer maintained.\n2. The vulnerable versions are 1.7.0 and higher.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-m2h2-264f-f486/GHSA-m2h2-264f-f486.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25844"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2WUSPYOTOMAZPDEFPWPSCSPMNODRDKK3/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7LNAKCNTVBIHWAUT3FKWV5N67PQXSZOO/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220629-0009/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-2772736"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-2772738"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2772737"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANGULAR-2772735"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-material-blank-zvtdvb"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-05-04T20:12:02Z",
+                "nvd_published_at": "2022-05-01T16:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:50Z",
+              "published": "2022-07-16T00:00:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-prc3-vjfx-vhm9",
+              "aliases": [
+                "CVE-2022-25869"
+              ],
+              "summary": "Angular (deprecated package) Cross-site Scripting",
+              "details": "All versions of package angular are vulnerable to Cross-site Scripting (XSS) due to insecure page caching in the Internet Explorer browser, which allows interpolation of `\u003ctextarea\u003e` elements.\n\nNPM package [angular](https://www.npmjs.com/package/angular) is deprecated. Those who want to receive security updates should use the actively maintained package [@angular/core](https://www.npmjs.com/package/@angular/core).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-prc3-vjfx-vhm9/GHSA-prc3-vjfx-vhm9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25869"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://glitch.com/edit/%23%21/angular-repro-textarea-xss"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-2949783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-2949784"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2949782"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANGULAR-2949781"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://www.npmjs.com/package/angular"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-20T00:41:18Z",
+                "nvd_published_at": "2022-07-15T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-30T06:30:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qwqh-hm9m-p5hr",
+              "aliases": [
+                "CVE-2023-26118"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service via the \u003cinput type=\"url\"\u003e element",
+              "details": "All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the \u003cinput type=\"url\"\u003e element due to the usage of an insecure regular expression in the input[url] functionality. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking. ",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-qwqh-hm9m-p5hr/GHSA-qwqh-hm9m-p5hr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26118"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQWJLE5WE33WNMA54XSJIDXBRK2KL3XJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UDKFLKJ6VZKL52AFVW2OVZRMJWHMW55K/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-5406326"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-5406328"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-5406327"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-3373046"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-vulnerability-inpur-url-validation-redos"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-03T13:07:41Z",
+                "nvd_published_at": "2023-03-30T05:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2qqx-w9hr-q5gx"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-2vrf-hf26-jrp5"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-m2h2-264f-f486"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-prc3-vjfx-vhm9"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-qwqh-hm9m-p5hr"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "browserify-sign",
+            "version": "4.2.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:13:41Z",
+              "published": "2023-10-26T20:53:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x9w5-v3q2-3rhw",
+              "aliases": [
+                "CVE-2023-46234"
+              ],
+              "summary": "browserify-sign upper bound check issue in `dsaVerify` leads to a signature forgery attack",
+              "details": "### Summary\nAn upper bound check issue in `dsaVerify` function allows an attacker to construct signatures that can be successfully verified by any public key, thus leading to a signature forgery attack.\n\n### Details\nIn `dsaVerify` function, it checks whether the value of the signature is legal by calling function `checkValue`, namely, whether `r` and `s` are both in the interval `[1, q - 1]`. However, the second line of the `checkValue` function wrongly checks the upper bound of the passed parameters, since the value of `b.cmp(q)` can only be `0`, `1` and `-1`, and it can never be greater than `q`. \n\nIn this way, although the values of `s` cannot be `0`, an attacker can achieve the same effect as zero by setting its value to `q`, and then send `(r, s) = (1, q)` to pass the verification of any public key.\n\n### Impact\nAll places in this project that involve DSA verification of user-input signatures will be affected by this vulnerability.\n\n\n### Fix PR:\nSince the temporary private fork was deleted, here's a webarchive of the PR discussion and diff pages: [PR webarchive.zip](https://github.com/browserify/browserify-sign/files/13172957/PR.webarchive.zip)\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "browserify-sign",
+                    "purl": "pkg:npm/browserify-sign"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.6.0"
+                        },
+                        {
+                          "fixed": "4.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.2.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-x9w5-v3q2-3rhw/GHSA-x9w5-v3q2-3rhw.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(browserify-sign).Verify"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/browserify/browserify-sign/security/advisories/GHSA-x9w5-v3q2-3rhw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-46234"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/browserify/browserify-sign/commit/85994cd6348b50f2fd1b73c54e20881416f44a30"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/browserify/browserify-sign"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-347"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-26T20:53:21Z",
+                "nvd_published_at": "2023-10-26T15:15:09Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-x9w5-v3q2-3rhw"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "glob-parent",
+            "version": "3.1.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:00:30Z",
+              "published": "2021-06-07T21:56:34Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-ww39-953v-wcq6",
+              "aliases": [
+                "BIT-gulp-2020-28469",
+                "CVE-2020-28469",
+                "SNYK-JAVA-ORGWEBJARSBOWERGITHUBES128-1059093",
+                "SNYK-JAVA-ORGWEBJARSNPM-1059092",
+                "SNYK-JS-GLOBPARENT-1016905"
+              ],
+              "summary": "glob-parent vulnerable to Regular Expression Denial of Service in enclosure regex",
+              "details": "This affects the package glob-parent before 5.1.2. The enclosure regex used to check for strings ending in enclosure containing path separator.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "glob-parent",
+                    "purl": "pkg:npm/glob-parent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-ww39-953v-wcq6/GHSA-ww39-953v-wcq6.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(glob-parent).globParent"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28469"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/pull/36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/pull/36/commits/c6db86422a9731d4f3d332ce4a81c27ea6b0ee46"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/gulpjs/glob-parent"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/blob/6ce8d11f2f1ed8e80a9526b1dc8cf3aa71f43474/index.js%23L9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gulpjs/glob-parent/releases/tag/v5.1.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBES128-1059093"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1059092"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-GLOBPARENT-1016905"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-06-04T18:30:45Z",
+                "nvd_published_at": "2021-06-03T16:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-ww39-953v-wcq6"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "nth-check",
+            "version": "1.0.2",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:06:25Z",
+              "published": "2021-09-20T20:47:31Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rp65-9cf3-cjxr",
+              "aliases": [
+                "CVE-2021-3803"
+              ],
+              "summary": "Inefficient Regular Expression Complexity in nth-check",
+              "details": "There is a Regular Expression Denial of Service (ReDoS) vulnerability in nth-check that causes a denial of service when parsing crafted invalid CSS nth-checks.\n\nThe ReDoS vulnerabilities of the regex are mainly due to the sub-pattern `\\s*(?:([+-]?)\\s*(\\d+))?` with quantified overlapping adjacency and can be exploited with the following code.\n\n**Proof of Concept**\n```js\n// PoC.js\nvar nthCheck = require(\"nth-check\")\nfor(var i = 1; i \u003c= 50000; i++) {\n    var time = Date.now();\n    var attack_str = '2n' + ' '.repeat(i*10000)+\"!\";\n    try {\n        nthCheck.parse(attack_str) \n    }\n    catch(err) {\n        var time_cost = Date.now() - time;\n        console.log(\"attack_str.length: \" + attack_str.length + \": \" + time_cost+\" ms\")\n    }\n}\n```\n\n**The Output**\n```\nattack_str.length: 10003: 174 ms\nattack_str.length: 20003: 1427 ms\nattack_str.length: 30003: 2602 ms\nattack_str.length: 40003: 4378 ms\nattack_str.length: 50003: 7473 ms\n```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "nth-check",
+                    "purl": "pkg:npm/nth-check"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-rp65-9cf3-cjxr/GHSA-rp65-9cf3-cjxr.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(nth-check).parse"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3803"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/fb55/nth-check/commit/9894c1d2010870c351f66c6f6efcf656e26bb726"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/fb55/nth-check"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/8cf8cc06-d2cf-4b4e-b42c-99fafb0b04d0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/05/msg00023.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-09-20T20:15:09Z",
+                "nvd_published_at": "2021-09-17T07:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-rp65-9cf3-cjxr"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "postcss",
+            "version": "7.0.39",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:13:34Z",
+              "published": "2023-09-30T00:31:10Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7fh5-64p2-3v2j",
+              "aliases": [
+                "CVE-2023-44270"
+              ],
+              "summary": "PostCSS line return parsing error",
+              "details": "An issue was discovered in PostCSS before 8.4.31. It affects linters using PostCSS to parse external Cascading Style Sheets (CSS). There may be `\\r` discrepancies, as demonstrated by `@font-face{ font:(\\r/*);}` in a rule.\n\nThis vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being originally included in a comment.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "postcss",
+                    "purl": "pkg:npm/postcss"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "8.4.31"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-7fh5-64p2-3v2j/GHSA-7fh5-64p2-3v2j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44270"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/issues/2820"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/commit/58cc860b4c1707510c9cd1bc1fa30b423a9ad6c5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/postcss/postcss"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/blob/main/lib/tokenize.js#L25"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/releases/tag/8.4.31"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-144",
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-03T15:04:58Z",
+                "nvd_published_at": "2023-09-29T22:15:11Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7fh5-64p2-3v2j"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "postcss",
+            "version": "8.4.21",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:13:34Z",
+              "published": "2023-09-30T00:31:10Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7fh5-64p2-3v2j",
+              "aliases": [
+                "CVE-2023-44270"
+              ],
+              "summary": "PostCSS line return parsing error",
+              "details": "An issue was discovered in PostCSS before 8.4.31. It affects linters using PostCSS to parse external Cascading Style Sheets (CSS). There may be `\\r` discrepancies, as demonstrated by `@font-face{ font:(\\r/*);}` in a rule.\n\nThis vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being originally included in a comment.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "postcss",
+                    "purl": "pkg:npm/postcss"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "8.4.31"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/09/GHSA-7fh5-64p2-3v2j/GHSA-7fh5-64p2-3v2j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44270"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/issues/2820"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/commit/58cc860b4c1707510c9cd1bc1fa30b423a9ad6c5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/postcss/postcss"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/blob/main/lib/tokenize.js#L25"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/postcss/postcss/releases/tag/8.4.31"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-144",
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-03T15:04:58Z",
+                "nvd_published_at": "2023-09-29T22:15:11Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7fh5-64p2-3v2j"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "semver",
+            "version": "7.3.8",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:50Z",
+              "published": "2023-06-21T06:30:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c2qf-rxjj-qqgw",
+              "aliases": [
+                "CVE-2022-25883"
+              ],
+              "summary": "semver vulnerable to Regular Expression Denial of Service",
+              "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.5.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/585"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/593"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-semver"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-22T16:52:56Z",
+                "nvd_published_at": "2023-06-21T05:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c2qf-rxjj-qqgw"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "semver",
+            "version": "5.7.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:50Z",
+              "published": "2023-06-21T06:30:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c2qf-rxjj-qqgw",
+              "aliases": [
+                "CVE-2022-25883"
+              ],
+              "summary": "semver vulnerable to Regular Expression Denial of Service",
+              "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.5.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/585"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/593"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-semver"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-22T16:52:56Z",
+                "nvd_published_at": "2023-06-21T05:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c2qf-rxjj-qqgw"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "semver",
+            "version": "6.3.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:50Z",
+              "published": "2023-06-21T06:30:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c2qf-rxjj-qqgw",
+              "aliases": [
+                "CVE-2022-25883"
+              ],
+              "summary": "semver vulnerable to Regular Expression Denial of Service",
+              "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.5.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/585"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/593"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-semver"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-22T16:52:56Z",
+                "nvd_published_at": "2023-06-21T05:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c2qf-rxjj-qqgw"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ch.qos.logback:logback-classic",
+            "version": "1.3.8",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-05T21:46:15Z",
+              "published": "2023-11-29T12:30:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vmq6-5m68-f53m",
+              "aliases": [
+                "CVE-2023-6378"
+              ],
+              "summary": "logback serialization vulnerability",
+              "details": "A serialization vulnerability in logback receiver component part of logback allows an attacker to mount a Denial-Of-Service attack by sending poisoned data.\n\nThis is only exploitable if logback receiver component is deployed. See https://logback.qos.ch/manual/receivers.html",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6378"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/qos-ch/logback"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/manual/receivers.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.2.13"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.3.12"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-29T21:33:01Z",
+                "nvd_published_at": "2023-11-29T12:15:07Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vmq6-5m68-f53m"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.bouncycastle:bc-fips",
+            "version": "1.0.2.3",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:50Z",
+              "published": "2022-11-21T12:30:17Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-68m8-v89j-7j2p",
+              "aliases": [
+                "CVE-2022-45146"
+              ],
+              "summary": "Garbage collection issue in BC-FJA in Java 13 and later",
+              "details": "An issue was discovered in the FIPS Java API of Bouncy Castle BC-FJA before 1.0.2.4. Changes to the JVM garbage collector in Java 13 and later trigger an issue in the BC-FJA FIPS modules where it is possible for temporary keys used by the module to be zeroed out while still in use by the module, resulting in errors or potential information loss. \n\nNOTE: FIPS compliant users are unaffected because the FIPS certification is only for Java 7, 8, and 11.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.bouncycastle:bc-fips",
+                    "purl": "pkg:maven/org.bouncycastle/bc-fips"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.0.2.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.2.1",
+                    "1.0.2.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-68m8-v89j-7j2p/GHSA-68m8-v89j-7j2p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-45146"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bcgit/bc-java/wiki/CVE-2022-45146"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.bouncycastle.org/latest_releases.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-416"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-11-22T00:01:39Z",
+                "nvd_published_at": "2022-11-21T10:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-68m8-v89j-7j2p"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.apache.tomcat:tomcat-catalina",
+            "version": "7.0.37",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:00:42Z",
+              "published": "2020-05-21T18:52:29Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-344f-f5vg-2jfj",
+              "aliases": [
+                "BIT-tomcat-2020-9484",
+                "CVE-2020-9484"
+              ],
+              "summary": "Potential remote code execution in Apache Tomcat",
+              "details": "When using Apache Tomcat versions 10.0.0-M1 to 10.0.0-M4, 9.0.0.M1 to 9.0.34, 8.5.0 to 8.5.54 and 7.0.0 to 7.0.103 if a) an attacker is able to control the contents and name of a file on the server; and b) the server is configured to use the PersistenceManager with a FileStore; and c) the PersistenceManager is configured with sessionAttributeValueClassNameFilter=\"null\" (the default unless a SecurityManager is used) or a sufficiently lax filter to allow the attacker provided object to be deserialized; and d) the attacker knows the relative file path from the storage location used by FileStore to the file the attacker has control over; then, using a specifically crafted request, the attacker will be able to trigger remote code execution via deserialization of the file under their control. Note that all of conditions a) to d) must be true for the attack to succeed.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "10.0.0-M1"
+                        },
+                        {
+                          "fixed": "10.0.0-M5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "10.0.0-M1",
+                    "10.0.0-M3",
+                    "10.0.0-M4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 10.0.0-M4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/05/GHSA-344f-f5vg-2jfj/GHSA-344f-f5vg-2jfj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0"
+                        },
+                        {
+                          "fixed": "9.0.35"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.0.1",
+                    "9.0.10",
+                    "9.0.11",
+                    "9.0.12",
+                    "9.0.13",
+                    "9.0.14",
+                    "9.0.16",
+                    "9.0.17",
+                    "9.0.19",
+                    "9.0.2",
+                    "9.0.20",
+                    "9.0.21",
+                    "9.0.22",
+                    "9.0.24",
+                    "9.0.26",
+                    "9.0.27",
+                    "9.0.29",
+                    "9.0.30",
+                    "9.0.31",
+                    "9.0.33",
+                    "9.0.34",
+                    "9.0.4",
+                    "9.0.5",
+                    "9.0.6",
+                    "9.0.7",
+                    "9.0.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/05/GHSA-344f-f5vg-2jfj/GHSA-344f-f5vg-2jfj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0"
+                        },
+                        {
+                          "fixed": "8.5.55"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.1",
+                    "8.0.11",
+                    "8.0.12",
+                    "8.0.14",
+                    "8.0.15",
+                    "8.0.17",
+                    "8.0.18",
+                    "8.0.20",
+                    "8.0.21",
+                    "8.0.22",
+                    "8.0.23",
+                    "8.0.24",
+                    "8.0.26",
+                    "8.0.27",
+                    "8.0.28",
+                    "8.0.29",
+                    "8.0.3",
+                    "8.0.30",
+                    "8.0.32",
+                    "8.0.33",
+                    "8.0.35",
+                    "8.0.36",
+                    "8.0.37",
+                    "8.0.38",
+                    "8.0.39",
+                    "8.0.41",
+                    "8.0.42",
+                    "8.0.43",
+                    "8.0.44",
+                    "8.0.45",
+                    "8.0.46",
+                    "8.0.47",
+                    "8.0.48",
+                    "8.0.49",
+                    "8.0.5",
+                    "8.0.50",
+                    "8.0.51",
+                    "8.0.52",
+                    "8.0.53",
+                    "8.0.8",
+                    "8.0.9",
+                    "8.5.0",
+                    "8.5.11",
+                    "8.5.12",
+                    "8.5.13",
+                    "8.5.14",
+                    "8.5.15",
+                    "8.5.16",
+                    "8.5.19",
+                    "8.5.2",
+                    "8.5.20",
+                    "8.5.21",
+                    "8.5.23",
+                    "8.5.24",
+                    "8.5.27",
+                    "8.5.28",
+                    "8.5.29",
+                    "8.5.3",
+                    "8.5.30",
+                    "8.5.31",
+                    "8.5.32",
+                    "8.5.33",
+                    "8.5.34",
+                    "8.5.35",
+                    "8.5.37",
+                    "8.5.38",
+                    "8.5.39",
+                    "8.5.4",
+                    "8.5.40",
+                    "8.5.41",
+                    "8.5.42",
+                    "8.5.43",
+                    "8.5.45",
+                    "8.5.46",
+                    "8.5.47",
+                    "8.5.49",
+                    "8.5.5",
+                    "8.5.50",
+                    "8.5.51",
+                    "8.5.53",
+                    "8.5.54",
+                    "8.5.6",
+                    "8.5.8",
+                    "8.5.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/05/GHSA-344f-f5vg-2jfj/GHSA-344f-f5vg-2jfj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.104"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.100",
+                    "7.0.103",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.72",
+                    "7.0.73",
+                    "7.0.75",
+                    "7.0.76",
+                    "7.0.77",
+                    "7.0.78",
+                    "7.0.79",
+                    "7.0.8",
+                    "7.0.81",
+                    "7.0.82",
+                    "7.0.84",
+                    "7.0.85",
+                    "7.0.86",
+                    "7.0.88",
+                    "7.0.90",
+                    "7.0.91",
+                    "7.0.92",
+                    "7.0.93",
+                    "7.0.94",
+                    "7.0.96",
+                    "7.0.99"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/05/GHSA-344f-f5vg-2jfj/GHSA-344f-f5vg-2jfj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-9484"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/tomcat/commit/3aa8f28db7efb311cdd1b6fe15a9cd3b167a2222.patch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/tomcat/commit/bb33048e3f9b4f2b70e4da2e6c4e34ca89023b1b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.suse.com/show_bug.cgi?id=1171928"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://kc.mcafee.com/corporate/index?page=content\u0026id=SB10332"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r11ce01e8a4c7269b88f88212f21830edf73558997ac7744f37769b77@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r123b3ebe389f46f9d337923f393cdae4d3e9b78d982d706712f0898c@%3Ccommits.tomee.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r26950738f4b4ca2d256597cf391d52d3450fa665c297ea5ca38f5469@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r77eae567ed829da9012cadb29af17f2df8fa23bf66faf88229857bb1%40%3Cannounce.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7bc247fffcb1d58415215c861d2354bd653c86266230d78a93c71ae2@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8a2ac0e476dbfc1e6440b09dcc782d444ad635d6da26f0284725a5dc@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8dd19c514face6dd85fd4eab0271854883f40c7307926c1f7cd5400c@%3Ccommits.tomee.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/raa4123e472175bb052fbba165d37187cea923f755e8f3f30d124cb3f@%3Ccommits.tomee.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb1c0fb105ce2b93b7ec6fc1b77dd208022621a91c12d1f580813cfed@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb51ccd58b2152fc75125b2406fc93e04ca9d34e737263faa6ff0f41f@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc1778b38e74b5b6142414d57623bd55b023a72361f422836782fca3c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc8473b08abdf3c16494ed817bec1717a0ee0c8080315bc27db5f21c3@%3Ccommits.tomee.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf59c72572b9fee674a5d5cc6afeca4ffc3918a02c354a81cc50b7119@%3Ccommits.tomee.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf6d5d57b114678d8898005faef31e9fd6d7c981fcc4ccfc3bc272fc9@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf70f53af27e04869bdac18b1fc14a3ee529e59eb12292c8791a77926@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfe62fbf9d4c314f166fe8c668e50e5d9dd882a99447f26f0367474bf@%3Cannounce.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfe62fbf9d4c314f166fe8c668e50e5d9dd882a99447f26f0367474bf@%3Cannounce.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfe62fbf9d4c314f166fe8c668e50e5d9dd882a99447f26f0367474bf@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfe62fbf9d4c314f166fe8c668e50e5d9dd882a99447f26f0367474bf@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/05/msg00020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/05/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00010.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GIQHXENTLYUNOES4LXVNJ2NCUQQRF5VJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WJ7XHKWJWDNWXUJH6UB7CLIW4TWOZ26N/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202006-21"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20200528-0005/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4448-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4596-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2020/dsa-4727"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-05/msg00057.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/157924/Apache-Tomcat-CVE-2020-9484-Proof-Of-Concept.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2020/Jun/6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2021/03/01/2"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-05-21T17:21:20Z",
+                "nvd_published_at": "2020-05-20T19:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:30Z",
+              "published": "2022-05-13T01:02:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4v3g-g84w-hv7r",
+              "aliases": [
+                "CVE-2016-5018"
+              ],
+              "summary": "Authentication Bypass Using an Alternate Path or Channel in Apache Tomcat",
+              "details": "In Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 a malicious web application was able to bypass a configured SecurityManager via a Tomcat utility method that was accessible to web applications.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0.M1"
+                        },
+                        {
+                          "fixed": "9.0.0.M10"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.0.0.M1",
+                    "9.0.0.M3",
+                    "9.0.0.M4",
+                    "9.0.0.M6",
+                    "9.0.0.M8",
+                    "9.0.0.M9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0.M9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4v3g-g84w-hv7r/GHSA-4v3g-g84w-hv7r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.5.0"
+                        },
+                        {
+                          "fixed": "8.5.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.5.0",
+                    "8.5.2",
+                    "8.5.3",
+                    "8.5.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.5.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4v3g-g84w-hv7r/GHSA-4v3g-g84w-hv7r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0RC1"
+                        },
+                        {
+                          "fixed": "8.0.37"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0-RC1",
+                    "8.0.0-RC10",
+                    "8.0.0-RC3",
+                    "8.0.0-RC5",
+                    "8.0.1",
+                    "8.0.11",
+                    "8.0.12",
+                    "8.0.14",
+                    "8.0.15",
+                    "8.0.17",
+                    "8.0.18",
+                    "8.0.20",
+                    "8.0.21",
+                    "8.0.22",
+                    "8.0.23",
+                    "8.0.24",
+                    "8.0.26",
+                    "8.0.27",
+                    "8.0.28",
+                    "8.0.29",
+                    "8.0.3",
+                    "8.0.30",
+                    "8.0.32",
+                    "8.0.33",
+                    "8.0.35",
+                    "8.0.36",
+                    "8.0.5",
+                    "8.0.8",
+                    "8.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.36",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4v3g-g84w-hv7r/GHSA-4v3g-g84w-hv7r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.72"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.8"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.70",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4v3g-g84w-hv7r/GHSA-4v3g-g84w-hv7r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.47"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.45",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-4v3g-g84w-hv7r/GHSA-4v3g-g84w-hv7r.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-5018"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0455"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0456"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1548"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1549"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1550"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1552"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:2247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/343558d982879bf88ec20dbf707f8c11255f8e219e81d45c4f8d0551@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/37220405a377c0182d2afdbc36461c4783b2930fbeae3a17f1333113@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/388a323769f1dff84c9ec905455aa73fbcb20338e3c7eb131457f708@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/39ae1f0bd5867c15755a6f959b271ade1aea04ccdc3b2e639dcd903b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d19773b4cf0377db62d1e9328bf9160bf1819f04f988315086931d7@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/845312a10aabbe2c499fca94003881d2c79fc993d85f34c1f5c77424@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/9b3a63a20c87179815fdea14f6766853bafe79a0042dc0b4aa878a9e@%3Cannounce.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b5e3f51d28cd5d9b1809f56594f2cf63dcd6a90429e16ea9f83bbedc@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b84ad1258a89de5c9c853c7f2d3ad77e5b8b2930be9e132d5cef6b95@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b8a1bf18155b552dcf9a928ba808cbadad84c236d85eab3033662cfb@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r03c597a64de790ba42c167efacfa23300c3d6c9fe589ab87fe02859c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r587e50b86c1a96ee301f751d50294072d142fd6dc08a8987ae9f3a9b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9136ff5b13e4f1941360b5a309efee2c114a14855578c3a2cbe5d19c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20180605-0001/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4557-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/155873/Tomcat-9.0.0.M1-Sandbox-Escape.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0457.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-1551.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2016/dsa-3720"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-288"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:43:40Z",
+                "nvd_published_at": "2017-08-10T16:29:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:53Z",
+              "published": "2022-05-14T01:10:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8qq4-8jvq-mfw4",
+              "aliases": [
+                "CVE-2017-12616"
+              ],
+              "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Apache Tomcat",
+              "details": "When using a VirtualDirContext with Apache Tomcat 7.0.0 to 7.0.80 it was possible to bypass security constraints and/or view the source code of JSPs for resources served by the VirtualDirContext using a specially crafted request.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.81"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.72",
+                    "7.0.73",
+                    "7.0.75",
+                    "7.0.76",
+                    "7.0.77",
+                    "7.0.78",
+                    "7.0.79",
+                    "7.0.8"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.80",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8qq4-8jvq-mfw4/GHSA-8qq4-8jvq-mfw4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-12616"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:0465"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:0466"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/tomcat"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/1df9b4552464caa42047062fe7175da0da06c18ecc8daf99258bbda6@%3Cannounce.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/388a323769f1dff84c9ec905455aa73fbcb20338e3c7eb131457f708@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d19773b4cf0377db62d1e9328bf9160bf1819f04f988315086931d7@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/845312a10aabbe2c499fca94003881d2c79fc993d85f34c1f5c77424@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9136ff5b13e4f1941360b5a309efee2c114a14855578c3a2cbe5d19c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2018/06/msg00008.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20171018-0001/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://support.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbux03828en_us"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3665-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.synology.com/support/security/Synology_SA_17_54_Tomcat"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-01T21:20:58Z",
+                "nvd_published_at": "2017-09-19T13:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:33Z",
+              "published": "2022-05-13T01:02:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q6x7-f33r-3wxx",
+              "aliases": [
+                "CVE-2016-6797"
+              ],
+              "summary": "Incorrect Authorization in Apache Tomcat",
+              "details": "The ResourceLinkFactory implementation in Apache Tomcat 9.0.0.M1 to 9.0.0.M9, 8.5.0 to 8.5.4, 8.0.0.RC1 to 8.0.36, 7.0.0 to 7.0.70 and 6.0.0 to 6.0.45 did not limit web application access to global JNDI resources to those resources explicitly linked to the web application. Therefore, it was possible for a web application to access any global JNDI resource whether an explicit ResourceLink had been configured or not.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0.M1"
+                        },
+                        {
+                          "fixed": "9.0.0.M10"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.0.0.M1",
+                    "9.0.0.M3",
+                    "9.0.0.M4",
+                    "9.0.0.M6",
+                    "9.0.0.M8",
+                    "9.0.0.M9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0.M9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q6x7-f33r-3wxx/GHSA-q6x7-f33r-3wxx.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.5.0"
+                        },
+                        {
+                          "fixed": "8.5.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.5.0",
+                    "8.5.2",
+                    "8.5.3",
+                    "8.5.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.5.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q6x7-f33r-3wxx/GHSA-q6x7-f33r-3wxx.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0"
+                        },
+                        {
+                          "fixed": "8.0.37"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.1",
+                    "8.0.11",
+                    "8.0.12",
+                    "8.0.14",
+                    "8.0.15",
+                    "8.0.17",
+                    "8.0.18",
+                    "8.0.20",
+                    "8.0.21",
+                    "8.0.22",
+                    "8.0.23",
+                    "8.0.24",
+                    "8.0.26",
+                    "8.0.27",
+                    "8.0.28",
+                    "8.0.29",
+                    "8.0.3",
+                    "8.0.30",
+                    "8.0.32",
+                    "8.0.33",
+                    "8.0.35",
+                    "8.0.36",
+                    "8.0.5",
+                    "8.0.8",
+                    "8.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.36",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q6x7-f33r-3wxx/GHSA-q6x7-f33r-3wxx.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.72"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-q6x7-f33r-3wxx/GHSA-q6x7-f33r-3wxx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0455"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0456"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:2247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/343558d982879bf88ec20dbf707f8c11255f8e219e81d45c4f8d0551@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/37220405a377c0182d2afdbc36461c4783b2930fbeae3a17f1333113@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/388a323769f1dff84c9ec905455aa73fbcb20338e3c7eb131457f708@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/39ae1f0bd5867c15755a6f959b271ade1aea04ccdc3b2e639dcd903b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d19773b4cf0377db62d1e9328bf9160bf1819f04f988315086931d7@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6af47120905aa7d8fe12f42e8ff2284fb338ba141d3b77b8c7cb61b3@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/845312a10aabbe2c499fca94003881d2c79fc993d85f34c1f5c77424@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/88855876c33f2f9c532ffb75bfee570ccf0b17ffa77493745af9a17a@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/9325837eb00cba5752c092047433c7f0415134d16e7f391447ff4352@%3Cannounce.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b5e3f51d28cd5d9b1809f56594f2cf63dcd6a90429e16ea9f83bbedc@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b84ad1258a89de5c9c853c7f2d3ad77e5b8b2930be9e132d5cef6b95@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b8a1bf18155b552dcf9a928ba808cbadad84c236d85eab3033662cfb@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r03c597a64de790ba42c167efacfa23300c3d6c9fe589ab87fe02859c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r587e50b86c1a96ee301f751d50294072d142fd6dc08a8987ae9f3a9b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9136ff5b13e4f1941360b5a309efee2c114a14855578c3a2cbe5d19c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20180605-0001/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4557-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0457.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2016/dsa-3720"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-863"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:45:35Z",
+                "nvd_published_at": "2017-08-10T22:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:31Z",
+              "published": "2022-05-13T01:23:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v646-rx6w-r3qq",
+              "aliases": [
+                "CVE-2016-5388"
+              ],
+              "summary": "Improper Access Control in Apache Tomcat",
+              "details": "Apache Tomcat 7.x through 7.0.70 and 8.x through 8.5.4, when the CGI Servlet is enabled, follows RFC 3875 section 4.1.18 and therefore does not protect applications from the presence of untrusted client data in the HTTP_PROXY environment variable, which might allow remote attackers to redirect an application's outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy header in an HTTP request, aka an \"httpoxy\" issue. NOTE: the vendor states \"A mitigation is planned for future releases of Tomcat, tracked as CVE-2016-5388\"; in other words, this is not a CVE ID for a vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.72"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v646-rx6w-r3qq/GHSA-v646-rx6w-r3qq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0"
+                        },
+                        {
+                          "fixed": "8.5.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.1",
+                    "8.0.11",
+                    "8.0.12",
+                    "8.0.14",
+                    "8.0.15",
+                    "8.0.17",
+                    "8.0.18",
+                    "8.0.20",
+                    "8.0.21",
+                    "8.0.22",
+                    "8.0.23",
+                    "8.0.24",
+                    "8.0.26",
+                    "8.0.27",
+                    "8.0.28",
+                    "8.0.29",
+                    "8.0.3",
+                    "8.0.30",
+                    "8.0.32",
+                    "8.0.33",
+                    "8.0.35",
+                    "8.0.36",
+                    "8.0.37",
+                    "8.0.38",
+                    "8.0.39",
+                    "8.0.41",
+                    "8.0.42",
+                    "8.0.43",
+                    "8.0.44",
+                    "8.0.45",
+                    "8.0.46",
+                    "8.0.47",
+                    "8.0.48",
+                    "8.0.49",
+                    "8.0.5",
+                    "8.0.50",
+                    "8.0.51",
+                    "8.0.52",
+                    "8.0.53",
+                    "8.0.8",
+                    "8.0.9",
+                    "8.5.0",
+                    "8.5.2",
+                    "8.5.3",
+                    "8.5.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v646-rx6w-r3qq/GHSA-v646-rx6w-r3qq.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-5388"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2016:1624"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2016:1635"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2016:1636"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2016:2045"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2016:2046"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2016-5388"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1353809"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://h20566.www2.hpe.com/hpsc/doc/public/display?docLocale=en_US\u0026docId=emr_na-hpesbhf03770en_us"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05320149"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05324759"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://h20566.www2.hpe.com/portal/site/hpsc/public/kb/docDisplay?docId=emr_na-c05390722"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/053d9ce4d579b02203db18545fee5e33f35f2932885459b74d1e4272%40%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/053d9ce4d579b02203db18545fee5e33f35f2932885459b74d1e4272@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6b414817c2b0bf351138911c8c922ec5dd577ebc0b9a7f42d705752d%40%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6b414817c2b0bf351138911c8c922ec5dd577ebc0b9a7f42d705752d@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6d3d34adcf3dfc48e36342aa1f18ce3c20bb8e4c458a97508d5bfed1%40%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6d3d34adcf3dfc48e36342aa1f18ce3c20bb8e4c458a97508d5bfed1@%3Cissues.activemq.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2853582063cfd9e7fbae1e029ae004e6a83482ae9b70a698996353dd%40%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2853582063cfd9e7fbae1e029ae004e6a83482ae9b70a698996353dd@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc6b2147532416cc736e68a32678d3947b7053c3085cf43a9874fd102%40%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc6b2147532416cc736e68a32678d3947b7053c3085cf43a9874fd102@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf21b368769ae70de4dee840a3228721ae442f1d51ad8742003aefe39%40%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf21b368769ae70de4dee840a3228721ae442f1d51ad8742003aefe39@%3Cusers.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2019/08/msg00015.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.opensuse.org/opensuse-updates/2016-09/msg00025.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rhn.redhat.com/errata/RHSA-2016-1624.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rhn.redhat.com/errata/RHSA-2016-2045.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rhn.redhat.com/errata/RHSA-2016-2046.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/tomcat-7.0-doc/changelog.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.apache.org/security/asf-httpoxy-response.txt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.kb.cert.org/vuls/id/797896"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-284"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:44:02Z",
+                "nvd_published_at": "2016-07-19T02:00:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:37Z",
+              "published": "2022-05-14T01:10:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-w3j5-q8f2-3cqq",
+              "aliases": [
+                "CVE-2016-8745"
+              ],
+              "summary": "Concurrent Execution using Shared Resource with Improper Synchronization in Apache Tomcat",
+              "details": "A bug in the error handling of the send file code for the NIO HTTP connector in Apache Tomcat 9.0.0.M1 to 9.0.0.M13, 8.5.0 to 8.5.8, 8.0.0.RC1 to 8.0.39, 7.0.0 to 7.0.73 and 6.0.16 to 6.0.48 resulted in the current Processor object being added to the Processor cache multiple times. This in turn meant that the same Processor could be used for concurrent requests. Sharing a Processor can result in information leakage between requests including, not not limited to, session ID and the response body. The bug was first noticed in 8.5.x onwards where it appears the refactoring of the Connector code for 8.5.x onwards made it more likely that the bug was observed. Initially it was thought that the 8.5.x refactoring introduced the bug but further investigation has shown that the bug is present in all currently supported Tomcat versions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0.M1"
+                        },
+                        {
+                          "fixed": "9.0.0.M14"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.0.0.M1",
+                    "9.0.0.M10",
+                    "9.0.0.M11",
+                    "9.0.0.M13",
+                    "9.0.0.M3",
+                    "9.0.0.M4",
+                    "9.0.0.M6",
+                    "9.0.0.M8",
+                    "9.0.0.M9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0.M13",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w3j5-q8f2-3cqq/GHSA-w3j5-q8f2-3cqq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.5.0"
+                        },
+                        {
+                          "fixed": "8.5.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.5.0",
+                    "8.5.2",
+                    "8.5.3",
+                    "8.5.4",
+                    "8.5.5",
+                    "8.5.6",
+                    "8.5.8"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.5.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w3j5-q8f2-3cqq/GHSA-w3j5-q8f2-3cqq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0RC1"
+                        },
+                        {
+                          "fixed": "8.0.41"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0-RC1",
+                    "8.0.0-RC10",
+                    "8.0.0-RC3",
+                    "8.0.0-RC5",
+                    "8.0.1",
+                    "8.0.11",
+                    "8.0.12",
+                    "8.0.14",
+                    "8.0.15",
+                    "8.0.17",
+                    "8.0.18",
+                    "8.0.20",
+                    "8.0.21",
+                    "8.0.22",
+                    "8.0.23",
+                    "8.0.24",
+                    "8.0.26",
+                    "8.0.27",
+                    "8.0.28",
+                    "8.0.29",
+                    "8.0.3",
+                    "8.0.30",
+                    "8.0.32",
+                    "8.0.33",
+                    "8.0.35",
+                    "8.0.36",
+                    "8.0.37",
+                    "8.0.38",
+                    "8.0.39",
+                    "8.0.5",
+                    "8.0.8",
+                    "8.0.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w3j5-q8f2-3cqq/GHSA-w3j5-q8f2-3cqq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.75"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.72",
+                    "7.0.73",
+                    "7.0.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w3j5-q8f2-3cqq/GHSA-w3j5-q8f2-3cqq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-catalina",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-catalina"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.16"
+                        },
+                        {
+                          "fixed": "6.0.50"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-w3j5-q8f2-3cqq/GHSA-w3j5-q8f2-3cqq.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-8745"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0455"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0456"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0935"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/343558d982879bf88ec20dbf707f8c11255f8e219e81d45c4f8d0551@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/37220405a377c0182d2afdbc36461c4783b2930fbeae3a17f1333113@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/388a323769f1dff84c9ec905455aa73fbcb20338e3c7eb131457f708@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/39ae1f0bd5867c15755a6f959b271ade1aea04ccdc3b2e639dcd903b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d19773b4cf0377db62d1e9328bf9160bf1819f04f988315086931d7@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/4113c05d37f37c12b8033205684f04033c5f7a9bae117d4af23b32b4@%3Cannounce.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6af47120905aa7d8fe12f42e8ff2284fb338ba141d3b77b8c7cb61b3@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/845312a10aabbe2c499fca94003881d2c79fc993d85f34c1f5c77424@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/88855876c33f2f9c532ffb75bfee570ccf0b17ffa77493745af9a17a@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b5e3f51d28cd5d9b1809f56594f2cf63dcd6a90429e16ea9f83bbedc@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b84ad1258a89de5c9c853c7f2d3ad77e5b8b2930be9e132d5cef6b95@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b8a1bf18155b552dcf9a928ba808cbadad84c236d85eab3033662cfb@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r03c597a64de790ba42c167efacfa23300c3d6c9fe589ab87fe02859c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3bbb800a816d0a51eccc5a228c58736960a9fffafa581a225834d97d@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r48c1444845fe15a823e1374674bfc297d5008a5453788099ea14caf0@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r587e50b86c1a96ee301f751d50294072d142fd6dc08a8987ae9f3a9b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9136ff5b13e4f1941360b5a309efee2c114a14855578c3a2cbe5d19c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/201705-09"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20180607-0002/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0457.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0527.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2017/dsa-3754"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2017/dsa-3755"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.oracle.com/technetwork/security-advisory/cpuapr2018-3678067.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:48:38Z",
+                "nvd_published_at": "2017-08-10T22:29:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-344f-f5vg-2jfj"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-4v3g-g84w-hv7r"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8qq4-8jvq-mfw4"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-q6x7-f33r-3wxx"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-v646-rx6w-r3qq"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-w3j5-q8f2-3cqq"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.apache.tomcat:tomcat-coyote",
+            "version": "7.0.37",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:34Z",
+              "published": "2022-05-13T01:14:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jc7p-5r39-9477",
+              "aliases": [
+                "CVE-2016-6816"
+              ],
+              "summary": "Improper Input Validation in Apache Tomcat",
+              "details": "The code in Apache Tomcat 9.0.0.M1 to 9.0.0.M11, 8.5.0 to 8.5.6, 8.0.0.RC1 to 8.0.38, 7.0.0 to 7.0.72, and 6.0.0 to 6.0.47 that parsed the HTTP request line permitted invalid characters. This could be exploited, in conjunction with a proxy that also permitted the invalid characters but with a different interpretation, to inject data into the HTTP response. By manipulating the HTTP response the attacker could poison a web-cache, perform an XSS attack and/or obtain sensitive information from requests other then their own.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-coyote",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0.M1"
+                        },
+                        {
+                          "fixed": "9.0.0.M12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.0.0.M1",
+                    "9.0.0.M10",
+                    "9.0.0.M11",
+                    "9.0.0.M3",
+                    "9.0.0.M4",
+                    "9.0.0.M6",
+                    "9.0.0.M8",
+                    "9.0.0.M9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0.M11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jc7p-5r39-9477/GHSA-jc7p-5r39-9477.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-coyote",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.5.0"
+                        },
+                        {
+                          "fixed": "8.5.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.5.0",
+                    "8.5.2",
+                    "8.5.3",
+                    "8.5.4",
+                    "8.5.5",
+                    "8.5.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jc7p-5r39-9477/GHSA-jc7p-5r39-9477.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-coyote",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0RC1"
+                        },
+                        {
+                          "fixed": "8.0.39"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0-RC1",
+                    "8.0.0-RC10",
+                    "8.0.0-RC3",
+                    "8.0.0-RC5",
+                    "8.0.1",
+                    "8.0.11",
+                    "8.0.12",
+                    "8.0.14",
+                    "8.0.15",
+                    "8.0.17",
+                    "8.0.18",
+                    "8.0.20",
+                    "8.0.21",
+                    "8.0.22",
+                    "8.0.23",
+                    "8.0.24",
+                    "8.0.26",
+                    "8.0.27",
+                    "8.0.28",
+                    "8.0.29",
+                    "8.0.3",
+                    "8.0.30",
+                    "8.0.32",
+                    "8.0.33",
+                    "8.0.35",
+                    "8.0.36",
+                    "8.0.37",
+                    "8.0.38",
+                    "8.0.5",
+                    "8.0.8",
+                    "8.0.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jc7p-5r39-9477/GHSA-jc7p-5r39-9477.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-coyote",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.73"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.11",
+                    "7.0.12",
+                    "7.0.14",
+                    "7.0.16",
+                    "7.0.19",
+                    "7.0.2",
+                    "7.0.20",
+                    "7.0.21",
+                    "7.0.22",
+                    "7.0.23",
+                    "7.0.25",
+                    "7.0.26",
+                    "7.0.27",
+                    "7.0.28",
+                    "7.0.29",
+                    "7.0.30",
+                    "7.0.32",
+                    "7.0.33",
+                    "7.0.34",
+                    "7.0.35",
+                    "7.0.37",
+                    "7.0.39",
+                    "7.0.4",
+                    "7.0.40",
+                    "7.0.41",
+                    "7.0.42",
+                    "7.0.47",
+                    "7.0.5",
+                    "7.0.50",
+                    "7.0.52",
+                    "7.0.53",
+                    "7.0.54",
+                    "7.0.55",
+                    "7.0.56",
+                    "7.0.57",
+                    "7.0.59",
+                    "7.0.6",
+                    "7.0.61",
+                    "7.0.62",
+                    "7.0.63",
+                    "7.0.64",
+                    "7.0.65",
+                    "7.0.67",
+                    "7.0.68",
+                    "7.0.69",
+                    "7.0.70",
+                    "7.0.72",
+                    "7.0.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jc7p-5r39-9477/GHSA-jc7p-5r39-9477.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.tomcat:tomcat-coyote",
+                    "purl": "pkg:maven/org.apache.tomcat/tomcat-coyote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.48"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jc7p-5r39-9477/GHSA-jc7p-5r39-9477.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-6816"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0455"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0456"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:0935"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/343558d982879bf88ec20dbf707f8c11255f8e219e81d45c4f8d0551@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/37220405a377c0182d2afdbc36461c4783b2930fbeae3a17f1333113@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/388a323769f1dff84c9ec905455aa73fbcb20338e3c7eb131457f708@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/39ae1f0bd5867c15755a6f959b271ade1aea04ccdc3b2e639dcd903b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/3d19773b4cf0377db62d1e9328bf9160bf1819f04f988315086931d7@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/6af47120905aa7d8fe12f42e8ff2284fb338ba141d3b77b8c7cb61b3@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/845312a10aabbe2c499fca94003881d2c79fc993d85f34c1f5c77424@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/88855876c33f2f9c532ffb75bfee570ccf0b17ffa77493745af9a17a@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b5e3f51d28cd5d9b1809f56594f2cf63dcd6a90429e16ea9f83bbedc@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b84ad1258a89de5c9c853c7f2d3ad77e5b8b2930be9e132d5cef6b95@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b8a1bf18155b552dcf9a928ba808cbadad84c236d85eab3033662cfb@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r03c597a64de790ba42c167efacfa23300c3d6c9fe589ab87fe02859c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r587e50b86c1a96ee301f751d50294072d142fd6dc08a8987ae9f3a9b@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9136ff5b13e4f1941360b5a309efee2c114a14855578c3a2cbe5d19c@%3Cdev.tomcat.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20180607-0001/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://svn.apache.org/viewvc?view=revision\u0026revision=1767641"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://svn.apache.org/viewvc?view=revision\u0026revision=1767645"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://svn.apache.org/viewvc?view=revision\u0026revision=1767653"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://svn.apache.org/viewvc?view=revision\u0026revision=1767675"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://svn.apache.org/viewvc?view=revision\u0026revision=1767683"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/security-6.html#Fixed_in_Apache_Tomcat_6.0.48"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.73"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.0.39"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.0.M13"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4557-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.exploit-db.com/exploits/41783/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0244.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0245.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0246.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0247.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0250.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0457.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2017-0527.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2016/dsa-3738"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:46:59Z",
+                "nvd_published_at": "2017-03-20T18:59:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jc7p-5r39-9477"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

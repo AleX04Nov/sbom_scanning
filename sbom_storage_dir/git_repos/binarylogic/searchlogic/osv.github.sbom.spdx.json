@@ -1,0 +1,3766 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "activerecord",
+            "version": "2.3.18",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:09:35Z",
+              "published": "2022-07-12T19:39:47Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-3hhc-qp5v-9p2j",
+              "aliases": [
+                "CVE-2022-32224"
+              ],
+              "summary": "Active Record RCE bug with Serialized Columns",
+              "details": "When serialized columns that use YAML (the default) are deserialized, Rails uses YAML.unsafe_load to convert the YAML data in to Ruby objects. If an attacker can manipulate data in the database (via means like SQL injection), then it may be possible for the attacker to escalate to an RCE.\n\nThere are no feasible workarounds for this issue, but other coders (such as JSON) are not impacted.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.2.1",
+                    "7.0.2.2",
+                    "7.0.2.3",
+                    "7.0.2.4",
+                    "7.0.3"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-3hhc-qp5v-9p2j/GHSA-3hhc-qp5v-9p2j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.1.0"
+                        },
+                        {
+                          "fixed": "6.1.6.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.1.0",
+                    "6.1.1",
+                    "6.1.2",
+                    "6.1.2.1",
+                    "6.1.3",
+                    "6.1.3.1",
+                    "6.1.3.2",
+                    "6.1.4",
+                    "6.1.4.1",
+                    "6.1.4.2",
+                    "6.1.4.3",
+                    "6.1.4.4",
+                    "6.1.4.5",
+                    "6.1.4.6",
+                    "6.1.4.7",
+                    "6.1.5",
+                    "6.1.5.1",
+                    "6.1.6"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.1.6",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-3hhc-qp5v-9p2j/GHSA-3hhc-qp5v-9p2j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.5.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.1.rc1",
+                    "6.0.2",
+                    "6.0.2.1",
+                    "6.0.2.2",
+                    "6.0.2.rc1",
+                    "6.0.2.rc2",
+                    "6.0.3",
+                    "6.0.3.1",
+                    "6.0.3.2",
+                    "6.0.3.3",
+                    "6.0.3.4",
+                    "6.0.3.5",
+                    "6.0.3.6",
+                    "6.0.3.7",
+                    "6.0.3.rc1",
+                    "6.0.4",
+                    "6.0.4.1",
+                    "6.0.4.2",
+                    "6.0.4.3",
+                    "6.0.4.4",
+                    "6.0.4.5",
+                    "6.0.4.6",
+                    "6.0.4.7",
+                    "6.0.4.8",
+                    "6.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-3hhc-qp5v-9p2j/GHSA-3hhc-qp5v-9p2j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.2.8.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.15.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.19",
+                    "3.0.2",
+                    "3.0.20",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.1.0",
+                    "3.1.0.beta1",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.0.rc3",
+                    "3.1.0.rc4",
+                    "3.1.0.rc5",
+                    "3.1.0.rc6",
+                    "3.1.0.rc8",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.2.0",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.10",
+                    "3.2.11",
+                    "3.2.12",
+                    "3.2.13",
+                    "3.2.13.rc1",
+                    "3.2.13.rc2",
+                    "3.2.14",
+                    "3.2.14.rc1",
+                    "3.2.14.rc2",
+                    "3.2.15",
+                    "3.2.15.rc1",
+                    "3.2.15.rc2",
+                    "3.2.15.rc3",
+                    "3.2.16",
+                    "3.2.17",
+                    "3.2.18",
+                    "3.2.19",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.20",
+                    "3.2.21",
+                    "3.2.22",
+                    "3.2.22.1",
+                    "3.2.22.2",
+                    "3.2.22.3",
+                    "3.2.22.4",
+                    "3.2.22.5",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3",
+                    "4.0.0",
+                    "4.0.0.beta1",
+                    "4.0.0.rc1",
+                    "4.0.0.rc2",
+                    "4.0.1",
+                    "4.0.1.rc1",
+                    "4.0.1.rc2",
+                    "4.0.1.rc3",
+                    "4.0.1.rc4",
+                    "4.0.10",
+                    "4.0.10.rc1",
+                    "4.0.10.rc2",
+                    "4.0.11",
+                    "4.0.11.1",
+                    "4.0.12",
+                    "4.0.13",
+                    "4.0.13.rc1",
+                    "4.0.2",
+                    "4.0.3",
+                    "4.0.4",
+                    "4.0.4.rc1",
+                    "4.0.5",
+                    "4.0.6",
+                    "4.0.6.rc1",
+                    "4.0.6.rc2",
+                    "4.0.6.rc3",
+                    "4.0.7",
+                    "4.0.8",
+                    "4.0.9",
+                    "4.1.0",
+                    "4.1.0.beta1",
+                    "4.1.0.beta2",
+                    "4.1.0.rc1",
+                    "4.1.0.rc2",
+                    "4.1.1",
+                    "4.1.10",
+                    "4.1.10.rc1",
+                    "4.1.10.rc2",
+                    "4.1.10.rc3",
+                    "4.1.10.rc4",
+                    "4.1.11",
+                    "4.1.12",
+                    "4.1.12.rc1",
+                    "4.1.13",
+                    "4.1.13.rc1",
+                    "4.1.14",
+                    "4.1.14.1",
+                    "4.1.14.2",
+                    "4.1.14.rc1",
+                    "4.1.14.rc2",
+                    "4.1.15",
+                    "4.1.15.rc1",
+                    "4.1.16",
+                    "4.1.16.rc1",
+                    "4.1.2",
+                    "4.1.2.rc1",
+                    "4.1.2.rc2",
+                    "4.1.2.rc3",
+                    "4.1.3",
+                    "4.1.4",
+                    "4.1.5",
+                    "4.1.6",
+                    "4.1.6.rc1",
+                    "4.1.6.rc2",
+                    "4.1.7",
+                    "4.1.7.1",
+                    "4.1.8",
+                    "4.1.9",
+                    "4.1.9.rc1",
+                    "4.2.0",
+                    "4.2.0.beta1",
+                    "4.2.0.beta2",
+                    "4.2.0.beta3",
+                    "4.2.0.beta4",
+                    "4.2.0.rc1",
+                    "4.2.0.rc2",
+                    "4.2.0.rc3",
+                    "4.2.1",
+                    "4.2.1.rc1",
+                    "4.2.1.rc2",
+                    "4.2.1.rc3",
+                    "4.2.1.rc4",
+                    "4.2.10",
+                    "4.2.10.rc1",
+                    "4.2.11",
+                    "4.2.11.1",
+                    "4.2.11.2",
+                    "4.2.11.3",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.2.3.rc1",
+                    "4.2.4",
+                    "4.2.4.rc1",
+                    "4.2.5",
+                    "4.2.5.1",
+                    "4.2.5.2",
+                    "4.2.5.rc1",
+                    "4.2.5.rc2",
+                    "4.2.6",
+                    "4.2.6.rc1",
+                    "4.2.7",
+                    "4.2.7.1",
+                    "4.2.7.rc1",
+                    "4.2.8",
+                    "4.2.8.rc1",
+                    "4.2.9",
+                    "4.2.9.rc1",
+                    "4.2.9.rc2",
+                    "5.0.0",
+                    "5.0.0.1",
+                    "5.0.0.beta1",
+                    "5.0.0.beta1.1",
+                    "5.0.0.beta2",
+                    "5.0.0.beta3",
+                    "5.0.0.beta4",
+                    "5.0.0.racecar1",
+                    "5.0.0.rc1",
+                    "5.0.0.rc2",
+                    "5.0.1",
+                    "5.0.1.rc1",
+                    "5.0.1.rc2",
+                    "5.0.2",
+                    "5.0.2.rc1",
+                    "5.0.3",
+                    "5.0.4",
+                    "5.0.4.rc1",
+                    "5.0.5",
+                    "5.0.5.rc1",
+                    "5.0.5.rc2",
+                    "5.0.6",
+                    "5.0.6.rc1",
+                    "5.0.7",
+                    "5.0.7.1",
+                    "5.0.7.2",
+                    "5.1.0",
+                    "5.1.0.beta1",
+                    "5.1.0.rc1",
+                    "5.1.0.rc2",
+                    "5.1.1",
+                    "5.1.2",
+                    "5.1.2.rc1",
+                    "5.1.3",
+                    "5.1.3.rc1",
+                    "5.1.3.rc2",
+                    "5.1.3.rc3",
+                    "5.1.4",
+                    "5.1.4.rc1",
+                    "5.1.5",
+                    "5.1.5.rc1",
+                    "5.1.6",
+                    "5.1.6.1",
+                    "5.1.6.2",
+                    "5.1.7",
+                    "5.1.7.rc1",
+                    "5.2.0",
+                    "5.2.0.beta1",
+                    "5.2.0.beta2",
+                    "5.2.0.rc1",
+                    "5.2.0.rc2",
+                    "5.2.1",
+                    "5.2.1.1",
+                    "5.2.1.rc1",
+                    "5.2.2",
+                    "5.2.2.1",
+                    "5.2.2.rc1",
+                    "5.2.3",
+                    "5.2.3.rc1",
+                    "5.2.4",
+                    "5.2.4.1",
+                    "5.2.4.2",
+                    "5.2.4.3",
+                    "5.2.4.4",
+                    "5.2.4.5",
+                    "5.2.4.6",
+                    "5.2.4.rc1",
+                    "5.2.5",
+                    "5.2.6",
+                    "5.2.6.1",
+                    "5.2.6.2",
+                    "5.2.6.3",
+                    "5.2.7",
+                    "5.2.7.1",
+                    "5.2.8"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 5.2.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-3hhc-qp5v-9p2j/GHSA-3hhc-qp5v-9p2j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-32224"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/611990f1a6c137c2d56b1ba06b27e5d2434dcd6a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2022-32224-possible-rce-escalation-bug-with-serialized-columns-in-active-record/81017"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-3hhc-qp5v-9p2j"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rails/rails/commits/main/activerecord"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activerecord/CVE-2022-32224.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/rubyonrails-security/c/MmFO3LYQE8U"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-12T19:39:47Z",
+                "nvd_published_at": "2022-12-05T22:15:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:48Z",
+              "published": "2023-01-18T18:21:12Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-579w-22j4-4749",
+              "aliases": [
+                "CVE-2022-44566"
+              ],
+              "summary": "Denial of Service Vulnerability in ActiveRecord's PostgreSQL adapter",
+              "details": "There is a potential denial of service vulnerability present in ActiveRecord’s PostgreSQL adapter.\n\nThis has been assigned the CVE identifier CVE-2022-44566.\n\nVersions Affected: All. Not affected: None. Fixed Versions: 5.2.8.15 (Rails LTS, which is a paid service and not part of the rubygem), 6.1.7.1, 7.0.4.1\n\nImpact:\nIn ActiveRecord \u003c7.0.4.1 and \u003c6.1.7.1, when a value outside the range for a 64bit signed integer is provided to the PostgreSQL connection adapter, it will treat the target column type as numeric. Comparing integer values against numeric values can result in a slow sequential scan resulting in potential Denial of Service.\nReleases\n\nThe fixed releases are available at the normal locations.\nWorkarounds\n\nEnsure that user supplied input which is provided to ActiveRecord clauses do not contain integers wider than a signed 64bit representation or floats.\nPatches\n\nTo aid users who aren’t able to upgrade immediately we have provided patches for the supported release series in accordance with our maintenance policy 1 regarding security issues. They are in git-am format and consist of a single changeset.\n\n    6-1-Added-integer-width-check-to-PostgreSQL-Quoting.patch - Patch for 6.1 series\n    7-0-Added-integer-width-check-to-PostgreSQL-Quoting.patch - Patch for 7.0 series\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.1.7.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.15.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.19",
+                    "3.0.2",
+                    "3.0.20",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.1.0",
+                    "3.1.0.beta1",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.0.rc3",
+                    "3.1.0.rc4",
+                    "3.1.0.rc5",
+                    "3.1.0.rc6",
+                    "3.1.0.rc8",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.2.0",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.10",
+                    "3.2.11",
+                    "3.2.12",
+                    "3.2.13",
+                    "3.2.13.rc1",
+                    "3.2.13.rc2",
+                    "3.2.14",
+                    "3.2.14.rc1",
+                    "3.2.14.rc2",
+                    "3.2.15",
+                    "3.2.15.rc1",
+                    "3.2.15.rc2",
+                    "3.2.15.rc3",
+                    "3.2.16",
+                    "3.2.17",
+                    "3.2.18",
+                    "3.2.19",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.20",
+                    "3.2.21",
+                    "3.2.22",
+                    "3.2.22.1",
+                    "3.2.22.2",
+                    "3.2.22.3",
+                    "3.2.22.4",
+                    "3.2.22.5",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3",
+                    "4.0.0",
+                    "4.0.0.beta1",
+                    "4.0.0.rc1",
+                    "4.0.0.rc2",
+                    "4.0.1",
+                    "4.0.1.rc1",
+                    "4.0.1.rc2",
+                    "4.0.1.rc3",
+                    "4.0.1.rc4",
+                    "4.0.10",
+                    "4.0.10.rc1",
+                    "4.0.10.rc2",
+                    "4.0.11",
+                    "4.0.11.1",
+                    "4.0.12",
+                    "4.0.13",
+                    "4.0.13.rc1",
+                    "4.0.2",
+                    "4.0.3",
+                    "4.0.4",
+                    "4.0.4.rc1",
+                    "4.0.5",
+                    "4.0.6",
+                    "4.0.6.rc1",
+                    "4.0.6.rc2",
+                    "4.0.6.rc3",
+                    "4.0.7",
+                    "4.0.8",
+                    "4.0.9",
+                    "4.1.0",
+                    "4.1.0.beta1",
+                    "4.1.0.beta2",
+                    "4.1.0.rc1",
+                    "4.1.0.rc2",
+                    "4.1.1",
+                    "4.1.10",
+                    "4.1.10.rc1",
+                    "4.1.10.rc2",
+                    "4.1.10.rc3",
+                    "4.1.10.rc4",
+                    "4.1.11",
+                    "4.1.12",
+                    "4.1.12.rc1",
+                    "4.1.13",
+                    "4.1.13.rc1",
+                    "4.1.14",
+                    "4.1.14.1",
+                    "4.1.14.2",
+                    "4.1.14.rc1",
+                    "4.1.14.rc2",
+                    "4.1.15",
+                    "4.1.15.rc1",
+                    "4.1.16",
+                    "4.1.16.rc1",
+                    "4.1.2",
+                    "4.1.2.rc1",
+                    "4.1.2.rc2",
+                    "4.1.2.rc3",
+                    "4.1.3",
+                    "4.1.4",
+                    "4.1.5",
+                    "4.1.6",
+                    "4.1.6.rc1",
+                    "4.1.6.rc2",
+                    "4.1.7",
+                    "4.1.7.1",
+                    "4.1.8",
+                    "4.1.9",
+                    "4.1.9.rc1",
+                    "4.2.0",
+                    "4.2.0.beta1",
+                    "4.2.0.beta2",
+                    "4.2.0.beta3",
+                    "4.2.0.beta4",
+                    "4.2.0.rc1",
+                    "4.2.0.rc2",
+                    "4.2.0.rc3",
+                    "4.2.1",
+                    "4.2.1.rc1",
+                    "4.2.1.rc2",
+                    "4.2.1.rc3",
+                    "4.2.1.rc4",
+                    "4.2.10",
+                    "4.2.10.rc1",
+                    "4.2.11",
+                    "4.2.11.1",
+                    "4.2.11.2",
+                    "4.2.11.3",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.2.3.rc1",
+                    "4.2.4",
+                    "4.2.4.rc1",
+                    "4.2.5",
+                    "4.2.5.1",
+                    "4.2.5.2",
+                    "4.2.5.rc1",
+                    "4.2.5.rc2",
+                    "4.2.6",
+                    "4.2.6.rc1",
+                    "4.2.7",
+                    "4.2.7.1",
+                    "4.2.7.rc1",
+                    "4.2.8",
+                    "4.2.8.rc1",
+                    "4.2.9",
+                    "4.2.9.rc1",
+                    "4.2.9.rc2",
+                    "5.0.0",
+                    "5.0.0.1",
+                    "5.0.0.beta1",
+                    "5.0.0.beta1.1",
+                    "5.0.0.beta2",
+                    "5.0.0.beta3",
+                    "5.0.0.beta4",
+                    "5.0.0.racecar1",
+                    "5.0.0.rc1",
+                    "5.0.0.rc2",
+                    "5.0.1",
+                    "5.0.1.rc1",
+                    "5.0.1.rc2",
+                    "5.0.2",
+                    "5.0.2.rc1",
+                    "5.0.3",
+                    "5.0.4",
+                    "5.0.4.rc1",
+                    "5.0.5",
+                    "5.0.5.rc1",
+                    "5.0.5.rc2",
+                    "5.0.6",
+                    "5.0.6.rc1",
+                    "5.0.7",
+                    "5.0.7.1",
+                    "5.0.7.2",
+                    "5.1.0",
+                    "5.1.0.beta1",
+                    "5.1.0.rc1",
+                    "5.1.0.rc2",
+                    "5.1.1",
+                    "5.1.2",
+                    "5.1.2.rc1",
+                    "5.1.3",
+                    "5.1.3.rc1",
+                    "5.1.3.rc2",
+                    "5.1.3.rc3",
+                    "5.1.4",
+                    "5.1.4.rc1",
+                    "5.1.5",
+                    "5.1.5.rc1",
+                    "5.1.6",
+                    "5.1.6.1",
+                    "5.1.6.2",
+                    "5.1.7",
+                    "5.1.7.rc1",
+                    "5.2.0",
+                    "5.2.0.beta1",
+                    "5.2.0.beta2",
+                    "5.2.0.rc1",
+                    "5.2.0.rc2",
+                    "5.2.1",
+                    "5.2.1.1",
+                    "5.2.1.rc1",
+                    "5.2.2",
+                    "5.2.2.1",
+                    "5.2.2.rc1",
+                    "5.2.3",
+                    "5.2.3.rc1",
+                    "5.2.4",
+                    "5.2.4.1",
+                    "5.2.4.2",
+                    "5.2.4.3",
+                    "5.2.4.4",
+                    "5.2.4.5",
+                    "5.2.4.6",
+                    "5.2.4.rc1",
+                    "5.2.5",
+                    "5.2.6",
+                    "5.2.6.1",
+                    "5.2.6.2",
+                    "5.2.6.3",
+                    "5.2.7",
+                    "5.2.7.1",
+                    "5.2.8",
+                    "5.2.8.1",
+                    "6.0.0",
+                    "6.0.0.beta1",
+                    "6.0.0.beta2",
+                    "6.0.0.beta3",
+                    "6.0.0.rc1",
+                    "6.0.0.rc2",
+                    "6.0.1",
+                    "6.0.1.rc1",
+                    "6.0.2",
+                    "6.0.2.1",
+                    "6.0.2.2",
+                    "6.0.2.rc1",
+                    "6.0.2.rc2",
+                    "6.0.3",
+                    "6.0.3.1",
+                    "6.0.3.2",
+                    "6.0.3.3",
+                    "6.0.3.4",
+                    "6.0.3.5",
+                    "6.0.3.6",
+                    "6.0.3.7",
+                    "6.0.3.rc1",
+                    "6.0.4",
+                    "6.0.4.1",
+                    "6.0.4.2",
+                    "6.0.4.3",
+                    "6.0.4.4",
+                    "6.0.4.5",
+                    "6.0.4.6",
+                    "6.0.4.7",
+                    "6.0.4.8",
+                    "6.0.5",
+                    "6.0.5.1",
+                    "6.0.6",
+                    "6.0.6.1",
+                    "6.1.0",
+                    "6.1.0.rc1",
+                    "6.1.0.rc2",
+                    "6.1.1",
+                    "6.1.2",
+                    "6.1.2.1",
+                    "6.1.3",
+                    "6.1.3.1",
+                    "6.1.3.2",
+                    "6.1.4",
+                    "6.1.4.1",
+                    "6.1.4.2",
+                    "6.1.4.3",
+                    "6.1.4.4",
+                    "6.1.4.5",
+                    "6.1.4.6",
+                    "6.1.4.7",
+                    "6.1.5",
+                    "6.1.5.1",
+                    "6.1.6",
+                    "6.1.6.1",
+                    "6.1.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-579w-22j4-4749/GHSA-579w-22j4-4749.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.2.1",
+                    "7.0.2.2",
+                    "7.0.2.3",
+                    "7.0.2.4",
+                    "7.0.3",
+                    "7.0.3.1",
+                    "7.0.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-579w-22j4-4749/GHSA-579w-22j4-4749.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-44566"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/4f44aa9d514e701ada92b5cf08beccf566eeaebf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/82bcdc011e2ff674e7dd8fd8cee3a831c908d29b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://code.jeremyevans.net/2022-11-01-forcing-sequential-scans-on-postgresql.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2022-44566-possible-denial-of-service-vulnerability-in-activerecords-postgresql-adapter/82119"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rails/rails"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/releases/tag/v6.1.7.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/releases/tag/v7.0.4.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activerecord/CVE-2022-44566.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://makandracards.com/railslts/508019-rails-5-2-lts-changelog#section-jan-20th-2023-rails-version-5-2-8-15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rubyonrails.org/2023/1/17/Rails-Versions-6-0-6-1-6-1-7-1-7-0-4-1-have-been-released"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-01-18T18:21:12Z",
+                "nvd_published_at": "2023-02-09T20:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-10T05:18:11Z",
+              "published": "2017-10-24T18:33:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-76wq-xw4h-f8wj",
+              "aliases": [
+                "CVE-2012-2695"
+              ],
+              "summary": "activerecord vulnerable to SQL Injection",
+              "details": "The Active Record component in Ruby on Rails before 3.0.14, 3.1.x before 3.1.6, and 3.2.x before 3.2.6 does not properly implement the passing of request data to a where method in an ActiveRecord class, which allows remote attackers to conduct certain SQL injection attacks via nested query parameters that leverage improper handling of nested hashes, a related issue to CVE-2012-2661.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.14"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.15.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-76wq-xw4h-f8wj/GHSA-76wq-xw4h-f8wj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-76wq-xw4h-f8wj/GHSA-76wq-xw4h-f8wj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.2.0"
+                        },
+                        {
+                          "fixed": "3.2.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-76wq-xw4h-f8wj/GHSA-76wq-xw4h-f8wj.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-2695"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rails/rails"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activerecord/CVE-2012-2695.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/rubyonrails-security/c/l4L0TEVAz1k/m/Vr84sD9B464J"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/group/rubyonrails-security/msg/aee3413fb038bf56?dmode=source\u0026output=gplain"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2012-08/msg00002.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2012-08/msg00014.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2012-08/msg00016.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2012-08/msg00046.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2013-0154.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-89"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:21:41Z",
+                "nvd_published_at": "2012-06-22T14:55:01Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:11Z",
+              "published": "2017-10-24T18:33:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gh2w-j7cx-2664",
+              "aliases": [
+                "CVE-2012-6496"
+              ],
+              "summary": "Active Record contains SQL Injection",
+              "details": "SQL injection vulnerability in the Active Record component in Ruby on Rails before 3.0.18, 3.1.x before 3.1.9, and 3.2.x before 3.2.10 allows remote attackers to execute arbitrary SQL commands via a crafted request that leverages incorrect behavior of dynamic finders in applications that can use unexpected data types in certain find_by_ method calls.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.15.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-gh2w-j7cx-2664/GHSA-gh2w-j7cx-2664.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-gh2w-j7cx-2664/GHSA-gh2w-j7cx-2664.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.2.0"
+                        },
+                        {
+                          "fixed": "3.2.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-gh2w-j7cx-2664/GHSA-gh2w-j7cx-2664.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-6496"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=889649"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/group/rubyonrails-security/msg/23daa048baf28b64?dmode=source\u0026output=gplain"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://blog.phusion.nl/2013/01/03/rails-sql-injection-vulnerability-hold-your-horses-here-are-the-facts/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2013-0154.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2013-0220.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2013-0544.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://security.gentoo.org/glsa/glsa-201401-22.xml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-89"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:37:20Z",
+                "nvd_published_at": "2013-01-04T04:46:02Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:37Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mhwp-qhpc-h3jm",
+              "aliases": [
+                "CVE-2014-3482"
+              ],
+              "summary": "SQL Injection in Active Record",
+              "details": "SQL injection vulnerability in activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb in the PostgreSQL adapter for Active Record in Ruby on Rails 2.x and 3.x before 3.2.19 allows remote attackers to execute arbitrary SQL commands by leveraging improper bitstring quoting.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activerecord",
+                    "purl": "pkg:gem/activerecord"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "3.2.19"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.19",
+                    "3.0.2",
+                    "3.0.20",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.1.0",
+                    "3.1.0.beta1",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.0.rc3",
+                    "3.1.0.rc4",
+                    "3.1.0.rc5",
+                    "3.1.0.rc6",
+                    "3.1.0.rc8",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.2.0",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.10",
+                    "3.2.11",
+                    "3.2.12",
+                    "3.2.13",
+                    "3.2.13.rc1",
+                    "3.2.13.rc2",
+                    "3.2.14",
+                    "3.2.14.rc1",
+                    "3.2.14.rc2",
+                    "3.2.15",
+                    "3.2.15.rc1",
+                    "3.2.15.rc2",
+                    "3.2.15.rc3",
+                    "3.2.16",
+                    "3.2.17",
+                    "3.2.18",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-mhwp-qhpc-h3jm/GHSA-mhwp-qhpc-h3jm.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-3482"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2014/07/02/5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2014-0876.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2014/dsa-2982"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-89"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:46:25Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3hhc-qp5v-9p2j"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-579w-22j4-4749"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-76wq-xw4h-f8wj"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-gh2w-j7cx-2664"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-mhwp-qhpc-h3jm"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "activesupport",
+            "version": "2.3.18",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:57:06Z",
+              "published": "2017-10-24T18:33:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h835-75hw-pj89",
+              "aliases": [
+                "CVE-2012-3464"
+              ],
+              "summary": "activesupport Cross-site Scripting vulnerability",
+              "details": "Cross-site scripting (XSS) vulnerability in `activesupport/lib/active_support/core_ext/string/output_safety.rb` in Ruby on Rails before 3.0.17, 3.1.x before 3.1.8, and 3.2.x before 3.2.8 might allow remote attackers to inject arbitrary web script or HTML via vectors involving a ' (quote) character.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.17"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.6.pre",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.0.pre"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-h835-75hw-pj89/GHSA-h835-75hw-pj89.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-h835-75hw-pj89/GHSA-h835-75hw-pj89.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.2.0"
+                        },
+                        {
+                          "fixed": "3.2.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-h835-75hw-pj89/GHSA-h835-75hw-pj89.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2012-3464"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/issues/7215"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/28f2c6f4037081da0a82104a3f473165ed4ed2ce"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/780a718723cf87b49cfe204d355948c4e0932d23"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/d0c9759d3aeb6327d68dd6c0de0fe2fed4e3c870"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-h835-75hw-pj89"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rails/rails"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activesupport/CVE-2012-3464.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/group/rubyonrails-security/msg/8f1bbe1cef8c6caf?dmode=source\u0026output=gplain"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2013-0154.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/50694"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://weblog.rubyonrails.org/2012/8/9/ann-rails-3-2-8-has-been-released/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:39:28Z",
+                "nvd_published_at": "2012-08-10T10:34:47Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:38Z",
+              "published": "2023-01-18T18:23:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j6gc-792m-qgm2",
+              "aliases": [
+                "CVE-2023-22796"
+              ],
+              "summary": "ReDoS based DoS vulnerability in Active Support's underscore",
+              "details": "There is a possible regular expression based DoS vulnerability in Active Support. This vulnerability has been assigned the CVE identifier CVE-2023-22796.\n\nVersions Affected: All Not affected: None Fixed Versions: 5.2.8.15 (Rails LTS, which is a paid service and not part of the rubygem), 6.1.7.1, 7.0.4.1\nImpact\n\nA specially crafted string passed to the underscore method can cause the regular expression engine to enter a state of catastrophic backtracking. This can cause the process to use large amounts of CPU and memory, leading to a possible DoS vulnerability.\n\nThis affects String#underscore, ActiveSupport::Inflector.underscore, String#titleize, and any other methods using these.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\nReleases\n\nThe FIXED releases are available at the normal locations.\nWorkarounds\n\nThere are no feasible workarounds for this issue.\n\nUsers on Ruby 3.2.0 or greater may be able to reduce the impact by configuring Regexp.timeout.\nPatches\n\nTo aid users who aren’t able to upgrade immediately we have provided patches for the two supported release series. They are in git-am format and consist of a single changeset.\n\n    6-1-Avoid-regex-backtracking-in-Inflector.underscore.patch - Patch for 6.1 series\n    7-0-Avoid-regex-backtracking-in-Inflector.underscore.patch - Patch for 7.0 series\n\nPlease note that only the 7.0.Z and 6.1.Z series are supported at present, and 6.0.Z for severe vulnerabilities. Users of earlier unsupported releases are advised to upgrade as soon as possible as we cannot guarantee the continued availability of security fixes for unsupported releases.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.1.7.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.6.pre",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.19",
+                    "3.0.2",
+                    "3.0.20",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.0.pre",
+                    "3.1.0",
+                    "3.1.0.beta1",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.0.rc3",
+                    "3.1.0.rc4",
+                    "3.1.0.rc5",
+                    "3.1.0.rc6",
+                    "3.1.0.rc8",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.2.0",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.10",
+                    "3.2.11",
+                    "3.2.12",
+                    "3.2.13",
+                    "3.2.13.rc1",
+                    "3.2.13.rc2",
+                    "3.2.14",
+                    "3.2.14.rc1",
+                    "3.2.14.rc2",
+                    "3.2.15",
+                    "3.2.15.rc1",
+                    "3.2.15.rc2",
+                    "3.2.15.rc3",
+                    "3.2.16",
+                    "3.2.17",
+                    "3.2.18",
+                    "3.2.19",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.20",
+                    "3.2.21",
+                    "3.2.22",
+                    "3.2.22.1",
+                    "3.2.22.2",
+                    "3.2.22.3",
+                    "3.2.22.4",
+                    "3.2.22.5",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3",
+                    "4.0.0",
+                    "4.0.0.beta1",
+                    "4.0.0.rc1",
+                    "4.0.0.rc2",
+                    "4.0.1",
+                    "4.0.1.rc1",
+                    "4.0.1.rc2",
+                    "4.0.1.rc3",
+                    "4.0.1.rc4",
+                    "4.0.10",
+                    "4.0.10.rc1",
+                    "4.0.10.rc2",
+                    "4.0.11",
+                    "4.0.11.1",
+                    "4.0.12",
+                    "4.0.13",
+                    "4.0.13.rc1",
+                    "4.0.2",
+                    "4.0.3",
+                    "4.0.4",
+                    "4.0.4.rc1",
+                    "4.0.5",
+                    "4.0.6",
+                    "4.0.6.rc1",
+                    "4.0.6.rc2",
+                    "4.0.6.rc3",
+                    "4.0.7",
+                    "4.0.8",
+                    "4.0.9",
+                    "4.1.0",
+                    "4.1.0.beta1",
+                    "4.1.0.beta2",
+                    "4.1.0.rc1",
+                    "4.1.0.rc2",
+                    "4.1.1",
+                    "4.1.10",
+                    "4.1.10.rc1",
+                    "4.1.10.rc2",
+                    "4.1.10.rc3",
+                    "4.1.10.rc4",
+                    "4.1.11",
+                    "4.1.12",
+                    "4.1.12.rc1",
+                    "4.1.13",
+                    "4.1.13.rc1",
+                    "4.1.14",
+                    "4.1.14.1",
+                    "4.1.14.2",
+                    "4.1.14.rc1",
+                    "4.1.14.rc2",
+                    "4.1.15",
+                    "4.1.15.rc1",
+                    "4.1.16",
+                    "4.1.16.rc1",
+                    "4.1.2",
+                    "4.1.2.rc1",
+                    "4.1.2.rc2",
+                    "4.1.2.rc3",
+                    "4.1.3",
+                    "4.1.4",
+                    "4.1.5",
+                    "4.1.6",
+                    "4.1.6.rc1",
+                    "4.1.6.rc2",
+                    "4.1.7",
+                    "4.1.7.1",
+                    "4.1.8",
+                    "4.1.9",
+                    "4.1.9.rc1",
+                    "4.2.0",
+                    "4.2.0.beta1",
+                    "4.2.0.beta2",
+                    "4.2.0.beta3",
+                    "4.2.0.beta4",
+                    "4.2.0.rc1",
+                    "4.2.0.rc2",
+                    "4.2.0.rc3",
+                    "4.2.1",
+                    "4.2.1.rc1",
+                    "4.2.1.rc2",
+                    "4.2.1.rc3",
+                    "4.2.1.rc4",
+                    "4.2.10",
+                    "4.2.10.rc1",
+                    "4.2.11",
+                    "4.2.11.1",
+                    "4.2.11.2",
+                    "4.2.11.3",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.2.3.rc1",
+                    "4.2.4",
+                    "4.2.4.rc1",
+                    "4.2.5",
+                    "4.2.5.1",
+                    "4.2.5.2",
+                    "4.2.5.rc1",
+                    "4.2.5.rc2",
+                    "4.2.6",
+                    "4.2.6.rc1",
+                    "4.2.7",
+                    "4.2.7.1",
+                    "4.2.7.rc1",
+                    "4.2.8",
+                    "4.2.8.rc1",
+                    "4.2.9",
+                    "4.2.9.rc1",
+                    "4.2.9.rc2",
+                    "5.0.0",
+                    "5.0.0.1",
+                    "5.0.0.beta1",
+                    "5.0.0.beta1.1",
+                    "5.0.0.beta2",
+                    "5.0.0.beta3",
+                    "5.0.0.beta4",
+                    "5.0.0.racecar1",
+                    "5.0.0.rc1",
+                    "5.0.0.rc2",
+                    "5.0.1",
+                    "5.0.1.rc1",
+                    "5.0.1.rc2",
+                    "5.0.2",
+                    "5.0.2.rc1",
+                    "5.0.3",
+                    "5.0.4",
+                    "5.0.4.rc1",
+                    "5.0.5",
+                    "5.0.5.rc1",
+                    "5.0.5.rc2",
+                    "5.0.6",
+                    "5.0.6.rc1",
+                    "5.0.7",
+                    "5.0.7.1",
+                    "5.0.7.2",
+                    "5.1.0",
+                    "5.1.0.beta1",
+                    "5.1.0.rc1",
+                    "5.1.0.rc2",
+                    "5.1.1",
+                    "5.1.2",
+                    "5.1.2.rc1",
+                    "5.1.3",
+                    "5.1.3.rc1",
+                    "5.1.3.rc2",
+                    "5.1.3.rc3",
+                    "5.1.4",
+                    "5.1.4.rc1",
+                    "5.1.5",
+                    "5.1.5.rc1",
+                    "5.1.6",
+                    "5.1.6.1",
+                    "5.1.6.2",
+                    "5.1.7",
+                    "5.1.7.rc1",
+                    "5.2.0",
+                    "5.2.0.beta1",
+                    "5.2.0.beta2",
+                    "5.2.0.rc1",
+                    "5.2.0.rc2",
+                    "5.2.1",
+                    "5.2.1.1",
+                    "5.2.1.rc1",
+                    "5.2.2",
+                    "5.2.2.1",
+                    "5.2.2.rc1",
+                    "5.2.3",
+                    "5.2.3.rc1",
+                    "5.2.4",
+                    "5.2.4.1",
+                    "5.2.4.2",
+                    "5.2.4.3",
+                    "5.2.4.4",
+                    "5.2.4.5",
+                    "5.2.4.6",
+                    "5.2.4.rc1",
+                    "5.2.5",
+                    "5.2.6",
+                    "5.2.6.1",
+                    "5.2.6.2",
+                    "5.2.6.3",
+                    "5.2.7",
+                    "5.2.7.1",
+                    "5.2.8",
+                    "5.2.8.1",
+                    "6.0.0",
+                    "6.0.0.beta1",
+                    "6.0.0.beta2",
+                    "6.0.0.beta3",
+                    "6.0.0.rc1",
+                    "6.0.0.rc2",
+                    "6.0.1",
+                    "6.0.1.rc1",
+                    "6.0.2",
+                    "6.0.2.1",
+                    "6.0.2.2",
+                    "6.0.2.rc1",
+                    "6.0.2.rc2",
+                    "6.0.3",
+                    "6.0.3.1",
+                    "6.0.3.2",
+                    "6.0.3.3",
+                    "6.0.3.4",
+                    "6.0.3.5",
+                    "6.0.3.6",
+                    "6.0.3.7",
+                    "6.0.3.rc1",
+                    "6.0.4",
+                    "6.0.4.1",
+                    "6.0.4.2",
+                    "6.0.4.3",
+                    "6.0.4.4",
+                    "6.0.4.5",
+                    "6.0.4.6",
+                    "6.0.4.7",
+                    "6.0.4.8",
+                    "6.0.5",
+                    "6.0.5.1",
+                    "6.0.6",
+                    "6.0.6.1",
+                    "6.1.0",
+                    "6.1.0.rc1",
+                    "6.1.0.rc2",
+                    "6.1.1",
+                    "6.1.2",
+                    "6.1.2.1",
+                    "6.1.3",
+                    "6.1.3.1",
+                    "6.1.3.2",
+                    "6.1.4",
+                    "6.1.4.1",
+                    "6.1.4.2",
+                    "6.1.4.3",
+                    "6.1.4.4",
+                    "6.1.4.5",
+                    "6.1.4.6",
+                    "6.1.4.7",
+                    "6.1.5",
+                    "6.1.5.1",
+                    "6.1.6",
+                    "6.1.6.1",
+                    "6.1.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-j6gc-792m-qgm2/GHSA-j6gc-792m-qgm2.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.2.1",
+                    "7.0.2.2",
+                    "7.0.2.3",
+                    "7.0.2.4",
+                    "7.0.3",
+                    "7.0.3.1",
+                    "7.0.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-j6gc-792m-qgm2/GHSA-j6gc-792m-qgm2.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-22796"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/2164d4f6a1bde74b911fe9ba3c8df1b5bf345bf8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/commit/a7cda7e6aa5334ab41b1f4b0f671be931be946ef"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2023-22796-possible-redos-based-dos-vulnerability-in-active-supports-underscore/82116"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rails/rails"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/releases/tag/v6.1.7.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rails/rails/releases/tag/v7.0.4.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activesupport/CVE-2023-22796.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rubyonrails.org/2023/1/17/Rails-Versions-6-0-6-1-6-1-7-1-7-0-4-1-have-been-released"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-01-18T18:23:20Z",
+                "nvd_published_at": "2023-02-09T20:15:00Z",
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:53Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j96r-xvjq-r9pg",
+              "aliases": [
+                "CVE-2015-3227"
+              ],
+              "summary": "activesupport vulnerable to Denial of Service via large XML document depth",
+              "details": "The (1) `jdom.rb` and (2) `rexml.rb` components in Active Support in Ruby on Rails before 4.1.11 and 4.2.x before 4.2.2, when JDOM or REXML is enabled, allow remote attackers to cause a denial of service (SystemStackError) via a large XML document depth.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.1.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.6.pre",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.19",
+                    "3.0.2",
+                    "3.0.20",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.0.pre",
+                    "3.1.0",
+                    "3.1.0.beta1",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.0.rc3",
+                    "3.1.0.rc4",
+                    "3.1.0.rc5",
+                    "3.1.0.rc6",
+                    "3.1.0.rc8",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.2.0",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.10",
+                    "3.2.11",
+                    "3.2.12",
+                    "3.2.13",
+                    "3.2.13.rc1",
+                    "3.2.13.rc2",
+                    "3.2.14",
+                    "3.2.14.rc1",
+                    "3.2.14.rc2",
+                    "3.2.15",
+                    "3.2.15.rc1",
+                    "3.2.15.rc2",
+                    "3.2.15.rc3",
+                    "3.2.16",
+                    "3.2.17",
+                    "3.2.18",
+                    "3.2.19",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.20",
+                    "3.2.21",
+                    "3.2.22",
+                    "3.2.22.1",
+                    "3.2.22.2",
+                    "3.2.22.3",
+                    "3.2.22.4",
+                    "3.2.22.5",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3",
+                    "4.0.0",
+                    "4.0.0.beta1",
+                    "4.0.0.rc1",
+                    "4.0.0.rc2",
+                    "4.0.1",
+                    "4.0.1.rc1",
+                    "4.0.1.rc2",
+                    "4.0.1.rc3",
+                    "4.0.1.rc4",
+                    "4.0.10",
+                    "4.0.10.rc1",
+                    "4.0.10.rc2",
+                    "4.0.11",
+                    "4.0.11.1",
+                    "4.0.12",
+                    "4.0.13",
+                    "4.0.13.rc1",
+                    "4.0.2",
+                    "4.0.3",
+                    "4.0.4",
+                    "4.0.4.rc1",
+                    "4.0.5",
+                    "4.0.6",
+                    "4.0.6.rc1",
+                    "4.0.6.rc2",
+                    "4.0.6.rc3",
+                    "4.0.7",
+                    "4.0.8",
+                    "4.0.9",
+                    "4.1.0",
+                    "4.1.0.beta1",
+                    "4.1.0.beta2",
+                    "4.1.0.rc1",
+                    "4.1.0.rc2",
+                    "4.1.1",
+                    "4.1.10",
+                    "4.1.10.rc1",
+                    "4.1.10.rc2",
+                    "4.1.10.rc3",
+                    "4.1.10.rc4",
+                    "4.1.2",
+                    "4.1.2.rc1",
+                    "4.1.2.rc2",
+                    "4.1.2.rc3",
+                    "4.1.3",
+                    "4.1.4",
+                    "4.1.5",
+                    "4.1.6",
+                    "4.1.6.rc1",
+                    "4.1.6.rc2",
+                    "4.1.7",
+                    "4.1.7.1",
+                    "4.1.8",
+                    "4.1.9",
+                    "4.1.9.rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-j96r-xvjq-r9pg/GHSA-j96r-xvjq-r9pg.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.2.0"
+                        },
+                        {
+                          "fixed": "4.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.2.0",
+                    "4.2.1",
+                    "4.2.1.rc1",
+                    "4.2.1.rc2",
+                    "4.2.1.rc3",
+                    "4.2.1.rc4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-j96r-xvjq-r9pg/GHSA-j96r-xvjq-r9pg.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3227"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/forum/message/raw?msg=rubyonrails-security/bahr2JLnxvk/x4EocXnHPp8J"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20200228041703/http://www.securityfocus.com/bid/75234"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20200517005133/http://www.securitytracker.com/id/1033755"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2015-07/msg00050.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2015/06/16/16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2016/dsa-3464"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:42:52Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:09Z",
+              "published": "2023-03-15T21:36:01Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pj73-v5mw-pm9j",
+              "aliases": [
+                "CVE-2023-28120"
+              ],
+              "summary": "Possible XSS Security Vulnerability in SafeBuffer#bytesplice",
+              "details": "There is a vulnerability in ActiveSupport if the new bytesplice method is called on a SafeBuffer with untrusted user input.\nThis vulnerability has been assigned the CVE identifier CVE-2023-28120.\n\nVersions Affected: All. Not affected: None Fixed Versions: 7.0.4.3, 6.1.7.3\n\n# Impact\n\nActiveSupport uses the SafeBuffer string subclass to tag strings as html_safe after they have been sanitized.\nWhen these strings are mutated, the tag is should be removed to mark them as no longer being html_safe.\n\nRuby 3.2 introduced a new bytesplice method which ActiveSupport did not yet understand to be a mutation.\nUsers on older versions of Ruby are likely unaffected.\n\nAll users running an affected release and using bytesplice should either upgrade or use one of the workarounds immediately.\n\n# Workarounds\n\nAvoid calling bytesplice on a SafeBuffer (html_safe) string with untrusted user input.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.4.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.2.1",
+                    "7.0.2.2",
+                    "7.0.2.3",
+                    "7.0.2.4",
+                    "7.0.3",
+                    "7.0.3.1",
+                    "7.0.4",
+                    "7.0.4.1",
+                    "7.0.4.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-pj73-v5mw-pm9j/GHSA-pj73-v5mw-pm9j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "activesupport",
+                    "purl": "pkg:gem/activesupport"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.1.7.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.10",
+                    "2.3.11",
+                    "2.3.12",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.6.pre",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.8.pre1",
+                    "2.3.9",
+                    "2.3.9.pre",
+                    "3.0.0",
+                    "3.0.0.beta",
+                    "3.0.0.beta2",
+                    "3.0.0.beta3",
+                    "3.0.0.beta4",
+                    "3.0.0.rc",
+                    "3.0.0.rc2",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.10.rc1",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.12.rc1",
+                    "3.0.13",
+                    "3.0.13.rc1",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.19",
+                    "3.0.2",
+                    "3.0.20",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.rc1",
+                    "3.0.5",
+                    "3.0.5.rc1",
+                    "3.0.6",
+                    "3.0.6.rc1",
+                    "3.0.6.rc2",
+                    "3.0.7",
+                    "3.0.7.rc1",
+                    "3.0.7.rc2",
+                    "3.0.8",
+                    "3.0.8.rc1",
+                    "3.0.8.rc2",
+                    "3.0.8.rc4",
+                    "3.0.9",
+                    "3.0.9.rc1",
+                    "3.0.9.rc3",
+                    "3.0.9.rc4",
+                    "3.0.9.rc5",
+                    "3.0.pre",
+                    "3.1.0",
+                    "3.1.0.beta1",
+                    "3.1.0.rc1",
+                    "3.1.0.rc2",
+                    "3.1.0.rc3",
+                    "3.1.0.rc4",
+                    "3.1.0.rc5",
+                    "3.1.0.rc6",
+                    "3.1.0.rc8",
+                    "3.1.1",
+                    "3.1.1.rc1",
+                    "3.1.1.rc2",
+                    "3.1.1.rc3",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.2",
+                    "3.1.2.rc1",
+                    "3.1.2.rc2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.4.rc1",
+                    "3.1.5",
+                    "3.1.5.rc1",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.2.0",
+                    "3.2.0.rc1",
+                    "3.2.0.rc2",
+                    "3.2.1",
+                    "3.2.10",
+                    "3.2.11",
+                    "3.2.12",
+                    "3.2.13",
+                    "3.2.13.rc1",
+                    "3.2.13.rc2",
+                    "3.2.14",
+                    "3.2.14.rc1",
+                    "3.2.14.rc2",
+                    "3.2.15",
+                    "3.2.15.rc1",
+                    "3.2.15.rc2",
+                    "3.2.15.rc3",
+                    "3.2.16",
+                    "3.2.17",
+                    "3.2.18",
+                    "3.2.19",
+                    "3.2.2",
+                    "3.2.2.rc1",
+                    "3.2.20",
+                    "3.2.21",
+                    "3.2.22",
+                    "3.2.22.1",
+                    "3.2.22.2",
+                    "3.2.22.3",
+                    "3.2.22.4",
+                    "3.2.22.5",
+                    "3.2.3",
+                    "3.2.3.rc1",
+                    "3.2.3.rc2",
+                    "3.2.4",
+                    "3.2.4.rc1",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.7.rc1",
+                    "3.2.8",
+                    "3.2.8.rc1",
+                    "3.2.8.rc2",
+                    "3.2.9",
+                    "3.2.9.rc1",
+                    "3.2.9.rc2",
+                    "3.2.9.rc3",
+                    "4.0.0",
+                    "4.0.0.beta1",
+                    "4.0.0.rc1",
+                    "4.0.0.rc2",
+                    "4.0.1",
+                    "4.0.1.rc1",
+                    "4.0.1.rc2",
+                    "4.0.1.rc3",
+                    "4.0.1.rc4",
+                    "4.0.10",
+                    "4.0.10.rc1",
+                    "4.0.10.rc2",
+                    "4.0.11",
+                    "4.0.11.1",
+                    "4.0.12",
+                    "4.0.13",
+                    "4.0.13.rc1",
+                    "4.0.2",
+                    "4.0.3",
+                    "4.0.4",
+                    "4.0.4.rc1",
+                    "4.0.5",
+                    "4.0.6",
+                    "4.0.6.rc1",
+                    "4.0.6.rc2",
+                    "4.0.6.rc3",
+                    "4.0.7",
+                    "4.0.8",
+                    "4.0.9",
+                    "4.1.0",
+                    "4.1.0.beta1",
+                    "4.1.0.beta2",
+                    "4.1.0.rc1",
+                    "4.1.0.rc2",
+                    "4.1.1",
+                    "4.1.10",
+                    "4.1.10.rc1",
+                    "4.1.10.rc2",
+                    "4.1.10.rc3",
+                    "4.1.10.rc4",
+                    "4.1.11",
+                    "4.1.12",
+                    "4.1.12.rc1",
+                    "4.1.13",
+                    "4.1.13.rc1",
+                    "4.1.14",
+                    "4.1.14.1",
+                    "4.1.14.2",
+                    "4.1.14.rc1",
+                    "4.1.14.rc2",
+                    "4.1.15",
+                    "4.1.15.rc1",
+                    "4.1.16",
+                    "4.1.16.rc1",
+                    "4.1.2",
+                    "4.1.2.rc1",
+                    "4.1.2.rc2",
+                    "4.1.2.rc3",
+                    "4.1.3",
+                    "4.1.4",
+                    "4.1.5",
+                    "4.1.6",
+                    "4.1.6.rc1",
+                    "4.1.6.rc2",
+                    "4.1.7",
+                    "4.1.7.1",
+                    "4.1.8",
+                    "4.1.9",
+                    "4.1.9.rc1",
+                    "4.2.0",
+                    "4.2.0.beta1",
+                    "4.2.0.beta2",
+                    "4.2.0.beta3",
+                    "4.2.0.beta4",
+                    "4.2.0.rc1",
+                    "4.2.0.rc2",
+                    "4.2.0.rc3",
+                    "4.2.1",
+                    "4.2.1.rc1",
+                    "4.2.1.rc2",
+                    "4.2.1.rc3",
+                    "4.2.1.rc4",
+                    "4.2.10",
+                    "4.2.10.rc1",
+                    "4.2.11",
+                    "4.2.11.1",
+                    "4.2.11.2",
+                    "4.2.11.3",
+                    "4.2.2",
+                    "4.2.3",
+                    "4.2.3.rc1",
+                    "4.2.4",
+                    "4.2.4.rc1",
+                    "4.2.5",
+                    "4.2.5.1",
+                    "4.2.5.2",
+                    "4.2.5.rc1",
+                    "4.2.5.rc2",
+                    "4.2.6",
+                    "4.2.6.rc1",
+                    "4.2.7",
+                    "4.2.7.1",
+                    "4.2.7.rc1",
+                    "4.2.8",
+                    "4.2.8.rc1",
+                    "4.2.9",
+                    "4.2.9.rc1",
+                    "4.2.9.rc2",
+                    "5.0.0",
+                    "5.0.0.1",
+                    "5.0.0.beta1",
+                    "5.0.0.beta1.1",
+                    "5.0.0.beta2",
+                    "5.0.0.beta3",
+                    "5.0.0.beta4",
+                    "5.0.0.racecar1",
+                    "5.0.0.rc1",
+                    "5.0.0.rc2",
+                    "5.0.1",
+                    "5.0.1.rc1",
+                    "5.0.1.rc2",
+                    "5.0.2",
+                    "5.0.2.rc1",
+                    "5.0.3",
+                    "5.0.4",
+                    "5.0.4.rc1",
+                    "5.0.5",
+                    "5.0.5.rc1",
+                    "5.0.5.rc2",
+                    "5.0.6",
+                    "5.0.6.rc1",
+                    "5.0.7",
+                    "5.0.7.1",
+                    "5.0.7.2",
+                    "5.1.0",
+                    "5.1.0.beta1",
+                    "5.1.0.rc1",
+                    "5.1.0.rc2",
+                    "5.1.1",
+                    "5.1.2",
+                    "5.1.2.rc1",
+                    "5.1.3",
+                    "5.1.3.rc1",
+                    "5.1.3.rc2",
+                    "5.1.3.rc3",
+                    "5.1.4",
+                    "5.1.4.rc1",
+                    "5.1.5",
+                    "5.1.5.rc1",
+                    "5.1.6",
+                    "5.1.6.1",
+                    "5.1.6.2",
+                    "5.1.7",
+                    "5.1.7.rc1",
+                    "5.2.0",
+                    "5.2.0.beta1",
+                    "5.2.0.beta2",
+                    "5.2.0.rc1",
+                    "5.2.0.rc2",
+                    "5.2.1",
+                    "5.2.1.1",
+                    "5.2.1.rc1",
+                    "5.2.2",
+                    "5.2.2.1",
+                    "5.2.2.rc1",
+                    "5.2.3",
+                    "5.2.3.rc1",
+                    "5.2.4",
+                    "5.2.4.1",
+                    "5.2.4.2",
+                    "5.2.4.3",
+                    "5.2.4.4",
+                    "5.2.4.5",
+                    "5.2.4.6",
+                    "5.2.4.rc1",
+                    "5.2.5",
+                    "5.2.6",
+                    "5.2.6.1",
+                    "5.2.6.2",
+                    "5.2.6.3",
+                    "5.2.7",
+                    "5.2.7.1",
+                    "5.2.8",
+                    "5.2.8.1",
+                    "6.0.0",
+                    "6.0.0.beta1",
+                    "6.0.0.beta2",
+                    "6.0.0.beta3",
+                    "6.0.0.rc1",
+                    "6.0.0.rc2",
+                    "6.0.1",
+                    "6.0.1.rc1",
+                    "6.0.2",
+                    "6.0.2.1",
+                    "6.0.2.2",
+                    "6.0.2.rc1",
+                    "6.0.2.rc2",
+                    "6.0.3",
+                    "6.0.3.1",
+                    "6.0.3.2",
+                    "6.0.3.3",
+                    "6.0.3.4",
+                    "6.0.3.5",
+                    "6.0.3.6",
+                    "6.0.3.7",
+                    "6.0.3.rc1",
+                    "6.0.4",
+                    "6.0.4.1",
+                    "6.0.4.2",
+                    "6.0.4.3",
+                    "6.0.4.4",
+                    "6.0.4.5",
+                    "6.0.4.6",
+                    "6.0.4.7",
+                    "6.0.4.8",
+                    "6.0.5",
+                    "6.0.5.1",
+                    "6.0.6",
+                    "6.0.6.1",
+                    "6.1.0",
+                    "6.1.0.rc1",
+                    "6.1.0.rc2",
+                    "6.1.1",
+                    "6.1.2",
+                    "6.1.2.1",
+                    "6.1.3",
+                    "6.1.3.1",
+                    "6.1.3.2",
+                    "6.1.4",
+                    "6.1.4.1",
+                    "6.1.4.2",
+                    "6.1.4.3",
+                    "6.1.4.4",
+                    "6.1.4.5",
+                    "6.1.4.6",
+                    "6.1.4.7",
+                    "6.1.5",
+                    "6.1.5.1",
+                    "6.1.6",
+                    "6.1.6.1",
+                    "6.1.7",
+                    "6.1.7.1",
+                    "6.1.7.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-pj73-v5mw-pm9j/GHSA-pj73-v5mw-pm9j.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28120"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2023-28120-possible-xss-security-vulnerability-in-safebuffer-bytesplice/82469"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/activesupport/CVE-2023-28120.yml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-03-15T21:36:01Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h835-75hw-pj89"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-j6gc-792m-qgm2"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-j96r-xvjq-r9pg"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-pj73-v5mw-pm9j"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rake",
+            "version": "10.1.1",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:13Z",
+              "published": "2020-02-28T16:54:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jppv-gw3r-w3q8",
+              "aliases": [
+                "CVE-2020-8130"
+              ],
+              "summary": "OS Command Injection in Rake",
+              "details": "There is an OS command injection vulnerability in Ruby Rake before 12.3.3 in `Rake::FileList` when supplying a filename that begins with the pipe character `|`.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rake",
+                    "purl": "pkg:gem/rake"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "12.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.4.10",
+                    "0.4.11",
+                    "0.4.12",
+                    "0.4.13",
+                    "0.4.14",
+                    "0.4.15",
+                    "0.4.8",
+                    "0.4.9",
+                    "0.5.0",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.6.0",
+                    "0.6.2",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.9.0",
+                    "0.9.0.beta.0",
+                    "0.9.0.beta.1",
+                    "0.9.0.beta.2",
+                    "0.9.0.beta.4",
+                    "0.9.0.beta.5",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.2.2",
+                    "0.9.3",
+                    "0.9.3.beta.1",
+                    "0.9.3.beta.2",
+                    "0.9.3.beta.3",
+                    "0.9.3.beta.4",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "10.0.0",
+                    "10.0.0.beta.1",
+                    "10.0.0.beta.2",
+                    "10.0.1",
+                    "10.0.2",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.1.0",
+                    "10.1.0.beta.1",
+                    "10.1.0.beta.2",
+                    "10.1.0.beta.3",
+                    "10.1.1",
+                    "10.2.0",
+                    "10.2.1",
+                    "10.2.2",
+                    "10.3.0",
+                    "10.3.1",
+                    "10.3.2",
+                    "10.4.0",
+                    "10.4.1",
+                    "10.4.2",
+                    "10.5.0",
+                    "11.0.1",
+                    "11.1.0",
+                    "11.1.1",
+                    "11.1.2",
+                    "11.2.0",
+                    "11.2.2",
+                    "11.3.0",
+                    "12.0.0",
+                    "12.0.0.beta1",
+                    "12.1.0",
+                    "12.2.0",
+                    "12.2.1",
+                    "12.3.0",
+                    "12.3.1",
+                    "12.3.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.3.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-jppv-gw3r-w3q8/GHSA-jppv-gw3r-w3q8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8130"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rake/commit/5b8f8fc41a5d7d7d6a5d767e48464c60884d3aee"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/651518"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jppv-gw3r-w3q8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rake"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rake/CVE-2020-8130.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/02/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/523CLQ62VRN3VVC52KMPTROCCKY4Z36B/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VXMX4ARNX2JLRJMSH4N3J3UBMUT5CI44/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4295-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-02-25T15:50:03Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jppv-gw3r-w3q8"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

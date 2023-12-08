@@ -1,0 +1,91 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:50:27Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.square/cubism",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.square-cubism"
+    ],
+    "documentNamespace": "https://github.com/square/cubism/dependency_graph/sbom-9f53fa5b9b3c0be4",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.square-cubism",
+            "name": "com.github.square/cubism",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/square/cubism",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/square/cubism"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-d3",
+            "name": "npm:d3",
+            "versionInfo": "~> 3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js-2.6.0",
+            "name": "npm:uglify-js",
+            "versionInfo": "2.6.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "BSD-2-Clause",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/uglify-js@2.6.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-vows-0.6.1",
+            "name": "npm:vows",
+            "versionInfo": "0.6.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/vows@0.6.1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cubism",
+            "relatedSpdxElement": "SPDXRef-npm-d3"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cubism",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js-2.6.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.square-cubism",
+            "relatedSpdxElement": "SPDXRef-npm-vows-0.6.1"
+        }
+    ]
+}

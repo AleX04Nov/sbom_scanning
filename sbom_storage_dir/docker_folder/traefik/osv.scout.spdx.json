@@ -1,0 +1,2311 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/scout.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/aws/aws-sdk-go",
+            "version": "1.44.327",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:19Z",
+              "published": "2022-02-11T23:26:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0646",
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9"
+              ],
+              "summary": "Use of risky cryptographic algorithm in github.com/aws/aws-sdk-go",
+              "details": "The Go AWS S3 Crypto SDK contains vulnerabilities that can permit an attacker with write access to a bucket to decrypt files in that bucket.\n\nFiles encrypted by the V1 EncryptionClient using either the AES-CBC content cipher or the KMS key wrap algorithm are vulnerable. Users should migrate to the V1 EncryptionClientV2 API, which will not create vulnerable files. Old files will remain vulnerable until re-encrypted with the new client.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aws/aws-sdk-go",
+                    "purl": "pkg:golang/github.com/aws/aws-sdk-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0646.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aws/aws-sdk-go/service/s3/s3crypto",
+                        "symbols": [
+                          "NewDecryptionClient",
+                          "NewEncryptionClient"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://aws.amazon.com/blogs/developer/updates-to-the-amazon-s3-encryption-client/?s=09"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/pull/3403"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/commit/ae9b9fd92af132cfd8d879809d8611825ba135f4"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Sophie Schmieg from the Google ISE team"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2022-0646"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2022-0646"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/docker/docker",
+            "version": "20.10.21+incompatible",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:12:15Z",
+              "published": "2023-04-04T21:13:06Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-232p-vwff-86mp",
+              "aliases": [
+                "CVE-2023-28840",
+                "CVE-2023-28841",
+                "CVE-2023-28842",
+                "GHSA-33pg-m6jh-5237",
+                "GHSA-6wrf-mxfj-pf5p",
+                "GHSA-gvm4-2qqg-m333",
+                "GHSA-vwm3-crmr-xfxw"
+              ],
+              "summary": "Docker Swarm encrypted overlay network may be unauthenticated",
+              "details": "[Moby](https://mobyproject.org/) is an open source container framework developed by Docker Inc. that is distributed as Docker, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (`dockerd`), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as *Docker*.\n\nSwarm Mode, which is compiled in and delivered by default in `dockerd` and is thus present in most major Moby downstreams, is a simple, built-in container orchestrator that is implemented through a combination of [SwarmKit](https://github.com/moby/swarmkit) and supporting network code.\n\nThe `overlay` network driver is a core feature of Swarm Mode, providing isolated virtual LANs that allow communication between containers and services across the cluster. This driver is an implementation/user of [VXLAN](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN), which encapsulates link-layer (Ethernet) frames in UDP datagrams that tag the frame with a VXLAN Network ID (VNI) that identifies the originating overlay network. In addition, the overlay network driver supports an optional, off-by-default encrypted mode, which is especially useful when VXLAN packets traverses an untrusted network between nodes.\n\nEncrypted overlay networks function by encapsulating the VXLAN datagrams through the use of the [IPsec Encapsulating Security Payload](https://en.wikipedia.org/wiki/IPsec#Encapsulating_Security_Payload) protocol in [Transport mode](https://en.wikipedia.org/wiki/IPsec#Transport_mode). By deploying IPSec encapsulation, encrypted overlay networks gain the additional properties of source authentication through cryptographic proof, data integrity through check-summing, and confidentiality through encryption.\n\nWhen setting an endpoint up on an encrypted overlay network, Moby installs three [iptables](https://www.netfilter.org/projects/iptables/index.html) (Linux kernel firewall) rules that enforce both incoming and outgoing IPSec. These rules rely on the `u32` iptables extension provided by the `xt_u32` kernel module to directly filter on a VXLAN packet's VNI field, so that IPSec guarantees can be enforced on encrypted overlay networks without interfering with other overlay networks or other users of VXLAN.\n\n[Two iptables rules](https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L230-L234) serve to filter incoming VXLAN datagrams with a VNI that corresponds to an encrypted network and discards unencrypted datagrams. The rules are appended to the end of the `INPUT` filter chain, following any rules that have been previously set by the system administrator. Administrator-set rules take precedence over the rules Moby sets to discard unencrypted VXLAN datagrams, which can potentially admit unencrypted datagrams that should have been discarded.\n\nOn Red Hat Enterprise Linux and derivatives such as CentOS and Rocky, the `xt_u32` module has been:\n* [moved to the kernel-modules-extra package and no longer installed by default in RHEL 8.3](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.3_release_notes/rhel-8-3-0-release#technology-preview_networking)\n* [officially deprecated in RHEL 8.6](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.6_release_notes/deprecated_functionality#deprecated-functionality_networking)\n* [removed completely in RHEL 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/considerations_in_adopting_rhel_9/assembly_networking_considerations-in-adopting-rhel-9#ref_firewall-networking_assembly_networking)\n\nThese rules are not created when `xt_u32` is unavailable, even though the container is still attached to the network.\n\n## Impact\nEncrypted overlay networks on affected configurations silently accept cleartext VXLAN datagrams that are tagged with the VNI of an encrypted overlay network. As a result, it is possible to inject arbitrary Ethernet frames into the encrypted overlay network by encapsulating them in VXLAN datagrams.\n\nThe injection of arbitrary Ethernet frames can enable a Denial of Service attack. A sophisticated attacker may be able to establish a UDP or TCP connection by way of the container’s outbound gateway that would otherwise be blocked by a stateful firewall, or carry out other escalations beyond simple injection by smuggling packets into the overlay network.\n\n## Patches\nPatches are available in Moby releases 23.0.3, and 20.10.24. As Mirantis Container Runtime's 20.10 releases are numbered differently, users of that platform should update to 20.10.16.\n\n## Workarounds\n* Close the VXLAN port (by default, UDP port 4789) to incoming traffic at the Internet boundary (see [GHSA-vwm3-crmr-xfxw](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)) to prevent all VXLAN packet injection.\n* Ensure that the `xt_u32` kernel module is available on all nodes of the Swarm cluster.\n\n## Background\n* [#43382](https://github.com/moby/moby/issues/43382) partially discussed this concern, but did not consider the security implications.\n* Mirantis FIELD-5788 essentially duplicates [#43382](https://github.com/moby/moby/issues/43382), and was created six months earlier; it similarly overlooked the security implications.\n* [#45118](https://github.com/moby/moby/pull/45118) is the ancestor of the final patches, and was where the security implications were discovered.\n\n## Related\n* [CVE-2023-28841: Encrypted overlay network traffic may be unencrypted](https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237)\n* [CVE-2023-28842: Encrypted overlay network with a single endpoint is unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p)\n* [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)\n* [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "20.10.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-232p-vwff-86mp/GHSA-232p-vwff-86mp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "23.0.0"
+                        },
+                        {
+                          "fixed": "23.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-232p-vwff-86mp/GHSA-232p-vwff-86mp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28840"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/issues/43382"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/pull/45118"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-420",
+                  "CWE-636"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:13:06Z",
+                "nvd_published_at": "2023-04-04T22:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:15Z",
+              "published": "2023-04-04T21:12:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-33pg-m6jh-5237",
+              "aliases": [
+                "CVE-2023-28840",
+                "CVE-2023-28841",
+                "CVE-2023-28842",
+                "GHSA-232p-vwff-86mp",
+                "GHSA-6wrf-mxfj-pf5p",
+                "GHSA-gvm4-2qqg-m333",
+                "GHSA-vwm3-crmr-xfxw"
+              ],
+              "summary": "Docker Swarm encrypted overlay network traffic may be unencrypted",
+              "details": "[Moby](https://mobyproject.org/) is an open source container framework developed by Docker Inc. that is distributed as Docker, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (`dockerd`), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as *Docker*.\n\nSwarm Mode, which is compiled in and delivered by default in `dockerd` and is thus present in most major Moby downstreams, is a simple, built-in container orchestrator that is implemented through a combination of [SwarmKit](https://github.com/moby/swarmkit) and supporting network code.\n\nThe `overlay` network driver is a core feature of Swarm Mode, providing isolated virtual LANs that allow communication between containers and services across the cluster. This driver is an implementation/user of [VXLAN](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN), which encapsulates link-layer (Ethernet) frames in UDP datagrams that tag the frame with a VXLAN Network ID (VNI) that identifies the originating overlay network. In addition, the overlay network driver supports an optional, off-by-default encrypted mode, which is especially useful when VXLAN packets traverses an untrusted network between nodes.\n\nEncrypted overlay networks function by encapsulating the VXLAN datagrams through the use of the [IPsec Encapsulating Security Payload](https://en.wikipedia.org/wiki/IPsec#Encapsulating_Security_Payload) protocol in [Transport mode](https://en.wikipedia.org/wiki/IPsec#Transport_mode). By deploying IPSec encapsulation, encrypted overlay networks gain the additional properties of source authentication through cryptographic proof, data integrity through check-summing, and confidentiality through encryption.\n\nWhen setting an endpoint up on an encrypted overlay network, Moby installs three [iptables](https://www.netfilter.org/projects/iptables/index.html) (Linux kernel firewall) rules that enforce both incoming and outgoing IPSec. These rules rely on the `u32` iptables extension provided by the `xt_u32` kernel module to directly filter on a VXLAN packet's VNI field, so that IPSec guarantees can be enforced on encrypted overlay networks without interfering with other overlay networks or other users of VXLAN.\n\nAn [iptables rule](https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L205-L207) designates outgoing VXLAN datagrams with a VNI that corresponds to an encrypted overlay network for IPsec encapsulation.\n\nOn Red Hat Enterprise Linux and derivatives such as CentOS and Rocky, the `xt_u32` module has been:\n* [moved to the kernel-modules-extra package and no longer installed by default in RHEL 8.3](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.3_release_notes/rhel-8-3-0-release#technology-preview_networking)\n* [officially deprecated in RHEL 8.6](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.6_release_notes/deprecated_functionality#deprecated-functionality_networking)\n* [removed completely in RHEL 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/considerations_in_adopting_rhel_9/assembly_networking_considerations-in-adopting-rhel-9#ref_firewall-networking_assembly_networking)\n\nThis rule is not created when `xt_u32` is unavailable, even though the container is still attached to the network.\n\n## Impact\nEncrypted overlay networks on affected platforms silently transmit unencrypted data. As a result, `overlay` networks may appear to be functional, passing traffic as expected, but without any of the expected confidentiality or data integrity guarantees.\n\nIt is possible for an attacker sitting in a trusted position on the network to read all of the application traffic that is moving across the overlay network, resulting in unexpected secrets or user data disclosure. Thus, because many database protocols, internal APIs, etc. are not protected by a second layer of encryption, a user may rely on Swarm encrypted overlay networks to provide confidentiality, which due to this vulnerability is no longer guaranteed.\n\n## Patches\nPatches are available in Moby releases 23.0.3, and 20.10.24. As Mirantis Container Runtime's 20.10 releases are numbered differently, users of that platform should update to 20.10.16.\n\n## Workarounds\n* Close the VXLAN port (by default, UDP port 4789) to outgoing traffic at the Internet boundary (see [GHSA-vwm3-crmr-xfxw](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)) in order to prevent unintentionally leaking unencrypted traffic over the Internet.\n* Ensure that the `xt_u32` kernel module is available on all nodes of the Swarm cluster.\n\n## Background\n* [#43382 ](https://github.com/moby/moby/issues/43382)partially discussed this concern, but did not consider the security implications.\n* Mirantis FIELD-5788 essentially duplicates [#43382](https://github.com/moby/moby/issues/43382), and was created six months earlier; it similarly overlooked the security implications.\n* [#45118](https://github.com/moby/moby/pull/45118) is the ancestor of the final patches, and was where the security implications were discovered.\n\n## Related\n* [CVE-2023-28840: Encrypted overlay network may be unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp)\n* [CVE-2023-28842: Encrypted overlay network with a single endpoint is unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p)\n* [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)\n* [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "20.10.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-33pg-m6jh-5237/GHSA-33pg-m6jh-5237.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "23.0.0"
+                        },
+                        {
+                          "fixed": "23.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-33pg-m6jh-5237/GHSA-33pg-m6jh-5237.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28841"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/issues/43382"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/pull/45118"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L205-L207"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-311",
+                  "CWE-636"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:12:20Z",
+                "nvd_published_at": "2023-04-04T22:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:15Z",
+              "published": "2023-04-04T21:11:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6wrf-mxfj-pf5p",
+              "aliases": [
+                "CVE-2023-28840",
+                "CVE-2023-28841",
+                "CVE-2023-28842",
+                "GHSA-232p-vwff-86mp",
+                "GHSA-33pg-m6jh-5237",
+                "GHSA-gvm4-2qqg-m333",
+                "GHSA-vwm3-crmr-xfxw"
+              ],
+              "summary": "Docker Swarm encrypted overlay network with a single endpoint is unauthenticated",
+              "details": "[Moby](https://mobyproject.org/) is an open source container framework developed by Docker Inc. that is distributed as Docker, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (`dockerd`), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as *Docker*.\n\nSwarm Mode, which is compiled in and delivered by default in `dockerd` and is thus present in most major Moby downstreams, is a simple, built-in container orchestrator that is implemented through a combination of [SwarmKit](https://github.com/moby/swarmkit) and supporting network code.\n\nThe `overlay` network driver is a core feature of Swarm Mode, providing isolated virtual LANs that allow communication between containers and services across the cluster. This driver is an implementation/user of [VXLAN](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN), which encapsulates link-layer (Ethernet) frames in UDP datagrams that tag the frame with a VXLAN Network ID (VNI) that identifies the originating overlay network. In addition, the overlay network driver supports an optional, off-by-default encrypted mode, which is especially useful when VXLAN packets traverses an untrusted network between nodes.\n\nEncrypted overlay networks function by encapsulating the VXLAN datagrams through the use of the [IPsec Encapsulating Security Payload](https://en.wikipedia.org/wiki/IPsec#Encapsulating_Security_Payload) protocol in [Transport mode](https://en.wikipedia.org/wiki/IPsec#Transport_mode). By deploying IPSec encapsulation, encrypted overlay networks gain the additional properties of source authentication through cryptographic proof, data integrity through check-summing, and confidentiality through encryption.\n\nWhen setting an endpoint up on an encrypted overlay network, Moby installs three [iptables](https://www.netfilter.org/projects/iptables/index.html) (Linux kernel firewall) rules that enforce both incoming and outgoing IPSec. These rules rely on the `u32` iptables extension provided by the `xt_u32` kernel module to directly filter on a VXLAN packet's VNI field, so that IPSec guarantees can be enforced on encrypted overlay networks without interfering with other overlay networks or other users of VXLAN.\n\nThe `overlay` driver dynamically and lazily defines the kernel configuration for the VXLAN network on each node as containers are attached and detached. Routes and encryption parameters are only defined for destination nodes that participate in the network. The iptables rules that prevent encrypted overlay networks from accepting unencrypted packets are not created until a peer is available with which to communicate.\n\n## Impact\nEncrypted overlay networks silently accept cleartext VXLAN datagrams that are tagged with the VNI of an encrypted overlay network. As a result, it is possible to inject arbitrary Ethernet frames into the encrypted overlay network by encapsulating them in VXLAN datagrams. The implications of this can be quite dire, and [GHSA-vwm3-crmr-xfxw](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw) should be referenced for a deeper exploration.\n\n## Patches\nPatches are available in Moby releases 23.0.3, and 20.10.24. As Mirantis Container Runtime's 20.10 releases are numbered differently, users of that platform should update to 20.10.16.\n\n## Workarounds\n* In multi-node clusters, deploy a global ‘pause’ container for each encrypted overlay network, on every node. For example, use the `registry.k8s.io/pause` image and a `--mode global` service.\n* For a single-node cluster, do not use overlay networks of any sort. Bridge networks provide the same connectivity on a single node and have no multi-node features.\nThe Swarm ingress feature is implemented using an overlay network, but can be disabled by publishing ports in `host` mode instead of `ingress` mode (allowing the use of an external load balancer), and removing the `ingress` network.\n* If encrypted overlay networks are in exclusive use, block UDP port 4789 from traffic that has not been validated by IPSec. For example, `iptables -A INPUT -m udp —-dport 4789 -m policy --dir in --pol none -j DROP`.\n\n## Background\n* This issue was discovered while characterizing and mitigating [CVE-2023-28840](https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp) and [CVE-2023-28841](https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237).\n\n## Related\n* [CVE-2023-28841: Encrypted overlay network traffic may be unencrypted](https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237)\n* [CVE-2023-28840: Encrypted overlay network may be unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp)\n* [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)\n* [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "20.10.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-6wrf-mxfj-pf5p/GHSA-6wrf-mxfj-pf5p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "23.0.0"
+                        },
+                        {
+                          "fixed": "23.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-6wrf-mxfj-pf5p/GHSA-6wrf-mxfj-pf5p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28842"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-420",
+                  "CWE-636"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:11:24Z",
+                "nvd_published_at": "2023-04-04T22:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-10-30T15:25:44Z",
+              "published": "2023-10-30T15:25:44Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jq35-85cj-fj4p",
+              "summary": "/sys/devices/virtual/powercap accessible by default to containers",
+              "details": "Intel's RAPL (Running Average Power Limit) feature, introduced by the Sandy Bridge microarchitecture, provides software insights into hardware energy consumption. To facilitate this, Intel introduced the powercap framework in Linux kernel 3.13, which reads values via relevant MSRs (model specific registers) and provides unprivileged userspace access via `sysfs`. As RAPL is an interface to access a hardware feature, it is only available when running on bare metal with the module compiled into the kernel.\n\nBy 2019, it was realized that in some cases unprivileged access to RAPL readings could be exploited as a power-based side-channel against security features including AES-NI (potentially inside a SGX enclave) and KASLR (kernel address space layout randomization). Also known as the [PLATYPUS attack](https://platypusattack.com/), Intel assigned [CVE-2020-8694](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8694) and [CVE-2020-8695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8695), and AMD assigned [CVE-2020-12912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12912).\n\nSeveral mitigations were applied; Intel reduced the sampling resolution via a microcode update, and the Linux kernel [prevents access by non-root users](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=949dd0104c496fa7c14991a23c03c62e44637e71) since 5.10. However, this kernel-based mitigation does not apply to many container-based scenarios:\n* Unless using user namespaces, root inside a container has the same level of privilege as root outside the container, but with a slightly more narrow view of the system\n* `sysfs` is mounted inside containers read-only; however only read access is needed to carry out this attack on an unpatched CPU\n\nWhile this is not a direct vulnerability in container runtimes, defense in depth and safe defaults are valuable and preferred, especially as this poses a risk to multi-tenant container environments running directly on affected hardware. This is provided by masking `/sys/devices/virtual/powercap` in the default mount configuration, and adding an additional set of rules to deny it in the default AppArmor profile.\n\nWhile `sysfs` is not the only way to read from the RAPL subsystem, other ways of accessing it require additional capabilities such as `CAP_SYS_RAWIO` which is not available to containers by default, or `perf` paranoia level less than 1, which is a non-default kernel tunable.\n\n## References\n\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8694\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8695\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12912\n* https://platypusattack.com/\n* https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=949dd0104c496fa7c14991a23c03c62e44637e71\n* https://web.eece.maine.edu/~vweaver/projects/rapl/",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "24.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-jq35-85cj-fj4p/GHSA-jq35-85cj-fj4p.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-jq35-85cj-fj4p"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-30T15:25:44Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-232p-vwff-86mp",
+                "GHSA-33pg-m6jh-5237",
+                "GHSA-6wrf-mxfj-pf5p"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-jq35-85cj-fj4p"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/go-jose/go-jose/v3",
+            "version": "3.0.0",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-29T23:26:34Z",
+              "published": "2023-11-21T22:17:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2c7c-3mj9-8fqh",
+              "aliases": [
+                "GO-2023-2334"
+              ],
+              "summary": "Decryption of malicious PBES2 JWE objects can consume unbounded system resources",
+              "details": "The go-jose package is subject to a \"billion hashes attack\" causing denial-of-service when decrypting JWE inputs. This occurs when an attacker can provide a PBES2 encrypted JWE blob with a very large p2c value that, when decrypted, produces a denial-of-service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/go-jose/go-jose/v3",
+                    "purl": "pkg:golang/github.com/go-jose/go-jose/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-2c7c-3mj9-8fqh/GHSA-2c7c-3mj9-8fqh.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/square/go-jose",
+                    "purl": "pkg:golang/github.com/square/go-jose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-2c7c-3mj9-8fqh/GHSA-2c7c-3mj9-8fqh.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/go-jose/go-jose/issues/64"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/go-jose/go-jose/commit/65351c27657d58960c2e6c9fbb2b00f818e50568"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/go-jose/go-jose"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-21T22:17:19Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-29T23:26:34Z",
+              "published": "2023-11-21T15:39:17Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2334",
+              "aliases": [
+                "GHSA-2c7c-3mj9-8fqh"
+              ],
+              "summary": "Decryption of malicious PBES2 JWE objects can consume unbounded system resources",
+              "details": "The go-jose package is subject to a \"billion hashes attack\" causing denial-of-service when decrypting JWE inputs. This occurs when an attacker can provide a PBES2 encrypted JWE blob with a very large p2c value that, when decrypted, produces a denial-of-service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/go-jose/go-jose/v3",
+                    "purl": "pkg:golang/github.com/go-jose/go-jose/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2334.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/go-jose/go-jose/v3",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "symmetricKeyCipher.decryptKey"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/square/go-jose",
+                    "purl": "pkg:golang/github.com/square/go-jose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2334.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/square/go-jose",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "symmetricKeyCipher.decryptKey"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/go-jose/go-jose/commit/65351c27657d58960c2e6c9fbb2b00f818e50568"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/go-jose/go-jose/issues/64"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2334"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2c7c-3mj9-8fqh",
+                "GO-2023-2334"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/traefik/traefik/v2",
+            "version": "0.0.0-20231128144610-dae0491b612a",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:30Z",
+              "published": "2022-02-11T23:19:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6qq8-5wq3-86rp",
+              "aliases": [
+                "CVE-2020-15129"
+              ],
+              "summary": "Traefik vulnerable to Open Redirect via handling of X-Forwarded-Prefix header",
+              "details": "## Summary\n\nThere exists a potential open redirect vulnerability in Traefik's handling of the `X-Forwarded-Prefix` header. Active Exploitation of this issue is unlikely as it would require active header injection, however the Traefik team addressed this issue nonetheless to prevent abuse in e.g. cache poisoning scenarios.\n\n## Details\n\nThe Traefik API dashboard component doesn't validate that the value of the header `X-Forwarded-Prefix` is a site relative path and will redirect to any header provided URI.\n\ne.g.\n\n```\n$ curl --header 'Host:traefik.localhost' --header 'X-Forwarded-Prefix:https://example.org' 'http://localhost:8081'\n\u003ca href=\"https://example.org/dashboard/\"\u003eFound\u003c/a\u003e.`\n```\n\n### Impact\nA successful exploitation of an open redirect can be used to entice victims to disclose sensitive information.\n\n### Workarounds\n\nBy using the `headers` middleware, the request header `X-Forwarded-Prefix` value can be overridden by the value `.` (dot)\n\n- https://docs.traefik.io/v2.2/middlewares/headers/#customrequestheaders\n- https://docs.traefik.io/v1.7/basics/#custom-headers\n\n### For more information\n\nIf you have any questions or comments about this advisory, open an issue in [Traefik](https://github.com/containous/traefik/issues).\n\n## Credit\n\nThis issue was found by the GitHub Application Security Team and reported on behalf of the GHAS by the GitHub Security Lab Team.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik",
+                    "purl": "pkg:golang/github.com/traefik/traefik"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.5.0-rc5"
+                        },
+                        {
+                          "fixed": "1.7.26"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0-rc6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 2.2.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/containous/traefik",
+                    "purl": "pkg:golang/github.com/containous/traefik"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.5.0-rc5"
+                        },
+                        {
+                          "fixed": "1.7.26"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/containous/traefik/v2",
+                    "purl": "pkg:golang/github.com/containous/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.3.0-rc1"
+                        },
+                        {
+                          "fixed": "2.3.0-rc6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 2.3.0-rc3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/containous/traefik/v2",
+                    "purl": "pkg:golang/github.com/containous/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.3.0-rc1"
+                        },
+                        {
+                          "fixed": "2.3.0-rc3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/api",
+                    "purl": "pkg:golang/github.com/traefik/traefik/api"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.5.0-rc5"
+                        },
+                        {
+                          "fixed": "1.7.26"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2/pkg/api",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2/pkg/api"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0-rc6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 2.2.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2/pkg/api",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2/pkg/api"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.3.0-rc1"
+                        },
+                        {
+                          "fixed": "2.3.0-rc6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 2.3.0-rc3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/containous/traefik/api",
+                    "purl": "pkg:golang/github.com/containous/traefik/api"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.5.0-rc5"
+                        },
+                        {
+                          "fixed": "1.7.26"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/containous/traefik/v2/pkg/api",
+                    "purl": "pkg:golang/github.com/containous/traefik/v2/pkg/api"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/containous/traefik/v2/pkg/api",
+                    "purl": "pkg:golang/github.com/containous/traefik/v2/pkg/api"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.3.0-rc1"
+                        },
+                        {
+                          "fixed": "2.3.0-rc3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-6qq8-5wq3-86rp/GHSA-6qq8-5wq3-86rp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/security/advisories/GHSA-6qq8-5wq3-86rp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15129"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/pull/7109"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/commit/cfa04c300c5db95ae8a52c31a9d973b6dd9c2254"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/commit/e63db782c11c7b8bfce30be4c902e7ef8f9f33d2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/commit/e2c5f3712f68993de8ed3cb30da9ec0aa11acb09"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/releases/tag/v1.7.26"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/releases/tag/v2.2.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/releases/tag/v2.3.0-rc3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-05-24T18:21:00Z",
+                "nvd_published_at": "2020-07-30T16:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:31Z",
+              "published": "2021-09-02T22:00:09Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q9mp-79cp-9g8j",
+              "aliases": [
+                "CVE-2019-20894"
+              ],
+              "summary": "Improper Authentication",
+              "details": "Traefik 2.x, in certain configurations, allows HTTPS sessions to proceed without mutual TLS verification in a situation where ERR_BAD_SSL_CLIENT_AUTH_CERT should have occurred.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-q9mp-79cp-9g8j/GHSA-q9mp-79cp-9g8j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-20894"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/issues/5312"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/pull/7008"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/containous/traefik/commit/2b353971696717e980521b0e4baa1eba66c8d2bf"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-287",
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-02T22:18:22Z",
+                "nvd_published_at": "2020-07-02T16:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:06:01Z",
+              "published": "2021-08-05T17:04:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m697-4v8f-55qg",
+              "aliases": [
+                "CVE-2021-32813"
+              ],
+              "summary": "Header dropping in traefik",
+              "details": "# Impact\n\nThere exists a potential header vulnerability in Traefik's handling of the Connection header. Active exploitation of this issue is unlikely, as it requires that a removed header would lead to a privilege escalation, however, the Traefik team has addressed this issue to prevent any potential abuse.\n\n# Details\n\nIf you have a chain of Traefik middlewares, and one of them sets a request header `Important-Security-Header`, then sending a request with the following Connection header will cause it to be removed before the request was sent:\n\n```\ncurl 'https://example.com' -H \"Connection: Important-Security-Header\" -0\n```\n\nIn this case, the backend does not see the request header `Important-Security-Header`.\n\n# Patches\n\nTraefik v2.4.x: https://github.com/traefik/traefik/releases/tag/v2.4.13\n\n# Workarounds\n\nNo.\n\n# For more information\n\nIf you have any questions or comments about this advisory, [open an issue](https://github.com/traefik/traefik/issues).\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.4.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-m697-4v8f-55qg/GHSA-m697-4v8f-55qg.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik",
+                    "purl": "pkg:golang/github.com/traefik/traefik"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.7.30"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-m697-4v8f-55qg/GHSA-m697-4v8f-55qg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-m697-4v8f-55qg"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32813"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/pull/8319/commits/cbaf86a93014a969b8accf39301932c17d0d73f9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.4.13"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "github.com/traefik/traefik"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-913"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-04T18:54:19Z",
+                "nvd_published_at": "2021-08-03T23:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:25Z",
+              "published": "2022-02-16T22:30:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hrhx-6h34-j5hc",
+              "aliases": [
+                "CVE-2022-23632"
+              ],
+              "summary": "Skip the router TLS configuration when the host header is an FQDN",
+              "details": "### Impact\n\nPeople that configure mTLS between Traefik and clients.\n\nFor a request, the TLS configuration choice can be different than the router choice, which implies the use of a wrong TLS configuration.\n\n- When sending a request using FQDN handled by a router configured with a dedicated TLS configuration, the TLS configuration falls back to the default configuration that might not correspond to the configured one.\n\n- If the CNAME flattening is enabled, the selected TLS configuration is the SNI one and the routing uses the CNAME value, so this can skip the expected TLS configuration.\n\n### Patches\n\nTraefik v2.6.x: https://github.com/traefik/traefik/releases/tag/v2.6.1\n\n### Workarounds\n\nAdd the FDQN to the host rule:\n\nExample:\n\n```yml\n  whoami:\n    image: traefik/whoami:v1.7.1\n    labels:\n      traefik.http.routers.whoami.rule: Host(`whoami.example.com`, `whoami.example.com.`)\n      traefik.http.routers.whoami.tls: true\n      traefik.http.routers.whoami.tls.options: mtls@file\n```\n\nThere is no workaround if the CNAME flattening is enabled.\n\n### For more information\n\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/traefik/traefik/issues).\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-hrhx-6h34-j5hc/GHSA-hrhx-6h34-j5hc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-hrhx-6h34-j5hc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23632"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/pull/8764"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.6.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-02-16T22:30:57Z",
+                "nvd_published_at": "2022-02-17T15:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:17Z",
+              "published": "2022-10-10T21:23:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c6hx-pjc3-7fqr",
+              "aliases": [
+                "CVE-2022-39271"
+              ],
+              "summary": "Traefik HTTP/2 connections management could cause a denial of service",
+              "details": "### Impact\n\nThere is a potential vulnerability in Traefik managing HTTP/2 connections.\nA closing HTTP/2 server connection could hang forever because of a subsequent fatal error. This failure mode could be exploited to cause a denial of service.\n\n### Patches\n\nTraefik v2.8.x: https://github.com/traefik/traefik/releases/tag/v2.8.8\nTraefik v2.9.x: https://github.com/traefik/traefik/releases/tag/v2.9.0-rc5\n\n### Workarounds\n\nNo workaround.\n\n### For more information\n\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/traefik/traefik/issues).\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.8.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-c6hx-pjc3-7fqr/GHSA-c6hx-pjc3-7fqr.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.9.0-rc1"
+                        },
+                        {
+                          "fixed": "2.9.0-rc5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-c6hx-pjc3-7fqr/GHSA-c6hx-pjc3-7fqr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-c6hx-pjc3-7fqr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39271"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.8.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.9.0-rc5"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-755"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-10-10T21:23:30Z",
+                "nvd_published_at": "2022-10-11T14:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:55Z",
+              "published": "2022-12-08T16:11:12Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-468w-8x39-gj5v",
+              "aliases": [
+                "CVE-2022-46153"
+              ],
+              "summary": "Traefik routes exposed with an empty TLSOption",
+              "details": "## Impact\n\nThere is a potential vulnerability in Traefik managing the TLS connections.\n\nA router configured with a not well-formatted [TLSOption](https://doc.traefik.io/traefik/v2.9/https/tls/#tls-options) is exposed with an empty TLSOption.\n\nFor instance, a route secured using an mTLS connection set with a wrong CA file is exposed without verifying the client certificates.\n\n## Patches\n\nhttps://github.com/traefik/traefik/releases/tag/v2.9.6\n\n## Workarounds\n\nCheck the logs to detect the following error messages and fix your TLS options:\n\n- Empty CA:\n\n```\n{\"level\":\"error\",\"msg\":\"invalid clientAuthType: RequireAndVerifyClientCert, CAFiles is required\",\"routerName\":\"Router0@file\"}\n```\n\n- Bad CA content (or bad path):\n\n```\n{\"level\":\"error\",\"msg\":\"invalid certificate(s) content\",\"routerName\":\"Router0@file\"}\n```\n\n- Unknown Client Auth Type:\n\n```\n{\"level\":\"error\",\"msg\":\"unknown client auth type \\\"FooClientAuthType\\\"\",\"routerName\":\"Router0@file\"}\n```\n\n- Invalid cipherSuites\n\n```\n{\"level\":\"error\",\"msg\":\"invalid CipherSuite: foobar\",\"routerName\":\"Router0@file\"}\n```\n\n- Invalid curvePreferences\n\n```\n{\"level\":\"error\",\"msg\":\"invalid CurveID in curvePreferences: foobar\",\"routerName\":\"Router0@file\"}\n``` \n\n## For more information\n\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/traefik/traefik/issues).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-468w-8x39-gj5v/GHSA-468w-8x39-gj5v.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-468w-8x39-gj5v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-46153"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/commit/7e3fe48b80083b41e9ff82a474a36484cabc701a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://doc.traefik.io/traefik/v2.9/https/tls/#tls-options"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.9.6"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-12-08T16:11:12Z",
+                "nvd_published_at": "2022-12-08T22:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:18Z",
+              "published": "2022-12-08T16:11:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h2ph-vhm7-g4hp",
+              "aliases": [
+                "CVE-2022-23469"
+              ],
+              "summary": "Traefik may display authorization header in the debug logs",
+              "details": "### Impact\n\nThere is a potential vulnerability in Traefik displaying the Authorization header in its debug logs.\n\nTraefik uses [oxy](https://github.com/vulcand/oxy) to provide the following features:\n\n- Round Robin: https://doc.traefik.io/traefik/routing/services/#weighted-round-robin-service\n- Buffering: https://doc.traefik.io/traefik/middlewares/http/buffering/\n- Circuit Breaker: https://doc.traefik.io/traefik/middlewares/http/circuitbreaker/\n- In-Flight Requests: https://doc.traefik.io/traefik/middlewares/http/inflightreq/\n\nIn such cases, if the log level is set to DEBUG, the credentials provided using the Authorization header are displayed in the debug logs:\n\n```\nlevel=debug msg=\"vulcand/oxy/roundrobin/rr: completed ServeHttp on request\" Request=\"{\\\\\"Method\\\\\":\\\\\"POST\\\\\",\\\\\"URL\\\\\":{\\\\\"Scheme\\\\\":\\\\\"\\\\\",\\\\\"Opaque\\\\\":\\\\\"\\\\\",\\\\\"User\\\\\":null,\\\\\"Host\\\\\":\\\\\"\\\\\",\\\\\"Path\\\\\":\\\\\"/\u003credacted\u003e/\u003credacted\u003e\\\\\",\\\\\"RawPath\\\\\":\\\\\"\\\\\",\\\\\"ForceQuery\\\\\":false,\\\\\"RawQuery\\\\\":\\\\\"\\\\\",\\\\\"Fragment\\\\\":\\\\\"\\\\\",\\\\\"RawFragment\\\\\":\\\\\"\\\\\"},\\\\\"Proto\\\\\":\\\\\"HTTP/2.0\\\\\",\\\\\"ProtoMajor\\\\\":2,\\\\\"ProtoMinor\\\\\":0,\\\\\"Header\\\\\":{\\\\\"Authorization\\\\\":[\\\\\"Bearer \u003ctoken value was here\u003e\\\\\"],\\\\\"Content-Type\\\\\":[\\\\\"application/grpc\\\\\"],\\\\\"Grpc-Accept-Encoding\\\\\":[\\\\\"gzip\\\\\"],\\\\\"Grpc-Timeout\\\\\":[\\\\\"29999886u\\\\\"],\\\\\"Te\\\\\":[\\\\\"trailers\\\\\"],\\\\\"User-Agent\\\\\":[\\\\\"\u003credacted\u003e\\\\\"],\u003cremainder of log message removed\u003e\n```\n\n### Patches\n\nhttps://github.com/traefik/traefik/pull/9574\nhttps://github.com/traefik/traefik/releases/tag/v2.9.6\n\n### Workarounds\n\nSet the log level to `INFO`, `WARN`, or `ERROR`.\n\n### For more information\n\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/traefik/traefik/issues).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-h2ph-vhm7-g4hp/GHSA-h2ph-vhm7-g4hp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-h2ph-vhm7-g4hp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-23469"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/pull/9574"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.9.6"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-12-08T16:11:37Z",
+                "nvd_published_at": "2022-12-08T22:15:00Z",
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:16Z",
+              "published": "2023-04-11T20:59:22Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7hj9-rv74-5g92",
+              "aliases": [
+                "CVE-2023-29013"
+              ],
+              "summary": "Traefik HTTP header parsing could cause a denial of service ",
+              "details": "### Impact\n\nThere is a vulnerability in [Go when parsing the HTTP headers](https://groups.google.com/g/golang-announce/c/Xdv6JL9ENs8/m/OV40vnafAwAJ), which impacts Traefik.\nHTTP header parsing could allocate substantially more memory than required to hold the parsed headers. This behavior could be exploited to cause a denial of service.\n\n### References\n\n- [CVE-2023-24534](https://www.cve.org/CVERecord?id=CVE-2023-24534)\n\n### Patches\n- https://github.com/traefik/traefik/releases/tag/v2.9.10\n- https://github.com/traefik/traefik/releases/tag/v2.10.0-rc2\n\n### Workarounds\n\nNo workaround.\n\n### For more information\n\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/traefik/traefik/issues).\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-7hj9-rv74-5g92/GHSA-7hj9-rv74-5g92.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.10.0-rc1"
+                        },
+                        {
+                          "fixed": "2.10.0-rc2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.10.0-rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-7hj9-rv74-5g92/GHSA-7hj9-rv74-5g92.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-7hj9-rv74-5g92"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29013"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/commit/4ed3964b3586565519249bbdc55eb1b961c08c49"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8v5j-pwr7-w5f8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.10.0-rc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.9.10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/Xdv6JL9ENs8/m/OV40vnafAwAJ"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230517-0008/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-11T20:59:22Z",
+                "nvd_published_at": "2023-04-14T19:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-12-05T18:26:48Z",
+              "published": "2023-12-05T18:13:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6fwg-jrfw-ff7p",
+              "aliases": [
+                "CVE-2023-47633"
+              ],
+              "summary": "Traefik docker container using 100% CPU",
+              "details": "### Summary\n\nThe traefik docker container uses 100% CPU when it serves as its own backend, which is an automatically generated route resulting from the Docker integration in the default configuration.\n\n### Details\n\nWhile attempting to set up Traefik to handle traffic for Docker containers, I observed in the webUI a rule with the following information:\n\n`Host(traefik-service) | webwebsecure | traefik-service@docker | traefik-service`\n\nI assumed that this is something internal; however, I wondered why it would have a host rule on the web entrypoint configured.\n\nSo I have send a request with that hostname with `curl -v --resolve \"traefik-service:80:xxx.xxx.xxx.xxx\" http://traefik-service`. That made my whole server unresponsive.\n\nI assume the name comes from a docker container with that name, traefik itself:\n```\nlocalhost ~ # docker ps\nCONTAINER ID   IMAGE                                                   COMMAND                  CREATED             STATUS         PORTS                                                                                                NAMES\nd1414e74aec7   traefik:v2.10                                           \"/entrypoint.sh trae…\"   4 minutes ago       Up 4 minutes   0.0.0.0:80-\u003e80/tcp, :::80-\u003e80/tcp, 0.0.0.0:443-\u003e443/tcp, :::443-\u003e443/tcp, 127.0.0.1:8080-\u003e8080/tcp   traefik.service\n```\n\n### PoC\n\n1. Start traefik with `docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -p 80:80 --name foo -p 8080:8080 traefik:v2.10 --api.insecure=true --providers.docker`\n\n2. `curl -v --resolve \"foo:80:127.0.0.1\" http://foo`\n\nlooks like this creates an endless loop of request.\n\nKnowing the name of the docker container seems to be enough to trigger this, if the docker backend is used.\n\n### Impact\n\nServer is unreachable and uses 100% CPU",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.10.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-6fwg-jrfw-ff7p/GHSA-6fwg-jrfw-ff7p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v3",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.0-beta5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-6fwg-jrfw-ff7p/GHSA-6fwg-jrfw-ff7p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-6fwg-jrfw-ff7p"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47633"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.10.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v3.0.0-beta5"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-12-05T18:13:53Z",
+                "nvd_published_at": "2023-12-04T21:15:34Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-12-05T18:26:47Z",
+              "published": "2023-12-05T18:12:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8g85-whqh-cr2f",
+              "aliases": [
+                "CVE-2023-47124"
+              ],
+              "summary": "Traefik vulnerable to potential DDoS via ACME HTTPChallenge",
+              "details": "## Impact\n\nThere is a potential vulnerability in Traefik managing the ACME HTTP challenge.\n\nWhen Traefik is configured to use the [HTTPChallenge](https://doc.traefik.io/traefik/https/acme/#httpchallenge) to generate and renew the Let's Encrypt TLS certificates, the delay authorized to solve the challenge (50 seconds) can be exploited by attackers ([slowloris attack](https://www.cloudflare.com/learning/ddos/ddos-attack-tools/slowloris/)).\n \n## Patches\n\n- https://github.com/traefik/traefik/releases/tag/v2.10.6\n- https://github.com/traefik/traefik/releases/tag/v3.0.0-beta5\n\n## Workarounds\n\nReplace the HTTPChallenge with the [TLSChallenge](https://doc.traefik.io/traefik/https/acme/#tlschallenge) or the [DNSChallenge](https://doc.traefik.io/traefik/https/acme/#dnschallenge).\n\n## For more information\n\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/traefik/traefik/issues).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.10.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-8g85-whqh-cr2f/GHSA-8g85-whqh-cr2f.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v3",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.0-beta5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-8g85-whqh-cr2f/GHSA-8g85-whqh-cr2f.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-8g85-whqh-cr2f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47124"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://doc.traefik.io/traefik/https/acme/#dnschallenge"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://doc.traefik.io/traefik/https/acme/#httpchallenge"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://doc.traefik.io/traefik/https/acme/#tlschallenge"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.10.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v3.0.0-beta5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.cloudflare.com/learning/ddos/ddos-attack-tools/slowloris/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-772"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-12-05T18:12:37Z",
+                "nvd_published_at": "2023-12-04T21:15:33Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-12-07T23:06:09Z",
+              "published": "2023-12-05T18:11:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-fvhj-4qfh-q2hm",
+              "aliases": [
+                "CVE-2023-47106"
+              ],
+              "summary": "Traefik incorrectly processes fragment in the URL, leads to Authorization Bypass",
+              "details": "### Summary\nWhen a request is sent to Traefik with a URL fragment, Traefik automatically URL encodes and forwards the fragment to the backend server. This violates the RFC because in the origin-form the URL should only contain the absolute path and the query.\n\nWhen this is combined with another frontend proxy like Nginx, it can be used to bypass frontend proxy URI-based access control\nrestrictions. \n\n### Details\nFor example, we have this Nginx configuration:\n\n```\nlocation /admin {\n     deny all;\n     return 403;\n}\n```\nThis can be bypassed when the attacker is requesting to /#/../admin\n\nThis won’t be vulnerable if the backend server follows the RFC and ignores any characters after the fragment.\n\nHowever, if Nginx is chained with another reverse proxy which automatically URL encode the character # (Traefik) the URL will become\n\n/%23/../admin\n\nAnd allow the attacker to completely bypass the Access Restriction from the Nginx Front-End proxy.\n\nHere is a diagram to summarize the attack:\n\n![image](https://user-images.githubusercontent.com/47447167/278849578-34ca0546-99b4-44c8-8fc8-8e799c1f5069.png)\n\n### PoC\n![image (1)](https://user-images.githubusercontent.com/47447167/278849597-280f2e80-f2d7-4dd9-9662-b8f488fd5ff2.png)\n\nThis is the POC docker I've set up.  It contains Nginx, Traefik proxies and a backend server running PHP.\n\nhttps://drive.google.com/file/d/1vLnA0g7N7ZKhLNmHmuJ4JJjV_J2akNMt/view?usp=sharing\n\n### Impact\nThis allows the attacker to completely bypass the Access Restriction from Front-End proxy.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v2",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.10.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-fvhj-4qfh-q2hm/GHSA-fvhj-4qfh-q2hm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/traefik/traefik/v3",
+                    "purl": "pkg:golang/github.com/traefik/traefik/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.0-beta5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-fvhj-4qfh-q2hm/GHSA-fvhj-4qfh-q2hm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/security/advisories/GHSA-fvhj-4qfh-q2hm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-47106"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://datatracker.ietf.org/doc/html/rfc7230#section-5.3.1"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/traefik/traefik"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v2.10.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/traefik/traefik/releases/tag/v3.0.0-beta5"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-177",
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-12-05T18:11:48Z",
+                "nvd_published_at": "2023-12-04T21:15:33Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6qq8-5wq3-86rp"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-q9mp-79cp-9g8j"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-m697-4v8f-55qg"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-hrhx-6h34-j5hc"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-c6hx-pjc3-7fqr"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-468w-8x39-gj5v"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-h2ph-vhm7-g4hp"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-7hj9-rv74-5g92"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-6fwg-jrfw-ff7p"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8g85-whqh-cr2f"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-fvhj-4qfh-q2hm"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "stdlib",
+            "version": "1.21.4",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T16:22:45Z",
+              "published": "2023-11-08T22:42:14Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2185",
+              "aliases": [
+                "BIT-golang-2023-45283",
+                "CVE-2023-45283"
+              ],
+              "summary": "Insecure parsing of Windows paths with a \\??\\ prefix in path/filepath",
+              "details": "The filepath package does not recognize paths with a \\??\\ prefix as special.\n\nOn Windows, a path beginning with \\??\\ is a Root Local Device path equivalent to a path beginning with \\\\?\\. Paths with a \\??\\ prefix may be used to access arbitrary locations on the system. For example, the path \\??\\c:\\x is equivalent to the more common path c:\\x.\n\nBefore fix, Clean could convert a rooted path such as \\a\\..\\??\\b into the root local device path \\??\\b. Clean will now convert this to .\\??\\b.\n\nSimilarly, Join(\\, ??, b) could convert a seemingly innocent sequence of path elements into the root local device path \\??\\b. Join will now convert this to \\.\\??\\b.\n\nIn addition, with fix, IsAbs now correctly reports paths beginning with \\??\\ as absolute, and VolumeName correctly reports the \\??\\ prefix as a volume name.\n\nUPDATE: Go 1.20.11 and Go 1.21.4 inadvertently changed the definition of the volume name in Windows paths starting with \\?, resulting in filepath.Clean(\\?\\c:) returning \\?\\c: rather than \\?\\c:\\ (among other effects). The previous behavior has been restored.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.11"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2185.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "path/filepath",
+                        "symbols": [
+                          "Abs",
+                          "Base",
+                          "Clean",
+                          "Dir",
+                          "EvalSymlinks",
+                          "Glob",
+                          "IsLocal",
+                          "Join",
+                          "Rel",
+                          "Split",
+                          "VolumeName",
+                          "Walk",
+                          "WalkDir",
+                          "join",
+                          "volumeNameLen"
+                        ]
+                      },
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "internal/safefilepath",
+                        "symbols": [
+                          "FromFS",
+                          "fromFS"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.20.11"
+                        },
+                        {
+                          "fixed": "1.20.12"
+                        },
+                        {
+                          "introduced": "1.21.4"
+                        },
+                        {
+                          "fixed": "1.21.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2185.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "path/filepath",
+                        "symbols": [
+                          "Abs",
+                          "Base",
+                          "Clean",
+                          "Dir",
+                          "EvalSymlinks",
+                          "Glob",
+                          "IsLocal",
+                          "Join",
+                          "Rel",
+                          "Split",
+                          "VolumeName",
+                          "Walk",
+                          "WalkDir",
+                          "volumeNameLen"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63713"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/540277"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/4tU8LZfBFkY"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64028"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/541175"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2185"
+              }
+            },
+            {
+              "modified": "2023-12-06T16:41:28Z",
+              "published": "2023-12-06T16:22:36Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2382",
+              "aliases": [
+                "CVE-2023-39326"
+              ],
+              "summary": "Denial of service via chunk extensions in net/http",
+              "details": "A malicious HTTP sender can use chunk extensions to cause a receiver reading from a request or response body to read many more bytes from the network than are in the body.\n\nA malicious HTTP client can further exploit this to cause a server to automatically read a large amount of data (up to about 1GiB) when a handler fails to read the entire body of a request.\n\nChunk extensions are a little-used HTTP feature which permit including additional metadata in a request or response body sent using the chunked encoding. The net/http chunked encoding reader discards this metadata. A sender can exploit this by inserting a large metadata segment with each byte transferred. The chunk reader now produces an error if the ratio of real body to encoded bytes grows too small.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.12"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2382.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http/internal",
+                        "symbols": [
+                          "chunkedReader.Read",
+                          "chunkedReader.beginChunk",
+                          "readChunkLine"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64433"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/547335"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Bartek Nowotarski"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2382"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2023-2185"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2382"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

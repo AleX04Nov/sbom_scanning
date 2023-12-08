@@ -1,0 +1,1669 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/pkg_parser_custom_sbom_spdx_fixtures_janusgraph_oss_2dc3a123d9.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "mkdocs",
+            "version": "1.2.3",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:06:50Z",
+              "published": "2021-10-07T14:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2021-878",
+              "aliases": [
+                "CVE-2021-40978",
+                "GHSA-qh9q-34h6-hcv9"
+              ],
+              "details": "The mkdocs 1.2.2 built-in dev-server allows directory traversal using the port 8000, enabling remote exploitation to obtain :sensitive information. NOTE: the vendor has disputed this as described in https://github.com/mkdocs/mkdocs/issues/2601.] and https://github.com/nisdn/CVE-2021-40978/issues/1",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "mkdocs",
+                    "purl": "pkg:pypi/mkdocs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.12.0",
+                    "0.12.1",
+                    "0.12.2",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.14.0",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.17.5",
+                    "0.2",
+                    "0.3",
+                    "0.4",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0a1",
+                    "1.0b1",
+                    "1.0rc1",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/mkdocs/PYSEC-2021-878.yaml"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nisdn/CVE-2021-40978"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mkdocs/mkdocs"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/nisdn/CVE-2021-40978/issues/1"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/mkdocs/mkdocs/issues/2601"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "PYSEC-2021-878"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "pygments",
+            "version": "2.7.4",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:25Z",
+              "published": "2023-07-19T15:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mrwq-x4v8-fh7p",
+              "aliases": [
+                "CVE-2022-40896",
+                "PYSEC-2023-117"
+              ],
+              "summary": "Pygments vulnerable to ReDoS",
+              "details": "A ReDoS issue was discovered in `pygments/lexers/smithy.py` in Pygments until 2.15.0 via SmithyLexer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-mrwq-x4v8-fh7p/GHSA-mrwq-x4v8-fh7p.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "pygments.lexers.templates.SqlJinjaLexer.analyse_text",
+                      "pygments.lexers.smithy.SmithyLexer",
+                      "pygments.lexers.configs.PropertiesLexer"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40896"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/97eb3d5ec7c1b3ea4fcf9dee30a2309cf92bd194"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/dd52102c38ebe78cd57748e09f38929fd283ad04"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/fdf182a7af85b1deeeb637ca970d31935e7c9d52"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pygments/pygments"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/blob/master/pygments/lexers/smithy.py#L61"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pygments/PYSEC-2023-117.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pypi.org/project/Pygments/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages-part-2/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-434"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-20T11:00:04Z",
+                "nvd_published_at": "2023-07-19T15:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:25Z",
+              "published": "2023-07-19T15:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2023-117",
+              "aliases": [
+                "CVE-2022-40896",
+                "GHSA-mrwq-x4v8-fh7p"
+              ],
+              "details": "A ReDoS issue was discovered in pygments/lexers/smithy.py in pygments through 2.15.0 via SmithyLexer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.15.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pygments/PYSEC-2023-117.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://pypi.org/project/Pygments/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages-part-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/blob/master/pygments/lexers/smithy.py#L61"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mrwq-x4v8-fh7p",
+                "PYSEC-2023-117"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "pymdown-extensions",
+            "version": "7.1",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-09T05:41:10Z",
+              "published": "2023-05-15T20:50:23Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jh85-wwv9-24hv",
+              "aliases": [
+                "CVE-2023-32309"
+              ],
+              "summary": "Any file can be included with the pymdown-snippets extension",
+              "details": "### Summary\n\nArbitrary file read when using include file syntax.\n\n### Details\n\nBy using the syntax `--8\u003c--\"/etc/passwd\"` or `--8\u003c--\"/proc/self/environ\"` the content of these files will be rendered in the generated documentation. Additionally, a path relative to a specified, allowed base path can also be used to render the content of a file outside the specified base paths: `--8\u003c-- \"../../../../etc/passwd\"`.\n\nWithin the Snippets extension, there exists a `base_path` option but the implementation is vulnerable to Directory Traversal.\nThe vulnerable section exists in `get_snippet_path(self, path)` lines 155 to 174 in snippets.py.\n\n```\nbase = \"docs\"\npath = \"/etc/passwd\"\nfilename = os.path.join(base,path) # Filename is now /etc/passwd\n```\n\n### PoC\n\n```py\nimport markdown\n\npayload = \"--8\u003c-- \\\"/etc/passwd\\\"\"\nhtml = markdown.markdown(payload, extensions=['pymdownx.snippets'])\n\nprint(html)\n```\n\n### Impact\n\nAny readable file on the host where the plugin is executing may have its content exposed. This can impact any use of Snippets that exposes the use of Snippets to external users. \n\nIt is never recommended to use Snippets to process user-facing, dynamic content. It is designed to process known content on the backend under the control of the host, but if someone were to accidentally enable it for user-facing content, undesired information could be exposed.\n\n### Suggestion\n\nSpecified snippets should be restricted to the configured, specified base paths as a safe default. Allowing relative or absolute paths that escape the specified base paths would need to be behind a feature switch that must be opt-in and would be at the developer's own risk.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pymdown-extensions",
+                    "purl": "pkg:pypi/pymdown-extensions"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.5"
+                        },
+                        {
+                          "fixed": "10.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.5",
+                    "1.6",
+                    "1.6.1",
+                    "1.7",
+                    "1.8",
+                    "2.0",
+                    "3.0",
+                    "3.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.3",
+                    "3.4",
+                    "3.5",
+                    "4.0",
+                    "4.1",
+                    "4.10",
+                    "4.10.1",
+                    "4.10.2",
+                    "4.11",
+                    "4.12",
+                    "4.2",
+                    "4.3",
+                    "4.4",
+                    "4.5",
+                    "4.5.1",
+                    "4.6",
+                    "4.7",
+                    "4.8",
+                    "4.9",
+                    "4.9.1",
+                    "4.9.2",
+                    "5.0",
+                    "6.0",
+                    "6.1",
+                    "6.2",
+                    "6.2.1",
+                    "6.3",
+                    "7.0",
+                    "7.0b1",
+                    "7.0b2",
+                    "7.0rc1",
+                    "7.0rc2",
+                    "7.1",
+                    "8.0",
+                    "8.0.1",
+                    "8.1",
+                    "8.1.1",
+                    "8.2",
+                    "9.0",
+                    "9.0.dev0",
+                    "9.1",
+                    "9.10",
+                    "9.10a1",
+                    "9.10a2",
+                    "9.10a3",
+                    "9.10b1",
+                    "9.10b2",
+                    "9.10b3",
+                    "9.10b4",
+                    "9.10b5",
+                    "9.11",
+                    "9.2",
+                    "9.3",
+                    "9.4",
+                    "9.5",
+                    "9.6",
+                    "9.7",
+                    "9.8",
+                    "9.9",
+                    "9.9.1",
+                    "9.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-jh85-wwv9-24hv/GHSA-jh85-wwv9-24hv.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "pymdownx.snippets.SnippetPreprocessor",
+                      "pymdownx.snippets.SnippetPreprocessor.get_snippet_path",
+                      "pymdownx.snippets.SnippetExtension"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/pymdown-extensions/security/advisories/GHSA-jh85-wwv9-24hv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32309"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/pymdown-extensions/commit/b7bb4878d6017c03c8dc97c42d8d3bb6ee81db9d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/facelessuser/pymdown-extensions"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/facelessuser/pymdown-extensions/releases/tag/10.0"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-05-15T20:50:23Z",
+                "nvd_published_at": "2023-05-15T21:15:09Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jh85-wwv9-24hv"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ch.qos.logback:logback-classic",
+            "version": "1.2.11",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-05T21:46:15Z",
+              "published": "2023-11-29T12:30:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vmq6-5m68-f53m",
+              "aliases": [
+                "CVE-2023-6378"
+              ],
+              "summary": "logback serialization vulnerability",
+              "details": "A serialization vulnerability in logback receiver component part of logback allows an attacker to mount a Denial-Of-Service attack by sending poisoned data.\n\nThis is only exploitable if logback receiver component is deployed. See https://logback.qos.ch/manual/receivers.html",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6378"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/qos-ch/logback"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/manual/receivers.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.2.13"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.3.12"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-29T21:33:01Z",
+                "nvd_published_at": "2023-11-29T12:15:07Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vmq6-5m68-f53m"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ch.qos.logback:logback-core",
+            "version": "1.2.11",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-05T21:46:15Z",
+              "published": "2023-11-29T12:30:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vmq6-5m68-f53m",
+              "aliases": [
+                "CVE-2023-6378"
+              ],
+              "summary": "logback serialization vulnerability",
+              "details": "A serialization vulnerability in logback receiver component part of logback allows an attacker to mount a Denial-Of-Service attack by sending poisoned data.\n\nThis is only exploitable if logback receiver component is deployed. See https://logback.qos.ch/manual/receivers.html",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6378"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/qos-ch/logback"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/manual/receivers.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.2.13"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.3.12"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-29T21:33:01Z",
+                "nvd_published_at": "2023-11-29T12:15:07Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vmq6-5m68-f53m"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.apache.zookeeper:zookeeper",
+            "version": "3.8.1",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:03:14Z",
+              "published": "2023-10-11T12:30:27Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7286-pgfv-vxvh",
+              "aliases": [
+                "BIT-zookeeper-2023-44981",
+                "CVE-2023-44981"
+              ],
+              "summary": "Authorization Bypass Through User-Controlled Key vulnerability in Apache ZooKeeper",
+              "details": "Authorization Bypass Through User-Controlled Key vulnerability in Apache ZooKeeper. If SASL Quorum Peer authentication is enabled in ZooKeeper (quorum.auth.enableSasl=true), the authorization is done by verifying that the instance part in SASL authentication ID is listed in zoo.cfg server list. The instance part in SASL auth ID is optional and if it's missing, like 'eve@EXAMPLE.COM', the authorization check will be skipped. As a result an arbitrary endpoint could join the cluster and begin propagating counterfeit changes to the leader, essentially giving it complete read-write access to the data tree. Quorum Peer authentication is not enabled by default.\n\nUsers are recommended to upgrade to version 3.9.1, 3.8.3, 3.7.2, which fixes the issue.\n\nAlternately ensure the ensemble election/quorum communication is protected by a firewall as this will mitigate the issue.\n\nSee the documentation for more details on correct cluster administration.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.zookeeper:zookeeper",
+                    "purl": "pkg:maven/org.apache.zookeeper/zookeeper"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.3",
+                    "3.3.4",
+                    "3.3.5",
+                    "3.3.6",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.10",
+                    "3.4.11",
+                    "3.4.12",
+                    "3.4.13",
+                    "3.4.14",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.4.5",
+                    "3.4.6",
+                    "3.4.7",
+                    "3.4.8",
+                    "3.4.9",
+                    "3.5.0-alpha",
+                    "3.5.1-alpha",
+                    "3.5.10",
+                    "3.5.2-alpha",
+                    "3.5.3-beta",
+                    "3.5.4-beta",
+                    "3.5.5",
+                    "3.5.6",
+                    "3.5.7",
+                    "3.5.8",
+                    "3.5.9",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.6.3",
+                    "3.6.4",
+                    "3.7.0",
+                    "3.7.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-7286-pgfv-vxvh/GHSA-7286-pgfv-vxvh.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.zookeeper:zookeeper",
+                    "purl": "pkg:maven/org.apache.zookeeper/zookeeper"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.8.0"
+                        },
+                        {
+                          "fixed": "3.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.8.0",
+                    "3.8.1",
+                    "3.8.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-7286-pgfv-vxvh/GHSA-7286-pgfv-vxvh.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.zookeeper:zookeeper",
+                    "purl": "pkg:maven/org.apache.zookeeper/zookeeper"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.9.0"
+                        },
+                        {
+                          "fixed": "3.9.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-7286-pgfv-vxvh/GHSA-7286-pgfv-vxvh.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-44981"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/zookeeper"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/wf0yrk84dg1942z1o74kd8nycg6pgm5b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00029.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5544"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/10/11/4"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-639"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-11T20:36:50Z",
+                "nvd_published_at": "2023-10-11T12:15:11Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7286-pgfv-vxvh"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

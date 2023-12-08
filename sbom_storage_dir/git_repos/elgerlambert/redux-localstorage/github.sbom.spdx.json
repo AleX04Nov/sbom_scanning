@@ -1,0 +1,115 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:56:06Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.elgerlambert/redux-localstorage",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.elgerlambert-redux-localstorage"
+    ],
+    "documentNamespace": "https://github.com/elgerlambert/redux-localstorage/dependency_graph/sbom-a71b0f0901d67087",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "name": "com.github.elgerlambert/redux-localstorage",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/elgerlambert/redux-localstorage",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/elgerlambert/redux-localstorage"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-babel",
+            "name": "npm:babel",
+            "versionInfo": "^ 5.8.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-babel-core",
+            "name": "npm:babel-core",
+            "versionInfo": "^ 5.8.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-babel-eslint",
+            "name": "npm:babel-eslint",
+            "versionInfo": "^ 4.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-chai",
+            "name": "npm:chai",
+            "versionInfo": "^ 3.2.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-eslint",
+            "name": "npm:eslint",
+            "versionInfo": "^ 0.24.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha",
+            "name": "npm:mocha",
+            "versionInfo": "^ 2.2.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "relatedSpdxElement": "SPDXRef-npm-babel"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "relatedSpdxElement": "SPDXRef-npm-babel-core"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "relatedSpdxElement": "SPDXRef-npm-babel-eslint"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "relatedSpdxElement": "SPDXRef-npm-chai"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "relatedSpdxElement": "SPDXRef-npm-eslint"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.elgerlambert-redux-localstorage",
+            "relatedSpdxElement": "SPDXRef-npm-mocha"
+        }
+    ]
+}

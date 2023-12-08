@@ -1,0 +1,102 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:59:14Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.kevinburke/hamms",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.kevinburke-hamms"
+    ],
+    "documentNamespace": "https://github.com/kevinburke/hamms/dependency_graph/sbom-aa62cf44f3e78222",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.kevinburke-hamms",
+            "name": "com.github.kevinburke/hamms",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/kevinburke/hamms",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/kevinburke/hamms"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-pip-flask",
+            "name": "pip:flask",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-pip-httpbin",
+            "name": "pip:httpbin",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-pip-twisted",
+            "name": "pip:twisted",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-pip-nose",
+            "name": "pip:nose",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-pip-requests",
+            "name": "pip:requests",
+            "versionInfo": "<= 2.4.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevinburke-hamms",
+            "relatedSpdxElement": "SPDXRef-pip-flask"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevinburke-hamms",
+            "relatedSpdxElement": "SPDXRef-pip-httpbin"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevinburke-hamms",
+            "relatedSpdxElement": "SPDXRef-pip-twisted"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevinburke-hamms",
+            "relatedSpdxElement": "SPDXRef-pip-nose"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.kevinburke-hamms",
+            "relatedSpdxElement": "SPDXRef-pip-requests"
+        }
+    ]
+}

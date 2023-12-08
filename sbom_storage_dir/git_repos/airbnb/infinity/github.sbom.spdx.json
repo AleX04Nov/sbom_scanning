@@ -1,0 +1,138 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:50:49Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.airbnb/infinity",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.airbnb-infinity"
+    ],
+    "documentNamespace": "https://github.com/airbnb/infinity/dependency_graph/sbom-ca842c0291230033",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.airbnb-infinity",
+            "name": "com.github.airbnb/infinity",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/airbnb/infinity",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/airbnb/infinity"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-coffee-script-1.3.3",
+            "name": "npm:coffee-script",
+            "versionInfo": "1.3.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/coffee-script@1.3.3",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-docco-0.3.0",
+            "name": "npm:docco",
+            "versionInfo": "0.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/docco@0.3.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-expect.js-0.1.2",
+            "name": "npm:expect.js",
+            "versionInfo": "0.1.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/expect.js@0.1.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-mocha-1.3.2",
+            "name": "npm:mocha",
+            "versionInfo": "1.3.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/mocha@1.3.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js-1.3.3",
+            "name": "npm:uglify-js",
+            "versionInfo": "1.3.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/uglify-js@1.3.3",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.airbnb-infinity",
+            "relatedSpdxElement": "SPDXRef-npm-coffee-script-1.3.3"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.airbnb-infinity",
+            "relatedSpdxElement": "SPDXRef-npm-docco-0.3.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.airbnb-infinity",
+            "relatedSpdxElement": "SPDXRef-npm-expect.js-0.1.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.airbnb-infinity",
+            "relatedSpdxElement": "SPDXRef-npm-mocha-1.3.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.airbnb-infinity",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js-1.3.3"
+        }
+    ]
+}

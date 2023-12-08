@@ -1,0 +1,2819 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "grunt",
+            "version": "0.4.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:07Z",
+              "published": "2021-05-06T18:27:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m5pj-vjjf-4m3h",
+              "aliases": [
+                "CVE-2020-7729",
+                "SNYK-JAVA-ORGWEBJARSNPM-607922",
+                "SNYK-JS-GRUNT-597546"
+              ],
+              "summary": "Arbitrary Code Execution in grunt",
+              "details": "The package grunt before 1.3.0 are vulnerable to Arbitrary Code Execution due to the default usage of the function load() instead of its secure replacement safeLoad() of the package js-yaml inside grunt.file.readYAML.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "grunt",
+                    "purl": "pkg:npm/grunt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-m5pj-vjjf-4m3h/GHSA-m5pj-vjjf-4m3h.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7729"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gruntjs/grunt/commit/e350cea1724eb3476464561a380fb6a64e61e4e7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gruntjs/grunt/blob/master/lib/grunt/file.js%23L249"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/09/msg00008.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-607922"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-GRUNT-597546"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4595-1/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1188"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-05-04T22:57:23Z",
+                "nvd_published_at": "2020-09-03T09:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:07:34Z",
+              "published": "2022-04-13T00:00:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j383-35pm-c5h4",
+              "aliases": [
+                "CVE-2022-0436"
+              ],
+              "summary": "Path Traversal in Grunt",
+              "details": "Grunt prior to version 1.5.2 is vulnerable to path traversal.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "grunt",
+                    "purl": "pkg:npm/grunt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.5.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-j383-35pm-c5h4/GHSA-j383-35pm-c5h4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0436"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gruntjs/grunt/pull/1743"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gruntjs/grunt/commit/aad3d4521c3098fb255fb2db8f2e1d691a033665"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gruntjs/grunt/commit/b0ec6e12426fc8d5720dee1702f6a67455c5986c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/gruntjs/grunt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/f55315e9-9f6d-4dbb-8c40-bae50c1ae92b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/04/msg00008.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-04-26T21:51:41Z",
+                "nvd_published_at": "2022-04-12T21:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:07:49Z",
+              "published": "2022-05-11T00:01:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rm36-94g8-835r",
+              "aliases": [
+                "CVE-2022-1537"
+              ],
+              "summary": "Race Condition in Grunt",
+              "details": "file.copy operations in GruntJS are vulnerable to a TOCTOU race condition leading to arbitrary file write in GitHub repository gruntjs/grunt prior to 1.5.3. This vulnerability is capable of arbitrary file writes which can lead to local privilege escalation to the GruntJS user if a lower-privileged user has write access to both source and destination directories as the lower-privileged user can create a symlink to the GruntJS user's .bashrc file or replace /etc/shadow file if the GruntJS user is root.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "grunt",
+                    "purl": "pkg:npm/grunt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.5.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-rm36-94g8-835r/GHSA-rm36-94g8-835r.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1537"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/gruntjs/grunt/commit/58016ffac5ed9338b63ecc2a63710f5027362bae"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/gruntjs/grunt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/0179c3e5-bc02-4fc9-8491-a1a319b51b4d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/04/msg00006.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-367"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-05-25T19:30:09Z",
+                "nvd_published_at": "2022-05-10T14:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m5pj-vjjf-4m3h"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-j383-35pm-c5h4"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-rm36-94g8-835r"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "html5lib",
+            "version": "0.90",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:39Z",
+              "published": "2022-05-17T02:57:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8f6m-gfq9-g33v",
+              "aliases": [
+                "CVE-2016-9910",
+                "PYSEC-2017-15"
+              ],
+              "summary": "Cross-site Scripting in html5lib",
+              "details": "The serializer in html5lib before 0.99999999 might allow remote attackers to conduct cross-site scripting (XSS) attacks by leveraging mishandling of special characters in attribute values, a different vulnerability than CVE-2016-9909.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "html5lib",
+                    "purl": "pkg:pypi/html5lib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.99999999"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.2",
+                    "0.9",
+                    "0.90",
+                    "0.95",
+                    "0.99",
+                    "0.999",
+                    "0.9999",
+                    "0.99999",
+                    "0.999999",
+                    "0.9999999"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8f6m-gfq9-g33v/GHSA-8f6m-gfq9-g33v.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9910"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/12"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/html5lib/html5lib-python/commit/9b8d8eb5afbc066b7fac9390f5ec75e5e8a7cab7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8f6m-gfq9-g33v"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/html5lib/html5lib-python"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/html5lib/PYSEC-2017-15.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://html5lib.readthedocs.io/en/latest/changes.html#b9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/06/5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/08/8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/95132"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-02T21:03:05Z",
+                "nvd_published_at": "2017-02-22T16:59:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:39Z",
+              "published": "2022-05-17T02:57:58Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v9v9-xffq-rwr4",
+              "aliases": [
+                "CVE-2016-9909",
+                "PYSEC-2017-14"
+              ],
+              "summary": "Improper Neutralization of Input During Web Page Generation in html5lib",
+              "details": "The serializer in html5lib before 0.99999999 might allow remote attackers to conduct cross-site scripting (XSS) attacks by leveraging mishandling of the \u003c (less than) character in attribute values.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "html5lib",
+                    "purl": "pkg:pypi/html5lib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.999999999"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.2",
+                    "0.9",
+                    "0.90",
+                    "0.95",
+                    "0.99",
+                    "0.999",
+                    "0.9999",
+                    "0.99999",
+                    "0.999999",
+                    "0.9999999",
+                    "0.99999999"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-v9v9-xffq-rwr4/GHSA-v9v9-xffq-rwr4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-9909"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/12"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/html5lib/html5lib-python/commit/9b8d8eb5afbc066b7fac9390f5ec75e5e8a7cab7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-v9v9-xffq-rwr4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/html5lib/PYSEC-2017-14.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://html5lib.readthedocs.io/en/latest/changes.html#b9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20161229134056/http://www.securityfocus.com/bid/95132"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/06/5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/08/8"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T19:51:12Z",
+                "nvd_published_at": "2017-02-22T16:59:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:39Z",
+              "published": "2017-02-22T16:59:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2017-14",
+              "aliases": [
+                "CVE-2016-9909",
+                "GHSA-v9v9-xffq-rwr4"
+              ],
+              "details": "The serializer in html5lib before 0.99999999 might allow remote attackers to conduct cross-site scripting (XSS) attacks by leveraging mishandling of the \u003c (less than) character in attribute values.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "html5lib",
+                    "purl": "pkg:pypi/html5lib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "9b8d8eb5afbc066b7fac9390f5ec75e5e8a7cab7"
+                        }
+                      ],
+                      "repo": "https://github.com/html5lib/html5lib-python"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.999999999"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.2",
+                    "0.9",
+                    "0.90",
+                    "0.95",
+                    "0.99",
+                    "0.999",
+                    "0.9999",
+                    "0.99999",
+                    "0.999999",
+                    "0.9999999",
+                    "0.99999999"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/html5lib/PYSEC-2017-14.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://html5lib.readthedocs.io/en/latest/changes.html#b9"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/12"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/11"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/html5lib/html5lib-python/commit/9b8d8eb5afbc066b7fac9390f5ec75e5e8a7cab7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/95132"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/08/8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/06/5"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-v9v9-xffq-rwr4"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:58:39Z",
+              "published": "2017-02-22T16:59:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2017-15",
+              "aliases": [
+                "CVE-2016-9910",
+                "GHSA-8f6m-gfq9-g33v"
+              ],
+              "details": "The serializer in html5lib before 0.99999999 might allow remote attackers to conduct cross-site scripting (XSS) attacks by leveraging mishandling of special characters in attribute values, a different vulnerability than CVE-2016-9909.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "html5lib",
+                    "purl": "pkg:pypi/html5lib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "9b8d8eb5afbc066b7fac9390f5ec75e5e8a7cab7"
+                        }
+                      ],
+                      "repo": "https://github.com/html5lib/html5lib-python"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.999999999"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.2",
+                    "0.9",
+                    "0.90",
+                    "0.95",
+                    "0.99",
+                    "0.999",
+                    "0.9999",
+                    "0.99999",
+                    "0.999999",
+                    "0.9999999",
+                    "0.99999999"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/html5lib/PYSEC-2017-15.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://html5lib.readthedocs.io/en/latest/changes.html#b9"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/12"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/html5lib/html5lib-python/issues/11"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/html5lib/html5lib-python/commit/9b8d8eb5afbc066b7fac9390f5ec75e5e8a7cab7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/95132"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/08/8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/12/06/5"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8f6m-gfq9-g33v"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8f6m-gfq9-g33v",
+                "PYSEC-2017-15"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-v9v9-xffq-rwr4",
+                "PYSEC-2017-14"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jinja2",
+            "version": "2.5.2",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:00:58Z",
+              "published": "2019-04-10T14:30:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-462w-v97r-4m45",
+              "aliases": [
+                "CVE-2019-10906",
+                "PYSEC-2019-217"
+              ],
+              "summary": "Jinja2 sandbox escape via string formatting",
+              "details": "In Pallets Jinja before 2.10.1, `str.format_map` allows a sandbox escape.\n\nThe sandbox is used to restrict what code can be evaluated when rendering untrusted, user-provided templates. Due to the way string formatting works in Python, the `str.format_map` method could be used to escape the sandbox.\n\nThis issue was previously addressed for the `str.format` method in Jinja 2.8.1, which discusses the issue in detail. However, the less-common `str.format_map` method was overlooked. This release applies the same sandboxing to both methods.\n\nIf you cannot upgrade Jinja, you can override the `is_safe_attribute` method on the sandbox and explicitly disallow the `format_map` method on string objects.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.10.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.10",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/04/GHSA-462w-v97r-4m45/GHSA-462w-v97r-4m45.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10906"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1152"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1329"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-462w-v97r-4m45"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/09fc842ff444cd43d9d4c510756fec625ef8eb1175f14fd21de2605f@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/2b52b9c8b9d6366a4f1b407a8bde6af28d9fc73fdb3b37695fd0d9ac@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/320441dccbd9a545320f5f07306d711d4bbd31ba43dc9eebcfc602df@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/46c055e173b52d599c648a98199972dbd6a89d2b4c4647b0500f2284@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/57673a78c4d5c870d3f21465c7e2946b9f8285c7c57e54c2ae552f02@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/7f39f01392d320dfb48e4901db68daeece62fd60ef20955966739993@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b2380d147b508bbcb90d2cad443c159e63e12555966ab4f320ee22da@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/f0c4a03418bcfe70c539c5dbaf99c04c98da13bfa1d3266f08564316@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-693"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:57:35Z",
+                "nvd_published_at": "2019-04-07T00:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:34Z",
+              "published": "2022-05-14T04:04:14Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8r7q-cvjq-x353",
+              "aliases": [
+                "CVE-2014-1402",
+                "PYSEC-2014-8"
+              ],
+              "summary": "Incorrect Privilege Assignment in Jinja2",
+              "details": "The default configuration for bccache.FileSystemBytecodeCache in Jinja2 before 2.7.2 does not properly create temporary files, which allows local users to gain privileges via a crafted .cache file with a name starting with __jinja2_ in /tmp.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-8r7q-cvjq-x353/GHSA-8r7q-cvjq-x353.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-1402"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=734747"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1051421"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8r7q-cvjq-x353"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/jinja2/PYSEC-2014-8.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://oss.oracle.com/pipermail/el-errata/2014-June/004192.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://advisories.mageia.org/MGASA-2014-0028.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://jinja.pocoo.org/docs/changelog/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2014/01/10/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2014/01/10/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2014-0747.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2014-0748.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/56287"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/58783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/58918"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/59017"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/60738"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://secunia.com/advisories/60770"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.gentoo.org/security/en/glsa/glsa-201408-13.xml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:096"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-266"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-07T22:50:31Z",
+                "nvd_published_at": "2014-05-19T14:55:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:29Z",
+              "published": "2022-05-17T04:01:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-fqh9-2qgg-h84h",
+              "aliases": [
+                "CVE-2014-0012",
+                "PYSEC-2014-82"
+              ],
+              "summary": "Insecure Temporary File in Jinja2",
+              "details": "FileSystemBytecodeCache in Jinja2 2.7.2 does not properly create temporary directories, which allows local users to gain privileges by pre-creating a temporary directory with a user's uid.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2014-1402.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-fqh9-2qgg-h84h/GHSA-fqh9-2qgg-h84h.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-0012"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja2/pull/292"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja2/pull/296"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/commit/acb672b6a179567632e032f547582f30fa2f4aa7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1051421"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/jinja2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/oss-sec/2014/q1/73"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.gentoo.org/security/en/glsa/glsa-201408-13.xml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-377"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-02-14T00:58:39Z",
+                "nvd_published_at": "2014-05-19T14:55:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:03:28Z",
+              "published": "2021-03-19T21:28:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-g3rq-g295-4j3m",
+              "aliases": [
+                "CVE-2020-28493",
+                "PYSEC-2021-66",
+                "SNYK-PYTHON-JINJA2-1012994"
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in Jinja2",
+              "details": "This affects the package jinja2 from 0.0.0 and before 2.11.3. The ReDOS vulnerability of the regex is mainly due to the sub-pattern [a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+ This issue can be mitigated by Markdown to format user content instead of the urlize filter, or by implementing request timeouts and limiting process memory.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.11.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.10",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-g3rq-g295-4j3m/GHSA-g3rq-g295-4j3m.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "jinja2.utils.urlize"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28493"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/pull/1343"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/commit/15ef8f09b659f9100610583938005a7a10472d4d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/jinja"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/blob/ab81fd9c277900c85da0c322a2ff9d68a235b2e6/src/jinja2/utils.py%23L20"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202107-19"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-PYTHON-JINJA2-1012994"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-13T01:08:09Z",
+                "nvd_published_at": "2021-02-01T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:21Z",
+              "published": "2019-04-10T14:30:13Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hj2j-77xm-mc5v",
+              "aliases": [
+                "CVE-2016-10745",
+                "PYSEC-2019-220"
+              ],
+              "summary": "High severity vulnerability that affects Jinja2",
+              "details": "In Pallets Jinja before 2.8.1, str.format allows a sandbox escape.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.8.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/04/GHSA-hj2j-77xm-mc5v/GHSA-hj2j-77xm-mc5v.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10745"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/commit/9b53045c34e61013dc8f09b7e52a555fa16bed16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1260"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:3964"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:4062"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-hj2j-77xm-mc5v"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/jinja"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://palletsprojects.com/blog/jinja-281-released/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-134"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:40:24Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:34Z",
+              "published": "2014-05-19T14:55:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2014-8",
+              "aliases": [
+                "CVE-2014-1402",
+                "GHSA-8r7q-cvjq-x353"
+              ],
+              "details": "The default configuration for bccache.FileSystemBytecodeCache in Jinja2 before 2.7.2 does not properly create temporary files, which allows local users to gain privileges via a crafted .cache file with a name starting with __jinja2_ in /tmp.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/jinja2/PYSEC-2014-8.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=734747"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://advisories.mageia.org/MGASA-2014-0028.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://jinja.pocoo.org/docs/changelog/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2014/01/10/3"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1051421"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2014:096"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2014/01/10/2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/59017"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/58918"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/60770"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/60738"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/56287"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.gentoo.org/security/en/glsa/glsa-201408-13.xml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://oss.oracle.com/pipermail/el-errata/2014-June/004192.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/58783"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2014-0748.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2014-0747.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8r7q-cvjq-x353"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:57:29Z",
+              "published": "2014-05-19T14:55:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2014-82",
+              "aliases": [
+                "CVE-2014-0012",
+                "GHSA-fqh9-2qgg-h84h"
+              ],
+              "details": "FileSystemBytecodeCache in Jinja2 2.7.2 does not properly create temporary directories, which allows local users to gain privileges by pre-creating a temporary directory with a user's uid.  NOTE: this vulnerability exists because of an incomplete fix for CVE-2014-1402.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "acb672b6a179567632e032f547582f30fa2f4aa7"
+                        }
+                      ],
+                      "repo": "https://github.com/mitsuhiko/jinja2"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.7.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/jinja2/PYSEC-2014-82.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1051421"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mitsuhiko/jinja2/pull/292"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/mitsuhiko/jinja2/commit/acb672b6a179567632e032f547582f30fa2f4aa7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/oss-sec/2014/q1/73"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mitsuhiko/jinja2/pull/296"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/60738"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.gentoo.org/security/en/glsa/glsa-201408-13.xml"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://secunia.com/advisories/56328"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:00:58Z",
+              "published": "2019-04-07T00:29:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2019-217",
+              "aliases": [
+                "CVE-2019-10906",
+                "GHSA-462w-v97r-4m45"
+              ],
+              "details": "In Pallets Jinja before 2.10.1, str.format_map allows a sandbox escape.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.10.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.10",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/jinja2/PYSEC-2019-217.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ARTICLE",
+                  "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b2380d147b508bbcb90d2cad443c159e63e12555966ab4f320ee22da@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/46c055e173b52d599c648a98199972dbd6a89d2b4c4647b0500f2284@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/f0c4a03418bcfe70c539c5dbaf99c04c98da13bfa1d3266f08564316@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/7f39f01392d320dfb48e4901db68daeece62fd60ef20955966739993@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/57673a78c4d5c870d3f21465c7e2946b9f8285c7c57e54c2ae552f02@%3Ccommits.airflow.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/320441dccbd9a545320f5f07306d711d4bbd31ba43dc9eebcfc602df@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/2b52b9c8b9d6366a4f1b407a8bde6af28d9fc73fdb3b37695fd0d9ac@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/09fc842ff444cd43d9d4c510756fec625ef8eb1175f14fd21de2605f@%3Cdevnull.infra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QCDYIS254EJMBNWOG4S5QY6AOTOR4TZU/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DSW3QZMFVVR7YE3UT4YRQA272TYAL5AF/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/TS7IVZAJBWOHNRDMFJDIZVFCMRP6YIUQ/"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1152"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-462w-v97r-4m45"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:58:21Z",
+              "published": "2019-04-08T13:29:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2019-220",
+              "aliases": [
+                "CVE-2016-10745",
+                "GHSA-hj2j-77xm-mc5v"
+              ],
+              "details": "In Pallets Jinja before 2.8.1, str.format allows a sandbox escape.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "9b53045c34e61013dc8f09b7e52a555fa16bed16"
+                        }
+                      ],
+                      "repo": "https://github.com/pallets/jinja"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.8.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/jinja2/PYSEC-2019-220.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ARTICLE",
+                  "url": "https://palletsprojects.com/blog/jinja-281-released/"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/pallets/jinja/commit/9b53045c34e61013dc8f09b7e52a555fa16bed16"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-05/msg00030.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1237"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1260"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4011-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00064.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:3964"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:4062"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-hj2j-77xm-mc5v"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:03:28Z",
+              "published": "2021-02-01T20:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2021-66",
+              "aliases": [
+                "CVE-2020-28493",
+                "GHSA-g3rq-g295-4j3m",
+                "SNYK-PYTHON-JINJA2-1012994"
+              ],
+              "details": "This affects the package jinja2 from 0.0.0 and before 2.11.3. The ReDoS vulnerability is mainly due to the `_punctuation_re regex` operator and its use of multiple wildcards. The last wildcard is the most exploitable as it searches for trailing punctuation. This issue can be mitigated by Markdown to format user content instead of the urlize filter, or by implementing request timeouts and limiting process memory.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.11.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0rc1",
+                    "2.0",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6",
+                    "2.10",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/jinja2/PYSEC-2021-66.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/blob/ab81fd9c277900c85da0c322a2ff9d68a235b2e6/src/jinja2/utils.py%23L20"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/pull/1343"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://snyk.io/vuln/SNYK-PYTHON-JINJA2-1012994"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PVAKCOO7VBVUBM3Q6CBBTPBFNP5NDXF4/"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-g3rq-g295-4j3m"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-462w-v97r-4m45",
+                "PYSEC-2019-217"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8r7q-cvjq-x353",
+                "PYSEC-2014-8"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-fqh9-2qgg-h84h",
+                "PYSEC-2014-82"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-g3rq-g295-4j3m",
+                "PYSEC-2021-66"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-hj2j-77xm-mc5v",
+                "PYSEC-2019-220"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "pygments",
+            "version": "1.3.1",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:02Z",
+              "published": "2022-05-17T02:37:56Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-fff8-4w9p-7v76",
+              "aliases": [
+                "CVE-2015-8557",
+                "PYSEC-2016-32"
+              ],
+              "summary": "Command Injection in Pygments",
+              "details": "The FontManager._get_nix_font_path function in formatters/img.py in Pygments 1.2.2 through 2.0.2 allows remote attackers to execute arbitrary commands via shell metacharacters in a font name.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.2.2"
+                        },
+                        {
+                          "fixed": "2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-fff8-4w9p-7v76/GHSA-fff8-4w9p-7v76.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8557"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/db6dd826f8624179e563aaded391efe824462f51"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/birkenfeld/pygments-main/pull-requests/501/fix-shell-injection-in/diff"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-fff8-4w9p-7v76"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pygments/pygments"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pygments/PYSEC-2016-32.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/201612-05"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/133823/Pygments-FontManager._get_nix_font_path-Shell-Injection.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2015/Oct/4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2016/dsa-3445"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/12/14/17"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/12/14/6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.oracle.com/technetwork/topics/security/bulletinjan2016-2867206.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.ubuntu.com/usn/USN-2862-1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-03T15:40:31Z",
+                "nvd_published_at": "2016-01-08T20:59:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:25Z",
+              "published": "2023-07-19T15:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mrwq-x4v8-fh7p",
+              "aliases": [
+                "CVE-2022-40896",
+                "PYSEC-2023-117"
+              ],
+              "summary": "Pygments vulnerable to ReDoS",
+              "details": "A ReDoS issue was discovered in `pygments/lexers/smithy.py` in Pygments until 2.15.0 via SmithyLexer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-mrwq-x4v8-fh7p/GHSA-mrwq-x4v8-fh7p.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "pygments.lexers.templates.SqlJinjaLexer.analyse_text",
+                      "pygments.lexers.smithy.SmithyLexer",
+                      "pygments.lexers.configs.PropertiesLexer"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-40896"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/97eb3d5ec7c1b3ea4fcf9dee30a2309cf92bd194"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/dd52102c38ebe78cd57748e09f38929fd283ad04"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/fdf182a7af85b1deeeb637ca970d31935e7c9d52"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pygments/pygments"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/blob/master/pygments/lexers/smithy.py#L61"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/pygments/PYSEC-2023-117.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pypi.org/project/Pygments/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages-part-2/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-434"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-20T11:00:04Z",
+                "nvd_published_at": "2023-07-19T15:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:05:24Z",
+              "published": "2021-03-29T16:33:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pq64-v7f5-gqh8",
+              "aliases": [
+                "CVE-2021-27291",
+                "PYSEC-2021-141"
+              ],
+              "summary": "Pygments vulnerable to Regular Expression Denial of Service (ReDoS)",
+              "details": "In pygments 1.1+, fixed in 2.7.4, the lexers used to parse programming languages rely heavily on regular expressions. Some of the regular expressions have exponential or cubic worst-case complexity and are vulnerable to ReDoS. By crafting malicious input, an attacker can cause a denial of service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.1"
+                        },
+                        {
+                          "fixed": "2.7.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-pq64-v7f5-gqh8/GHSA-pq64-v7f5-gqh8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-27291"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/commit/2e7e8c4a7b318f4032493773732754e418279a14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/b-c-ds/b1a2cc0c68a35c57188575eb496de5ce"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pygments/pygments"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/03/msg00024.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/05/msg00003.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/05/msg00006.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GSJRFHALQ7E3UV4FFMFU2YQ6LUDHAI55/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WSLD67LFGXOX2K5YNESSWAS4AGZIJTUQ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2021/dsa-4878"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2021/dsa-4889"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-22T20:28:40Z",
+                "nvd_published_at": "2021-03-17T13:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:02Z",
+              "published": "2016-01-08T20:59:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2016-32",
+              "aliases": [
+                "CVE-2015-8557",
+                "GHSA-fff8-4w9p-7v76"
+              ],
+              "details": "The FontManager._get_nix_font_path function in formatters/img.py in Pygments 1.2.2 through 2.0.2 allows remote attackers to execute arbitrary commands via shell metacharacters in a font name.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.2.2"
+                        },
+                        {
+                          "fixed": "2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pygments/PYSEC-2016-32.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/133823/Pygments-FontManager._get_nix_font_path-Shell-Injection.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/12/14/6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2015/Oct/4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.ubuntu.com/usn/USN-2862-1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/birkenfeld/pygments-main/pull-requests/501/fix-shell-injection-in/diff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/12/14/17"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.oracle.com/technetwork/topics/security/bulletinjan2016-2867206.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.debian.org/security/2016/dsa-3445"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://security.gentoo.org/glsa/201612-05"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-fff8-4w9p-7v76"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:05:24Z",
+              "published": "2021-03-17T13:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2021-141",
+              "aliases": [
+                "CVE-2021-27291",
+                "GHSA-pq64-v7f5-gqh8"
+              ],
+              "details": "In pygments 1.1+, fixed in 2.7.4, the lexers used to parse programming languages rely heavily on regular expressions. Some of the regular expressions have exponential or cubic worst-case complexity and are vulnerable to ReDoS. By crafting malicious input, an attacker can cause a denial of service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2e7e8c4a7b318f4032493773732754e418279a14"
+                        }
+                      ],
+                      "repo": "https://github.com/pygments/pygments"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.1"
+                        },
+                        {
+                          "fixed": "2.7.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pygments/PYSEC-2021-141.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/b-c-ds/b1a2cc0c68a35c57188575eb496de5ce"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/pygments/pygments/commit/2e7e8c4a7b318f4032493773732754e418279a14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/03/msg00024.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://www.debian.org/security/2021/dsa-4878"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://www.debian.org/security/2021/dsa-4889"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/05/msg00003.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WSLD67LFGXOX2K5YNESSWAS4AGZIJTUQ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GSJRFHALQ7E3UV4FFMFU2YQ6LUDHAI55/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/05/msg00006.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-pq64-v7f5-gqh8"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:10:25Z",
+              "published": "2023-07-19T15:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2023-117",
+              "aliases": [
+                "CVE-2022-40896",
+                "GHSA-mrwq-x4v8-fh7p"
+              ],
+              "details": "A ReDoS issue was discovered in pygments/lexers/smithy.py in pygments through 2.15.0 via SmithyLexer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pygments",
+                    "purl": "pkg:pypi/pygments"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.11.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3",
+                    "1.3.1",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.6rc1",
+                    "2.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.15.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.7.4",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pygments/PYSEC-2023-117.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://pypi.org/project/Pygments/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pyup.io/posts/pyup-discovers-redos-vulnerabilities-in-top-python-packages-part-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pygments/pygments/blob/master/pygments/lexers/smithy.py#L61"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fff8-4w9p-7v76",
+                "PYSEC-2016-32"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-mrwq-x4v8-fh7p",
+                "PYSEC-2023-117"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-pq64-v7f5-gqh8",
+                "PYSEC-2021-141"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

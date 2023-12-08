@@ -1,0 +1,778 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "shelljs",
+            "version": "0.6.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:07:28Z",
+              "published": "2022-01-21T23:37:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4rq4-32rv-6wp6",
+              "aliases": [
+                "CVE-2022-0144"
+              ],
+              "summary": "Improper Privilege Management in shelljs",
+              "details": "shelljs is vulnerable to Improper Privilege Management",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "shelljs",
+                    "purl": "pkg:npm/shelljs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.8.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-4rq4-32rv-6wp6/GHSA-4rq4-32rv-6wp6.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(shelljs).exec"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0144"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/shelljs/shelljs/commit/d919d22dd6de385edaa9d90313075a77f74b338c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/shelljs/shelljs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/50996581-c08e-4eed-a90e-c0bac082679c"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-269"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-21T21:05:51Z",
+                "nvd_published_at": "2022-01-11T07:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2022-01-14T20:50:57Z",
+              "published": "2022-01-14T21:09:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-64g7-mvw6-v9qj",
+              "summary": "Improper Privilege Management in shelljs",
+              "details": "### Impact\nOutput from the synchronous version of `shell.exec()` may be visible to other users on the same system. You may be affected if you execute `shell.exec()` in multi-user Mac, Linux, or WSL environments, or if you execute `shell.exec()` as the root user.\n\nOther shelljs functions (including the asynchronous version of `shell.exec()`) are not impacted.\n\n### Patches\nPatched in shelljs 0.8.5\n\n### Workarounds\nRecommended action is to upgrade to 0.8.5.\n\n### References\nhttps://huntr.dev/bounties/50996581-c08e-4eed-a90e-c0bac082679c/\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Ask at https://github.com/shelljs/shelljs/issues/1058\n* Open an issue at https://github.com/shelljs/shelljs/issues/new\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "shelljs",
+                    "purl": "pkg:npm/shelljs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.8.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-64g7-mvw6-v9qj/GHSA-64g7-mvw6-v9qj.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/shelljs/shelljs/security/advisories/GHSA-64g7-mvw6-v9qj"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/shelljs/shelljs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/50996581-c08e-4eed-a90e-c0bac082679c/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-269"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-14T20:50:57Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4rq4-32rv-6wp6"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-64g7-mvw6-v9qj"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "webpack-dev-server",
+            "version": "1.14.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:56Z",
+              "published": "2019-01-04T17:40:59Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cf66-xwfp-gvc4",
+              "aliases": [
+                "CVE-2018-14732"
+              ],
+              "summary": "Missing Origin Validation in webpack-dev-server",
+              "details": "Versions of `webpack-dev-server` before 3.1.10 are missing origin validation on the websocket server. This vulnerability allows a remote attacker to steal a developer's source code because the origin of requests to the websocket server that is used for Hot Module Replacement (HMR) are not validated.\n\n\n## Recommendation\nFor `webpack-dev-server` update to version 3.1.11 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "webpack-dev-server",
+                    "purl": "pkg:npm/webpack-dev-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.1.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/01/GHSA-cf66-xwfp-gvc4/GHSA-cf66-xwfp-gvc4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-14732"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/issues/1445"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/issues/1620"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/commit/f18e5adf123221a1015be63e1ca2491ca45b8d10"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/webpack/webpack-dev-server"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/webpack/webpack-dev-server/blob/master/CHANGELOG.md#3111-2018-12-21"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/725"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:31:15Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cf66-xwfp-gvc4"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "karma",
+            "version": "0.13.21",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:07:34Z",
+              "published": "2022-02-06T00:00:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7x7c-qm48-pq9c",
+              "aliases": [
+                "CVE-2022-0437"
+              ],
+              "summary": "Cross-site Scripting in karma",
+              "details": "karma prior to version 6.3.14 contains a cross-site scripting vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "karma",
+                    "purl": "pkg:npm/karma"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.3.14"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-7x7c-qm48-pq9c/GHSA-7x7c-qm48-pq9c.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0437"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/karma-runner/karma/commit/839578c45a8ac42fbc1d72105f97eab77dd3eb8a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/karma-runner/karma/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/karma-runner/karma/releases/tag/v6.3.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/64b67ea1-5487-4382-a5f6-e8a95f798885"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-02-07T21:57:20Z",
+                "nvd_published_at": "2022-02-05T02:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:05:10Z",
+              "published": "2022-02-26T00:00:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rc3x-jf5g-xvc5",
+              "aliases": [
+                "CVE-2021-23495",
+                "SNYK-JAVA-ORGWEBJARSNPM-2412347",
+                "SNYK-JS-KARMA-2396325"
+              ],
+              "summary": "Open redirect in karma",
+              "details": "Karma before 6.3.16 is vulnerable to Open Redirect due to missing validation of the return_url query parameter.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "karma",
+                    "purl": "pkg:npm/karma"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.3.16"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-rc3x-jf5g-xvc5/GHSA-rc3x-jf5g-xvc5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23495"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/karma-runner/karma/commit/ff7edbb2ffbcdd69761bece86b7dc1ef0740508d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/karma-runner/karma"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2412347"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-KARMA-2396325"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-01T19:17:53Z",
+                "nvd_published_at": "2022-02-25T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7x7c-qm48-pq9c"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-rc3x-jf5g-xvc5"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "morgan",
+            "version": "1.7.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:01:35Z",
+              "published": "2019-03-25T18:03:23Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gwg9-rgvj-4h5j",
+              "aliases": [
+                "CVE-2019-5413"
+              ],
+              "summary": "Code Injection in morgan",
+              "details": "Verisons of `morgan` before 1.9.1 are vulnerable to code injection when user input is allowed into the filter or combined with a prototype pollution attack.\n\n\n## Recommendation\n\nUpdate to version 1.9.1 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "morgan",
+                    "purl": "pkg:npm/morgan"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.9.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/03/GHSA-gwg9-rgvj-4h5j/GHSA-gwg9-rgvj-4h5j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5413"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/390881"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-gwg9-rgvj-4h5j"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodejs/security-wg/blob/master/vuln/npm/473.json"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3@%3Ccommits.netbeans.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63@%3Cnotifications.netbeans.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/736"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:38:10Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-gwg9-rgvj-4h5j"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "node-fetch",
+            "version": "1.3.3",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:31Z",
+              "published": "2020-09-10T17:46:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-w7rc-rwvf-8q5r",
+              "aliases": [
+                "CVE-2020-15168"
+              ],
+              "summary": "The `size` option isn't honored after following a redirect in node-fetch",
+              "details": "### Impact\nNode Fetch did not honor the `size` option after following a redirect, which means that when a content size was over the limit, a `FetchError` would never get thrown and the process would end without failure.\n\nFor most people, this fix will have a little or no impact. However, if you are relying on node-fetch to gate files above a size, the impact could be significant, for example: If you don't double-check the size of the data after `fetch()` has completed, your JS thread could get tied up doing work on a large file (DoS) and/or cost you money in computing.\n\n### Patches\nWe released patched versions for both stable and beta channels:\n\n- For `v2`: 2.6.1\n- For `v3`: 3.0.0-beta.9\n\n### Workarounds\nNone, it is strongly recommended to update as soon as possible.\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [node-fetch](https://github.com/node-fetch/node-fetch/issues/new?assignees=\u0026labels=question\u0026template=support-or-usage.md\u0026title=Question%3A+)\n* Contact one of the core maintainers.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-w7rc-rwvf-8q5r/GHSA-w7rc-rwvf-8q5r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0-beta.1"
+                        },
+                        {
+                          "fixed": "3.0.0-beta.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 3.0.0-beta.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-w7rc-rwvf-8q5r/GHSA-w7rc-rwvf-8q5r.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/security/advisories/GHSA-w7rc-rwvf-8q5r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15168"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/2358a6c2563d1730a0cdaccc197c611949f6a334"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/eaff0094c4dfdd5b78711a8c4f1b61e33d282072"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/node-fetch/node-fetch"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-09-10T17:44:09Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:07:30Z",
+              "published": "2022-01-21T23:55:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r683-j2x4-v87g",
+              "aliases": [
+                "CVE-2022-0235"
+              ],
+              "summary": "node-fetch forwards secure headers to untrusted sites",
+              "details": "node-fetch forwards secure headers such as `authorization`, `www-authenticate`, `cookie`, \u0026 `cookie2` when redirecting to a untrusted site.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-r683-j2x4-v87g/GHSA-r683-j2x4-v87g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(node-fetch).fetch"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-r683-j2x4-v87g/GHSA-r683-j2x4-v87g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(node-fetch).fetch"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/pull/1449/commits/5c32f002fdd65b1c6a8f1e3620210813d45c7e60"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/pull/1453"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/1ef4b560a17e644a02a3bfdea7631ffeee578b35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/36e47e8a6406185921e4985dcbeff140d73eaa10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/5c32f002fdd65b1c6a8f1e3620210813d45c7e60"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/node-fetch/node-fetch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/d26ab655-38d6-48b3-be15-f9ad6b6ae6f7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00007.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-173",
+                  "CWE-200",
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-18T22:51:22Z",
+                "nvd_published_at": "2022-01-16T17:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-w7rc-rwvf-8q5r"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-r683-j2x4-v87g"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

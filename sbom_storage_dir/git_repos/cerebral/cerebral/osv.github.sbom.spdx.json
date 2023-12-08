@@ -1,0 +1,659 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "@angular/core",
+            "version": "6.0.3",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:07:05Z",
+              "published": "2022-05-27T00:01:08Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c75v-2vq8-878f",
+              "aliases": [
+                "CVE-2021-4231"
+              ],
+              "summary": "Cross site scripting in Angular",
+              "details": "A vulnerability was found in Angular up to 11.0.4/11.1.0-next.2. It has been classified as problematic. Affected is the handling of comments. The manipulation leads to cross site scripting. It is possible to launch the attack remotely but it might require an authentication first. Upgrading to version 10.2.5, 11.0.5 or 11.1.0-next.3 is advised to to address this issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/core",
+                    "purl": "pkg:npm/%40angular/core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "11.0.0"
+                        },
+                        {
+                          "fixed": "11.0.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c75v-2vq8-878f/GHSA-c75v-2vq8-878f.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/core",
+                    "purl": "pkg:npm/%40angular/core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "11.1.0-next.0"
+                        },
+                        {
+                          "fixed": "11.1.0-next.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 11.1.0-next.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c75v-2vq8-878f/GHSA-c75v-2vq8-878f.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@angular/core",
+                    "purl": "pkg:npm/%40angular/core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "10.2.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-c75v-2vq8-878f/GHSA-c75v-2vq8-878f.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4231"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/issues/40136"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/0aa220bc0000fc4d1651ec388975bbf5baa1da36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/47d9b6d72dab9d60c96bc1c3604219f6385649ea"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular/commit/ba8da742e3b243e8f43d4c63aa842b44e14f2b09"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULARCORE-1070902"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://vuldb.com/?id.181356"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-02T18:58:52Z",
+                "nvd_published_at": "2022-05-26T14:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c75v-2vq8-878f"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "node-sass",
+            "version": "4.5.3",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2021-09-28T16:08:17Z",
+              "published": "2020-09-11T21:12:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9v62-24cr-58cx",
+              "summary": "Denial of Service in node-sass",
+              "details": "Affected versions of `node-sass` are vulnerable to Denial of Service (DoS). Crafted objects passed to the `renderSync` function may trigger C++ assertions in `CustomImporterBridge::get_importer_entry` and `CustomImporterBridge::post_process_return_value` that crash the Node process. This may allow attackers to crash the system's running Node process and lead to Denial of Service.\n\n\n## Recommendation\n\nUpgrade to version 4.13.1 or later",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-sass",
+                    "purl": "pkg:npm/node-sass"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.3.0"
+                        },
+                        {
+                          "fixed": "4.13.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-9v62-24cr-58cx/GHSA-9v62-24cr-58cx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sass/node-sass/commit/338fd7a14d3b8bd374a382336df16f9c6792b884"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sass/node-sass"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/961"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-08-31T18:42:06Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:03:06Z",
+              "published": "2022-02-09T22:22:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r8f7-9pfq-mjmv",
+              "aliases": [
+                "CVE-2020-24025"
+              ],
+              "summary": "Improper Certificate Validation in node-sass",
+              "details": "Certificate validation in node-sass 2.0.0 to 6.0.1 is disabled when requesting binaries even if the user is not specifying an alternative download path.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-sass",
+                    "purl": "pkg:npm/node-sass"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "7.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-r8f7-9pfq-mjmv/GHSA-r8f7-9pfq-mjmv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-24025"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sass/node-sass/issues/3067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sass/node-sass/pull/3149"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sass/node-sass/pull/567#issuecomment-656609236"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sass/node-sass/commit/0a21792803639851b480fbd8cbcb5540ef974387"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sass/node-sass"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sass/node-sass/releases/tag/v7.0.0"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-04-06T22:18:40Z",
+                "nvd_published_at": "2021-01-11T19:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9v62-24cr-58cx"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-r8f7-9pfq-mjmv"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "prismjs",
+            "version": "1.6.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:30Z",
+              "published": "2020-08-07T22:28:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wvhm-4hhf-97x9",
+              "aliases": [
+                "CVE-2020-15138"
+              ],
+              "summary": "Cross-Site Scripting in Prism",
+              "details": "### Impact\nThe easing preview of the Previewers plugin has an XSS vulnerability that allows attackers to execute arbitrary code in Safari and Internet Explorer.\n\nThis impacts all Safari and Internet Explorer users of Prism \u003e=v1.1.0 that use the _Previewers_ plugin (\u003e=v1.10.0) or the _Previewer: Easing_ plugin (v1.1.0 to v1.9.0).\n\n### Patches\nThis problem is patched in v1.21.0.\n\n### Workarounds\nTo workaround the issue without upgrading, [disable the easing preview](https://prismjs.com/plugins/previewers/#disabling-a-previewer) on all impacted code blocks. You need Prism v1.10.0 or newer to apply this workaround.\n\n### References\nThe vulnerability was introduced by this [commit](https://github.com/PrismJS/prism/commit/4303c940d3d3a20e8ce7635bf23331c75060f5c5) on Sep 29, 2015 and fixed by [Masato Kinugawa](https://twitter.com/kinugawamasato) (#2506).\n\n### For more information\nIf you have any questions or comments about this advisory, please [open an issue](https://github.com/PrismJS/prism/issues).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "prismjs",
+                    "purl": "pkg:npm/prismjs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.1.0"
+                        },
+                        {
+                          "fixed": "1.21.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/08/GHSA-wvhm-4hhf-97x9/GHSA-wvhm-4hhf-97x9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/security/advisories/GHSA-wvhm-4hhf-97x9"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/pull/2506/commits/7bd7de05edf71112a3a77f87901a2409c9c5c20c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://prismjs.com/plugins/previewers/#disabling-a-previewer"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-08-07T16:19:07Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:05:04Z",
+              "published": "2021-03-01T19:52:33Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h4hr-7fg3-h35w",
+              "aliases": [
+                "CVE-2021-23341",
+                "SNYK-JAVA-ORGWEBJARS-1076583",
+                "SNYK-JAVA-ORGWEBJARSNPM-1076582",
+                "SNYK-JS-PRISMJS-1076581"
+              ],
+              "summary": "Denial of service in prismjs",
+              "details": "The package prismjs before 1.23.0 are vulnerable to Regular Expression Denial of Service (ReDoS) via the `prism-asciidoc`, `prism-rest`, `prism-tap` and `prism-eiffel` components.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "prismjs",
+                    "purl": "pkg:npm/prismjs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.23.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-h4hr-7fg3-h35w/GHSA-h4hr-7fg3-h35w.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23341"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/issues/2583"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/pull/2584"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/commit/c2f6a64426f44497a675cb32dccb079b3eff1609"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1076583"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1076582"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-PRISMJS-1076581"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/prismjs"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-02-24T07:34:23Z",
+                "nvd_published_at": "2021-02-18T16:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:05:58Z",
+              "published": "2021-06-28T18:33:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gj77-59wh-66hg",
+              "aliases": [
+                "CVE-2021-32723"
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in Prism",
+              "details": "Some languages before 1.24.0 are vulnerable to Regular Expression Denial of Service (ReDoS).\n\n### Impact\n\nWhen Prism is used to highlight untrusted (user-given) text, an attacker can craft a string that will take a very very long time to highlight. Do not use the following languages to highlight untrusted text.\n\n- ASCIIDoc\n- ERB\n\nOther languages are __not__ affected and can be used to highlight untrusted text.\n\n### Patches\nThis problem has been fixed in Prism v1.24.\n\n### References\n\n- PrismJS/prism#2774\n- PrismJS/prism#2688\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "prismjs",
+                    "purl": "pkg:npm/prismjs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.24.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-gj77-59wh-66hg/GHSA-gj77-59wh-66hg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/security/advisories/GHSA-gj77-59wh-66hg"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32723"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/pull/2688"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/pull/2774"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PrismJS/prism/commit/d85e30da6755fdbe7f8559f8e75d122297167018"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/PrismJS/prism"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-06-28T18:15:20Z",
+                "nvd_published_at": "2021-06-28T20:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:06:25Z",
+              "published": "2021-09-20T20:44:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hqhp-5p83-hx96",
+              "aliases": [
+                "CVE-2021-3801"
+              ],
+              "summary": "prismjs Regular Expression Denial of Service vulnerability",
+              "details": "Prism is a syntax highlighting library. The prismjs package is vulnerable to ReDoS (regular expression denial of service). An attacker that is able to provide a crafted HTML comment as input may cause an application to consume an excessive amount of CPU.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "prismjs",
+                    "purl": "pkg:npm/prismjs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.25.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-hqhp-5p83-hx96/GHSA-hqhp-5p83-hx96.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3801"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/prismjs/prism/commit/0ff371bb4775a131634f47d0fe85794c547232f9"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/prismjs/prism"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/8c16ab31-6eb6-46d1-b9a4-387222fe1b8a"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-09-16T18:29:46Z",
+                "nvd_published_at": "2021-09-15T13:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wvhm-4hhf-97x9"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-h4hr-7fg3-h35w"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-gj77-59wh-66hg"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-hqhp-5p83-hx96"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3430 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/PS7-x64_Modules_completionpredictor__manifest_spdx_2.2_manifest.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "Microsoft.Windows.Compatibility",
+            "version": "6.0.0",
+            "ecosystem": "NuGet",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:02:59Z",
+              "published": "2023-06-14T17:08:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-555c-2p6r-68mm",
+              "aliases": [
+                "BIT-dotnet-2023-29331",
+                "BIT-dotnet-sdk-2023-29331",
+                "CVE-2023-29331"
+              ],
+              "summary": ".NET Denial of Service vulnerability",
+              "details": "# Microsoft Security Advisory CVE-2023-29331: .NET Denial of Service vulnerability\n\n## \u003ca name=\"executive-summary\"\u003e\u003c/a\u003eExecutive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in .NET 7.0 and .NET 6.0. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nA vulnerability exists in .NET when processing X.509 certificates that may result in Denial of Service. \n\nDetails: [KB5025823 ](https://support.microsoft.com/kb/5025823)\n\n## Announcement\n\nAnnouncement for this issue can be found at  https://github.com/dotnet/announcements/issues/257\n\n### \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nMicrosoft has not identified any mitigating factors for this vulnerability.\n\n## \u003ca name=\"affected-software\"\u003e\u003c/a\u003eAffected software\n\n* Any .NET 7.0 application running on .NET 7.0.5 or earlier.\n* Any .NET 6.0 application running on .NET 6.0.16 or earlier.\n\nIf your application uses the following package versions, ensure you update to the latest version of .NET.\n\n### \u003ca name=\".NET 7\"\u003e\u003c/a\u003e.NET 7\n\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)               | \u003e= 7.0.0, \u003c 7.0.1 | 7.0.3\n[System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs)           | \u003e= 7.0.0, \u003c 7.0.1 | 7.0.2\n[Microsoft.NetCore.App.Runtime.linux-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm64)           | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-musl-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm)     | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-musl-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm64) | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-musl-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-x64)     | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-x64)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.osx-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-arm64)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.osx-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-x64)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm64)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x64)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-x86](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x86)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n\n### \u003ca name=\".NET 6\"\u003e\u003c/a\u003e.NET 6\n\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)               | \u003e= 6.0.0, \u003c 6.0.4 | 6.0.6\n[System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs)           | \u003e= 6.0.0, \u003c 6.0.2 | 6.0.3\n[Microsoft.NetCore.App.Runtime.linux-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm64)           | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-musl-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm)     | \u003e= 6.0.1, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-musl-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm64) | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-musl-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-x64)     | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-x64)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.osx-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-arm64)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.osx-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-x64)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm64)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x64)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-x86](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x86)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n\n\n## Advisory FAQ\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\nIf you have a runtime or SDK with a version listed, or an affected package listed in [affected software](#affected-software), you're exposed to the vulnerability.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* To fix the issue please install the latest version of .NET 6.0 or .NET 7.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* If you are using one of the affected packages, please update to the patched version listed above.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n Version:   6.0.300\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\6.0.300\\\n\nHost (useful for support):\n\n  Version: 6.0.5\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  6.0.300 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspNetCore.App 6.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.NETCore.App 6.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\n  Microsoft.WindowsDesktop.App 6.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 7.0, you should download and install Runtime 7.0.7 or SDK 7.0.106 (for Visual Studio 2022 v17.4) from https://dotnet.microsoft.com/download/dotnet-core/7.0.\n* If you're using .NET 6.0, you should download and install Runtime 6.0.18 or SDK 6.0.312 (for Visual Studio 2022 v17.2) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n.NET 6.0 and and .NET 7.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 6.0 or .NET 7.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### External Links\n\n[CVE-2023-29331]( https://www.cve.org/CVERecord?id=2023-29331)\n\n### Revisions\n\nV1.0 (June 13, 2023): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2023-06-13_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Windows.Compatibility",
+                    "purl": "pkg:nuget/Microsoft.Windows.Compatibility"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Windows.Compatibility",
+                    "purl": "pkg:nuget/Microsoft.Windows.Compatibility"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Pkcs",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Pkcs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Pkcs",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Pkcs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x86",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x86"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x86",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x86"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-555c-2p6r-68mm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29331"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/257"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/runtime"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29331"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://support.microsoft.com/kb/5025823"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-14T17:08:54Z",
+                "nvd_published_at": "2023-06-14T15:15:09Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-555c-2p6r-68mm"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "System.Security.Cryptography.Xml",
+            "version": "6.0.0",
+            "ecosystem": "NuGet",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:02:23Z",
+              "published": "2022-08-10T00:00:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2m65-m22p-9wjw",
+              "aliases": [
+                "BIT-dotnet-2022-34716",
+                "BIT-dotnet-sdk-2022-34716",
+                "CVE-2022-34716"
+              ],
+              "summary": ".NET Information Disclosure Vulnerability",
+              "details": "Microsoft is releasing this security advisory to provide information about a vulnerability in .NET Core 3.1 and .NET 6.0.  An information disclosure vulnerability exists in .NET Core 3.1 and .NET 6.0 that could lead to unauthorized access of privileged information.\n\n## Affected software\n\n* Any .NET 6.0 application running on .NET 6.0.7 or earlier.\n* Any .NET Core 3.1 applicaiton running on .NET Core 3.1.27 or earlier.\n\n## Patches\n\n* If you're using .NET 6.0, you should download and install Runtime 6.0.8 or SDK 6.0.108 (for Visual Studio 2022 v17.1) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n* If you're using .NET Core 3.1, you should download and install Runtime 3.1.28 (for Visual Studio 2019 v16.9) from https://dotnet.microsoft.com/download/dotnet-core/3.1.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Xml",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Xml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.7.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.4.0",
+                    "4.4.0-preview1-25305-02",
+                    "4.4.0-preview2-25405-01",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.5.0",
+                    "4.5.0-preview1-25914-04",
+                    "4.5.0-preview1-26216-02",
+                    "4.5.0-preview2-26406-04",
+                    "4.5.0-rc1",
+                    "4.6.0",
+                    "4.7.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Xml",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Xml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "6.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.0.0",
+                    "6.0.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-x86"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.osx-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.osx-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-musl-x64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-arm",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.win-arm",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.win-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-musl-arm64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.10",
+                    "3.1.11",
+                    "3.1.12",
+                    "3.1.13",
+                    "3.1.14",
+                    "3.1.15",
+                    "3.1.16",
+                    "3.1.17",
+                    "3.1.18",
+                    "3.1.19",
+                    "3.1.2",
+                    "3.1.20",
+                    "3.1.21",
+                    "3.1.22",
+                    "3.1.23",
+                    "3.1.24",
+                    "3.1.25",
+                    "3.1.26",
+                    "3.1.27",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.6",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-musl-arm64",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-musl-arm",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.1.0"
+                        },
+                        {
+                          "fixed": "3.1.28"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.AspNetCore.App.Runtime.linux-musl-arm",
+                    "purl": "pkg:nuget/Microsoft.AspNetCore.App.Runtime.linux-musl-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-2m65-m22p-9wjw/GHSA-2m65-m22p-9wjw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-vh55-786g-wjwj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-34716"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/232"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/aspnetcore/issues/43166"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-34716"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2022-34716"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-08-11T21:17:41Z",
+                "nvd_published_at": "2022-08-09T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2m65-m22p-9wjw"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "System.Data.SqlClient",
+            "version": "4.8.3",
+            "ecosystem": "NuGet",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:26Z",
+              "published": "2022-11-08T23:00:22Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8g2p-5pqh-5jmc",
+              "aliases": [
+                "CVE-2022-41064"
+              ],
+              "summary": ".NET Information Disclosure Vulnerability",
+              "details": "Microsoft is releasing this security advisory to provide information about a vulnerability in .NET, .NET Core and .NET Framework's System.Data.SqlClient and Microsoft.Data.SqlClient NuGet Packages.\n\nA vulnerability exists in System.Data.SqlClient and Microsoft.Data.SqlClient libraries where a timeout occurring under high load can cause incorrect data to be returned as the result of an asynchronously executed query.\n\n## \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nIf you are not talking to Microsoft SQL Server from your application you are not affected by this vulnerability.\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\n.NET has two types of dependencies: direct and transitive. Direct dependencies are dependencies where you specifically add a package to your project, transitive dependencies occur when you add a package to your project that in turn relies on another package. \n\nFor example, the Microsoft.AspNetCore.Mvc package depends on the Microsoft.AspNetCore.Mvc.Core package. When you add a dependency on Microsoft.AspNetCore.Mvc in your project, you're taking a transitive dependency on Microsoft.AspNetCore.Mvc.Core. \n \nAny application that has a direct or transitive dependency on the  affected packages listed above are vulnerable.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* If you are using System.Data.SqlClient on .NET Framework you must install the November update for .NET Framework\n* If you are using System.Data.SqlClient on .NET Core, .NET 5 or .NET 6 you must update the nuget package to an updated version as listed in the affected packages.\n* If you are using Microsoft.Data.SqlClient, anywhere (.NET Core, .NET 5/6, .NET Framework) and you are using a version that is vulnerable you must update as listed in the affected packages.\n\n**Additional Details**\n\n.NET and .NET Framework projects have two types of dependencies: direct and transitive. You must update your projects using the following instructions to address both types of dependency. \n\nAdditionally, .NET Framework users must also install the November 2022 security patch to be protected. \n\n#### Direct dependencies \n\nDirect dependencies are discoverable by examining your csproj file. They can be fixed by editing the project file or using nuget command line to update the dependency. \n\n#### Transitive dependencies \n\nTransitive dependencies occur when you add a package to your project that in turn relies on another package. Transitive dependencies can be discovered by searching the project.assets.json file for each of your projects. This file is produced on each build and is in the obj directory for each project. \n\nThe project.assets.json files are the authoritative list of all packages used by your project, containing both direct and transitive dependencies. \n\n#### Fixing direct dependencies \n\nDirect dependencies are nuget packages that have been specifically added to a project, rather than being pulled in because a nuget package added requires it. They can be seen in the solution explorer in Visual Studio or by opening the csproj for the project and examining the packageReference nodes for the package name, specified by the Include parameter, and its version, specified by the Version parameter.  \n\nFor example, the following project file has a direct dependency on version 2.1.1 of Microsoft.Data.SqlClient. \n```\n\u003cProject Sdk=\"Microsoft.NET.Sdk.Web\"\u003e \n\n  \u003cPropertyGroup\u003e \n    \u003cTargetFramework\u003enet6.0\u003c/TargetFramework\u003e \n    \u003cNullable\u003eenable\u003c/Nullable\u003e \n    \u003cImplicitUsings\u003eenable\u003c/ImplicitUsings\u003e \n  \u003c/PropertyGroup\u003e \n\n  \u003cItemGroup\u003e \n    \u003cPackageReference Include=\"Microsoft.Data.SqlClient\" Version=\"2.1.1\" /\u003e \n  \u003c/ItemGroup\u003e \n\n\u003c/Project\u003e \n```\n#### Fixing direct dependencies with the nuget command line \n\nOpen a command line to the directory holding your project \n\nRun the following command if you are using a version of Microsoft.Data.SqlClient between 2.0.0 and 2.1.1 \n\n\u003e dotnet add package Microsoft.Data.SqlClient --version 2.1.2 \n\nRun the following command if you are using a version of Microsoft.Data.SqlClient below 1.1.4 \n\n\u003e dotnet add package Microsoft.Data.SqlClient --version 1.1.4 \n\nRun the following command if you are using a version of System.Data.SqlClient below 4.8.4 \n\n\u003e dotnet add package System.Data.SqlClient --version 4.8.5 \n\n#### Fixing direct dependencies by editing the project file \n\nOpen projectname.csproj in your editor. If you're using Visual Studio, right-click the project and choose Edit projectname.csproj from the context menu, where projectname is the name of your project.  \n\nLook for PackageReference elements. The following shows an example project file: \n\n```\n\u003cProject Sdk=\"Microsoft.NET.Sdk.Web\"\u003e \n\n  \u003cPropertyGroup\u003e \n    \u003cTargetFramework\u003enet6.0\u003c/TargetFramework\u003e \n    \u003cNullable\u003eenable\u003c/Nullable\u003e \n    \u003cImplicitUsings\u003eenable\u003c/ImplicitUsings\u003e \n  \u003c/PropertyGroup\u003e \n\n  \u003cItemGroup\u003e \n    \u003cPackageReference Include=\"Microsoft.Data.SqlClient\" Version=\"2.1.1\" /\u003e \n  \u003c/ItemGroup\u003e \n\n\u003c/Project\u003e \n```\n\nThe preceding example has a reference tone of the vulnerable packages as seen by the single PackageReference element. The name of the package is in the Include attribute. \nThe package version number is in the Version attribute. \n\nTo update the version to the secure package, change the version number to the updated package version as listed in the Affected software section of this document. \n\nIn this example, update Microsoft.Data.SqlClient to the appropriate fixed version for your major version. Save the csproj file. The example csproj now looks as follows: \n```\n\u003cProject Sdk=\"Microsoft.NET.Sdk.Web\"\u003e \n\n  \u003cPropertyGroup\u003e \n    \u003cTargetFramework\u003enet6.0\u003c/TargetFramework\u003e \n    \u003cNullable\u003eenable\u003c/Nullable\u003e \n    \u003cImplicitUsings\u003eenable\u003c/ImplicitUsings\u003e \n  \u003c/PropertyGroup\u003e \n\n  \u003cItemGroup\u003e \n    \u003cPackageReference Include=\"Microsoft.Data.SqlClient\" Version=\"2.1.2\" /\u003e \n  \u003c/ItemGroup\u003e \n\n\u003c/Project\u003e\n```\nIf you're using Visual Studio and you save your updated csproj file, Visual Studio will restore the new package version. \n\nYou can see the restore results by opening the Output window (Ctrl+Alt+O) and changing the Show output from drop-down list to Package Manager. \n\nIf you're not using Visual Studio, open a command line and change to your project directory. Execute the dotnet restore command to restore the updated dependencies. \n\nNow recompile your application. If after recompilation you see a Dependency conflict warning, you must update your other direct dependencies to versions that take a dependency on the updated package. \n\n#### Discovering and fixing transitive dependencies \n\nRebuild your solution and then open the project.assets.json file from in each of your project’s obj directory in your editor. We suggest you use an editor that understands JSON and allows you to collapse and expand nodes to review this file. Both Visual Studio and Visual Studio Code provide JSON friendly editing. \n\nSearch the project.assets.json file for the vulnerable packages above using the format packagename/ for each of the package names from the preceding table. If you find the assembly name in your search: \n\nExamine the line on which they are found, the version number is after the /. \n\nCompare to the vulnerable versions \n\nFor example, a search result that shows \"Microsoft.Data.SqlClient\": \"2.1.0\" is a reference to version 2.1.0 of Microsoft.Data.SqlClient If your project.assets.json file includes vulnerable versions of the nuget packages then you need to fix the transitive dependencies. \n\nIf you have not found any reference to any vulnerable packages, this means either \n\nNone of your direct dependencies depend on any vulnerable packages, or \n\nYou have already fixed the problem by updating the direct dependencies. \n\nIf your transitive dependency review found references to the vulnerable package, you must add a direct dependency to the updated package to your csproj file to override the transitive dependency. \n\n#### Editing projects to fix transitive dependencies \n\nOpen projectname.csproj in your editor. Look for PackageReference nodes, for example: \n```\n\u003cProject Sdk=\"Microsoft.NET.Sdk.Web\"\u003e \n\n  \u003cPropertyGroup\u003e \n    \u003cTargetFramework\u003enet6.0\u003c/TargetFramework\u003e \n    \u003cNullable\u003eenable\u003c/Nullable\u003e \n    \u003cImplicitUsings\u003eenable\u003c/ImplicitUsings\u003e \n  \u003c/PropertyGroup\u003e \n\n  \u003cItemGroup\u003e \n    \u003cPackageReference Include=\"IndirectDependency\" Version=\"1.0.0\" /\u003e \n  \u003c/ItemGroup\u003e \n\n\u003c/Project\u003e \n```\n\n\nYou must add a direct dependency to the updated, matching major/minor version of the vulnerable by adding it to the csproj file. This is done by adding a new line to the dependencies section, referencing the fixed version. For example,  \n```\n\u003cProject Sdk=\"Microsoft.NET.Sdk.Web\"\u003e \n\n  \u003cPropertyGroup\u003e \n    \u003cTargetFramework\u003enet6.0\u003c/TargetFramework\u003e \n    \u003cNullable\u003eenable\u003c/Nullable\u003e \n    \u003cImplicitUsings\u003eenable\u003c/ImplicitUsings\u003e \n  \u003c/PropertyGroup\u003e \n\n  \u003cItemGroup\u003e \n    \u003cPackageReference Include=\"IndirectDependency\" Version=\"1.0.0\" /\u003e \n    \u003cPackageReference Include=\"Microsoft.Data.SqlClient\" Version=\"2.1.2\" /\u003e \n  \u003c/ItemGroup\u003e \n\n\u003c/Project\u003e \n\n```\n\nAfter you've added the direct dependency reference, save your csproj file. \n\nIf you're using Visual Studio, save your updated csproj file and Visual Studio will restore the new package versions. You can see the restore results by opening the Output window (Ctrl+Alt+O) and changing the Show output from drop-down list to Package Manager. \n\nIf you're not using Visual Studio, open a command line and change to your project directory. Execute the dotnet restore command to restore the new dependencies. \n\n#### Using the nuget command line to fix transitive dependencies \n\nOpen a command window and change directory to your project directory.  \n\nRun the following command if you have an indirect dependency on Microsoft.Data.SqlClient between versions 2.0.0 and 2.1.1 \n\n\u003e dotnet add package Microsoft.Data.SqlClient --version 2.1.2 \n\nRun the following command if you have an indirect dependency on Microsoft.Data.SqlClient below 1.1.4 \n\n\u003e dotnet add package Microsoft.Data.SqlClient --version 1.1.4 \n\nRun the following command if you have an indirect dependency on System.Data.SqlClient below 4.8.4 \n\n\u003e dotnet add package System.Data.SqlClient --version 4.8.5 \n\nExecute the dotnet restore command to restore the new dependencies. \n\n#### Rebuilding your application \n\nFinally, you must rebuild your application, test, and redeploy. \n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### Revisions\n\nV1.0 (November 8, 2022): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2022-11-08_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Data.SqlClient",
+                    "purl": "pkg:nuget/Microsoft.Data.SqlClient"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.19123.2-Preview",
+                    "1.0.19128.1-Preview",
+                    "1.0.19189.1-Preview",
+                    "1.0.19221.1-Preview",
+                    "1.0.19239.1",
+                    "1.0.19249.1",
+                    "1.0.19269.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.1.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-8g2p-5pqh-5jmc/GHSA-8g2p-5pqh-5jmc.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Data.SqlClient",
+                    "purl": "pkg:nuget/System.Data.SqlClient"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.8.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0-beta1",
+                    "1.0.0-beta2",
+                    "4.0.0-beta-22605",
+                    "4.0.0-beta-22816",
+                    "4.0.0-beta-23019",
+                    "4.0.0-beta-23109",
+                    "4.0.0-beta-23123",
+                    "4.0.0-beta-23225",
+                    "4.0.0-beta-23409",
+                    "4.0.0-beta-23516",
+                    "4.1.0",
+                    "4.1.0-rc2-24027",
+                    "4.3.0",
+                    "4.3.0-preview1-24530-04",
+                    "4.3.1",
+                    "4.4.0",
+                    "4.4.0-preview1-25305-02",
+                    "4.4.0-preview2-25405-01",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.4.3",
+                    "4.5.0",
+                    "4.5.0-preview1-26216-02",
+                    "4.5.0-preview2-26406-04",
+                    "4.5.0-rc1",
+                    "4.5.1",
+                    "4.5.3",
+                    "4.6.0",
+                    "4.6.0-preview2-26905-02",
+                    "4.6.0-preview3-27014-02",
+                    "4.6.1",
+                    "4.7.0",
+                    "4.8.0",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.8.3",
+                    "4.8.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.8.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-8g2p-5pqh-5jmc/GHSA-8g2p-5pqh-5jmc.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Data.SqlClient",
+                    "purl": "pkg:nuget/Microsoft.Data.SqlClient"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.1.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-8g2p-5pqh-5jmc/GHSA-8g2p-5pqh-5jmc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/corefx/security/advisories/GHSA-8g2p-5pqh-5jmc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-41064"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/issues/78042"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/corefx"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41064"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.nuget.org/packages/Microsoft.Data.SqlClient/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-11-08T23:00:22Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8g2p-5pqh-5jmc"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "System.Security.Cryptography.Pkcs",
+            "version": "6.0.0",
+            "ecosystem": "NuGet",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-06T01:02:59Z",
+              "published": "2023-06-14T17:08:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-555c-2p6r-68mm",
+              "aliases": [
+                "BIT-dotnet-2023-29331",
+                "BIT-dotnet-sdk-2023-29331",
+                "CVE-2023-29331"
+              ],
+              "summary": ".NET Denial of Service vulnerability",
+              "details": "# Microsoft Security Advisory CVE-2023-29331: .NET Denial of Service vulnerability\n\n## \u003ca name=\"executive-summary\"\u003e\u003c/a\u003eExecutive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in .NET 7.0 and .NET 6.0. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nA vulnerability exists in .NET when processing X.509 certificates that may result in Denial of Service. \n\nDetails: [KB5025823 ](https://support.microsoft.com/kb/5025823)\n\n## Announcement\n\nAnnouncement for this issue can be found at  https://github.com/dotnet/announcements/issues/257\n\n### \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nMicrosoft has not identified any mitigating factors for this vulnerability.\n\n## \u003ca name=\"affected-software\"\u003e\u003c/a\u003eAffected software\n\n* Any .NET 7.0 application running on .NET 7.0.5 or earlier.\n* Any .NET 6.0 application running on .NET 6.0.16 or earlier.\n\nIf your application uses the following package versions, ensure you update to the latest version of .NET.\n\n### \u003ca name=\".NET 7\"\u003e\u003c/a\u003e.NET 7\n\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)               | \u003e= 7.0.0, \u003c 7.0.1 | 7.0.3\n[System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs)           | \u003e= 7.0.0, \u003c 7.0.1 | 7.0.2\n[Microsoft.NetCore.App.Runtime.linux-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm64)           | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-musl-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm)     | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-musl-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm64) | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-musl-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-x64)     | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.linux-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-x64)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.osx-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-arm64)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.osx-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-x64)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm64)               | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x64)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n[Microsoft.NetCore.App.Runtime.win-x86](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x86)                   | \u003e= 7.0.0, \u003c 7.0.5 | 7.0.7\n\n### \u003ca name=\".NET 6\"\u003e\u003c/a\u003e.NET 6\n\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)               | \u003e= 6.0.0, \u003c 6.0.4 | 6.0.6\n[System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs)           | \u003e= 6.0.0, \u003c 6.0.2 | 6.0.3\n[Microsoft.NetCore.App.Runtime.linux-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-arm64)           | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-musl-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm)     | \u003e= 6.0.1, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-musl-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-arm64) | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-musl-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-musl-x64)     | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.linux-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.linux-x64)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.osx-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-arm64)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.osx-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.osx-x64)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-arm](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-arm64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-arm64)               | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-x64](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x64)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n[Microsoft.NetCore.App.Runtime.win-x86](https://www.nuget.org/packages/Microsoft.NetCore.App.Runtime.win-x86)                   | \u003e= 6.0.0, \u003c 6.0.16 | 6.0.18\n\n\n## Advisory FAQ\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\nIf you have a runtime or SDK with a version listed, or an affected package listed in [affected software](#affected-software), you're exposed to the vulnerability.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* To fix the issue please install the latest version of .NET 6.0 or .NET 7.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* If you are using one of the affected packages, please update to the patched version listed above.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n Version:   6.0.300\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\6.0.300\\\n\nHost (useful for support):\n\n  Version: 6.0.5\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  6.0.300 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspNetCore.App 6.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.NETCore.App 6.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\n  Microsoft.WindowsDesktop.App 6.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 7.0, you should download and install Runtime 7.0.7 or SDK 7.0.106 (for Visual Studio 2022 v17.4) from https://dotnet.microsoft.com/download/dotnet-core/7.0.\n* If you're using .NET 6.0, you should download and install Runtime 6.0.18 or SDK 6.0.312 (for Visual Studio 2022 v17.2) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n.NET 6.0 and and .NET 7.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 6.0 or .NET 7.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### External Links\n\n[CVE-2023-29331]( https://www.cve.org/CVERecord?id=2023-29331)\n\n### Revisions\n\nV1.0 (June 13, 2023): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2023-06-13_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Windows.Compatibility",
+                    "purl": "pkg:nuget/Microsoft.Windows.Compatibility"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Windows.Compatibility",
+                    "purl": "pkg:nuget/Microsoft.Windows.Compatibility"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Pkcs",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Pkcs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Pkcs",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Pkcs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-musl-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-musl-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.linux-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.linux-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.osx-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.osx-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-arm64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-arm64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x64",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x64"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x86",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x86"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "7.0.5"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 7.0.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.NetCore.App.Runtime.win-x86",
+                    "purl": "pkg:nuget/Microsoft.NetCore.App.Runtime.win-x86"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.10",
+                    "6.0.11",
+                    "6.0.12",
+                    "6.0.13",
+                    "6.0.14",
+                    "6.0.15",
+                    "6.0.16",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.16",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-555c-2p6r-68mm/GHSA-555c-2p6r-68mm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-555c-2p6r-68mm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29331"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/257"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/runtime"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29331"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://support.microsoft.com/kb/5025823"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-14T17:08:54Z",
+                "nvd_published_at": "2023-06-14T15:15:09Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-555c-2p6r-68mm"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

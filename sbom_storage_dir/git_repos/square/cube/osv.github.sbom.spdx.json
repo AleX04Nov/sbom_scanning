@@ -1,0 +1,199 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "node-static",
+            "version": "0.6.5",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-06T06:30:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5g97-whc9-8g7j",
+              "aliases": [
+                "CVE-2023-26111"
+              ],
+              "summary": "node-static and @nubosoftware/node-static vulnerable to Directory Traversal",
+              "details": "node-static and the fork @nubosoftware/node-static are vulnerable to Directory Traversal due to improper file path sanitization in the startsWith() method in the servePath function.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-static",
+                    "purl": "pkg:npm/node-static"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.7.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-5g97-whc9-8g7j/GHSA-5g97-whc9-8g7j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@nubosoftware/node-static",
+                    "purl": "pkg:npm/%40nubosoftware/node-static"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.7.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-5g97-whc9-8g7j/GHSA-5g97-whc9-8g7j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26111"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/lirantal/c80b28e7bee148dc287339cb483e42bc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/cloudhead/node-static"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudhead/node-static/blob/master/lib/node-static.js#23L160-L163"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-NODESTATIC-3149928"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-NUBOSOFTWARENODESTATIC-3149927"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-03-07T20:28:43Z",
+                "nvd_published_at": "2023-03-06T05:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2021-12-20T22:16:43Z",
+              "published": "2021-09-22T18:22:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8r4g-cg4m-x23c",
+              "summary": "Denial of Service in node-static",
+              "details": "All versions of node-static are vulnerable to a Denial of Service. The package fails to catch an exception when user input includes null bytes. This allows attackers to access `http://host/%00` and crash the server.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-static",
+                    "purl": "pkg:npm/node-static"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.7.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-8r4g-cg4m-x23c/GHSA-8r4g-cg4m-x23c.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudhead/node-static/pull/213"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/cloudhead/node-static"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudhead/node-static/blob/643a528ec7bbd05a59c4030655d94810570afb3f/CHANGES.md#-unreleased"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1208"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/node-static"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-09-22T18:21:20Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5g97-whc9-8g7j"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8r4g-cg4m-x23c"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

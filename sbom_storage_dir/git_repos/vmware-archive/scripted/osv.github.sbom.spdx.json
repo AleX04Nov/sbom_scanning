@@ -1,0 +1,825 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "bower",
+            "version": "1.8.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:01:36Z",
+              "published": "2019-09-17T23:21:34Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-p6mr-pxg4-68hx",
+              "aliases": [
+                "CVE-2019-5484"
+              ],
+              "summary": "Symlink Arbitrary File Overwrite in bower",
+              "details": "Versions of `bower` prior to 1.8.8 are affected by an arbitrary file write vulnerability. The vulnerability occurs because `bower` does not verify that extracted symbolic links do not resolve to targets outside of the extraction root directory.\n\n\n\n## Recommendation\n\nUpdate to version 1.8.8 or later",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "bower",
+                    "purl": "pkg:npm/bower"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.8.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/09/GHSA-p6mr-pxg4-68hx/GHSA-p6mr-pxg4-68hx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5484"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/bower/bower/commit/45c6bfa86f6e57731b153baca9e0b41a1cc699e3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/473811"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/nodejs/security-wg/blob/master/vuln/npm/487.json"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8ba4c628fba7181af58817d452119481adce4ba92e889c643e4c7dd3@%3Ccommits.netbeans.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb5ac16fad337d1f3bb7079549f97d8166d0ef3082629417c39f12d63@%3Cnotifications.netbeans.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/blog/severe-security-vulnerability-in-bowers-zip-archive-extraction"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/776"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-09-17T23:21:00Z",
+                "nvd_published_at": "2019-09-13T18:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-p6mr-pxg4-68hx"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "express",
+            "version": "3.0.6",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:57:43Z",
+              "published": "2018-10-23T17:22:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gpvr-g6gh-9mc2",
+              "aliases": [
+                "CVE-2014-6393"
+              ],
+              "summary": "No Charset in Content-Type Header in express",
+              "details": "Vulnerable versions of express do not specify a charset field in the content-type header while displaying 400 level response messages. The lack of enforcing user's browser to set correct charset, could be leveraged by an attacker to perform a cross-site scripting attack, using non-standard encodings, like UTF-7.\n\n\n## Recommendation\n\nFor express 3.x, update express to version 3.11 or later.\nFor express 4.x, update express to version 4.5 or later. ",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "express",
+                    "purl": "pkg:npm/express"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.11.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-gpvr-g6gh-9mc2/GHSA-gpvr-g6gh-9mc2.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "express",
+                    "purl": "pkg:npm/express"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-gpvr-g6gh-9mc2/GHSA-gpvr-g6gh-9mc2.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-6393"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1203190"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-gpvr-g6gh-9mc2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/8"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:37:54Z",
+                "nvd_published_at": "2017-08-09T18:29:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-gpvr-g6gh-9mc2"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "json5",
+            "version": "0.1.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:10:55Z",
+              "published": "2022-12-29T01:51:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9c47-m6qq-7p4h",
+              "aliases": [
+                "CVE-2022-46175"
+              ],
+              "summary": "Prototype Pollution in JSON5 via Parse Method",
+              "details": "The `parse` method of the JSON5 library before and including version `2.2.1` does not restrict parsing of keys named `__proto__`, allowing specially crafted strings to pollute the prototype of the resulting object.\n\nThis vulnerability pollutes the prototype of the object returned by `JSON5.parse` and not the global Object prototype, which is the commonly understood definition of Prototype Pollution. However, polluting the prototype of a single object can have significant security impact for an application if the object is later used in trusted operations.\n\n## Impact\nThis vulnerability could allow an attacker to set arbitrary and unexpected keys on the object returned from `JSON5.parse`. The actual impact will depend on how applications utilize the returned object and how they filter unwanted keys, but could include denial of service, cross-site scripting, elevation of privilege, and in extreme cases, remote code execution.\n\n## Mitigation\nThis vulnerability is patched in json5 v2.2.2 and later. A patch has also been backported for json5 v1 in versions v1.0.2 and later.\n\n## Details\n \nSuppose a developer wants to allow users and admins to perform some risky operation, but they want to restrict what non-admins can do. To accomplish this, they accept a JSON blob from the user, parse it using `JSON5.parse`, confirm that the provided data does not set some sensitive keys, and then performs the risky operation using the validated data:\n \n```js\nconst JSON5 = require('json5');\n\nconst doSomethingDangerous = (props) =\u003e {\n  if (props.isAdmin) {\n    console.log('Doing dangerous thing as admin.');\n  } else {\n    console.log('Doing dangerous thing as user.');\n  }\n};\n\nconst secCheckKeysSet = (obj, searchKeys) =\u003e {\n  let searchKeyFound = false;\n  Object.keys(obj).forEach((key) =\u003e {\n    if (searchKeys.indexOf(key) \u003e -1) {\n      searchKeyFound = true;\n    }\n  });\n  return searchKeyFound;\n};\n\nconst props = JSON5.parse('{\"foo\": \"bar\"}');\nif (!secCheckKeysSet(props, ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props); // \"Doing dangerous thing as user.\"\n} else {\n  throw new Error('Forbidden...');\n}\n```\n \nIf the user attempts to set the `isAdmin` key, their request will be rejected:\n \n```js\nconst props = JSON5.parse('{\"foo\": \"bar\", \"isAdmin\": true}');\nif (!secCheckKeysSet(props, ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props);\n} else {\n  throw new Error('Forbidden...'); // Error: Forbidden...\n}\n```\n \nHowever, users can instead set the `__proto__` key to `{\"isAdmin\": true}`. `JSON5` will parse this key and will set the `isAdmin` key on the prototype of the returned object, allowing the user to bypass the security check and run their request as an admin:\n \n```js\nconst props = JSON5.parse('{\"foo\": \"bar\", \"__proto__\": {\"isAdmin\": true}}');\nif (!secCheckKeysSet(props, ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props); // \"Doing dangerous thing as admin.\"\n} else {\n  throw new Error('Forbidden...');\n}\n ```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "json5",
+                    "purl": "pkg:npm/json5"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-9c47-m6qq-7p4h/GHSA-9c47-m6qq-7p4h.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "json5",
+                    "purl": "pkg:npm/json5"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-9c47-m6qq-7p4h/GHSA-9c47-m6qq-7p4h.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/security/advisories/GHSA-9c47-m6qq-7p4h"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-46175"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/issues/199"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/issues/295"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/pull/298"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/commit/62a65408408d40aeea14c7869ed327acead12972"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/commit/7774c1097993bc3ce9f0ac4b722a32bf7d6871c8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/json5/json5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/11/msg00021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3S26TLPLVFAJTUN3VIXFDEBEXDYO22CE/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3S26TLPLVFAJTUN3VIXFDEBEXDYO22CE/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-12-29T01:51:03Z",
+                "nvd_published_at": "2022-12-24T04:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9c47-m6qq-7p4h"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mime",
+            "version": "1.2.9",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:07Z",
+              "published": "2018-07-20T16:20:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wrvr-8mpx-r7pp",
+              "aliases": [
+                "CVE-2017-16138"
+              ],
+              "summary": "mime Regular Expression Denial of Service when MIME lookup performed on untrusted user input",
+              "details": "Affected versions of `mime` are vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.\n\n\n## Recommendation\n\nUpdate to version 2.0.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mime",
+                    "purl": "pkg:npm/mime"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-wrvr-8mpx-r7pp/GHSA-wrvr-8mpx-r7pp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mime",
+                    "purl": "pkg:npm/mime"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-wrvr-8mpx-r7pp/GHSA-wrvr-8mpx-r7pp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-16138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/broofa/node-mime/issues/167"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/broofa/mime/commit/1df903fdeb9ae7eaa048795b8d580ce2c98f40b0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/broofa/mime/commit/855d0c4b8b22e4a80b9401a81f2872058eae274d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/broofa/mime"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T22:01:10Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wrvr-8mpx-r7pp"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mongodb",
+            "version": "1.2.13",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2020-08-31T18:51:01Z",
+              "published": "2020-09-03T21:12:01Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mh5c-679w-hh4r",
+              "summary": "Denial of Service in mongodb",
+              "details": "Versions of `mongodb` prior to 3.1.13 are vulnerable to Denial of Service. The package fails to properly catch an exception when a collection name is invalid and the DB does not exist, crashing the application.\n\n\n## Recommendation\n\nUpgrade to version 3.1.13 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.1.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-mh5c-679w-hh4r/GHSA-mh5c-679w-hh4r.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1203"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-08-31T18:51:01Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh5c-679w-hh4r"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "node-static",
+            "version": "0.5.9",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-06T06:30:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5g97-whc9-8g7j",
+              "aliases": [
+                "CVE-2023-26111"
+              ],
+              "summary": "node-static and @nubosoftware/node-static vulnerable to Directory Traversal",
+              "details": "node-static and the fork @nubosoftware/node-static are vulnerable to Directory Traversal due to improper file path sanitization in the startsWith() method in the servePath function.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-static",
+                    "purl": "pkg:npm/node-static"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.7.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-5g97-whc9-8g7j/GHSA-5g97-whc9-8g7j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@nubosoftware/node-static",
+                    "purl": "pkg:npm/%40nubosoftware/node-static"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.7.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-5g97-whc9-8g7j/GHSA-5g97-whc9-8g7j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26111"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gist.github.com/lirantal/c80b28e7bee148dc287339cb483e42bc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/cloudhead/node-static"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudhead/node-static/blob/master/lib/node-static.js#23L160-L163"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-NODESTATIC-3149928"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-NUBOSOFTWARENODESTATIC-3149927"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-03-07T20:28:43Z",
+                "nvd_published_at": "2023-03-06T05:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2021-12-20T22:16:43Z",
+              "published": "2021-09-22T18:22:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8r4g-cg4m-x23c",
+              "summary": "Denial of Service in node-static",
+              "details": "All versions of node-static are vulnerable to a Denial of Service. The package fails to catch an exception when user input includes null bytes. This allows attackers to access `http://host/%00` and crash the server.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-static",
+                    "purl": "pkg:npm/node-static"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.7.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-8r4g-cg4m-x23c/GHSA-8r4g-cg4m-x23c.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudhead/node-static/pull/213"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/cloudhead/node-static"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudhead/node-static/blob/643a528ec7bbd05a59c4030655d94810570afb3f/CHANGES.md#-unreleased"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1208"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/node-static"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-248",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-09-22T18:21:20Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5g97-whc9-8g7j"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8r4g-cg4m-x23c"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "sockjs",
+            "version": "0.3.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:05Z",
+              "published": "2021-04-13T15:27:51Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c9g6-9335-x697",
+              "aliases": [
+                "CVE-2020-7693"
+              ],
+              "summary": "Improper Input Validation in SocksJS-Node",
+              "details": "Incorrect handling of Upgrade header with the value websocket leads in crashing of containers hosting sockjs apps. This affects the package sockjs before 0.3.20.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "sockjs",
+                    "purl": "pkg:npm/sockjs"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.3.20"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/04/GHSA-c9g6-9335-x697/GHSA-c9g6-9335-x697.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7693"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sockjs/sockjs-node/issues/252"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sockjs/sockjs-node/pull/265"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sockjs/sockjs-node/commit/dd7e642cd69ee74385825816d30642c43e051d16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/andsnw/sockjs-dos-py"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-575448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-SOCKJS-575261"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/sockjs"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-04-06T21:47:25Z",
+                "nvd_published_at": "2020-07-09T14:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c9g6-9335-x697"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

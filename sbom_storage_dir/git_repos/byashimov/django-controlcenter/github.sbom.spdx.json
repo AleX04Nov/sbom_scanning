@@ -1,0 +1,188 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:02:49Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.byashimov/django-controlcenter",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.byashimov-django-controlcenter"
+    ],
+    "documentNamespace": "https://github.com/byashimov/django-controlcenter/dependency_graph/sbom-4a5b30a4d2222185",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "name": "com.github.byashimov/django-controlcenter",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/byashimov/django-controlcenter",
+            "licenseDeclared": "BSD-3-Clause",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/byashimov/django-controlcenter"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-autoprefixer-stylus",
+            "name": "npm:autoprefixer-stylus",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt",
+            "name": "npm:grunt",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-combine-mq",
+            "name": "npm:grunt-combine-mq",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-stylus",
+            "name": "npm:grunt-contrib-stylus",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-watch",
+            "name": "npm:grunt-contrib-watch",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-load-grunt-tasks",
+            "name": "npm:load-grunt-tasks",
+            "versionInfo": "",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-pip-django-pkgconf",
+            "name": "pip:django-pkgconf",
+            "versionInfo": "~> 0.4.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-checkout-3",
+            "name": "actions:actions/checkout",
+            "versionInfo": "3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/checkout@3",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-setup-python-4",
+            "name": "actions:actions/setup-python",
+            "versionInfo": "4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/setup-python@4",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-pypa-gh-action-pypi-publish-release/v1",
+            "name": "actions:pypa/gh-action-pypi-publish",
+            "versionInfo": "release/v1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/pypa/gh-action-pypi-publish@release%2Fv1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-npm-autoprefixer-stylus"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-npm-grunt"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-combine-mq"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-stylus"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-watch"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-npm-load-grunt-tasks"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-pip-django-pkgconf"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-actions-actions-checkout-3"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-actions-actions-setup-python-4"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.byashimov-django-controlcenter",
+            "relatedSpdxElement": "SPDXRef-actions-pypa-gh-action-pypi-publish-release/v1"
+        }
+    ]
+}

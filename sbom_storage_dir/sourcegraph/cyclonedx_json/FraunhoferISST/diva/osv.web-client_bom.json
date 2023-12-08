@@ -1,0 +1,1058 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/web-client_bom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "axios",
+            "version": "0.26.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-16T19:59:08Z",
+              "published": "2023-11-08T21:30:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wf5p-g6vw-rhxx",
+              "aliases": [
+                "CVE-2023-45857"
+              ],
+              "summary": "Axios Cross-Site Request Forgery Vulnerability",
+              "details": "An issue discovered in Axios 0.8.1 through 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "axios",
+                    "purl": "pkg:npm/axios"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.8.1"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45857"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/pull/6028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/axios/axios"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/releases/tag/v1.6.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-AXIOS-6032459"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-352"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-10T00:35:37Z",
+                "nvd_published_at": "2023-11-08T21:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wf5p-g6vw-rhxx"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "moment",
+            "version": "2.29.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-29T22:27:25Z",
+              "published": "2022-04-04T21:25:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8hfj-j24r-96c4",
+              "aliases": [
+                "CVE-2022-24785"
+              ],
+              "summary": "Path Traversal: 'dir/../../filename' in moment.locale",
+              "details": "### Impact\nThis vulnerability impacts npm (server) users of moment.js, especially if user provided locale string, eg `fr` is directly used to switch moment locale.\n\n### Patches\nThis problem is patched in 2.29.2, and the patch can be applied to all affected versions (from 1.0.1 up until 2.29.1, inclusive).\n\n### Workarounds\nSanitize user-provided locale name before passing it to moment.js.\n\n### References\n_Are there any links users can visit to find out more?_\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [moment repo](https://github.com/moment/moment)\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "moment",
+                    "purl": "pkg:npm/moment"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.29.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-8hfj-j24r-96c4/GHSA-8hfj-j24r-96c4.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(moment).locale"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Moment.js",
+                    "purl": "pkg:nuget/Moment.js"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.29.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.2.0",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "2.0.0",
+                    "2.1.0",
+                    "2.10.0",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.10.5",
+                    "2.10.6",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.14.3",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.15.2",
+                    "2.16.0",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.19.2",
+                    "2.19.3",
+                    "2.19.4",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.22.1",
+                    "2.22.2",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.25.2",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.28.0",
+                    "2.29.0",
+                    "2.29.1",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.6.0",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.8.2",
+                    "2.8.3",
+                    "2.8.4",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/04/GHSA-8hfj-j24r-96c4/GHSA-8hfj-j24r-96c4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/security/advisories/GHSA-8hfj-j24r-96c4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-24785"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/commit/4211bfc8f15746be4019bba557e29a7ba83d54c5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moment/moment"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220513-0006/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.tenable.com/security/tns-2022-09"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-27"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-04-04T21:25:48Z",
+                "nvd_published_at": "2022-04-04T17:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-29T22:32:22Z",
+              "published": "2022-07-06T18:38:49Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wc69-rhjr-hc9g",
+              "aliases": [
+                "CVE-2022-31129",
+                "CVE-2023-22467",
+                "GHSA-3xq5-wjfh-ppjc"
+              ],
+              "summary": "Moment.js vulnerable to Inefficient Regular Expression Complexity",
+              "details": "### Impact\n\n* using string-to-date parsing in moment (more specifically rfc2822 parsing, which is tried by default) has quadratic (N^2) complexity on specific inputs\n* noticeable slowdown is observed with inputs above 10k characters\n* users who pass user-provided strings without sanity length checks to moment constructor are vulnerable to (Re)DoS attacks\n\n### Patches\nThe problem is patched in 2.29.4, the patch can be applied to all affected versions with minimal tweaking.\n\n### Workarounds\nIn general, given the proliferation of ReDoS attacks, it makes sense to limit the length of the user input to something sane, like 200 characters or less. I haven't seen legitimate cases of date-time strings longer than that, so all moment users who do pass a user-originating string to constructor are encouraged to apply such a rudimentary filter, that would help with this but also most future ReDoS vulnerabilities.\n\n### References\nThere is an excellent writeup of the issue here: https://github.com/moment/moment/pull/6015#issuecomment-1152961973=\n\n### Details\nThe issue is rooted in the code that removes legacy comments (stuff inside parenthesis) from strings during rfc2822 parsing. `moment(\"(\".repeat(500000))` will take a few minutes to process, which is unacceptable.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "moment",
+                    "purl": "pkg:npm/moment"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.18.0"
+                        },
+                        {
+                          "fixed": "2.29.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(moment)"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Moment.js",
+                    "purl": "pkg:nuget/Moment.js"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.18.0"
+                        },
+                        {
+                          "fixed": "2.29.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.19.2",
+                    "2.19.3",
+                    "2.19.4",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.22.1",
+                    "2.22.2",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.25.2",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.28.0",
+                    "2.29.0",
+                    "2.29.1",
+                    "2.29.2",
+                    "2.29.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-wc69-rhjr-hc9g/GHSA-wc69-rhjr-hc9g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/security/advisories/GHSA-wc69-rhjr-hc9g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-31129"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015#issuecomment-1152961973"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/4bbb9f3ccbe231de40207503f344fe5ce97584f4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/bfd4f2375d5c1a2106246721d693a9611dddfbfe"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/pull/6015/commits/dc0d180e90d8a84f7ff13572363330a22b3ea504"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moment/moment/commit/9a3b5894f3d5d602948ac8a02e4ee528a49ca3a3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moment/moment"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/f0952b67-f2ff-44a9-a9cd-99e0a87cb633/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00035.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6QIO6YNLTK2T7SPKDS4JEL45FANLNC2Q/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IWY24RJA3SBJGA5N4CU4VBPHJPPPJL5O/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ORJX2LF6KMPIHP6B2P6KZIVKMLE3LVJ5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZMX5YHELQVCGKKQVFXIYOTBMN23YYSRO/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20221014-0003/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-06T18:38:49Z",
+                "nvd_published_at": "2022-07-06T18:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8hfj-j24r-96c4"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-wc69-rhjr-hc9g"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "socket.io-parser",
+            "version": "4.1.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:29Z",
+              "published": "2022-10-26T12:00:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qm95-pgcg-qqfq",
+              "aliases": [
+                "CVE-2022-2421"
+              ],
+              "summary": "Insufficient validation when decoding a Socket.IO packet",
+              "details": "Due to improper type validation in the `socket.io-parser` library (which is used by the `socket.io` and `socket.io-client` packages to encode and decode Socket.IO packets), it is possible to overwrite the _placeholder object which allows an attacker to place references to functions at arbitrary places in the resulting query object.\n\nExample:\n\n```js\nconst decoder = new Decoder();\n\ndecoder.on(\"decoded\", (packet) =\u003e {\n console.log(packet.data); // prints [ 'hello', [Function: splice] ]\n})\n\ndecoder.add('51-[\"hello\",{\"_placeholder\":true,\"num\":\"splice\"}]');\ndecoder.add(Buffer.from(\"world\"));\n```\n\nThis bubbles up in the `socket.io` package:\n\n```js\nio.on(\"connection\", (socket) =\u003e {\n socket.on(\"hello\", (val) =\u003e {\n // here, \"val\" could be a function instead of a buffer\n });\n});\n```\n\n:warning: IMPORTANT NOTE :warning:\n\nYou need to make sure that the payload that you received from the client is actually a `Buffer` object:\n\n```js\nio.on(\"connection\", (socket) =\u003e {\n socket.on(\"hello\", (val) =\u003e {\n if (!Buffer.isBuffer(val)) {\n socket.disconnect();\n return;\n }\n // ...\n });\n});\n```\n\n**If that's already the case, then you are not impacted by this issue, and there is no way an attacker could make your server crash (or escalate privileges, ...).**\n\nExample of values that could be sent by a malicious user:\n\n- a number that is out of bounds\n\nSample packet: `451-[\"hello\",{\"_placeholder\":true,\"num\":10}]`\n\n```js\nio.on(\"connection\", (socket) =\u003e {\n socket.on(\"hello\", (val) =\u003e {\n // val is `undefined`\n });\n});\n```\n\n- a value that is not a number, like `undefined`\n\nSample packet: `451-[\"hello\",{\"_placeholder\":true,\"num\":undefined}]`\n\n```js\nio.on(\"connection\", (socket) =\u003e {\n socket.on(\"hello\", (val) =\u003e {\n // val is `undefined`\n });\n});\n```\n\n- a string that is part of the prototype of `Array`, like \"push\"\n\nSample packet: `451-[\"hello\",{\"_placeholder\":true,\"num\":\"push\"}]`\n\n```js\nio.on(\"connection\", (socket) =\u003e {\n socket.on(\"hello\", (val) =\u003e {\n // val is a reference to the \"push\" function\n });\n});\n```\n\n- a string that is part of the prototype of `Object`, like \"hasOwnProperty\"\n\nSample packet: `451-[\"hello\",{\"_placeholder\":true,\"num\":\"hasOwnProperty\"}]`\n\n```js\nio.on(\"connection\", (socket) =\u003e {\n socket.on(\"hello\", (val) =\u003e {\n // val is a reference to the \"hasOwnProperty\" function\n });\n});\n```\n\nThis should be fixed by:\n\n- https://github.com/socketio/socket.io-parser/commit/b5d0cb7dc56a0601a09b056beaeeb0e43b160050, included in `socket.io-parser@4.2.1`\n- https://github.com/socketio/socket.io-parser/commit/b559f050ee02bd90bd853b9823f8de7fa94a80d4, included in `socket.io-parser@4.0.5`\n- https://github.com/socketio/socket.io-parser/commit/04d23cecafe1b859fb03e0cbf6ba3b74dff56d14, included in `socket.io-parser@3.4.2`\n- https://github.com/socketio/socket.io-parser/commit/fb21e422fc193b34347395a33e0f625bebc09983, included in `socket.io-parser@3.3.3`\n\n### Dependency analysis for the `socket.io` package\n\n| `socket.io` version | `socket.io-parser` version | Covered? |\n|---------------------|---------------------------------------------------------------------------------------------------------|------------------------|\n| `4.5.2...latest` | `~4.2.0` ([ref](https://github.com/socketio/socket.io/commit/9890b036cf942f6b6ad2afeb6a8361c32cd5d528)) | Yes :heavy_check_mark: |\n| `4.1.3...4.5.1` | `~4.0.4` ([ref](https://github.com/socketio/socket.io/commit/7c44893d7878cd5bba1eff43150c3e664f88fb57)) | Yes :heavy_check_mark: |\n| `3.0.5...4.1.2` | `~4.0.3` ([ref](https://github.com/socketio/socket.io/commit/752dfe3b1e5fecda53dae899b4a39e6fed5a1a17)) | Yes :heavy_check_mark: |\n| `3.0.0...3.0.4` | `~4.0.1` ([ref](https://github.com/socketio/socket.io/commit/1af3267e3f5f7884214cf2ca4d5282d620092fb0)) | Yes :heavy_check_mark: |\n| `2.3.0...2.5.0` | `~3.4.0` ([ref](https://github.com/socketio/socket.io/commit/cf39362014f5ff13a17168b74772c43920d6e4fd)) | Yes :heavy_check_mark: |\n\n\n### Dependency analysis for the `socket.io-client` package\n\n| `socket.io-client` version | `socket.io-parser` version | Covered? |\n|----------------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------|\n| `4.5.0...latest` | `~4.2.0` ([ref](https://github.com/socketio/socket.io-client/commit/b862924b7f1720979e5db2f0154906b305d420e3)) | Yes :heavy_check_mark: |\n| `4.3.0...4.4.1` | `~4.1.1` ([ref](https://github.com/socketio/socket.io-client/commit/91b948b8607166fcc79f028a6428819277214188)) | No, but the impact is very limited |\n| `3.1.0...4.2.0` | `~4.0.4` ([ref](https://github.com/socketio/socket.io-client/commit/5d9b4eb42b1f5778e6f033096694acb331b132c4)) | Yes :heavy_check_mark: |\n| `3.0.5` | `~4.0.3` ([ref](https://github.com/socketio/socket.io-client/commit/cf9fc358365cc15a41260a51dc186c881bf086ca)) | Yes :heavy_check_mark: |\n| `3.0.0...3.0.4` | `~4.0.1` ([ref](https://github.com/socketio/socket.io-client/commit/b7e07ba633ceb9c1dc94cc894c10b9bfca536c7a)) | Yes :heavy_check_mark: |\n| `2.2.0...2.5.0` | `~3.3.0` ([ref](https://github.com/socketio/socket.io-client/commit/06e9a4ca2621176c30c352b2ba8b34fa42b8d0ba)) | Yes :heavy_check_mark: |\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.0.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-qm95-pgcg-qqfq/GHSA-qm95-pgcg-qqfq.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(socket.io-parser).Decoder"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.1.0"
+                        },
+                        {
+                          "fixed": "4.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-qm95-pgcg-qqfq/GHSA-qm95-pgcg-qqfq.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(socket.io-parser).Decoder"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-qm95-pgcg-qqfq/GHSA-qm95-pgcg-qqfq.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(socket.io-parser).Decoder"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.4.0"
+                        },
+                        {
+                          "fixed": "3.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/10/GHSA-qm95-pgcg-qqfq/GHSA-qm95-pgcg-qqfq.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(socket.io-parser).Decoder"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2421"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/04d23cecafe1b859fb03e0cbf6ba3b74dff56d14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/b559f050ee02bd90bd853b9823f8de7fa94a80d4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/b5d0cb7dc56a0601a09b056beaeeb0e43b160050"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/fb21e422fc193b34347395a33e0f625bebc09983"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://csirt.divd.nl/CVE-2022-2421"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://csirt.divd.nl/DIVD-2022-00045"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://csirt.divd.nl/cases/DIVD-2022-00045"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://csirt.divd.nl/cves/CVE-2022-2421"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/socketio/socket.io-parser"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1287",
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-10-28T20:19:04Z",
+                "nvd_published_at": "2022-10-26T10:15:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:36Z",
+              "published": "2023-05-23T19:55:13Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cqmj-92xf-r6r9",
+              "aliases": [
+                "CVE-2023-32695"
+              ],
+              "summary": "Insufficient validation when decoding a Socket.IO packet",
+              "details": "### Impact\n\nA specially crafted Socket.IO packet can trigger an uncaught exception on the Socket.IO server, thus killing the Node.js process.\n\n```\nTypeError: Cannot convert object to primitive value\n       at Socket.emit (node:events:507:25)\n       at .../node_modules/socket.io/lib/socket.js:531:14\n```\n\n### Patches\n\nA fix has been released today (2023/05/22):\n\n- https://github.com/socketio/socket.io-parser/commit/3b78117bf6ba7e99d7a5cfc1ba54d0477554a7f3, included in `socket.io-parser@4.2.3`\n- https://github.com/socketio/socket.io-parser/commit/2dc3c92622dad113b8676be06f23b1ed46b02ced, included in `socket.io-parser@3.4.3`\n\n| `socket.io` version | `socket.io-parser` version                                                                              | Needs minor update?                  |\n|---------------------|---------------------------------------------------------------------------------------------------------|--------------------------------------|\n| `4.5.2...latest`    | `~4.2.0` ([ref](https://github.com/socketio/socket.io/commit/9890b036cf942f6b6ad2afeb6a8361c32cd5d528)) | `npm audit fix` should be sufficient |\n| `4.1.3...4.5.1`     | `~4.1.1` ([ref](https://github.com/socketio/socket.io/commit/7c44893d7878cd5bba1eff43150c3e664f88fb57)) | Please upgrade to `socket.io@4.6.x`  |\n| `3.0.5...4.1.2`     | `~4.0.3` ([ref](https://github.com/socketio/socket.io/commit/752dfe3b1e5fecda53dae899b4a39e6fed5a1a17)) | Please upgrade to `socket.io@4.6.x`  |\n| `3.0.0...3.0.4`     | `~4.0.1` ([ref](https://github.com/socketio/socket.io/commit/1af3267e3f5f7884214cf2ca4d5282d620092fb0)) | Please upgrade to `socket.io@4.6.x`  |\n| `2.3.0...2.5.0`     | `~3.4.0` ([ref](https://github.com/socketio/socket.io/commit/cf39362014f5ff13a17168b74772c43920d6e4fd)) | `npm audit fix` should be sufficient |\n\n\n### Workarounds\n\nThere is no known workaround except upgrading to a safe version.\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n- Open a discussion [here](https://github.com/socketio/socket.io/discussions)\n\nThanks to [@rafax00](https://github.com/rafax00) for the responsible disclosure.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.4"
+                        },
+                        {
+                          "fixed": "4.2.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-cqmj-92xf-r6r9/GHSA-cqmj-92xf-r6r9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "socket.io-parser",
+                    "purl": "pkg:npm/socket.io-parser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.4.0"
+                        },
+                        {
+                          "fixed": "3.4.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-cqmj-92xf-r6r9/GHSA-cqmj-92xf-r6r9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/security/advisories/GHSA-cqmj-92xf-r6r9"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32695"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/1c220ddbf45ea4b44bc8dbf6f9ae245f672ba1b9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/2dc3c92622dad113b8676be06f23b1ed46b02ced"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/commit/3b78117bf6ba7e99d7a5cfc1ba54d0477554a7f3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/socketio/socket.io-parser"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/socketio/socket.io-parser/releases/tag/4.2.3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-754"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-05-23T19:55:13Z",
+                "nvd_published_at": "2023-05-27T16:15:09Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qm95-pgcg-qqfq"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-cqmj-92xf-r6r9"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "vuetify",
+            "version": "2.6.3",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:08:50Z",
+              "published": "2022-09-19T00:00:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q4q5-c5cv-2p68",
+              "aliases": [
+                "CVE-2022-25873"
+              ],
+              "summary": "Vuetify Cross-site Scripting vulnerability",
+              "details": "The package vuetify from 2.0.0-beta.4 and before 2.6.10 are vulnerable to Cross-site Scripting (XSS) due to improper input sanitization in the 'eventName' function within the VCalendar component.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "vuetify",
+                    "purl": "pkg:npm/vuetify"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0-beta.4"
+                        },
+                        {
+                          "fixed": "2.6.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-q4q5-c5cv-2p68/GHSA-q4q5-c5cv-2p68.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.webjars.npm:vuetify",
+                    "purl": "pkg:maven/org.webjars.npm/vuetify"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0-beta.4"
+                        },
+                        {
+                          "fixed": "2.6.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0",
+                    "2.0.0-beta.4",
+                    "2.0.0-beta.5",
+                    "2.0.0-beta.6",
+                    "2.0.0-beta.7",
+                    "2.0.0-beta.8",
+                    "2.0.0-beta.9",
+                    "2.0.1",
+                    "2.0.10",
+                    "2.0.11",
+                    "2.0.14",
+                    "2.0.15",
+                    "2.0.16",
+                    "2.0.18",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.7",
+                    "2.0.9",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.10",
+                    "2.1.11",
+                    "2.1.12",
+                    "2.1.13",
+                    "2.1.14",
+                    "2.1.15",
+                    "2.1.16",
+                    "2.1.18",
+                    "2.1.4",
+                    "2.1.5",
+                    "2.1.6",
+                    "2.1.7",
+                    "2.1.9",
+                    "2.2.1",
+                    "2.2.10",
+                    "2.2.11",
+                    "2.2.12",
+                    "2.2.13",
+                    "2.2.14",
+                    "2.2.15",
+                    "2.2.16",
+                    "2.2.17",
+                    "2.2.18",
+                    "2.2.19",
+                    "2.2.20",
+                    "2.2.21",
+                    "2.2.22",
+                    "2.2.23",
+                    "2.2.25",
+                    "2.2.28",
+                    "2.2.29",
+                    "2.2.3",
+                    "2.2.30",
+                    "2.2.31",
+                    "2.2.32",
+                    "2.2.33",
+                    "2.2.34",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.8",
+                    "2.2.9",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.12",
+                    "2.3.13",
+                    "2.3.14",
+                    "2.3.15",
+                    "2.3.16",
+                    "2.3.17",
+                    "2.3.18",
+                    "2.3.19",
+                    "2.3.2",
+                    "2.3.20",
+                    "2.3.21",
+                    "2.3.22",
+                    "2.3.23",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "2.4.0",
+                    "2.4.0-beta.0",
+                    "2.4.1",
+                    "2.4.10",
+                    "2.4.11",
+                    "2.4.2",
+                    "2.4.4",
+                    "2.4.5",
+                    "2.4.6",
+                    "2.4.7",
+                    "2.4.8",
+                    "2.4.9",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.10",
+                    "2.5.13",
+                    "2.5.14",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.5.6",
+                    "2.5.7",
+                    "2.5.8",
+                    "2.5.9",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.6.3",
+                    "2.6.4",
+                    "2.6.6",
+                    "2.6.7",
+                    "2.6.8",
+                    "2.6.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-q4q5-c5cv-2p68/GHSA-q4q5-c5cv-2p68.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25873"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vuetifyjs/vuetify/issues/15757"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/vuetifyjs/vuetify/commit/ade1434927f55a0eccf3d54f900f24c5fa85a176"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://codepen.io/5v3n-08/pen/MWGKEjY"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/vuetifyjs/vuetify"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBVUETIFYJS-3024407"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-3024406"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-VUETIFY-3019858"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-09-21T20:58:44Z",
+                "nvd_published_at": "2022-09-18T15:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-q4q5-c5cv-2p68"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

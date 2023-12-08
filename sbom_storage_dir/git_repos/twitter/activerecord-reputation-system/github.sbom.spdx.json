@@ -1,0 +1,115 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:55:58Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.twitter/activerecord-reputation-system",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.twitter-activerecord-reputation-system"
+    ],
+    "documentNamespace": "https://github.com/twitter/activerecord-reputation-system/dependency_graph/sbom-1a500357671dc6ab",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "name": "com.github.twitter/activerecord-reputation-system",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/twitter/activerecord-reputation-system",
+            "licenseDeclared": "Apache-2.0",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/twitter/activerecord-reputation-system"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-activerecord",
+            "name": "rubygems:activerecord",
+            "versionInfo": "~> 4.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-database-cleaner",
+            "name": "rubygems:database_cleaner",
+            "versionInfo": "~> 1.2.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rake",
+            "name": "rubygems:rake",
+            "versionInfo": ">= 0.8.7",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rdoc",
+            "name": "rubygems:rdoc",
+            "versionInfo": ">= 0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec",
+            "name": "rubygems:rspec",
+            "versionInfo": "~> 3.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-sqlite3",
+            "name": "rubygems:sqlite3",
+            "versionInfo": "~> 1.3.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "relatedSpdxElement": "SPDXRef-rubygems-activerecord"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "relatedSpdxElement": "SPDXRef-rubygems-database-cleaner"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "relatedSpdxElement": "SPDXRef-rubygems-rake"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "relatedSpdxElement": "SPDXRef-rubygems-rdoc"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.twitter-activerecord-reputation-system",
+            "relatedSpdxElement": "SPDXRef-rubygems-sqlite3"
+        }
+    ]
+}

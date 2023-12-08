@@ -1,0 +1,155 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:01:38Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.sindresorhus/grunt-sass",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.sindresorhus-grunt-sass"
+    ],
+    "documentNamespace": "https://github.com/sindresorhus/grunt-sass/dependency_graph/sbom-f992ccc822c88dfa",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "name": "com.github.sindresorhus/grunt-sass",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/sindresorhus/grunt-sass",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/sindresorhus/grunt-sass"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt",
+            "name": "npm:grunt",
+            "versionInfo": "^ 1.0.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-cli",
+            "name": "npm:grunt-cli",
+            "versionInfo": "^ 1.3.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-clean",
+            "name": "npm:grunt-contrib-clean",
+            "versionInfo": "^ 2.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-grunt-contrib-nodeunit",
+            "name": "npm:grunt-contrib-nodeunit",
+            "versionInfo": "^ 2.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-node-sass",
+            "name": "npm:node-sass",
+            "versionInfo": "^ 4.9.3",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-xo",
+            "name": "npm:xo",
+            "versionInfo": "^ 0.23.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-checkout-2",
+            "name": "actions:actions/checkout",
+            "versionInfo": "2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/checkout@2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-setup-node-1",
+            "name": "actions:actions/setup-node",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/setup-node@1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-npm-grunt"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-cli"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-clean"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-nodeunit"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-npm-node-sass"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-npm-xo"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-actions-actions-checkout-2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.sindresorhus-grunt-sass",
+            "relatedSpdxElement": "SPDXRef-actions-actions-setup-node-1"
+        }
+    ]
+}

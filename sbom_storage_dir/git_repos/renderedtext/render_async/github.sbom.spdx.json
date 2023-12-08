@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:59:46Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.renderedtext/render_async",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.renderedtext-render-async"
+    ],
+    "documentNamespace": "https://github.com/renderedtext/render_async/dependency_graph/sbom-ea86febc126b7ec4",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.renderedtext-render-async",
+            "name": "com.github.renderedtext/render_async",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/renderedtext/render_async",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/renderedtext/render_async"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-codeclimate-test-reporter",
+            "name": "rubygems:codeclimate-test-reporter",
+            "versionInfo": "~> 1.0.8",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rake",
+            "name": "rubygems:rake",
+            "versionInfo": "~> 10.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec",
+            "name": "rubygems:rspec",
+            "versionInfo": "~> 3.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.renderedtext-render-async",
+            "relatedSpdxElement": "SPDXRef-rubygems-codeclimate-test-reporter"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.renderedtext-render-async",
+            "relatedSpdxElement": "SPDXRef-rubygems-rake"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.renderedtext-render-async",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec"
+        }
+    ]
+}

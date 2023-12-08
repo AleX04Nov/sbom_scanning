@@ -1,0 +1,128 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:59:14Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.mbleigh/seed-fu",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.mbleigh-seed-fu"
+    ],
+    "documentNamespace": "https://github.com/mbleigh/seed-fu/dependency_graph/sbom-0448c689f6dafb07",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.mbleigh-seed-fu",
+            "name": "com.github.mbleigh/seed-fu",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/mbleigh/seed-fu",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/mbleigh/seed-fu"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rails",
+            "name": "rubygems:rails",
+            "versionInfo": ">= 3.1,< 5.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-activerecord",
+            "name": "rubygems:activerecord",
+            "versionInfo": ">= 3.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-activesupport",
+            "name": "rubygems:activesupport",
+            "versionInfo": ">= 3.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-mysql2",
+            "name": "rubygems:mysql2",
+            "versionInfo": "~> 0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-pg",
+            "name": "rubygems:pg",
+            "versionInfo": "~> 0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec",
+            "name": "rubygems:rspec",
+            "versionInfo": "~> 2.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-sqlite3",
+            "name": "rubygems:sqlite3",
+            "versionInfo": "~> 0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-rails"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-activerecord"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-activesupport"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-mysql2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-pg"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.mbleigh-seed-fu",
+            "relatedSpdxElement": "SPDXRef-rubygems-sqlite3"
+        }
+    ]
+}

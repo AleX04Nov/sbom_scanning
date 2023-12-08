@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T11:02:36Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.afollestad/material-cab",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.afollestad-material-cab"
+    ],
+    "documentNamespace": "https://github.com/afollestad/material-cab/dependency_graph/sbom-707d717c5fa116f0",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.afollestad-material-cab",
+            "name": "com.github.afollestad/material-cab",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/afollestad/material-cab",
+            "licenseDeclared": "Apache-2.0",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/afollestad/material-cab"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-checkout-1",
+            "name": "actions:actions/checkout",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/checkout@1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-setup-java-1",
+            "name": "actions:actions/setup-java",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/setup-java@1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.afollestad-material-cab",
+            "relatedSpdxElement": "SPDXRef-actions-actions-checkout-1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.afollestad-material-cab",
+            "relatedSpdxElement": "SPDXRef-actions-actions-setup-java-1"
+        }
+    ]
+}

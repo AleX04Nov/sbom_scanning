@@ -1,0 +1,98 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:55:51Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.johnkil/Android-AppMsg",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.johnkil-Android-AppMsg"
+    ],
+    "documentNamespace": "https://github.com/johnkil/Android-AppMsg/dependency_graph/sbom-b7d256299d380914",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.johnkil-Android-AppMsg",
+            "name": "com.github.johnkil/Android-AppMsg",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/johnkil/Android-AppMsg",
+            "licenseDeclared": "Apache-2.0",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/johnkil/Android-AppMsg"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-com.google.android-android-4.1.1.4",
+            "name": "maven:com.google.android:android",
+            "versionInfo": "4.1.1.4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/com.google.android/android@4.1.1.4",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-com.jayway.maven.plugins.android.generation2-android-maven-plugin-3.6.0",
+            "name": "maven:com.jayway.maven.plugins.android.generation2:android-maven-plugin",
+            "versionInfo": "3.6.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/com.jayway.maven.plugins.android.generation2/android-maven-plugin@3.6.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-org.apache.maven.plugins-maven-pmd-plugin-2.7.1",
+            "name": "maven:org.apache.maven.plugins:maven-pmd-plugin",
+            "versionInfo": "2.7.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/org.apache.maven.plugins/maven-pmd-plugin@2.7.1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.johnkil-Android-AppMsg",
+            "relatedSpdxElement": "SPDXRef-maven-com.google.android-android-4.1.1.4"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.johnkil-Android-AppMsg",
+            "relatedSpdxElement": "SPDXRef-maven-com.jayway.maven.plugins.android.generation2-android-maven-plugin-3.6.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.johnkil-Android-AppMsg",
+            "relatedSpdxElement": "SPDXRef-maven-org.apache.maven.plugins-maven-pmd-plugin-2.7.1"
+        }
+    ]
+}

@@ -1,0 +1,429 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "shell-quote",
+            "version": "0.0.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:11Z",
+              "published": "2019-02-18T23:58:29Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qg8p-v9q4-gh34",
+              "aliases": [
+                "CVE-2016-10541"
+              ],
+              "summary": "Potential Command Injection in shell-quote",
+              "details": "Affected versions of `shell-quote` do not properly escape command line arguments, which may result in command injection if the library is used to escape user input destined for use as command line arguments.\n\n\n\n## Proof of Concept:\n\nThe following characters are not escaped properly: `\u003e`,`;`,`{`,`}`\n\nBash has a neat but not well known feature known as \"Bash Brace Expansion\", wherein a sub-command can be executed without spaces by running it between a set of `{}` and using the `,` instead of ` ` to seperate arguments. Because of this, full command injection is possible even though it was initially thought to be impossible. \n\n```\n   const quote = require('shell-quote').quote;\n   console.log(quote(['a;{echo,test,123,234}']));\n   // Actual                    \"a;{echo,test,123,234}\"\n   // Expected                  \"a\\;\\{echo,test,123,234\\}\"\n   // Functional Equivalent     \"a; echo 'test' '123' '1234'\"\n```\n\n\n\n## Recommendation\n\nUpdate to version 1.6.1 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "shell-quote",
+                    "purl": "pkg:npm/shell-quote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/02/GHSA-qg8p-v9q4-gh34/GHSA-qg8p-v9q4-gh34.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10541"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-qg8p-v9q4-gh34"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/117"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78",
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:51:49Z",
+                "nvd_published_at": "2018-05-31T20:29:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:07:07Z",
+              "published": "2022-05-24T19:18:27Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-g4rg-993r-mgx7",
+              "aliases": [
+                "CVE-2021-42740"
+              ],
+              "summary": "Improper Neutralization of Special Elements used in a Command in Shell-quote",
+              "details": "The shell-quote package before 1.7.3 for Node.js allows command injection. An attacker can inject unescaped shell metacharacters through a regex designed to support Windows drive letters. If the output of this package is passed to a real shell as a quoted argument to a command with `exec()`, an attacker can inject arbitrary commands. This is because the Windows drive letter regex character class is `{A-z]` instead of the correct `{A-Za-z]`. Several shell metacharacters exist in the space between capital letter Z and lower case letter a, such as the backtick character.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "shell-quote",
+                    "purl": "pkg:npm/shell-quote"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.7.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.7.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-g4rg-993r-mgx7/GHSA-g4rg-993r-mgx7.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(shell-quote).quote"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42740"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/shell-quote/commit/5799416ed454aa4ec9afafc895b4e31760ea1abe"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ljharb/shell-quote"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ljharb/shell-quote/blob/master/CHANGELOG.md#173"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/shell-quote"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-77"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-21T20:08:10Z",
+                "nvd_published_at": "2021-10-21T15:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qg8p-v9q4-gh34"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-g4rg-993r-mgx7"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "uglify-js",
+            "version": "1.2.6",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:03Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-34r7-q49f-h37c",
+              "aliases": [
+                "CVE-2015-8857"
+              ],
+              "summary": "Incorrect Handling of Non-Boolean Comparisons During Minification in uglify-js",
+              "details": "Versions of `uglify-js` prior to 2.4.24 are affected by a vulnerability which may cause crafted JavaScript to have altered functionality after minification.\n\n## Recommendation\n\nUpgrade UglifyJS to version \u003e= 2.4.24.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "uglify-js",
+                    "purl": "pkg:npm/uglify-js"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.4.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-34r7-q49f-h37c/GHSA-34r7-q49f-h37c.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "uglifier",
+                    "purl": "pkg:gem/uglifier"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.1.1",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.5.4",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.3.0",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.7.0",
+                    "2.7.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-34r7-q49f-h37c/GHSA-34r7-q49f-h37c.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8857"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mishoo/UglifyJS2/issues/751"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lautis/uglifier/commit/4677bfe38142937ff952f95605bcec4618892c3e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mishoo/UglifyJS2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/uglifier/CVE-2015-8857.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20200227190830/http://www.securityfocus.com/bid/96410"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://zyan.scripts.mit.edu/blog/backdooring-js/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/04/20/11"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1254",
+                  "CWE-670"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:54:00Z",
+                "nvd_published_at": "2017-01-23T21:59:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:03Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c9f4-xj24-8jqx",
+              "aliases": [
+                "CVE-2015-8858"
+              ],
+              "summary": "Regular Expression Denial of Service in uglify-js",
+              "details": "Versions of `uglify-js` prior to 2.6.0 are affected by a regular expression denial of service vulnerability when malicious inputs are passed into the `parse()` method.\n\n\n### Proof of Concept\n\n```\nvar u = require('uglify-js');\nvar genstr = function (len, chr) {\n    var result = \"\";\n    for (i=0; i\u003c=len; i++) {\n        result = result + chr;\n    }\n\n    return result;\n}\n\nu.parse(\"var a = \" + genstr(process.argv[2], \"1\") + \".1ee7;\");\n```\n\n### Results\n```\n$ time node test.js 10000\nreal\t0m1.091s\nuser\t0m1.047s\nsys\t0m0.039s\n\n$ time node test.js 80000\nreal\t0m6.486s\nuser\t0m6.229s\nsys\t0m0.094s\n```\n\n\n## Recommendation\n\nUpdate to version 2.6.0 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "uglify-js",
+                    "purl": "pkg:npm/uglify-js"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-c9f4-xj24-8jqx/GHSA-c9f4-xj24-8jqx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8858"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-c9f4-xj24-8jqx"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/48"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/04/20/11"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/96409"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:30:50Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-34r7-q49f-h37c"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-c9f4-xj24-8jqx"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

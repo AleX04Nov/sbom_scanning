@@ -1,0 +1,1147 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "angular",
+            "version": "1.5.8",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2021-02-24T18:32:36Z",
+              "published": "2019-06-27T17:25:42Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-28hp-fgcr-2r4h",
+              "summary": "Cross-Site Scripting via JSONP",
+              "details": "JSONP allows untrusted resource URLs, which provides a vector for attack by malicious actors.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/06/GHSA-28hp-fgcr-2r4h/GHSA-28hp-fgcr-2r4h.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular.js/commit/6476af83cd0418c84e034a955b12a842794385c4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1630"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-06-27T15:51:47Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:00:55Z",
+              "published": "2019-11-20T15:29:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-89mq-4x47-5v83",
+              "aliases": [
+                "CVE-2019-10768",
+                "SNYK-JS-ANGULAR-534884"
+              ],
+              "summary": "Prototype Pollution in angular",
+              "details": "Versions of `angular ` prior to 1.7.9 are vulnerable to prototype pollution. The deprecated API function `merge()` does not restrict the modification of an Object's prototype in the , which may allow an attacker to add or modify an existing property that will exist on all objects.\n\n\n\n\n## Recommendation\n\nUpgrade to version 1.7.9 or later. The function was already deprecated and upgrades are not expected to break functionality.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.7.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/11/GHSA-89mq-4x47-5v83/GHSA-89mq-4x47-5v83.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10768"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular.js/pull/16913"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular.js/commit/add78e62004e80bb1e16ab2dfe224afa8e513bc3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rca37935d661f4689cb4119f1b3b224413b22be161b678e6e6ce0c69b@%3Ccommits.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANGULAR-534884"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1343"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321",
+                  "CWE-20",
+                  "CWE-915"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-11-20T00:51:05Z",
+                "nvd_published_at": "2019-11-19T21:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2021-10-08T21:25:58Z",
+              "published": "2020-08-05T21:47:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5cp4-xmrw-59wf",
+              "summary": "XSS via JQLite DOM manipulation functions in AngularJS",
+              "details": "### Summary\nXSS may be triggered in AngularJS applications that sanitize user-controlled HTML snippets before passing them to `JQLite` methods like `JQLite.prepend`, `JQLite.after`, `JQLite.append`, `JQLite.replaceWith`, `JQLite.append`, `new JQLite` and `angular.element`.\n\n### Description\n\nJQLite (DOM manipulation library that's part of AngularJS) manipulates input HTML before inserting it to the DOM in `jqLiteBuildFragment`.\n\nOne of the modifications performed [expands an XHTML self-closing tag](https://github.com/angular/angular.js/blob/418355f1cf9a9a9827ae81d257966e6acfb5623a/src/jqLite.js#L218).\n\nIf `jqLiteBuildFragment` is called (e.g. via `new JQLite(aString)`) with user-controlled HTML string that was sanitized (e.g. with [DOMPurify](https://github.com/cure53/DOMPurify)), the transformation done by JQLite may modify some forms of an inert, sanitized payload into a payload containing JavaScript - and trigger an XSS when the payload is inserted into DOM.\n\nThis is similar to a bug in jQuery `htmlPrefilter` function that was [fixed in 3.5.0](https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/).\n\n### Proof of concept\n\n```javascript\nconst inertPayload = `\u003cdiv\u003e\u003cstyle\u003e\u003cstyle/\u003e\u003cimg src=x onerror=\"alert(1337)\"/\u003e` \n```\nNote that the style element is not closed and `\u003cimg` would be a text node inside the style if inserted into the DOM as-is.\nAs such, some HTML sanitizers would leave the `\u003cimg` as is without processing it and stripping the `onerror` attribute.\n\n```javascript\nangular.element(document).append(inertPayload);\n```\nThis will alert, as `\u003cstyle/\u003e` will be replaced with `\u003cstyle\u003e\u003c/style\u003e` before adding it to the DOM, closing the style element early and reactivating `img`.\n\n### Patches\nThe issue is patched in `JQLite` bundled with angular 1.8.0. AngularJS users using JQuery should upgrade JQuery to 3.5.0, as a similar vulnerability [affects jQuery \u003c3.5.0](https://github.com/jquery/jquery/security/advisories/GHSA-gxr4-xjj5-5px2).\n\n### Workarounds\nChanging sanitizer configuration not to allow certain tag grouping (e.g. `\u003coption\u003e\u003cstyle\u003e\u003c/option\u003e`) or inline style elements may stop certain exploitation vectors, but it's uncertain if all possible exploitation vectors would be covered. Upgrade of AngularJS to 1.8.0 is recommended.\n\n### References\nhttps://github.com/advisories/GHSA-mhp6-pxh8-r675\nhttps://github.com/jquery/jquery/security/advisories/GHSA-gxr4-xjj5-5px2\nhttps://github.com/jquery/jquery/security/advisories/GHSA-jpcq-cgw6-v4j6\nhttps://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\nhttps://snyk.io/vuln/SNYK-JS-ANGULAR-570058",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/08/GHSA-5cp4-xmrw-59wf/GHSA-5cp4-xmrw-59wf.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/security-research/security/advisories/GHSA-5cp4-xmrw-59wf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jquery/jquery/security/advisories/GHSA-gxr4-xjj5-5px2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jquery/jquery/security/advisories/GHSA-jpcq-cgw6-v4j6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-mhp6-pxh8-r675"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANGULAR-570058"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-08-05T21:46:46Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:04:04Z",
+              "published": "2020-06-18T14:19:58Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mhp6-pxh8-r675",
+              "aliases": [
+                "CVE-2020-7676",
+                "SNYK-JS-ANGULAR-570058"
+              ],
+              "summary": "Cross site scripting in Angular",
+              "details": "angular.js prior to 1.8.0 allows cross site scripting. The regex-based input HTML replacement may turn sanitized code into unsanitized one. Wrapping `\u003coption\u003e` elements in `\u003cselect\u003e` ones changes parsing behavior, leading to possibly unsanitizing code.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-mhp6-pxh8-r675/GHSA-mhp6-pxh8-r675.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7676"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular.js/pull/17028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/angular/angular.js/commit/2df43c07779137d1bddf7f3b282a1287a8634acd"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r198985c02829ba8285ed4f9b1de54a33b5f31b08bb38ac51fc86961b@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r3f05cfd587c774ea83c18e59eda9fa37fa9bbf3421484d4ee1017a20@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r446c297cd6cda2bd7e345c9b0741d7f611df89902e5d515848c6f4b1@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r455ebd83a1c69ae8fd897560534a079c70a483dbe1e75504f1ca499b@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r57383582dcad2305430321589dfaca6793f5174c55da6ce8d06fbf9b@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r79e3feaaf87b81e80da0e17a579015f6dcb94c95551ced398d50c8d7@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r80f210a5f4833d59c5d3de17dd7312f9daba0765ec7d4052469f13f1@%3Cozone-commits.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb6423268b25db0f800359986867648e11dbd38e133b9383e85067f02@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rda99599896c3667f2cc9e9d34c7b6ef5d2bbed1f4801e1d75a2b0679@%3Ccommits.nifi.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rfa2b19d01d10a8637dc319a7d5994c3dbdb88c0a8f9a21533403577a@%3Cozone-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANGULAR-570058"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-18T14:09:41Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-30T06:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2qqx-w9hr-q5gx",
+              "aliases": [
+                "CVE-2023-26117"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service via the $resource service",
+              "details": "All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the $resource service due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-2qqx-w9hr-q5gx/GHSA-2qqx-w9hr-q5gx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26117"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQWJLE5WE33WNMA54XSJIDXBRK2KL3XJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UDKFLKJ6VZKL52AFVW2OVZRMJWHMW55K/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-5406323"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-5406325"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-5406324"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-3373045"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-vulnerability-resource-trailing-slashes-redos"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-03T13:07:46Z",
+                "nvd_published_at": "2023-03-30T05:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-30T06:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2vrf-hf26-jrp5",
+              "aliases": [
+                "CVE-2023-26116"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service via the angular.copy() utility",
+              "details": "All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the angular.copy() utility function due to the usage of an insecure regular expression. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-2vrf-hf26-jrp5/GHSA-2vrf-hf26-jrp5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26116"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQWJLE5WE33WNMA54XSJIDXBRK2KL3XJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UDKFLKJ6VZKL52AFVW2OVZRMJWHMW55K/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-5406320"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-5406322"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-5406321"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-3373044"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-vulnerability-angular-copy-redos"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-03T13:07:51Z",
+                "nvd_published_at": "2023-03-30T05:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:50Z",
+              "published": "2022-07-16T00:00:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-prc3-vjfx-vhm9",
+              "aliases": [
+                "CVE-2022-25869"
+              ],
+              "summary": "Angular (deprecated package) Cross-site Scripting",
+              "details": "All versions of package angular are vulnerable to Cross-site Scripting (XSS) due to insecure page caching in the Internet Explorer browser, which allows interpolation of `\u003ctextarea\u003e` elements.\n\nNPM package [angular](https://www.npmjs.com/package/angular) is deprecated. Those who want to receive security updates should use the actively maintained package [@angular/core](https://www.npmjs.com/package/@angular/core).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/07/GHSA-prc3-vjfx-vhm9/GHSA-prc3-vjfx-vhm9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25869"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://glitch.com/edit/%23%21/angular-repro-textarea-xss"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-2949783"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-2949784"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2949782"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ANGULAR-2949781"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://www.npmjs.com/package/angular"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-20T00:41:18Z",
+                "nvd_published_at": "2022-07-15T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-03-30T06:30:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qwqh-hm9m-p5hr",
+              "aliases": [
+                "CVE-2023-26118"
+              ],
+              "summary": "angular vulnerable to regular expression denial of service via the \u003cinput type=\"url\"\u003e element",
+              "details": "All versions of the package angular are vulnerable to Regular Expression Denial of Service (ReDoS) via the \u003cinput type=\"url\"\u003e element due to the usage of an insecure regular expression in the input[url] functionality. Exploiting this vulnerability is possible by a large carefully-crafted input, which can result in catastrophic backtracking. ",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "angular",
+                    "purl": "pkg:npm/angular"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "1.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-qwqh-hm9m-p5hr/GHSA-qwqh-hm9m-p5hr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26118"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/angular/angular.js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OQWJLE5WE33WNMA54XSJIDXBRK2KL3XJ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UDKFLKJ6VZKL52AFVW2OVZRMJWHMW55K/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-5406326"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBANGULAR-5406328"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-5406327"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-ANGULAR-3373046"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://stackblitz.com/edit/angularjs-vulnerability-inpur-url-validation-redos"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-03T13:07:41Z",
+                "nvd_published_at": "2023-03-30T05:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-28hp-fgcr-2r4h"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-89mq-4x47-5v83"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-5cp4-xmrw-59wf"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-mhp6-pxh8-r675"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-2qqx-w9hr-q5gx"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-2vrf-hf26-jrp5"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-prc3-vjfx-vhm9"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-qwqh-hm9m-p5hr"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "codecov",
+            "version": "1.0.1",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:03:59Z",
+              "published": "2022-05-24T17:07:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mh2h-6j8q-x246",
+              "aliases": [
+                "CVE-2020-7596"
+              ],
+              "summary": "Improper Neutralization of Special Elements in Output Used by a Downstream Component in Codecov",
+              "details": "Codecov npm module before 3.6.2 allows remote attackers to execute arbitrary commands via the \"gcov-args\" argument.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "codecov",
+                    "purl": "pkg:npm/codecov"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.6.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 3.6.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-mh2h-6j8q-x246/GHSA-mh2h-6j8q-x246.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7596"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/codecov/codecov-node"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-CODECOV-543183"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-23T17:49:55Z",
+                "nvd_published_at": "2020-01-25T19:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:02:29Z",
+              "published": "2020-02-19T17:29:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5q88-cjfq-g2mh",
+              "aliases": [
+                "CVE-2020-15123",
+                "CVE-2020-7597",
+                "GHSA-xp63-6vf5-xf3v",
+                "SNYK-JS-CODECOV-548879"
+              ],
+              "summary": "codecov NPM module allows remote attackers to execute arbitrary commands",
+              "details": "codecov-node npm module before 3.6.5 allows remote attackers to execute arbitrary commands.The value provided as part of the gcov-root argument is executed by the exec function within lib/codecov.js. This vulnerability exists due to an incomplete fix of CVE-2020-7596.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "codecov",
+                    "purl": "pkg:npm/codecov"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.6.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-5q88-cjfq-g2mh/GHSA-5q88-cjfq-g2mh.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/codecov/codecov-node/commit/02cf13d8b93ac547b5b4c2cfe186b7d874fd234f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-CODECOV-548879"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-02-18T20:04:05Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:02:29Z",
+              "published": "2020-07-20T17:20:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xp63-6vf5-xf3v",
+              "aliases": [
+                "CVE-2020-15123",
+                "CVE-2020-7597",
+                "GHSA-5q88-cjfq-g2mh",
+                "SNYK-JS-CODECOV-548879"
+              ],
+              "summary": "Command injection in codecov (npm package)",
+              "details": "### Impact\n\nThe `upload` method has a command injection vulnerability. Clients of the `codecov-node` library are unlikely to be aware of this, so they might unwittingly write code that contains a vulnerability.\n\nA similar CVE was issued: [CVE-2020-7597](https://github.com/advisories/GHSA-5q88-cjfq-g2mh), but the fix was incomplete. It only blocked `\u0026`, and command injection is still possible using backticks instead to bypass the sanitizer.\n\nWe have written a [CodeQL](https://codeql.com) query, which automatically detects this vulnerability. You can see the results of the query on the `codecov-node` project [here](https://lgtm.com/query/7714424068617023832/).\n\n\n### Patches\nThis has been patched in version 3.7.1\n\n### Workarounds\n\nNone, however, the attack surface is low in this case. Particularly in the standard use of codecov, where the module is used directly in a build pipeline, not built against as a library in another application that may supply malicious input and perform command injection. \n\n### References\n*  [CVE-2020-7597](https://github.com/advisories/GHSA-5q88-cjfq-g2mh)\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Contact us via our [Security Email](mailto:security@codecov.io)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "codecov",
+                    "purl": "pkg:npm/codecov"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.7.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-xp63-6vf5-xf3v/GHSA-xp63-6vf5-xf3v.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/codecov/codecov-node/security/advisories/GHSA-xp63-6vf5-xf3v"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15123"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/codecov/codecov-node/pull/180"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/codecov/codecov-node/commit/c0711c656686e902af2cd92d6aecc8074de4d83d"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-5q88-cjfq-g2mh"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lgtm.com/query/7714424068617023832"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-07-20T17:19:56Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-mh2h-6j8q-x246"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-5q88-cjfq-g2mh",
+                "GHSA-xp63-6vf5-xf3v"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "karma",
+            "version": "1.2.0",
+            "ecosystem": "npm",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:07:34Z",
+              "published": "2022-02-06T00:00:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7x7c-qm48-pq9c",
+              "aliases": [
+                "CVE-2022-0437"
+              ],
+              "summary": "Cross-site Scripting in karma",
+              "details": "karma prior to version 6.3.14 contains a cross-site scripting vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "karma",
+                    "purl": "pkg:npm/karma"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.3.14"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-7x7c-qm48-pq9c/GHSA-7x7c-qm48-pq9c.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0437"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/karma-runner/karma/commit/839578c45a8ac42fbc1d72105f97eab77dd3eb8a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/karma-runner/karma/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/karma-runner/karma/releases/tag/v6.3.14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/64b67ea1-5487-4382-a5f6-e8a95f798885"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-02-07T21:57:20Z",
+                "nvd_published_at": "2022-02-05T02:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:05:10Z",
+              "published": "2022-02-26T00:00:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rc3x-jf5g-xvc5",
+              "aliases": [
+                "CVE-2021-23495",
+                "SNYK-JAVA-ORGWEBJARSNPM-2412347",
+                "SNYK-JS-KARMA-2396325"
+              ],
+              "summary": "Open redirect in karma",
+              "details": "Karma before 6.3.16 is vulnerable to Open Redirect due to missing validation of the return_url query parameter.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "karma",
+                    "purl": "pkg:npm/karma"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.3.16"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-rc3x-jf5g-xvc5/GHSA-rc3x-jf5g-xvc5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23495"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/karma-runner/karma/commit/ff7edbb2ffbcdd69761bece86b7dc1ef0740508d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/karma-runner/karma"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-2412347"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-KARMA-2396325"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-03-01T19:17:53Z",
+                "nvd_published_at": "2022-02-25T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-7x7c-qm48-pq9c"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-rc3x-jf5g-xvc5"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

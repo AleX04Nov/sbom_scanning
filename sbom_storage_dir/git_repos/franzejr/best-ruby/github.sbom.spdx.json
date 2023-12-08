@@ -1,0 +1,49 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:51:09Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.franzejr/best-ruby",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.franzejr-best-ruby"
+    ],
+    "documentNamespace": "https://github.com/franzejr/best-ruby/dependency_graph/sbom-bbff803b2e4a84d8",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.franzejr-best-ruby",
+            "name": "com.github.franzejr/best-ruby",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/franzejr/best-ruby",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/franzejr/best-ruby"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rake",
+            "name": "rubygems:rake",
+            "versionInfo": ">= 0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.franzejr-best-ruby",
+            "relatedSpdxElement": "SPDXRef-rubygems-rake"
+        }
+    ]
+}

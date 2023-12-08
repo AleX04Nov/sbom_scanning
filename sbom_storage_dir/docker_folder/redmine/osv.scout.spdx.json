@@ -1,0 +1,2475 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/scout.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "nghttp2",
+            "version": "1.52.0-1",
+            "ecosystem": "Debian",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-02T00:18:58Z",
+              "published": "2023-12-01T00:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "DSA-5570-1",
+              "related": [
+                "CVE-2023-44487"
+              ],
+              "summary": "nghttp2 - security update",
+              "details": "\nIt was discovered that libnghttp2, a library implementing the HTTP/2\nprotocol, handled request cancellation incorrectly. This could result\nin denial of service.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 1.43.0-1+deb11u1.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 1.52.0-1+deb12u1.\n\n\nWe recommend that you upgrade your nghttp2 packages.\n\n\nFor the detailed security status of nghttp2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/nghttp2](https://security-tracker.debian.org/tracker/nghttp2)\n\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Debian:11",
+                    "name": "nghttp2",
+                    "purl": "pkg:deb/debian/nghttp2?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.43.0-1+deb11u1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.43.0-1"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5570-1.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Debian:12",
+                    "name": "nghttp2",
+                    "purl": "pkg:deb/debian/nghttp2?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.52.0-1+deb12u1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.52.0-1"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5570-1.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://www.debian.org/security/2023/dsa-5570"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "DSA-5570-1"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tiff",
+            "version": "4.5.0-6",
+            "ecosystem": "Debian",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-27T19:15:46Z",
+              "published": "2023-11-27T00:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "DSA-5567-1",
+              "related": [
+                "CVE-2023-3576",
+                "CVE-2023-40745",
+                "CVE-2023-41175"
+              ],
+              "summary": "tiff - security update",
+              "details": "\nMultiple buffer overflows and memory leak issues have been found in tiff,\nthe Tag Image File Format (TIFF) library and tools, which may cause denial\nof service when processing a crafted TIFF image.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 4.2.0-1+deb11u5.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 4.5.0-6+deb12u1.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFor the detailed security status of tiff please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tiff](https://security-tracker.debian.org/tracker/tiff)\n\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Debian:11",
+                    "name": "tiff",
+                    "purl": "pkg:deb/debian/tiff?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.0-1+deb11u5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.2.0-1",
+                    "4.2.0-1+deb11u1",
+                    "4.2.0-1+deb11u2",
+                    "4.2.0-1+deb11u3",
+                    "4.2.0-1+deb11u4"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5567-1.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Debian:12",
+                    "name": "tiff",
+                    "purl": "pkg:deb/debian/tiff?arch=source"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.5.0-6+deb12u1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.5.0-6"
+                  ],
+                  "database_specific": {
+                    "source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5567-1.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://www.debian.org/security/2023/dsa-5567"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "DSA-5567-1"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "uri",
+            "version": "0.12.1",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:12:57Z",
+              "published": "2023-06-29T15:30:34Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hww2-5g85-429m",
+              "aliases": [
+                "CVE-2023-36617"
+              ],
+              "summary": "URI gem has ReDoS vulnerability",
+              "details": "A ReDoS issue was discovered in the URI component before 0.12.2 for Ruby. The URI parser mishandles invalid URLs that have specific characters. There is an increase in execution time for parsing strings to URI objects with `rfc2396_parser.rb` and `rfc3986_parser.rb`.\n\nNOTE: this issue exists becuse of an incomplete fix for CVE-2023-28755. Version 0.10.3 is also a fixed version.\n\n[The Ruby advisory recommends](https://www.ruby-lang.org/en/news/2023/06/29/redos-in-uri-CVE-2023-36617/) updating the uri gem to 0.12.2. In order to ensure compatibility with the bundled version in older Ruby series, you may update as follows instead:\n- For Ruby 3.0: Update to uri 0.10.3\n- For Ruby 3.1 and 3.2: Update to uri 0.12.2.\n\nYou can use gem update uri to update it. If you are using bundler, please add gem `uri`, `\u003e= 0.12.2` (or other version mentioned above) to your Gemfile.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "uri",
+                    "purl": "pkg:gem/uri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.10.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0",
+                    "0.10.0.1",
+                    "0.10.0.2",
+                    "0.10.0.3",
+                    "0.10.1",
+                    "0.10.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-hww2-5g85-429m/GHSA-hww2-5g85-429m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "uri",
+                    "purl": "pkg:gem/uri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0.11.0"
+                        },
+                        {
+                          "fixed": "0.12.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.11.0",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-hww2-5g85-429m/GHSA-hww2-5g85-429m.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-36617"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/uri/commit/3cd938df20db26c9439e9f681aadfb9bbeb6d1c0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/uri/commit/4d02315181d8a485496f1bb107a6ab51d6f3a35f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/uri/commit/7e33934c91b7f8f3ea7b7a4258b468e19f636bc3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/uri/commit/ba36c8a3ecad8c16dd3e60a6da9abd768206c8fa"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/uri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/uri/CVE-2023-36617.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20230725-0002/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2023/06/29/redos-in-uri-CVE-2023-36617/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-14T21:52:02Z",
+                "nvd_published_at": "2023-06-29T13:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-hww2-5g85-429m"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "stdlib",
+            "version": "1.19.8",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-05T16:42:04Z",
+              "published": "2023-12-05T16:16:44Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2375",
+              "aliases": [
+                "CVE-2023-45287"
+              ],
+              "summary": "Before Go 1.20, the RSA based key exchange methods in crypto/tls may exhibit a timing side channel",
+              "details": "Before Go 1.20, the RSA based TLS key exchanges used the math/big library, which is not constant time. RSA blinding was applied to prevent timing attacks, but analysis shows this may not have been fully effective. In particular it appears as if the removal of PKCS#1 padding may leak timing information, which in turn could be used to recover session key bits.\n\nIn Go 1.20, the crypto/tls library switched to a fully constant time RSA implementation, which we do not believe exhibits any timing side channels.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2375.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "crypto/tls",
+                        "symbols": [
+                          "Conn.Handshake",
+                          "Conn.HandshakeContext",
+                          "Conn.Read",
+                          "Conn.Write",
+                          "Dial",
+                          "DialWithDialer",
+                          "Dialer.Dial",
+                          "Dialer.DialContext",
+                          "rsaKeyAgreement.generateClientKeyExchange",
+                          "rsaKeyAgreement.processClientKeyExchange"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/20654"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/326012/26"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/QMK8IQALDvA"
+                },
+                {
+                  "type": "ARTICLE",
+                  "url": "https://people.redhat.com/~hkario/marvin/"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2375"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:52Z",
+              "published": "2023-05-05T21:10:20Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1751",
+              "aliases": [
+                "BIT-golang-2023-24539",
+                "CVE-2023-24539"
+              ],
+              "summary": "Improper sanitization of CSS values in html/template",
+              "details": "Angle brackets (\u003c\u003e) are not considered dangerous characters when inserted into CSS contexts. Templates containing multiple actions separated by a '/' character can result in unexpectedly closing the CSS context and allowing for injection of unexpected HTML, if executed with untrusted input.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.9"
+                        },
+                        {
+                          "introduced": "1.20.0-0"
+                        },
+                        {
+                          "fixed": "1.20.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1751.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "cssValueFilter",
+                          "escaper.commit"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/59720"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/491615"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/MEb0UyuSMsU"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Juho Nurminen of Mattermost"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1751"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:52Z",
+              "published": "2023-05-05T21:10:22Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1752",
+              "aliases": [
+                "BIT-golang-2023-24540",
+                "CVE-2023-24540"
+              ],
+              "summary": "Improper handling of JavaScript whitespace in html/template",
+              "details": "Not all valid JavaScript whitespace characters are considered to be whitespace. Templates containing whitespace characters outside of the character set \"\\t\\n\\f\\r\\u0020\\u2028\\u2029\" in JavaScript contexts that also contain actions may not be properly sanitized during execution.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.9"
+                        },
+                        {
+                          "introduced": "1.20.0-0"
+                        },
+                        {
+                          "fixed": "1.20.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1752.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "nextJSCtx"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/59721"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/491616"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/MEb0UyuSMsU"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Juho Nurminen of Mattermost"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1752"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:59Z",
+              "published": "2023-05-05T21:10:24Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1753",
+              "aliases": [
+                "BIT-golang-2023-29400",
+                "CVE-2023-29400"
+              ],
+              "summary": "Improper handling of empty HTML attributes in html/template",
+              "details": "Templates containing actions in unquoted HTML attributes (e.g. \"attr={{.}}\") executed with empty input can result in output with unexpected results when parsed due to HTML normalization rules. This may allow injection of arbitrary attributes into tags.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.9"
+                        },
+                        {
+                          "introduced": "1.20.0-0"
+                        },
+                        {
+                          "fixed": "1.20.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1753.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "appendCmd",
+                          "htmlNospaceEscaper"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/59722"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/491617"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/MEb0UyuSMsU"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Juho Nurminen of Mattermost"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1753"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:59Z",
+              "published": "2023-06-08T20:16:06Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1840",
+              "aliases": [
+                "BIT-golang-2023-29403",
+                "CVE-2023-29403"
+              ],
+              "summary": "Unsafe behavior in setuid/setgid binaries in runtime",
+              "details": "On Unix platforms, the Go runtime does not behave differently when a binary is run with the setuid/setgid bits. This can be dangerous in certain cases, such as when dumping memory state, or assuming the status of standard i/o file descriptors.\n\nIf a setuid/setgid binary is executed with standard I/O file descriptors closed, opening any files can result in unexpected content being read or written with elevated privileges. Similarly, if a setuid/setgid program is terminated, either via panic or signal, it may leak the contents of its registers.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.10"
+                        },
+                        {
+                          "introduced": "1.20.0-0"
+                        },
+                        {
+                          "fixed": "1.20.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1840.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "runtime"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/60272"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/501223"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/q5135a9d924/m/j0ZoAJOHAwAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Vincent Dehors from Synacktiv"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1840"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:59Z",
+              "published": "2023-07-11T19:19:08Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1878",
+              "aliases": [
+                "BIT-golang-2023-29406",
+                "CVE-2023-29406"
+              ],
+              "summary": "Insufficient sanitization of Host header in net/http",
+              "details": "The HTTP/1 client does not fully validate the contents of the Host header. A maliciously crafted Host header can inject additional headers or entire requests.\n\nWith fix, the HTTP/1 client now refuses to send requests containing an invalid Request.Host or Request.URL.Host value.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.11"
+                        },
+                        {
+                          "introduced": "1.20.0-0"
+                        },
+                        {
+                          "fixed": "1.20.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1878.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http",
+                        "symbols": [
+                          "Client.CloseIdleConnections",
+                          "Client.Do",
+                          "Client.Get",
+                          "Client.Head",
+                          "Client.Post",
+                          "Client.PostForm",
+                          "Get",
+                          "Head",
+                          "Post",
+                          "PostForm",
+                          "Request.Write",
+                          "Request.WriteProxy",
+                          "Request.write",
+                          "Transport.CancelRequest",
+                          "Transport.CloseIdleConnections",
+                          "Transport.RoundTrip"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/60374"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/506996"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/2q13H6LEEx0"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Bartek Nowotarski"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1878"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:02:59Z",
+              "published": "2023-08-02T17:25:58Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-1987",
+              "aliases": [
+                "BIT-golang-2023-29409",
+                "CVE-2023-29409"
+              ],
+              "summary": "Large RSA keys can cause high CPU usage in crypto/tls",
+              "details": "Extremely large RSA keys in certificate chains can cause a client/server to expend significant CPU time verifying signatures.\n\nWith fix, the size of RSA keys transmitted during handshakes is restricted to \u003c= 8192 bits.\n\nBased on a survey of publicly trusted RSA keys, there are currently only three certificates in circulation with keys larger than this, and all three appear to be test certificates that are not actively deployed. It is possible there are larger keys in use in private PKIs, but we target the web PKI, so causing breakage here in the interests of increasing the default safety of users of crypto/tls seems reasonable.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.12"
+                        },
+                        {
+                          "introduced": "1.20.0-0"
+                        },
+                        {
+                          "fixed": "1.20.7"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.0-rc.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-1987.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "crypto/tls",
+                        "symbols": [
+                          "Conn.Handshake",
+                          "Conn.HandshakeContext",
+                          "Conn.Read",
+                          "Conn.Write",
+                          "Conn.processCertsFromClient",
+                          "Conn.verifyServerCertificate",
+                          "Dial",
+                          "DialWithDialer",
+                          "Dialer.Dial",
+                          "Dialer.DialContext"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/61460"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/515257"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/X0b6CsSAaYI/m/Efv5DbZ9AwAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Mateusz Poliwczak"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-1987"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:09Z",
+              "published": "2023-09-07T16:11:17Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2041",
+              "aliases": [
+                "BIT-golang-2023-39318",
+                "CVE-2023-39318"
+              ],
+              "summary": "Improper handling of HTML-like comments in script contexts in html/template",
+              "details": "The html/template package does not properly handle HTML-like \"\" comment tokens, nor hashbang \"#!\" comment tokens, in \u003cscript\u003e contexts. This may cause the template parser to improperly interpret the contents of \u003cscript\u003e contexts, causing actions to be improperly escaped. This may be leveraged to perform an XSS attack.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.8"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2041.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "escaper.escapeText",
+                          "isComment",
+                          "tJS",
+                          "tLineCmt"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/62196"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/526156"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/2C5vbR-UNkI/m/L1hdrPhfBAAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Takeshi Kaneko (GMO Cybersecurity by Ierae, Inc.)"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2041"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:09Z",
+              "published": "2023-09-07T16:11:59Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2043",
+              "aliases": [
+                "BIT-golang-2023-39319",
+                "CVE-2023-39319"
+              ],
+              "summary": "Improper handling of special tags within script contexts in html/template",
+              "details": "The html/template package does not apply the proper rules for handling occurrences of \"\u003cscript\", \"\u003c!--\", and \"\u003c/script\" within JS literals in \u003cscript\u003e contexts. This may cause the template parser to improperly consider script contexts to be terminated early, causing actions to be improperly escaped. This could be leveraged to perform an XSS attack.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.8"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2043.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "html/template",
+                        "symbols": [
+                          "Template.Execute",
+                          "Template.ExecuteTemplate",
+                          "escaper.escapeText",
+                          "indexTagEnd",
+                          "tSpecialTagEnd"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/62197"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/526157"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/2C5vbR-UNkI/m/L1hdrPhfBAAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Takeshi Kaneko (GMO Cybersecurity by Ierae, Inc.)"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2043"
+              }
+            },
+            {
+              "modified": "2023-12-06T01:03:10Z",
+              "published": "2023-10-11T16:49:53Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2102",
+              "aliases": [
+                "BIT-golang-2023-39325",
+                "CVE-2023-39325",
+                "GHSA-4374-p667-p6c8"
+              ],
+              "related": [
+                "CVE-2023-44487"
+              ],
+              "summary": "HTTP/2 rapid reset can cause excessive work in net/http",
+              "details": "A malicious HTTP/2 client which rapidly creates requests and immediately resets them can cause excessive server resource consumption. While the total number of requests is bounded by the http2.Server.MaxConcurrentStreams setting, resetting an in-progress request allows the attacker to create a new request while the existing one is still executing.\n\nWith the fix applied, HTTP/2 servers now bound the number of simultaneously executing handler goroutines to the stream concurrency limit (MaxConcurrentStreams). New requests arriving when at the limit (which can only happen after the client has reset an existing, in-flight request) will be queued until a handler exits. If the request queue grows too large, the server will terminate the connection.\n\nThis issue is also fixed in golang.org/x/net/http2 for users manually configuring HTTP/2.\n\nThe default stream concurrency limit is 250 streams (requests) per HTTP/2 connection. This value may be adjusted using the golang.org/x/net/http2 package; see the Server.MaxConcurrentStreams setting and the ConfigureServer function.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.10"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2102.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http",
+                        "symbols": [
+                          "ListenAndServe",
+                          "ListenAndServeTLS",
+                          "Serve",
+                          "ServeTLS",
+                          "Server.ListenAndServe",
+                          "Server.ListenAndServeTLS",
+                          "Server.Serve",
+                          "Server.ServeTLS",
+                          "http2Server.ServeConn",
+                          "http2serverConn.processHeaders",
+                          "http2serverConn.runHandler",
+                          "http2serverConn.serve",
+                          "http2serverConn.upgradeRequest"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/net",
+                    "purl": "pkg:golang/golang.org/x/net"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2102.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/net/http2",
+                        "symbols": [
+                          "Server.ServeConn",
+                          "serverConn.processHeaders",
+                          "serverConn.runHandler",
+                          "serverConn.serve",
+                          "serverConn.upgradeRequest"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63417"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/534215"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/534235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/iNNxDTCjZvo/m/UDd7VKQuAAAJ"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2102"
+              }
+            },
+            {
+              "modified": "2023-12-06T16:22:45Z",
+              "published": "2023-11-08T22:42:14Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2185",
+              "aliases": [
+                "BIT-golang-2023-45283",
+                "CVE-2023-45283"
+              ],
+              "summary": "Insecure parsing of Windows paths with a \\??\\ prefix in path/filepath",
+              "details": "The filepath package does not recognize paths with a \\??\\ prefix as special.\n\nOn Windows, a path beginning with \\??\\ is a Root Local Device path equivalent to a path beginning with \\\\?\\. Paths with a \\??\\ prefix may be used to access arbitrary locations on the system. For example, the path \\??\\c:\\x is equivalent to the more common path c:\\x.\n\nBefore fix, Clean could convert a rooted path such as \\a\\..\\??\\b into the root local device path \\??\\b. Clean will now convert this to .\\??\\b.\n\nSimilarly, Join(\\, ??, b) could convert a seemingly innocent sequence of path elements into the root local device path \\??\\b. Join will now convert this to \\.\\??\\b.\n\nIn addition, with fix, IsAbs now correctly reports paths beginning with \\??\\ as absolute, and VolumeName correctly reports the \\??\\ prefix as a volume name.\n\nUPDATE: Go 1.20.11 and Go 1.21.4 inadvertently changed the definition of the volume name in Windows paths starting with \\?, resulting in filepath.Clean(\\?\\c:) returning \\?\\c: rather than \\?\\c:\\ (among other effects). The previous behavior has been restored.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.11"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2185.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "path/filepath",
+                        "symbols": [
+                          "Abs",
+                          "Base",
+                          "Clean",
+                          "Dir",
+                          "EvalSymlinks",
+                          "Glob",
+                          "IsLocal",
+                          "Join",
+                          "Rel",
+                          "Split",
+                          "VolumeName",
+                          "Walk",
+                          "WalkDir",
+                          "join",
+                          "volumeNameLen"
+                        ]
+                      },
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "internal/safefilepath",
+                        "symbols": [
+                          "FromFS",
+                          "fromFS"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.20.11"
+                        },
+                        {
+                          "fixed": "1.20.12"
+                        },
+                        {
+                          "introduced": "1.21.4"
+                        },
+                        {
+                          "fixed": "1.21.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2185.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "goos": [
+                          "windows"
+                        ],
+                        "path": "path/filepath",
+                        "symbols": [
+                          "Abs",
+                          "Base",
+                          "Clean",
+                          "Dir",
+                          "EvalSymlinks",
+                          "Glob",
+                          "IsLocal",
+                          "Join",
+                          "Rel",
+                          "Split",
+                          "VolumeName",
+                          "Walk",
+                          "WalkDir",
+                          "volumeNameLen"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63713"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/540277"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/4tU8LZfBFkY"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64028"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/541175"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2185"
+              }
+            },
+            {
+              "modified": "2023-11-18T08:11:32Z",
+              "published": "2023-11-08T22:42:19Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2186",
+              "aliases": [
+                "BIT-golang-2023-45284",
+                "CVE-2023-45284"
+              ],
+              "summary": "Incorrect detection of reserved device names on Windows in path/filepath",
+              "details": "On Windows, The IsLocal function does not correctly detect reserved device names in some cases.\n\nReserved names followed by spaces, such as \"COM1 \", and reserved names \"COM\" and \"LPT\" followed by superscript 1, 2, or 3, are incorrectly reported as local.\n\nWith fix, IsLocal now correctly reports these names as non-local.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.11"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2186.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "path/filepath",
+                        "symbols": [
+                          "IsLocal"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/63713"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/540277"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/4tU8LZfBFkY"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2186"
+              }
+            },
+            {
+              "modified": "2023-12-06T16:41:28Z",
+              "published": "2023-12-06T16:22:36Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2382",
+              "aliases": [
+                "CVE-2023-39326"
+              ],
+              "summary": "Denial of service via chunk extensions in net/http",
+              "details": "A malicious HTTP sender can use chunk extensions to cause a receiver reading from a request or response body to read many more bytes from the network than are in the body.\n\nA malicious HTTP client can further exploit this to cause a server to automatically read a large amount of data (up to about 1GiB) when a handler fails to read the entire body of a request.\n\nChunk extensions are a little-used HTTP feature which permit including additional metadata in a request or response body sent using the chunked encoding. The net/http chunked encoding reader discards this metadata. A sender can exploit this by inserting a large metadata segment with each byte transferred. The chunk reader now produces an error if the ratio of real body to encoded bytes grows too small.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.20.12"
+                        },
+                        {
+                          "introduced": "1.21.0-0"
+                        },
+                        {
+                          "fixed": "1.21.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2382.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "net/http/internal",
+                        "symbols": [
+                          "chunkedReader.Read",
+                          "chunkedReader.beginChunk",
+                          "readChunkLine"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64433"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/547335"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/6ypN5EjibjM/m/KmLVYH_uAgAJ"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Bartek Nowotarski"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2382"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2023-2375"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-1751"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-1752"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-1753"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-1840"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-1878"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-1987"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2041"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2043"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2102"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2185"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2186"
+              ]
+            },
+            {
+              "ids": [
+                "GO-2023-2382"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "configobj",
+            "version": "5.0.8",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-04-03T06:30:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c33w-24p9-8m24",
+              "aliases": [
+                "CVE-2023-26112"
+              ],
+              "summary": "configobj ReDoS exploitable by developer using values in a server-side configuration file",
+              "details": "All versions of the package configobj are vulnerable to Regular Expression Denial of Service (ReDoS) via the validate function, using (.+?)\\((.*)\\). **Note:** This is only exploitable in the case of a developer, putting the offending value in a server side configuration file.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "configobj",
+                    "purl": "pkg:pypi/configobj"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "5.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.4.0",
+                    "4.5.0",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.6.0",
+                    "4.7.0",
+                    "4.7.1",
+                    "4.7.2",
+                    "5.0.0",
+                    "5.0.1",
+                    "5.0.2",
+                    "5.0.3",
+                    "5.0.4",
+                    "5.0.5",
+                    "5.0.6",
+                    "5.0.7",
+                    "5.0.8"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-c33w-24p9-8m24/GHSA-c33w-24p9-8m24.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26112"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/DiffSK/configobj/issues/232"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/DiffSK/configobj"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6BO4RLMYEJODCNUE3DJIIUUFVTPAG6VN/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NZHY7B33EFY4LESP2NI4APQUPRROTAZK/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PYU4IHVLOTYMFPH7KDOJGKZQR4GKWPFK/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-PYTHON-CONFIGOBJ-3252494"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:40:45Z",
+                "nvd_published_at": "2023-04-03T05:15:00Z",
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c33w-24p9-8m24"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "urllib3",
+            "version": "1.26.12",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:13:39Z",
+              "published": "2023-10-17T20:15:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-g4mx-q9vg-27p4",
+              "aliases": [
+                "CVE-2023-45803",
+                "PYSEC-2023-212"
+              ],
+              "summary": "urllib3's request body not stripped after redirect from 303 status changes request method to GET",
+              "details": "urllib3 previously wouldn't remove the HTTP request body when an HTTP redirect response using status 303 \"See Other\" after the request had its method changed from one that could accept a request body (like `POST`) to `GET` as is required by HTTP RFCs. Although the behavior of removing the request body is not specified in the section for redirects, it can be inferred by piecing together information from different sections and we have observed the behavior in other major HTTP client implementations like curl and web browsers.\n\nFrom [RFC 9110 Section 9.3.1](https://www.rfc-editor.org/rfc/rfc9110.html#name-get):\n\n\u003e A client SHOULD NOT generate content in a GET request unless it is made directly to an origin server that has previously indicated, in or out of band, that such a request has a purpose and will be adequately supported.\n\n## Affected usages\n\nBecause the vulnerability requires a previously trusted service to become compromised in order to have an impact on confidentiality we believe the exploitability of this vulnerability is low. Additionally, many users aren't putting sensitive data in HTTP request bodies, if this is the case then this vulnerability isn't exploitable.\n\nBoth of the following conditions must be true to be affected by this vulnerability:\n\n* If you're using urllib3 and submitting sensitive information in the HTTP request body (such as form data or JSON)\n* The origin service is compromised and starts redirecting using 303 to a malicious peer or the redirected-to service becomes compromised.\n\n## Remediation\n\nYou can remediate this vulnerability with any of the following steps:\n\n* Upgrade to a patched version of urllib3 (v1.26.18 or v2.0.7)\n* Disable redirects for services that you aren't expecting to respond with redirects with `redirects=False`.\n* Disable automatic redirects with `redirects=False` and handle 303 redirects manually by stripping the HTTP request body.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-g4mx-q9vg-27p4/GHSA-g4mx-q9vg-27p4.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.26.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.17",
+                    "1.26.2",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-g4mx-q9vg-27p4/GHSA-g4mx-q9vg-27p4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-g4mx-q9vg-27p4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45803"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/4e50fbc5db74e32cabd5ccc1ab81fc103adfe0b3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/4e98d57809dacab1cbe625fddeec1a290c478ea9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/b594c5ceaca38e1ac215f916538fb128e3526a36"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/urllib3/PYSEC-2023-212.yaml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/urllib3/urllib3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/releases/tag/1.26.18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/releases/tag/2.0.7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4R2Y5XK3WALSR3FNAGN7JBYV2B343ZKB/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5F5CUBAN5XMEBVBZPHFITBLMJV5FIJJ5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PPDPLM6UUMN55ESPQWJFLLIZY4ZKCNRX/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-get"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-17T20:15:25Z",
+                "nvd_published_at": "2023-10-17T20:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:13:33Z",
+              "published": "2023-10-02T23:27:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v845-jxx5-vc9f",
+              "aliases": [
+                "CVE-2023-43804",
+                "PYSEC-2023-192"
+              ],
+              "summary": "`Cookie` HTTP header isn't stripped on cross-origin redirects",
+              "details": "urllib3 doesn't treat the `Cookie` HTTP header special or provide any helpers for managing cookies over HTTP, that is the responsibility of the user. However, it is possible for a user to specify a `Cookie` header and unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly.\n\nUsers **must** handle redirects themselves instead of relying on urllib3's automatic redirects to achieve safe processing of the `Cookie` header, thus we decided to strip the header by default in order to further protect users who aren't using the correct approach.\n\n## Affected usages\n\nWe believe the number of usages affected by this advisory is low. It requires all of the following to be true to be exploited:\n\n* Using an affected version of urllib3 (patched in v1.26.17 and v2.0.6)\n* Using the `Cookie` header on requests, which is mostly typical for impersonating a browser.\n* Not disabling HTTP redirects\n* Either not using HTTPS or for the origin server to redirect to a malicious origin.\n\n## Remediation\n\n* Upgrading to at least urllib3 v1.26.17 or v2.0.6\n* Disabling HTTP redirects using `redirects=False` when sending requests.\n* Not using the `Cookie` header.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-v845-jxx5-vc9f/GHSA-v845-jxx5-vc9f.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.26.17"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.2",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-v845-jxx5-vc9f/GHSA-v845-jxx5-vc9f.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-v845-jxx5-vc9f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-43804"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/01220354d389cd05474713f8c982d05c9b17aafb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/644124ecd0b6e417c527191f866daa05a5a2056d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/urllib3/PYSEC-2023-192.yaml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/urllib3/urllib3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00012.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5F5CUBAN5XMEBVBZPHFITBLMJV5FIJJ5/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/I3PR7C6RJ6JUBQKIJ644DMIJSUP36VDY/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NDAGZXYJ7H2G3SB47M453VQVNAWKAEJJ/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-02T23:27:05Z",
+                "nvd_published_at": "2023-10-04T17:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:13:33Z",
+              "published": "2023-10-04T17:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2023-192",
+              "aliases": [
+                "CVE-2023-43804",
+                "GHSA-v845-jxx5-vc9f"
+              ],
+              "details": "urllib3 is a user-friendly HTTP client library for Python. urllib3 doesn't treat the `Cookie` HTTP header special or provide any helpers for managing cookies over HTTP, that is the responsibility of the user. However, it is possible for a user to specify a `Cookie` header and unknowingly leak information via HTTP redirects to a different origin if that user doesn't disable redirects explicitly. This issue has been patched in urllib3 version 1.26.17 or 2.0.5.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "644124ecd0b6e417c527191f866daa05a5a2056d"
+                        },
+                        {
+                          "fixed": "01220354d389cd05474713f8c982d05c9b17aafb"
+                        }
+                      ],
+                      "repo": "https://github.com/urllib3/urllib3"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.6"
+                        },
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.26.17"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.2",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/urllib3/PYSEC-2023-192.yaml"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/urllib3/urllib3/commit/644124ecd0b6e417c527191f866daa05a5a2056d"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-v845-jxx5-vc9f"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/urllib3/urllib3/commit/01220354d389cd05474713f8c982d05c9b17aafb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00012.html"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:13:39Z",
+              "published": "2023-10-17T20:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2023-212",
+              "aliases": [
+                "CVE-2023-45803",
+                "GHSA-g4mx-q9vg-27p4"
+              ],
+              "details": "urllib3 is a user-friendly HTTP client library for Python. urllib3 previously wouldn't remove the HTTP request body when an HTTP redirect response using status 301, 302, or 303 after the request had its method changed from one that could accept a request body (like `POST`) to `GET` as is required by HTTP RFCs. Although this behavior is not specified in the section for redirects, it can be inferred by piecing together information from different sections and we have observed the behavior in other major HTTP client implementations like curl and web browsers. Because the vulnerability requires a previously trusted service to become compromised in order to have an impact on confidentiality we believe the exploitability of this vulnerability is low. Additionally, many users aren't putting sensitive data in HTTP request bodies, if this is the case then this vulnerability isn't exploitable. Both of the following conditions must be true to be affected by this vulnerability: 1. Using urllib3 and submitting sensitive information in the HTTP request body (such as form data or JSON) and 2. The origin service is compromised and starts redirecting using 301, 302, or 303 to a malicious peer or the redirected-to service becomes compromised. This issue has been addressed in versions 1.26.18 and 2.0.7 and users are advised to update to resolve this issue. Users unable to update should disable redirects for services that aren't expecting to respond with redirects with `redirects=False` and disable automatic redirects with `redirects=False` and handle 301, 302, and 303 redirects manually by stripping the HTTP request body.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4e98d57809dacab1cbe625fddeec1a290c478ea9"
+                        }
+                      ],
+                      "repo": "https://github.com/urllib3/urllib3"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.7"
+                        },
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.26.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.17",
+                    "1.26.2",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/urllib3/PYSEC-2023-212.yaml"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-g4mx-q9vg-27p4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.rfc-editor.org/rfc/rfc9110.html#name-get"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/urllib3/urllib3/commit/4e98d57809dacab1cbe625fddeec1a290c478ea9"
+                },
+                {
+                  "type": "ARTICLE",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/PPDPLM6UUMN55ESPQWJFLLIZY4ZKCNRX/"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-g4mx-q9vg-27p4",
+                "PYSEC-2023-212"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-v845-jxx5-vc9f",
+                "PYSEC-2023-192"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

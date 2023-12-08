@@ -1,0 +1,84 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:59:05Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.TritonDataCenter/node-verror",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.TritonDataCenter-node-verror"
+    ],
+    "documentNamespace": "https://github.com/TritonDataCenter/node-verror/dependency_graph/sbom-2ce2655c079c86e0",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.TritonDataCenter-node-verror",
+            "name": "com.github.TritonDataCenter/node-verror",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/TritonDataCenter/node-verror",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/TritonDataCenter/node-verror"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-assert-plus",
+            "name": "npm:assert-plus",
+            "versionInfo": "^ 1.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-core-util-is-1.0.2",
+            "name": "npm:core-util-is",
+            "versionInfo": "1.0.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:npm/core-util-is@1.0.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-extsprintf",
+            "name": "npm:extsprintf",
+            "versionInfo": "^ 1.2.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.TritonDataCenter-node-verror",
+            "relatedSpdxElement": "SPDXRef-npm-assert-plus"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.TritonDataCenter-node-verror",
+            "relatedSpdxElement": "SPDXRef-npm-core-util-is-1.0.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.TritonDataCenter-node-verror",
+            "relatedSpdxElement": "SPDXRef-npm-extsprintf"
+        }
+    ]
+}

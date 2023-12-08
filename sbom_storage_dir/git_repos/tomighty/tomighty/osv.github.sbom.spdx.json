@@ -1,0 +1,1021 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "junit:junit",
+            "version": "4.8.2",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:35Z",
+              "published": "2020-10-12T17:33:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-269g-pwp5-87pp",
+              "aliases": [
+                "CVE-2020-15250"
+              ],
+              "summary": "TemporaryFolder on unix-like systems does not limit access to created files",
+              "details": "### Vulnerability\n\nThe JUnit4 test rule [TemporaryFolder](https://junit.org/junit4/javadoc/4.13/org/junit/rules/TemporaryFolder.html) contains a local information disclosure vulnerability.\n\nExample of vulnerable code:\n```java\npublic static class HasTempFolder {\n    @Rule\n    public TemporaryFolder folder = new TemporaryFolder();\n\n    @Test\n    public void testUsingTempFolder() throws IOException {\n        folder.getRoot(); // Previous file permissions: `drwxr-xr-x`; After fix:`drwx------`\n        File createdFile= folder.newFile(\"myfile.txt\"); // unchanged/irrelevant file permissions\n        File createdFolder= folder.newFolder(\"subfolder\"); // unchanged/irrelevant file permissions\n        // ...\n    }\n}\n```\n\n### Impact\n\nOn Unix like systems, the system's temporary directory is shared between all users on that system. Because of this, when files and directories are written into this directory they are, by default, readable by other users on that same system.\n\nThis vulnerability **does not** allow other users to overwrite the contents of these directories or files. This is purely an information disclosure vulnerability.\n\nWhen analyzing the impact of this vulnerability, here are the important questions to ask:\n\n1. Do the JUnit tests write sensitive information, like API keys or passwords, into the temporary folder?\n    - If yes, this vulnerability impacts you, but only if you also answer 'yes' to question 2.\n    - If no, this vulnerability does not impact you.\n2. Do the JUnit tests ever execute in an environment where the OS has other untrusted users. \n    _This may apply in CI/CD environments but normally won't be 'yes' for personal developer machines._\n    - If yes, and you answered 'yes' to question 1, this vulnerability impacts you.\n    - If no, this vulnerability does not impact you.\n\n### Patches\n\nBecause certain JDK file system APIs were only added in JDK 1.7, this this fix is dependent upon the version of the JDK you are using.\n - Java 1.7 and higher users: this vulnerability is fixed in 4.13.1.\n - Java 1.6 and lower users: **no patch is available, you must use the workaround below.**\n\n### Workarounds\n\nIf you are unable to patch, or are stuck running on Java 1.6, specifying the `java.io.tmpdir` system environment variable to a directory that is exclusively owned by the executing user will fix this vulnerability.\n\n### References\n- [CWE-200: Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)\n- Fix commit https://github.com/junit-team/junit4/commit/610155b8c22138329f0723eec22521627dbc52ae\n\n#### Similar Vulnerabilities\n - Google Guava - https://github.com/google/guava/issues/4011\n - Apache Ant - https://nvd.nist.gov/vuln/detail/CVE-2020-1945\n - JetBrains Kotlin Compiler - https://nvd.nist.gov/vuln/detail/CVE-2020-15824\n\n### For more information\nIf you have any questions or comments about this advisory, please pen an issue in [junit-team/junit4](https://github.com/junit-team/junit4/issues).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "junit:junit",
+                    "purl": "pkg:maven/junit/junit"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.7"
+                        },
+                        {
+                          "fixed": "4.13.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.10",
+                    "4.11",
+                    "4.11-beta-1",
+                    "4.12",
+                    "4.12-beta-1",
+                    "4.12-beta-2",
+                    "4.12-beta-3",
+                    "4.13",
+                    "4.13-beta-1",
+                    "4.13-beta-2",
+                    "4.13-beta-3",
+                    "4.13-rc-1",
+                    "4.13-rc-2",
+                    "4.7",
+                    "4.8",
+                    "4.8.1",
+                    "4.8.2",
+                    "4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/10/GHSA-269g-pwp5-87pp/GHSA-269g-pwp5-87pp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/security/advisories/GHSA-269g-pwp5-87pp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15250"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/issues/1676"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/commit/610155b8c22138329f0723eec22521627dbc52ae"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/junit-team/junit4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/junit-team/junit4/blob/7852b90cfe1cea1e0cdaa19d490c83f0d8684b50/doc/ReleaseNotes4.13.1.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://junit.org/junit4/javadoc/4.13/org/junit/rules/TemporaryFolder.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r01110833b63616ddbef59ae4e10c0fbd0060f0a51206defd4cb4d917@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r09cfbb5aedd76023691bbce9ca4ce2e16bb07dd37554a17efc19935d@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1209986f79359b518d09513ff05a88e5b3c398540e775edea76a4774@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r29d703d1986d9b871466ff24082a1828ac8ad27bb0965a93a383872e@%3Cpluto-scm.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2b78f23bc2711a76a7fc73ad67b7fcd6817c5cfccefd6f30a4f54943@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r30f502d2f79e8d635361adb8108dcbb73095163fcbd776ee7984a094@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r500517c23200fb2fdb0b82770a62dd6c88b3521cfb01cfd0c76e3f8b@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5f8841507576f595bb783ccec6a7cb285ea90d4e6f5043eae0e61a41@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r687f489b10b0d14e46f626aa88476545e1a2600b24c4ebd3c0d2a10b@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r717877028482c55acf604d7a0106af4ca05da4208c708fb157b53672@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r742b44fd75215fc75963b8ecc22b2e4372e68d67d3d859d2b5e8743f@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r8b02dc6f18df11ff39eedb3038f1e31e6f90a779b1959bae65107279@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r925eaae7dd8f77dd61eefc49c1fcf54bd9ecfe605486870d7b1e9390@%3Cpluto-dev.portals.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r934208a520b38f5cf0cae199b6b076bfe7d081809528b0eff2459e40@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r95f8ef60c4b3a5284b647bb3132cda08e6fadad888a66b84f49da0b0@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r9710067c7096b83cb6ae8f53a2f6f94e9c042d1bf1d6929f8f2a2b7a@%3Ccommits.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra1bdb9efae84794e8ffa2f8474be8290ba57830eefe9714b95da714b@%3Cdev.pdfbox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/raebf13f53cd5d23d990712e3d11c80da9a7bae94a6284050f148ed99@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2771949c676ca984e58a5cd5ca79c2634dee1945e0406e48e0f8457@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb2ffe2993f4dccc48d832e1a0f1c419477781b6ea16e725ca2276dbb@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb33212dab7beccaf1ffef9b88610047c644f644c7a0ebdc44d77e381@%3Ccommits.turbine.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbaec90e699bc7c7bd9a053f76707a36fda48b6d558f31dc79147dbf9@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc49cf1547ef6cac1be4b3c92339b2cae0acacf5acaba13cfa429a872@%3Cdev.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdbdd30510a7c4d0908fd22075c02b75bbc2e0d977ec22249ef3133cb@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rde385b8b53ed046600ef68dd6b4528dea7566aaddb02c3e702cc28bc@%3Ccommits.creadur.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rde8e70b95c992378e8570e4df400c6008a9839eabdfb8f800a3e5af6@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rdef7d1380c86e7c0edf8a0f89a2a8db86fce5e363457d56b722691b4@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rea812d8612fdc46842a2a57248cad4b01ddfdb1e9b037c49e68fdbfb@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/reb700e60b9642eafa4b7922bfee80796394135aa09c7a239ef9f7486@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf2ec93f4ca9a97d1958eb4a31b1830f723419ce9bf2018a6e5741d5b@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf6e5d894d4b03bef537c9d6641272e0197c047c0d1982b4e176d0353@%3Cdev.knox.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf797d119cc3f51a8d7c3c5cbe50cb4524c8487282b986edde83a9467@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/11/msg00003.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-732"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-10-12T17:32:34Z",
+                "nvd_published_at": "2020-10-12T18:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-269g-pwp5-87pp"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ch.qos.logback:logback-classic",
+            "version": "1.0.0",
+            "ecosystem": "Maven",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:23Z",
+              "published": "2021-06-07T16:07:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vmfg-rjjm-rjrj",
+              "aliases": [
+                "CVE-2017-5929"
+              ],
+              "summary": "QOS.ch Logback vulnerable to Deserialization of Untrusted Data",
+              "details": "QOS.ch Logback before 1.2.0 has a serialization vulnerability affecting the SocketServer and ServerSocketReceiver components. The RemoteStreamAppenderClient class in logback-classic and the SocketNode classes in logback-classic and logback-access allow data to be deserialized over a Java Socket, via an ObjectInputStream, without validating the data beforehand. When data is received from the Socket, to be logged, it is deserialized into Java objects.An attacker can exploit this vulnerability by sending malicious, serialized Java objects over the connection to the Socket, which may result in execution of arbitrary code when those objects are deserialized. Note that although logback-core is implicated by the Logback project here, the Sonatype Security Research team discovered that the vulnerability is actually present in the logback-classic and logback-access components. Versions prior to 1.2.0 are vulnerable, as stated in the advisory.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-vmfg-rjjm-rjrj/GHSA-vmfg-rjjm-rjrj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/06/GHSA-vmfg-rjjm-rjrj/GHSA-vmfg-rjjm-rjrj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-5929"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/f46044b805bca91efe5fd6afe52257cd02f775f8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1675"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1676"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2017:1832"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:2927"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5929"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/qos-ch/logback"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/18d509024d9aeb07f0e9579066f80bf5d4dcf20467b0c240043890d1@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/a6db61616180d73711d6db25703085940026e2dbc40f153f9d22b203@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/fa4eaaa6ff41ac6f79811e053c152ee89b7c5da8a6ac848ae97df67f@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r0bb19330e48d5ad784fa20dacba9e5538d8d60f5cd9142e0f1432b4b@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2a08573ddee4a86dc96d469485a5843a01710ee0dc2078dfca410c79@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2c2d57ca180e8173c90fe313ddf8eabbdcf8e3ae196f8b9f42599790@%3Ccommits.mnemonic.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r397bf63783240fbb5713389d3f889d287ae0c11509006700ac720037@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4673642893562c58cbee60c151ded6c077e8a2d02296e862224a9161@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r632ec30791b441e2eb5a3129532bf1b689bf181d0ef7daf50bcf0fd6@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r718f27bed898008a8e037d9cc848cfc1df4d18abcbaee0cb0c142cfb@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r967953a14e05016bc4bcae9ef3dd92e770181158b4246976ed8295c9@%3Cdev.brooklyn.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra007cec726a3927c918ec94c4316d05d1829c49eae8dc3648adc35e2@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rbb4dfca2f7e3e8f3570eec21c79832d33a51dfde6762725660b60169@%3Cdev.mnemonic.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rc5f0cc2f3b153bdf15ee7389d78585829abc9c7af4d322ba1085dd3e@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd2227af3c9ada2a72dc72ed05517f5857a34d487580e1f2803922ff9@%3Ccommits.cassandra.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re9b787727291786dfe088e3cd078c7d195c0b5781e15d3cd24a3b2fc@%3Cdev.mnemonic.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-06-04T20:45:34Z",
+                "nvd_published_at": "2017-03-13T06:59:00Z",
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-12-05T21:46:15Z",
+              "published": "2023-11-29T12:30:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vmq6-5m68-f53m",
+              "aliases": [
+                "CVE-2023-6378"
+              ],
+              "summary": "logback serialization vulnerability",
+              "details": "A serialization vulnerability in logback receiver component part of logback allows an attacker to mount a Denial-Of-Service attack by sending poisoned data.\n\nThis is only exploitable if logback receiver component is deployed. See https://logback.qos.ch/manual/receivers.html",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3.0"
+                        },
+                        {
+                          "fixed": "1.3.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.11",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.10",
+                    "1.4.11",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "1.4.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-core",
+                    "purl": "pkg:maven/ch.qos.logback/logback-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "ch.qos.logback:logback-classic",
+                    "purl": "pkg:maven/ch.qos.logback/logback-classic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.5",
+                    "0.3",
+                    "0.5",
+                    "0.6",
+                    "0.7",
+                    "0.7.1",
+                    "0.8",
+                    "0.8.1",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.10",
+                    "1.0.11",
+                    "1.0.12",
+                    "1.0.13",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.10",
+                    "1.1.11",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.1.8",
+                    "1.1.9",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.10",
+                    "1.2.11",
+                    "1.2.12",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.4-groovyless",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-vmq6-5m68-f53m/GHSA-vmq6-5m68-f53m.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6378"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/issues/745#issuecomment-1836227158"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/9c782b45be4abdafb7e17481e24e7354c2acd1eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/b8eac23a9de9e05fb6d51160b3f46acd91af9731"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/qos-ch/logback/commit/bb095154be011267b64e37a1d401546e7cc2b7c3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/qos-ch/logback"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/manual/receivers.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.2.13"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://logback.qos.ch/news.html#1.3.12"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-502"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-29T21:33:01Z",
+                "nvd_published_at": "2023-11-29T12:15:07Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vmfg-rjjm-rjrj"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-vmq6-5m68-f53m"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

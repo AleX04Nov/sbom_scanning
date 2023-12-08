@@ -1,0 +1,715 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/trivy.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/aws/aws-sdk-go",
+            "version": "v1.44.327",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:19Z",
+              "published": "2022-02-11T23:26:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0646",
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9"
+              ],
+              "summary": "Use of risky cryptographic algorithm in github.com/aws/aws-sdk-go",
+              "details": "The Go AWS S3 Crypto SDK contains vulnerabilities that can permit an attacker with write access to a bucket to decrypt files in that bucket.\n\nFiles encrypted by the V1 EncryptionClient using either the AES-CBC content cipher or the KMS key wrap algorithm are vulnerable. Users should migrate to the V1 EncryptionClientV2 API, which will not create vulnerable files. Old files will remain vulnerable until re-encrypted with the new client.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aws/aws-sdk-go",
+                    "purl": "pkg:golang/github.com/aws/aws-sdk-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0646.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aws/aws-sdk-go/service/s3/s3crypto",
+                        "symbols": [
+                          "NewDecryptionClient",
+                          "NewEncryptionClient"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://aws.amazon.com/blogs/developer/updates-to-the-amazon-s3-encryption-client/?s=09"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/pull/3403"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/commit/ae9b9fd92af132cfd8d879809d8611825ba135f4"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Sophie Schmieg from the Google ISE team"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2022-0646"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2022-0646"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/docker/docker",
+            "version": "v20.10.21+incompatible",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:12:15Z",
+              "published": "2023-04-04T21:13:06Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-232p-vwff-86mp",
+              "aliases": [
+                "CVE-2023-28840",
+                "CVE-2023-28841",
+                "CVE-2023-28842",
+                "GHSA-33pg-m6jh-5237",
+                "GHSA-6wrf-mxfj-pf5p",
+                "GHSA-gvm4-2qqg-m333",
+                "GHSA-vwm3-crmr-xfxw"
+              ],
+              "summary": "Docker Swarm encrypted overlay network may be unauthenticated",
+              "details": "[Moby](https://mobyproject.org/) is an open source container framework developed by Docker Inc. that is distributed as Docker, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (`dockerd`), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as *Docker*.\n\nSwarm Mode, which is compiled in and delivered by default in `dockerd` and is thus present in most major Moby downstreams, is a simple, built-in container orchestrator that is implemented through a combination of [SwarmKit](https://github.com/moby/swarmkit) and supporting network code.\n\nThe `overlay` network driver is a core feature of Swarm Mode, providing isolated virtual LANs that allow communication between containers and services across the cluster. This driver is an implementation/user of [VXLAN](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN), which encapsulates link-layer (Ethernet) frames in UDP datagrams that tag the frame with a VXLAN Network ID (VNI) that identifies the originating overlay network. In addition, the overlay network driver supports an optional, off-by-default encrypted mode, which is especially useful when VXLAN packets traverses an untrusted network between nodes.\n\nEncrypted overlay networks function by encapsulating the VXLAN datagrams through the use of the [IPsec Encapsulating Security Payload](https://en.wikipedia.org/wiki/IPsec#Encapsulating_Security_Payload) protocol in [Transport mode](https://en.wikipedia.org/wiki/IPsec#Transport_mode). By deploying IPSec encapsulation, encrypted overlay networks gain the additional properties of source authentication through cryptographic proof, data integrity through check-summing, and confidentiality through encryption.\n\nWhen setting an endpoint up on an encrypted overlay network, Moby installs three [iptables](https://www.netfilter.org/projects/iptables/index.html) (Linux kernel firewall) rules that enforce both incoming and outgoing IPSec. These rules rely on the `u32` iptables extension provided by the `xt_u32` kernel module to directly filter on a VXLAN packet's VNI field, so that IPSec guarantees can be enforced on encrypted overlay networks without interfering with other overlay networks or other users of VXLAN.\n\n[Two iptables rules](https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L230-L234) serve to filter incoming VXLAN datagrams with a VNI that corresponds to an encrypted network and discards unencrypted datagrams. The rules are appended to the end of the `INPUT` filter chain, following any rules that have been previously set by the system administrator. Administrator-set rules take precedence over the rules Moby sets to discard unencrypted VXLAN datagrams, which can potentially admit unencrypted datagrams that should have been discarded.\n\nOn Red Hat Enterprise Linux and derivatives such as CentOS and Rocky, the `xt_u32` module has been:\n* [moved to the kernel-modules-extra package and no longer installed by default in RHEL 8.3](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.3_release_notes/rhel-8-3-0-release#technology-preview_networking)\n* [officially deprecated in RHEL 8.6](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.6_release_notes/deprecated_functionality#deprecated-functionality_networking)\n* [removed completely in RHEL 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/considerations_in_adopting_rhel_9/assembly_networking_considerations-in-adopting-rhel-9#ref_firewall-networking_assembly_networking)\n\nThese rules are not created when `xt_u32` is unavailable, even though the container is still attached to the network.\n\n## Impact\nEncrypted overlay networks on affected configurations silently accept cleartext VXLAN datagrams that are tagged with the VNI of an encrypted overlay network. As a result, it is possible to inject arbitrary Ethernet frames into the encrypted overlay network by encapsulating them in VXLAN datagrams.\n\nThe injection of arbitrary Ethernet frames can enable a Denial of Service attack. A sophisticated attacker may be able to establish a UDP or TCP connection by way of the container’s outbound gateway that would otherwise be blocked by a stateful firewall, or carry out other escalations beyond simple injection by smuggling packets into the overlay network.\n\n## Patches\nPatches are available in Moby releases 23.0.3, and 20.10.24. As Mirantis Container Runtime's 20.10 releases are numbered differently, users of that platform should update to 20.10.16.\n\n## Workarounds\n* Close the VXLAN port (by default, UDP port 4789) to incoming traffic at the Internet boundary (see [GHSA-vwm3-crmr-xfxw](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)) to prevent all VXLAN packet injection.\n* Ensure that the `xt_u32` kernel module is available on all nodes of the Swarm cluster.\n\n## Background\n* [#43382](https://github.com/moby/moby/issues/43382) partially discussed this concern, but did not consider the security implications.\n* Mirantis FIELD-5788 essentially duplicates [#43382](https://github.com/moby/moby/issues/43382), and was created six months earlier; it similarly overlooked the security implications.\n* [#45118](https://github.com/moby/moby/pull/45118) is the ancestor of the final patches, and was where the security implications were discovered.\n\n## Related\n* [CVE-2023-28841: Encrypted overlay network traffic may be unencrypted](https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237)\n* [CVE-2023-28842: Encrypted overlay network with a single endpoint is unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p)\n* [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)\n* [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "20.10.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-232p-vwff-86mp/GHSA-232p-vwff-86mp.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "23.0.0"
+                        },
+                        {
+                          "fixed": "23.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-232p-vwff-86mp/GHSA-232p-vwff-86mp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28840"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/issues/43382"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/pull/45118"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-420",
+                  "CWE-636"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:13:06Z",
+                "nvd_published_at": "2023-04-04T22:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:15Z",
+              "published": "2023-04-04T21:12:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-33pg-m6jh-5237",
+              "aliases": [
+                "CVE-2023-28840",
+                "CVE-2023-28841",
+                "CVE-2023-28842",
+                "GHSA-232p-vwff-86mp",
+                "GHSA-6wrf-mxfj-pf5p",
+                "GHSA-gvm4-2qqg-m333",
+                "GHSA-vwm3-crmr-xfxw"
+              ],
+              "summary": "Docker Swarm encrypted overlay network traffic may be unencrypted",
+              "details": "[Moby](https://mobyproject.org/) is an open source container framework developed by Docker Inc. that is distributed as Docker, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (`dockerd`), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as *Docker*.\n\nSwarm Mode, which is compiled in and delivered by default in `dockerd` and is thus present in most major Moby downstreams, is a simple, built-in container orchestrator that is implemented through a combination of [SwarmKit](https://github.com/moby/swarmkit) and supporting network code.\n\nThe `overlay` network driver is a core feature of Swarm Mode, providing isolated virtual LANs that allow communication between containers and services across the cluster. This driver is an implementation/user of [VXLAN](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN), which encapsulates link-layer (Ethernet) frames in UDP datagrams that tag the frame with a VXLAN Network ID (VNI) that identifies the originating overlay network. In addition, the overlay network driver supports an optional, off-by-default encrypted mode, which is especially useful when VXLAN packets traverses an untrusted network between nodes.\n\nEncrypted overlay networks function by encapsulating the VXLAN datagrams through the use of the [IPsec Encapsulating Security Payload](https://en.wikipedia.org/wiki/IPsec#Encapsulating_Security_Payload) protocol in [Transport mode](https://en.wikipedia.org/wiki/IPsec#Transport_mode). By deploying IPSec encapsulation, encrypted overlay networks gain the additional properties of source authentication through cryptographic proof, data integrity through check-summing, and confidentiality through encryption.\n\nWhen setting an endpoint up on an encrypted overlay network, Moby installs three [iptables](https://www.netfilter.org/projects/iptables/index.html) (Linux kernel firewall) rules that enforce both incoming and outgoing IPSec. These rules rely on the `u32` iptables extension provided by the `xt_u32` kernel module to directly filter on a VXLAN packet's VNI field, so that IPSec guarantees can be enforced on encrypted overlay networks without interfering with other overlay networks or other users of VXLAN.\n\nAn [iptables rule](https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L205-L207) designates outgoing VXLAN datagrams with a VNI that corresponds to an encrypted overlay network for IPsec encapsulation.\n\nOn Red Hat Enterprise Linux and derivatives such as CentOS and Rocky, the `xt_u32` module has been:\n* [moved to the kernel-modules-extra package and no longer installed by default in RHEL 8.3](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.3_release_notes/rhel-8-3-0-release#technology-preview_networking)\n* [officially deprecated in RHEL 8.6](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.6_release_notes/deprecated_functionality#deprecated-functionality_networking)\n* [removed completely in RHEL 9](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/considerations_in_adopting_rhel_9/assembly_networking_considerations-in-adopting-rhel-9#ref_firewall-networking_assembly_networking)\n\nThis rule is not created when `xt_u32` is unavailable, even though the container is still attached to the network.\n\n## Impact\nEncrypted overlay networks on affected platforms silently transmit unencrypted data. As a result, `overlay` networks may appear to be functional, passing traffic as expected, but without any of the expected confidentiality or data integrity guarantees.\n\nIt is possible for an attacker sitting in a trusted position on the network to read all of the application traffic that is moving across the overlay network, resulting in unexpected secrets or user data disclosure. Thus, because many database protocols, internal APIs, etc. are not protected by a second layer of encryption, a user may rely on Swarm encrypted overlay networks to provide confidentiality, which due to this vulnerability is no longer guaranteed.\n\n## Patches\nPatches are available in Moby releases 23.0.3, and 20.10.24. As Mirantis Container Runtime's 20.10 releases are numbered differently, users of that platform should update to 20.10.16.\n\n## Workarounds\n* Close the VXLAN port (by default, UDP port 4789) to outgoing traffic at the Internet boundary (see [GHSA-vwm3-crmr-xfxw](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)) in order to prevent unintentionally leaking unencrypted traffic over the Internet.\n* Ensure that the `xt_u32` kernel module is available on all nodes of the Swarm cluster.\n\n## Background\n* [#43382 ](https://github.com/moby/moby/issues/43382)partially discussed this concern, but did not consider the security implications.\n* Mirantis FIELD-5788 essentially duplicates [#43382](https://github.com/moby/moby/issues/43382), and was created six months earlier; it similarly overlooked the security implications.\n* [#45118](https://github.com/moby/moby/pull/45118) is the ancestor of the final patches, and was where the security implications were discovered.\n\n## Related\n* [CVE-2023-28840: Encrypted overlay network may be unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp)\n* [CVE-2023-28842: Encrypted overlay network with a single endpoint is unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p)\n* [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)\n* [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "20.10.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-33pg-m6jh-5237/GHSA-33pg-m6jh-5237.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "23.0.0"
+                        },
+                        {
+                          "fixed": "23.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-33pg-m6jh-5237/GHSA-33pg-m6jh-5237.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28841"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/issues/43382"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/pull/45118"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/blob/d9fae4c73daf76c3b0f77e14b45b8bf612ba764d/drivers/overlay/encryption.go#L205-L207"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-311",
+                  "CWE-636"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:12:20Z",
+                "nvd_published_at": "2023-04-04T22:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:12:15Z",
+              "published": "2023-04-04T21:11:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6wrf-mxfj-pf5p",
+              "aliases": [
+                "CVE-2023-28840",
+                "CVE-2023-28841",
+                "CVE-2023-28842",
+                "GHSA-232p-vwff-86mp",
+                "GHSA-33pg-m6jh-5237",
+                "GHSA-gvm4-2qqg-m333",
+                "GHSA-vwm3-crmr-xfxw"
+              ],
+              "summary": "Docker Swarm encrypted overlay network with a single endpoint is unauthenticated",
+              "details": "[Moby](https://mobyproject.org/) is an open source container framework developed by Docker Inc. that is distributed as Docker, Mirantis Container Runtime, and various other downstream projects/products. The Moby daemon component (`dockerd`), which is developed as [moby/moby](https://github.com/moby/moby) is commonly referred to as *Docker*.\n\nSwarm Mode, which is compiled in and delivered by default in `dockerd` and is thus present in most major Moby downstreams, is a simple, built-in container orchestrator that is implemented through a combination of [SwarmKit](https://github.com/moby/swarmkit) and supporting network code.\n\nThe `overlay` network driver is a core feature of Swarm Mode, providing isolated virtual LANs that allow communication between containers and services across the cluster. This driver is an implementation/user of [VXLAN](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN), which encapsulates link-layer (Ethernet) frames in UDP datagrams that tag the frame with a VXLAN Network ID (VNI) that identifies the originating overlay network. In addition, the overlay network driver supports an optional, off-by-default encrypted mode, which is especially useful when VXLAN packets traverses an untrusted network between nodes.\n\nEncrypted overlay networks function by encapsulating the VXLAN datagrams through the use of the [IPsec Encapsulating Security Payload](https://en.wikipedia.org/wiki/IPsec#Encapsulating_Security_Payload) protocol in [Transport mode](https://en.wikipedia.org/wiki/IPsec#Transport_mode). By deploying IPSec encapsulation, encrypted overlay networks gain the additional properties of source authentication through cryptographic proof, data integrity through check-summing, and confidentiality through encryption.\n\nWhen setting an endpoint up on an encrypted overlay network, Moby installs three [iptables](https://www.netfilter.org/projects/iptables/index.html) (Linux kernel firewall) rules that enforce both incoming and outgoing IPSec. These rules rely on the `u32` iptables extension provided by the `xt_u32` kernel module to directly filter on a VXLAN packet's VNI field, so that IPSec guarantees can be enforced on encrypted overlay networks without interfering with other overlay networks or other users of VXLAN.\n\nThe `overlay` driver dynamically and lazily defines the kernel configuration for the VXLAN network on each node as containers are attached and detached. Routes and encryption parameters are only defined for destination nodes that participate in the network. The iptables rules that prevent encrypted overlay networks from accepting unencrypted packets are not created until a peer is available with which to communicate.\n\n## Impact\nEncrypted overlay networks silently accept cleartext VXLAN datagrams that are tagged with the VNI of an encrypted overlay network. As a result, it is possible to inject arbitrary Ethernet frames into the encrypted overlay network by encapsulating them in VXLAN datagrams. The implications of this can be quite dire, and [GHSA-vwm3-crmr-xfxw](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw) should be referenced for a deeper exploration.\n\n## Patches\nPatches are available in Moby releases 23.0.3, and 20.10.24. As Mirantis Container Runtime's 20.10 releases are numbered differently, users of that platform should update to 20.10.16.\n\n## Workarounds\n* In multi-node clusters, deploy a global ‘pause’ container for each encrypted overlay network, on every node. For example, use the `registry.k8s.io/pause` image and a `--mode global` service.\n* For a single-node cluster, do not use overlay networks of any sort. Bridge networks provide the same connectivity on a single node and have no multi-node features.\nThe Swarm ingress feature is implemented using an overlay network, but can be disabled by publishing ports in `host` mode instead of `ingress` mode (allowing the use of an external load balancer), and removing the `ingress` network.\n* If encrypted overlay networks are in exclusive use, block UDP port 4789 from traffic that has not been validated by IPSec. For example, `iptables -A INPUT -m udp —-dport 4789 -m policy --dir in --pol none -j DROP`.\n\n## Background\n* This issue was discovered while characterizing and mitigating [CVE-2023-28840](https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp) and [CVE-2023-28841](https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237).\n\n## Related\n* [CVE-2023-28841: Encrypted overlay network traffic may be unencrypted](https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237)\n* [CVE-2023-28840: Encrypted overlay network may be unauthenticated](https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp)\n* [GHSA-vwm3-crmr-xfxw: The Swarm VXLAN port may be exposed to attack due to ambiguous documentation](https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw)\n* [GHSA-gvm4-2qqg-m333: Security issues in encrypted overlay networks](https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333) (libnetwork)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "20.10.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-6wrf-mxfj-pf5p/GHSA-6wrf-mxfj-pf5p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "23.0.0"
+                        },
+                        {
+                          "fixed": "23.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/04/GHSA-6wrf-mxfj-pf5p/GHSA-6wrf-mxfj-pf5p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/libnetwork/security/advisories/GHSA-gvm4-2qqg-m333"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-232p-vwff-86mp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-33pg-m6jh-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-6wrf-mxfj-pf5p"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-vwm3-crmr-xfxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-28842"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-420",
+                  "CWE-636"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-04-04T21:11:24Z",
+                "nvd_published_at": "2023-04-04T22:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-10-30T15:25:44Z",
+              "published": "2023-10-30T15:25:44Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jq35-85cj-fj4p",
+              "summary": "/sys/devices/virtual/powercap accessible by default to containers",
+              "details": "Intel's RAPL (Running Average Power Limit) feature, introduced by the Sandy Bridge microarchitecture, provides software insights into hardware energy consumption. To facilitate this, Intel introduced the powercap framework in Linux kernel 3.13, which reads values via relevant MSRs (model specific registers) and provides unprivileged userspace access via `sysfs`. As RAPL is an interface to access a hardware feature, it is only available when running on bare metal with the module compiled into the kernel.\n\nBy 2019, it was realized that in some cases unprivileged access to RAPL readings could be exploited as a power-based side-channel against security features including AES-NI (potentially inside a SGX enclave) and KASLR (kernel address space layout randomization). Also known as the [PLATYPUS attack](https://platypusattack.com/), Intel assigned [CVE-2020-8694](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8694) and [CVE-2020-8695](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8695), and AMD assigned [CVE-2020-12912](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12912).\n\nSeveral mitigations were applied; Intel reduced the sampling resolution via a microcode update, and the Linux kernel [prevents access by non-root users](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=949dd0104c496fa7c14991a23c03c62e44637e71) since 5.10. However, this kernel-based mitigation does not apply to many container-based scenarios:\n* Unless using user namespaces, root inside a container has the same level of privilege as root outside the container, but with a slightly more narrow view of the system\n* `sysfs` is mounted inside containers read-only; however only read access is needed to carry out this attack on an unpatched CPU\n\nWhile this is not a direct vulnerability in container runtimes, defense in depth and safe defaults are valuable and preferred, especially as this poses a risk to multi-tenant container environments running directly on affected hardware. This is provided by masking `/sys/devices/virtual/powercap` in the default mount configuration, and adding an additional set of rules to deny it in the default AppArmor profile.\n\nWhile `sysfs` is not the only way to read from the RAPL subsystem, other ways of accessing it require additional capabilities such as `CAP_SYS_RAWIO` which is not available to containers by default, or `perf` paranoia level less than 1, which is a non-default kernel tunable.\n\n## References\n\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8694\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8695\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-12912\n* https://platypusattack.com/\n* https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=949dd0104c496fa7c14991a23c03c62e44637e71\n* https://web.eece.maine.edu/~vweaver/projects/rapl/",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/docker/docker",
+                    "purl": "pkg:golang/github.com/docker/docker"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "24.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-jq35-85cj-fj4p/GHSA-jq35-85cj-fj4p.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/moby/moby/security/advisories/GHSA-jq35-85cj-fj4p"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/moby/moby"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-30T15:25:44Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-232p-vwff-86mp",
+                "GHSA-33pg-m6jh-5237",
+                "GHSA-6wrf-mxfj-pf5p"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-jq35-85cj-fj4p"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/go-jose/go-jose/v3",
+            "version": "v3.0.0",
+            "ecosystem": "Go",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-29T23:26:34Z",
+              "published": "2023-11-21T22:17:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2c7c-3mj9-8fqh",
+              "aliases": [
+                "GO-2023-2334"
+              ],
+              "summary": "Decryption of malicious PBES2 JWE objects can consume unbounded system resources",
+              "details": "The go-jose package is subject to a \"billion hashes attack\" causing denial-of-service when decrypting JWE inputs. This occurs when an attacker can provide a PBES2 encrypted JWE blob with a very large p2c value that, when decrypted, produces a denial-of-service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/go-jose/go-jose/v3",
+                    "purl": "pkg:golang/github.com/go-jose/go-jose/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-2c7c-3mj9-8fqh/GHSA-2c7c-3mj9-8fqh.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/square/go-jose",
+                    "purl": "pkg:golang/github.com/square/go-jose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-2c7c-3mj9-8fqh/GHSA-2c7c-3mj9-8fqh.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/go-jose/go-jose/issues/64"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/go-jose/go-jose/commit/65351c27657d58960c2e6c9fbb2b00f818e50568"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/go-jose/go-jose"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-21T22:17:19Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-29T23:26:34Z",
+              "published": "2023-11-21T15:39:17Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2334",
+              "aliases": [
+                "GHSA-2c7c-3mj9-8fqh"
+              ],
+              "summary": "Decryption of malicious PBES2 JWE objects can consume unbounded system resources",
+              "details": "The go-jose package is subject to a \"billion hashes attack\" causing denial-of-service when decrypting JWE inputs. This occurs when an attacker can provide a PBES2 encrypted JWE blob with a very large p2c value that, when decrypted, produces a denial-of-service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/go-jose/go-jose/v3",
+                    "purl": "pkg:golang/github.com/go-jose/go-jose/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2334.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/go-jose/go-jose/v3",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "symmetricKeyCipher.decryptKey"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/square/go-jose",
+                    "purl": "pkg:golang/github.com/square/go-jose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2334.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/square/go-jose",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "symmetricKeyCipher.decryptKey"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/go-jose/go-jose/commit/65351c27657d58960c2e6c9fbb2b00f818e50568"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/go-jose/go-jose/issues/64"
+                }
+              ],
+              "database_specific": {
+                "url": "https://pkg.go.dev/vuln/GO-2023-2334"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2c7c-3mj9-8fqh",
+                "GO-2023-2334"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

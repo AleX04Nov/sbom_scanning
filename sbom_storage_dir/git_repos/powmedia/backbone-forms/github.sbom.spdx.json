@@ -1,0 +1,115 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:51:36Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.powmedia/backbone-forms",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.powmedia-backbone-forms"
+    ],
+    "documentNamespace": "https://github.com/powmedia/backbone-forms/dependency_graph/sbom-7090cd40bb21ba3e",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.powmedia-backbone-forms",
+            "name": "com.github.powmedia/backbone-forms",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/powmedia/backbone-forms",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/powmedia/backbone-forms"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-npm-backbone",
+            "name": "npm:backbone",
+            "versionInfo": "~ 1.1.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-browserify",
+            "name": "npm:browserify",
+            "versionInfo": "~ 3.38.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-buildify",
+            "name": "npm:buildify",
+            "versionInfo": "~ 0.4.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-jquery",
+            "name": "npm:jquery",
+            "versionInfo": "~ 2.1.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-uglify-js",
+            "name": "npm:uglify-js",
+            "versionInfo": "~ 2.4.11",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-npm-underscore",
+            "name": "npm:underscore",
+            "versionInfo": "~ 1.5.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.powmedia-backbone-forms",
+            "relatedSpdxElement": "SPDXRef-npm-backbone"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.powmedia-backbone-forms",
+            "relatedSpdxElement": "SPDXRef-npm-browserify"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.powmedia-backbone-forms",
+            "relatedSpdxElement": "SPDXRef-npm-buildify"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.powmedia-backbone-forms",
+            "relatedSpdxElement": "SPDXRef-npm-jquery"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.powmedia-backbone-forms",
+            "relatedSpdxElement": "SPDXRef-npm-uglify-js"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.powmedia-backbone-forms",
+            "relatedSpdxElement": "SPDXRef-npm-underscore"
+        }
+    ]
+}

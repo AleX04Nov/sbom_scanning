@@ -1,0 +1,116 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:52:27Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.lamdu/lamdu",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.lamdu-lamdu"
+    ],
+    "documentNamespace": "https://github.com/lamdu/lamdu/dependency_graph/sbom-8926bf6a22f5ae33",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.lamdu-lamdu",
+            "name": "com.github.lamdu/lamdu",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/lamdu/lamdu",
+            "licenseDeclared": "GPL-3.0",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/lamdu/lamdu"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-cache-3.3.2",
+            "name": "actions:actions/cache",
+            "versionInfo": "3.3.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/cache@3.3.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-actions-checkout-4",
+            "name": "actions:actions/checkout",
+            "versionInfo": "4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/actions/checkout@4",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-haskell-actions-setup-2.4",
+            "name": "actions:haskell/actions/setup",
+            "versionInfo": "2.4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/haskell/actions/setup@2.4",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-actions-softprops-action-gh-release-1",
+            "name": "actions:softprops/action-gh-release",
+            "versionInfo": "1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:githubactions/softprops/action-gh-release@1",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lamdu-lamdu",
+            "relatedSpdxElement": "SPDXRef-actions-actions-cache-3.3.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lamdu-lamdu",
+            "relatedSpdxElement": "SPDXRef-actions-actions-checkout-4"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lamdu-lamdu",
+            "relatedSpdxElement": "SPDXRef-actions-haskell-actions-setup-2.4"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.lamdu-lamdu",
+            "relatedSpdxElement": "SPDXRef-actions-softprops-action-gh-release-1"
+        }
+    ]
+}

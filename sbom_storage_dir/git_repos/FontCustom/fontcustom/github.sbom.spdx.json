@@ -1,0 +1,114 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:50:35Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ],
+        "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included."
+    },
+    "name": "com.github.FontCustom/fontcustom",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.FontCustom-fontcustom"
+    ],
+    "documentNamespace": "https://github.com/FontCustom/fontcustom/dependency_graph/sbom-d78cd2bdf26141f1",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.FontCustom-fontcustom",
+            "name": "com.github.FontCustom/fontcustom",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/FontCustom/fontcustom",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/FontCustom/fontcustom"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-bundler",
+            "name": "rubygems:bundler",
+            "versionInfo": ">= 0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-json",
+            "name": "rubygems:json",
+            "versionInfo": "~> 1.4",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-listen",
+            "name": "rubygems:listen",
+            "versionInfo": ">= 1.0,< 4.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rake",
+            "name": "rubygems:rake",
+            "versionInfo": "~> 10",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec",
+            "name": "rubygems:rspec",
+            "versionInfo": "~> 3.1.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-thor",
+            "name": "rubygems:thor",
+            "versionInfo": "~> 0.14",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.FontCustom-fontcustom",
+            "relatedSpdxElement": "SPDXRef-rubygems-bundler"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.FontCustom-fontcustom",
+            "relatedSpdxElement": "SPDXRef-rubygems-json"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.FontCustom-fontcustom",
+            "relatedSpdxElement": "SPDXRef-rubygems-listen"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.FontCustom-fontcustom",
+            "relatedSpdxElement": "SPDXRef-rubygems-rake"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.FontCustom-fontcustom",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.FontCustom-fontcustom",
+            "relatedSpdxElement": "SPDXRef-rubygems-thor"
+        }
+    ]
+}

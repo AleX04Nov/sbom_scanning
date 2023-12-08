@@ -1,0 +1,5405 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/SBOM.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "requests",
+            "version": "",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:57:34Z",
+              "published": "2022-05-14T02:09:22Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-652x-xj99-gmcc",
+              "aliases": [
+                "CVE-2014-1830",
+                "PYSEC-2014-14"
+              ],
+              "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
+              "details": "Requests (aka python-requests) before 2.3.0 allows remote servers to obtain sensitive information by reading the Proxy-Authorization header in a redirected request.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-652x-xj99-gmcc/GHSA-652x-xj99-gmcc.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-1830"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/issues/1885"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-652x-xj99-gmcc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/requests/PYSEC-2014-14.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20150523055216/http://www.mandriva.com/en/support/security/advisories/advisory/MDVSA-2015:133/?name=MDVSA-2015:133"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://advisories.mageia.org/MGASA-2014-0409.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2016-01/msg00095.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2015/dsa-3146"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-07T22:49:51Z",
+                "nvd_published_at": "2014-10-15T14:55:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:34Z",
+              "published": "2022-05-17T03:49:35Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cfj3-7x9c-4p3h",
+              "aliases": [
+                "CVE-2014-1829",
+                "PYSEC-2014-13"
+              ],
+              "summary": "Exposure of Sensitive Information to an Unauthorized Actor in Requests",
+              "details": "Requests (aka python-requests) before 2.3.0 allows remote servers to obtain a netrc password by reading the Authorization header in a redirected request.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-cfj3-7x9c-4p3h/GHSA-cfj3-7x9c-4p3h.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2014-1829"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/issues/1885"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-cfj3-7x9c-4p3h"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/psf/requests"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/requests/PYSEC-2014-13.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20150523055216/http://www.mandriva.com/en/support/security/advisories/advisory/MDVSA-2015:133/?name=MDVSA-2015:133"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://advisories.mageia.org/MGASA-2014-0409.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2015/dsa-3146"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.ubuntu.com/usn/USN-2382-1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-07-07T22:49:52Z",
+                "nvd_published_at": "2014-10-15T14:55:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-11T05:29:19Z",
+              "published": "2023-05-22T20:36:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j8r2-6x86-q33q",
+              "aliases": [
+                "CVE-2023-32681",
+                "PYSEC-2023-74"
+              ],
+              "summary": "Unintended leak of Proxy-Authorization header in requests",
+              "details": "### Impact\n\nSince Requests v2.3.0, Requests has been vulnerable to potentially leaking `Proxy-Authorization` headers to destination servers, specifically during redirects to an HTTPS origin. This is a product of how `rebuild_proxies` is used to recompute and [reattach the `Proxy-Authorization` header](https://github.com/psf/requests/blob/f2629e9e3c7ce3c3c8c025bcd8db551101cbc773/requests/sessions.py#L319-L328) to requests when redirected. Note this behavior has _only_ been observed to affect proxied requests when credentials are supplied in the URL user information component (e.g. `https://username:password@proxy:8080`).\n\n**Current vulnerable behavior(s):**\n\n1. HTTP → HTTPS: **leak**\n2. HTTPS → HTTP: **no leak**\n3. HTTPS → HTTPS: **leak**\n4. HTTP → HTTP: **no leak**\n\nFor HTTP connections sent through the proxy, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the `Proxy-Authorization` header must be sent in the CONNECT request as the proxy has no visibility into further tunneled requests. This results in Requests forwarding the header to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate those credentials.\n\nThe reason this currently works for HTTPS connections in Requests is the `Proxy-Authorization` header is also handled by urllib3 with our usage of the ProxyManager in adapters.py with [`proxy_manager_for`](https://github.com/psf/requests/blob/f2629e9e3c7ce3c3c8c025bcd8db551101cbc773/requests/adapters.py#L199-L235). This will compute the required proxy headers in `proxy_headers` and pass them to the Proxy Manager, avoiding attaching them directly to the Request object. This will be our preferred option going forward for default usage.\n\n### Patches\nStarting in Requests v2.31.0, Requests will no longer attach this header to redirects with an HTTPS destination. This should have no negative impacts on the default behavior of the library as the proxy credentials are already properly being handled by urllib3's ProxyManager.\n\nFor users with custom adapters, this _may_ be potentially breaking if you were already working around this behavior. The previous functionality of `rebuild_proxies` doesn't make sense in any case, so we would encourage any users impacted to migrate any handling of Proxy-Authorization directly into their custom adapter.\n\n### Workarounds\nFor users who are not able to update Requests immediately, there is one potential workaround.\n\nYou may disable redirects by setting `allow_redirects` to `False` on all calls through Requests top-level APIs. Note that if you're currently relying on redirect behaviors, you will need to capture the 3xx response codes and ensure a new request is made to the redirect destination.\n```\nimport requests\nr = requests.get('http://github.com/', allow_redirects=False)\n```\n\n### Credits\n\nThis vulnerability was discovered and disclosed by the following individuals.\n\nDennis Brinkrolf, Haxolot (https://haxolot.com/)\nTobias Funke, (tobiasfunke93@gmail.com)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.3.0"
+                        },
+                        {
+                          "fixed": "2.31.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.16.0",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.16.3",
+                    "2.16.4",
+                    "2.16.5",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.18.3",
+                    "2.18.4",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.27.1",
+                    "2.28.0",
+                    "2.28.1",
+                    "2.28.2",
+                    "2.29.0",
+                    "2.3.0",
+                    "2.30.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/05/GHSA-j8r2-6x86-q33q/GHSA-j8r2-6x86-q33q.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "requests.sessions.SessionRedirectMixin.rebuild_proxies"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32681"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/commit/74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/psf/requests"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/releases/tag/v2.31.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/requests/PYSEC-2023-74.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00018.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AW7HNFGYP44RT3DUDQXG2QT3OEV2PJ7Y/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KOYASTZDGQG2BWLSNBPL3TQRL2G7QYNZ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202309-08"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-05-22T20:36:32Z",
+                "nvd_published_at": "2023-05-26T18:15:14Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-12-07T21:31:15Z",
+              "published": "2022-05-13T01:11:23Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pg2w-x9wp-vw92",
+              "aliases": [
+                "CVE-2015-2296",
+                "PYSEC-2015-17"
+              ],
+              "summary": "Python Requests Session Fixation",
+              "details": "The `resolve_redirects` function in sessions.py in requests 2.1.0 through 2.5.3 allows remote attackers to conduct session fixation attacks via a cookie without a host value in a redirect.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.1.0"
+                        },
+                        {
+                          "fixed": "2.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-pg2w-x9wp-vw92/GHSA-pg2w-x9wp-vw92.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-2296"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/commit/3bd8afbff29e50b38f889b2f688785a669b9aafc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/psf/requests"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://warehouse.python.org/project/requests/2.6.0/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://advisories.mageia.org/MGASA-2015-0120.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-March/153594.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/03/14/4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/03/15/1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.ubuntu.com/usn/USN-2531-1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-31T23:49:22Z",
+                "nvd_published_at": "2015-03-18T16:59:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:00:04Z",
+              "published": "2018-10-29T19:06:46Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x84v-xcm2-53pg",
+              "aliases": [
+                "CVE-2018-18074",
+                "PYSEC-2018-28"
+              ],
+              "summary": "Insufficiently Protected Credentials in Requests",
+              "details": "The Requests package through 2.19.1 before 2018-09-14 for Python sends an HTTP Authorization header to an http URI upon receiving a same-hostname https-to-http redirect, which makes it easier for remote attackers to discover credentials by sniffing the network.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.20.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.16.0",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.16.3",
+                    "2.16.4",
+                    "2.16.5",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.18.3",
+                    "2.18.4",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.19.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-x84v-xcm2-53pg/GHSA-x84v-xcm2-53pg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18074"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/requests/requests/issues/4716"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/requests/requests/pull/4718"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:2035"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/910766"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-x84v-xcm2-53pg"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/requests/requests"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3790-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3790-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://docs.python-requests.org/en/master/community/updates/#release-and-version-history"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00024.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-522"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T22:02:40Z",
+                "nvd_published_at": "2018-10-09T17:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:34Z",
+              "published": "2014-10-15T14:55:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2014-13",
+              "aliases": [
+                "CVE-2014-1829",
+                "GHSA-cfj3-7x9c-4p3h"
+              ],
+              "details": "Requests (aka python-requests) before 2.3.0 allows remote servers to obtain a netrc password by reading the Authorization header in a redirected request.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/requests/PYSEC-2014-13.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/kennethreitz/requests/issues/1885"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.ubuntu.com/usn/USN-2382-1"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.debian.org/security/2015/dsa-3146"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://advisories.mageia.org/MGASA-2014-0409.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-cfj3-7x9c-4p3h"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:57:34Z",
+              "published": "2014-10-15T14:55:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2014-14",
+              "aliases": [
+                "CVE-2014-1830",
+                "GHSA-652x-xj99-gmcc"
+              ],
+              "details": "Requests (aka python-requests) before 2.3.0 allows remote servers to obtain sensitive information by reading the Proxy-Authorization header in a redirected request.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/requests/PYSEC-2014-14.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/kennethreitz/requests/issues/1885"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=733108"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.debian.org/security/2015/dsa-3146"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://advisories.mageia.org/MGASA-2014-0409.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2016-01/msg00095.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-652x-xj99-gmcc"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:57:51Z",
+              "published": "2015-03-18T16:59:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2015-17",
+              "aliases": [
+                "CVE-2015-2296",
+                "GHSA-pg2w-x9wp-vw92"
+              ],
+              "details": "The resolve_redirects function in sessions.py in requests 2.1.0 through 2.5.3 allows remote attackers to conduct session fixation attacks via a cookie without a host value in a redirect.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3bd8afbff29e50b38f889b2f688785a669b9aafc"
+                        }
+                      ],
+                      "repo": "https://github.com/kennethreitz/requests"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.1.0"
+                        },
+                        {
+                          "fixed": "2.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/requests/PYSEC-2015-17.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/03/15/1"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.ubuntu.com/usn/USN-2531-1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/03/14/4"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/kennethreitz/requests/commit/3bd8afbff29e50b38f889b2f688785a669b9aafc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://warehouse.python.org/project/requests/2.6.0/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-March/153594.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://advisories.mageia.org/MGASA-2015-0120.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:133"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:00:04Z",
+              "published": "2018-10-09T17:29:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2018-28",
+              "aliases": [
+                "CVE-2018-18074",
+                "GHSA-x84v-xcm2-53pg"
+              ],
+              "details": "The Requests package before 2.20.0 for Python sends an HTTP Authorization header to an http URI upon receiving a same-hostname https-to-http redirect, which makes it easier for remote attackers to discover credentials by sniffing the network.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+                        }
+                      ],
+                      "repo": "https://github.com/requests/requests"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.20.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.16.0",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.16.3",
+                    "2.16.4",
+                    "2.16.5",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.18.3",
+                    "2.18.4",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/requests/PYSEC-2018-28.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/requests/requests/pull/4718"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/requests/requests/issues/4716"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/910766"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3790-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://docs.python-requests.org/en/master/community/updates/#release-and-version-history"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3790-2/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00024.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:2035"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-x84v-xcm2-53pg"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:12:35Z",
+              "published": "2023-05-26T18:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2023-74",
+              "aliases": [
+                "CVE-2023-32681",
+                "GHSA-j8r2-6x86-q33q"
+              ],
+              "details": "Requests is a HTTP library. Since Requests 2.3.0, Requests has been leaking Proxy-Authorization headers to destination servers when redirected to an HTTPS endpoint. This is a product of how we use `rebuild_proxies` to reattach the `Proxy-Authorization` header to requests. For HTTP connections sent through the tunnel, the proxy will identify the header in the request itself and remove it prior to forwarding to the destination server. However when sent over HTTPS, the `Proxy-Authorization` header must be sent in the CONNECT request as the proxy has no visibility into the tunneled request. This results in Requests forwarding proxy credentials to the destination server unintentionally, allowing a malicious actor to potentially exfiltrate sensitive information. This issue has been patched in version 2.31.0.\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+                        }
+                      ],
+                      "repo": "https://github.com/psf/requests"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.3.0"
+                        },
+                        {
+                          "fixed": "2.31.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.16.0",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.16.3",
+                    "2.16.4",
+                    "2.16.5",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.18.3",
+                    "2.18.4",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.27.1",
+                    "2.28.0",
+                    "2.28.1",
+                    "2.28.2",
+                    "2.29.0",
+                    "2.3.0",
+                    "2.30.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/requests/PYSEC-2023-74.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/psf/requests/security/advisories/GHSA-j8r2-6x86-q33q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/releases/tag/v2.31.0"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/psf/requests/commit/74ea7cf7a6a27a4eeb2ae24e162bcc942a6706d5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AW7HNFGYP44RT3DUDQXG2QT3OEV2PJ7Y/"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-652x-xj99-gmcc",
+                "PYSEC-2014-14"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-cfj3-7x9c-4p3h",
+                "PYSEC-2014-13"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-j8r2-6x86-q33q",
+                "PYSEC-2023-74"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-pg2w-x9wp-vw92",
+                "PYSEC-2015-17"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-x84v-xcm2-53pg",
+                "PYSEC-2018-28"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "grpcio",
+            "version": "",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-10T05:31:01Z",
+              "published": "2023-07-06T21:15:08Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6628-q6j9-w8vg",
+              "aliases": [
+                "CVE-2023-1428"
+              ],
+              "summary": "gRPC Reachable Assertion issue",
+              "details": "There exists an vulnerability causing an abort() to be called in gRPC. \nThe following headers cause gRPC's C++ implementation to abort() when called via http2:\n\nte: x (x != trailers)\n\n:scheme: x (x != http, https)\n\ngrpclb_client_stats: x (x == anything)\n\nOn top of sending one of those headers, a later header must be sent that gets the total header size past 8KB. We recommend upgrading past git commit 2485fa94bd8a723e5c977d55a3ce10b301b437f8 or v1.53 and above.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "io.grpc:grpc-protobuf",
+                    "purl": "pkg:maven/io.grpc/grpc-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.15.0",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.8.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.0-pre1",
+                    "1.0.0-pre2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.16.0",
+                    "1.16.1",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.19.0",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.21.0",
+                    "1.21.1",
+                    "1.22.0",
+                    "1.22.1",
+                    "1.22.2",
+                    "1.22.3",
+                    "1.23.0",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.25.0",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.27.0",
+                    "1.27.1",
+                    "1.27.2",
+                    "1.28.0",
+                    "1.28.1",
+                    "1.29.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.30.0",
+                    "1.30.1",
+                    "1.30.2",
+                    "1.31.0",
+                    "1.31.1",
+                    "1.31.2",
+                    "1.32.1",
+                    "1.32.2",
+                    "1.32.3",
+                    "1.33.0",
+                    "1.33.1",
+                    "1.34.0",
+                    "1.34.1",
+                    "1.35.0",
+                    "1.35.1",
+                    "1.36.0",
+                    "1.36.1",
+                    "1.36.2",
+                    "1.36.3",
+                    "1.37.0",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.1",
+                    "1.39.0",
+                    "1.4.0",
+                    "1.40.0",
+                    "1.40.1",
+                    "1.40.2",
+                    "1.41.0",
+                    "1.41.1",
+                    "1.41.2",
+                    "1.41.3",
+                    "1.42.0",
+                    "1.42.1",
+                    "1.42.2",
+                    "1.42.3",
+                    "1.43.0",
+                    "1.43.1",
+                    "1.43.2",
+                    "1.43.3",
+                    "1.44.0",
+                    "1.44.1",
+                    "1.44.2",
+                    "1.45.0",
+                    "1.45.1",
+                    "1.45.2",
+                    "1.45.3",
+                    "1.45.4",
+                    "1.46.0",
+                    "1.46.1",
+                    "1.47.0",
+                    "1.47.1",
+                    "1.48.0",
+                    "1.48.1",
+                    "1.48.2",
+                    "1.49.0",
+                    "1.49.1",
+                    "1.49.2",
+                    "1.5.0",
+                    "1.50.0",
+                    "1.50.1",
+                    "1.50.2",
+                    "1.50.3",
+                    "1.51.0",
+                    "1.51.1",
+                    "1.51.3",
+                    "1.52.0",
+                    "1.52.1",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-6628-q6j9-w8vg/GHSA-6628-q6j9-w8vg.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "grpcio",
+                    "purl": "pkg:pypi/grpcio"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0a0",
+                    "0.11.0b0",
+                    "0.11.0b1",
+                    "0.12.0b0",
+                    "0.12.0b8",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.1rc1",
+                    "0.14.0",
+                    "0.14.0rc1",
+                    "0.15.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.4.0a0",
+                    "0.4.0a1",
+                    "0.4.0a13",
+                    "0.4.0a14",
+                    "0.4.0a2",
+                    "0.4.0a3",
+                    "0.4.0a4",
+                    "0.4.0a5",
+                    "0.4.0a6",
+                    "0.4.0a7",
+                    "0.4.0a8",
+                    "0.5.0a0",
+                    "0.5.0a1",
+                    "0.5.0a2",
+                    "0.9.0a0",
+                    "0.9.0a1",
+                    "1.0.0",
+                    "1.0.0rc1",
+                    "1.0.0rc2",
+                    "1.0.1",
+                    "1.0.1rc1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0rc2",
+                    "1.10.1",
+                    "1.10.1rc1",
+                    "1.10.1rc2",
+                    "1.11.0",
+                    "1.11.0rc1",
+                    "1.11.0rc2",
+                    "1.11.1",
+                    "1.11.1rc1",
+                    "1.12.0",
+                    "1.12.0rc1",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.13.0rc1",
+                    "1.13.0rc2",
+                    "1.13.0rc3",
+                    "1.14.0",
+                    "1.14.0rc1",
+                    "1.14.0rc2",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.2rc1",
+                    "1.15.0",
+                    "1.15.0rc1",
+                    "1.16.0",
+                    "1.16.0rc1",
+                    "1.16.1",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.19.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.20.0",
+                    "1.20.0rc1",
+                    "1.20.0rc2",
+                    "1.20.0rc3",
+                    "1.20.1",
+                    "1.21.0rc1",
+                    "1.21.1",
+                    "1.21.1rc1",
+                    "1.22.0",
+                    "1.22.0rc1",
+                    "1.22.1",
+                    "1.23.0",
+                    "1.23.0rc1",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.0rc1",
+                    "1.24.1",
+                    "1.24.3",
+                    "1.25.0",
+                    "1.25.0rc1",
+                    "1.26.0",
+                    "1.26.0rc1",
+                    "1.27.0rc1",
+                    "1.27.0rc2",
+                    "1.27.1",
+                    "1.27.2",
+                    "1.28.0rc1",
+                    "1.28.0rc2",
+                    "1.28.1",
+                    "1.29.0",
+                    "1.3.0",
+                    "1.3.3",
+                    "1.3.5",
+                    "1.30.0",
+                    "1.31.0",
+                    "1.32.0",
+                    "1.33.1",
+                    "1.33.2",
+                    "1.34.0",
+                    "1.34.0rc1",
+                    "1.34.1",
+                    "1.35.0",
+                    "1.35.0rc1",
+                    "1.36.0",
+                    "1.36.0rc1",
+                    "1.36.1",
+                    "1.37.0",
+                    "1.37.0rc1",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.0rc1",
+                    "1.38.1",
+                    "1.39.0",
+                    "1.39.0rc1",
+                    "1.4.0",
+                    "1.40.0",
+                    "1.40.0rc1",
+                    "1.41.0",
+                    "1.41.0rc2",
+                    "1.41.1",
+                    "1.42.0",
+                    "1.42.0rc1",
+                    "1.43.0",
+                    "1.43.0rc1",
+                    "1.44.0",
+                    "1.44.0rc1",
+                    "1.44.0rc2",
+                    "1.45.0",
+                    "1.45.0rc1",
+                    "1.46.0",
+                    "1.46.0rc1",
+                    "1.46.0rc2",
+                    "1.46.1",
+                    "1.46.3",
+                    "1.46.5",
+                    "1.47.0",
+                    "1.47.0rc1",
+                    "1.47.2",
+                    "1.47.5",
+                    "1.48.0",
+                    "1.48.0rc1",
+                    "1.48.1",
+                    "1.48.2",
+                    "1.49.0",
+                    "1.49.0rc1",
+                    "1.49.0rc3",
+                    "1.49.1",
+                    "1.50.0",
+                    "1.50.0rc1",
+                    "1.51.0",
+                    "1.51.0rc1",
+                    "1.51.1",
+                    "1.51.3",
+                    "1.52.0",
+                    "1.52.0rc1",
+                    "1.53.0rc2",
+                    "1.6.0",
+                    "1.6.3",
+                    "1.7.0",
+                    "1.7.3",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.6",
+                    "1.9.0",
+                    "1.9.0rc1",
+                    "1.9.0rc2",
+                    "1.9.0rc3",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-6628-q6j9-w8vg/GHSA-6628-q6j9-w8vg.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "grpc",
+                    "purl": "pkg:gem/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.0.pre1.1",
+                    "0.13.1",
+                    "0.13.1.pre1",
+                    "0.14.1",
+                    "0.14.1.pre1",
+                    "0.15.0",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "1.0.0",
+                    "1.0.0.pre1",
+                    "1.0.0.pre2",
+                    "1.0.1",
+                    "1.0.1.pre1",
+                    "1.1.2",
+                    "1.10.0",
+                    "1.10.0.pre1",
+                    "1.10.0.pre2",
+                    "1.11.0",
+                    "1.11.0.pre2",
+                    "1.11.1",
+                    "1.12.0",
+                    "1.13.0",
+                    "1.13.0.pre1",
+                    "1.13.0.pre3",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.2.pre1",
+                    "1.15.0",
+                    "1.15.0.pre1",
+                    "1.16.0",
+                    "1.16.0.pre1",
+                    "1.17.0",
+                    "1.17.0.pre1",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.18.0.pre1",
+                    "1.19.0",
+                    "1.19.0.pre1",
+                    "1.2.0",
+                    "1.2.0.pre1",
+                    "1.2.1.pre1",
+                    "1.2.1.pre2",
+                    "1.2.2",
+                    "1.2.5",
+                    "1.20.0",
+                    "1.20.0.pre1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.22.0.pre1",
+                    "1.22.1",
+                    "1.23.0",
+                    "1.23.0.pre1",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.0.pre1",
+                    "1.25.0",
+                    "1.25.0.pre1",
+                    "1.26.0",
+                    "1.26.0.pre1",
+                    "1.27.0",
+                    "1.27.0.pre1",
+                    "1.28.0",
+                    "1.28.0.pre1",
+                    "1.28.0.pre2",
+                    "1.3.4",
+                    "1.30.0",
+                    "1.30.0.pre1",
+                    "1.30.1",
+                    "1.30.2",
+                    "1.31.0.pre1",
+                    "1.31.0.pre2",
+                    "1.31.1",
+                    "1.32.0",
+                    "1.32.0.pre1",
+                    "1.33.0.pre1",
+                    "1.34.0",
+                    "1.35.0",
+                    "1.35.0.pre1",
+                    "1.36.0",
+                    "1.37.0",
+                    "1.37.0.pre1",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.0.pre1",
+                    "1.39.0",
+                    "1.39.0.pre1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.5",
+                    "1.40.0",
+                    "1.40.0.pre1",
+                    "1.41.0",
+                    "1.41.0.pre2",
+                    "1.41.1",
+                    "1.42.0",
+                    "1.42.0.pre1",
+                    "1.43.1",
+                    "1.44.0.pre2",
+                    "1.45.0",
+                    "1.46.2",
+                    "1.46.3",
+                    "1.47.0",
+                    "1.48.0",
+                    "1.48.0.pre1",
+                    "1.49.0.pre1",
+                    "1.49.1",
+                    "1.50.0",
+                    "1.50.0.pre1",
+                    "1.51.0",
+                    "1.52.0",
+                    "1.52.0.pre2",
+                    "1.52.2",
+                    "1.53.0.pre2",
+                    "1.6.0",
+                    "1.6.0.pre1",
+                    "1.6.2",
+                    "1.6.4",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.7.0",
+                    "1.7.0.pre1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.3",
+                    "1.8.6",
+                    "1.8.7",
+                    "1.9.0.pre1",
+                    "1.9.0.pre2",
+                    "1.9.0.pre3",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-6628-q6j9-w8vg/GHSA-6628-q6j9-w8vg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1428"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/issues/33463"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/commit/2485fa94bd8a723e5c977d55a3ce10b301b437f8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/grpc/CVE-2023-1428.yml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-617"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-06T23:56:28Z",
+                "nvd_published_at": "2023-06-09T11:15:09Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-11T05:30:15Z",
+              "published": "2023-07-06T21:15:08Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9hxf-ppjv-w6rq",
+              "aliases": [
+                "CVE-2023-32732"
+              ],
+              "summary": "gRPC connection termination issue",
+              "details": "gRPC contains a vulnerability whereby a client can cause a termination of connection between a HTTP2 proxy and a gRPC server: a base64 encoding error for `-bin` suffixed headers will result in a disconnection by the gRPC server, but is typically allowed by HTTP2 proxies. We recommend upgrading beyond the commit in https://github.com/grpc/grpc/pull/32309.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "io.grpc:grpc-protobuf",
+                    "purl": "pkg:maven/io.grpc/grpc-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.15.0",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.8.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.0-pre1",
+                    "1.0.0-pre2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.16.0",
+                    "1.16.1",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.19.0",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.21.0",
+                    "1.21.1",
+                    "1.22.0",
+                    "1.22.1",
+                    "1.22.2",
+                    "1.22.3",
+                    "1.23.0",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.25.0",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.27.0",
+                    "1.27.1",
+                    "1.27.2",
+                    "1.28.0",
+                    "1.28.1",
+                    "1.29.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.30.0",
+                    "1.30.1",
+                    "1.30.2",
+                    "1.31.0",
+                    "1.31.1",
+                    "1.31.2",
+                    "1.32.1",
+                    "1.32.2",
+                    "1.32.3",
+                    "1.33.0",
+                    "1.33.1",
+                    "1.34.0",
+                    "1.34.1",
+                    "1.35.0",
+                    "1.35.1",
+                    "1.36.0",
+                    "1.36.1",
+                    "1.36.2",
+                    "1.36.3",
+                    "1.37.0",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.1",
+                    "1.39.0",
+                    "1.4.0",
+                    "1.40.0",
+                    "1.40.1",
+                    "1.40.2",
+                    "1.41.0",
+                    "1.41.1",
+                    "1.41.2",
+                    "1.41.3",
+                    "1.42.0",
+                    "1.42.1",
+                    "1.42.2",
+                    "1.42.3",
+                    "1.43.0",
+                    "1.43.1",
+                    "1.43.2",
+                    "1.43.3",
+                    "1.44.0",
+                    "1.44.1",
+                    "1.44.2",
+                    "1.45.0",
+                    "1.45.1",
+                    "1.45.2",
+                    "1.45.3",
+                    "1.45.4",
+                    "1.46.0",
+                    "1.46.1",
+                    "1.47.0",
+                    "1.47.1",
+                    "1.48.0",
+                    "1.48.1",
+                    "1.48.2",
+                    "1.49.0",
+                    "1.49.1",
+                    "1.49.2",
+                    "1.5.0",
+                    "1.50.0",
+                    "1.50.1",
+                    "1.50.2",
+                    "1.50.3",
+                    "1.51.0",
+                    "1.51.1",
+                    "1.51.3",
+                    "1.52.0",
+                    "1.52.1",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9hxf-ppjv-w6rq/GHSA-9hxf-ppjv-w6rq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "grpcio",
+                    "purl": "pkg:pypi/grpcio"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0a0",
+                    "0.11.0b0",
+                    "0.11.0b1",
+                    "0.12.0b0",
+                    "0.12.0b8",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.1rc1",
+                    "0.14.0",
+                    "0.14.0rc1",
+                    "0.15.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.4.0a0",
+                    "0.4.0a1",
+                    "0.4.0a13",
+                    "0.4.0a14",
+                    "0.4.0a2",
+                    "0.4.0a3",
+                    "0.4.0a4",
+                    "0.4.0a5",
+                    "0.4.0a6",
+                    "0.4.0a7",
+                    "0.4.0a8",
+                    "0.5.0a0",
+                    "0.5.0a1",
+                    "0.5.0a2",
+                    "0.9.0a0",
+                    "0.9.0a1",
+                    "1.0.0",
+                    "1.0.0rc1",
+                    "1.0.0rc2",
+                    "1.0.1",
+                    "1.0.1rc1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0rc2",
+                    "1.10.1",
+                    "1.10.1rc1",
+                    "1.10.1rc2",
+                    "1.11.0",
+                    "1.11.0rc1",
+                    "1.11.0rc2",
+                    "1.11.1",
+                    "1.11.1rc1",
+                    "1.12.0",
+                    "1.12.0rc1",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.13.0rc1",
+                    "1.13.0rc2",
+                    "1.13.0rc3",
+                    "1.14.0",
+                    "1.14.0rc1",
+                    "1.14.0rc2",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.2rc1",
+                    "1.15.0",
+                    "1.15.0rc1",
+                    "1.16.0",
+                    "1.16.0rc1",
+                    "1.16.1",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.19.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.20.0",
+                    "1.20.0rc1",
+                    "1.20.0rc2",
+                    "1.20.0rc3",
+                    "1.20.1",
+                    "1.21.0rc1",
+                    "1.21.1",
+                    "1.21.1rc1",
+                    "1.22.0",
+                    "1.22.0rc1",
+                    "1.22.1",
+                    "1.23.0",
+                    "1.23.0rc1",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.0rc1",
+                    "1.24.1",
+                    "1.24.3",
+                    "1.25.0",
+                    "1.25.0rc1",
+                    "1.26.0",
+                    "1.26.0rc1",
+                    "1.27.0rc1",
+                    "1.27.0rc2",
+                    "1.27.1",
+                    "1.27.2",
+                    "1.28.0rc1",
+                    "1.28.0rc2",
+                    "1.28.1",
+                    "1.29.0",
+                    "1.3.0",
+                    "1.3.3",
+                    "1.3.5",
+                    "1.30.0",
+                    "1.31.0",
+                    "1.32.0",
+                    "1.33.1",
+                    "1.33.2",
+                    "1.34.0",
+                    "1.34.0rc1",
+                    "1.34.1",
+                    "1.35.0",
+                    "1.35.0rc1",
+                    "1.36.0",
+                    "1.36.0rc1",
+                    "1.36.1",
+                    "1.37.0",
+                    "1.37.0rc1",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.0rc1",
+                    "1.38.1",
+                    "1.39.0",
+                    "1.39.0rc1",
+                    "1.4.0",
+                    "1.40.0",
+                    "1.40.0rc1",
+                    "1.41.0",
+                    "1.41.0rc2",
+                    "1.41.1",
+                    "1.42.0",
+                    "1.42.0rc1",
+                    "1.43.0",
+                    "1.43.0rc1",
+                    "1.44.0",
+                    "1.44.0rc1",
+                    "1.44.0rc2",
+                    "1.45.0",
+                    "1.45.0rc1",
+                    "1.46.0",
+                    "1.46.0rc1",
+                    "1.46.0rc2",
+                    "1.46.1",
+                    "1.46.3",
+                    "1.46.5",
+                    "1.47.0",
+                    "1.47.0rc1",
+                    "1.47.2",
+                    "1.47.5",
+                    "1.48.0",
+                    "1.48.0rc1",
+                    "1.48.1",
+                    "1.48.2",
+                    "1.49.0",
+                    "1.49.0rc1",
+                    "1.49.0rc3",
+                    "1.49.1",
+                    "1.50.0",
+                    "1.50.0rc1",
+                    "1.51.0",
+                    "1.51.0rc1",
+                    "1.51.1",
+                    "1.51.3",
+                    "1.52.0",
+                    "1.52.0rc1",
+                    "1.53.0rc2",
+                    "1.6.0",
+                    "1.6.3",
+                    "1.7.0",
+                    "1.7.3",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.6",
+                    "1.9.0",
+                    "1.9.0rc1",
+                    "1.9.0rc2",
+                    "1.9.0rc3",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9hxf-ppjv-w6rq/GHSA-9hxf-ppjv-w6rq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "grpc",
+                    "purl": "pkg:gem/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.0.pre1.1",
+                    "0.13.1",
+                    "0.13.1.pre1",
+                    "0.14.1",
+                    "0.14.1.pre1",
+                    "0.15.0",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "1.0.0",
+                    "1.0.0.pre1",
+                    "1.0.0.pre2",
+                    "1.0.1",
+                    "1.0.1.pre1",
+                    "1.1.2",
+                    "1.10.0",
+                    "1.10.0.pre1",
+                    "1.10.0.pre2",
+                    "1.11.0",
+                    "1.11.0.pre2",
+                    "1.11.1",
+                    "1.12.0",
+                    "1.13.0",
+                    "1.13.0.pre1",
+                    "1.13.0.pre3",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.2.pre1",
+                    "1.15.0",
+                    "1.15.0.pre1",
+                    "1.16.0",
+                    "1.16.0.pre1",
+                    "1.17.0",
+                    "1.17.0.pre1",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.18.0.pre1",
+                    "1.19.0",
+                    "1.19.0.pre1",
+                    "1.2.0",
+                    "1.2.0.pre1",
+                    "1.2.1.pre1",
+                    "1.2.1.pre2",
+                    "1.2.2",
+                    "1.2.5",
+                    "1.20.0",
+                    "1.20.0.pre1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.22.0.pre1",
+                    "1.22.1",
+                    "1.23.0",
+                    "1.23.0.pre1",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.0.pre1",
+                    "1.25.0",
+                    "1.25.0.pre1",
+                    "1.26.0",
+                    "1.26.0.pre1",
+                    "1.27.0",
+                    "1.27.0.pre1",
+                    "1.28.0",
+                    "1.28.0.pre1",
+                    "1.28.0.pre2",
+                    "1.3.4",
+                    "1.30.0",
+                    "1.30.0.pre1",
+                    "1.30.1",
+                    "1.30.2",
+                    "1.31.0.pre1",
+                    "1.31.0.pre2",
+                    "1.31.1",
+                    "1.32.0",
+                    "1.32.0.pre1",
+                    "1.33.0.pre1",
+                    "1.34.0",
+                    "1.35.0",
+                    "1.35.0.pre1",
+                    "1.36.0",
+                    "1.37.0",
+                    "1.37.0.pre1",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.0.pre1",
+                    "1.39.0",
+                    "1.39.0.pre1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.5",
+                    "1.40.0",
+                    "1.40.0.pre1",
+                    "1.41.0",
+                    "1.41.0.pre2",
+                    "1.41.1",
+                    "1.42.0",
+                    "1.42.0.pre1",
+                    "1.43.1",
+                    "1.44.0.pre2",
+                    "1.45.0",
+                    "1.46.2",
+                    "1.46.3",
+                    "1.47.0",
+                    "1.48.0",
+                    "1.48.0.pre1",
+                    "1.49.0.pre1",
+                    "1.49.1",
+                    "1.50.0",
+                    "1.50.0.pre1",
+                    "1.51.0",
+                    "1.52.0",
+                    "1.52.0.pre2",
+                    "1.52.2",
+                    "1.53.0.pre2",
+                    "1.6.0",
+                    "1.6.0.pre1",
+                    "1.6.2",
+                    "1.6.4",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.7.0",
+                    "1.7.0.pre1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.3",
+                    "1.8.6",
+                    "1.8.7",
+                    "1.9.0.pre1",
+                    "1.9.0.pre2",
+                    "1.9.0.pre3",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-9hxf-ppjv-w6rq/GHSA-9hxf-ppjv-w6rq.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32732"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/pull/32309"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/releases/tag/v1.53.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/grpc/CVE-2023-32732.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/37IDNVY5AWVH7JDMM2SDTL24ZPPZJNSY/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VWE44J5FG7THHL7XVEVTNIGEYBNKJBLL/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-440"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-06T23:56:31Z",
+                "nvd_published_at": "2023-06-09T11:15:09Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-10T05:21:12Z",
+              "published": "2023-07-05T19:12:51Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cfgp-2977-2fmm",
+              "aliases": [
+                "CVE-2023-32731"
+              ],
+              "summary": "Connection confusion in gRPC",
+              "details": "When gRPC HTTP2 stack raised a header size exceeded error, it skipped parsing the rest of the HPACK frame. This caused any HPACK table mutations to also be skipped, resulting in a desynchronization of HPACK tables between sender and receiver. If leveraged, say, between a proxy and a backend, this could lead to requests from the proxy being interpreted as containing headers from different proxy clients - leading to an information leak that can be used for privilege escalation or data exfiltration. We recommend upgrading beyond the commit contained in  https://github.com/grpc/grpc/pull/32309",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "io.grpc:grpc-protobuf",
+                    "purl": "pkg:maven/io.grpc/grpc-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.15.0",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.8.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.0-pre1",
+                    "1.0.0-pre2",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.11.0",
+                    "1.12.0",
+                    "1.12.1",
+                    "1.13.1",
+                    "1.13.2",
+                    "1.14.0",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.16.0",
+                    "1.16.1",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.19.0",
+                    "1.2.0",
+                    "1.20.0",
+                    "1.21.0",
+                    "1.21.1",
+                    "1.22.0",
+                    "1.22.1",
+                    "1.22.2",
+                    "1.22.3",
+                    "1.23.0",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.25.0",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.27.0",
+                    "1.27.1",
+                    "1.27.2",
+                    "1.28.0",
+                    "1.28.1",
+                    "1.29.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.30.0",
+                    "1.30.1",
+                    "1.30.2",
+                    "1.31.0",
+                    "1.31.1",
+                    "1.31.2",
+                    "1.32.1",
+                    "1.32.2",
+                    "1.32.3",
+                    "1.33.0",
+                    "1.33.1",
+                    "1.34.0",
+                    "1.34.1",
+                    "1.35.0",
+                    "1.35.1",
+                    "1.36.0",
+                    "1.36.1",
+                    "1.36.2",
+                    "1.36.3",
+                    "1.37.0",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.1",
+                    "1.39.0",
+                    "1.4.0",
+                    "1.40.0",
+                    "1.40.1",
+                    "1.40.2",
+                    "1.41.0",
+                    "1.41.1",
+                    "1.41.2",
+                    "1.41.3",
+                    "1.42.0",
+                    "1.42.1",
+                    "1.42.2",
+                    "1.42.3",
+                    "1.43.0",
+                    "1.43.1",
+                    "1.43.2",
+                    "1.43.3",
+                    "1.44.0",
+                    "1.44.1",
+                    "1.44.2",
+                    "1.45.0",
+                    "1.45.1",
+                    "1.45.2",
+                    "1.45.3",
+                    "1.45.4",
+                    "1.46.0",
+                    "1.46.1",
+                    "1.47.0",
+                    "1.47.1",
+                    "1.48.0",
+                    "1.48.1",
+                    "1.48.2",
+                    "1.49.0",
+                    "1.49.1",
+                    "1.49.2",
+                    "1.5.0",
+                    "1.50.0",
+                    "1.50.1",
+                    "1.50.2",
+                    "1.50.3",
+                    "1.51.0",
+                    "1.51.1",
+                    "1.51.3",
+                    "1.52.0",
+                    "1.52.1",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.9.0",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-cfgp-2977-2fmm/GHSA-cfgp-2977-2fmm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "grpcio",
+                    "purl": "pkg:pypi/grpcio"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0a0",
+                    "0.11.0b0",
+                    "0.11.0b1",
+                    "0.12.0b0",
+                    "0.12.0b8",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.1rc1",
+                    "0.14.0",
+                    "0.14.0rc1",
+                    "0.15.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.4.0a0",
+                    "0.4.0a1",
+                    "0.4.0a13",
+                    "0.4.0a14",
+                    "0.4.0a2",
+                    "0.4.0a3",
+                    "0.4.0a4",
+                    "0.4.0a5",
+                    "0.4.0a6",
+                    "0.4.0a7",
+                    "0.4.0a8",
+                    "0.5.0a0",
+                    "0.5.0a1",
+                    "0.5.0a2",
+                    "0.9.0a0",
+                    "0.9.0a1",
+                    "1.0.0",
+                    "1.0.0rc1",
+                    "1.0.0rc2",
+                    "1.0.1",
+                    "1.0.1rc1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0rc2",
+                    "1.10.1",
+                    "1.10.1rc1",
+                    "1.10.1rc2",
+                    "1.11.0",
+                    "1.11.0rc1",
+                    "1.11.0rc2",
+                    "1.11.1",
+                    "1.11.1rc1",
+                    "1.12.0",
+                    "1.12.0rc1",
+                    "1.12.1",
+                    "1.13.0",
+                    "1.13.0rc1",
+                    "1.13.0rc2",
+                    "1.13.0rc3",
+                    "1.14.0",
+                    "1.14.0rc1",
+                    "1.14.0rc2",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.2rc1",
+                    "1.15.0",
+                    "1.15.0rc1",
+                    "1.16.0",
+                    "1.16.0rc1",
+                    "1.16.1",
+                    "1.17.0",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.19.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.20.0",
+                    "1.20.0rc1",
+                    "1.20.0rc2",
+                    "1.20.0rc3",
+                    "1.20.1",
+                    "1.21.0rc1",
+                    "1.21.1",
+                    "1.21.1rc1",
+                    "1.22.0",
+                    "1.22.0rc1",
+                    "1.22.1",
+                    "1.23.0",
+                    "1.23.0rc1",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.0rc1",
+                    "1.24.1",
+                    "1.24.3",
+                    "1.25.0",
+                    "1.25.0rc1",
+                    "1.26.0",
+                    "1.26.0rc1",
+                    "1.27.0rc1",
+                    "1.27.0rc2",
+                    "1.27.1",
+                    "1.27.2",
+                    "1.28.0rc1",
+                    "1.28.0rc2",
+                    "1.28.1",
+                    "1.29.0",
+                    "1.3.0",
+                    "1.3.3",
+                    "1.3.5",
+                    "1.30.0",
+                    "1.31.0",
+                    "1.32.0",
+                    "1.33.1",
+                    "1.33.2",
+                    "1.34.0",
+                    "1.34.0rc1",
+                    "1.34.1",
+                    "1.35.0",
+                    "1.35.0rc1",
+                    "1.36.0",
+                    "1.36.0rc1",
+                    "1.36.1",
+                    "1.37.0",
+                    "1.37.0rc1",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.0rc1",
+                    "1.38.1",
+                    "1.39.0",
+                    "1.39.0rc1",
+                    "1.4.0",
+                    "1.40.0",
+                    "1.40.0rc1",
+                    "1.41.0",
+                    "1.41.0rc2",
+                    "1.41.1",
+                    "1.42.0",
+                    "1.42.0rc1",
+                    "1.43.0",
+                    "1.43.0rc1",
+                    "1.44.0",
+                    "1.44.0rc1",
+                    "1.44.0rc2",
+                    "1.45.0",
+                    "1.45.0rc1",
+                    "1.46.0",
+                    "1.46.0rc1",
+                    "1.46.0rc2",
+                    "1.46.1",
+                    "1.46.3",
+                    "1.46.5",
+                    "1.47.0",
+                    "1.47.0rc1",
+                    "1.47.2",
+                    "1.47.5",
+                    "1.48.0",
+                    "1.48.0rc1",
+                    "1.48.1",
+                    "1.48.2",
+                    "1.49.0",
+                    "1.49.0rc1",
+                    "1.49.0rc3",
+                    "1.49.1",
+                    "1.50.0",
+                    "1.50.0rc1",
+                    "1.51.0",
+                    "1.51.0rc1",
+                    "1.51.1",
+                    "1.51.3",
+                    "1.52.0",
+                    "1.52.0rc1",
+                    "1.53.0rc2",
+                    "1.6.0",
+                    "1.6.3",
+                    "1.7.0",
+                    "1.7.3",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.6",
+                    "1.9.0",
+                    "1.9.0rc1",
+                    "1.9.0rc2",
+                    "1.9.0rc3",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-cfgp-2977-2fmm/GHSA-cfgp-2977-2fmm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "grpc",
+                    "purl": "pkg:gem/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.53.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.0.pre1.1",
+                    "0.13.1",
+                    "0.13.1.pre1",
+                    "0.14.1",
+                    "0.14.1.pre1",
+                    "0.15.0",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "1.0.0",
+                    "1.0.0.pre1",
+                    "1.0.0.pre2",
+                    "1.0.1",
+                    "1.0.1.pre1",
+                    "1.1.2",
+                    "1.10.0",
+                    "1.10.0.pre1",
+                    "1.10.0.pre2",
+                    "1.11.0",
+                    "1.11.0.pre2",
+                    "1.11.1",
+                    "1.12.0",
+                    "1.13.0",
+                    "1.13.0.pre1",
+                    "1.13.0.pre3",
+                    "1.14.0",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.2.pre1",
+                    "1.15.0",
+                    "1.15.0.pre1",
+                    "1.16.0",
+                    "1.16.0.pre1",
+                    "1.17.0",
+                    "1.17.0.pre1",
+                    "1.17.1",
+                    "1.18.0",
+                    "1.18.0.pre1",
+                    "1.19.0",
+                    "1.19.0.pre1",
+                    "1.2.0",
+                    "1.2.0.pre1",
+                    "1.2.1.pre1",
+                    "1.2.1.pre2",
+                    "1.2.2",
+                    "1.2.5",
+                    "1.20.0",
+                    "1.20.0.pre1",
+                    "1.21.0",
+                    "1.22.0",
+                    "1.22.0.pre1",
+                    "1.22.1",
+                    "1.23.0",
+                    "1.23.0.pre1",
+                    "1.23.1",
+                    "1.24.0",
+                    "1.24.0.pre1",
+                    "1.25.0",
+                    "1.25.0.pre1",
+                    "1.26.0",
+                    "1.26.0.pre1",
+                    "1.27.0",
+                    "1.27.0.pre1",
+                    "1.28.0",
+                    "1.28.0.pre1",
+                    "1.28.0.pre2",
+                    "1.3.4",
+                    "1.30.0",
+                    "1.30.0.pre1",
+                    "1.30.1",
+                    "1.30.2",
+                    "1.31.0.pre1",
+                    "1.31.0.pre2",
+                    "1.31.1",
+                    "1.32.0",
+                    "1.32.0.pre1",
+                    "1.33.0.pre1",
+                    "1.34.0",
+                    "1.35.0",
+                    "1.35.0.pre1",
+                    "1.36.0",
+                    "1.37.0",
+                    "1.37.0.pre1",
+                    "1.37.1",
+                    "1.38.0",
+                    "1.38.0.pre1",
+                    "1.39.0",
+                    "1.39.0.pre1",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.5",
+                    "1.40.0",
+                    "1.40.0.pre1",
+                    "1.41.0",
+                    "1.41.0.pre2",
+                    "1.41.1",
+                    "1.42.0",
+                    "1.42.0.pre1",
+                    "1.43.1",
+                    "1.44.0.pre2",
+                    "1.45.0",
+                    "1.46.2",
+                    "1.46.3",
+                    "1.47.0",
+                    "1.48.0",
+                    "1.48.0.pre1",
+                    "1.49.0.pre1",
+                    "1.49.1",
+                    "1.50.0",
+                    "1.50.0.pre1",
+                    "1.51.0",
+                    "1.52.0",
+                    "1.52.0.pre2",
+                    "1.52.2",
+                    "1.53.0.pre2",
+                    "1.6.0",
+                    "1.6.0.pre1",
+                    "1.6.2",
+                    "1.6.4",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.7.0",
+                    "1.7.0.pre1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.3",
+                    "1.8.6",
+                    "1.8.7",
+                    "1.9.0.pre1",
+                    "1.9.0.pre2",
+                    "1.9.0.pre3",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/07/GHSA-cfgp-2977-2fmm/GHSA-cfgp-2977-2fmm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-32731"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/issues/33463"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/pull/32309"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/pull/33005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/grpc/CVE-2023-32731.yml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-440"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-07-05T20:26:48Z",
+                "nvd_published_at": "2023-06-09T11:15:09Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:59:27Z",
+              "published": "2017-04-30T17:59:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2017-101",
+              "aliases": [
+                "CVE-2017-8359"
+              ],
+              "details": "Google gRPC before 2017-03-29 has an out-of-bounds write caused by a heap-based use-after-free related to the grpc_call_destroy function in core/lib/surface/call.c.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "grpcio",
+                    "purl": "pkg:pypi/grpcio"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6544a2d5d9ecdb64214da1d228886a7d15bbf5c7"
+                        }
+                      ],
+                      "repo": "https://github.com/grpc/grpc"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10.0a0",
+                    "0.11.0b0",
+                    "0.11.0b1",
+                    "0.12.0b0",
+                    "0.12.0b8",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.1rc1",
+                    "0.14.0",
+                    "0.14.0rc1",
+                    "0.15.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.4.0a0",
+                    "0.4.0a1",
+                    "0.4.0a13",
+                    "0.4.0a14",
+                    "0.4.0a2",
+                    "0.4.0a3",
+                    "0.4.0a4",
+                    "0.4.0a5",
+                    "0.4.0a6",
+                    "0.4.0a7",
+                    "0.4.0a8",
+                    "0.5.0a0",
+                    "0.5.0a1",
+                    "0.5.0a2",
+                    "0.9.0a0",
+                    "0.9.0a1",
+                    "1.0.0",
+                    "1.0.0rc1",
+                    "1.0.0rc2",
+                    "1.0.1",
+                    "1.0.1rc1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.1.3",
+                    "1.2.0",
+                    "1.2.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/grpcio/PYSEC-2017-101.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc/pull/10353"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/grpc/grpc/commit/6544a2d5d9ecdb64214da1d228886a7d15bbf5c7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=726"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/98280"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://pypi.org/project/grpcio"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-8359"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6628-q6j9-w8vg"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-9hxf-ppjv-w6rq"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-cfgp-2977-2fmm"
+              ]
+            },
+            {
+              "ids": [
+                "PYSEC-2017-101"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "protobuf",
+            "version": "",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:00Z",
+              "published": "2022-01-27T00:01:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-77rm-9x9h-xj3g",
+              "aliases": [
+                "CVE-2021-22570",
+                "PYSEC-2022-48"
+              ],
+              "summary": "NULL Pointer Dereference in Protocol Buffers",
+              "details": "Nullptr dereference when a null char is present in a proto symbol. The symbol is parsed incorrectly, leading to an unchecked call into the proto file's name during generation of the resulting error message. Since the symbol is incorrectly parsed, the file is nullptr. We recommend upgrading to version 3.15.0 or greater.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Google.Protobuf",
+                    "purl": "pkg:nuget/Google.Protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1-test1",
+                    "3.0.0",
+                    "3.0.0-alpha4",
+                    "3.0.0-beta2",
+                    "3.0.0-beta3",
+                    "3.0.0-beta4",
+                    "3.1.0",
+                    "3.10.0",
+                    "3.10.0-rc1",
+                    "3.10.1",
+                    "3.11.0-rc1",
+                    "3.11.0-rc2",
+                    "3.11.1",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0-rc1",
+                    "3.12.0-rc2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.3",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0-rc3",
+                    "3.14.0",
+                    "3.14.0-rc1",
+                    "3.14.0-rc2",
+                    "3.14.0-rc3",
+                    "3.15.0-rc1",
+                    "3.15.0-rc2",
+                    "3.2.0",
+                    "3.2.0-rc1",
+                    "3.2.0-rc2",
+                    "3.3.0",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.5.0",
+                    "3.5.1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.8.0",
+                    "3.9.0",
+                    "3.9.0-rc1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-77rm-9x9h-xj3g/GHSA-77rm-9x9h-xj3g.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Packagist",
+                    "name": "google/protobuf",
+                    "purl": "pkg:composer/google/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "v3.1.0-alpha-1",
+                    "v3.10.0",
+                    "v3.10.0RC1",
+                    "v3.11.0",
+                    "v3.11.0RC1",
+                    "v3.11.0RC2",
+                    "v3.11.1",
+                    "v3.11.2",
+                    "v3.11.3",
+                    "v3.11.4",
+                    "v3.12.0",
+                    "v3.12.0RC1",
+                    "v3.12.0RC2",
+                    "v3.12.1",
+                    "v3.12.2",
+                    "v3.12.4",
+                    "v3.13.0",
+                    "v3.13.0.1",
+                    "v3.13.0RC3",
+                    "v3.14.0",
+                    "v3.14.0RC1",
+                    "v3.14.0RC2",
+                    "v3.14.0RC3",
+                    "v3.15.0RC1",
+                    "v3.15.0RC2",
+                    "v3.2.0-alpha-1",
+                    "v3.3.0",
+                    "v3.3.0rc1",
+                    "v3.3.1",
+                    "v3.3.2",
+                    "v3.4.0",
+                    "v3.4.0rc1",
+                    "v3.4.0rc2",
+                    "v3.4.0rc3",
+                    "v3.4.1",
+                    "v3.5.0",
+                    "v3.5.0.1",
+                    "v3.5.1",
+                    "v3.5.1.1",
+                    "v3.5.2",
+                    "v3.6.0",
+                    "v3.6.0.1",
+                    "v3.6.0rc1",
+                    "v3.6.0rc2",
+                    "v3.6.1",
+                    "v3.6.1.1",
+                    "v3.6.1.2",
+                    "v3.6.1.3",
+                    "v3.7.0",
+                    "v3.7.0-rc.3",
+                    "v3.7.0rc1",
+                    "v3.7.0rc2",
+                    "v3.7.1",
+                    "v3.8.0",
+                    "v3.8.0RC1",
+                    "v3.9.0",
+                    "v3.9.0RC1",
+                    "v3.9.1",
+                    "v3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-77rm-9x9h-xj3g/GHSA-77rm-9x9h-xj3g.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.1",
+                    "2.0.3",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.4.0a",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0-alpha-2",
+                    "3.0.0-alpha-3",
+                    "3.0.0-alpha-3.1",
+                    "3.0.0-beta-1",
+                    "3.0.0-beta-2",
+                    "3.0.0-beta-3",
+                    "3.0.0-beta-4",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.10.0",
+                    "3.10.0-rc-1",
+                    "3.11.0",
+                    "3.11.0-rc-1",
+                    "3.11.0-rc-2",
+                    "3.11.1",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0-rc-1",
+                    "3.12.0-rc-2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0-rc-3",
+                    "3.14.0",
+                    "3.14.0-rc-1",
+                    "3.14.0-rc-2",
+                    "3.14.0-rc-3",
+                    "3.15.0-rc-1",
+                    "3.15.0-rc-2",
+                    "3.2.0",
+                    "3.2.0-rc.1",
+                    "3.2.0rc2",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.4.0",
+                    "3.5.0",
+                    "3.5.1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0-rc1",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0-rc-1",
+                    "3.9.0",
+                    "3.9.0-rc-1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-77rm-9x9h-xj3g/GHSA-77rm-9x9h-xj3g.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/protocolbuffers/protobuf",
+                    "purl": "pkg:golang/github.com/protocolbuffers/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-77rm-9x9h-xj3g/GHSA-77rm-9x9h-xj3g.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0beta",
+                    "2.0.3",
+                    "2.3.0",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0a2",
+                    "3.0.0a3",
+                    "3.0.0b1",
+                    "3.0.0b1.post1",
+                    "3.0.0b1.post2",
+                    "3.0.0b2",
+                    "3.0.0b2.post1",
+                    "3.0.0b2.post2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.1.0",
+                    "3.1.0.post1",
+                    "3.10.0",
+                    "3.10.0rc1",
+                    "3.11.0",
+                    "3.11.0rc1",
+                    "3.11.0rc2",
+                    "3.11.1",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.12.0",
+                    "3.12.0rc1",
+                    "3.12.0rc2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0rc3",
+                    "3.14.0",
+                    "3.14.0rc1",
+                    "3.14.0rc2",
+                    "3.14.0rc3",
+                    "3.15.0rc1",
+                    "3.15.0rc2",
+                    "3.2.0",
+                    "3.2.0rc1",
+                    "3.2.0rc1.post1",
+                    "3.2.0rc2",
+                    "3.3.0",
+                    "3.4.0",
+                    "3.5.0.post1",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.2.post1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0rc2",
+                    "3.7.0rc3",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0rc1",
+                    "3.9.0",
+                    "3.9.0rc1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-77rm-9x9h-xj3g/GHSA-77rm-9x9h-xj3g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-22570"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/protocolbuffers/protobuf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/04/msg00019.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3DVUZPALAQ34TQP6KFNLM4IZS6B32XSA/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5PAGL5M2KGYPN3VEQCRJJE6NA7D5YG5X/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/BTRGBRC5KGCA4SK5MUNLPYJRAGXMBIYY/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IFX6KPNOFHYD6L4XES5PCM3QNSKZBOTQ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/KQJB6ZPRLKV6WCMX2PRRRQBFAOXFBK6B/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MRWRAXAFR3JR7XCFWTHC2KALSZKWACCE/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NVTWVQRB5OCCTMKEQFY5MYED3DXDVSLP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20220429-0005/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-476"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-02-03T22:48:51Z",
+                "nvd_published_at": "2022-01-26T14:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:07:52Z",
+              "published": "2022-09-23T20:31:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8gq9-2x98-w8hf",
+              "aliases": [
+                "CVE-2022-1941"
+              ],
+              "summary": "protobuf-cpp and protobuf-python have potential Denial of Service issue",
+              "details": "### Summary\n\nA message parsing and memory management vulnerability in ProtocolBuffer’s C++ and Python implementations can trigger an out of memory (OOM) failure when processing a specially crafted message, which could lead to a denial of service (DoS) on services using the libraries.\n\nReporter: [ClusterFuzz](https://google.github.io/clusterfuzz/)\n\nAffected versions: All versions of C++ Protobufs (including Python) prior to the versions listed below.\n\n### Severity \u0026 Impact\nAs scored by google  \n**Medium 5.7** - [CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H)  \nAsscored byt NIST  \n**High 7.5** - [CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H)\n\nA small (~500 KB) malicious payload can be constructed which causes the running service to allocate more than 3GB of RAM.\n\n### Proof of Concept\n\nFor reproduction details, please refer to the unit test that identifies the specific inputs that exercise this parsing weakness.\n\n### Mitigation / Patching\n\nPlease update to the latest available versions of the following packages:\n- protobuf-cpp (3.18.3, 3.19.5, 3.20.2, 3.21.6)\n- protobuf-python (3.18.3, 3.19.5, 3.20.2, 4.21.6)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.18.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0beta",
+                    "2.0.3",
+                    "2.3.0",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0a2",
+                    "3.0.0a3",
+                    "3.0.0b1",
+                    "3.0.0b1.post1",
+                    "3.0.0b1.post2",
+                    "3.0.0b2",
+                    "3.0.0b2.post1",
+                    "3.0.0b2.post2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.1.0",
+                    "3.1.0.post1",
+                    "3.10.0",
+                    "3.10.0rc1",
+                    "3.11.0",
+                    "3.11.0rc1",
+                    "3.11.0rc2",
+                    "3.11.1",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.12.0",
+                    "3.12.0rc1",
+                    "3.12.0rc2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0rc3",
+                    "3.14.0",
+                    "3.14.0rc1",
+                    "3.14.0rc2",
+                    "3.14.0rc3",
+                    "3.15.0",
+                    "3.15.0rc1",
+                    "3.15.0rc2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0rc1",
+                    "3.16.0rc2",
+                    "3.17.0",
+                    "3.17.0rc1",
+                    "3.17.0rc2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0rc1",
+                    "3.18.0rc2",
+                    "3.18.1",
+                    "3.2.0",
+                    "3.2.0rc1",
+                    "3.2.0rc1.post1",
+                    "3.2.0rc2",
+                    "3.3.0",
+                    "3.4.0",
+                    "3.5.0.post1",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.2.post1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0rc2",
+                    "3.7.0rc3",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0rc1",
+                    "3.9.0",
+                    "3.9.0rc1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-8gq9-2x98-w8hf/GHSA-8gq9-2x98-w8hf.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.19.0"
+                        },
+                        {
+                          "fixed": "3.19.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.19.0",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-8gq9-2x98-w8hf/GHSA-8gq9-2x98-w8hf.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.20.0"
+                        },
+                        {
+                          "fixed": "3.20.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.20.0",
+                    "3.20.1",
+                    "3.20.1rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-8gq9-2x98-w8hf/GHSA-8gq9-2x98-w8hf.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.21.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.21.0",
+                    "4.21.0rc1",
+                    "4.21.0rc2",
+                    "4.21.1",
+                    "4.21.2",
+                    "4.21.3",
+                    "4.21.4",
+                    "4.21.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/09/GHSA-8gq9-2x98-w8hf/GHSA-8gq9-2x98-w8hf.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/security/advisories/GHSA-8gq9-2x98-w8hf"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-1941"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cloud.google.com/support/bulletins#GCP-2022-019"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/protocolbuffers/protobuf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/04/msg00019.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CBAUKJQL6O4TIWYBENORSY5P43TVB4M3/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MPCGUT3T5L6C3IDWUPSUO22QDCGQKTOP/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2022/09/27/1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-119",
+                  "CWE-1286"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-09-23T20:31:15Z",
+                "nvd_published_at": "2022-09-22T15:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:56Z",
+              "published": "2022-05-13T01:06:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jwvw-v7c5-m82h",
+              "aliases": [
+                "CVE-2015-5237",
+                "PYSEC-2017-65"
+              ],
+              "summary": "protobuf susceptible to buffer overflow",
+              "details": "protobuf allows remote authenticated attackers to cause a heap-based buffer overflow.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Google.Protobuf",
+                    "purl": "pkg:nuget/Google.Protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1-test1",
+                    "3.0.0",
+                    "3.0.0-alpha4",
+                    "3.0.0-beta2",
+                    "3.0.0-beta3",
+                    "3.0.0-beta4",
+                    "3.1.0",
+                    "3.2.0",
+                    "3.2.0-rc1",
+                    "3.2.0-rc2",
+                    "3.3.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jwvw-v7c5-m82h/GHSA-jwvw-v7c5-m82h.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-parent",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-parent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0",
+                    "3.0.0-beta-3",
+                    "3.0.0-beta-4",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.2.0",
+                    "3.2.0-rc.1",
+                    "3.2.0rc2",
+                    "3.3.0",
+                    "3.3.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jwvw-v7c5-m82h/GHSA-jwvw-v7c5-m82h.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/protocolbuffers/protobuf",
+                    "purl": "pkg:golang/github.com/protocolbuffers/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jwvw-v7c5-m82h/GHSA-jwvw-v7c5-m82h.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Packagist",
+                    "name": "google/protobuf",
+                    "purl": "pkg:composer/google/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "v3.1.0-alpha-1",
+                    "v3.2.0-alpha-1",
+                    "v3.3.0",
+                    "v3.3.0rc1",
+                    "v3.3.1",
+                    "v3.3.2",
+                    "v3.4.0rc1",
+                    "v3.4.0rc2",
+                    "v3.4.0rc3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jwvw-v7c5-m82h/GHSA-jwvw-v7c5-m82h.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0beta",
+                    "2.0.3",
+                    "2.3.0",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0a2",
+                    "3.0.0a3",
+                    "3.0.0b1",
+                    "3.0.0b1.post1",
+                    "3.0.0b1.post2",
+                    "3.0.0b2",
+                    "3.0.0b2.post1",
+                    "3.0.0b2.post2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.1.0",
+                    "3.1.0.post1",
+                    "3.2.0",
+                    "3.2.0rc1",
+                    "3.2.0rc1.post1",
+                    "3.2.0rc2",
+                    "3.3.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-jwvw-v7c5-m82h/GHSA-jwvw-v7c5-m82h.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5237"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/protobuf/issues/760"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1256426"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jwvw-v7c5-m82h"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/google/protobuf/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/protobuf/releases/tag/v3.4.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/protobuf/PYSEC-2017-65.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r00097d0b5b6164ea428554007121d5dc1f88ba2af7b9e977a10572cd@%3Cdev.hbase.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r00d9ab1fc0f1daf14cd4386564dd84f7889404438d81462c86dfa836@%3Ccommon-dev.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cdev.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cuser.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r0ca83171c4898dc92b86fa6f484a7be1dc96206765f4d01dce0f1b28@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1263fa5b51e4ec3cb8f09ff40e4747428c71198e9bee93349ec96a3c@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r14fa8d38d5757254f1a2e112270c996711d514de2e3b01c93d397ab4@%3Cissues.spark.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r17dc6f394429f6bffb5e4c66555d93c2e9923cbbdc5a93db9a56c1c7@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1d274d647b3c2060df9be21eade4ce56d3a59998cf19ac72662dd994@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r2ea33ce5591a9cb9ed52750b6ab42ab658f529a7028c3166ba93c7d5@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r320dc858da88846ba00bb077bcca2cdf75b7dde0f6eb3a3d60dba6a1@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r42e47994734cd1980ef3e204a40555336e10cc80096927aca2f37d90@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r42ef6acfb0d86a2df0c2390702ecbe97d2104a331560f2790d17ca69@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4886108206d4c535db9b20c813fe4723d4fe6a91b9278382af8b9d08@%3Cissues.spark.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r4ef574a5621b0e670a3ce641e9922543e34f22bf4c9ee9584aa67fcf@%3Cissues.hbase.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5741f4dbdd129dbb9885f5fb170dc1b24a06b9313bedef5e67fded94@%3Cissues.spark.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5e52caf41dc49df55b4ee80758356fe1ff2a88179ff24c685de7c28d@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r764fc66435ee4d185d359c28c0887d3e5866d7292a8d5598d9e7cbc4@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r7fed8dd9bee494094e7011cf3c2ab75bd8754ea314c6734688c42932@%3Ccommon-issues.hadoop.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r85c9a764b573c786224688cc906c27e28343e18f5b33387f94cae90f@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra28fed69eef3a71e5fe5daea001d0456b05b102044237330ec5c7c82@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb40dc9d63a5331bce8e80865b7fa3af9dd31e16555affd697b6f3526@%3Cissues.spark.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb71dac1d9dd4e8a8ae3dbc033aeae514eda9be1263c1df3b42a530a2@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rd64381fb8f92d640c1975dc50dcdf1b8512e02a2a7b20292d3565cae@%3Cissues.hbase.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re6d04a214424a97ea59c62190d79316edf311a0a6346524dfef3b940@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf7539287c90be979bac94af9aaba34118fbf968864944b4871af48dd@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/08/27/2"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-787"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-17T21:54:16Z",
+                "nvd_published_at": "2017-09-25T17:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:56Z",
+              "published": "2017-09-25T17:29:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2017-65",
+              "aliases": [
+                "CVE-2015-5237",
+                "GHSA-jwvw-v7c5-m82h"
+              ],
+              "details": "protobuf allows remote authenticated attackers to cause a heap-based buffer overflow.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0beta",
+                    "2.0.3",
+                    "2.3.0",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0a2",
+                    "3.0.0a3",
+                    "3.0.0b1",
+                    "3.0.0b1.post1",
+                    "3.0.0b1.post2",
+                    "3.0.0b2",
+                    "3.0.0b2.post1",
+                    "3.0.0b2.post2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.1.0",
+                    "3.1.0.post1",
+                    "3.2.0",
+                    "3.2.0rc1",
+                    "3.2.0rc1.post1",
+                    "3.2.0rc2",
+                    "3.3.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/protobuf/PYSEC-2017-65.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/google/protobuf/issues/760"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1256426"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/08/27/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/b0656d359c7d40ec9f39c8cc61bca66802ef9a2a12ee199f5b0c1442@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/519eb0fd45642dcecd9ff74cb3e71c20a4753f7d82e2f07864b5108f@%3Cdev.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/ra28fed69eef3a71e5fe5daea001d0456b05b102044237330ec5c7c82@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/f9bc3e55f4e28d1dcd1a69aae6d53e609a758e34d2869b4d798e13cc@%3Cissues.drill.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r17dc6f394429f6bffb5e4c66555d93c2e9923cbbdc5a93db9a56c1c7@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r42e47994734cd1980ef3e204a40555336e10cc80096927aca2f37d90@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/re6d04a214424a97ea59c62190d79316edf311a0a6346524dfef3b940@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1263fa5b51e4ec3cb8f09ff40e4747428c71198e9bee93349ec96a3c@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r42ef6acfb0d86a2df0c2390702ecbe97d2104a331560f2790d17ca69@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rb71dac1d9dd4e8a8ae3dbc033aeae514eda9be1263c1df3b42a530a2@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r320dc858da88846ba00bb077bcca2cdf75b7dde0f6eb3a3d60dba6a1@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r85c9a764b573c786224688cc906c27e28343e18f5b33387f94cae90f@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cuser.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r02e39d7beb32eebcdbb4b516e95f67d71c90d5d462b26f4078d21eeb@%3Cdev.flink.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r5e52caf41dc49df55b4ee80758356fe1ff2a88179ff24c685de7c28d@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/rf7539287c90be979bac94af9aaba34118fbf968864944b4871af48dd@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread.html/r1d274d647b3c2060df9be21eade4ce56d3a59998cf19ac72662dd994@%3Ccommits.pulsar.apache.org%3E"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jwvw-v7c5-m82h"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T04:05:00Z",
+              "published": "2022-01-26T14:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2022-48",
+              "aliases": [
+                "CVE-2021-22570",
+                "GHSA-77rm-9x9h-xj3g"
+              ],
+              "details": "Nullptr dereference when a null char is present in a proto symbol. The symbol is parsed incorrectly, leading to an unchecked call into the proto file's name during generation of the resulting error message. Since the symbol is incorrectly parsed, the file is nullptr. We recommend upgrading to version 3.15.0 or greater.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "protobuf",
+                    "purl": "pkg:pypi/protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.15.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0beta",
+                    "2.0.3",
+                    "2.3.0",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0a2",
+                    "3.0.0a3",
+                    "3.0.0b1",
+                    "3.0.0b1.post1",
+                    "3.0.0b1.post2",
+                    "3.0.0b2",
+                    "3.0.0b2.post1",
+                    "3.0.0b2.post2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.1.0",
+                    "3.1.0.post1",
+                    "3.10.0",
+                    "3.10.0rc1",
+                    "3.11.0",
+                    "3.11.0rc1",
+                    "3.11.0rc2",
+                    "3.11.1",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.12.0",
+                    "3.12.0rc1",
+                    "3.12.0rc2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0rc3",
+                    "3.14.0",
+                    "3.14.0rc1",
+                    "3.14.0rc2",
+                    "3.14.0rc3",
+                    "3.15.0rc1",
+                    "3.15.0rc2",
+                    "3.2.0",
+                    "3.2.0rc1",
+                    "3.2.0rc1.post1",
+                    "3.2.0rc2",
+                    "3.3.0",
+                    "3.4.0",
+                    "3.5.0.post1",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.2.post1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0rc2",
+                    "3.7.0rc3",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0rc1",
+                    "3.9.0",
+                    "3.9.0rc1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/protobuf/PYSEC-2022-48.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IFX6KPNOFHYD6L4XES5PCM3QNSKZBOTQ/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3DVUZPALAQ34TQP6KFNLM4IZS6B32XSA/"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-77rm-9x9h-xj3g"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-77rm-9x9h-xj3g",
+                "PYSEC-2022-48"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-8gq9-2x98-w8hf"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-jwvw-v7c5-m82h",
+                "PYSEC-2017-65"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "pyopenssl",
+            "version": "",
+            "ecosystem": "PyPI",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:40Z",
+              "published": "2018-10-10T16:10:23Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2rcm-phc9-3945",
+              "aliases": [
+                "CVE-2018-1000808",
+                "PYSEC-2018-24"
+              ],
+              "summary": "Pyopenssl Incorrect Memory Management",
+              "details": "It was discovered that pyOpenSSL incorrectly handled memory when performing operations on a PKCS #12 store. A remote attacker could possibly use this issue to cause pyOpenSSL to consume resources, resulting in a denial of service.\n\nThis attack appear to be exploitable via Depends upon calling application, however it could be as simple as initiating a TLS connection that would cause the calling application to reload certificates from a PKCS #12 store. This vulnerability appears to have been fixed in 17.5.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pyopenssl",
+                    "purl": "pkg:pypi/pyopenssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "17.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.12",
+                    "0.13",
+                    "0.13.1",
+                    "0.14",
+                    "0.15",
+                    "0.15.1",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "16.0.0",
+                    "16.1.0",
+                    "16.2.0",
+                    "17.0.0",
+                    "17.1.0",
+                    "17.2.0",
+                    "17.3.0",
+                    "17.4.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-2rcm-phc9-3945/GHSA-2rcm-phc9-3945.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000808"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/pyopenssl/pull/723"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/pyopenssl/commit/e73818600065821d588af475b024f4eb518c3509"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:0085"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-2rcm-phc9-3945"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/pyopenssl"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3813-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00014.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-401",
+                  "CWE-404"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:52:58Z",
+                "nvd_published_at": "2018-10-08T15:29:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:59:40Z",
+              "published": "2018-10-10T16:10:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-p28m-34f6-967q",
+              "aliases": [
+                "CVE-2018-1000807",
+                "PYSEC-2018-23"
+              ],
+              "summary": "PyOpenSSL Use-After-Free vulnerability",
+              "details": "It was discovered that pyOpenSSL incorrectly handled memory when handling X509 objects. A remote attacker could use this issue to cause pyOpenSSL to crash, resulting in a denial of service, or possibly execute arbitrary code. This attack appears to be exploitable via Depends on the calling application and if it retains a reference to the memory. This vulnerability appears to have been fixed in 17.5.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pyopenssl",
+                    "purl": "pkg:pypi/pyopenssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "17.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.12",
+                    "0.13",
+                    "0.13.1",
+                    "0.14",
+                    "0.15",
+                    "0.15.1",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "16.0.0",
+                    "16.1.0",
+                    "16.2.0",
+                    "17.0.0",
+                    "17.1.0",
+                    "17.2.0",
+                    "17.3.0",
+                    "17.4.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/10/GHSA-p28m-34f6-967q/GHSA-p28m-34f6-967q.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000807"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/pyopenssl/pull/723"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/pyopenssl/commit/e73818600065821d588af475b024f4eb518c3509"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:0085"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-p28m-34f6-967q"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/pyopenssl"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3813-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00014.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-416"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:47:43Z",
+                "nvd_published_at": "2018-10-08T15:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:21Z",
+              "published": "2013-09-30T21:55:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2013-31",
+              "aliases": [
+                "CVE-2013-4314"
+              ],
+              "details": "The X509Extension in pyOpenSSL before 0.13.1 does not properly handle a '\\0' character in a domain name in the Subject Alternative Name field of an X.509 certificate, which allows man-in-the-middle attackers to spoof arbitrary SSL servers via a crafted certificate issued by a legitimate Certification Authority.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pyopenssl",
+                    "purl": "pkg:pypi/pyopenssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.13.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.12",
+                    "0.13",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pyopenssl/PYSEC-2013-31.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2013/09/06/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://mail.python.org/pipermail/pyopenssl-users/2013-September/000478.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1005325"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.ubuntu.com/usn/USN-1965-1"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "http://www.debian.org/security/2013/dsa-2763"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2013-11/msg00015.html"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:59:40Z",
+              "published": "2018-10-08T15:29:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2018-23",
+              "aliases": [
+                "CVE-2018-1000807",
+                "GHSA-p28m-34f6-967q"
+              ],
+              "details": "Python Cryptographic Authority pyopenssl version prior to version 17.5.0 contains a CWE-416: Use After Free vulnerability in X509 object handling that can result in Use after free can lead to possible denial of service or remote code execution.. This attack appear to be exploitable via Depends on the calling application and if it retains a reference to the memory.. This vulnerability appears to have been fixed in 17.5.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pyopenssl",
+                    "purl": "pkg:pypi/pyopenssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "17.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.12",
+                    "0.13",
+                    "0.13.1",
+                    "0.14",
+                    "0.15",
+                    "0.15.1",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "16.0.0",
+                    "16.1.0",
+                    "16.2.0",
+                    "17.0.0",
+                    "17.1.0",
+                    "17.2.0",
+                    "17.3.0",
+                    "17.4.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pyopenssl/PYSEC-2018-23.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/pyopenssl/pull/723"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3813-1/"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:0085"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00014.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-p28m-34f6-967q"
+                }
+              ]
+            },
+            {
+              "modified": "2023-11-08T03:59:40Z",
+              "published": "2018-10-08T15:29:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2018-24",
+              "aliases": [
+                "CVE-2018-1000808",
+                "GHSA-2rcm-phc9-3945"
+              ],
+              "details": "Python Cryptographic Authority pyopenssl version Before 17.5.0 contains a CWE - 401 : Failure to Release Memory Before Removing Last Reference vulnerability in PKCS #12 Store that can result in Denial of service if memory runs low or is exhausted. This attack appear to be exploitable via Depends upon calling application, however it could be as simple as initiating a TLS connection. Anything that would cause the calling application to reload certificates from a PKCS #12 store.. This vulnerability appears to have been fixed in 17.5.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "pyopenssl",
+                    "purl": "pkg:pypi/pyopenssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "17.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.10",
+                    "0.11",
+                    "0.12",
+                    "0.13",
+                    "0.13.1",
+                    "0.14",
+                    "0.15",
+                    "0.15.1",
+                    "0.6",
+                    "0.7",
+                    "0.8",
+                    "0.9",
+                    "16.0.0",
+                    "16.1.0",
+                    "16.2.0",
+                    "17.0.0",
+                    "17.1.0",
+                    "17.2.0",
+                    "17.3.0",
+                    "17.4.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/pyopenssl/PYSEC-2018-24.yaml"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/pyopenssl/pull/723"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/3813-1/"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:0085"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-04/msg00014.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-2rcm-phc9-3945"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2rcm-phc9-3945",
+                "PYSEC-2018-24"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-p28m-34f6-967q",
+                "PYSEC-2018-23"
+              ]
+            },
+            {
+              "ids": [
+                "PYSEC-2013-31"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

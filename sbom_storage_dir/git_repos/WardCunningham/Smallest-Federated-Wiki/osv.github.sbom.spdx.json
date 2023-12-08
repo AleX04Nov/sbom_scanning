@@ -1,0 +1,3440 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/src/github.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "addressable",
+            "version": "2.3.2",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:59Z",
+              "published": "2021-07-12T16:58:33Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jxhc-q857-3j6g",
+              "aliases": [
+                "CVE-2021-32740"
+              ],
+              "summary": "Regular Expression Denial of Service in Addressable templates",
+              "details": "### Impact\n\nWithin the URI template implementation in Addressable, a maliciously crafted template may result in uncontrolled resource consumption, leading to denial of service when matched against a URI. In typical usage, templates would not normally be read from untrusted user input, but nonetheless, no previous security advisory for Addressable has cautioned against doing this. Users of the parsing capabilities in Addressable but not the URI template capabilities are unaffected.\n\n### Patches\n\nThe vulnerability was introduced in version 2.3.0 (previously yanked) and has been present in all subsequent versions up to, and including, 2.7.0. It is fixed in version 2.8.0.\n\n### Workarounds\n\nThe vulnerability can be avoided by only creating Template objects from trusted sources that have been validated not to produce catastrophic backtracking.\n\n### References\n\n- https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS\n- https://cwe.mitre.org/data/definitions/1333.html\n- https://www.regular-expressions.info/catastrophic.html\n\n### For more information\nIf you have any questions or comments about this advisory:\n* [Open an issue](https://github.com/sporkmonger/addressable/issues)\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "addressable",
+                    "purl": "pkg:gem/addressable"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.3.0"
+                        },
+                        {
+                          "fixed": "2.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.6.0",
+                    "2.7.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.7.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/07/GHSA-jxhc-q857-3j6g/GHSA-jxhc-q857-3j6g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/security/advisories/GHSA-jxhc-q857-3j6g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32740"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/commit/0d8a3127e35886ce9284810a7f2438bff6b43cbc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/commit/89c76130ce255c601f642a018cb5fb5a80e679a7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sporkmonger/addressable/commit/92685096b1f7235ed8986c03ce30a24972eed848#diff-fb36d3dc67e6565ffde17e666a98697f48e76dac38fabf1bb9e97cdf3b583d76"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jxhc-q857-3j6g"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/addressable/CVE-2021-32740.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sporkmonger/addressable"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SDFQM2NHNAZ3NNUQZEJTYECYZYXV4UDS/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/WYPVOOQU7UB277UUERJMCNQLRCXRCIQ5/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-07-06T15:25:32Z",
+                "nvd_published_at": "2021-07-06T15:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jxhc-q857-3j6g"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "haml",
+            "version": "4.0.0",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:58:48Z",
+              "published": "2019-10-21T21:59:13Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r53w-g4xm-3gc6",
+              "aliases": [
+                "CVE-2017-1002201",
+                "SNYK-RUBY-HAML-20362"
+              ],
+              "summary": "Haml vulnerable to cross-site scripting",
+              "details": "In haml versions prior to version 5.0.0.beta.2, when using user input to perform tasks on the server, characters like `\u003c \u003e \" '` must be escaped properly. In this case, the `'` character was missed. An attacker can manipulate the input to introduce additional attributes, potentially executing code.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "haml",
+                    "purl": "pkg:gem/haml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.10",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.10",
+                    "2.2.11",
+                    "2.2.12",
+                    "2.2.13",
+                    "2.2.14",
+                    "2.2.15",
+                    "2.2.16",
+                    "2.2.17",
+                    "2.2.18",
+                    "2.2.19",
+                    "2.2.2",
+                    "2.2.20",
+                    "2.2.21",
+                    "2.2.22",
+                    "2.2.23",
+                    "2.2.24",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.8",
+                    "2.2.9",
+                    "3.0.0",
+                    "3.0.0.beta.1",
+                    "3.0.0.beta.2",
+                    "3.0.0.beta.3",
+                    "3.0.0.rc.1",
+                    "3.0.0.rc.2",
+                    "3.0.0.rc.3",
+                    "3.0.0.rc.4",
+                    "3.0.0.rc.5",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.11",
+                    "3.0.12",
+                    "3.0.13",
+                    "3.0.14",
+                    "3.0.15",
+                    "3.0.16",
+                    "3.0.17",
+                    "3.0.18",
+                    "3.0.2",
+                    "3.0.21",
+                    "3.0.22",
+                    "3.0.23",
+                    "3.0.24",
+                    "3.0.25",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.0.alpha.10",
+                    "3.1.0.alpha.12",
+                    "3.1.0.alpha.14",
+                    "3.1.0.alpha.141",
+                    "3.1.0.alpha.144",
+                    "3.1.0.alpha.145",
+                    "3.1.0.alpha.147",
+                    "3.1.0.alpha.17",
+                    "3.1.0.alpha.18",
+                    "3.1.0.alpha.19",
+                    "3.1.0.alpha.2",
+                    "3.1.0.alpha.22",
+                    "3.1.0.alpha.23",
+                    "3.1.0.alpha.26",
+                    "3.1.0.alpha.27",
+                    "3.1.0.alpha.28",
+                    "3.1.0.alpha.30",
+                    "3.1.0.alpha.33",
+                    "3.1.0.alpha.36",
+                    "3.1.0.alpha.37",
+                    "3.1.0.alpha.5",
+                    "3.1.0.alpha.9",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.1.4",
+                    "3.1.5",
+                    "3.1.5.beta.1",
+                    "3.1.5.rc.1",
+                    "3.1.6",
+                    "3.1.6.rc.1",
+                    "3.1.7",
+                    "3.1.8",
+                    "3.2.0.alpha.10",
+                    "3.2.0.alpha.13",
+                    "3.2.0.alpha.14",
+                    "3.2.0.alpha.2",
+                    "3.2.0.alpha.3",
+                    "3.2.0.alpha.4",
+                    "3.2.0.alpha.5",
+                    "3.2.0.alpha.8",
+                    "3.2.0.beta.1",
+                    "3.2.0.beta.2",
+                    "3.2.0.beta.3",
+                    "3.2.0.rc.1",
+                    "3.2.0.rc.2",
+                    "3.2.0.rc.3",
+                    "3.2.0.rc.4",
+                    "4.0.0",
+                    "4.0.0.rc.1",
+                    "4.0.1",
+                    "4.0.1.rc.1",
+                    "4.0.2",
+                    "4.0.3",
+                    "4.0.4",
+                    "4.0.5",
+                    "4.0.6",
+                    "4.0.7",
+                    "4.1.0.alpha.2",
+                    "4.1.0.beta.1",
+                    "5.0.0.beta.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/10/GHSA-r53w-g4xm-3gc6/GHSA-r53w-g4xm-3gc6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-1002201"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/haml/haml/commit/18576ae6e9bdcb4303fdbe6b3199869d289d67c2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/haml/haml/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/haml/CVE-2017-1002201.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2019/11/msg00007.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2021/12/msg00028.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202007-27"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-RUBY-HAML-20362"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-10-16T15:18:02Z",
+                "nvd_published_at": "2019-10-15T18:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-r53w-g4xm-3gc6"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rack",
+            "version": "1.5.2",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:12:06Z",
+              "published": "2023-03-08T17:20:04Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-3h57-hmj3-gj3p",
+              "aliases": [
+                "CVE-2023-27530"
+              ],
+              "summary": "Rack has possible DoS Vulnerability in Multipart MIME parsing",
+              "details": "There is a possible DoS vulnerability in the Multipart MIME parsing code in Rack. This vulnerability has been assigned the CVE identifier CVE-2023-27530.\n\nVersions Affected: All. Not affected: None Fixed Versions: 3.0.4.2, 2.2.6.3, 2.1.4.3, 2.0.9.3\n\n# Impact\nThe Multipart MIME parsing code in Rack limits the number of file parts, but does not limit the total number of parts that can be uploaded. Carefully crafted requests can abuse this and cause multipart parsing to take longer than expected.\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\n# Workarounds\nA proxy can be configured to limit the POST body size which will mitigate this issue.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.9.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.1.pre",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.12",
+                    "1.6.13",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9",
+                    "2.0.0.alpha",
+                    "2.0.0.rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.0.9.1",
+                    "2.0.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-3h57-hmj3-gj3p/GHSA-3h57-hmj3-gj3p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.1.0"
+                        },
+                        {
+                          "fixed": "2.1.4.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.1.4.1",
+                    "2.1.4.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-3h57-hmj3-gj3p/GHSA-3h57-hmj3-gj3p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.2.0"
+                        },
+                        {
+                          "fixed": "2.2.6.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.3.1",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.6.1",
+                    "2.2.6.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-3h57-hmj3-gj3p/GHSA-3h57-hmj3-gj3p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.0.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.4.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/03/GHSA-3h57-hmj3-gj3p/GHSA-3h57-hmj3-gj3p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-27530"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2023-27530-possible-dos-vulnerability-in-multipart-mime-parsing/82388"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2023-27530.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/04/msg00017.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5530"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-03-08T17:20:04Z",
+                "nvd_published_at": "2023-03-10T22:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:04:14Z",
+              "published": "2020-07-06T21:31:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5f9h-9pjv-v6j7",
+              "aliases": [
+                "CVE-2020-8161"
+              ],
+              "summary": "Directory traversal in Rack::Directory app bundled with Rack",
+              "details": "A directory traversal vulnerability exists in rack \u003c 2.2.0 that allows an attacker perform directory traversal vulnerability in the Rack::Directory app that is bundled with Rack which could result in information disclosure.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.1.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.1.pre",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.12",
+                    "1.6.13",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9",
+                    "2.0.0.alpha",
+                    "2.0.0.rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.0.9.1",
+                    "2.0.9.2",
+                    "2.0.9.3",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-5f9h-9pjv-v6j7/GHSA-5f9h-9pjv-v6j7.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8161"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/commit/dddb7ad18ed79ca6ab06ccc417a169fde451246e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2020-8161.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/forum/#!topic/ruby-security-ann/T4ZIsfRf2eA"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/rubyonrails-security/c/IOO1vNZTzPA"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00006.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00038.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4561-1/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-548"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-07-06T21:30:32Z",
+                "nvd_published_at": "2020-07-02T19:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:59:59Z",
+              "published": "2018-11-15T15:59:08Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5r2p-j47h-mhpg",
+              "aliases": [
+                "CVE-2018-16471"
+              ],
+              "summary": "Rack vulnerable to Cross-site Scripting",
+              "details": "There is a possible XSS vulnerability in Rack before 2.0.6 and 1.6.11. Carefully crafted requests can impact the data returned by the `scheme` method on `Rack::Request`. Applications that expect the scheme to be limited to 'http' or 'https' and do not escape the return value could be vulnerable to an XSS attack. Note that applications using the normal escaping mechanisms provided by Rails may not impacted, but applications that bypass the escaping mechanisms, or do not use them may be vulnerable.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/11/GHSA-5r2p-j47h-mhpg/GHSA-5r2p-j47h-mhpg.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.1.pre",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/11/GHSA-5r2p-j47h-mhpg/GHSA-5r2p-j47h-mhpg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-16471"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2018-16471.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/forum/#!topic/ruby-security-ann/NAalCee8n6o"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/forum/#!topic/rubyonrails-security/GKsAFT924Ag"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2018/11/msg00022.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4089-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2019-06/msg00032.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00016.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:17:10Z",
+                "nvd_published_at": "2018-11-13T23:29:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:48Z",
+              "published": "2023-01-18T18:19:33Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-65f5-mfpf-vfhj",
+              "aliases": [
+                "CVE-2022-44570"
+              ],
+              "summary": "Denial of service via header parsing in Rack",
+              "details": "There is a possible denial of service vulnerability in the Range header parsing component of Rack. This vulnerability has been assigned the CVE identifier CVE-2022-44570.\n\nVersions Affected: \u003e= 1.5.0 Not affected: None. Fixed Versions: 2.0.9.2, 2.1.4.2, 2.2.6.2, 3.0.0.1\nImpact\n\nCarefully crafted input can cause the Range header parsing component in Rack to take an unexpected amount of time, possibly resulting in a denial of service attack vector. Any applications that deal with Range requests (such as streaming applications, or applications that serve files) may be impacted.\nReleases\n\nThe fixed releases are available at the normal locations.\nWorkarounds\n\nThere are no feasible workarounds for this issue.\nPatches\n\nTo aid users who aren’t able to upgrade immediately we have provided patches for the two supported release series. They are in git-am format and consist of a single changeset.\n\n    2-0-Fix-ReDoS-in-Rack-Utils.get_byte_ranges.patch - Patch for 2.0 series\n    2-1-Fix-ReDoS-in-Rack-Utils.get_byte_ranges.patch - Patch for 2.1 series\n    2-2-Fix-ReDoS-in-Rack-Utils.get_byte_ranges.patch - Patch for 2.2 series\n    3-0-Fix-ReDoS-in-Rack-Utils.get_byte_ranges.patch - Patch for 3.0 series\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.5.0"
+                        },
+                        {
+                          "fixed": "2.0.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.12",
+                    "1.6.13",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9",
+                    "2.0.0.alpha",
+                    "2.0.0.rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.0.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-65f5-mfpf-vfhj/GHSA-65f5-mfpf-vfhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.1.0.0"
+                        },
+                        {
+                          "fixed": "2.1.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4",
+                    "2.1.4.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-65f5-mfpf-vfhj/GHSA-65f5-mfpf-vfhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.2.0.0"
+                        },
+                        {
+                          "fixed": "2.2.6.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.3.1",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.2.6",
+                    "2.2.6.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-65f5-mfpf-vfhj/GHSA-65f5-mfpf-vfhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.0.0.0"
+                        },
+                        {
+                          "fixed": "3.0.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/01/GHSA-65f5-mfpf-vfhj/GHSA-65f5-mfpf-vfhj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-44570"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2022-44570-possible-denial-of-service-vulnerability-in-racks-range-header-parsing/82125"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/releases/tag/v3.0.4.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2022-44570.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5530"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-01-18T18:19:33Z",
+                "nvd_published_at": "2023-02-09T20:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-18T19:01:31Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hrqr-hxpp-chr3",
+              "aliases": [
+                "CVE-2019-16782"
+              ],
+              "summary": "Possible Information Leak / Session Hijack Vulnerability in Rack",
+              "details": "There's a possible information leak / session hijack vulnerability in Rack. Attackers may be able to find and hijack sessions by using timing attacks targeting the session id. Session ids are usually stored and indexed in a database that uses some kind of scheme for speeding up lookups of that session id. By carefully measuring the amount of time it takes to look up a session, an attacker may be able to find a valid session id and hijack the session.\n\nThe session id itself may be generated randomly, but the way the session is indexed by the backing store does not use a secure comparison.\n\n### Impact\n\nThe session id stored in a cookie is the same id that is used when querying the backing session storage engine.  Most storage mechanisms (for example a database) use some sort of indexing in order to speed up the lookup of that id.  By carefully timing requests and session lookup failures, an attacker may be able to perform a timing attack to determine an existing session id and hijack that session.\n\n## Releases\n\nThe 1.6.12 and 2.0.8 releases are available at the normal locations.\n\n### Workarounds\n\nThere are no known workarounds.\n\n### Patches\n\nTo aid users who aren't able to upgrade immediately we have provided patches for\nthe two supported release series. They are in git-am format and consist of a\nsingle changeset.\n\n* 1-6-session-timing-attack.patch - Patch for 1.6 series\n* 2-0-session-timing-attack.patch - Patch for 2.6 series\n\n### Credits\n\nThanks Will Leinweber for reporting this!",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.1.pre",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-hrqr-hxpp-chr3/GHSA-hrqr-hxpp-chr3.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-hrqr-hxpp-chr3/GHSA-hrqr-hxpp-chr3.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/security/advisories/GHSA-hrqr-hxpp-chr3"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16782"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/commit/7fecaee81f59926b6e1913511c90650e76673b38"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2019-16782.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HZXMWILCICQLA2BYSP6I2CRMUG53YBLX/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00016.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2019/12/18/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2019/12/18/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2019/12/19/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2020/04/08/1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2020/04/09/2"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-203",
+                  "CWE-208"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-12-18T19:01:07Z",
+                "nvd_published_at": "2019-12-18T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:09:16Z",
+              "published": "2022-05-27T16:36:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hxqx-xwvh-44m2",
+              "aliases": [
+                "CVE-2022-30122"
+              ],
+              "summary": "Denial of Service Vulnerability in Rack Multipart Parsing",
+              "details": "There is a possible denial of service vulnerability in the multipart parsing component of Rack.  This vulnerability has been assigned the CVE identifier CVE-2022-30122.\n\nVersions Affected:  \u003e= 1.2\nNot affected:       \u003c 1.2\nFixed Versions:     2.0.9.1, 2.1.4.1, 2.2.3.1\n\n## Impact\nCarefully crafted multipart POST requests can cause Rack's multipart parser to take much longer than expected, leading to a possible denial of service vulnerability.\n\nImpacted code will use Rack's multipart parser to parse multipart posts.  This includes directly using the multipart parser like this:\n\n```\nparams = Rack::Multipart.parse_multipart(env)\n```\n\nBut it also includes reading POST data from a Rack request object like this:\n\n```\np request.POST # read POST data\np request.params # reads both query params and POST data\n```\n\nAll users running an affected release should either upgrade or use one of the workarounds immediately.\n\n## Workarounds\nThere are no feasible workarounds for this issue.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.2"
+                        },
+                        {
+                          "fixed": "2.0.9.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.12",
+                    "1.6.13",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9",
+                    "2.0.0.alpha",
+                    "2.0.0.rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.9.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hxqx-xwvh-44m2/GHSA-hxqx-xwvh-44m2.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.1"
+                        },
+                        {
+                          "fixed": "2.1.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.1.4.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hxqx-xwvh-44m2/GHSA-hxqx-xwvh-44m2.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.2"
+                        },
+                        {
+                          "fixed": "2.2.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.2.3.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-hxqx-xwvh-44m2/GHSA-hxqx-xwvh-44m2.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-30122"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2022-30122-denial-of-service-vulnerability-in-rack-multipart-parsing/80729"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2022-30122.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/ruby-security-ann/c/L2Axto442qk"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202310-18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5530"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-05-27T16:36:52Z",
+                "nvd_published_at": "2022-12-05T22:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:04:15Z",
+              "published": "2020-06-24T17:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j6w9-fv6q-3q52",
+              "aliases": [
+                "CVE-2020-8184"
+              ],
+              "summary": "Rack allows Percent-encoded cookies to overwrite existing prefixed cookie names",
+              "details": "A reliance on cookies without validation/integrity check security vulnerability exists in rack \u003c 2.2.3, rack \u003c 2.1.4 that makes it possible for an attacker to forge a secure or host-only cookie prefix.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.1.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.1.pre",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.12",
+                    "1.6.13",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9",
+                    "2.0.0.alpha",
+                    "2.0.0.rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9",
+                    "2.0.9.1",
+                    "2.0.9.2",
+                    "2.0.9.3",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-j6w9-fv6q-3q52/GHSA-j6w9-fv6q-3q52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.2.0"
+                        },
+                        {
+                          "fixed": "2.2.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/06/GHSA-j6w9-fv6q-3q52/GHSA-j6w9-fv6q-3q52.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8184"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/commit/1f5763de6a9fe515ff84992b343d63c88104654c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/895727"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2020-8184.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/rubyonrails-security/c/OWtmozPH9Ak"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/07/msg00006.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00038.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4561-1/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-784"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-24T17:14:36Z",
+                "nvd_published_at": "2020-06-19T17:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:53Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rgr4-9jh5-j4j6",
+              "aliases": [
+                "CVE-2015-3225"
+              ],
+              "summary": "Rack vulnerable to Denial of Service via large parameter depth request",
+              "details": "lib/rack/utils.rb in Rack before 1.5.4 and 1.6.x before 1.6.2, as used with Ruby on Rails 3.x and 4.x and other products, allows remote attackers to cause a denial of service (SystemStackError) via a request with a large parameter depth.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.5.0"
+                        },
+                        {
+                          "fixed": "1.5.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-rgr4-9jh5-j4j6/GHSA-rgr4-9jh5-j4j6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.6.0"
+                        },
+                        {
+                          "fixed": "1.6.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.6.0",
+                    "1.6.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-rgr4-9jh5-j4j6/GHSA-rgr4-9jh5-j4j6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.4.0"
+                        },
+                        {
+                          "fixed": "1.4.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-rgr4-9jh5-j4j6/GHSA-rgr4-9jh5-j4j6.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3225"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/blob/master/HISTORY.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2015-3225.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/forum/#!topic/ruby-security-ann/gcUbICUmKMc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/164173.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-August/165180.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2015-07/msg00040.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2015-07/msg00043.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2015-07/msg00044.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://openwall.com/lists/oss-security/2015/06/16/14"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://rhn.redhat.com/errata/RHSA-2015-2290.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2015/dsa-3322"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:54:48Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:09:16Z",
+              "published": "2022-05-27T16:36:51Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wq4h-7r42-5hrr",
+              "aliases": [
+                "CVE-2022-30123"
+              ],
+              "summary": "Possible shell escape sequence injection vulnerability in Rack",
+              "details": "There is a possible shell escape sequence injection vulnerability in the Lint\nand CommonLogger components of Rack.  This vulnerability has been assigned the\nCVE identifier CVE-2022-30123.\n\nVersions Affected:  All.\nNot affected:       None\nFixed Versions:     2.0.9.1, 2.1.4.1, 2.2.3.1\n\n## Impact\nCarefully crafted requests can cause shell escape sequences to be written to\nthe terminal via Rack's Lint middleware and CommonLogger middleware.  These\nescape sequences can be leveraged to possibly execute commands in the victim's\nterminal.\n\nImpacted applications will have either of these middleware installed, and\nvulnerable apps may have something like this:\n\n```\nuse Rack::Lint\n```\n\nOr\n\n```\nuse Rack::CommonLogger\n```\n\nAll users running an affected release should either upgrade or use one of the\nworkarounds immediately.\n\n## Workarounds\nRemove these middleware from your application\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.9.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.3.0",
+                    "0.4.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.1.pre",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.3.0",
+                    "1.3.0.beta",
+                    "1.3.0.beta2",
+                    "1.3.1",
+                    "1.3.10",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.3.8",
+                    "1.3.9",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0.beta",
+                    "1.6.0.beta2",
+                    "1.6.1",
+                    "1.6.10",
+                    "1.6.11",
+                    "1.6.12",
+                    "1.6.13",
+                    "1.6.2",
+                    "1.6.3",
+                    "1.6.4",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.9",
+                    "2.0.0.alpha",
+                    "2.0.0.rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.0.9.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-wq4h-7r42-5hrr/GHSA-wq4h-7r42-5hrr.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.1"
+                        },
+                        {
+                          "fixed": "2.1.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "2.1.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.1.4.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-wq4h-7r42-5hrr/GHSA-wq4h-7r42-5hrr.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rack",
+                    "purl": "pkg:gem/rack"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.2"
+                        },
+                        {
+                          "fixed": "2.2.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.2.3.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-wq4h-7r42-5hrr/GHSA-wq4h-7r42-5hrr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-30123"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rack/rack/commit/b426cc224908ec6ed6eb8729325392b048215d88"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.rubyonrails.org/t/cve-2022-30123-possible-shell-escape-sequence-injection-vulnerability-in-rack/80728"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rack/rack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rack/CVE-2022-30123.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/ruby-security-ann/c/LWB10kWzag8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202310-18"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5530"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-150"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-05-27T16:36:51Z",
+                "nvd_published_at": "2022-12-05T22:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3h57-hmj3-gj3p"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-5f9h-9pjv-v6j7"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-5r2p-j47h-mhpg"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-65f5-mfpf-vfhj"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-hrqr-hxpp-chr3"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-hxqx-xwvh-44m2"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-j6w9-fv6q-3q52"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-rgr4-9jh5-j4j6"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-wq4h-7r42-5hrr"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rake",
+            "version": "10.0.3",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:13Z",
+              "published": "2020-02-28T16:54:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jppv-gw3r-w3q8",
+              "aliases": [
+                "CVE-2020-8130"
+              ],
+              "summary": "OS Command Injection in Rake",
+              "details": "There is an OS command injection vulnerability in Ruby Rake before 12.3.3 in `Rake::FileList` when supplying a filename that begins with the pipe character `|`.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rake",
+                    "purl": "pkg:gem/rake"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "12.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.4.10",
+                    "0.4.11",
+                    "0.4.12",
+                    "0.4.13",
+                    "0.4.14",
+                    "0.4.15",
+                    "0.4.8",
+                    "0.4.9",
+                    "0.5.0",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.6.0",
+                    "0.6.2",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.9.0",
+                    "0.9.0.beta.0",
+                    "0.9.0.beta.1",
+                    "0.9.0.beta.2",
+                    "0.9.0.beta.4",
+                    "0.9.0.beta.5",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.2.2",
+                    "0.9.3",
+                    "0.9.3.beta.1",
+                    "0.9.3.beta.2",
+                    "0.9.3.beta.3",
+                    "0.9.3.beta.4",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "10.0.0",
+                    "10.0.0.beta.1",
+                    "10.0.0.beta.2",
+                    "10.0.1",
+                    "10.0.2",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.1.0",
+                    "10.1.0.beta.1",
+                    "10.1.0.beta.2",
+                    "10.1.0.beta.3",
+                    "10.1.1",
+                    "10.2.0",
+                    "10.2.1",
+                    "10.2.2",
+                    "10.3.0",
+                    "10.3.1",
+                    "10.3.2",
+                    "10.4.0",
+                    "10.4.1",
+                    "10.4.2",
+                    "10.5.0",
+                    "11.0.1",
+                    "11.1.0",
+                    "11.1.1",
+                    "11.1.2",
+                    "11.2.0",
+                    "11.2.2",
+                    "11.3.0",
+                    "12.0.0",
+                    "12.0.0.beta1",
+                    "12.1.0",
+                    "12.2.0",
+                    "12.2.1",
+                    "12.3.0",
+                    "12.3.1",
+                    "12.3.2"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.3.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-jppv-gw3r-w3q8/GHSA-jppv-gw3r-w3q8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8130"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rake/commit/5b8f8fc41a5d7d7d6a5d767e48464c60884d3aee"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/651518"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jppv-gw3r-w3q8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rake"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rake/CVE-2020-8130.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/02/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/523CLQ62VRN3VVC52KMPTROCCKY4Z36B/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VXMX4ARNX2JLRJMSH4N3J3UBMUT5CI44/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://usn.ubuntu.com/4295-1/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-03/msg00041.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-02-25T15:50:03Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jppv-gw3r-w3q8"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rest-client",
+            "version": "1.6.7",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:57:50Z",
+              "published": "2018-08-13T20:47:22Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-3fhf-6939-qg8p",
+              "aliases": [
+                "CVE-2015-1820"
+              ],
+              "summary": "rest-client Gem Vulnerable to Session Fixation",
+              "details": "REST client for Ruby (aka rest-client) versions 1.6.1.a until 1.8.0 allow remote attackers to conduct session fixation attacks or obtain sensitive cookie information by leveraging passage of cookies set in a response to a redirect.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rest-client",
+                    "purl": "pkg:gem/rest-client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.6.1.a"
+                        },
+                        {
+                          "fixed": "1.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.6.1",
+                    "1.6.1.a",
+                    "1.6.14",
+                    "1.6.2.a",
+                    "1.6.3",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.8.rc1",
+                    "1.6.9",
+                    "1.7.0",
+                    "1.7.0.rc1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.2.rc1",
+                    "1.7.3",
+                    "1.8.0.rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/08/GHSA-3fhf-6939-qg8p/GHSA-3fhf-6939-qg8p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-1820"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rest-client/rest-client/issues/369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1205291"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rest-client/rest-client"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rubygems.org/gems/rest-client/versions/1.6.1.a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20200228080106/http://www.securityfocus.com/bid/73295"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2015/03/24/3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-384"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:54:58Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:57:54Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mx9f-w8qq-q5jf",
+              "aliases": [
+                "CVE-2015-3448"
+              ],
+              "summary": "rest-client allows local users to obtain sensitive information by reading the log",
+              "details": "REST client for Ruby (aka rest-client) before 1.7.3 logs usernames and passwords, which allows local users to obtain sensitive information by reading the log.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rest-client",
+                    "purl": "pkg:gem/rest-client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.7.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.2",
+                    "0.3",
+                    "0.4",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.7",
+                    "0.8",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.9",
+                    "0.9.2",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.0.a",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.5.0",
+                    "1.5.0.a",
+                    "1.5.0.b",
+                    "1.5.1",
+                    "1.6.0",
+                    "1.6.0.a",
+                    "1.6.1",
+                    "1.6.1.a",
+                    "1.6.14",
+                    "1.6.2.a",
+                    "1.6.3",
+                    "1.6.5",
+                    "1.6.6",
+                    "1.6.7",
+                    "1.6.8",
+                    "1.6.8.rc1",
+                    "1.6.9",
+                    "1.7.0",
+                    "1.7.0.rc1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.2.rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-mx9f-w8qq-q5jf/GHSA-mx9f-w8qq-q5jf.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-3448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rest-client/rest-client/issues/349"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rest-client/rest-client"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20200228154247/http://www.securityfocus.com/bid/74415"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-updates/2015-04/msg00026.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:47:35Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3fhf-6939-qg8p"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-mx9f-w8qq-q5jf"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ruby-openid",
+            "version": "2.2.3",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:00:59Z",
+              "published": "2019-06-13T16:15:56Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-fqfj-cmh6-hj49",
+              "aliases": [
+                "CVE-2019-11027"
+              ],
+              "summary": "ruby-openid SSRF via claimed_id request",
+              "details": "Ruby OpenID (aka ruby-openid) through 2.8.0 is vulnerable to SSRF. Ruby-openid performs discovery first, and then verification. This allows an attacker to change the URL used for discovery and trick the server into connecting to the URL, which might be a private server not publicly accessible. Severity can range from medium to critical, depending on how a web application developer chose to employ the ruby-openid library. Developers who based their OpenID integration heavily on the \"example app\" provided by the project are at highest risk.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "ruby-openid",
+                    "purl": "pkg:gem/ruby-openid"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.9.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.1.2",
+                    "2.1.4",
+                    "2.1.5",
+                    "2.1.6",
+                    "2.1.7",
+                    "2.1.8",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.0",
+                    "2.4.0",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.7.0",
+                    "2.8.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/06/GHSA-fqfj-cmh6-hj49/GHSA-fqfj-cmh6-hj49.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11027"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/openid/ruby-openid/issues/122"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/openid/ruby-openid/commit/d181a8a2099c64365a1d24b29f6b6b646673a131"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/openid/ruby-openid"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/openid/ruby-openid/releases/tag/v2.9.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/ruby-openid/CVE-2019-11027.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2019/10/msg00014.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://marc.info/?l=openid-security\u0026m=155154717027534\u0026w=2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202003-09"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-06-13T15:45:16Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-fqfj-cmh6-hj49"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rubyzip",
+            "version": "0.9.9",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-17T23:01:12Z",
+              "published": "2019-09-30T16:05:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5m2v-hc64-56h6",
+              "aliases": [
+                "CVE-2019-16892"
+              ],
+              "summary": "Rubyzip denial of service ",
+              "details": "In Rubyzip before 1.3.0, a crafted ZIP file can bypass application checks on ZIP entry sizes because data about the uncompressed size can be spoofed. This allows attackers to cause a denial of service (disk consumption).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rubyzip",
+                    "purl": "pkg:gem/rubyzip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.5.11",
+                    "0.5.12",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.5.9",
+                    "0.9.1",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6.1",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.0.beta1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/09/GHSA-5m2v-hc64-56h6/GHSA-5m2v-hc64-56h6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16892"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubyzip/rubyzip/pull/403"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubyzip/rubyzip/commit/d65fe7bd283ec94f9d6dc7605f61a6b0dd00f55e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHBA-2019:4047"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:4201"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jdleesmiller/ruby-advisory-db/blob/master/gems/rubyzip/CVE-2019-16892.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rubyzip/CVE-2019-16892.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rubyzip/rubyzip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/J45KSFPP6DFVWLC7Z73L7SX735CKZYO6/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MWWPORMSBHZTMP4PGF4DQD22TTKBQMMC/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/X255K6ZBAQC462PQN2ND5HOTTQEJ2G2X/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/J45KSFPP6DFVWLC7Z73L7SX735CKZYO6/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MWWPORMSBHZTMP4PGF4DQD22TTKBQMMC/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/X255K6ZBAQC462PQN2ND5HOTTQEJ2G2X/"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-09-30T16:04:36Z",
+                "nvd_published_at": "2019-09-25T22:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:59:23Z",
+              "published": "2017-10-24T18:33:35Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gcqq-w6gr-h9j9",
+              "aliases": [
+                "CVE-2017-5946"
+              ],
+              "summary": "Directory traversal vulnerability in RubyZip",
+              "details": "The `Zip::File` component in the rubyzip gem before 1.2.1 for Ruby has a directory traversal vulnerability. If a site allows uploading of .zip files, an attacker can upload a malicious file that uses `../` pathname substrings to write arbitrary files to the filesystem.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rubyzip",
+                    "purl": "pkg:gem/rubyzip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.5.11",
+                    "0.5.12",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.5.9",
+                    "0.9.1",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6.1",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.0.beta1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.2.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-gcqq-w6gr-h9j9/GHSA-gcqq-w6gr-h9j9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-5946"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubyzip/rubyzip/issues/315"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubyzip/rubyzip/commit/ce4208fdecc2ad079b05d3c49d70fe6ed1d07016"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rubyzip/CVE-2017-5946.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rubyzip/rubyzip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubyzip/rubyzip/releases"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://web.archive.org/web/20200227185727/http://www.securityfocus.com/bid/96445"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.debian.org/security/2017/dsa-3801"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:36:51Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:59:38Z",
+              "published": "2018-09-06T03:27:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vqcq-mrmw-mcmg",
+              "aliases": [
+                "CVE-2018-1000544"
+              ],
+              "summary": "Rubyzip gem contains a Directory Traversal vulnerability in zip file component",
+              "details": "rubyzip gem rubyzip version 1.2.1 and earlier contains a Directory Traversal vulnerability in Zip::File component that can result in write arbitrary files to the filesystem. This attack appear to be exploitable via If a site allows uploading of .zip files , an attacker can upload a malicious file that contains symlinks or files with absolute pathnames \"../\" to write arbitrary files to the filesystem..\n\nThis is similar to CVE-2017-5946 which was patched in 1.2.1 but the fix in that case was incomplete.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rubyzip",
+                    "purl": "pkg:gem/rubyzip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.5.11",
+                    "0.5.12",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.5.9",
+                    "0.9.1",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6.1",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9",
+                    "1.0.0",
+                    "1.0.0.beta1",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.1.7",
+                    "1.2.0",
+                    "1.2.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.2.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/09/GHSA-vqcq-mrmw-mcmg/GHSA-vqcq-mrmw-mcmg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000544"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubyzip/rubyzip/issues/369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2018:3466"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rubyzip/CVE-2018-1000544.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rubyzip/rubyzip"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2018/08/msg00013.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2020/08/msg00002.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-434",
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:58:07Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5m2v-hc64-56h6"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-gcqq-w6gr-h9j9"
+              ]
+            },
+            {
+              "ids": [
+                "GHSA-vqcq-mrmw-mcmg"
+              ]
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "sinatra",
+            "version": "1.2.6",
+            "ecosystem": "RubyGems",
+            "commit": ""
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:09:16Z",
+              "published": "2022-05-03T00:00:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qp49-3pvw-x4m5",
+              "aliases": [
+                "CVE-2022-29970"
+              ],
+              "summary": "sinatra does not validate expanded path matches",
+              "details": "Sinatra before 2.2.0 does not validate that the expanded path matches public_dir when serving static files.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "sinatra",
+                    "purl": "pkg:gem/sinatra"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.9.0",
+                    "0.9.0.1",
+                    "0.9.0.2",
+                    "0.9.0.3",
+                    "0.9.0.4",
+                    "0.9.0.5",
+                    "0.9.1",
+                    "0.9.1.1",
+                    "0.9.2",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "1.0",
+                    "1.0.a",
+                    "1.0.b",
+                    "1.1.0",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.a",
+                    "1.1.b",
+                    "1.2.0",
+                    "1.2.0.a",
+                    "1.2.0.c",
+                    "1.2.0.d",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.6",
+                    "1.2.7",
+                    "1.2.8",
+                    "1.2.9",
+                    "1.3.0",
+                    "1.3.0.a",
+                    "1.3.0.b",
+                    "1.3.0.c",
+                    "1.3.0.d",
+                    "1.3.0.e",
+                    "1.3.0.f",
+                    "1.3.0.g",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.4.0",
+                    "1.4.0.a",
+                    "1.4.0.b",
+                    "1.4.0.c",
+                    "1.4.0.d",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.4.8",
+                    "2.0.0",
+                    "2.0.0.beta1",
+                    "2.0.0.beta2",
+                    "2.0.0.rc1",
+                    "2.0.0.rc2",
+                    "2.0.0.rc5",
+                    "2.0.0.rc6",
+                    "2.0.1",
+                    "2.0.1.rc1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.0.8",
+                    "2.0.8.1",
+                    "2.1.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-qp49-3pvw-x4m5/GHSA-qp49-3pvw-x4m5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-29970"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sinatra/sinatra/pull/1683"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sinatra/sinatra/pull/1683/commits/462c3ca1db53ed3cfc394cf5948e9c948ad1c10e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/skylightio/skylight-ruby/pull/294"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/sinatra/CVE-2022-29970.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sinatra/sinatra/"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00034.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-426"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-05-03T20:59:50Z",
+                "nvd_published_at": "2022-05-02T05:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qp49-3pvw-x4m5"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

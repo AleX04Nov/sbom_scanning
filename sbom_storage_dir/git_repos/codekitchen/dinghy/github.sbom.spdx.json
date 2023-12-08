@@ -1,0 +1,183 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:51:45Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.codekitchen/dinghy",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.codekitchen-dinghy"
+    ],
+    "documentNamespace": "https://github.com/codekitchen/dinghy/dependency_graph/sbom-9140ec476f8d0927",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.codekitchen-dinghy",
+            "name": "com.github.codekitchen/dinghy",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/codekitchen/dinghy",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/codekitchen/dinghy"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-diff-lcs-1.2.5",
+            "name": "rubygems:diff-lcs",
+            "versionInfo": "1.2.5",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT OR (Artistic-2.0 OR GPL-2.0+)",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/diff-lcs@1.2.5",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rake-10.4.2",
+            "name": "rubygems:rake",
+            "versionInfo": "10.4.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/rake@10.4.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec-3.3.0",
+            "name": "rubygems:rspec",
+            "versionInfo": "3.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/rspec@3.3.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec-core-3.3.2",
+            "name": "rubygems:rspec-core",
+            "versionInfo": "3.3.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/rspec-core@3.3.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec-expectations-3.3.1",
+            "name": "rubygems:rspec-expectations",
+            "versionInfo": "3.3.1",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/rspec-expectations@3.3.1",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec-mocks-3.3.2",
+            "name": "rubygems:rspec-mocks",
+            "versionInfo": "3.3.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/rspec-mocks@3.3.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-rubygems-rspec-support-3.3.0",
+            "name": "rubygems:rspec-support",
+            "versionInfo": "3.3.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:gem/rspec-support@3.3.0",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-diff-lcs-1.2.5"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-rake-10.4.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec-3.3.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec-core-3.3.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec-expectations-3.3.1"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec-mocks-3.3.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.codekitchen-dinghy",
+            "relatedSpdxElement": "SPDXRef-rubygems-rspec-support-3.3.0"
+        }
+    ]
+}

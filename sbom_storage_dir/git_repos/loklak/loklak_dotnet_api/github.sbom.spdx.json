@@ -1,0 +1,157 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:59:39Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.loklak/loklak_dotnet_api",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.loklak-loklak-dotnet-api"
+    ],
+    "documentNamespace": "https://github.com/loklak/loklak_dotnet_api/dependency_graph/sbom-a7279fbd85c34a1b",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "name": "com.github.loklak/loklak_dotnet_api",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/loklak/loklak_dotnet_api",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/loklak/loklak_dotnet_api"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-Microsoft.Net.Http-2.2.29",
+            "name": "nuget:Microsoft.Net.Http",
+            "versionInfo": "2.2.29",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/Microsoft.Net.Http@2.2.29",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-Microsoft.Bcl-1.1.10",
+            "name": "nuget:Microsoft.Bcl",
+            "versionInfo": "1.1.10",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/Microsoft.Bcl@1.1.10",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-Microsoft.Bcl.Build-1.0.14",
+            "name": "nuget:Microsoft.Bcl.Build",
+            "versionInfo": "1.0.14",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/Microsoft.Bcl.Build@1.0.14",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-Vsxmd-1.2.0",
+            "name": "nuget:Vsxmd",
+            "versionInfo": "1.2.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/Vsxmd@1.2.0",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-Newtonsoft.Json-8.0.2",
+            "name": "nuget:Newtonsoft.Json",
+            "versionInfo": "8.0.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "MIT",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/Newtonsoft.Json@8.0.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-nuget-xunit-1.9.2",
+            "name": "nuget:xunit",
+            "versionInfo": "1.9.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:nuget/xunit@1.9.2",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "relatedSpdxElement": "SPDXRef-nuget-Microsoft.Net.Http-2.2.29"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "relatedSpdxElement": "SPDXRef-nuget-Microsoft.Bcl-1.1.10"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "relatedSpdxElement": "SPDXRef-nuget-Microsoft.Bcl.Build-1.0.14"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "relatedSpdxElement": "SPDXRef-nuget-Vsxmd-1.2.0"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "relatedSpdxElement": "SPDXRef-nuget-Newtonsoft.Json-8.0.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-dotnet-api",
+            "relatedSpdxElement": "SPDXRef-nuget-xunit-1.9.2"
+        }
+    ]
+}

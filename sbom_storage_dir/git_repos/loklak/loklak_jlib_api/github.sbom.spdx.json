@@ -1,0 +1,99 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:59:42Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.loklak/loklak_jlib_api",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.loklak-loklak-jlib-api"
+    ],
+    "documentNamespace": "https://github.com/loklak/loklak_jlib_api/dependency_graph/sbom-300d5c8669d0ea33",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.loklak-loklak-jlib-api",
+            "name": "com.github.loklak/loklak_jlib_api",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/loklak/loklak_jlib_api",
+            "licenseDeclared": "LGPL-2.1",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/loklak/loklak_jlib_api"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-joda-time-joda-time-2.9.2",
+            "name": "maven:joda-time:joda-time",
+            "versionInfo": "2.9.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/joda-time/joda-time@2.9.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-junit-junit-4.12",
+            "name": "maven:junit:junit",
+            "versionInfo": "4.12",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "EPL-1.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/junit/junit@4.12",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-org.json-json-20151123",
+            "name": "maven:org.json:json",
+            "versionInfo": "20151123",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "JSON",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/org.json/json@20151123",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-jlib-api",
+            "relatedSpdxElement": "SPDXRef-maven-joda-time-joda-time-2.9.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-jlib-api",
+            "relatedSpdxElement": "SPDXRef-maven-junit-junit-4.12"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.loklak-loklak-jlib-api",
+            "relatedSpdxElement": "SPDXRef-maven-org.json-json-20151123"
+        }
+    ]
+}

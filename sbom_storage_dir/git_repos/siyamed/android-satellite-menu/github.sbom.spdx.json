@@ -1,0 +1,76 @@
+{
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2023-12-07T10:55:23Z",
+        "creators": [
+            "Tool: GitHub.com-Dependency-Graph"
+        ]
+    },
+    "name": "com.github.siyamed/android-satellite-menu",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-com.github.siyamed-android-satellite-menu"
+    ],
+    "documentNamespace": "https://github.com/siyamed/android-satellite-menu/dependency_graph/sbom-921603595064e78d",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-com.github.siyamed-android-satellite-menu",
+            "name": "com.github.siyamed/android-satellite-menu",
+            "versionInfo": "",
+            "downloadLocation": "git+https://github.com/siyamed/android-satellite-menu",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:github/siyamed/android-satellite-menu"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-com.google.android-android-2.1.2",
+            "name": "maven:com.google.android:android",
+            "versionInfo": "2.1.2",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "licenseConcluded": "Apache-2.0",
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/com.google.android/android@2.1.2",
+                    "referenceType": "purl"
+                }
+            ]
+        },
+        {
+            "SPDXID": "SPDXRef-maven-com.jayway.maven.plugins.android.generation2-android-maven-plugin-3.0.0",
+            "name": "maven:com.jayway.maven.plugins.android.generation2:android-maven-plugin",
+            "versionInfo": "3.0.0",
+            "downloadLocation": "NOASSERTION",
+            "filesAnalyzed": false,
+            "supplier": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceLocator": "pkg:maven/com.jayway.maven.plugins.android.generation2/android-maven-plugin@3.0.0",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.siyamed-android-satellite-menu",
+            "relatedSpdxElement": "SPDXRef-maven-com.google.android-android-2.1.2"
+        },
+        {
+            "relationshipType": "DEPENDS_ON",
+            "spdxElementId": "SPDXRef-com.github.siyamed-android-satellite-menu",
+            "relatedSpdxElement": "SPDXRef-maven-com.jayway.maven.plugins.android.generation2-android-maven-plugin-3.0.0"
+        }
+    ]
+}

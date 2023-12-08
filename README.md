@@ -30,7 +30,7 @@ Steps 1-3 are optional, as the data is already provided in the `data` folder. St
 
 All programs should be run from the root folder of the project.
 
-## Requirements
+# Requirements
 You need to install those tools before trying to reproduce:
 - `docker` - run containers and retrieve SBOM files from Docker Scout;
 - `bom` - generate SBOM files from Docker containers;

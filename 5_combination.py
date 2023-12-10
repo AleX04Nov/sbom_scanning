@@ -42,10 +42,12 @@ class DependencyPerSbom:
     dependency_cwe: list[str] = []
     dependency_reference: list[str] = []
     dependency_reference_type: list[str] = []
+    dependency_reference_category: list[str] = []
     dependency_relationship_list: list[str] = []
     dependency_relationship_type: list[str] = []
     dependency_checksum: str = ""
     dependency_checksum_algorithm: str = ""
+    dependency_ecosystem: str = ""
 
     def __init__(self):
         self.sbom_id = 0
@@ -64,6 +66,7 @@ class DependencyPerSbom:
         self.dependency_relationship_type = []
         self.dependency_reference = []
         self.dependency_reference_type = []
+        self.dependency_reference_category = []
 
 
 class SBOMData:
@@ -283,18 +286,32 @@ def get_spdx_json_sbom_data(git_sbom_filepath_list: list[str], origin: str = "so
                 for reference in package.get("externalRefs"):
                     new_dependency_per_sbom.dependency_reference.append(reference["referenceLocator"])
                     new_dependency_per_sbom.dependency_reference_type.append(reference["referenceType"])
+                    new_dependency_per_sbom.dependency_reference_category.append(reference["referenceCategory"])
+                found_purl = False
                 for reference_index in range(len(new_dependency_per_sbom.dependency_reference)):
-                    if new_dependency_per_sbom.dependency_reference_type[reference_index] == "PACKAGE-MANAGER":
+                    if new_dependency_per_sbom.dependency_reference_type[reference_index] == "purl":
                         # remove this index from dependency_reference and dependency_reference_type
                         first_elem = new_dependency_per_sbom.dependency_reference.pop(reference_index)
                         new_dependency_per_sbom.dependency_reference.insert(0, first_elem)
                         first_elem_type = new_dependency_per_sbom.dependency_reference_type.pop(reference_index)
                         new_dependency_per_sbom.dependency_reference_type.insert(0, first_elem_type)
                         new_dependency_per_sbom.dependency_location = first_elem
+                        found_purl = True
                         break
+                if not found_purl:
+                    for reference_index in range(len(new_dependency_per_sbom.dependency_reference)):
+                        if new_dependency_per_sbom.dependency_reference_category[reference_index] == "PACKAGE-MANAGER":
+                            first_elem = new_dependency_per_sbom.dependency_reference.pop(reference_index)
+                            new_dependency_per_sbom.dependency_reference.insert(0, first_elem)
+                            first_elem_type = new_dependency_per_sbom.dependency_reference_type.pop(reference_index)
+                            new_dependency_per_sbom.dependency_reference_type.insert(0, first_elem_type)
+                            new_dependency_per_sbom.dependency_location = first_elem
+                            break
+            if new_dependency_per_sbom.dependency_location and new_dependency_per_sbom.dependency_location.startswith("pkg:"):
+                new_dependency_per_sbom.dependency_ecosystem = new_dependency_per_sbom.dependency_location[4:new_dependency_per_sbom.dependency_location.find("/", 4)]
             add_osv_data_to_dependency_per_sbom(new_dependency_per_sbom, osv_data_json)
             for reference_index in range(len(new_dependency_per_sbom.dependency_reference)):
-                if new_dependency_per_sbom.dependency_reference_type[reference_index] == "SECURITY":
+                if new_dependency_per_sbom.dependency_reference_category[reference_index] == "SECURITY":
                     if new_dependency_per_sbom.dependency_reference[reference_index].lower().find("cve-") != -1:
                         cve_str_index = new_dependency_per_sbom.dependency_reference[reference_index].lower().find("cve-")
                         if new_dependency_per_sbom.dependency_cve is None:
@@ -310,6 +327,7 @@ def get_spdx_json_sbom_data(git_sbom_filepath_list: list[str], origin: str = "so
     return sbomdata_list, dependency_per_sbom_list
 
 
+spdx_format_fail = 0
 def get_spdx_sbom_data(spdx_sbom_filepath_list: list[str], origin: str = "sourcegraph") -> (tuple)[list[SBOMData], list[DependencyPerSbom]]:
     sbomdata_list: list[SBOMData] = []
     dependency_per_sbom_list: list[DependencyPerSbom] = []
@@ -386,8 +404,9 @@ def get_spdx_sbom_data(spdx_sbom_filepath_list: list[str], origin: str = "source
                 new_dependency_per_sbom.dependency_checksum = package_checksum.value
                 new_dependency_per_sbom.dependency_checksum_algorithm = str(package_checksum.algorithm)[str(package_checksum.algorithm).find(".") + 1:]
             for relationship in sbom_document.relationships:
-                new_dependency_per_sbom.dependency_relationship_list.append(relationship.related_spdx_element_id)
-                new_dependency_per_sbom.dependency_relationship_type.append(str(relationship.relationship_type)[str(relationship.relationship_type).find(".") + 1:])
+                if relationship.spdx_element_id == new_dependency_per_sbom.str_id:
+                    new_dependency_per_sbom.dependency_relationship_list.append(relationship.related_spdx_element_id)
+                    new_dependency_per_sbom.dependency_relationship_type.append(str(relationship.relationship_type)[str(relationship.relationship_type).find(".") + 1:])
             if package.external_references:
                 external_references = package.external_references
                 # sort external references by referenceType
@@ -395,15 +414,32 @@ def get_spdx_sbom_data(spdx_sbom_filepath_list: list[str], origin: str = "source
                 for reference in external_references:
                     new_dependency_per_sbom.dependency_reference.append(reference.locator)
                     new_dependency_per_sbom.dependency_reference_type.append(reference.reference_type)
+                    new_dependency_per_sbom.dependency_reference_category.append(str(reference.category)[str(reference.category).find(".") + 1:])
+                found_purl = False
                 for reference_index in range(len(new_dependency_per_sbom.dependency_reference)):
-                    if new_dependency_per_sbom.dependency_reference_type[reference_index] == "PACKAGE-MANAGER":
+                    if new_dependency_per_sbom.dependency_reference_type[reference_index] == "purl":
                         # remove this index from dependency_reference and dependency_reference_type
                         first_elem = new_dependency_per_sbom.dependency_reference.pop(reference_index)
                         new_dependency_per_sbom.dependency_reference.insert(0, first_elem)
                         first_elem_type = new_dependency_per_sbom.dependency_reference_type.pop(reference_index)
                         new_dependency_per_sbom.dependency_reference_type.insert(0, first_elem_type)
                         new_dependency_per_sbom.dependency_location = first_elem
+                        found_purl = True
                         break
+                if not found_purl:
+                    for reference_index in range(len(new_dependency_per_sbom.dependency_reference)):
+                        if new_dependency_per_sbom.dependency_reference_category[reference_index] == "PACKAGE-MANAGER":
+                            first_elem = new_dependency_per_sbom.dependency_reference.pop(reference_index)
+                            new_dependency_per_sbom.dependency_reference.insert(0, first_elem)
+                            first_elem_type = new_dependency_per_sbom.dependency_reference_type.pop(reference_index)
+                            new_dependency_per_sbom.dependency_reference_type.insert(0, first_elem_type)
+                            new_dependency_per_sbom.dependency_location = first_elem
+                            break
+            if new_dependency_per_sbom.dependency_location and new_dependency_per_sbom.dependency_location.startswith(
+                    "pkg:"):
+                new_dependency_per_sbom.dependency_ecosystem = new_dependency_per_sbom.dependency_location[
+                                                               4:new_dependency_per_sbom.dependency_location.find("/",
+                                                                                                                  4)]
             add_osv_data_to_dependency_per_sbom(new_dependency_per_sbom, osv_data_json)
             for reference_index in range(len(new_dependency_per_sbom.dependency_reference)):
                 if new_dependency_per_sbom.dependency_reference_type[reference_index] == "SECURITY":
@@ -537,6 +573,12 @@ def get_cyclonedx_json_sbom_data(cyclonedx_json_sbom_filepath_list: list[str], o
                     new_dependency_per_sbom.dependency_relationship_list.extend(relationship["dependsOn"])
                     new_dependency_per_sbom.dependency_relationship_type.append("dependsOn")
             add_osv_data_to_dependency_per_sbom(new_dependency_per_sbom, osv_data_json)
+            if new_dependency_per_sbom.dependency_location and new_dependency_per_sbom.dependency_location.startswith(
+                    "pkg:"):
+                new_dependency_per_sbom.dependency_ecosystem = new_dependency_per_sbom.dependency_location[
+                                                               4:new_dependency_per_sbom.dependency_location.find("/",
+                                                                                                                  4)]
+
     return sbomdata_list, dependency_per_sbom_list
 
 
@@ -567,7 +609,7 @@ def get_cyclonedx_xml_sbom_data(cyclonedx_xml_sbom_filepath_list: list[str], ori
                 new_sbomdata.project_url = "/" + "/".join(sbom_filepath.split("/")[-3:])
             if (deserialized_bom.metadata.timestamp
                     and deserialized_bom.metadata.timestamp.replace(tzinfo=None) < datetime.datetime.now() - datetime.timedelta(minutes=5)):
-                new_sbomdata.creation_time = deserialized_bom.metadata.timestamp
+                new_sbomdata.creation_time = deserialized_bom.metadata.timestamp.replace(tzinfo=None)
             else:
                 new_sbomdata.creation_time = ""
         else:
@@ -683,14 +725,20 @@ def get_cyclonedx_xml_sbom_data(cyclonedx_xml_sbom_filepath_list: list[str], ori
                         new_dependency_per_sbom.dependency_relationship_list.append(dependency.ref.value)
                         new_dependency_per_sbom.dependency_relationship_type.append("dependsOn")
             add_osv_data_to_dependency_per_sbom(new_dependency_per_sbom, osv_data_json)
+            if new_dependency_per_sbom.dependency_location and new_dependency_per_sbom.dependency_location.startswith(
+                    "pkg:"):
+                new_dependency_per_sbom.dependency_ecosystem = new_dependency_per_sbom.dependency_location[
+                                                               4:new_dependency_per_sbom.dependency_location.find("/",
+                                                                                                                  4)]
+
     return sbomdata_list, dependency_per_sbom_list
 
 
 def dump_sbomdata_to_csv(sbomdata_list: list[SBOMData]):
     with open('sbomdata.csv', 'w', newline='') as csvfile:
-        fieldnames = ['id', 'project_name', 'project_url', 'dependency_count', 'licenses_count', 'critical_cves_count',
+        fieldnames = ['id', 'project_name', 'url', 'dependency_count', 'licenses_count', 'critical_cves_count',
                       'high_cves_count', 'medium_cves_count', 'low_cves_count', 'sbomqs_rating', 'format',
-                      'format_version', 'creation_time', 'origin', 'tool']
+                      'format_version', 'origin', 'tool', 'creation_time']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for sbomdata in sbomdata_list:
@@ -698,7 +746,7 @@ def dump_sbomdata_to_csv(sbomdata_list: list[SBOMData]):
                 if license:
                     sbomdata.licenses_count += 1
             writer.writerow({'id': sbomdata.id, 'project_name': sbomdata.project_name,
-                             'project_url': sbomdata.project_url, 'dependency_count': sbomdata.dependency_count,
+                             'url': sbomdata.project_url, 'dependency_count': sbomdata.dependency_count,
                              'licenses_count': sbomdata.licenses_count,
                              'critical_cves_count': sbomdata.critical_cves_count,
                              'high_cves_count': sbomdata.high_cves_count,
@@ -711,10 +759,10 @@ def dump_sbomdata_to_csv(sbomdata_list: list[SBOMData]):
 
 
 def dump_dependency_per_sbom_to_csv(dependency_per_sbom_list: list[DependencyPerSbom]):
-    fieldnames = ['sbom_id', 'dependency_name', 'dependency_license',
-                      'dependency_cve', 'dependency_cwe', 'dependency_cve_criticality', 'dependency_cvss',
-                      'dependency_relationship_list', 'dependency_relationship_type', 'dependency_checksum',
-                      'dependency_checksum_algorithm', ]
+    fieldnames = ['sbom_id', 'dependency_id', 'dependency_name', 'dependency_version', 'location', 'license',
+                      'cves', 'cwes', 'criticality', 'severity',
+                      'relationships', 'relationship_types', 'checksum',
+                      'algorithm', 'ecosystem']
     with open('dependency_per_sbom.csv', 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
@@ -736,24 +784,29 @@ def dump_dependency_per_sbom_to_csv(dependency_per_sbom_list: list[DependencyPer
             else:
                 cvss_list = "|".join(dependency_per_sbom.dependency_cvss)
             writer.writerow({'sbom_id': dependency_per_sbom.sbom_id,
+                             'dependency_id': dependency_per_sbom.str_id,
                              'dependency_name': dependency_per_sbom.dependency_name,
-                             'dependency_license': "|".join(dependency_per_sbom.dependency_license_list),
-                             'dependency_checksum': dependency_per_sbom.dependency_checksum,
-                             'dependency_checksum_algorithm': dependency_per_sbom.dependency_checksum_algorithm,
-                             'dependency_relationship_list': "|".join(dependency_per_sbom.dependency_relationship_list),
-                             'dependency_relationship_type': "|".join(dependency_per_sbom.dependency_relationship_type),
-                             'dependency_cve': cve_list,
-                             'dependency_cve_criticality': cve_criticality_list,
-                             'dependency_cvss': cvss_list,
-                             'dependency_cwe': cwe_list})
+                             'dependency_version': dependency_per_sbom.dependency_version,
+                             'location': dependency_per_sbom.dependency_location,
+                             'license': "|".join(dependency_per_sbom.dependency_license_list),
+                             'checksum': dependency_per_sbom.dependency_checksum,
+                             'algorithm': dependency_per_sbom.dependency_checksum_algorithm,
+                             'relationships': "|".join(dependency_per_sbom.dependency_relationship_list),
+                             'relationship_types': "|".join(dependency_per_sbom.dependency_relationship_type),
+                             'cves': cve_list,
+                             'criticality': cve_criticality_list,
+                             'severity': cvss_list,
+                             'cwes': cwe_list,
+                             'ecosystem': dependency_per_sbom.dependency_ecosystem
+                             })
 
 
 def csv_splitter():
     csv.field_size_limit(sys.maxsize)
-    fieldnames = ['sbom_id', 'dependency_name', 'dependency_license',
-                  'dependency_cve', 'dependency_cwe', 'dependency_cve_criticality', 'dependency_cvss',
-                  'dependency_relationship_list', 'dependency_relationship_type', 'dependency_checksum',
-                  'dependency_checksum_algorithm', ]
+    fieldnames = ['sbom_id', 'dependency_id', 'dependency_name', 'dependency_version', 'location', 'license',
+                  'cves', 'cwes', 'criticality', 'severity',
+                  'relationships', 'relationship_types', 'checksum',
+                  'algorithm', 'ecosystem']
     # split dependency_per_sbom.csv into multiple files
     with open('dependency_per_sbom.csv', 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -774,7 +827,7 @@ def csv_splitter():
     with open(f'dependency_per_sbom_other.csv', 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        for sbom_index in range(260, len(sbom_id_dependency_per_sbom_dict)):
+        for sbom_index in range(260, int(list(sbom_id_dependency_per_sbom_dict.keys())[-1]) + 1):
             if str(sbom_index) in sbom_id_dependency_per_sbom_dict:
                 for row in sbom_id_dependency_per_sbom_dict[str(sbom_index)]:
                     writer.writerow(row)

@@ -14,12 +14,13 @@ from search_inside_assets_8 import main as search_inside_assets_main
 
 
 async def main():
-    #timestamp = str(int(time.time()))
-    #data_folder = os.path.abspath(os.getcwd())
-    #data_folder = os.path.join(data_folder, f'data_{timestamp}')
-    #os.mkdir(data_folder)
+    timestamp = str(int(time.time()))
     data_folder = os.path.abspath(os.getcwd())
-    data_folder = utils.get_latest_data_folder(data_folder)
+    data_folder = os.path.join(data_folder, f'data_{timestamp}')
+    os.mkdir(data_folder)
+
+    # data_folder = os.path.abspath(os.getcwd())
+    # data_folder = utils.get_latest_data_folder(data_folder)
 
     # get initial frozen set of SBOM files
     print("Downloading initial SBOM files from Sourcegraph")

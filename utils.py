@@ -79,7 +79,7 @@ CYCLONEDX_XML_FILTERS = [
     r'xmlns *= *(\"|)http(s|):\/\/cyclonedx.org\/schema\/bom\/'
 ]
 CYCLONEDX_XML_FILE_FILTERS = [
-    r'^.*(\.xml|\.bom|\.sbom)$'
+    r'^.*(\.xml|\.bom|\.sbom|\.cdx)$'
 ]
 
 
@@ -87,7 +87,7 @@ CYCLONEDX_JSON_FILTERS = [
     r'\"bomFormat\" *: *\"CycloneDX\"'
 ]
 CYCLONEDX_JSON_FILE_FILTERS = [
-    r'^.*(\.json|\.bom|\.sbom)$'
+    r'^.*(\.json|\.bom|\.sbom|\.cdx)$'
 ]
 
 

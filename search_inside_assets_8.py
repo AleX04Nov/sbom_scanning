@@ -72,7 +72,7 @@ def check_directory_on_sbom(directory):
                 if sbom_type:
                     fullpath = os.path.join(root, file)
                     fullpath = fullpath.replace(os.path.join(data_folder, 'assets'), "")
-                    sbom_file = {"filename": fullpath, "type": sbom_type}
+                    sbom_file = {"path": fullpath, "type": sbom_type}
                     sbom_files.append(sbom_file)
     return sbom_files
 
@@ -97,14 +97,19 @@ def main(folder=''):
                 # check whether this file or directory
                 full_path = os.path.join(data_folder, 'assets')
                 full_path = os.path.join(full_path, path)
+                url = assets_to_check[author][repo]["files_to_check"].index(path)
+                url = assets_to_check[author][repo]["releases_to_check"][url]
                 if os.path.isdir(full_path):
                     # iterate over all files in this directory
-                    assets_to_check[author][repo]["sbom_files"].extend(check_directory_on_sbom(full_path))
+                    sboms_from_dir = check_directory_on_sbom(full_path)
+                    for sbom in sboms_from_dir:
+                        sbom["url"] = url
+                    assets_to_check[author][repo]["sbom_files"].extend(sboms_from_dir)
                 else:
                     sbom_type = check_file(full_path)
                     if sbom_type:
                         full_path = full_path.replace(os.path.join(data_folder, 'assets'), "")
-                        sbom_file = {"filename": full_path, "type": sbom_type}
+                        sbom_file = {"path": full_path, "type": sbom_type, 'url': url}
                         assets_to_check[author][repo]["sbom_files"].append(sbom_file)
 
     # dump the sboms_by_author

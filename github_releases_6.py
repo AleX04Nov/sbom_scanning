@@ -59,6 +59,8 @@ async def get_releases(author, repo, repo_object):
     if the_biggest_10mb_asset is not None:
         assets_to_download.append(the_biggest_10mb_asset['browser_download_url'])
     if assets_to_download:
+        # remove duplicates
+        assets_to_download = list(set(assets_to_download))
         repo_object['releases_to_check'] = assets_to_download
     return assets_to_download
 

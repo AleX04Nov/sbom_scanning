@@ -11,6 +11,7 @@ from get_all_commits_of_sbom_files_5 import main as get_all_commits_of_sbom_file
 from github_releases_6 import main as github_releases_main
 from download_suspicious_assets_7 import main as download_suspicious_assets_main
 from search_inside_assets_8 import main as search_inside_assets_main
+from merge_assets_with_sourcegraph_9 import main as merge_assets_with_sourcegraph_main
 
 
 async def main():
@@ -54,6 +55,10 @@ async def main():
     # search for SBOM information inside those downloaded assets
     print("Searching for SBOM information inside assets")
     search_inside_assets_main(data_folder)
+
+    # merge all SBOM information into one json file
+    print("Merging all SBOM information")
+    merge_assets_with_sourcegraph_main(data_folder)
 
     return 0
 

@@ -34,8 +34,8 @@ async def main(folder=''):
                 sboms_by_author[repo_author][repo] = []
             filedata_to_append = {
                 'path': sbom['file']['path'],
-                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}',
-                'type': sbom_type
+                'type': sbom_type,
+                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}'
             }
             sboms_by_author[repo_author][repo].append(filedata_to_append)
     # dump the sboms_by_author
@@ -56,10 +56,14 @@ async def main(folder=''):
                 sboms_by_author[repo_author] = {}
             if repo not in sboms_by_author[repo_author]:
                 sboms_by_author[repo_author][repo] = []
+            if repo[:10] == 'github.com':
+                url = f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}'
+            else:
+                url = f'https://sourcegraph.com{sbom["file"]["url"]}'
             filedata_to_append = {
                 'path': sbom['file']['path'],
-                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}',
-                'type': sbom_type
+                'type': sbom_type,
+                'url': url
             }
             sboms_by_author[repo_author][repo].append(filedata_to_append)
 

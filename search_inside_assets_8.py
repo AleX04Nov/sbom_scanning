@@ -112,6 +112,14 @@ def main(folder=''):
                         sbom_file = {"path": full_path, "type": sbom_type, 'url': url}
                         assets_to_check[author][repo]["sbom_files"].append(sbom_file)
 
+    # remove empty repos
+    for author in list(assets_to_check.keys()):
+        for repo in list(assets_to_check[author].keys()):
+            if assets_to_check[author][repo]["sbom_files"] == []:
+                del assets_to_check[author][repo]
+        if assets_to_check[author] == {}:
+            del assets_to_check[author]
+
     # dump the sboms_by_author
     with open(os.path.join(data_folder, 'assets_with_sboms.json'), 'w') as f:
         json.dump(assets_to_check, f, indent=4)

@@ -23,9 +23,9 @@ async def main(folder=''):
         sbom_dict = json.load(f)
 
     sboms_by_author = {}
-    for key in sbom_dict:
-        print(f"Successfully loaded the SBOM urls for `{key}` . Total: {len(sbom_dict[key])}")
-        for sbom in sbom_dict[key]:
+    for sbom_type in sbom_dict:
+        print(f"Successfully loaded the SBOM urls for `{sbom_type}` . Total: {len(sbom_dict[sbom_type])}")
+        for sbom in sbom_dict[sbom_type]:
             repo = sbom['repository']['name']
             repo_author = sbom['repository']['url'].split('/')[-2]
             if repo_author not in sboms_by_author:
@@ -34,7 +34,8 @@ async def main(folder=''):
                 sboms_by_author[repo_author][repo] = []
             filedata_to_append = {
                 'path': sbom['file']['path'],
-                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}'
+                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}',
+                'type': sbom_type
             }
             sboms_by_author[repo_author][repo].append(filedata_to_append)
     # dump the sboms_by_author
@@ -46,9 +47,9 @@ async def main(folder=''):
     filename = os.path.join(data_folder, filename)
     with open(filename, 'r') as f:
         sbom_dict = json.load(f)
-    for key in sbom_dict:
-        print(f"Successfully loaded the SBOM urls for `{key}` . Total: {len(sbom_dict[key]['Results'])}")
-        for sbom in sbom_dict[key]['Results']:
+    for sbom_type in sbom_dict:
+        print(f"Successfully loaded the SBOM urls for `{sbom_type}` . Total: {len(sbom_dict[sbom_type]['Results'])}")
+        for sbom in sbom_dict[sbom_type]['Results']:
             repo = sbom['repository']['name']
             repo_author = sbom['repository']['url'].split('/')[-2]
             if repo_author not in sboms_by_author:
@@ -57,7 +58,8 @@ async def main(folder=''):
                 sboms_by_author[repo_author][repo] = []
             filedata_to_append = {
                 'path': sbom['file']['path'],
-                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}'
+                'url': f'https://{repo}/blob/{sbom["file"]["commit"]["oid"]}/{sbom["file"]["path"]}',
+                'type': sbom_type
             }
             sboms_by_author[repo_author][repo].append(filedata_to_append)
 

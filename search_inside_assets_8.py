@@ -1,6 +1,8 @@
 import json
 import os
 import re
+import shutil
+
 import utils
 
 # compile regex filters
@@ -57,8 +59,12 @@ def check_file(filepath):
     return False
 
 
-def check_directory_on_sbom(directory):
+def check_directory_on_sbom(directory, additional_repos=False):
     sbom_files = []
+    if additional_repos:
+        assets_folder = 'assets_additional'
+    else:
+        assets_folder = 'assets'
     # find all files with json extension in the current directory
     for root, dirs, files in os.walk(directory):
         for file in files:
@@ -71,13 +77,13 @@ def check_directory_on_sbom(directory):
                 sbom_type = check_file(os.path.join(root, file))
                 if sbom_type:
                     fullpath = os.path.join(root, file)
-                    fullpath = fullpath.replace(os.path.join(data_folder, 'assets'), "")
+                    fullpath = fullpath.replace(directory + '/', "")
                     sbom_file = {"path": fullpath, "type": sbom_type}
                     sbom_files.append(sbom_file)
     return sbom_files
 
 
-def main(folder=''):
+def main(folder='', additional_repos=False):
     global data_folder
 
     if folder == '':
@@ -87,42 +93,137 @@ def main(folder=''):
         data_folder = folder
 
     # read 'assets_to_check.json' file
-    with open(os.path.join(data_folder, "assets_to_check.json"), "r") as f:
-        assets_to_check = json.load(f)
+    if additional_repos:
+        assets_folder = 'assets_additional'
+        with open(os.path.join(data_folder, 'assets_to_check_additional.json'), 'r') as f:
+            assets_to_check = json.load(f)
+    else:
+        assets_folder = 'assets'
+        with open(os.path.join(data_folder, "assets_to_check.json"), "r") as f:
+            assets_to_check = json.load(f)
 
     for author in list(assets_to_check.keys()):
         for repo in list(assets_to_check[author].keys()):
-            assets_to_check[author][repo]["sbom_files"] = []
-            for path in assets_to_check[author][repo]["files_to_check"]:
+            if assets_to_check[author][repo].get("files_to_check") is None:
+                continue
+            for file_info in assets_to_check[author][repo]["files_to_check"]:
                 # check whether this file or directory
-                full_path = os.path.join(data_folder, 'assets')
-                full_path = os.path.join(full_path, path)
-                url = assets_to_check[author][repo]["files_to_check"].index(path)
-                url = assets_to_check[author][repo]["releases_to_check"][url]
+                full_path = os.path.join(data_folder, assets_folder, file_info["path"])
+                url = file_info["url"]
+                if not os.path.exists(full_path):
+                    continue
                 if os.path.isdir(full_path):
                     # iterate over all files in this directory
-                    sboms_from_dir = check_directory_on_sbom(full_path)
+                    sboms_from_dir = check_directory_on_sbom(full_path, additional_repos=additional_repos)
                     for sbom in sboms_from_dir:
                         sbom["url"] = url
+                    if assets_to_check[author][repo].get("sbom_files") is None:
+                        assets_to_check[author][repo]["sbom_files"] = []
                     assets_to_check[author][repo]["sbom_files"].extend(sboms_from_dir)
+                    shutil.rmtree(full_path)
+                    full_path_archive = os.path.join(data_folder, assets_folder)
+                    full_path_archive = os.path.join(full_path_archive, author, repo.split("/")[-1], url.split("/")[-1])
+                    os.remove(full_path_archive)
                 else:
                     sbom_type = check_file(full_path)
+                    os.remove(full_path)
                     if sbom_type:
-                        full_path = full_path.replace(os.path.join(data_folder, 'assets'), "")
-                        sbom_file = {"path": full_path, "type": sbom_type, 'url': url}
+                        file_path = full_path.replace(os.path.join(data_folder, assets_folder, author, repo.split("/")[-1]) + '/', "")
+                        sbom_file = {"path": file_path, "type": sbom_type, 'url': url}
+                        if assets_to_check[author][repo].get("sbom_files") is None:
+                            assets_to_check[author][repo]["sbom_files"] = []
                         assets_to_check[author][repo]["sbom_files"].append(sbom_file)
+            if utils.get_folder_size(os.path.join(data_folder, assets_folder, author, repo.split("/")[-1])) == 0:
+                try:
+                    shutil.rmtree(os.path.join(data_folder, assets_folder, author, repo.split("/")[-1]))
+                except FileNotFoundError:
+                    pass
+        if utils.get_folder_size(os.path.join(data_folder, assets_folder, author)) == 0:
+            try:
+                shutil.rmtree(os.path.join(data_folder, assets_folder, author))
+            except FileNotFoundError:
+                pass
 
     # remove empty repos
     for author in list(assets_to_check.keys()):
         for repo in list(assets_to_check[author].keys()):
-            if assets_to_check[author][repo]["sbom_files"] == []:
+            if assets_to_check[author][repo].get("sbom_files") is None:
+                del assets_to_check[author][repo]
+            elif assets_to_check[author][repo]["sbom_files"] == []:
                 del assets_to_check[author][repo]
         if assets_to_check[author] == {}:
             del assets_to_check[author]
 
     # dump the sboms_by_author
-    with open(os.path.join(data_folder, 'assets_with_sboms.json'), 'w') as f:
-        json.dump(assets_to_check, f, indent=4)
+    assets_to_check_previous = {}
+    if additional_repos:
+        if os.path.exists(os.path.join(data_folder, 'assets_with_sboms_additional.json')):
+            with open(os.path.join(data_folder, 'assets_with_sboms_additional.json'), 'r') as f:
+                assets_to_check_previous = json.load(f)
+        with open(os.path.join(data_folder, 'assets_with_sboms_additional.json'), 'w') as f:
+            for author in assets_to_check_previous:
+                if author not in assets_to_check:
+                    assets_to_check[author] = assets_to_check_previous[author]
+                    continue
+                for repo in assets_to_check_previous[author]:
+                    if repo not in assets_to_check[author]:
+                        assets_to_check[author][repo] = assets_to_check_previous[author][repo]
+                        continue
+                    else:
+                        if assets_to_check[author][repo].get('sbom_files', None) is None:
+                            if assets_to_check_previous[author][repo].get('sbom_files', None) is not None:
+                                assets_to_check[author][repo]['sbom_files'] = assets_to_check_previous[author][repo]['sbom_files']
+                        else:
+                            assets_to_check[author][repo]['sbom_files'].extend(assets_to_check_previous[author][repo].get('sbom_files', []))
+                            assets_to_check[author][repo]['sbom_files'] = [i for n, i in enumerate(assets_to_check[author][repo]['sbom_files']) if i not in assets_to_check[author][repo]['sbom_files'][n + 1:]]
+            for author in list(assets_to_check):
+                for repo in list(assets_to_check[author]):
+                    if assets_to_check[author][repo].get('releases_to_check') is not None:
+                        del assets_to_check[author][repo]['releases_to_check']
+                    if assets_to_check[author][repo].get('files_to_check') is not None:
+                        del assets_to_check[author][repo]['files_to_check']
+                    if assets_to_check[author][repo].get('sbom_files', []) == []:
+                        del assets_to_check[author][repo]['sbom_files']
+                    if assets_to_check[author][repo] == {}:
+                        del assets_to_check[author][repo]
+                if assets_to_check[author] == {}:
+                    del assets_to_check[author]
+            json.dump(assets_to_check, f, indent=4)
+    else:
+        if os.path.exists(os.path.join(data_folder, 'assets_with_sboms.json')):
+            with open(os.path.join(data_folder, 'assets_with_sboms.json'), 'r') as f:
+                assets_to_check_previous = json.load(f)
+        with open(os.path.join(data_folder, 'assets_with_sboms.json'), 'w') as f:
+            for author in assets_to_check_previous:
+                if author not in assets_to_check:
+                    assets_to_check[author] = assets_to_check_previous[author]
+                    continue
+                for repo in assets_to_check_previous[author]:
+                    if repo not in assets_to_check[author]:
+                        assets_to_check[author][repo] = assets_to_check_previous[author][repo]
+                        continue
+                    else:
+                        if assets_to_check[author][repo].get('sbom_files', None) is None:
+                            if assets_to_check_previous[author][repo].get('sbom_files', None) is not None:
+                                assets_to_check[author][repo]['sbom_files'] = \
+                                assets_to_check_previous[author][repo]['sbom_files']
+                        else:
+                            assets_to_check[author][repo]['sbom_files'].extend(
+                                assets_to_check_previous[author][repo].get('sbom_files', []))
+                            assets_to_check[author][repo]['sbom_files'] = [i for n, i in enumerate(assets_to_check[author][repo]['sbom_files']) if i not in assets_to_check[author][repo]['sbom_files'][n + 1:]]
+            for author in list(assets_to_check):
+                for repo in list(assets_to_check[author]):
+                    if assets_to_check[author][repo].get('releases_to_check') is not None:
+                        del assets_to_check[author][repo]['releases_to_check']
+                    if assets_to_check[author][repo].get('files_to_check') is not None:
+                        del assets_to_check[author][repo]['files_to_check']
+                    if assets_to_check[author][repo].get('sbom_files', []) == []:
+                        del assets_to_check[author][repo]['sbom_files']
+                    if assets_to_check[author][repo] == {}:
+                        del assets_to_check[author][repo]
+                if assets_to_check[author] == {}:
+                    del assets_to_check[author]
+            json.dump(assets_to_check, f, indent=4)
 
     return True
 

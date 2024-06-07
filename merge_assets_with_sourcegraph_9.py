@@ -23,6 +23,9 @@ def main(folder=''):
     with open(os.path.join(data_folder, "all_sboms_by_author.json"), "r") as f:
         all_sboms_by_author = json.load(f)
 
+    with open(os.path.join(data_folder, "assets_with_sboms_additional.json"), "r") as f:
+        assets_with_sboms.update(json.load(f))
+
     for author in list(assets_with_sboms.keys()):
         for repo in list(assets_with_sboms[author].keys()):
             for sbom in assets_with_sboms[author][repo]["sbom_files"]:

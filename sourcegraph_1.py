@@ -25,8 +25,8 @@ async def sourcegraph_cli_get_sboms(query: str) -> list:
     # call sourcegraph cli
     result = []
     cmd = f"src search -json -- $'{query}'"
-    proc = await asyncio.create_subprocess_shell(
-        cmd,
+    proc = await asyncio.create_subprocess_exec(
+        'src', 'search', '-json', '--', query,
         stdout=asyncio.subprocess.PIPE,
         stderr=asyncio.subprocess.PIPE
     )

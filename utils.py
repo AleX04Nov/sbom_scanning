@@ -40,7 +40,7 @@ REPO_FILTERS[0] = REPO_FILTERS[0][:-1] + r')$'
 # ]
 
 FILE_FILTERS = [
-    r'^.*(bundled|contrib|demo|dependency|example|expect|external|fixture|inspector-scan|\/lib\/|libraries|libs\/|modules|package|packages\/|pcg|pcg-cpp|\/pkg\/|results|rtos|sample\/|samples\/|schema|template|test|third(-|_|\/|)party|vcpkg).*$',
+    r'^.*(bundled|contrib|demo|dependency|example|expect|external|fixture|inspector-scan|\/lib\/|libraries|libs\/|modules|package|packages\/|pcg|pcg-cpp|\/pkg\/|results|rtos|sample\/|samples\/|schema|template|test|third(-|_|\/|)party|vcpkg|worker(s|)\/).*$',
     r'^(lib\/).*$'
 ]
 
@@ -99,3 +99,20 @@ def get_latest_data_folder(folder: str) -> str:
         print("No data folders found.")
         return ''
     return str(os.path.join(folder, data_folders[0]))
+
+
+def get_folder_size(folder: str) -> int:
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(folder):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            try:
+                total_size += os.path.getsize(fp)
+            except FileNotFoundError:
+                continue
+    return total_size
+
+def random_string(length: int) -> str:
+    import random
+    import string
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=length))

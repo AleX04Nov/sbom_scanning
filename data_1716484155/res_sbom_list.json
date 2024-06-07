@@ -2,12 +2,12 @@
     "ARM-software": {
         "github.com/ARM-software/armnn": [
             {
-                "path": "/ARM-software/armnn/ArmNN-linux-x86_64.tar/LICENSES.armnn-linux-x86.spdx",
+                "path": "LICENSES.armnn-linux-x86.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/ARM-software/armnn/releases/download/v24.02/ArmNN-linux-x86_64.tar.gz"
             },
             {
-                "path": "/ARM-software/armnn/ArmNN-android-33-arm64-v8.6-a-sve2.tar/LICENSES.armnn-android-33-arm64-v8.6-a-sve2.spdx",
+                "path": "LICENSES.armnn-android-33-arm64-v8.6-a-sve2.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/ARM-software/armnn/releases/download/v24.02/ArmNN-android-33-arm64-v8.6-a-sve2.tar.gz"
             },
@@ -33,12 +33,41 @@
         ]
     },
     "DependencyTrack": {
-        "github.com/DependencyTrack/dependency-track": [
+        "github.com/DependencyTrack/frontend": [
             {
-                "path": "/DependencyTrack/dependency-track/bom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/DependencyTrack/dependency-track/releases/download/4.11.1/bom.json"
+                "path": "bom.xml",
+                "type": "cyclonedx_xml",
+                "url": "https://github.com/DependencyTrack/frontend/releases/download/4.11.1/bom.xml"
             },
+            {
+                "path": "bom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/DependencyTrack/frontend/releases/download/4.11.1/bom.json"
+            }
+        ],
+        "github.com/DependencyTrack/hyades": [
+            {
+                "path": "mirror-service-0.4.0.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/DependencyTrack/hyades/releases/download/v0.4.0/mirror-service-0.4.0.cdx.json"
+            },
+            {
+                "path": "notification-publisher-0.4.0.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/DependencyTrack/hyades/releases/download/v0.4.0/notification-publisher-0.4.0.cdx.json"
+            },
+            {
+                "path": "repository-meta-analyzer-0.4.0.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/DependencyTrack/hyades/releases/download/v0.4.0/repository-meta-analyzer-0.4.0.cdx.json"
+            },
+            {
+                "path": "vulnerability-analyzer-0.4.0.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/DependencyTrack/hyades/releases/download/v0.4.0/vulnerability-analyzer-0.4.0.cdx.json"
+            }
+        ],
+        "github.com/DependencyTrack/dependency-track": [
             {
                 "path": "src/main/resources/services.bom.json",
                 "type": "cyclonedx_json",
@@ -46,11 +75,6 @@
             }
         ],
         "github.com/DependencyTrack/hyades-apiserver": [
-            {
-                "path": "/DependencyTrack/hyades-apiserver/bom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/DependencyTrack/hyades-apiserver/releases/download/5.4.0/bom.json"
-            },
             {
                 "path": "src/main/resources/services.bom.json",
                 "type": "cyclonedx_json",
@@ -61,7 +85,7 @@
     "JuliaLang": {
         "github.com/JuliaLang/julia": [
             {
-                "path": "/JuliaLang/julia/julia-1.10.3-full.tar/julia-1.10.3/julia.spdx.json",
+                "path": "julia-1.10.3/julia.spdx.json",
                 "type": "spdx_json",
                 "url": "https://github.com/JuliaLang/julia/releases/download/v1.10.3/julia-1.10.3-full.tar.gz"
             },
@@ -75,7 +99,7 @@
     "OpenSCAP": {
         "github.com/OpenSCAP/openscap-report": [
             {
-                "path": "/OpenSCAP/openscap-report/openscap_report-0.2.9.tar/openscap_report-0.2.9/LICENSE.spdx",
+                "path": "openscap_report-0.2.9/LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/OpenSCAP/openscap-report/releases/download/v0.2.9/openscap_report-0.2.9.tar.gz"
             },
@@ -89,17 +113,17 @@
     "Siemens-Healthineers": {
         "github.com/Siemens-Healthineers/K2s": [
             {
-                "path": "/Siemens-Healthineers/K2s/K2s-1.0.0/build\\bom\\k2s-bom.xml",
+                "path": "build\\bom\\k2s-bom.xml",
                 "type": "cyclonedx_xml",
                 "url": "https://github.com/Siemens-Healthineers/K2s/releases/download/v1.0.0/K2s-1.0.0.zip"
             },
             {
-                "path": "/Siemens-Healthineers/K2s/K2s-1.0.0/build\\bom\\k2s-bom.json",
+                "path": "build\\bom\\k2s-bom.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/Siemens-Healthineers/K2s/releases/download/v1.0.0/K2s-1.0.0.zip"
             },
             {
-                "path": "/Siemens-Healthineers/K2s/K2s-1.0.0/build\\bom\\merge\\k2s-static.json",
+                "path": "build\\bom\\merge\\k2s-static.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/Siemens-Healthineers/K2s/releases/download/v1.0.0/K2s-1.0.0.zip"
             },
@@ -113,12 +137,12 @@
     "WasmEdge": {
         "github.com/WasmEdge/WasmEdge": [
             {
-                "path": "/WasmEdge/WasmEdge/WasmEdge-0.14.0-src.tar/wasmedge/LICENSE.spdx",
+                "path": "wasmedge/LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/WasmEdge/WasmEdge/releases/download/0.14.0/WasmEdge-0.14.0-src.tar.gz"
             },
             {
-                "path": "/WasmEdge/WasmEdge/sbom.tar/home/runner/work/WasmEdge/WasmEdge/spdx-66fae609-6e3a-4148-bb19-505af788fdd5.spdx.json",
+                "path": "home/runner/work/WasmEdge/WasmEdge/spdx-66fae609-6e3a-4148-bb19-505af788fdd5.spdx.json",
                 "type": "spdx_json",
                 "url": "https://github.com/WasmEdge/WasmEdge/releases/download/0.14.0/sbom.tar.gz"
             },
@@ -132,17 +156,17 @@
     "commitdev": {
         "github.com/commitdev/zero-notification-service": [
             {
-                "path": "/commitdev/zero-notification-service/zero-notification-service_0.4.1_Darwin_x86_64.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero-notification-service/releases/download/v0.4.1/zero-notification-service_0.4.1_Darwin_x86_64.tar.gz"
             },
             {
-                "path": "/commitdev/zero-notification-service/zero-notification-service_0.4.1_Linux_x86_64.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero-notification-service/releases/download/v0.4.1/zero-notification-service_0.4.1_Linux_x86_64.tar.gz"
             },
             {
-                "path": "/commitdev/zero-notification-service/zero-notification-service_0.4.1_Linux_i386.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero-notification-service/releases/download/v0.4.1/zero-notification-service_0.4.1_Linux_i386.tar.gz"
             },
@@ -154,27 +178,27 @@
         ],
         "github.com/commitdev/zero": [
             {
-                "path": "/commitdev/zero/zero_0.2.6_Linux_x86_64.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero/releases/download/v0.2.6/zero_0.2.6_Linux_x86_64.tar.gz"
             },
             {
-                "path": "/commitdev/zero/zero_0.2.6_Darwin_x86_64.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero/releases/download/v0.2.6/zero_0.2.6_Darwin_x86_64.tar.gz"
             },
             {
-                "path": "/commitdev/zero/zero_0.2.6_Darwin_arm64.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero/releases/download/v0.2.6/zero_0.2.6_Darwin_arm64.tar.gz"
             },
             {
-                "path": "/commitdev/zero/zero_0.2.6_Linux_arm64.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero/releases/download/v0.2.6/zero_0.2.6_Linux_arm64.tar.gz"
             },
             {
-                "path": "/commitdev/zero/zero_0.2.6_Linux_i386.tar/LICENSE.spdx",
+                "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/commitdev/zero/releases/download/v0.2.6/zero_0.2.6_Linux_i386.tar.gz"
             },
@@ -237,7 +261,7 @@
     "devops-kung-fu": {
         "github.com/devops-kung-fu/meadow": [
             {
-                "path": "/devops-kung-fu/meadow/meadow.cyclonedx.json",
+                "path": "meadow.cyclonedx.json",
                 "type": "spdx_json",
                 "url": "https://github.com/devops-kung-fu/meadow/releases/download/v0.0.1/meadow.cyclonedx.json"
             },
@@ -245,52 +269,6 @@
                 "path": "sbom/meadow.cyclonedx.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/devops-kung-fu/meadow/blob/120dc1e4db694a4ea6aa1bb6d2f97a302131427e/sbom/meadow.cyclonedx.json"
-            }
-        ],
-        "github.com/devops-kung-fu/hinge": [
-            {
-                "path": "/devops-kung-fu/hinge/hinge.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/devops-kung-fu/hinge/releases/download/v1.0.1/hinge.spdx.json"
-            },
-            {
-                "path": "sbom/hinge.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/devops-kung-fu/hinge/blob/6f09cda124519ab978c6b590fa2c20d5f461c289/sbom/hinge.spdx.json"
-            },
-            {
-                "path": "sbom/hinge.cyclonedx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/devops-kung-fu/hinge/blob/6f09cda124519ab978c6b590fa2c20d5f461c289/sbom/hinge.cyclonedx.json"
-            }
-        ],
-        "github.com/devops-kung-fu/lucha": [
-            {
-                "path": "/devops-kung-fu/lucha/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/devops-kung-fu/lucha/releases/download/v0.0.2/sbom.json"
-            },
-            {
-                "path": "lucha-sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/devops-kung-fu/lucha/blob/6d89b471fb952ffd5c17fdd1e36cc797eb96d7e5/lucha-sbom.json"
-            }
-        ],
-        "github.com/devops-kung-fu/gardener": [
-            {
-                "path": "/devops-kung-fu/gardener/bomber.cyclonedx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/devops-kung-fu/gardener/releases/download/v1.0.1/bomber.cyclonedx.json"
-            },
-            {
-                "path": "gardener-sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/devops-kung-fu/gardener/blob/281f75cbc2a568823d9d514207e4e7622a551013/gardener-sbom.json"
-            },
-            {
-                "path": "sbom/gardener.cyclonedx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/devops-kung-fu/gardener/blob/281f75cbc2a568823d9d514207e4e7622a551013/sbom/gardener.cyclonedx.json"
             }
         ],
         "github.com/devops-kung-fu/gitkon": [
@@ -331,30 +309,49 @@
                 "url": "https://github.com/devops-kung-fu/go-shs/blob/31c412dad0f30f5f1ac26000c646f3636c9de336/sbom.json"
             }
         ],
+        "github.com/devops-kung-fu/hinge": [
+            {
+                "path": "sbom/hinge.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/devops-kung-fu/hinge/blob/6f09cda124519ab978c6b590fa2c20d5f461c289/sbom/hinge.spdx.json"
+            },
+            {
+                "path": "sbom/hinge.cyclonedx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/devops-kung-fu/hinge/blob/6f09cda124519ab978c6b590fa2c20d5f461c289/sbom/hinge.cyclonedx.json"
+            }
+        ],
         "github.com/devops-kung-fu/shs": [
             {
                 "path": "sbom.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/devops-kung-fu/shs/blob/52863e16a765b306cc02c8f2a1bfff0ba364f536/sbom.json"
             }
+        ],
+        "github.com/devops-kung-fu/lucha": [
+            {
+                "path": "lucha-sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/devops-kung-fu/lucha/blob/6d89b471fb952ffd5c17fdd1e36cc797eb96d7e5/lucha-sbom.json"
+            }
+        ],
+        "github.com/devops-kung-fu/gardener": [
+            {
+                "path": "gardener-sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/devops-kung-fu/gardener/blob/281f75cbc2a568823d9d514207e4e7622a551013/gardener-sbom.json"
+            },
+            {
+                "path": "sbom/gardener.cyclonedx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/devops-kung-fu/gardener/blob/281f75cbc2a568823d9d514207e4e7622a551013/sbom/gardener.cyclonedx.json"
+            }
         ]
     },
     "eduvpn": {
-        "github.com/eduvpn/vpn-lib-common": [
-            {
-                "path": "/eduvpn/vpn-lib-common/vpn-lib-common-2.2.1.tar/vpn-lib-common-2.2.1/LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-lib-common/releases/download/2.2.1/vpn-lib-common-2.2.1.tar.xz"
-            },
-            {
-                "path": "LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-lib-common/blob/2277996f4bd6b1858a4990812f4850ccaebcd1ee/LICENSE.spdx"
-            }
-        ],
         "github.com/eduvpn/vpn-admin-portal": [
             {
-                "path": "/eduvpn/vpn-admin-portal/vpn-admin-portal-1.7.3.tar/vpn-admin-portal-1.7.3/LICENSE.spdx",
+                "path": "vpn-admin-portal-1.7.3/LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/eduvpn/vpn-admin-portal/releases/download/1.7.3/vpn-admin-portal-1.7.3.tar.xz"
             },
@@ -364,52 +361,16 @@
                 "url": "https://github.com/eduvpn/vpn-admin-portal/blob/05eb1ff9c6fa72f1a69c8e86c74824c6837cab4b/LICENSE.spdx"
             }
         ],
-        "github.com/eduvpn/python-eduvpn-client": [
+        "github.com/eduvpn/vpn-lib-common": [
             {
-                "path": "/eduvpn/python-eduvpn-client/python-eduvpn-client-4.2.99.1.tar/python-eduvpn-client-4.2.99.1/LICENSE.spdx",
+                "path": "vpn-lib-common-2.2.1/LICENSE.spdx",
                 "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/python-eduvpn-client/releases/download/4.2.99.1/python-eduvpn-client-4.2.99.1.tar.xz"
+                "url": "https://github.com/eduvpn/vpn-lib-common/releases/download/2.2.1/vpn-lib-common-2.2.1.tar.xz"
             },
             {
                 "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/python-eduvpn-client/blob/1d37f56d07d142b6cffa00d00329ad5fcc05f47e/LICENSE.spdx"
-            }
-        ],
-        "github.com/eduvpn/vpn-user-portal": [
-            {
-                "path": "/eduvpn/vpn-user-portal/vpn-user-portal-2.3.3.tar/vpn-user-portal-2.3.3/LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-user-portal/releases/download/2.3.3/vpn-user-portal-2.3.3.tar.xz"
-            },
-            {
-                "path": "LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-user-portal/blob/5ae1483e8b1d030ee603f6b0bd76462921b3bcfc/LICENSE.spdx"
-            }
-        ],
-        "github.com/eduvpn/vpn-server-node": [
-            {
-                "path": "/eduvpn/vpn-server-node/vpn-server-node-2.2.2.tar/vpn-server-node-2.2.2/LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-server-node/releases/download/2.2.2/vpn-server-node-2.2.2.tar.xz"
-            },
-            {
-                "path": "LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-server-node/blob/90be9d4ecdbeeff957a1b355addaedce1692258c/LICENSE.spdx"
-            }
-        ],
-        "github.com/eduvpn/vpn-server-api": [
-            {
-                "path": "/eduvpn/vpn-server-api/vpn-server-api-2.2.4.tar/vpn-server-api-2.2.4/LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-server-api/releases/download/2.2.4/vpn-server-api-2.2.4.tar.xz"
-            },
-            {
-                "path": "LICENSE.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/eduvpn/vpn-server-api/blob/e61c9f32fb0ecde45b66cca3a02fff961699f844/LICENSE.spdx"
+                "url": "https://github.com/eduvpn/vpn-lib-common/blob/2277996f4bd6b1858a4990812f4850ccaebcd1ee/LICENSE.spdx"
             }
         ],
         "github.com/eduvpn/vpn-for-web": [
@@ -418,35 +379,146 @@
                 "type": "spdx_spdx",
                 "url": "https://github.com/eduvpn/vpn-for-web/blob/85241ce1e08ec9dd6dfb1f1ed14d631ca09e895b/LICENSE.spdx"
             }
+        ],
+        "github.com/eduvpn/python-eduvpn-client": [
+            {
+                "path": "LICENSE.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/eduvpn/python-eduvpn-client/blob/1d37f56d07d142b6cffa00d00329ad5fcc05f47e/LICENSE.spdx"
+            }
+        ],
+        "github.com/eduvpn/vpn-user-portal": [
+            {
+                "path": "LICENSE.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/eduvpn/vpn-user-portal/blob/5ae1483e8b1d030ee603f6b0bd76462921b3bcfc/LICENSE.spdx"
+            }
+        ],
+        "github.com/eduvpn/vpn-server-node": [
+            {
+                "path": "LICENSE.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/eduvpn/vpn-server-node/blob/90be9d4ecdbeeff957a1b355addaedce1692258c/LICENSE.spdx"
+            }
+        ],
+        "github.com/eduvpn/vpn-server-api": [
+            {
+                "path": "LICENSE.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/eduvpn/vpn-server-api/blob/e61c9f32fb0ecde45b66cca3a02fff961699f844/LICENSE.spdx"
+            }
         ]
     },
     "mchmarny": {
+        "github.com/mchmarny/aictl": [
+            {
+                "path": "aictl_0.2.0_darwin_all.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/aictl/releases/download/v0.2.0/aictl_0.2.0_darwin_all.sbom"
+            },
+            {
+                "path": "aictl_0.2.0_linux_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/aictl/releases/download/v0.2.0/aictl_0.2.0_linux_amd64.sbom"
+            },
+            {
+                "path": "aictl_0.2.0_windows_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/aictl/releases/download/v0.2.0/aictl_0.2.0_windows_arm64.sbom"
+            },
+            {
+                "path": "aictl_0.2.0_windows_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/aictl/releases/download/v0.2.0/aictl_0.2.0_windows_amd64.sbom"
+            },
+            {
+                "path": "aictl_0.2.0_linux_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/aictl/releases/download/v0.2.0/aictl_0.2.0_linux_arm64.sbom"
+            }
+        ],
+        "github.com/mchmarny/cli": [
+            {
+                "path": "cli_0.0.4_windows_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/cli/releases/download/v0.0.4/cli_0.0.4_windows_arm64.sbom"
+            },
+            {
+                "path": "cli_0.0.4_linux_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/cli/releases/download/v0.0.4/cli_0.0.4_linux_arm64.sbom"
+            },
+            {
+                "path": "cli_0.0.4_darwin_all.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/cli/releases/download/v0.0.4/cli_0.0.4_darwin_all.sbom"
+            },
+            {
+                "path": "cli_0.0.4_linux_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/cli/releases/download/v0.0.4/cli_0.0.4_linux_amd64.sbom"
+            },
+            {
+                "path": "cli_0.0.4_windows_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/cli/releases/download/v0.0.4/cli_0.0.4_windows_amd64.sbom"
+            }
+        ],
+        "github.com/mchmarny/reputer": [
+            {
+                "path": "reputer_0.1.2_linux_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/reputer/releases/download/v0.1.2/reputer_0.1.2_linux_arm64.sbom"
+            },
+            {
+                "path": "reputer_0.1.2_windows_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/reputer/releases/download/v0.1.2/reputer_0.1.2_windows_arm64.sbom"
+            },
+            {
+                "path": "reputer_0.1.2_darwin_all.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/reputer/releases/download/v0.1.2/reputer_0.1.2_darwin_all.sbom"
+            },
+            {
+                "path": "reputer_0.1.2_linux_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/reputer/releases/download/v0.1.2/reputer_0.1.2_linux_amd64.sbom"
+            },
+            {
+                "path": "reputer_0.1.2_windows_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/reputer/releases/download/v0.1.2/reputer_0.1.2_windows_amd64.sbom"
+            }
+        ],
+        "github.com/mchmarny/vimp": [
+            {
+                "path": "vimp_0.6.5_linux_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/vimp/releases/download/v0.6.5/vimp_0.6.5_linux_amd64.sbom"
+            },
+            {
+                "path": "vimp_0.6.5_windows_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/vimp/releases/download/v0.6.5/vimp_0.6.5_windows_arm64.sbom"
+            },
+            {
+                "path": "vimp_0.6.5_darwin_all.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/vimp/releases/download/v0.6.5/vimp_0.6.5_darwin_all.sbom"
+            },
+            {
+                "path": "vimp_0.6.5_windows_amd64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/vimp/releases/download/v0.6.5/vimp_0.6.5_windows_amd64.sbom"
+            },
+            {
+                "path": "vimp_0.6.5_linux_arm64.sbom",
+                "type": "spdx_generic",
+                "url": "https://github.com/mchmarny/vimp/releases/download/v0.6.5/vimp_0.6.5_linux_arm64.sbom"
+            }
+        ],
         "github.com/mchmarny/disco": [
-            {
-                "path": "/mchmarny/disco/disco_1.1.1_linux_arm64.sbom",
-                "type": "spdx_generic",
-                "url": "https://github.com/mchmarny/disco/releases/download/v1.1.1/disco_1.1.1_linux_arm64.sbom"
-            },
-            {
-                "path": "/mchmarny/disco/disco_1.1.1_linux_amd64.sbom",
-                "type": "spdx_generic",
-                "url": "https://github.com/mchmarny/disco/releases/download/v1.1.1/disco_1.1.1_linux_amd64.sbom"
-            },
-            {
-                "path": "/mchmarny/disco/disco_1.1.1_windows_amd64.sbom",
-                "type": "spdx_generic",
-                "url": "https://github.com/mchmarny/disco/releases/download/v1.1.1/disco_1.1.1_windows_amd64.sbom"
-            },
-            {
-                "path": "/mchmarny/disco/disco_1.1.1_windows_arm64.sbom",
-                "type": "spdx_generic",
-                "url": "https://github.com/mchmarny/disco/releases/download/v1.1.1/disco_1.1.1_windows_arm64.sbom"
-            },
-            {
-                "path": "/mchmarny/disco/disco_1.1.1_darwin_all.sbom",
-                "type": "spdx_generic",
-                "url": "https://github.com/mchmarny/disco/releases/download/v1.1.1/disco_1.1.1_darwin_all.sbom"
-            },
             {
                 "path": "data/trivy-spdx-sbom.json",
                 "type": "spdx_json",
@@ -460,16 +532,60 @@
         ]
     },
     "spdx": {
-        "github.com/spdx/LicenseListPublisher": [
+        "github.com/spdx/Spdx-Java-Library": [
             {
-                "path": "/spdx/LicenseListPublisher/licenseListPublisher-2.2.10/licenseListPublisher-2.2.10.spdx.json",
+                "path": "java-spdx-library-1.1.11.spdx.json",
                 "type": "spdx_json",
-                "url": "https://github.com/spdx/LicenseListPublisher/releases/download/v2.2.10/licenseListPublisher-2.2.10.zip"
-            },
+                "url": "https://github.com/spdx/Spdx-Java-Library/releases/download/v1.1.11/java-spdx-library-1.1.11.zip"
+            }
+        ],
+        "github.com/spdx/cdx2spdx": [
             {
-                "path": "LICENSE.spdx.json",
+                "path": "cdx2spdx-0.1.5.spdx.json",
                 "type": "spdx_json",
-                "url": "https://github.com/spdx/LicenseListPublisher/blob/d8f98ee305893ba323f52762de386d1493aaa430/LICENSE.spdx.json"
+                "url": "https://github.com/spdx/cdx2spdx/releases/download/v0.1.5/cdx2spdx-0.1.5.zip"
+            }
+        ],
+        "github.com/spdx/spdx-java-jackson-store": [
+            {
+                "path": "spdx-jackson-store-1.1.9.1.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/spdx-java-jackson-store/releases/download/v1.1.9.1/spdx-jackson-store-1.1.9.1.zip"
+            }
+        ],
+        "github.com/spdx/spdx-java-rdf-store": [
+            {
+                "path": "spdx-rdf-store-1.1.9.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/spdx-java-rdf-store/releases/download/v1.1.9/spdx-rdf-store-1.1.9.zip"
+            }
+        ],
+        "github.com/spdx/spdx-java-spreadsheet-store": [
+            {
+                "path": "spdx-spreadsheet-store-1.1.7.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/spdx-java-spreadsheet-store/releases/download/v1.1.7/spdx-spreadsheet-store-1.1.7.zip"
+            }
+        ],
+        "github.com/spdx/spdx-java-tagvalue-store": [
+            {
+                "path": "spdx-tagvalue-store-1.1.7.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/spdx-java-tagvalue-store/releases/download/v1.1.7/spdx-tagvalue-store-1.1.7.zip"
+            }
+        ],
+        "github.com/spdx/spdx-to-osv": [
+            {
+                "path": "spdx-to-osv-0.1.2.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/spdx-to-osv/releases/download/v0.1.2/spdx-to-osv-0.1.2.zip"
+            }
+        ],
+        "github.com/spdx/tools-java": [
+            {
+                "path": "tools-java-1.1.8.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/tools-java/releases/download/v1.1.8/tools-java-1.1.8.zip"
             }
         ],
         "github.com/spdx/spdx-examples": [
@@ -498,385 +614,21 @@
                 "type": "spdx_json",
                 "url": "https://github.com/spdx/spdx-examples/blob/8a73b32a40e22311d907ea86fc5b25f92dedd6c7/presentations/OSS-NA-2023/SPDXVersion2.3/05-SBOMwSourceLicense.json"
             }
+        ],
+        "github.com/spdx/LicenseListPublisher": [
+            {
+                "path": "LICENSE.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/spdx/LicenseListPublisher/blob/d8f98ee305893ba323f52762de386d1493aaa430/LICENSE.spdx.json"
+            }
         ]
     },
     "sthagen": {
-        "github.com/sthagen/ansaittua": [
+        "github.com/sthagen/liitos": [
             {
-                "path": "/sthagen/ansaittua/ansaittua-2022.7.30.tar/ansaittua-2022.7.30/sbom.json",
+                "path": "liitos-2022.9.18/sbom.json",
                 "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/ansaittua/releases/download/v2022.7.30/ansaittua-2022.7.30.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/attribuutit": [
-            {
-                "path": "/sthagen/attribuutit/attribuutit-2022.8.1.tar/attribuutit-2022.8.1/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/attribuutit/releases/download/v2022.8.1/attribuutit-2022.8.1.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/gengive": [
-            {
-                "path": "/sthagen/gengive/gengive-2022.8.2.tar/gengive-2022.8.2/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/gengive/releases/download/v2022.8.2/gengive-2022.8.2.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/laskea": [
-            {
-                "path": "/sthagen/laskea/laskea-2022.9.22.tar/laskea-2022.9.22/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/laskea/releases/download/v2022.9.22/laskea-2022.9.22.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/suhteita": [
-            {
-                "path": "/sthagen/suhteita/suhteita-2022.8.28.tar/suhteita-2022.8.28/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/suhteita/releases/download/v2022.8.28/suhteita-2022.8.28.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/turvallisuusneuvonta": [
-            {
-                "path": "/sthagen/turvallisuusneuvonta/turvallisuusneuvonta-2022.8.9.tar/turvallisuusneuvonta-2022.8.9/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/turvallisuusneuvonta/releases/download/v2022.8.9/turvallisuusneuvonta-2022.8.9.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/piemap": [
-            {
-                "path": "/sthagen/piemap/piemap-2022.7.30.tar/piemap-2022.7.30/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/piemap/releases/download/v2022.7.30/piemap-2022.7.30.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/stativ": [
-            {
-                "path": "/sthagen/stativ/stativ-2022.7.31.tar/stativ-2022.7.31/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/stativ/releases/download/v2022.7.31/stativ-2022.7.31.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/subtractor": [
-            {
-                "path": "/sthagen/subtractor/subtractor-2022.8.2.tar/subtractor-2022.8.2/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/subtractor/releases/download/v2022.8.2/subtractor-2022.8.2.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/kiirastuli": [
-            {
-                "path": "/sthagen/kiirastuli/kiirastuli-2022.7.30.tar/kiirastuli-2022.7.30/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/kiirastuli/releases/download/v2022.7.30/kiirastuli-2022.7.30.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/sixties": [
-            {
-                "path": "/sthagen/sixties/sixties-2022.8.2.tar/sixties-2022.8.2/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/sixties/releases/download/v2022.8.2/sixties-2022.8.2.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/taksonomia": [
-            {
-                "path": "/sthagen/taksonomia/taksonomia-2022.9.21.tar/taksonomia-2022.9.21/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/taksonomia/releases/download/v2022.9.21/taksonomia-2022.9.21.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/kohtaaminen": [
-            {
-                "path": "/sthagen/kohtaaminen/kohtaaminen-2022.8.2.tar/kohtaaminen-2022.8.2/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/kohtaaminen/releases/download/v2022.8.2/kohtaaminen-2022.8.2.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/cdx.json"
-            }
-        ],
-        "github.com/sthagen/pilli": [
-            {
-                "path": "/sthagen/pilli/pilli-2022.7.28.tar/pilli-2022.7.28/sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/pilli/releases/download/v2022.7.28/pilli-2022.7.28.tar.gz"
-            },
-            {
-                "path": "etc/sbom/spdx.yaml",
-                "type": "spdx_yaml",
-                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/spdx.yaml"
-            },
-            {
-                "path": "etc/sbom/spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/spdx.json"
-            },
-            {
-                "path": "etc/sbom/spdx.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/spdx.spdx"
-            },
-            {
-                "path": "etc/sbom/cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/cdx.json"
+                "url": "https://github.com/sthagen/liitos/releases/download/v2022.9.18/liitos-2022.9.18.tar.gz"
             }
         ],
         "github.com/sthagen/tallipoika": [
@@ -1033,6 +785,28 @@
                 "url": "https://github.com/sthagen/couscous/blob/ea9e834ea2bb1cde314e720941c4ad258d643a7d/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/ansaittua": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/ansaittua/blob/daa158cd9990378bd256ded359372efdf3d32015/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/ajallaan": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -1121,6 +895,28 @@
                 "url": "https://github.com/sthagen/vastaanottaa/blob/21ab44e4c56a57ff4eea05411e737d6effadfb23/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/attribuutit": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/attribuutit/blob/f2ce88048af3bf327df64f72fe544b71e8d0166d/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/swid-lint": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -1187,6 +983,50 @@
                 "url": "https://github.com/sthagen/nineties/blob/ac421302ed3944ec22456a51845a73f62cb14fa8/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/gengive": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/gengive/blob/f406994ec78332c1e5aac96050d09dcb4fe0187e/etc/sbom/cdx.json"
+            }
+        ],
+        "github.com/sthagen/laskea": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/laskea/blob/ca1a30dd4ee06a12b6094f2a7ff092548a80ae36/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/booq": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -1207,6 +1047,28 @@
                 "path": "etc/sbom/cdx.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/sthagen/booq/blob/d01fe56249c4b22ac0573920ebad520c7fdefdf0/etc/sbom/cdx.json"
+            }
+        ],
+        "github.com/sthagen/suhteita": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/suhteita/blob/5eb5777424f91c627b8ef05c7059bfb3ca4864d7/etc/sbom/cdx.json"
             }
         ],
         "github.com/sthagen/puhdistusalue": [
@@ -1275,6 +1137,28 @@
                 "url": "https://github.com/sthagen/kutoa/blob/2843271797eb62aa8c1102b6aee1d5b8f3218ded/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/turvallisuusneuvonta": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/turvallisuusneuvonta/blob/9bba57ab58474f6e7cab81d9eacae028a3afb8d4/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/tutkia": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -1339,6 +1223,28 @@
                 "path": "etc/sbom/cdx.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/sthagen/tekstialue/blob/c786dbf929d769d96cb121d6a3c66d916a3d6f4b/etc/sbom/cdx.json"
+            }
+        ],
+        "github.com/sthagen/piemap": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/piemap/blob/bec34ba2b65ea46e7ec4bc7d639450edb6594f4b/etc/sbom/cdx.json"
             }
         ],
         "github.com/sthagen/asiakirjasuodatin": [
@@ -1517,6 +1423,28 @@
                 "url": "https://github.com/sthagen/koordinaatit/blob/58d44f9ac73cab444adc28d1ff482b5656d523f6/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/stativ": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/stativ/blob/af8451548806420287da108d3e663f824e7d02af/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/korspollinering": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -1647,6 +1575,50 @@
                 "path": "etc/sbom/cdx.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/sthagen/hyperkuutio/blob/de3ca6ce5db4e23ecd195bcc8aabb5fa91b9d8ef/etc/sbom/cdx.json"
+            }
+        ],
+        "github.com/sthagen/subtractor": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/subtractor/blob/a446ee0579876f9060a0f55d7aa305a1e38bf293/etc/sbom/cdx.json"
+            }
+        ],
+        "github.com/sthagen/kiirastuli": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/kiirastuli/blob/6dcf16414de92a1c4f1b8787f0a3c57619773cb0/etc/sbom/cdx.json"
             }
         ],
         "github.com/sthagen/cyclonedx-lint": [
@@ -1803,6 +1775,28 @@
                 "url": "https://github.com/sthagen/medlar/blob/99707786b356e30c65afdab3a47709baf0a5edc4/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/sixties": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/sixties/blob/303fff7b07f674df447eac8f09b8f36984b7bb1d/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/etiketti": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -1823,6 +1817,28 @@
                 "path": "etc/sbom/cdx.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/sthagen/etiketti/blob/1b34d021a03b6181d3ca22d2579dd90d686d3c79/etc/sbom/cdx.json"
+            }
+        ],
+        "github.com/sthagen/taksonomia": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/taksonomia/blob/5d20fe2503259c69f2b51838cace7ac133fa5bd1/etc/sbom/cdx.json"
             }
         ],
         "github.com/sthagen/kiertotie": [
@@ -1935,6 +1951,28 @@
                 "url": "https://github.com/sthagen/paikalta/blob/8783d29f83ab863fe956b43df1b505f91b30b083/etc/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/kohtaaminen": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/kohtaaminen/blob/d5692a38833ac190b8ff685b9a1e3e4381d5806d/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/magnetismi": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -2045,6 +2083,28 @@
                 "url": "https://github.com/sthagen/partitionsets/blob/5df5481f0a391dac4ce12a21b96969357ce2a233/sbom/cdx.json"
             }
         ],
+        "github.com/sthagen/pilli": [
+            {
+                "path": "etc/sbom/spdx.yaml",
+                "type": "spdx_yaml",
+                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/spdx.yaml"
+            },
+            {
+                "path": "etc/sbom/spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/spdx.json"
+            },
+            {
+                "path": "etc/sbom/spdx.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/spdx.spdx"
+            },
+            {
+                "path": "etc/sbom/cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/sthagen/pilli/blob/9c0090ed155c2620fc569446dc8589196eeba09a/etc/sbom/cdx.json"
+            }
+        ],
         "github.com/sthagen/sbom": [
             {
                 "path": "etc/sbom/spdx.yaml",
@@ -2093,12 +2153,12 @@
     "tenzir": {
         "github.com/tenzir/tenzir": [
             {
-                "path": "/tenzir/tenzir/tenzir-static-x86_64-linux.tar/opt/tenzir/share/doc/tenzir/tenzir.spdx.json",
+                "path": "opt/tenzir/share/doc/tenzir/tenzir.spdx.json",
                 "type": "spdx_json",
                 "url": "https://github.com/tenzir/tenzir/releases/download/v4.14.0/tenzir-static-x86_64-linux.tar.gz"
             },
             {
-                "path": "/tenzir/tenzir/tenzir.spdx.json",
+                "path": "tenzir.spdx.json",
                 "type": "spdx_json",
                 "url": "https://github.com/tenzir/tenzir/releases/download/v4.14.0/tenzir.spdx.json"
             },
@@ -2106,6 +2166,214 @@
                 "path": "vendored.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/tenzir/tenzir/blob/9a02d0c3bd748d164b65cf69b62acc4c952c7a6f/vendored.spdx"
+            }
+        ]
+    },
+    "tomtom-international": {
+        "github.com/tomtom-international/vault-assessment-prometheus-exporter": [
+            {
+                "path": "sbom.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/tomtom-international/vault-assessment-prometheus-exporter/releases/download/1.1.15/sbom.spdx.json"
+            }
+        ],
+        "github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples": [
+            {
+                "path": "compliancy-reports/navigation-oss-compliancy-cyclonedx-report.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples/blob/69c690497845342572ce2ab5d380921c72cd0c63/compliancy-reports/navigation-oss-compliancy-cyclonedx-report.json"
+            },
+            {
+                "path": "compliancy-reports/digital-cockpit-oss-compliancy-cyclonedx-report.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples/blob/69c690497845342572ce2ab5d380921c72cd0c63/compliancy-reports/digital-cockpit-oss-compliancy-cyclonedx-report.json"
+            }
+        ]
+    },
+    "philips-software": {
+        "github.com/philips-software/amp-devcontainer": [
+            {
+                "path": "philips-software-amp-devcontainer-rust_sha256_bb1f87fba7367b9c51c72e7f453659fddda988aa9eb746d558b1eab4fcbbcdbf.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/philips-software/amp-devcontainer/releases/download/v5.1.0/philips-software-amp-devcontainer-rust_sha256_bb1f87fba7367b9c51c72e7f453659fddda988aa9eb746d558b1eab4fcbbcdbf.spdx.json"
+            },
+            {
+                "path": "philips-software-amp-devcontainer-cpp_sha256_a57da1a07a1f29f6a6cb0715d5de37b2ee0ae9c815d1522488373ebef8c7f4e2.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/philips-software/amp-devcontainer/releases/download/v5.1.0/philips-software-amp-devcontainer-cpp_sha256_a57da1a07a1f29f6a6cb0715d5de37b2ee0ae9c815d1522488373ebef8c7f4e2.spdx.json"
+            }
+        ],
+        "github.com/philips-software/license-scanner": [
+            {
+                "path": "bom.spdx",
+                "type": "spdx_spdx",
+                "url": "https://github.com/philips-software/license-scanner/blob/c520f089cf3662927e20999432b116240c6cb4a8/bom.spdx"
+            }
+        ]
+    },
+    "mongodb-js": {
+        "github.com/mongodb-js/mongosh": [
+            {
+                "path": "mongosh-2.2.6-linux-ppc64le/.sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/mongodb-js/mongosh/releases/download/v2.2.6/mongosh-2.2.6-linux-ppc64le.tgz"
+            }
+        ],
+        "github.com/mongodb-js/mongodb-client-encryption": [
+            {
+                "path": "sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/mongodb-js/mongodb-client-encryption/blob/e35bd59f40668749853256d6a91ccdeede7d0c25/sbom.json"
+            }
+        ],
+        "github.com/mongodb-js/kerberos": [
+            {
+                "path": "sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/mongodb-js/kerberos/blob/658c858dd86898b1b6467b14694549c92de8f6d2/sbom.json"
+            }
+        ],
+        "github.com/mongodb-js/zstd": [
+            {
+                "path": "sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/mongodb-js/zstd/blob/a3a08c61c9045411c8275e248498dbc583457fb5/sbom.json"
+            }
+        ],
+        "github.com/mongodb-js/nodejs-mongodb-legacy": [
+            {
+                "path": "sbom.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/mongodb-js/nodejs-mongodb-legacy/blob/13bba2e69c5ae234560800086be6e514c4b75adb/sbom.json"
+            }
+        ]
+    },
+    "microsoft": {
+        "github.com/microsoft/msstore-cli": [
+            {
+                "path": "_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/microsoft/msstore-cli/releases/download/v0.1.32/MSStoreCLI-win-x64.zip"
+            },
+            {
+                "path": "_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/microsoft/msstore-cli/releases/download/v0.1.32/MSStoreCLI-linux-x64.tar.gz"
+            },
+            {
+                "path": "_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/microsoft/msstore-cli/releases/download/v0.1.32/MSStoreCLI-linux-arm64.tar.gz"
+            }
+        ],
+        "github.com/microsoft/CCF": [
+            {
+                "path": "manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/microsoft/CCF/releases/download/ccf-5.0.0-dev15/manifest.spdx.json"
+            }
+        ],
+        "github.com/microsoft/GHAzDO-Resources": [
+            {
+                "path": "src/sbom-tool/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/microsoft/GHAzDO-Resources/blob/fc178162808b1bd517d2229a99c67ede892b3067/src/sbom-tool/manifest.spdx.json"
+            }
+        ]
+    },
+    "ThomasVitale": {
+        "github.com/ThomasVitale/scs-demo-binary": [
+            {
+                "path": "scs-demo-binary_1.0.0_sbom.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/ThomasVitale/scs-demo-binary/releases/download/v1.0.0/scs-demo-binary_1.0.0_sbom.spdx.json"
+            }
+        ],
+        "github.com/ThomasVitale/supply-chain-security-java": [
+            {
+                "path": "sbom/spdx/gradle/bom-syft.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/spdx/gradle/bom-syft.spdx.json"
+            },
+            {
+                "path": "sbom/spdx/gradle/bom-trivy.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/spdx/gradle/bom-trivy.spdx.json"
+            },
+            {
+                "path": "sbom/spdx/gradle/bom-oci-syft.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/spdx/gradle/bom-oci-syft.spdx.json"
+            },
+            {
+                "path": "sbom/cyclonedx/maven/bom-syft.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/maven/bom-syft.cdx.json"
+            },
+            {
+                "path": "sbom/cyclonedx/gradle/bom-syft.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/gradle/bom-syft.cdx.json"
+            },
+            {
+                "path": "sbom/cyclonedx/maven/bom-cdxgen.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/maven/bom-cdxgen.cdx.json"
+            },
+            {
+                "path": "sbom/cyclonedx/gradle/bom-cdxgen.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/gradle/bom-cdxgen.cdx.json"
+            },
+            {
+                "path": "sbom/cyclonedx/maven/bom-oci-syft.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/maven/bom-oci-syft.cdx.json"
+            },
+            {
+                "path": "sbom/cyclonedx/gradle/bom-oci-syft.cdx.json",
+                "type": "cyclonedx_json",
+                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/gradle/bom-oci-syft.cdx.json"
+            }
+        ]
+    },
+    "Azure": {
+        "github.com/Azure/cyclecloud-slurm": [
+            {
+                "path": "slurm-pkgs-ubuntu22/_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/Azure/cyclecloud-slurm/releases/download/2024-05-14-bins/slurm-pkgs-ubuntu22.zip"
+            }
+        ],
+        "github.com/Azure/azure-functions-core-tools": [
+            {
+                "path": "_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/Azure/azure-functions-core-tools/releases/download/4.0.5801/Azure.Functions.Cli.osx-x64.4.0.5801.zip"
+            },
+            {
+                "path": "workers/node/_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/Azure/azure-functions-core-tools/releases/download/4.0.5801/Azure.Functions.Cli.osx-x64.4.0.5801.zip"
+            },
+            {
+                "path": "workers/powershell/7/_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/Azure/azure-functions-core-tools/releases/download/4.0.5801/Azure.Functions.Cli.osx-x64.4.0.5801.zip"
+            }
+        ],
+        "github.com/Azure/azure-iot-ops-cli-extension": [
+            {
+                "path": "release/SBOM/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/Azure/azure-iot-ops-cli-extension/releases/download/v0.5.0b2/SBOM.zip"
+            }
+        ],
+        "github.com/Azure/missionlz-edge": [
+            {
+                "path": "_manifest/spdx_2.2/manifest.spdx.json",
+                "type": "spdx_json",
+                "url": "https://github.com/Azure/missionlz-edge/blob/1a77f73c922a5736cc2f9f35194ccff30a0a75be/_manifest/spdx_2.2/manifest.spdx.json"
             }
         ]
     },
@@ -2221,15 +2489,6 @@
                 "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/ArneBachmann/sos/blob/f82a1e1f97d69f7eafc3c152ef61c2b11c316bbc/LICENSE.spdx"
-            }
-        ]
-    },
-    "Azure": {
-        "github.com/Azure/missionlz-edge": [
-            {
-                "path": "_manifest/spdx_2.2/manifest.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/Azure/missionlz-edge/blob/1a77f73c922a5736cc2f9f35194ccff30a0a75be/_manifest/spdx_2.2/manifest.spdx.json"
             }
         ]
     },
@@ -2735,55 +2994,6 @@
                 "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/TermySequence/termysequence/blob/a531dc2278979dbe6a82c6a6d10cd1e496d00315/LICENSE.spdx"
-            }
-        ]
-    },
-    "ThomasVitale": {
-        "github.com/ThomasVitale/supply-chain-security-java": [
-            {
-                "path": "sbom/spdx/gradle/bom-syft.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/spdx/gradle/bom-syft.spdx.json"
-            },
-            {
-                "path": "sbom/spdx/gradle/bom-trivy.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/spdx/gradle/bom-trivy.spdx.json"
-            },
-            {
-                "path": "sbom/spdx/gradle/bom-oci-syft.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/spdx/gradle/bom-oci-syft.spdx.json"
-            },
-            {
-                "path": "sbom/cyclonedx/maven/bom-syft.cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/maven/bom-syft.cdx.json"
-            },
-            {
-                "path": "sbom/cyclonedx/gradle/bom-syft.cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/gradle/bom-syft.cdx.json"
-            },
-            {
-                "path": "sbom/cyclonedx/maven/bom-cdxgen.cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/maven/bom-cdxgen.cdx.json"
-            },
-            {
-                "path": "sbom/cyclonedx/gradle/bom-cdxgen.cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/gradle/bom-cdxgen.cdx.json"
-            },
-            {
-                "path": "sbom/cyclonedx/maven/bom-oci-syft.cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/maven/bom-oci-syft.cdx.json"
-            },
-            {
-                "path": "sbom/cyclonedx/gradle/bom-oci-syft.cdx.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/ThomasVitale/supply-chain-security-java/blob/e35daa617d2453e4fcd8261532f9cf953e1ddb95/sbom/cyclonedx/gradle/bom-oci-syft.cdx.json"
             }
         ]
     },
@@ -4628,15 +4838,6 @@
             }
         ]
     },
-    "microsoft": {
-        "github.com/microsoft/GHAzDO-Resources": [
-            {
-                "path": "src/sbom-tool/manifest.spdx.json",
-                "type": "spdx_json",
-                "url": "https://github.com/microsoft/GHAzDO-Resources/blob/fc178162808b1bd517d2229a99c67ede892b3067/src/sbom-tool/manifest.spdx.json"
-            }
-        ]
-    },
     "mit-ll": {
         "github.com/mit-ll/Insilico_Ab_Variant_Generator": [
             {
@@ -5153,36 +5354,6 @@
             }
         ]
     },
-    "mongodb-js": {
-        "github.com/mongodb-js/mongodb-client-encryption": [
-            {
-                "path": "sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/mongodb-js/mongodb-client-encryption/blob/e35bd59f40668749853256d6a91ccdeede7d0c25/sbom.json"
-            }
-        ],
-        "github.com/mongodb-js/kerberos": [
-            {
-                "path": "sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/mongodb-js/kerberos/blob/658c858dd86898b1b6467b14694549c92de8f6d2/sbom.json"
-            }
-        ],
-        "github.com/mongodb-js/zstd": [
-            {
-                "path": "sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/mongodb-js/zstd/blob/a3a08c61c9045411c8275e248498dbc583457fb5/sbom.json"
-            }
-        ],
-        "github.com/mongodb-js/nodejs-mongodb-legacy": [
-            {
-                "path": "sbom.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/mongodb-js/nodejs-mongodb-legacy/blob/13bba2e69c5ae234560800086be6e514c4b75adb/sbom.json"
-            }
-        ]
-    },
     "mono": {
         "github.com/mono/SkiaSharp": [
             {
@@ -5431,15 +5602,6 @@
                 "path": "LICENSE.spdx",
                 "type": "spdx_spdx",
                 "url": "https://github.com/percepio/TraceRecorderSource/blob/fe1344677b61487000e0e7d3b0890fcaabb76eec/LICENSE.spdx"
-            }
-        ]
-    },
-    "philips-software": {
-        "github.com/philips-software/license-scanner": [
-            {
-                "path": "bom.spdx",
-                "type": "spdx_spdx",
-                "url": "https://github.com/philips-software/license-scanner/blob/c520f089cf3662927e20999432b116240c6cb4a8/bom.spdx"
             }
         ]
     },
@@ -6694,20 +6856,6 @@
                 "path": "sbom.json",
                 "type": "cyclonedx_json",
                 "url": "https://github.com/terrestris/ol-util/blob/05d4ab92b4431a327f452365e1711f6468078a12/sbom.json"
-            }
-        ]
-    },
-    "tomtom-international": {
-        "github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples": [
-            {
-                "path": "compliancy-reports/navigation-oss-compliancy-cyclonedx-report.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples/blob/69c690497845342572ce2ab5d380921c72cd0c63/compliancy-reports/navigation-oss-compliancy-cyclonedx-report.json"
-            },
-            {
-                "path": "compliancy-reports/digital-cockpit-oss-compliancy-cyclonedx-report.json",
-                "type": "cyclonedx_json",
-                "url": "https://github.com/tomtom-international/tomtom-digital-cockpit-sdk-examples/blob/69c690497845342572ce2ab5d380921c72cd0c63/compliancy-reports/digital-cockpit-oss-compliancy-cyclonedx-report.json"
             }
         ]
     },

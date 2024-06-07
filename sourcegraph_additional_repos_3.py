@@ -121,8 +121,8 @@ async def sourcegraph_cli_query(query: str, repo_url: str) -> list:
     while True:
         async with CLI_SEM:
             try:
-                proc = await asyncio.create_subprocess_shell(
-                    cmd,
+                proc = await asyncio.create_subprocess_exec(
+                    'src', 'search', '-json', '--', query,
                     stdout=asyncio.subprocess.PIPE,
                     stderr=asyncio.subprocess.PIPE,
                     close_fds=True,

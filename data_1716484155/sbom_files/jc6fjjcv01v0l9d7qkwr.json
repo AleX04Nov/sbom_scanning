@@ -1,0 +1,104 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:bd15d76c-995b-4259-8981-beb842a2c5df",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-12-05T22:59:42.781201+00:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-bom",
+        "version": "3.11.7"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python-lib",
+        "version": "3.1.5",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+            "type": "build-system"
+          },
+          {
+            "url": "https://pypi.org/project/cyclonedx-python-lib/",
+            "type": "distribution"
+          },
+          {
+            "url": "https://cyclonedx.github.io/cyclonedx-python-lib/",
+            "type": "documentation"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+            "type": "issue-tracker"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+            "type": "license"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+            "type": "release-notes"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "e19039d2-676d-4680-af61-0613e5f59359",
+      "name": "GitPython",
+      "version": "3.1.40",
+      "purl": "pkg:pypi/gitpython@3.1.40"
+    },
+    {
+      "type": "library",
+      "bom-ref": "7e2ddeec-e2a4-4332-9065-1c253699ce6d",
+      "name": "PyYAML",
+      "version": "6.0.1",
+      "purl": "pkg:pypi/pyyaml@6.0.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "f3854081-8cfb-4c21-9cdb-f1a32c241b56",
+      "name": "dulwich",
+      "version": "0.21.7",
+      "purl": "pkg:pypi/dulwich@0.21.7"
+    },
+    {
+      "type": "library",
+      "bom-ref": "e9f2e989-a6bd-4cac-94e3-7e17cb131306",
+      "name": "typer",
+      "version": "0.9.0",
+      "purl": "pkg:pypi/typer@0.9.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "e19039d2-676d-4680-af61-0613e5f59359",
+      "dependsOn": []
+    },
+    {
+      "ref": "7e2ddeec-e2a4-4332-9065-1c253699ce6d",
+      "dependsOn": []
+    },
+    {
+      "ref": "f3854081-8cfb-4c21-9cdb-f1a32c241b56",
+      "dependsOn": []
+    },
+    {
+      "ref": "e9f2e989-a6bd-4cac-94e3-7e17cb131306",
+      "dependsOn": []
+    }
+  ]
+}

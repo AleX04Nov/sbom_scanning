@@ -1,0 +1,807 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/data_1716484155/sbom_files/8ot8evkmdixvjoh71err.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "axios",
+            "version": "0.26.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-20T20:02:26Z",
+              "published": "2023-11-08T21:30:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wf5p-g6vw-rhxx",
+              "aliases": [
+                "CVE-2023-45857"
+              ],
+              "summary": "Axios Cross-Site Request Forgery Vulnerability",
+              "details": "An issue discovered in Axios 0.8.1 through 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "axios",
+                    "purl": "pkg:npm/axios"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "axios",
+                    "purl": "pkg:npm/axios"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.8.1"
+                        },
+                        {
+                          "fixed": "0.28.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45857"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/pull/6028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/pull/6091"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/commit/2755df562b9c194fba6d8b609a383443f6a6e967"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/axios/axios"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/releases/tag/v0.28.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/releases/tag/v1.6.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-AXIOS-6032459"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-352"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-10T00:35:37Z",
+                "nvd_published_at": "2023-11-08T21:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wf5p-g6vw-rhxx"
+              ],
+              "aliases": [
+                "CVE-2023-45857",
+                "GHSA-wf5p-g6vw-rhxx"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "follow-redirects",
+            "version": "1.14.8",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-01-09T19:03:24Z",
+              "published": "2024-01-02T06:30:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jchw-25xp-jwwc",
+              "aliases": [
+                "CVE-2023-26159"
+              ],
+              "summary": "Follow Redirects improperly handles URLs in the url.parse() function",
+              "details": "Versions of the package follow-redirects before 1.15.4 are vulnerable to Improper Input Validation due to the improper handling of URLs by the url.parse() function. When new URL() throws an error, it can be manipulated to misinterpret the hostname. An attacker could exploit this weakness to redirect traffic to a malicious site, potentially leading to information disclosure, phishing attacks, or other security breaches.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "follow-redirects",
+                    "purl": "pkg:npm/follow-redirects"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-jchw-25xp-jwwc/GHSA-jchw-25xp-jwwc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26159"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/issues/235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/pull/236"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/commit/7a6567e16dfa9ad18a70bfe91784c28653fbf19d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/follow-redirects/follow-redirects"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZZ425BFKNBQ6AK7I5SAM56TWON5OF2XM"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-6141137"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-08T22:01:39Z",
+                "nvd_published_at": "2024-01-02T05:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-04-02T17:54:20Z",
+              "published": "2024-03-14T17:19:42Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cxjh-pqwp-8mfp",
+              "aliases": [
+                "CVE-2024-28849"
+              ],
+              "summary": "follow-redirects' Proxy-Authorization header kept across hosts",
+              "details": "When using [axios](https://github.com/axios/axios), its dependency follow-redirects only clears authorization header during cross-domain redirect, but allows the proxy-authentication header which contains credentials too.\n\n## Steps To Reproduce \u0026 PoC\n\nTest code:\n\n```js\nconst axios = require('axios');\n\naxios.get('http://127.0.0.1:10081/', {\n headers: {\n 'AuThorization': 'Rear Test',\n 'ProXy-AuthoriZation': 'Rear Test',\n 'coOkie': 't=1'\n }\n})\n .then((response) =\u003e {\n console.log(response);\n })\n```\n\nWhen I meet the cross-domain redirect, the sensitive headers like authorization and cookie are cleared, but proxy-authentication header is kept.\n\n## Impact\n\nThis vulnerability may lead to credentials leak.\n\n## Recommendations\n\nRemove proxy-authentication header during cross-domain redirect\n\n### Recommended Patch\n\n[follow-redirects/index.js:464](https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b)\n\n```diff\n- removeMatchingHeaders(/^(?:authorization|cookie)$/i, this._options.headers);\n+ removeMatchingHeaders(/^(?:authorization|proxy-authorization|cookie)$/i, this._options.headers);\n```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "follow-redirects",
+                    "purl": "pkg:npm/follow-redirects"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.15.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-cxjh-pqwp-8mfp/GHSA-cxjh-pqwp-8mfp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-cxjh-pqwp-8mfp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-28849"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/issues/1885"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/2390009"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://fetch.spec.whatwg.org/#authentication-entries"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/follow-redirects/follow-redirects"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOIF4EPQUCKDBEVTGRQDZ3CGTYQHPO7Z"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-14T17:19:42Z",
+                "nvd_published_at": "2024-03-14T17:15:52Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jchw-25xp-jwwc"
+              ],
+              "aliases": [
+                "CVE-2023-26159",
+                "GHSA-jchw-25xp-jwwc"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-cxjh-pqwp-8mfp"
+              ],
+              "aliases": [
+                "CVE-2024-28849",
+                "GHSA-cxjh-pqwp-8mfp"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mongodb",
+            "version": "4.3.1",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-18T05:33:18Z",
+              "published": "2023-08-29T18:31:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vxvm-qww3-2fh7",
+              "aliases": [
+                "CVE-2021-32050"
+              ],
+              "summary": "MongoDB Driver may publish events containing authentication-related data",
+              "details": "Some MongoDB Drivers may erroneously publish events containing authentication-related data to a command listener configured by an application. The published events may contain security-sensitive data when specific authentication-related commands are executed.\n\nWithout due care, an application may inadvertently expose this sensitive information, e.g., by writing it to a log file. This issue only arises if an application enables the command listener feature (this is not enabled by default).\n\nThis issue affects the MongoDB C Driver 1.0.0 prior to 1.17.7, MongoDB PHP Driver 1.0.0 prior to 1.9.2, MongoDB Swift Driver 1.0.0 prior to 1.1.1, MongoDB Node.js Driver 3.6 prior to 3.6.10, MongoDB Node.js Driver 4.0 prior to 4.17.0 and MongoDB Node.js Driver 5.0 prior to 5.8.0. This issue also affects users of the MongoDB C++ Driver dependent on the C driver 1.0.0 prior to 1.17.7 (C++ driver prior to 3.7.0).\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Packagist",
+                    "name": "mongodb/mongodb",
+                    "purl": "pkg:composer/mongodb/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.0-alpha1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.2.0",
+                    "1.2.0-alpha1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.5.0",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta1",
+                    "1.7.0-beta2",
+                    "1.7.0-rc1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.0-RC1",
+                    "1.9.0",
+                    "1.9.0-alpha1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.6.0"
+                        },
+                        {
+                          "fixed": "3.6.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "mongodb",
+                    "purl": "pkg:npm/mongodb"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.8.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "SwiftURL",
+                    "name": "github.com/mongodb/mongo-swift-driver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.1.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-vxvm-qww3-2fh7/GHSA-vxvm-qww3-2fh7.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32050"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-php-driver/pull/1235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-swift-driver/pull/643"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-php-driver/commit/4495de8313c0d313e4dde906fc7aedf998ee3748"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/node-mongodb-native/commit/8c8b4c3b8c55f10fb96f63d3bbfa5d408b4ed7d0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/CDRIVER-3797"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/CXX-2028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/NODE-3356"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/PHPC-1869"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/SWIFT-1229"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20231006-0001"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200",
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-08-30T21:20:44Z",
+                "nvd_published_at": "2023-08-29T16:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vxvm-qww3-2fh7"
+              ],
+              "aliases": [
+                "CVE-2021-32050",
+                "GHSA-vxvm-qww3-2fh7"
+              ],
+              "max_severity": "4.2"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ip",
+            "version": "1.1.5",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-20T18:30:37Z",
+              "published": "2024-02-08T18:30:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-78xj-cgh5-2h22",
+              "aliases": [
+                "CVE-2023-42282"
+              ],
+              "summary": "NPM IP package incorrectly identifies some private IP addresses as public",
+              "details": "The `isPublic()` function in the NPM package `ip` doesn't correctly identify certain private IP addresses in uncommon formats such as `0x7F.1` as private. Instead, it reports them as public by returning `true`. This can lead to security issues such as Server-Side Request Forgery (SSRF) if `isPublic()` is used to protect sensitive code paths when passed user input. Versions 1.1.9 and 2.0.1 fix the issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ip",
+                    "purl": "pkg:npm/ip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-78xj-cgh5-2h22/GHSA-78xj-cgh5-2h22.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ip",
+                    "purl": "pkg:npm/ip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-78xj-cgh5-2h22/GHSA-78xj-cgh5-2h22.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42282"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JoshGlazebrook/socks/issues/93#issue-2128357447"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/pull/3504#issuecomment-1937179999"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/pull/138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/commit/32f468f1245574785ec080705737a579be1223aa"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cosmosofcyberspace.github.io/npm_ip_cve/npm_ip_cve.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/indutny/node-ip"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-09T15:03:18Z",
+                "nvd_published_at": "2024-02-08T17:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-02T22:56:56Z",
+              "published": "2024-06-02T22:29:29Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2p57-rm9w-gvfp",
+              "aliases": [
+                "CVE-2024-29415"
+              ],
+              "summary": "ip SSRF improper categorization in isPublic",
+              "details": "The ip package through 2.0.1 for Node.js might allow SSRF because some IP addresses (such as 127.1, 01200034567, 012.1.2.3, 000:0:0000::01, and ::fFFf:127.0.0.1) are improperly categorized as globally routable via isPublic. NOTE: this issue exists because of an incomplete fix for CVE-2023-42282.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ip",
+                    "purl": "pkg:npm/ip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-2p57-rm9w-gvfp/GHSA-2p57-rm9w-gvfp.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29415"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/issues/150"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/pull/143"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/pull/144"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/indutny/node-ip"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-02T22:29:29Z",
+                "nvd_published_at": "2024-05-27T20:15:08Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-78xj-cgh5-2h22"
+              ],
+              "aliases": [
+                "CVE-2023-42282",
+                "GHSA-78xj-cgh5-2h22"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-2p57-rm9w-gvfp"
+              ],
+              "aliases": [
+                "CVE-2024-29415",
+                "GHSA-2p57-rm9w-gvfp"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

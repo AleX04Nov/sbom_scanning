@@ -1,0 +1,790 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/data_1716484155/sbom_files/wy07mh91wmphrofk9w69.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "semver",
+            "version": "5.7.1",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-14T14:58:48Z",
+              "published": "2023-06-21T06:30:28Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c2qf-rxjj-qqgw",
+              "aliases": [
+                "CVE-2022-25883"
+              ],
+              "summary": "semver vulnerable to Regular Expression Denial of Service",
+              "details": "Versions of the package semver before 7.5.2 on the 7.x branch, before 6.3.1 on the 6.x branch, and all other versions before 5.7.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "7.5.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.3.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "semver",
+                    "purl": "pkg:npm/semver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-c2qf-rxjj-qqgw/GHSA-c2qf-rxjj-qqgw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-25883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/564"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/585"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/pull/593"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/2f8fd41487acf380194579ecb6f8b1bbfe116be0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/717534ee353682f3bcf33e60a8af4292626d4441"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/commit/928e56d21150da0413a3333a3148b20e741a920c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-semver"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/classes/range.js#L97-L104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-semver/blob/main/internal/re.js#L160"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-SEMVER-3247795"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-22T16:52:56Z",
+                "nvd_published_at": "2023-06-21T05:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c2qf-rxjj-qqgw"
+              ],
+              "aliases": [
+                "CVE-2022-25883",
+                "GHSA-c2qf-rxjj-qqgw"
+              ],
+              "max_severity": "5.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ajv",
+            "version": "5.5.2",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:36Z",
+              "published": "2022-02-10T23:30:59Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v88g-cgmw-v5xw",
+              "aliases": [
+                "CVE-2020-15366"
+              ],
+              "summary": "Prototype Pollution in Ajv",
+              "details": "An issue was discovered in ajv.validate() in Ajv (aka Another JSON Schema Validator) 6.12.2. A carefully crafted JSON schema could be provided that allows execution of other code by prototype pollution. (While untrusted schemas are recommended against, the worst case of an untrusted schema should be a denial of service, not execution of code.)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ajv",
+                    "purl": "pkg:npm/ajv"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.12.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-v88g-cgmw-v5xw/GHSA-v88g-cgmw-v5xw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15366"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ajv-validator/ajv/commit/65b2f7d76b190ac63a0d4e9154c712d7aa37049f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ajv-validator/ajv"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ajv-validator/ajv/releases/tag/v6.12.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ajv-validator/ajv/tags"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/bugs?subject=user\u0026report_id=894259"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321",
+                  "CWE-915"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-05-10T21:23:41Z",
+                "nvd_published_at": "2020-07-15T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v88g-cgmw-v5xw"
+              ],
+              "aliases": [
+                "CVE-2020-15366",
+                "GHSA-v88g-cgmw-v5xw"
+              ],
+              "max_severity": "5.6"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "word-wrap",
+            "version": "1.2.3",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:11:58Z",
+              "published": "2023-06-22T06:30:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j8xg-fqg3-53r7",
+              "aliases": [
+                "CVE-2023-26115"
+              ],
+              "summary": "word-wrap vulnerable to Regular Expression Denial of Service",
+              "details": "All versions of the package word-wrap are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression within the result variable.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "word-wrap",
+                    "purl": "pkg:npm/word-wrap"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.2.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/06/GHSA-j8xg-fqg3-53r7/GHSA-j8xg-fqg3-53r7.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(word-wrap)"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26115"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jonschlinkert/word-wrap/commit/420dce9a2412b21881202b73a3c34f0edc53cb2e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jonschlinkert/word-wrap"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jonschlinkert/word-wrap/blob/master/index.js#L39"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jonschlinkert/word-wrap/blob/master/index.js%23L39"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jonschlinkert/word-wrap/releases/tag/1.2.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-4058657"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-WORDWRAP-3149973"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-06-23T21:36:40Z",
+                "nvd_published_at": "2023-06-22T05:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-j8xg-fqg3-53r7"
+              ],
+              "aliases": [
+                "CVE-2023-26115",
+                "GHSA-j8xg-fqg3-53r7"
+              ],
+              "max_severity": "5.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "xmldom",
+            "version": "0.1.31",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:43Z",
+              "published": "2021-03-12T22:39:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h6q6-9hqw-rwfv",
+              "aliases": [
+                "CVE-2021-21366"
+              ],
+              "summary": "Misinterpretation of malicious XML input",
+              "details": "### Impact\n\nxmldom versions 0.4.0 and older do not correctly preserve [system identifiers](https://www.w3.org/TR/2008/REC-xml-20081126/#d0e4313), [FPIs](https://en.wikipedia.org/wiki/Formal_Public_Identifier) or [namespaces](https://www.w3.org/TR/xml-names11/) when repeatedly parsing and serializing maliciously crafted documents.\n\nThis may lead to unexpected syntactic changes during XML processing in some downstream applications.\n\n### Patches\n\nUpdate to 0.5.0 (once it is released)\n\n### Workarounds\n\nDownstream applications can validate the input and reject the maliciously crafted documents.\n\n### References\n\nSimilar to this one reported on the Go standard library:\n\n- https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n* Open an issue in [`xmldom/xmldom`](https://github.com/xmldom/xmldom)\n* Email us: send an email to **all** addresses that are shown by `npm owner ls xmldom`",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "xmldom",
+                    "purl": "pkg:npm/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.5.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-h6q6-9hqw-rwfv/GHSA-h6q6-9hqw-rwfv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/security/advisories/GHSA-h6q6-9hqw-rwfv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21366"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/commit/d4201b9dfbf760049f457f9f08a3888d48835135"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/xmldom/xmldom"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/releases/tag/0.5.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00000.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/xmldom"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-115",
+                  "CWE-436"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-12T16:21:24Z",
+                "nvd_published_at": "2021-03-12T17:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-02-22T19:03:28Z",
+              "published": "2021-08-03T16:57:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5fg8-2547-mr8q",
+              "aliases": [
+                "CVE-2021-32796"
+              ],
+              "summary": "Misinterpretation of malicious XML input",
+              "details": "### Impact\nxmldom versions 0.6.0 and older do not correctly escape special characters when serializing elements removed from their ancestor. This may lead to unexpected syntactic changes during XML processing in some downstream applications.\n\n### Patches\nUpdate to one of the fixed versions of `@xmldom/xmldom` (`\u003e=0.7.0`)\n\nSee issue #271 for the status of publishing `xmldom` to npm or join #270 for Q\u0026A/discussion until it's resolved.\n\n### Workarounds\n\nDownstream applications can validate the input and reject the maliciously crafted documents.\n\n### References\n\nSimilar to this one reported on the Go standard library:\n\n- https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities/\n- https://mattermost.com/blog/securing-xml-implementations-across-the-web/\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n* Open an issue in [`xmldom/xmldom`](https://github.com/xmldom/xmldom)\n* Email us: send an email to **all** addresses that are shown by `npm owner ls @xmldom/xmldom`\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "xmldom",
+                    "purl": "pkg:npm/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-5fg8-2547-mr8q/GHSA-5fg8-2547-mr8q.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@xmldom/xmldom",
+                    "purl": "pkg:npm/%40xmldom/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-5fg8-2547-mr8q/GHSA-5fg8-2547-mr8q.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/security/advisories/GHSA-5fg8-2547-mr8q"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32796"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/commit/7b4b743917a892d407356e055b296dcd6d107e8b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/xmldom/xmldom"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://mattermost.com/blog/coordinated-disclosure-go-xml-vulnerabilities"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://mattermost.com/blog/securing-xml-implementations-across-the-web"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/@xmldom/xmldom"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-116"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-02T23:21:11Z",
+                "nvd_published_at": "2021-07-27T22:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:10:19Z",
+              "published": "2022-11-01T17:29:11Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-crh6-fp67-6883",
+              "aliases": [
+                "CVE-2022-39353"
+              ],
+              "summary": "xmldom allows multiple root nodes in a DOM",
+              "details": "### Impact\nxmldom parses XML that is not well-formed because it contains multiple top level elements, and adds all root nodes to the `childNodes` collection of the `Document`, without reporting any error or throwing.\nThis breaks the assumption that there is only a single root node in the tree, which led to https://nvd.nist.gov/vuln/detail/CVE-2022-39299 and is a potential issue for dependents.\n\n### Patches\nUpdate to `@xmldom/xmldom@~0.7.7`, `@xmldom/xmldom@~0.8.4` (dist-tag `latest`) or `@xmldom/xmldom@\u003e=0.9.0-beta.4` (dist-tag `next`).\n\n### Workarounds\nOne of the following approaches might help, depending on your use case:\n- Instead of searching for elements in the whole DOM, only search in the `documentElement`.\n- Reject a document with a document that has more then 1 `childNode`.\n\n### References\n- https://nvd.nist.gov/vuln/detail/CVE-2022-39299\n- https://github.com/jindw/xmldom/issues/150\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Email us at security@xmldom.org\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "xmldom",
+                    "purl": "pkg:npm/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-crh6-fp67-6883/GHSA-crh6-fp67-6883.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@xmldom/xmldom",
+                    "purl": "pkg:npm/%40xmldom/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-crh6-fp67-6883/GHSA-crh6-fp67-6883.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@xmldom/xmldom",
+                    "purl": "pkg:npm/%40xmldom/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.8.0"
+                        },
+                        {
+                          "fixed": "0.8.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-crh6-fp67-6883/GHSA-crh6-fp67-6883.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@xmldom/xmldom",
+                    "purl": "pkg:npm/%40xmldom/xmldom"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.9.0-beta.1"
+                        },
+                        {
+                          "fixed": "0.9.0-beta.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/11/GHSA-crh6-fp67-6883/GHSA-crh6-fp67-6883.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/security/advisories/GHSA-crh6-fp67-6883"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-39353"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jindw/xmldom/issues/150"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/commit/52a708360c35aa160fcca8621720d71fd0f95f1a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/commit/7ff7c10ab2961703ac1752e95b4ff60ee4ee6643"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/commit/c02f786216bed70825f9a351c65e61500f51e931"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/xmldom/xmldom"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/releases/tag/0.7.7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/releases/tag/0.8.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/xmldom/xmldom/releases/tag/0.9.0-beta.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/01/msg00000.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1288",
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-11-01T17:29:11Z",
+                "nvd_published_at": "2022-11-02T17:15:00Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h6q6-9hqw-rwfv"
+              ],
+              "aliases": [
+                "CVE-2021-21366",
+                "GHSA-h6q6-9hqw-rwfv"
+              ],
+              "max_severity": "4.3"
+            },
+            {
+              "ids": [
+                "GHSA-5fg8-2547-mr8q"
+              ],
+              "aliases": [
+                "CVE-2021-32796",
+                "GHSA-5fg8-2547-mr8q"
+              ],
+              "max_severity": "6.5"
+            },
+            {
+              "ids": [
+                "GHSA-crh6-fp67-6883"
+              ],
+              "aliases": [
+                "CVE-2022-39353",
+                "GHSA-crh6-fp67-6883"
+              ],
+              "max_severity": "9.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

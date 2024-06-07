@@ -1,0 +1,91 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.2",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "bom-ref": "dctransistor-1.2.3",
+      "type": "device",
+      "name": "DCTransistor",
+      "version": "1.2.3"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:github/esp8266/Arduino@3.1.2",
+      "type": "firmware",
+      "name": "ESP8266 Arduino Core",
+      "version": "3.1.2",
+      "purl": "pkg:github/esp8266/Arduino@3.1.2",
+      "url": "https://github.com/esp8266/Arduino",
+      "license": {
+        "id": "LGPL-2.1-or-later",
+        "url": "https://github.com/esp8266/Arduino/blob/master/LICENSE"
+      },
+      "components": [
+        {
+          "bom-ref": "pkg:github/earlephilhower/bearssl-esp8266@6105635531027f5b298aa656d44be2289b2d434f",
+          "type": "library",
+          "name": "BearSSL ESP8266 Port",
+          "version": "6105635531027f5b298aa656d44be2289b2d434f",
+          "purl": "pkg:github/earlephilhower/bearssl-esp8266@6105635531027f5b298aa656d44be2289b2d434f",
+          "url": "https://github.com/earlephilhower/bearssl-esp8266",
+          "license": {
+            "id": "MIT",
+            "url": "https://github.com/earlephilhower/bearssl-esp8266/blob/master/LICENSE.txt"
+          }
+        }
+       ]
+    },
+    {
+      "bom-ref": "pkg:github/bblanchon/ArduinoJson@7.0.4",
+      "type": "library",
+      "name": "ArduinoJson",
+      "version":  "7.0.4",
+      "url": "https://github.com/bblanchon/ArduinoJson/releases/tag/v7.0.4",
+      "license": {
+        "id": "MIT",
+        "url": "https://github.com/bblanchon/ArduinoJson/blob/6.x/LICENSE.md"
+      }
+    },
+    {
+      "bom-ref": "pkg:github/tzapu/WiFiManager@2.0.17",
+      "type": "library",
+      "name": "WiFiManager",
+      "version":  "2.0.17",
+      "url": "https://github.com/tzapu/WiFiManager/releases/tag/0.16.0",
+      "license": {
+        "id": "MIT",
+        "url": "https://github.com/tzapu/WiFiManager/blob/master/LICENSE"
+      }
+    },
+    {
+      "bom-ref": "pkg:github/adafruit/Adafruit_NeoPixel@1.12.2",
+      "type": "library",
+      "name": "Adafruit NeoPixel",
+      "version":  "1.12.2",
+      "url": "https://github.com/adafruit/Adafruit_NeoPixel/releases/tag/1.12.2",
+      "license": {
+        "id": "LGPL-3.0",
+        "url": "https://github.com/adafruit/Adafruit_NeoPixel/blob/master/COPYING"
+      }
+    }
+    ],
+  "dependencies": [
+    {
+      "ref": "dctransistor-1.2.3",
+      "dependsOn": [
+        "pkg:github/esp8266/Arduino@3.1.2",
+        "pkg:github/bblanchon/ArduinoJson@7.0.4",
+        "pkg:github/adafruit/Adafruit_NeoPixel@1.12.2",
+        "pkg:github/tzapu/WifiManager@2.0.17"
+        ]
+    },
+    {
+      "ref": "pkg:github/esp8266/Arduino@3.1.2",
+      "dependsOn": [
+        "pkg:github/earlephilhower/bearssl-esp8266@6105635531027f5b298aa656d44be2289b2d434f"
+        ]
+    }
+    ]
+}

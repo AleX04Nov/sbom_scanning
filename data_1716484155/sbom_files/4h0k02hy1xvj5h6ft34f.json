@@ -1,0 +1,82 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:07b1128d-c4e3-4c57-af6d-e50169b33e15",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-10-07T08:19:55.970456+00:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-bom",
+        "version": "3.11.2"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python-lib",
+        "version": "3.1.5",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+            "type": "build-system"
+          },
+          {
+            "url": "https://pypi.org/project/cyclonedx-python-lib/",
+            "type": "distribution"
+          },
+          {
+            "url": "https://cyclonedx.github.io/cyclonedx-python-lib/",
+            "type": "documentation"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+            "type": "issue-tracker"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+            "type": "license"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+            "type": "release-notes"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "2f10d79e-6594-462b-a858-45f02c82d787",
+      "name": "msgspec",
+      "version": "0.17.0",
+      "purl": "pkg:pypi/msgspec@0.17.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "071d2d7f-7b88-4ccd-84cd-0f349b0b7282",
+      "name": "pandocfilters",
+      "version": "1.5.0",
+      "purl": "pkg:pypi/pandocfilters@1.5.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "2f10d79e-6594-462b-a858-45f02c82d787",
+      "dependsOn": []
+    },
+    {
+      "ref": "071d2d7f-7b88-4ccd-84cd-0f349b0b7282",
+      "dependsOn": []
+    }
+  ]
+}

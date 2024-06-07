@@ -1,0 +1,93 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:b4bdb215-9165-4bee-aa2f-4de709624668",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-12-31T06:57:56.110885+00:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-bom",
+        "version": "3.11.7"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python-lib",
+        "version": "3.1.5",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+            "type": "build-system"
+          },
+          {
+            "url": "https://pypi.org/project/cyclonedx-python-lib/",
+            "type": "distribution"
+          },
+          {
+            "url": "https://cyclonedx.github.io/cyclonedx-python-lib/",
+            "type": "documentation"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+            "type": "issue-tracker"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+            "type": "license"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+            "type": "release-notes"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "da40cd28-99df-47f3-8e4e-f47dec585452",
+      "name": "attrs",
+      "version": "23.2.0",
+      "purl": "pkg:pypi/attrs@23.2.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "e6ea9ba0-a033-4d64-824d-10b1669a9a17",
+      "name": "httpx",
+      "version": "0.26.0",
+      "purl": "pkg:pypi/httpx@0.26.0"
+    },
+    {
+      "type": "library",
+      "bom-ref": "f82a4bfe-2ceb-4628-9b58-3dad1b89b8f1",
+      "name": "msgspec",
+      "version": "0.18.5",
+      "purl": "pkg:pypi/msgspec@0.18.5"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "da40cd28-99df-47f3-8e4e-f47dec585452",
+      "dependsOn": []
+    },
+    {
+      "ref": "e6ea9ba0-a033-4d64-824d-10b1669a9a17",
+      "dependsOn": []
+    },
+    {
+      "ref": "f82a4bfe-2ceb-4628-9b58-3dad1b89b8f1",
+      "dependsOn": []
+    }
+  ]
+}

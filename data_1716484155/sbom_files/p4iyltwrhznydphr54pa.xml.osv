@@ -1,0 +1,643 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/data_1716484155/sbom_files/p4iyltwrhznydphr54pa.xml",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "follow-redirects",
+            "version": "1.15.3",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-01-09T19:03:24Z",
+              "published": "2024-01-02T06:30:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jchw-25xp-jwwc",
+              "aliases": [
+                "CVE-2023-26159"
+              ],
+              "summary": "Follow Redirects improperly handles URLs in the url.parse() function",
+              "details": "Versions of the package follow-redirects before 1.15.4 are vulnerable to Improper Input Validation due to the improper handling of URLs by the url.parse() function. When new URL() throws an error, it can be manipulated to misinterpret the hostname. An attacker could exploit this weakness to redirect traffic to a malicious site, potentially leading to information disclosure, phishing attacks, or other security breaches.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "follow-redirects",
+                    "purl": "pkg:npm/follow-redirects"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-jchw-25xp-jwwc/GHSA-jchw-25xp-jwwc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26159"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/issues/235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/pull/236"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/commit/7a6567e16dfa9ad18a70bfe91784c28653fbf19d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/follow-redirects/follow-redirects"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZZ425BFKNBQ6AK7I5SAM56TWON5OF2XM"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-6141137"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-08T22:01:39Z",
+                "nvd_published_at": "2024-01-02T05:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-04-02T17:54:20Z",
+              "published": "2024-03-14T17:19:42Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cxjh-pqwp-8mfp",
+              "aliases": [
+                "CVE-2024-28849"
+              ],
+              "summary": "follow-redirects' Proxy-Authorization header kept across hosts",
+              "details": "When using [axios](https://github.com/axios/axios), its dependency follow-redirects only clears authorization header during cross-domain redirect, but allows the proxy-authentication header which contains credentials too.\n\n## Steps To Reproduce \u0026 PoC\n\nTest code:\n\n```js\nconst axios = require('axios');\n\naxios.get('http://127.0.0.1:10081/', {\n headers: {\n 'AuThorization': 'Rear Test',\n 'ProXy-AuthoriZation': 'Rear Test',\n 'coOkie': 't=1'\n }\n})\n .then((response) =\u003e {\n console.log(response);\n })\n```\n\nWhen I meet the cross-domain redirect, the sensitive headers like authorization and cookie are cleared, but proxy-authentication header is kept.\n\n## Impact\n\nThis vulnerability may lead to credentials leak.\n\n## Recommendations\n\nRemove proxy-authentication header during cross-domain redirect\n\n### Recommended Patch\n\n[follow-redirects/index.js:464](https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b)\n\n```diff\n- removeMatchingHeaders(/^(?:authorization|cookie)$/i, this._options.headers);\n+ removeMatchingHeaders(/^(?:authorization|proxy-authorization|cookie)$/i, this._options.headers);\n```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "follow-redirects",
+                    "purl": "pkg:npm/follow-redirects"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.15.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-cxjh-pqwp-8mfp/GHSA-cxjh-pqwp-8mfp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-cxjh-pqwp-8mfp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-28849"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/issues/1885"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/2390009"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://fetch.spec.whatwg.org/#authentication-entries"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/follow-redirects/follow-redirects"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOIF4EPQUCKDBEVTGRQDZ3CGTYQHPO7Z"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-14T17:19:42Z",
+                "nvd_published_at": "2024-03-14T17:15:52Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jchw-25xp-jwwc"
+              ],
+              "aliases": [
+                "CVE-2023-26159",
+                "GHSA-jchw-25xp-jwwc"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-cxjh-pqwp-8mfp"
+              ],
+              "aliases": [
+                "CVE-2024-28849",
+                "GHSA-cxjh-pqwp-8mfp"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "express",
+            "version": "4.18.2",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-03-25T22:24:57Z",
+              "published": "2024-03-25T19:40:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rv95-896h-c2vc",
+              "aliases": [
+                "CVE-2024-29041"
+              ],
+              "summary": "Express.js Open Redirect in malformed URLs",
+              "details": "### Impact\n\nVersions of Express.js prior to 4.19.2 and pre-release alpha and beta versions before 5.0.0-beta.3 are affected by an open redirect vulnerability using malformed URLs.\n\nWhen a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list.\n\nThe main method impacted is `res.location()` but this is also called from within `res.redirect()`.\n\n### Patches\n\nhttps://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd\nhttps://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94\n\nAn initial fix went out with `express@4.19.0`, we then patched a feature regression in `4.19.1` and added improved handling for the bypass in `4.19.2`.\n\n### Workarounds\n\nThe fix for this involves pre-parsing the url string with either `require('node:url').parse` or `new URL`. These are steps you can take on your own before passing the user input string to `res.location` or `res.redirect`.\n\n### References\n\nhttps://github.com/expressjs/express/pull/5539\nhttps://github.com/koajs/koa/issues/1800\nhttps://expressjs.com/en/4x/api.html#res.location",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "express",
+                    "purl": "pkg:npm/express"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.19.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-rv95-896h-c2vc/GHSA-rv95-896h-c2vc.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "express",
+                    "purl": "pkg:npm/express"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0-alpha.1"
+                        },
+                        {
+                          "fixed": "5.0.0-beta.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-rv95-896h-c2vc/GHSA-rv95-896h-c2vc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/expressjs/express/security/advisories/GHSA-rv95-896h-c2vc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29041"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/koajs/koa/issues/1800"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/expressjs/express/pull/5539"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/expressjs/express/commit/0867302ddbde0e9463d0564fea5861feb708c2dd"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://expressjs.com/en/4x/api.html#res.location"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/expressjs/express"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1286",
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-25T19:40:26Z",
+                "nvd_published_at": "2024-03-25T21:15:46Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-rv95-896h-c2vc"
+              ],
+              "aliases": [
+                "CVE-2024-29041",
+                "GHSA-rv95-896h-c2vc"
+              ],
+              "max_severity": "6.1"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "babel-traverse",
+            "version": "6.26.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-04-04T14:26:10Z",
+              "published": "2023-10-16T13:55:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-67hx-6x53-jw92",
+              "aliases": [
+                "CVE-2023-45133"
+              ],
+              "summary": "Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code",
+              "details": "### Impact\n\nUsing Babel to compile code that was specifically crafted by an attacker can lead to arbitrary code execution during compilation, when using plugins that rely on the `path.evaluate()`or `path.evaluateTruthy()` internal Babel methods.\n\nKnown affected plugins are:\n- `@babel/plugin-transform-runtime`\n- `@babel/preset-env` when using its [`useBuiltIns`](https://babeljs.io/docs/babel-preset-env#usebuiltins) option\n- Any \"polyfill provider\" plugin that depends on `@babel/helper-define-polyfill-provider`, such as `babel-plugin-polyfill-corejs3`, `babel-plugin-polyfill-corejs2`, `babel-plugin-polyfill-es-shims`, `babel-plugin-polyfill-regenerator`\n\nNo other plugins under the `@babel/` namespace are impacted, but third-party plugins might be.\n\n**Users that only compile trusted code are not impacted.**\n\n### Patches\n\nThe vulnerability has been fixed in `@babel/traverse@7.23.2`.\n\nBabel 6 does not receive security fixes anymore (see [Babel's security policy](https://github.com/babel/babel/security/policy)), hence there is no patch planned for `babel-traverse@6`.\n\n### Workarounds\n\n- Upgrade `@babel/traverse` to v7.23.2 or higher. You can do this by deleting it from your package manager's lockfile and re-installing the dependencies. `@babel/core` \u003e=7.23.2 will automatically pull in a non-vulnerable version.\n- If you cannot upgrade `@babel/traverse` and are using one of the affected packages mentioned above, upgrade them to their latest version to avoid triggering the vulnerable code path in affected `@babel/traverse` versions:\n  - `@babel/plugin-transform-runtime` v7.23.2\n  - `@babel/preset-env` v7.23.2\n  - `@babel/helper-define-polyfill-provider` v0.4.3\n  - `babel-plugin-polyfill-corejs2` v0.4.6\n  - `babel-plugin-polyfill-corejs3` v0.8.5\n  - `babel-plugin-polyfill-es-shims` v0.10.0\n  - `babel-plugin-polyfill-regenerator` v0.5.3",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/traverse",
+                    "purl": "pkg:npm/%40babel/traverse"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.23.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-67hx-6x53-jw92/GHSA-67hx-6x53-jw92.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@babel/traverse",
+                    "purl": "pkg:npm/%40babel/traverse"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.0"
+                        },
+                        {
+                          "fixed": "8.0.0-alpha.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-67hx-6x53-jw92/GHSA-67hx-6x53-jw92.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "babel-traverse",
+                    "purl": "pkg:npm/babel-traverse"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c 7.23.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/10/GHSA-67hx-6x53-jw92/GHSA-67hx-6x53-jw92.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/security/advisories/GHSA-67hx-6x53-jw92"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45133"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/pull/16033"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/commit/b13376b346946e3f62fc0848c1d2a23223314c82"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://babeljs.io/blog/2023/10/16/cve-2023-45133"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/babel/babel"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/releases/tag/v7.23.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/babel/babel/releases/tag/v8.0.0-alpha.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/10/msg00026.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5528"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-184",
+                  "CWE-697"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-10-16T13:55:36Z",
+                "nvd_published_at": "2023-10-12T17:15:09Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-67hx-6x53-jw92"
+              ],
+              "aliases": [
+                "CVE-2023-45133",
+                "GHSA-67hx-6x53-jw92"
+              ],
+              "max_severity": "9.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "json5",
+            "version": "0.5.1",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-13T21:31:39Z",
+              "published": "2022-12-29T01:51:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9c47-m6qq-7p4h",
+              "aliases": [
+                "CVE-2022-46175"
+              ],
+              "summary": "Prototype Pollution in JSON5 via Parse Method",
+              "details": "The `parse` method of the JSON5 library before and including version `2.2.1` does not restrict parsing of keys named `__proto__`, allowing specially crafted strings to pollute the prototype of the resulting object.\n\nThis vulnerability pollutes the prototype of the object returned by `JSON5.parse` and not the global Object prototype, which is the commonly understood definition of Prototype Pollution. However, polluting the prototype of a single object can have significant security impact for an application if the object is later used in trusted operations.\n\n## Impact\nThis vulnerability could allow an attacker to set arbitrary and unexpected keys on the object returned from `JSON5.parse`. The actual impact will depend on how applications utilize the returned object and how they filter unwanted keys, but could include denial of service, cross-site scripting, elevation of privilege, and in extreme cases, remote code execution.\n\n## Mitigation\nThis vulnerability is patched in json5 v2.2.2 and later. A patch has also been backported for json5 v1 in versions v1.0.2 and later.\n\n## Details\n \nSuppose a developer wants to allow users and admins to perform some risky operation, but they want to restrict what non-admins can do. To accomplish this, they accept a JSON blob from the user, parse it using `JSON5.parse`, confirm that the provided data does not set some sensitive keys, and then performs the risky operation using the validated data:\n \n```js\nconst JSON5 = require('json5');\n\nconst doSomethingDangerous = (props) =\u003e {\n  if (props.isAdmin) {\n    console.log('Doing dangerous thing as admin.');\n  } else {\n    console.log('Doing dangerous thing as user.');\n  }\n};\n\nconst secCheckKeysSet = (obj, searchKeys) =\u003e {\n  let searchKeyFound = false;\n  Object.keys(obj).forEach((key) =\u003e {\n    if (searchKeys.indexOf(key) \u003e -1) {\n      searchKeyFound = true;\n    }\n  });\n  return searchKeyFound;\n};\n\nconst props = JSON5.parse('{\"foo\": \"bar\"}');\nif (!secCheckKeysSet(props, ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props); // \"Doing dangerous thing as user.\"\n} else {\n  throw new Error('Forbidden...');\n}\n```\n \nIf the user attempts to set the `isAdmin` key, their request will be rejected:\n \n```js\nconst props = JSON5.parse('{\"foo\": \"bar\", \"isAdmin\": true}');\nif (!secCheckKeysSet(props, ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props);\n} else {\n  throw new Error('Forbidden...'); // Error: Forbidden...\n}\n```\n \nHowever, users can instead set the `__proto__` key to `{\"isAdmin\": true}`. `JSON5` will parse this key and will set the `isAdmin` key on the prototype of the returned object, allowing the user to bypass the security check and run their request as an admin:\n \n```js\nconst props = JSON5.parse('{\"foo\": \"bar\", \"__proto__\": {\"isAdmin\": true}}');\nif (!secCheckKeysSet(props, ['isAdmin', 'isMod'])) {\n  doSomethingDangerous(props); // \"Doing dangerous thing as admin.\"\n} else {\n  throw new Error('Forbidden...');\n}\n ```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "json5",
+                    "purl": "pkg:npm/json5"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-9c47-m6qq-7p4h/GHSA-9c47-m6qq-7p4h.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "json5",
+                    "purl": "pkg:npm/json5"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-9c47-m6qq-7p4h/GHSA-9c47-m6qq-7p4h.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/security/advisories/GHSA-9c47-m6qq-7p4h"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-46175"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/issues/199"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/issues/295"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/pull/298"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/commit/62a65408408d40aeea14c7869ed327acead12972"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/json5/json5/commit/7774c1097993bc3ce9f0ac4b722a32bf7d6871c8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/json5/json5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/11/msg00021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3S26TLPLVFAJTUN3VIXFDEBEXDYO22CE"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-12-29T01:51:03Z",
+                "nvd_published_at": "2022-12-24T04:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9c47-m6qq-7p4h"
+              ],
+              "aliases": [
+                "CVE-2022-46175",
+                "GHSA-9c47-m6qq-7p4h"
+              ],
+              "max_severity": "7.1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

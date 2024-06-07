@@ -1,0 +1,229 @@
+##### Package: ArmNN-android-33-arm64-v8.6-a-sve2
+
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+Creator: Arm Ltd
+PackageName: ArmNN-android-33-arm64-v8.6-a-sve2
+PackageOriginator: Arm Ltd
+PackageHomePage: https://github.com/ARM-software/armnn/releases
+PackageFileName: ArmNN-android-33-arm64-v8.6-a-sve2.tar.gz
+PackageLicenseDeclared: MIT
+
+##### Source dependencies
+# Header only libraries from the armnn source repository third-party folder
+# NOTE: fmt has a small .cc file that needs to be compiled in order to work hence the libfmt.a below in the static dependencies
+
+PackageName: cxxopts
+SPDXID: SPDXRef-cxxopts
+FilesAnalyzed: true
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: Copyright (c) 2014 Jarryd Beck
+
+PackageName: doctest
+SPDXID: SPDXRef-doctest
+FilesAnalyzed: true
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: Copyright (c) 2016-2021 Viktor Kirilov
+
+PackageName: fmt
+SPDXID: SPDXRef-fmt
+FilesAnalyzed: true
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: Copyright (c) 2012 - present, Victor Zverovich
+
+PackageName: ghc
+SPDXID: SPDXRef-ghc
+FilesAnalyzed: true
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: Copyright (c) 2018, Steffen Schümann <s.schuemann@pobox.com>
+
+PackageName: half
+SPDXID: SPDXRef-half
+FilesAnalyzed: true
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: Copyright (c) 2012-2017 Christian Rau
+
+PackageName: MapBox
+SPDXID: SPDXRef-MapBox
+FilesAnalyzed: true
+PackageLicenseConcluded: BSD-3-Clause
+PackageLicenseInfoFromFiles: BSD-3-Clause
+PackageLicenseDeclared: BSD-3-Clause
+PackageCopyrightText: Copyright (c) MapBox All rights reserved.
+
+PackageName: stb
+SPDXID: SPDXRef-stb
+FilesAnalyzed: true
+PackageLicenseConcluded: MIT
+PackageLicenseInfoFromFiles: MIT
+PackageLicenseDeclared: MIT
+PackageCopyrightText: Copyright (c) 2017 Sean Barrett
+
+##### Packages representing statically linked dependencies
+
+PackageName: libpipeCommon
+SPDXID: SPDXRef-libpipeCommon
+Creator: Arm Ltd
+PackageFileName: libpipeCommon.a
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libpipeClient
+SPDXID: SPDXRef-libpipeClient
+Creator: Arm Ltd
+PackageFileName: libpipeClient.a
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnUtils
+SPDXID: SPDXRef-libarmnnUtils
+Creator: Arm Ltd
+PackageFileName: libarmnnUtils.a
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: arm_compute_library
+SPDXID: SPDXRef-libarm_compute_library
+Creator: Arm Ltd
+PackageFileName: arm_compute_static.a
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libfmt
+SPDXID: SPDXRef-libfmt
+PackageFileName: libfmt.a
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libc_nonshared
+SPDXID: SPDXRef-libc_nonshared
+PackageFileName: libc_nonshared.a
+FilesAnalyzed: false
+PackageLicenseConcluded: GPL-3.0-only WITH GCC-exception-3.1
+
+
+##### Packages representing dynamically linked dependencies
+
+PackageName: libarmnn
+SPDXID: SPDXRef-libarmnn
+Creator: Arm Ltd
+PackageFileName: libarmnn.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarm_compute
+SPDXID: SPDXRef-libarm_compute
+Creator: Arm Ltd
+PackageFileName: libarm_compute.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnBasePipeServer
+SPDXID: SPDXRef-libarmnnBasePipeServer
+Creator: Arm Ltd
+PackageFileName: libarmnnBasePipeServer.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnDelegate
+SPDXID: SPDXRef-libarmnnDelegate
+Creator: Arm Ltd
+PackageFileName: libarmnnDelegate.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnDeserializer
+SPDXID: SPDXRef-libarmnnDeserializer
+Creator: Arm Ltd
+PackageFileName: libarmnnDeserializer.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnOnnxParser
+SPDXID: SPDXRef-libarmnnOnnxParser
+Creator: Arm Ltd
+PackageFileName: libarmnnOnnxParser.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnSerializer
+SPDXID: SPDXRef-libarmnnSerializer
+Creator: Arm Ltd
+PackageFileName: libarmnnSerializer.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnTestUtils
+SPDXID: SPDXRef-libarmnnTestUtils
+Creator: Arm Ltd
+PackageFileName: libarmnnTestUtils.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libarmnnTfLiteParser
+SPDXID: SPDXRef-libarmnnTfLiteParser
+Creator: Arm Ltd
+PackageFileName: libarmnnTfLiteParser.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libtimelineDecoderJson
+SPDXID: SPDXRef-libtimelineDecoderJson
+Creator: Arm Ltd
+PackageFileName: libtimelineDecoderJson.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libtimelineDecoder
+SPDXID: SPDXRef-libtimelineDecoder
+Creator: Arm Ltd
+PackageFileName: libtimelineDecoder.so
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: libprotobuf
+SPDXID: SPDXRef-libprotobuf
+Creator: Google Inc
+PackageFileName: libprotobuf.so
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-3-Clause
+
+PackageName: libprotobuf-lite
+SPDXID: SPDXRef-libprotobuf-lite
+Creator: Google Inc
+PackageFileName: libprotobuf-lite.so
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-3-Clause
+
+PackageName: libprotoc
+SPDXID: SPDXRef-libprotoc
+Creator: Google Inc
+PackageFileName: libprotoc.so
+FilesAnalyzed: false
+PackageLicenseConcluded: BSD-3-Clause
+
+##### Executables
+
+PackageName: ExecuteNetwork
+SPDXID: SPDXRef-ExecuteNetwork
+Creator: Arm Ltd
+PackageFileName: ExecuteNetwork
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT
+
+PackageName: UnitTests
+SPDXID: SPDXRef-UnitTests
+Creator: Arm Ltd
+PackageFileName: UnitTests
+FilesAnalyzed: false
+PackageLicenseConcluded: MIT

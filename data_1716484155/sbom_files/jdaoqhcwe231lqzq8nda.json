@@ -1,0 +1,1889 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:2b243445-e021-4374-b970-d28145b95e32",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2022-07-03T21:17:05+00:00",
+    "tools": [
+      { "vendor": "aquasecurity", "name": "trivy", "version": "0.29.2" }
+    ],
+    "component": {
+      "bom-ref": "9b60df0f-356f-4bcd-8d27-9757af39e73b",
+      "type": "container",
+      "name": "krol/go-helloworld",
+      "properties": [
+        { "name": "aquasecurity:trivy:SchemaVersion", "value": "2" },
+        {
+          "name": "aquasecurity:trivy:ImageID",
+          "value": "sha256:7e4e4fd4392398c96508ac265138a77c21344992a2c22c221e762b89e16049e5"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:c8df48c724016056e07f19989aab091884390a715bafdfcae851d16dc37e4476"
+        },
+        {
+          "name": "aquasecurity:trivy:DiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        },
+        {
+          "name": "aquasecurity:trivy:RepoTag",
+          "value": "krol/go-helloworld:latest"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:apk/alpine/alpine-baselayout@3.2.0-r16?distro=3.14.1",
+      "type": "library",
+      "name": "alpine-baselayout",
+      "version": "3.2.0-r16",
+      "licenses": [{ "expression": "GPL-2.0-only" }],
+      "purl": "pkg:apk/alpine/alpine-baselayout@3.2.0-r16?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "alpine-baselayout" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "3.2.0-r16" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/alpine-keys@2.3-r1?distro=3.14.1",
+      "type": "library",
+      "name": "alpine-keys",
+      "version": "2.3-r1",
+      "licenses": [{ "expression": "MIT" }],
+      "purl": "pkg:apk/alpine/alpine-keys@2.3-r1?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "alpine-keys" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "2.3-r1" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/apk-tools@2.12.7-r0?distro=3.14.1",
+      "type": "library",
+      "name": "apk-tools",
+      "version": "2.12.7-r0",
+      "licenses": [{ "expression": "GPL-2.0-only" }],
+      "purl": "pkg:apk/alpine/apk-tools@2.12.7-r0?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "apk-tools" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "2.12.7-r0" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+      "type": "library",
+      "name": "busybox",
+      "version": "1.33.1-r3",
+      "licenses": [{ "expression": "GPL-2.0-only" }],
+      "purl": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "busybox" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.33.1-r3" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/ca-certificates@20211220-r0?distro=3.14.1",
+      "type": "library",
+      "name": "ca-certificates",
+      "version": "20211220-r0",
+      "licenses": [{ "expression": "MPL-2.0 AND MIT" }],
+      "purl": "pkg:apk/alpine/ca-certificates@20211220-r0?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "ca-certificates" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "20211220-r0" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:c8df48c724016056e07f19989aab091884390a715bafdfcae851d16dc37e4476"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/ca-certificates-bundle@20191127-r5?distro=3.14.1",
+      "type": "library",
+      "name": "ca-certificates-bundle",
+      "version": "20191127-r5",
+      "licenses": [{ "expression": "MPL-2.0 AND MIT" }],
+      "purl": "pkg:apk/alpine/ca-certificates-bundle@20191127-r5?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "ca-certificates" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "20191127-r5" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.14.1",
+      "type": "library",
+      "name": "libc-utils",
+      "version": "0.7.2-r3",
+      "licenses": [{ "expression": "BSD-2-Clause AND BSD-3-Clause" }],
+      "purl": "pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "libc-dev" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "0.7.2-r3" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/libcrypto1.1@1.1.1k-r0?distro=3.14.1",
+      "type": "library",
+      "name": "libcrypto1.1",
+      "version": "1.1.1k-r0",
+      "licenses": [{ "expression": "OpenSSL" }],
+      "purl": "pkg:apk/alpine/libcrypto1.1@1.1.1k-r0?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "openssl" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.1.1k-r0" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/libretls@3.3.3p1-r2?distro=3.14.1",
+      "type": "library",
+      "name": "libretls",
+      "version": "3.3.3p1-r2",
+      "licenses": [{ "expression": "ISC AND (BSD-3-Clause OR MIT)" }],
+      "purl": "pkg:apk/alpine/libretls@3.3.3p1-r2?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "libretls" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "3.3.3p1-r2" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/libssl1.1@1.1.1k-r0?distro=3.14.1",
+      "type": "library",
+      "name": "libssl1.1",
+      "version": "1.1.1k-r0",
+      "licenses": [{ "expression": "OpenSSL" }],
+      "purl": "pkg:apk/alpine/libssl1.1@1.1.1k-r0?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "openssl" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.1.1k-r0" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/musl@1.2.2-r3?distro=3.14.1",
+      "type": "library",
+      "name": "musl",
+      "version": "1.2.2-r3",
+      "licenses": [{ "expression": "MIT" }],
+      "purl": "pkg:apk/alpine/musl@1.2.2-r3?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "musl" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.2.2-r3" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/musl-utils@1.2.2-r3?distro=3.14.1",
+      "type": "library",
+      "name": "musl-utils",
+      "version": "1.2.2-r3",
+      "licenses": [{ "expression": "MIT BSD GPL2+" }],
+      "purl": "pkg:apk/alpine/musl-utils@1.2.2-r3?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "musl" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.2.2-r3" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/scanelf@1.3.2-r0?distro=3.14.1",
+      "type": "library",
+      "name": "scanelf",
+      "version": "1.3.2-r0",
+      "licenses": [{ "expression": "GPL-2.0-only" }],
+      "purl": "pkg:apk/alpine/scanelf@1.3.2-r0?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "pax-utils" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.3.2-r0" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+      "type": "library",
+      "name": "ssl_client",
+      "version": "1.33.1-r3",
+      "licenses": [{ "expression": "GPL-2.0-only" }],
+      "purl": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "busybox" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.33.1-r3" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:apk/alpine/zlib@1.2.11-r3?distro=3.14.1",
+      "type": "library",
+      "name": "zlib",
+      "version": "1.2.11-r3",
+      "licenses": [{ "expression": "Zlib" }],
+      "purl": "pkg:apk/alpine/zlib@1.2.11-r3?distro=3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:SrcName", "value": "zlib" },
+        { "name": "aquasecurity:trivy:SrcVersion", "value": "1.2.11-r3" },
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:bc276c40b172b1c5467277d36db5308a203a48262d5f278766cf083947d05466"
+        }
+      ]
+    },
+    {
+      "bom-ref": "d2002e04-2f62-44a2-82e4-7e7363098e5b",
+      "type": "operating-system",
+      "name": "alpine",
+      "version": "3.14.1",
+      "properties": [
+        { "name": "aquasecurity:trivy:Type", "value": "alpine" },
+        { "name": "aquasecurity:trivy:Class", "value": "os-pkgs" }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "type": "library",
+      "name": "github.com/davecgh/go-spew",
+      "version": "v1.1.1",
+      "purl": "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/go-logr/logr@v1.2.0",
+      "type": "library",
+      "name": "github.com/go-logr/logr",
+      "version": "v1.2.0",
+      "purl": "pkg:golang/github.com/go-logr/logr@v1.2.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/gogo/protobuf@v1.3.2",
+      "type": "library",
+      "name": "github.com/gogo/protobuf",
+      "version": "v1.3.2",
+      "purl": "pkg:golang/github.com/gogo/protobuf@v1.3.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/golang/protobuf@v1.5.2",
+      "type": "library",
+      "name": "github.com/golang/protobuf",
+      "version": "v1.5.2",
+      "purl": "pkg:golang/github.com/golang/protobuf@v1.5.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/google/go-cmp@v0.5.5",
+      "type": "library",
+      "name": "github.com/google/go-cmp",
+      "version": "v0.5.5",
+      "purl": "pkg:golang/github.com/google/go-cmp@v0.5.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/google/gofuzz@v1.1.0",
+      "type": "library",
+      "name": "github.com/google/gofuzz",
+      "version": "v1.1.0",
+      "purl": "pkg:golang/github.com/google/gofuzz@v1.1.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/googleapis/gnostic@v0.5.5",
+      "type": "library",
+      "name": "github.com/googleapis/gnostic",
+      "version": "v0.5.5",
+      "purl": "pkg:golang/github.com/googleapis/gnostic@v0.5.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/imdario/mergo@v0.3.5",
+      "type": "library",
+      "name": "github.com/imdario/mergo",
+      "version": "v0.3.5",
+      "purl": "pkg:golang/github.com/imdario/mergo@v0.3.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/json-iterator/go@v1.1.12",
+      "type": "library",
+      "name": "github.com/json-iterator/go",
+      "version": "v1.1.12",
+      "purl": "pkg:golang/github.com/json-iterator/go@v1.1.12",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+      "type": "library",
+      "name": "github.com/modern-go/concurrent",
+      "version": "v0.0.0-20180306012644-bacd9c7ef1dd",
+      "purl": "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/modern-go/reflect2@v1.0.2",
+      "type": "library",
+      "name": "github.com/modern-go/reflect2",
+      "version": "v1.0.2",
+      "purl": "pkg:golang/github.com/modern-go/reflect2@v1.0.2",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "type": "library",
+      "name": "github.com/spf13/pflag",
+      "version": "v1.0.5",
+      "purl": "pkg:golang/github.com/spf13/pflag@v1.0.5",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/net@v0.0.0-20211209124913-491a49abca63",
+      "type": "library",
+      "name": "golang.org/x/net",
+      "version": "v0.0.0-20211209124913-491a49abca63",
+      "purl": "pkg:golang/golang.org/x/net@v0.0.0-20211209124913-491a49abca63",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/oauth2@v0.0.0-20210819190943-2bc19b11175f",
+      "type": "library",
+      "name": "golang.org/x/oauth2",
+      "version": "v0.0.0-20210819190943-2bc19b11175f",
+      "purl": "pkg:golang/golang.org/x/oauth2@v0.0.0-20210819190943-2bc19b11175f",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.0.0-20210831042530-f4d43177bf5e",
+      "type": "library",
+      "name": "golang.org/x/sys",
+      "version": "v0.0.0-20210831042530-f4d43177bf5e",
+      "purl": "pkg:golang/golang.org/x/sys@v0.0.0-20210831042530-f4d43177bf5e",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/term@v0.0.0-20210615171337-6886f2dfbf5b",
+      "type": "library",
+      "name": "golang.org/x/term",
+      "version": "v0.0.0-20210615171337-6886f2dfbf5b",
+      "purl": "pkg:golang/golang.org/x/term@v0.0.0-20210615171337-6886f2dfbf5b",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.7",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.3.7",
+      "purl": "pkg:golang/golang.org/x/text@v0.3.7",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/time@v0.0.0-20210723032227-1f47c861a9ac",
+      "type": "library",
+      "name": "golang.org/x/time",
+      "version": "v0.0.0-20210723032227-1f47c861a9ac",
+      "purl": "pkg:golang/golang.org/x/time@v0.0.0-20210723032227-1f47c861a9ac",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/google.golang.org/protobuf@v1.27.1",
+      "type": "library",
+      "name": "google.golang.org/protobuf",
+      "version": "v1.27.1",
+      "purl": "pkg:golang/google.golang.org/protobuf@v1.27.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/inf.v0@v0.9.1",
+      "type": "library",
+      "name": "gopkg.in/inf.v0",
+      "version": "v0.9.1",
+      "purl": "pkg:golang/gopkg.in/inf.v0@v0.9.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "type": "library",
+      "name": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "purl": "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b",
+      "type": "library",
+      "name": "gopkg.in/yaml.v3",
+      "version": "v3.0.0-20210107192922-496545a6307b",
+      "purl": "pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/api@v0.23.8",
+      "type": "library",
+      "name": "k8s.io/api",
+      "version": "v0.23.8",
+      "purl": "pkg:golang/k8s.io/api@v0.23.8",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/apimachinery@v0.23.8",
+      "type": "library",
+      "name": "k8s.io/apimachinery",
+      "version": "v0.23.8",
+      "purl": "pkg:golang/k8s.io/apimachinery@v0.23.8",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/client-go@v0.23.8",
+      "type": "library",
+      "name": "k8s.io/client-go",
+      "version": "v0.23.8",
+      "purl": "pkg:golang/k8s.io/client-go@v0.23.8",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/klog/v2@v2.30.0",
+      "type": "library",
+      "name": "k8s.io/klog/v2",
+      "version": "v2.30.0",
+      "purl": "pkg:golang/k8s.io/klog/v2@v2.30.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/kube-openapi@v0.0.0-20211115234752-e816edb12b65",
+      "type": "library",
+      "name": "k8s.io/kube-openapi",
+      "version": "v0.0.0-20211115234752-e816edb12b65",
+      "purl": "pkg:golang/k8s.io/kube-openapi@v0.0.0-20211115234752-e816edb12b65",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/k8s.io/utils@v0.0.0-20211116205334-6203023598ed",
+      "type": "library",
+      "name": "k8s.io/utils",
+      "version": "v0.0.0-20211116205334-6203023598ed",
+      "purl": "pkg:golang/k8s.io/utils@v0.0.0-20211116205334-6203023598ed",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/sigs.k8s.io/json@v0.0.0-20211020170558-c049b76a60c6",
+      "type": "library",
+      "name": "sigs.k8s.io/json",
+      "version": "v0.0.0-20211020170558-c049b76a60c6",
+      "purl": "pkg:golang/sigs.k8s.io/json@v0.0.0-20211020170558-c049b76a60c6",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.2.1",
+      "type": "library",
+      "name": "sigs.k8s.io/structured-merge-diff/v4",
+      "version": "v4.2.1",
+      "purl": "pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.2.1",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/sigs.k8s.io/yaml@v1.2.0",
+      "type": "library",
+      "name": "sigs.k8s.io/yaml",
+      "version": "v1.2.0",
+      "purl": "pkg:golang/sigs.k8s.io/yaml@v1.2.0",
+      "properties": [
+        {
+          "name": "aquasecurity:trivy:LayerDiffID",
+          "value": "sha256:d7ffa87ebef6a0c95e5d623e6c34f48d52b5e6e1ff56792d55718ebd87741c7d"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "d2002e04-2f62-44a2-82e4-7e7363098e5b",
+      "dependsOn": [
+        "pkg:apk/alpine/alpine-baselayout@3.2.0-r16?distro=3.14.1",
+        "pkg:apk/alpine/alpine-keys@2.3-r1?distro=3.14.1",
+        "pkg:apk/alpine/apk-tools@2.12.7-r0?distro=3.14.1",
+        "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+        "pkg:apk/alpine/ca-certificates@20211220-r0?distro=3.14.1",
+        "pkg:apk/alpine/ca-certificates-bundle@20191127-r5?distro=3.14.1",
+        "pkg:apk/alpine/libc-utils@0.7.2-r3?distro=3.14.1",
+        "pkg:apk/alpine/libcrypto1.1@1.1.1k-r0?distro=3.14.1",
+        "pkg:apk/alpine/libretls@3.3.3p1-r2?distro=3.14.1",
+        "pkg:apk/alpine/libssl1.1@1.1.1k-r0?distro=3.14.1",
+        "pkg:apk/alpine/musl@1.2.2-r3?distro=3.14.1",
+        "pkg:apk/alpine/musl-utils@1.2.2-r3?distro=3.14.1",
+        "pkg:apk/alpine/scanelf@1.3.2-r0?distro=3.14.1",
+        "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+        "pkg:apk/alpine/zlib@1.2.11-r3?distro=3.14.1"
+      ]
+    },
+    {
+      "ref": "9b60df0f-356f-4bcd-8d27-9757af39e73b",
+      "dependsOn": [
+        "d2002e04-2f62-44a2-82e4-7e7363098e5b",
+        "pkg:golang/github.com/davecgh/go-spew@v1.1.1",
+        "pkg:golang/github.com/go-logr/logr@v1.2.0",
+        "pkg:golang/github.com/gogo/protobuf@v1.3.2",
+        "pkg:golang/github.com/golang/protobuf@v1.5.2",
+        "pkg:golang/github.com/google/go-cmp@v0.5.5",
+        "pkg:golang/github.com/google/gofuzz@v1.1.0",
+        "pkg:golang/github.com/googleapis/gnostic@v0.5.5",
+        "pkg:golang/github.com/imdario/mergo@v0.3.5",
+        "pkg:golang/github.com/json-iterator/go@v1.1.12",
+        "pkg:golang/github.com/modern-go/concurrent@v0.0.0-20180306012644-bacd9c7ef1dd",
+        "pkg:golang/github.com/modern-go/reflect2@v1.0.2",
+        "pkg:golang/github.com/spf13/pflag@v1.0.5",
+        "pkg:golang/golang.org/x/net@v0.0.0-20211209124913-491a49abca63",
+        "pkg:golang/golang.org/x/oauth2@v0.0.0-20210819190943-2bc19b11175f",
+        "pkg:golang/golang.org/x/sys@v0.0.0-20210831042530-f4d43177bf5e",
+        "pkg:golang/golang.org/x/term@v0.0.0-20210615171337-6886f2dfbf5b",
+        "pkg:golang/golang.org/x/text@v0.3.7",
+        "pkg:golang/golang.org/x/time@v0.0.0-20210723032227-1f47c861a9ac",
+        "pkg:golang/google.golang.org/protobuf@v1.27.1",
+        "pkg:golang/gopkg.in/inf.v0@v0.9.1",
+        "pkg:golang/gopkg.in/yaml.v2@v2.4.0",
+        "pkg:golang/gopkg.in/yaml.v3@v3.0.0-20210107192922-496545a6307b",
+        "pkg:golang/k8s.io/api@v0.23.8",
+        "pkg:golang/k8s.io/apimachinery@v0.23.8",
+        "pkg:golang/k8s.io/client-go@v0.23.8",
+        "pkg:golang/k8s.io/klog/v2@v2.30.0",
+        "pkg:golang/k8s.io/kube-openapi@v0.0.0-20211115234752-e816edb12b65",
+        "pkg:golang/k8s.io/utils@v0.0.0-20211116205334-6203023598ed",
+        "pkg:golang/sigs.k8s.io/json@v0.0.0-20211020170558-c049b76a60c6",
+        "pkg:golang/sigs.k8s.io/structured-merge-diff/v4@v4.2.1",
+        "pkg:golang/sigs.k8s.io/yaml@v1.2.0"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2022-28391",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "cbl-mariner" }, "severity": "critical" },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "description": "BusyBox through 1.35.0 allows remote attackers to execute arbitrary code if netstat is used to print a DNS PTR record's value to a VT compatible terminal. Alternatively, the attacker could choose to change the terminal's colors.",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2022-28391" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-28391"
+        },
+        {
+          "url": "https://git.alpinelinux.org/aports/plain/main/busybox/0001-libbb-sockaddr2str-ensure-only-printable-characters-.patch"
+        },
+        {
+          "url": "https://git.alpinelinux.org/aports/plain/main/busybox/0002-nslookup-sanitize-all-printed-strings-with-printable.patch"
+        },
+        {
+          "url": "https://gitlab.alpinelinux.org/alpine/aports/-/issues/13661"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-28391" }
+      ],
+      "published": "2022-04-03T21:15:00+00:00",
+      "updated": "2022-04-12T17:31:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2022-0778",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "alma" }, "severity": "high" },
+        { "source": { "name": "amazon" }, "severity": "high" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        { "source": { "name": "oracle-oval" }, "severity": "high" },
+        { "source": { "name": "photon" }, "severity": "high" },
+        {
+          "source": { "name": "redhat" },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        { "source": { "name": "rocky" }, "severity": "high" },
+        { "source": { "name": "ubuntu" }, "severity": "high" }
+      ],
+      "cwes": [835],
+      "description": "The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that contain elliptic curve public keys in compressed form or explicit elliptic curve parameters with a base point encoded in compressed form. It is possible to trigger the infinite loop by crafting a certificate that has invalid explicit curve parameters. Since certificate parsing happens prior to verification of the certificate signature, any process that parses an externally supplied certificate may thus be subject to a denial of service attack. The infinite loop can also be reached when parsing crafted private keys as they can contain explicit elliptic curve parameters. Thus vulnerable situations include: - TLS clients consuming server certificates - TLS servers consuming client certificates - Hosting providers taking certificates or private keys from customers - Certificate authorities parsing certification requests from subscribers - Anything else which parses ASN.1 elliptic curve parameters Also any other applications that use the BN_mod_sqrt() where the attacker can control the parameter values are vulnerable to this DoS issue. In the OpenSSL 1.0.2 version the public key is not parsed during initial parsing of the certificate which makes it slightly harder to trigger the infinite loop. However any operation which requires the public key from the certificate will trigger the infinite loop. In particular the attacker can use a self-signed certificate to trigger the loop during verification of the certificate signature. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0. It was addressed in the releases of 1.1.1n and 3.0.2 on the 15th March 2022. Fixed in OpenSSL 3.0.2 (Affected 3.0.0,3.0.1). Fixed in OpenSSL 1.1.1n (Affected 1.1.1-1.1.1m). Fixed in OpenSSL 1.0.2zd (Affected 1.0.2-1.0.2zc).",
+      "advisories": [
+        {
+          "url": "http://packetstormsecurity.com/files/167344/OpenSSL-1.0.2-1.1.1-3.0-BN_mod_sqrt-Infinite-Loop.html"
+        },
+        { "url": "http://seclists.org/fulldisclosure/2022/May/33" },
+        { "url": "http://seclists.org/fulldisclosure/2022/May/35" },
+        { "url": "http://seclists.org/fulldisclosure/2022/May/38" },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2022-0778.json"
+        },
+        { "url": "https://access.redhat.com/security/cve/CVE-2022-0778" },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-712929.pdf"
+        },
+        { "url": "https://crates.io/crates/openssl-src" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0778"
+        },
+        { "url": "https://errata.almalinux.org/8/ALSA-2022-1065.html" },
+        {
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=3118eb64934499d93db3230748a452351d1d9a65"
+        },
+        {
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=380085481c64de749a6dd25cdf0bcf4360b30f83"
+        },
+        {
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=a466912611aa6cbdf550cd10601390e587451246"
+        },
+        { "url": "https://linux.oracle.com/cve/CVE-2022-0778.html" },
+        { "url": "https://linux.oracle.com/errata/ELSA-2022-9272.html" },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2022/03/msg00023.html"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2022/03/msg00024.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/323SNN6ZX7PRJJWP2BUAFLPUAE42XWLZ/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GDB3GQVJPXJE7X5C5JN6JAA4XUDWD6E6/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/W6K3PR542DXWLEFFMFIDMME4CWMHJRMG/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0778" },
+        {
+          "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2022-0002"
+        },
+        { "url": "https://rustsec.org/advisories/RUSTSEC-2022-0014.html" },
+        { "url": "https://security.netapp.com/advisory/ntap-20220321-0002/" },
+        { "url": "https://security.netapp.com/advisory/ntap-20220429-0005/" },
+        { "url": "https://support.apple.com/kb/HT213255" },
+        { "url": "https://support.apple.com/kb/HT213256" },
+        { "url": "https://support.apple.com/kb/HT213257" },
+        { "url": "https://ubuntu.com/security/notices/USN-5328-1" },
+        { "url": "https://ubuntu.com/security/notices/USN-5328-2" },
+        { "url": "https://www.debian.org/security/2022/dsa-5103" },
+        { "url": "https://www.openssl.org/news/secadv/20220315.txt" },
+        { "url": "https://www.oracle.com/security-alerts/cpuapr2022.html" },
+        { "url": "https://www.tenable.com/security/tns-2022-06" },
+        { "url": "https://www.tenable.com/security/tns-2022-07" },
+        { "url": "https://www.tenable.com/security/tns-2022-08" },
+        { "url": "https://www.tenable.com/security/tns-2022-09" }
+      ],
+      "published": "2022-03-15T17:15:00+00:00",
+      "updated": "2022-06-14T10:15:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1k-r0?distro=3.14.1",
+          "versions": [{ "version": "1.1.1k-r0", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/libretls@3.3.3p1-r2?distro=3.14.1",
+          "versions": [{ "version": "3.3.3p1-r2", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1k-r0?distro=3.14.1",
+          "versions": [{ "version": "1.1.1k-r0", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42386",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "amazon" }, "severity": "medium" },
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the nvalloc function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42386" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42386"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42386" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:14:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42385",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "amazon" }, "severity": "medium" },
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the evaluate function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42385" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42385"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42385" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:14:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42384",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "amazon" }, "severity": "medium" },
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the handle_special function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42384" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42384"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42384" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:15:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42383",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the evaluate function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42383" },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:16:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42382",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_s function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42382" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42382"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42382" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:16:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42381",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the hash_init function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42381" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42381"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42381" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:13:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42380",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the clrvar function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42380" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42380"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42380" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:10:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42379",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "amazon" }, "severity": "medium" },
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the next_input_file function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42379" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42379"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42379" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:22:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42378",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "amazon" }, "severity": "medium" },
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 6.5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:S/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 6.6,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [416],
+      "description": "A use-after-free in Busybox's awk applet leads to denial of service and possibly code execution when processing a crafted awk pattern in the getvar_i function",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42378" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42378"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42378" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-01-04T17:22:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42375",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        {
+          "source": { "name": "nvd" },
+          "score": 1.9,
+          "severity": "info",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:M/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 5.5,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 4.1,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description": "An incorrect handling of a special element in Busybox's ash applet leads to denial of service when processing a crafted shell command, due to the shell mistaking specific characters for reserved characters. This may be used for DoS under rare conditions of filtered command input.",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42375" },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-03-31T16:29:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-42374",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "medium" },
+        { "source": { "name": "cbl-mariner" }, "severity": "medium" },
+        {
+          "source": { "name": "nvd" },
+          "score": 3.3,
+          "severity": "info",
+          "method": "CVSSv2",
+          "vector": "AV:L/AC:M/Au:N/C:P/I:N/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 5.3,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:H"
+        },
+        {
+          "source": { "name": "redhat" },
+          "score": 5.7,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "low" }
+      ],
+      "cwes": [125],
+      "description": "An out-of-bounds heap read in Busybox's unlzma applet leads to information leak and denial of service when crafted LZMA-compressed input is decompressed. This can be triggered by any applet/format that",
+      "advisories": [
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-42374" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42374"
+        },
+        {
+          "url": "https://jfrog.com/blog/unboxing-busybox-14-new-vulnerabilities-uncovered-by-claroty-and-jfrog/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/6T2TURBYYJGBMQTTN2DSOAIQGP7WCPGV/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/UQXGOGWBIYWOIVXJVRKHZR34UMEHQBXS/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-42374" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211223-0002/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5179-1" }
+      ],
+      "published": "2021-11-15T21:15:00+00:00",
+      "updated": "2022-03-31T16:29:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/busybox@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/ssl_client@1.33.1-r3?distro=3.14.1",
+          "versions": [{ "version": "1.33.1-r3", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-3712",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "amazon" }, "severity": "medium" },
+        { "source": { "name": "arch-linux" }, "severity": "high" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 5.8,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:M/Au:N/C:P/I:N/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.4,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+        },
+        { "source": { "name": "oracle-oval" }, "severity": "medium" },
+        { "source": { "name": "photon" }, "severity": "high" },
+        {
+          "source": { "name": "redhat" },
+          "score": 7.4,
+          "severity": "medium",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H"
+        },
+        { "source": { "name": "rocky" }, "severity": "medium" },
+        { "source": { "name": "ubuntu" }, "severity": "medium" }
+      ],
+      "cwes": [125],
+      "description": "ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own \"d2i\" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \"data\" and \"length\" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \"data\" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+      "advisories": [
+        { "url": "http://www.openwall.com/lists/oss-security/2021/08/26/2" },
+        {
+          "url": "https://access.redhat.com/hydra/rest/securitydata/cve/CVE-2021-3712.json"
+        },
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-3712" },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-244969.pdf"
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+        },
+        { "url": "https://crates.io/crates/openssl-src" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3712"
+        },
+        {
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=94d23fcff9b2a7a8368dfe52214d5c2569882c11"
+        },
+        {
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=ccb0a11145ee72b042d10593a64eaf9e8a55ec12"
+        },
+        {
+          "url": "https://kc.mcafee.com/corporate/index?page=content\u0026id=SB10366"
+        },
+        { "url": "https://linux.oracle.com/cve/CVE-2021-3712.html" },
+        { "url": "https://linux.oracle.com/errata/ELSA-2022-9023.html" },
+        {
+          "url": "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2021/09/msg00014.html"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2021/09/msg00021.html"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3712" },
+        { "url": "https://rustsec.org/advisories/RUSTSEC-2021-0098.html" },
+        { "url": "https://security.netapp.com/advisory/ntap-20210827-0010/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5051-1" },
+        { "url": "https://ubuntu.com/security/notices/USN-5051-2" },
+        { "url": "https://ubuntu.com/security/notices/USN-5051-3" },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-5051-4 (regression only in trusty/esm)"
+        },
+        { "url": "https://ubuntu.com/security/notices/USN-5088-1" },
+        { "url": "https://www.debian.org/security/2021/dsa-4963" },
+        { "url": "https://www.openssl.org/news/secadv/20210824.txt" },
+        { "url": "https://www.oracle.com/security-alerts/cpuapr2022.html" },
+        { "url": "https://www.oracle.com/security-alerts/cpujan2022.html" },
+        { "url": "https://www.oracle.com/security-alerts/cpuoct2021.html" },
+        { "url": "https://www.tenable.com/security/tns-2021-16" },
+        { "url": "https://www.tenable.com/security/tns-2022-02" }
+      ],
+      "published": "2021-08-24T15:15:00+00:00",
+      "updated": "2022-04-20T00:16:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1k-r0?distro=3.14.1",
+          "versions": [{ "version": "1.1.1k-r0", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1k-r0?distro=3.14.1",
+          "versions": [{ "version": "1.1.1k-r0", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2021-3711",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "arch-linux" }, "severity": "high" },
+        { "source": { "name": "cbl-mariner" }, "severity": "critical" },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 9.8,
+          "severity": "critical",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "photon" }, "severity": "critical" },
+        {
+          "source": { "name": "redhat" },
+          "score": 9.8,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+        },
+        { "source": { "name": "ubuntu" }, "severity": "high" }
+      ],
+      "cwes": [120],
+      "description": "In order to decrypt SM2 encrypted data an application is expected to call the API function EVP_PKEY_decrypt(). Typically an application will call this function twice. The first time, on entry, the \"out\" parameter can be NULL and, on exit, the \"outlen\" parameter is populated with the buffer size required to hold the decrypted plaintext. The application can then allocate a sufficiently sized buffer and call EVP_PKEY_decrypt() again, but this time passing a non-NULL value for the \"out\" parameter. A bug in the implementation of the SM2 decryption code means that the calculation of the buffer size required to hold the plaintext returned by the first call to EVP_PKEY_decrypt() can be smaller than the actual size required by the second call. This can lead to a buffer overflow when EVP_PKEY_decrypt() is called by the application a second time with a buffer that is too small. A malicious attacker who is able present SM2 content for decryption to an application could cause attacker chosen data to overflow the buffer by up to a maximum of 62 bytes altering the contents of other data held after the buffer, possibly changing application behaviour or causing the application to crash. The location of the buffer is application dependent but is typically heap allocated. Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k).",
+      "advisories": [
+        { "url": "http://www.openwall.com/lists/oss-security/2021/08/26/2" },
+        { "url": "https://access.redhat.com/security/cve/CVE-2021-3711" },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+        },
+        { "url": "https://crates.io/crates/openssl-src" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3711"
+        },
+        {
+          "url": "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=59f5e75f3bced8fc0e130d72a3f582cf7b480b46"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E"
+        },
+        {
+          "url": "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-3711" },
+        { "url": "https://rustsec.org/advisories/RUSTSEC-2021-0097.html" },
+        { "url": "https://security.netapp.com/advisory/ntap-20210827-0010/" },
+        { "url": "https://security.netapp.com/advisory/ntap-20211022-0003/" },
+        { "url": "https://ubuntu.com/security/notices/USN-5051-1" },
+        { "url": "https://www.debian.org/security/2021/dsa-4963" },
+        { "url": "https://www.openssl.org/news/secadv/20210824.txt" },
+        { "url": "https://www.oracle.com/security-alerts/cpuapr2022.html" },
+        { "url": "https://www.oracle.com/security-alerts/cpujan2022.html" },
+        { "url": "https://www.oracle.com/security-alerts/cpuoct2021.html" },
+        { "url": "https://www.tenable.com/security/tns-2021-16" },
+        { "url": "https://www.tenable.com/security/tns-2022-02" }
+      ],
+      "published": "2021-08-24T15:15:00+00:00",
+      "updated": "2022-05-10T18:03:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1k-r0?distro=3.14.1",
+          "versions": [{ "version": "1.1.1k-r0", "status": "affected" }]
+        },
+        {
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1k-r0?distro=3.14.1",
+          "versions": [{ "version": "1.1.1k-r0", "status": "affected" }]
+        }
+      ]
+    },
+    {
+      "id": "CVE-2018-25032",
+      "source": { "name": "alpine", "url": "https://secdb.alpinelinux.org/" },
+      "ratings": [
+        { "source": { "name": "alma" }, "severity": "high" },
+        { "source": { "name": "amazon" }, "severity": "high" },
+        { "source": { "name": "arch-linux" }, "severity": "high" },
+        { "source": { "name": "cbl-mariner" }, "severity": "high" },
+        {
+          "source": { "name": "nvd" },
+          "score": 5,
+          "severity": "medium",
+          "method": "CVSSv2",
+          "vector": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+        },
+        {
+          "source": { "name": "nvd" },
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        },
+        { "source": { "name": "oracle-oval" }, "severity": "high" },
+        { "source": { "name": "photon" }, "severity": "high" },
+        {
+          "source": { "name": "redhat" },
+          "score": 8.2,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H"
+        },
+        { "source": { "name": "ruby-advisory-db" }, "severity": "high" },
+        { "source": { "name": "ubuntu" }, "severity": "medium" }
+      ],
+      "cwes": [787],
+      "description": "zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.",
+      "advisories": [
+        { "url": "http://seclists.org/fulldisclosure/2022/May/33" },
+        { "url": "http://seclists.org/fulldisclosure/2022/May/35" },
+        { "url": "http://seclists.org/fulldisclosure/2022/May/38" },
+        { "url": "http://www.openwall.com/lists/oss-security/2022/03/25/2" },
+        { "url": "http://www.openwall.com/lists/oss-security/2022/03/26/1" },
+        { "url": "https://access.redhat.com/security/cve/CVE-2018-25032" },
+        {
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-25032"
+        },
+        { "url": "https://errata.almalinux.org/8/ALSA-2022-2201.html" },
+        {
+          "url": "https://github.com/madler/zlib/commit/5c44459c3b28a9bd3283aaceab7c615f8020c531"
+        },
+        { "url": "https://github.com/madler/zlib/compare/v1.2.11...v1.2.12" },
+        { "url": "https://github.com/madler/zlib/issues/605" },
+        {
+          "url": "https://github.com/sparklemotion/nokogiri/releases/tag/v1.13.4"
+        },
+        {
+          "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-v6gp-9mmm-c6p5"
+        },
+        {
+          "url": "https://groups.google.com/g/ruby-security-ann/c/vX7qSjsvWis/m/TJWN4oOKBwAJ"
+        },
+        { "url": "https://linux.oracle.com/cve/CVE-2018-25032.html" },
+        { "url": "https://linux.oracle.com/errata/ELSA-2022-4592.html" },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2022/04/msg00000.html"
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2022/05/msg00008.html"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DF62MVMH3QUGMBDCB3DY2ERQ6EBHTADB/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NS2D2GFPFGOJUL4WQ3DUAY7HF4VWQ77F/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOKNP2L734AEL47NRYGVZIKEFOUBQY5Y/"
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XOKFMSNQ5D5WGMALBNBXU3GE442V74WU/"
+        },
+        { "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-25032" },
+        { "url": "https://security.netapp.com/advisory/ntap-20220526-0009/" },
+        { "url": "https://support.apple.com/kb/HT213255" },
+        { "url": "https://support.apple.com/kb/HT213256" },
+        { "url": "https://support.apple.com/kb/HT213257" },
+        { "url": "https://ubuntu.com/security/notices/USN-5355-1" },
+        { "url": "https://ubuntu.com/security/notices/USN-5355-2" },
+        { "url": "https://ubuntu.com/security/notices/USN-5359-1" },
+        { "url": "https://ubuntu.com/security/notices/USN-5359-2" },
+        { "url": "https://www.debian.org/security/2022/dsa-5111" },
+        { "url": "https://www.openwall.com/lists/oss-security/2022/03/24/1" },
+        { "url": "https://www.openwall.com/lists/oss-security/2022/03/28/1" },
+        { "url": "https://www.openwall.com/lists/oss-security/2022/03/28/3" }
+      ],
+      "published": "2022-03-25T09:15:00+00:00",
+      "updated": "2022-06-28T13:15:00+00:00",
+      "affects": [
+        {
+          "ref": "pkg:apk/alpine/zlib@1.2.11-r3?distro=3.14.1",
+          "versions": [{ "version": "1.2.11-r3", "status": "affected" }]
+        }
+      ]
+    }
+  ]
+}

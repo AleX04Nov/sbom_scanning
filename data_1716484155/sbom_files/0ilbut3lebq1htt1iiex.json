@@ -1,0 +1,93 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:c627442f-e82d-44bd-a353-64d1aaa5bbec",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-10-21T10:36:18.808653+00:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-bom",
+        "version": "3.11.5"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python-lib",
+        "version": "3.1.5",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+            "type": "build-system"
+          },
+          {
+            "url": "https://pypi.org/project/cyclonedx-python-lib/",
+            "type": "distribution"
+          },
+          {
+            "url": "https://cyclonedx.github.io/cyclonedx-python-lib/",
+            "type": "documentation"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+            "type": "issue-tracker"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+            "type": "license"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+            "type": "release-notes"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "2cad14a4-1869-449a-b497-341ad2567681",
+      "name": "puhdistusalue",
+      "version": "2022.7.24",
+      "purl": "pkg:pypi/puhdistusalue@2022.7.24"
+    },
+    {
+      "type": "library",
+      "bom-ref": "e8b3a5ce-ba4b-4587-b3ef-ef102879738d",
+      "name": "scooby",
+      "version": "0.9.2",
+      "purl": "pkg:pypi/scooby@0.9.2"
+    },
+    {
+      "type": "library",
+      "bom-ref": "03b79cb0-5bc3-44ac-ad10-2cd0cf88ff2d",
+      "name": "typer",
+      "version": "0.9.0",
+      "purl": "pkg:pypi/typer@0.9.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "2cad14a4-1869-449a-b497-341ad2567681",
+      "dependsOn": []
+    },
+    {
+      "ref": "e8b3a5ce-ba4b-4587-b3ef-ef102879738d",
+      "dependsOn": []
+    },
+    {
+      "ref": "03b79cb0-5bc3-44ac-ad10-2cd0cf88ff2d",
+      "dependsOn": []
+    }
+  ]
+}

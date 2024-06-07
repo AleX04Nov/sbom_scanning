@@ -1,0 +1,831 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/data_1716484155/sbom_files/upct3thd3wx3kfh5xnik.spdx",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "h2",
+            "version": "0.3.18",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-10T16:26:48Z",
+              "published": "2024-01-19T15:24:56Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8r5v-vm4m-4g25",
+              "aliases": [
+                "RUSTSEC-2024-0003"
+              ],
+              "summary": "Resource exhaustion vulnerability in h2 may lead to Denial of Service (DoS)",
+              "details": "An attacker with an HTTP/2 connection to an affected endpoint can send a steady stream of invalid frames to force the\ngeneration of reset frames on the victim endpoint.\nBy closing their recv window, the attacker could then force these resets to be queued in an unbounded fashion,\nresulting in Out Of Memory (OOM) and high CPU usage.\n\nThis fix is corrected in [hyperium/h2#737](https://github.com/hyperium/h2/pull/737), which limits the total number of\ninternal error resets emitted by default before the connection is closed.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.3.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-8r5v-vm4m-4g25/GHSA-8r5v-vm4m-4g25.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.4.0"
+                        },
+                        {
+                          "fixed": "0.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-8r5v-vm4m-4g25/GHSA-8r5v-vm4m-4g25.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hyperium/h2/pull/737"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hyperium/h2/commit/59570e11ccddbec85f67a0c7aa353f7730c68854"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hyperium/h2/commit/d919cd6fd8e0f4f5d1f6282fab0b38a1b4bf999c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hyperium/h2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0003.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-19T15:24:56Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-04-11T16:41:43Z",
+              "published": "2024-04-05T15:05:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q6cp-qfwq-4gcv",
+              "aliases": [
+                "RUSTSEC-2024-0332"
+              ],
+              "summary": "h2 servers vulnerable to degradation of service with CONTINUATION Flood",
+              "details": "An attacker can send a flood of CONTINUATION frames, causing `h2` to process them indefinitely. This results in an increase in CPU usage.\n\nTokio task budget helps prevent this from a complete denial-of-service, as the server can still respond to legitimate requests, albeit with increased latency.\n\nMore details at https://seanmonstar.com/blog/hyper-http2-continuation-flood/.\n\nPatches available for 0.4.x and 0.3.x versions.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.3.26"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-q6cp-qfwq-4gcv/GHSA-q6cp-qfwq-4gcv.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.4.0"
+                        },
+                        {
+                          "fixed": "0.4.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-q6cp-qfwq-4gcv/GHSA-q6cp-qfwq-4gcv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hyperium/h2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0332.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seanmonstar.com/blog/hyper-http2-continuation-flood"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.kb.cert.org/vuls/id/421644"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-05T15:05:32Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-02-10T16:26:48Z",
+              "published": "2024-01-17T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0003",
+              "aliases": [
+                "GHSA-8r5v-vm4m-4g25"
+              ],
+              "related": [
+                "CVE-2019-9514"
+              ],
+              "summary": "Resource exhaustion vulnerability in h2 may lead to Denial of Service (DoS)",
+              "details": "An attacker with an HTTP/2 connection to an affected endpoint can send a steady stream of invalid frames to force the\ngeneration of reset frames on the victim endpoint.\nBy closing their recv window, the attacker could then force these resets to be queued in an unbounded fashion,\nresulting in Out Of Memory (OOM) and high CPU usage.\n\nThis fix is corrected in [hyperium/h2#737](https://github.com/hyperium/h2/pull/737), which limits the total number of\ninternal error resets emitted by default before the connection is closed.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.3.24"
+                        },
+                        {
+                          "introduced": "0.4.0-0"
+                        },
+                        {
+                          "fixed": "0.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0003.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/h2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0003.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            },
+            {
+              "modified": "2024-04-11T16:41:43Z",
+              "published": "2024-04-03T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0332",
+              "aliases": [
+                "GHSA-q6cp-qfwq-4gcv"
+              ],
+              "summary": "Degradation of service in h2 servers with CONTINUATION Flood",
+              "details": "An attacker can send a flood of CONTINUATION frames, causing `h2` to process them indefinitely.\nThis results in an increase in CPU usage.\n\nTokio task budget helps prevent this from a complete denial-of-service, as the server can still\nrespond to legitimate requests, albeit with increased latency.\n\nMore details at \"https://seanmonstar.com/blog/hyper-http2-continuation-flood/.\n\nPatches available for 0.4.x and 0.3.x versions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.3.26"
+                        },
+                        {
+                          "introduced": "0.4.0-0"
+                        },
+                        {
+                          "fixed": "0.4.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0332.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/h2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0332.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seanmonstar.com/blog/hyper-http2-continuation-flood/"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8r5v-vm4m-4g25",
+                "RUSTSEC-2024-0003"
+              ],
+              "aliases": [
+                "GHSA-8r5v-vm4m-4g25",
+                "RUSTSEC-2024-0003"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-q6cp-qfwq-4gcv",
+                "RUSTSEC-2024-0332"
+              ],
+              "aliases": [
+                "GHSA-q6cp-qfwq-4gcv",
+                "RUSTSEC-2024-0332"
+              ],
+              "max_severity": "5.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mio",
+            "version": "0.8.6",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-03-06T21:37:37Z",
+              "published": "2024-03-04T20:44:35Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r8w9-5wcg-vfj7",
+              "aliases": [
+                "CVE-2024-27308",
+                "RUSTSEC-2024-0019"
+              ],
+              "summary": "Mio's tokens for named pipes may be delivered after deregistration",
+              "details": "### Impact\n\nWhen using named pipes on Windows, mio will under some circumstances return invalid tokens that correspond to named pipes that have already been deregistered from the mio registry. The impact of this vulnerability depends on how mio is used. For some applications, invalid tokens may be ignored or cause a warning or a crash. On the other hand, for applications that store pointers in the tokens, this vulnerability may result in a use-after-free.\n\nFor users of Tokio, this vulnerability is serious and can result in a use-after-free in Tokio.\n\nThe vulnerability is Windows-specific, and can only happen if you are using named pipes. Other IO resources are not affected.\n\n### Affected versions\nThis vulnerability has been fixed in mio v0.8.11.\n\nAll versions of mio between v0.7.2 and v0.8.10 are vulnerable.\n\nTokio is vulnerable when you are using a vulnerable version of mio AND you are using at least Tokio v1.30.0. Versions of Tokio prior to v1.30.0 will ignore invalid tokens, so they are not vulnerable.\n\n### Workarounds\nVulnerable libraries that use mio can work around this issue by detecting and ignoring invalid tokens.\n\n### Technical details\n\nWhen an IO resource registered with mio has a readiness event, mio delivers that readiness event to the user using a user-specified token. Mio guarantees that when an IO resource is [deregistered](https://docs.rs/mio/latest/mio/struct.Registry.html#method.deregister), then it will never return the token for that IO resource again. However, for named pipes on windows, mio may sometimes deliver the token for a named pipe even though the named pipe has been previously deregistered.\n\nThis vulnerability was originally reported in the Tokio issue tracker: [tokio-rs/tokio#6369](https://github.com/tokio-rs/tokio/issues/6369)\nThis vulnerability was fixed in: [tokio-rs/mio#1760](https://github.com/tokio-rs/mio/pull/1760)\nThis vulnerability is also known as [RUSTSEC-2024-0019](https://rustsec.org/advisories/RUSTSEC-2024-0019.html).\n\nThank you to @rofoun and @radekvit for discovering and reporting this issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "mio",
+                    "purl": "pkg:cargo/mio"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.7.2"
+                        },
+                        {
+                          "fixed": "0.8.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.8.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r8w9-5wcg-vfj7/GHSA-r8w9-5wcg-vfj7.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tokio-rs/mio/security/advisories/GHSA-r8w9-5wcg-vfj7"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27308"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tokio-rs/tokio/issues/6369"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tokio-rs/mio/pull/1760"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tokio-rs/mio/commit/90d4fe00df870acd3d38f3dc4face9aacab8fbb9"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/tokio-rs/mio"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-416",
+                  "CWE-672"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-04T20:44:35Z",
+                "nvd_published_at": "2024-03-06T20:15:47Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-03-04T17:56:47Z",
+              "published": "2024-03-04T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0019",
+              "aliases": [
+                "CVE-2024-27308",
+                "GHSA-r8w9-5wcg-vfj7"
+              ],
+              "summary": "Tokens for named pipes may be delivered after deregistration",
+              "details": "## Impact\n\nWhen using named pipes on Windows, mio will under some circumstances return invalid tokens that correspond to named pipes that have already been deregistered from the mio registry. The impact of this vulnerability depends on how mio is used. For some applications, invalid tokens may be ignored or cause a warning or a crash. On the other hand, for applications that store pointers in the tokens, this vulnerability may result in a use-after-free.\n\nFor users of Tokio, this vulnerability is serious and can result in a use-after-free in Tokio.\n\nThe vulnerability is Windows-specific, and can only happen if you are using named pipes. Other IO resources are not affected.\n\n## Affected versions\n\nThis vulnerability has been fixed in mio v0.8.11.\n\nAll versions of mio between v0.7.2 and v0.8.10 are vulnerable.\n\nTokio is vulnerable when you are using a vulnerable version of mio AND you are using at least Tokio v1.30.0. Versions of Tokio prior to v1.30.0 will ignore invalid tokens, so they are not vulnerable.\n\n## Workarounds\n\nVulnerable libraries that use mio can work around this issue by detecting and ignoring invalid tokens.\n\n## Technical details\n\nWhen an IO resource registered with mio has a readiness event, mio delivers that readiness event to the user using a user-specified token. Mio guarantees that when an IO resource is [deregistered](https://docs.rs/mio/latest/mio/struct.Registry.html#method.deregister), then it will never return the token for that IO resource again. However, for named pipes on windows, mio may sometimes deliver the token for a named pipe even though the named pipe has been previously deregistered.\n\nThis vulnerability was originally reported in the Tokio issue tracker: [tokio-rs/tokio#6369](https://github.com/tokio-rs/tokio/issues/6369)  \nThis vulnerability was fixed in: [tokio-rs/mio#1760](https://github.com/tokio-rs/mio/pull/1760)\n\nThank you to [@rofoun](https://github.com/rofoun) and [@radekvit](https://github.com/radekvit) for discovering and reporting this issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "mio",
+                    "purl": "pkg:cargo/mio"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.7.2"
+                        },
+                        {
+                          "fixed": "0.8.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0019.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [
+                        "mio::windows::NamedPipe::new"
+                      ],
+                      "os": [
+                        "windows"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/mio"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0019.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/tokio-rs/mio/security/advisories/GHSA-r8w9-5wcg-vfj7"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-r8w9-5wcg-vfj7",
+                "RUSTSEC-2024-0019"
+              ],
+              "aliases": [
+                "CVE-2024-27308",
+                "GHSA-r8w9-5wcg-vfj7",
+                "RUSTSEC-2024-0019"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rustls",
+            "version": "0.20.8",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-04-20T02:21:14Z",
+              "published": "2024-04-19T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0336",
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj"
+              ],
+              "summary": "`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input",
+              "details": "If a `close_notify` alert is received during a handshake, `complete_io`\ndoes not terminate.\n\nCallers which do not call `complete_io` are not affected.\n\n`rustls-tokio` and `rustls-ffi` do not call `complete_io`\nand are not affected.\n\n`rustls::Stream` and `rustls::StreamOwned` types use\n`complete_io` and are affected.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        },
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        },
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0336.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [
+                        "rustls::ConnectionCommon::complete_io"
+                      ],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/rustls"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "RUSTSEC-2024-0336"
+              ],
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "webpki",
+            "version": "0.22.0",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:17:28Z",
+              "published": "2023-08-25T00:12:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8qv2-5vq6-g2g7",
+              "aliases": [
+                "RUSTSEC-2023-0052"
+              ],
+              "summary": "webpki: CPU denial of service in certificate path building",
+              "details": "When this crate is given a pathological certificate chain to validate, it will spend CPU time exponential with the number of candidate certificates at each step of path building.\n\nBoth TLS clients and TLS servers that accept client certificate are affected.\n\nThis was previously reported in https://github.com/briansmith/webpki/issues/69.\n\n`rustls-webpki` is a fork of this crate which contains a fix for this issue and is actively maintained.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "webpki",
+                    "purl": "pkg:cargo/webpki"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.22.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.22.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/08/GHSA-8qv2-5vq6-g2g7/GHSA-8qv2-5vq6-g2g7.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/briansmith/webpki/issues/69"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/briansmith/webpki/issues/69#issuecomment-1699894848"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/briansmith/webpki/commit/30a108e0802fd09585e0d071013f24b8272d139b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/briansmith/webpki"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/crypto-com/sgx-vendor"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0052.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-08-25T00:12:39Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:17:28Z",
+              "published": "2023-08-22T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2023-0052",
+              "aliases": [
+                "GHSA-8qv2-5vq6-g2g7"
+              ],
+              "related": [
+                "CVE-2018-16875"
+              ],
+              "summary": "webpki: CPU denial of service in certificate path building",
+              "details": "When this crate is given a pathological certificate chain to validate, it will\nspend CPU time exponential with the number of candidate certificates at each\nstep of path building.\n\nBoth TLS clients and TLS servers that accept client certificate are affected.\n\nThis was previously reported in\n\u003chttps://github.com/briansmith/webpki/issues/69\u003e and re-reported recently\nby Luke Malinowski.\n\nwebpki 0.22.1 included a partial fix and webpki 0.22.2 added further fixes.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "webpki",
+                    "purl": "pkg:cargo/webpki"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.22.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2023-0052.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/webpki"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0052.html"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8qv2-5vq6-g2g7",
+                "RUSTSEC-2023-0052"
+              ],
+              "aliases": [
+                "GHSA-8qv2-5vq6-g2g7",
+                "RUSTSEC-2023-0052"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

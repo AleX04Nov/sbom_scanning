@@ -1,0 +1,2474 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/data_1716484155/sbom_files/1ppwerj13tce1elte6oz.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "@grpc/grpc-js",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:04:09Z",
+              "published": "2021-05-10T19:16:14Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pp75-xfpw-37g9",
+              "aliases": [
+                "CVE-2020-7768",
+                "SNYK-JAVA-ORGWEBJARSNPM-1038819",
+                "SNYK-JS-GRPC-598671",
+                "SNYK-JS-GRPCGRPCJS-1038818"
+              ],
+              "summary": "Prototype pollution in grpc and @grpc/grpc-js",
+              "details": "\"The package grpc before 1.24.4 and the package @grpc/grpc-js before 1.1.8 are vulnerable to Prototype Pollution via loadPackageDefinition.\"",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "grpc",
+                    "purl": "pkg:npm/grpc"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.24.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-pp75-xfpw-37g9/GHSA-pp75-xfpw-37g9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@grpc/grpc-js",
+                    "purl": "pkg:npm/%40grpc/grpc-js"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/05/GHSA-pp75-xfpw-37g9/GHSA-pp75-xfpw-37g9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7768"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc-node/pull/1605"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc-node/pull/1606"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/grpc/grpc-node/releases/tag/grpc%401.24.4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1038819"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-GRPC-598671"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-GRPCGRPCJS-1038818"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/@grpc/grpc-js"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/grpc"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1321",
+                  "CWE-915"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-04-19T22:57:05Z",
+                "nvd_published_at": "2020-11-11T11:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-pp75-xfpw-37g9"
+              ],
+              "aliases": [
+                "CVE-2020-7768",
+                "GHSA-pp75-xfpw-37g9",
+                "SNYK-JAVA-ORGWEBJARSNPM-1038819",
+                "SNYK-JS-GRPC-598671",
+                "SNYK-JS-GRPCGRPCJS-1038818"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "adm-zip",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:59:42Z",
+              "published": "2018-07-27T17:07:14Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-3v6h-hqm4-2rg6",
+              "aliases": [
+                "CVE-2018-1002204"
+              ],
+              "summary": "Arbitrary File Write in adm-zip",
+              "details": "Versions of `adm-zip` before 0.4.9 are vulnerable to arbitrary file write when used to extract a specifically crafted archive that contains path traversal filenames (`../../file.txt` for example).\n\n\n## Recommendation\n\nUpdate to version 0.4.9 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "adm-zip",
+                    "purl": "pkg:npm/adm-zip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.4.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-3v6h-hqm4-2rg6/GHSA-3v6h-hqm4-2rg6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1002204"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cthackers/adm-zip/pull/212"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cthackers/adm-zip/commit/62f64004fefb894c523a7143e8a88ebe6c84df25"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/362118"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-3v6h-hqm4-2rg6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/snyk/zip-slip-vulnerability"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/research/zip-slip-vulnerability"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/npm:adm-zip:20180415"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/681"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/994"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/107001"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:56:28Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3v6h-hqm4-2rg6"
+              ],
+              "aliases": [
+                "CVE-2018-1002204",
+                "GHSA-3v6h-hqm4-2rg6"
+              ],
+              "max_severity": "5.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "http-proxy-agent",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:00:42Z",
+              "published": "2022-01-06T20:30:13Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-86wf-436m-h424",
+              "aliases": [
+                "CVE-2019-10196"
+              ],
+              "summary": "Resource Exhaustion Denial of Service in http-proxy-agent ",
+              "details": "A flaw was found in http-proxy-agent, prior to version 2.1.0. It was discovered http-proxy-agent passes an auth option to the Buffer constructor without proper sanitization. This could result in a Denial of Service through the usage of all available CPU resources and data exposure through an uninitialized memory leak in setups where an attacker could submit typed input to the auth parameter.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "http-proxy-agent",
+                    "purl": "pkg:npm/http-proxy-agent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.1.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-86wf-436m-h424/GHSA-86wf-436m-h424.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10196"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-http-proxy-agent/commit/b7b7cc793c3226aa83f820ce5c277e81862d32eb"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1567245"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/607"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-665"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-22T22:28:09Z",
+                "nvd_published_at": "2021-03-19T20:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-04-11T00:26:58Z",
+              "published": "2019-06-11T16:16:07Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8w57-jfpm-945m",
+              "summary": "Denial of Service in http-proxy-agent",
+              "details": "Versions of `http-proxy-agent` before 2.1.0 are vulnerable to denial of service and uninitialized memory leak when unsanitized options are passed to `Buffer`. An attacker may leverage these unsanitized options to consume system resources.\n\n\n## Recommendation\n\nUpdate to version 2.1.0 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "http-proxy-agent",
+                    "purl": "pkg:npm/http-proxy-agent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.1.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/06/GHSA-8w57-jfpm-945m/GHSA-8w57-jfpm-945m.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/321631"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-http-proxy-agent/blob/2.0.0/index.js#L80"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/607"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-06-11T16:11:38Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-86wf-436m-h424"
+              ],
+              "aliases": [
+                "CVE-2019-10196",
+                "GHSA-86wf-436m-h424"
+              ],
+              "max_severity": "9.8"
+            },
+            {
+              "ids": [
+                "GHSA-8w57-jfpm-945m"
+              ],
+              "aliases": [
+                "GHSA-8w57-jfpm-945m"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "https-proxy-agent",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:00:18Z",
+              "published": "2018-07-27T17:04:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8g7p-74h8-hg48",
+              "aliases": [
+                "CVE-2018-3739"
+              ],
+              "summary": "Denial of Service in https-proxy-agent",
+              "details": "Versions of `https-proxy-agent` before 2.2.0 are vulnerable to denial of service. This is due to unsanitized options (proxy.auth) being passed to `Buffer()`.\n\n\n## Recommendation\n\nUpdate to version 2.2.0 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "https-proxy-agent",
+                    "purl": "pkg:npm/https-proxy-agent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-8g7p-74h8-hg48/GHSA-8g7p-74h8-hg48.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-3736"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-https-proxy-agent/commit/1c24219df87524e6ed973127e81f30801d658f07"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/319532"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/TooTallNate/node-https-proxy-agent"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8g7p-74h8-hg48"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/593"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-125",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:25:32Z",
+                "nvd_published_at": null,
+                "severity": "CRITICAL"
+              }
+            },
+            {
+              "modified": "2023-11-01T20:54:11Z",
+              "published": "2020-04-16T03:14:56Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pc5p-h8pf-mvwp",
+              "summary": "Machine-In-The-Middle in https-proxy-agent",
+              "details": "Versions of `https-proxy-agent` prior to 2.2.3 are vulnerable to Machine-In-The-Middle. The package fails to enforce TLS on the socket if the proxy server responds the to the request with a HTTP status different than 200. This allows an attacker with access to the proxy server to intercept unencrypted communications, which may include sensitive information such as credentials.\n\n\n## Recommendation\n\nUpgrade to version 3.0.0 or 2.2.3.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "https-proxy-agent",
+                    "purl": "pkg:npm/https-proxy-agent"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/04/GHSA-pc5p-h8pf-mvwp/GHSA-pc5p-h8pf-mvwp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-https-proxy-agent/commit/36d8cf509f877fa44f4404fce57ebaf9410fe51b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/541502"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-HTTPSPROXYAGENT-469131"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1184"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-300"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-04-16T03:03:19Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8g7p-74h8-hg48"
+              ],
+              "aliases": [
+                "CVE-2018-3739",
+                "GHSA-8g7p-74h8-hg48"
+              ],
+              "max_severity": "9.1"
+            },
+            {
+              "ids": [
+                "GHSA-pc5p-h8pf-mvwp"
+              ],
+              "aliases": [
+                "GHSA-pc5p-h8pf-mvwp"
+              ],
+              "max_severity": "6.1"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "ip",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-02T22:56:56Z",
+              "published": "2024-06-02T22:29:29Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2p57-rm9w-gvfp",
+              "aliases": [
+                "CVE-2024-29415"
+              ],
+              "summary": "ip SSRF improper categorization in isPublic",
+              "details": "The ip package through 2.0.1 for Node.js might allow SSRF because some IP addresses (such as 127.1, 01200034567, 012.1.2.3, 000:0:0000::01, and ::fFFf:127.0.0.1) are improperly categorized as globally routable via isPublic. NOTE: this issue exists because of an incomplete fix for CVE-2023-42282.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ip",
+                    "purl": "pkg:npm/ip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "2.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-2p57-rm9w-gvfp/GHSA-2p57-rm9w-gvfp.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29415"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/issues/150"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/pull/143"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/pull/144"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/indutny/node-ip"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-02T22:29:29Z",
+                "nvd_published_at": "2024-05-27T20:15:08Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-02-20T18:30:37Z",
+              "published": "2024-02-08T18:30:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-78xj-cgh5-2h22",
+              "aliases": [
+                "CVE-2023-42282"
+              ],
+              "summary": "NPM IP package incorrectly identifies some private IP addresses as public",
+              "details": "The `isPublic()` function in the NPM package `ip` doesn't correctly identify certain private IP addresses in uncommon formats such as `0x7F.1` as private. Instead, it reports them as public by returning `true`. This can lead to security issues such as Server-Side Request Forgery (SSRF) if `isPublic()` is used to protect sensitive code paths when passed user input. Versions 1.1.9 and 2.0.1 fix the issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ip",
+                    "purl": "pkg:npm/ip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-78xj-cgh5-2h22/GHSA-78xj-cgh5-2h22.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "ip",
+                    "purl": "pkg:npm/ip"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.1.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-78xj-cgh5-2h22/GHSA-78xj-cgh5-2h22.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-42282"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JoshGlazebrook/socks/issues/93#issue-2128357447"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/github/advisory-database/pull/3504#issuecomment-1937179999"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/pull/138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/commit/32f468f1245574785ec080705737a579be1223aa"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/node-ip/commit/6a3ada9b471b09d5f0f5be264911ab564bf67894"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cosmosofcyberspace.github.io/npm_ip_cve/npm_ip_cve.html"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/indutny/node-ip"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-918"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-09T15:03:18Z",
+                "nvd_published_at": "2024-02-08T17:15:10Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2p57-rm9w-gvfp"
+              ],
+              "aliases": [
+                "CVE-2024-29415",
+                "GHSA-2p57-rm9w-gvfp"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-78xj-cgh5-2h22"
+              ],
+              "aliases": [
+                "CVE-2023-42282",
+                "GHSA-78xj-cgh5-2h22"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "node-fetch",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:07:30Z",
+              "published": "2022-01-21T23:55:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r683-j2x4-v87g",
+              "aliases": [
+                "CVE-2022-0235"
+              ],
+              "summary": "node-fetch forwards secure headers to untrusted sites",
+              "details": "node-fetch forwards secure headers such as `authorization`, `www-authenticate`, `cookie`, \u0026 `cookie2` when redirecting to a untrusted site.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.1.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-r683-j2x4-v87g/GHSA-r683-j2x4-v87g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(node-fetch).fetch"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/01/GHSA-r683-j2x4-v87g/GHSA-r683-j2x4-v87g.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(node-fetch).fetch"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/pull/1449/commits/5c32f002fdd65b1c6a8f1e3620210813d45c7e60"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/pull/1453"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/1ef4b560a17e644a02a3bfdea7631ffeee578b35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/36e47e8a6406185921e4985dcbeff140d73eaa10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/5c32f002fdd65b1c6a8f1e3620210813d45c7e60"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/node-fetch/node-fetch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/d26ab655-38d6-48b3-be15-f9ad6b6ae6f7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00007.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-173",
+                  "CWE-200",
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-01-18T22:51:22Z",
+                "nvd_published_at": "2022-01-16T17:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:08:52Z",
+              "published": "2022-08-02T00:00:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vp56-6g26-6827",
+              "aliases": [
+                "CVE-2022-2596"
+              ],
+              "summary": "node-fetch Inefficient Regular Expression Complexity ",
+              "details": "[node-fetch](https://www.npmjs.com/package/node-fetch) is a light-weight module that brings window.fetch to node.js.\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in the `isOriginPotentiallyTrustworthy()` function in `referrer.js`, when processing a URL string with alternating letters and periods, such as `'http://' + 'a.a.'.repeat(i) + 'a'`.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.2.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/08/GHSA-vp56-6g26-6827/GHSA-vp56-6g26-6827.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-2596"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/pull/1611"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/28802387292baee467e042e168d92597b5bbbe3d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/node-fetch/node-fetch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/releases/tag/v3.2.10"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.dev/bounties/a7e6a136-0a4b-46c4-ad20-802f1dd60bf7"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-08-04T17:37:24Z",
+                "nvd_published_at": "2022-08-01T15:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:02:31Z",
+              "published": "2020-09-10T17:46:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-w7rc-rwvf-8q5r",
+              "aliases": [
+                "CVE-2020-15168"
+              ],
+              "summary": "The `size` option isn't honored after following a redirect in node-fetch",
+              "details": "### Impact\nNode Fetch did not honor the `size` option after following a redirect, which means that when a content size was over the limit, a `FetchError` would never get thrown and the process would end without failure.\n\nFor most people, this fix will have a little or no impact. However, if you are relying on node-fetch to gate files above a size, the impact could be significant, for example: If you don't double-check the size of the data after `fetch()` has completed, your JS thread could get tied up doing work on a large file (DoS) and/or cost you money in computing.\n\n### Patches\nWe released patched versions for both stable and beta channels:\n\n- For `v2`: 2.6.1\n- For `v3`: 3.0.0-beta.9\n\n### Workarounds\nNone, it is strongly recommended to update as soon as possible.\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [node-fetch](https://github.com/node-fetch/node-fetch/issues/new?assignees=\u0026labels=question\u0026template=support-or-usage.md\u0026title=Question%3A+)\n* Contact one of the core maintainers.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-w7rc-rwvf-8q5r/GHSA-w7rc-rwvf-8q5r.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-fetch",
+                    "purl": "pkg:npm/node-fetch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0-beta.1"
+                        },
+                        {
+                          "fixed": "3.0.0-beta.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 3.0.0-beta.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-w7rc-rwvf-8q5r/GHSA-w7rc-rwvf-8q5r.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/security/advisories/GHSA-w7rc-rwvf-8q5r"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15168"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/2358a6c2563d1730a0cdaccc197c611949f6a334"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/node-fetch/node-fetch/commit/eaff0094c4dfdd5b78711a8c4f1b61e33d282072"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/node-fetch/node-fetch"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-09-10T17:44:09Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-r683-j2x4-v87g"
+              ],
+              "aliases": [
+                "CVE-2022-0235",
+                "GHSA-r683-j2x4-v87g"
+              ],
+              "max_severity": "8.8"
+            },
+            {
+              "ids": [
+                "GHSA-vp56-6g26-6827"
+              ],
+              "aliases": [
+                "CVE-2022-2596",
+                "GHSA-vp56-6g26-6827"
+              ],
+              "max_severity": "5.9"
+            },
+            {
+              "ids": [
+                "GHSA-w7rc-rwvf-8q5r"
+              ],
+              "aliases": [
+                "CVE-2020-15168",
+                "GHSA-w7rc-rwvf-8q5r"
+              ],
+              "max_severity": "2.6"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "pac-resolver",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:05:07Z",
+              "published": "2021-09-02T17:10:06Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9j49-mfvp-vmhm",
+              "aliases": [
+                "CVE-2021-23406",
+                "SNYK-JAVA-ORGWEBJARSNPM-1568506",
+                "SNYK-JS-PACRESOLVER-1564857"
+              ],
+              "summary": "Code Injection in pac-resolver",
+              "details": "This affects the package pac-resolver before 5.0.0. This can occur when used with untrusted input, due to unsafe PAC file handling. **NOTE:** The fix for this vulnerability is applied in the node-degenerator library, a dependency written by the same maintainer.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "pac-resolver",
+                    "purl": "pkg:npm/pac-resolver"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-9j49-mfvp-vmhm/GHSA-9j49-mfvp-vmhm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "degenerator",
+                    "purl": "pkg:npm/degenerator"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/09/GHSA-9j49-mfvp-vmhm/GHSA-9j49-mfvp-vmhm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-23406"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-degenerator/commit/9d25bb67d957bc2e5425fea7bf7a58b3fc64ff9e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-degenerator/commit/ccc3445354135398b6eb1a04c7d27c13b833f2d5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TooTallNate/node-pac-resolver/releases/tag/5.0.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1568506"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-PACRESOLVER-1564857"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-25T19:28:31Z",
+                "nvd_published_at": "2021-08-24T08:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9j49-mfvp-vmhm"
+              ],
+              "aliases": [
+                "CVE-2021-23406",
+                "GHSA-9j49-mfvp-vmhm",
+                "SNYK-JAVA-ORGWEBJARSNPM-1568506",
+                "SNYK-JS-PACRESOLVER-1564857"
+              ],
+              "max_severity": "8.1"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tar",
+            "version": "",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:06:00Z",
+              "published": "2021-08-03T19:06:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-3jfq-g458-7qm9",
+              "aliases": [
+                "CVE-2021-32804"
+              ],
+              "summary": "Arbitrary File Creation/Overwrite due to insufficient absolute path sanitization",
+              "details": "### Impact\n\nArbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution\n\n`node-tar` aims to prevent extraction of absolute file paths by turning absolute paths into relative paths when the `preservePaths` flag is not set to `true`. This is achieved by stripping the absolute path root from any absolute file paths contained in a tar file. For example `/home/user/.bashrc` would turn into `home/user/.bashrc`. \n\nThis logic was insufficient when file paths contained repeated path roots such as `////home/user/.bashrc`. `node-tar` would only strip a single path root from such paths. When given an absolute file path with repeating path roots, the resulting path (e.g. `///home/user/.bashrc`) would still resolve to an absolute path, thus allowing arbitrary file creation and overwrite. \n\n### Patches\n\n3.2.2 || 4.4.14 || 5.0.6 || 6.1.1\n\nNOTE: an adjacent issue [CVE-2021-32803](https://github.com/npm/node-tar/security/advisories/GHSA-r628-mhmh-qjhw) affects this release level. Please ensure you update to the latest patch levels that address CVE-2021-32803 as well if this adjacent issue affects your `node-tar` use case.\n\n### Workarounds\n\nUsers may work around this vulnerability without upgrading by creating a custom `onentry` method which sanitizes the `entry.path` or a `filter` method which removes entries with absolute paths.\n\n```js\nconst path = require('path')\nconst tar = require('tar')\n\ntar.x({\n  file: 'archive.tgz',\n  // either add this function...\n  onentry: (entry) =\u003e {\n    if (path.isAbsolute(entry.path)) {\n      entry.path = sanitizeAbsolutePathSomehow(entry.path)\n      entry.absolute = path.resolve(entry.path)\n    }\n  },\n\n  // or this one\n  filter: (file, entry) =\u003e {\n    if (path.isAbsolute(entry.path)) {\n      return false\n    } else {\n      return true\n    }\n  }\n})\n```\n\nUsers are encouraged to upgrade to the latest patch versions, rather than attempt to sanitize tar input themselves.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-3jfq-g458-7qm9/GHSA-3jfq-g458-7qm9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.4.14"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-3jfq-g458-7qm9/GHSA-3jfq-g458-7qm9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.0.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-3jfq-g458-7qm9/GHSA-3jfq-g458-7qm9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.1.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-3jfq-g458-7qm9/GHSA-3jfq-g458-7qm9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/security/advisories/GHSA-3jfq-g458-7qm9"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32804"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/commit/1f036ca23f64a547bdd6c79c1a44bc62e8115da4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1770"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-03T19:06:15Z",
+                "nvd_published_at": "2021-08-03T19:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:06:23Z",
+              "published": "2021-08-31T16:05:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5955-9wpr-37jh",
+              "aliases": [
+                "CVE-2021-37713"
+              ],
+              "summary": "Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization",
+              "details": "### Impact\n\nArbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution\n\nnode-tar aims to guarantee that any file whose location would be outside of the extraction target directory is not extracted. This is, in part, accomplished by sanitizing absolute paths of entries within the archive, skipping archive entries that contain `..` path portions, and resolving the sanitized paths against the extraction target directory.\n\nThis logic was insufficient on Windows systems when extracting tar files that contained a path that was not an absolute path, but specified a drive letter different from the extraction target, such as `C:some\\path`.  If the drive letter does not match the extraction target, for example `D:\\extraction\\dir`, then the result of `path.resolve(extractionDirectory, entryPath)` would resolve against the current working directory on the `C:` drive, rather than the extraction target directory.\n\nAdditionally, a `..` portion of the path could occur immediately after the drive letter, such as `C:../foo`, and was not properly sanitized by the logic that checked for `..` within the normalized and split portions of the path.\n\nThis only affects users of `node-tar` on Windows systems.\n\n### Patches\n\n4.4.18 || 5.0.10 || 6.1.9\n\n### Workarounds\n\nThere is no reasonable way to work around this issue without performing the same path normalization procedures that node-tar now does.\n\nUsers are encouraged to upgrade to the latest patched versions of node-tar, rather than attempt to sanitize paths themselves.\n\n### Fix\n\nThe fixed versions strip path roots from all paths prior to being resolved against the extraction target folder, even if such paths are not \"absolute\".\n\nAdditionally, a path starting with a drive letter and then two dots, like `c:../`, would bypass the check for `..` path portions.  This is checked properly in the patched versions.\n\nFinally, a defense in depth check is added, such that if the `entry.absolute` is outside of the extraction taret, and we are not in preservePaths:true mode, a warning is raised on that entry, and it is skipped.  Currently, it is believed that this check is redundant, but it did catch some oversights in development.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.4.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-5955-9wpr-37jh/GHSA-5955-9wpr-37jh.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.0.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-5955-9wpr-37jh/GHSA-5955-9wpr-37jh.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.1.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-5955-9wpr-37jh/GHSA-5955-9wpr-37jh.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/security/advisories/GHSA-5955-9wpr-37jh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-37713"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/52b09e309bcae0c741a7eb79a17ef36e7828b946"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/82eac952f7c10765969ed464e549375854b26edc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/875a37e3ec031186fc6599f6807341f56c584598"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-31T16:02:32Z",
+                "nvd_published_at": "2021-08-31T17:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:06:23Z",
+              "published": "2021-08-31T16:05:27Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9r2w-394v-53qc",
+              "aliases": [
+                "CVE-2021-37701"
+              ],
+              "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+              "details": "### Impact\n\nArbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution\n\n`node-tar` aims to guarantee that any file whose location would be modified by a symbolic link is not extracted. This is, in part, achieved by ensuring that extracted directories are not symlinks. Additionally, in order to prevent unnecessary stat calls to determine whether a given path is a directory, paths are cached when directories are created.\n\nThis logic was insufficient when extracting tar files that contained both a directory and a symlink with the same name as the directory, where the symlink and directory names in the archive entry used backslashes as a path separator on posix systems. The cache checking logic used both `\\` and `/` characters as path separators, however `\\` is a valid filename character on posix systems.\n\nBy first creating a directory, and then replacing that directory with a symlink, it was thus possible to bypass node-tar symlink checks on directories, essentially allowing an untrusted tar file to symlink into an arbitrary location and subsequently extracting arbitrary files into that location, thus allowing arbitrary file creation and overwrite.\n\nAdditionally, a similar confusion could arise on case-insensitive filesystems.  If a tar archive contained a directory at `FOO`, followed by a symbolic link named `foo`, then on case-insensitive file systems, the creation of the symbolic link would remove the directory from the filesystem, but _not_ from the internal directory cache, as it would not be treated as a cache hit.  A subsequent file entry within the `FOO` directory would then be placed in the target of the symbolic link, thinking that the directory had already been created. \n\nThese issues were addressed in releases 4.4.16, 5.0.8 and 6.1.7.\n\nThe v3 branch of `node-tar` has been deprecated and did not receive patches for these issues. If you are still using a v3 release we recommend you update to a more recent version of `node-tar`. If this is not possible, a workaround is available below.\n\n### Patches\n\n4.4.16 || 5.0.8 || 6.1.7\n\n### Workarounds\n\nUsers may work around this vulnerability without upgrading by creating a custom filter method which prevents the extraction of symbolic links.\n\n```js\nconst tar = require('tar')\n\ntar.x({\n  file: 'archive.tgz',\n  filter: (file, entry) =\u003e {\n    if (entry.type === 'SymbolicLink') {\n      return false\n    } else {\n      return true\n    }\n  }\n})\n```\n\nUsers are encouraged to upgrade to the latest patched versions, rather than attempt to sanitize tar input themselves.\n\n### Fix\n\nThe problem is addressed in the following ways:\n\n1. All paths are normalized to use `/` as a path separator, replacing `\\` with `/` on Windows systems, and leaving `\\` intact in the path on posix systems.  This is performed in depth, at every level of the program where paths are consumed.\n2. Directory cache pruning is performed case-insensitively.  This _may_ result in undue cache misses on case-sensitive file systems, but the performance impact is negligible.\n\n#### Caveat\n\nNote that this means that the `entry` objects exposed in various parts of tar's API will now always use `/` as a path separator, even on Windows systems.  This is not expected to cause problems, as `/` is a valid path separator on Windows systems, but _may_ result in issues if `entry.path` is compared against a path string coming from some other API such as `fs.realpath()` or `path.resolve()`.\n\nUsers are encouraged to always normalize paths using a well-tested method such as `path.resolve()` before comparing paths to one another.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "4.4.16"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-9r2w-394v-53qc/GHSA-9r2w-394v-53qc.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-9r2w-394v-53qc/GHSA-9r2w-394v-53qc.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.1.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-9r2w-394v-53qc/GHSA-9r2w-394v-53qc.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/security/advisories/GHSA-9r2w-394v-53qc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-37701"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00023.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2021/dsa-5008"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-31T16:01:50Z",
+                "nvd_published_at": "2021-08-31T17:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-04-09T19:02:31Z",
+              "published": "2024-03-22T16:57:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-f5x3-32g6-xq36",
+              "aliases": [
+                "CVE-2024-28863"
+              ],
+              "summary": "Denial of service while parsing a tar file due to lack of folders count validation",
+              "details": "## Description: \nDuring some analysis today on npm's `node-tar` package I came across the folder creation process, Basicly if you provide node-tar with a path like this `./a/b/c/foo.txt` it would create every folder and sub-folder here a, b and c until it reaches the last folder to create `foo.txt`, In-this case I noticed that there's no validation at all on the amount of folders being created, that said we're actually able to CPU and memory consume the system running node-tar and even crash the nodejs client within few seconds of running it using a path with too many sub-folders inside\n\n## Steps To Reproduce:\nYou can reproduce this issue by downloading the tar file I provided in the resources and using node-tar to extract it, you should get the same behavior as the video\n\n## Proof Of Concept:\nHere's a [video](https://hackerone-us-west-2-production-attachments.s3.us-west-2.amazonaws.com/3i7uojw8s52psar6pg8zkdo4h9io?response-content-disposition=attachment%3B%20filename%3D%22tar-dos-poc.webm%22%3B%20filename%2A%3DUTF-8%27%27tar-dos-poc.webm\u0026response-content-type=video%2Fwebm\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIAQGK6FURQSWWGDXHA%2F20240312%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20240312T080103Z\u0026X-Amz-Expires=3600\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLXdlc3QtMiJHMEUCID3xYDc6emXVPOg8iVR5dVk0u3gguTPIDJ0OIE%2BKxj17AiEAi%2BGiay1gGMWhH%2F031fvMYnSsa8U7CnpZpxvFAYqNRwgqsQUIQBADGgwwMTM2MTkyNzQ4NDkiDAaj6OgUL3gg4hhLLCqOBUUrOgWSqaK%2FmxN6nKRvB4Who3LIyzswFKm9LV94GiSVFP3zXYA480voCmAHTg7eBL7%2BrYgV2RtXbhF4aCFMCN3qu7GeXkIdH7xwVMi9zXHkekviSKZ%2FsZtVVjn7RFqOCKhJl%2FCoiLQJuDuju%2FtfdTGZbEbGsPgKHoILYbRp81K51zeRL21okjsOehmypkZzq%2BoGrXIX0ynPOKujxw27uqdF4T%2BF9ynodq01vGgwgVBEjHojc4OKOfr1oW5b%2FtGVV59%2BOBVI1hqIKHRG0Ed4SWmp%2BLd1hazGuZPvp52szmegnOj5qr3ubppnKL242bX%2FuAnQKzKK0HpwolqXjsuEeFeM85lxhqHV%2B1BJqaqSHHDa0HUMLZistMRshRlntuchcFQCR6HBa2c8PSnhpVC31zMzvYMfKsI12h4HB6l%2FudrmNrvmH4LmNpi4dZFcio21DzKj%2FRjWmxjH7l8egDyG%2FIgPMY6Ls4IiN7aR1jijYTrBCgPUUHets3BFvqLzHtPFnG3B7%2FYRPnhCLu%2FgzvKN3F8l38KqeTNMHJaxkuhCvEjpFB2SJbi2QZqZZbLj3xASqXoogzbsyPp0Tzp0tH7EKDhPA7H6wwiZukXfFhhlYzP8on9fO2Ajz%2F%2BTDkDjbfWw4KNJ0cFeDsGrUspqQZb5TAKlUge7iOZEc2TZ5uagatSy9Mg08E4nImBSE5QUHDc7Daya1gyqrETMDZBBUHH2RFkGA9qMpEtNrtJ9G%2BPedz%2FpPY1hh9OCp9Pg1BrX97l3SfVzlAMRfNibhywq6qnE35rVnZi%2BEQ1UgBjs9jD%2FQrW49%2FaD0oUDojVeuFFryzRnQxDbKtYgonRcItTvLT5Y0xaK9P0u6H1197%2FMk3XxmjD9%2Fb%2BvBjqxAQWWkKiIxpC1oHEWK9Jt8UdJ39xszDBGpBqjB6Tvt5ePAXSyX8np%2FrBi%2BAPx06O0%2Ba7pU4NmH800EVXxxhgfj9nMw3CeoUIdxorVKtU2Mxw%2FLaAiPgxPS4rqkt65NF7eQYfegcSYDTm2Z%2BHPbz9HfCaVZ28Zqeko6sR%2F29ML4bguqVvHAM4mWPLNDXH33mjG%2BuzLi8e1BF7tNveg2X9G%2FRdcMkojwKYbu6xN3M6aX2alQg%3D%3D\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=1e8235d885f1d61529b7d6b23ea3a0780c300c91d86e925dd8310d5b661ddbe2) show-casing the exploit: \n\n## Impact\n\nDenial of service by crashing the nodejs client when attempting to parse a tar archive, make it run out of heap memory and consuming server CPU and memory resources\n\n## Report resources\n[payload.txt](https://hackerone-us-west-2-production-attachments.s3.us-west-2.amazonaws.com/1e83ayb5dd3350fvj3gst0mqixwk?response-content-disposition=attachment%3B%20filename%3D%22payload.txt%22%3B%20filename%2A%3DUTF-8%27%27payload.txt\u0026response-content-type=text%2Fplain\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIAQGK6FURQSWWGDXHA%2F20240312%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20240312T080103Z\u0026X-Amz-Expires=3600\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLXdlc3QtMiJHMEUCID3xYDc6emXVPOg8iVR5dVk0u3gguTPIDJ0OIE%2BKxj17AiEAi%2BGiay1gGMWhH%2F031fvMYnSsa8U7CnpZpxvFAYqNRwgqsQUIQBADGgwwMTM2MTkyNzQ4NDkiDAaj6OgUL3gg4hhLLCqOBUUrOgWSqaK%2FmxN6nKRvB4Who3LIyzswFKm9LV94GiSVFP3zXYA480voCmAHTg7eBL7%2BrYgV2RtXbhF4aCFMCN3qu7GeXkIdH7xwVMi9zXHkekviSKZ%2FsZtVVjn7RFqOCKhJl%2FCoiLQJuDuju%2FtfdTGZbEbGsPgKHoILYbRp81K51zeRL21okjsOehmypkZzq%2BoGrXIX0ynPOKujxw27uqdF4T%2BF9ynodq01vGgwgVBEjHojc4OKOfr1oW5b%2FtGVV59%2BOBVI1hqIKHRG0Ed4SWmp%2BLd1hazGuZPvp52szmegnOj5qr3ubppnKL242bX%2FuAnQKzKK0HpwolqXjsuEeFeM85lxhqHV%2B1BJqaqSHHDa0HUMLZistMRshRlntuchcFQCR6HBa2c8PSnhpVC31zMzvYMfKsI12h4HB6l%2FudrmNrvmH4LmNpi4dZFcio21DzKj%2FRjWmxjH7l8egDyG%2FIgPMY6Ls4IiN7aR1jijYTrBCgPUUHets3BFvqLzHtPFnG3B7%2FYRPnhCLu%2FgzvKN3F8l38KqeTNMHJaxkuhCvEjpFB2SJbi2QZqZZbLj3xASqXoogzbsyPp0Tzp0tH7EKDhPA7H6wwiZukXfFhhlYzP8on9fO2Ajz%2F%2BTDkDjbfWw4KNJ0cFeDsGrUspqQZb5TAKlUge7iOZEc2TZ5uagatSy9Mg08E4nImBSE5QUHDc7Daya1gyqrETMDZBBUHH2RFkGA9qMpEtNrtJ9G%2BPedz%2FpPY1hh9OCp9Pg1BrX97l3SfVzlAMRfNibhywq6qnE35rVnZi%2BEQ1UgBjs9jD%2FQrW49%2FaD0oUDojVeuFFryzRnQxDbKtYgonRcItTvLT5Y0xaK9P0u6H1197%2FMk3XxmjD9%2Fb%2BvBjqxAQWWkKiIxpC1oHEWK9Jt8UdJ39xszDBGpBqjB6Tvt5ePAXSyX8np%2FrBi%2BAPx06O0%2Ba7pU4NmH800EVXxxhgfj9nMw3CeoUIdxorVKtU2Mxw%2FLaAiPgxPS4rqkt65NF7eQYfegcSYDTm2Z%2BHPbz9HfCaVZ28Zqeko6sR%2F29ML4bguqVvHAM4mWPLNDXH33mjG%2BuzLi8e1BF7tNveg2X9G%2FRdcMkojwKYbu6xN3M6aX2alQg%3D%3D\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=bad9fe731f05a63a950f99828125653a8c1254750fe0ca7be882e89ecdd449ae)\n[archeive.tar.gz](https://hackerone-us-west-2-production-attachments.s3.us-west-2.amazonaws.com/ymkuh4xnfdcf1soeyi7jc2x4yt2i?response-content-disposition=attachment%3B%20filename%3D%22archive.tar.gz%22%3B%20filename%2A%3DUTF-8%27%27archive.tar.gz\u0026response-content-type=application%2Fx-tar\u0026X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=ASIAQGK6FURQSWWGDXHA%2F20240312%2Fus-west-2%2Fs3%2Faws4_request\u0026X-Amz-Date=20240312T080103Z\u0026X-Amz-Expires=3600\u0026X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDcaCXVzLXdlc3QtMiJHMEUCID3xYDc6emXVPOg8iVR5dVk0u3gguTPIDJ0OIE%2BKxj17AiEAi%2BGiay1gGMWhH%2F031fvMYnSsa8U7CnpZpxvFAYqNRwgqsQUIQBADGgwwMTM2MTkyNzQ4NDkiDAaj6OgUL3gg4hhLLCqOBUUrOgWSqaK%2FmxN6nKRvB4Who3LIyzswFKm9LV94GiSVFP3zXYA480voCmAHTg7eBL7%2BrYgV2RtXbhF4aCFMCN3qu7GeXkIdH7xwVMi9zXHkekviSKZ%2FsZtVVjn7RFqOCKhJl%2FCoiLQJuDuju%2FtfdTGZbEbGsPgKHoILYbRp81K51zeRL21okjsOehmypkZzq%2BoGrXIX0ynPOKujxw27uqdF4T%2BF9ynodq01vGgwgVBEjHojc4OKOfr1oW5b%2FtGVV59%2BOBVI1hqIKHRG0Ed4SWmp%2BLd1hazGuZPvp52szmegnOj5qr3ubppnKL242bX%2FuAnQKzKK0HpwolqXjsuEeFeM85lxhqHV%2B1BJqaqSHHDa0HUMLZistMRshRlntuchcFQCR6HBa2c8PSnhpVC31zMzvYMfKsI12h4HB6l%2FudrmNrvmH4LmNpi4dZFcio21DzKj%2FRjWmxjH7l8egDyG%2FIgPMY6Ls4IiN7aR1jijYTrBCgPUUHets3BFvqLzHtPFnG3B7%2FYRPnhCLu%2FgzvKN3F8l38KqeTNMHJaxkuhCvEjpFB2SJbi2QZqZZbLj3xASqXoogzbsyPp0Tzp0tH7EKDhPA7H6wwiZukXfFhhlYzP8on9fO2Ajz%2F%2BTDkDjbfWw4KNJ0cFeDsGrUspqQZb5TAKlUge7iOZEc2TZ5uagatSy9Mg08E4nImBSE5QUHDc7Daya1gyqrETMDZBBUHH2RFkGA9qMpEtNrtJ9G%2BPedz%2FpPY1hh9OCp9Pg1BrX97l3SfVzlAMRfNibhywq6qnE35rVnZi%2BEQ1UgBjs9jD%2FQrW49%2FaD0oUDojVeuFFryzRnQxDbKtYgonRcItTvLT5Y0xaK9P0u6H1197%2FMk3XxmjD9%2Fb%2BvBjqxAQWWkKiIxpC1oHEWK9Jt8UdJ39xszDBGpBqjB6Tvt5ePAXSyX8np%2FrBi%2BAPx06O0%2Ba7pU4NmH800EVXxxhgfj9nMw3CeoUIdxorVKtU2Mxw%2FLaAiPgxPS4rqkt65NF7eQYfegcSYDTm2Z%2BHPbz9HfCaVZ28Zqeko6sR%2F29ML4bguqVvHAM4mWPLNDXH33mjG%2BuzLi8e1BF7tNveg2X9G%2FRdcMkojwKYbu6xN3M6aX2alQg%3D%3D\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=5e2c0d4b4de40373ac0fe91908c2659141a6dd4ab850271cc26042a3885c82ea)\n\n## Note\nThis report was originally reported to GitHub bug bounty program, they asked me to report it to you a month ago",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "node-tar",
+                    "purl": "pkg:npm/node-tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-f5x3-32g6-xq36/GHSA-f5x3-32g6-xq36.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-f5x3-32g6-xq36/GHSA-f5x3-32g6-xq36.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/security/advisories/GHSA-f5x3-32g6-xq36"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-28863"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/fe8cd57da5686f8695415414bda49206a545f7f7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/node-tar"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-22T16:57:05Z",
+                "nvd_published_at": "2024-03-21T23:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:03Z",
+              "published": "2017-10-24T18:33:36Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gfjr-3jmm-4g9v",
+              "aliases": [
+                "CVE-2015-8860"
+              ],
+              "summary": "Symlink Arbitrary File Overwrite in tar",
+              "details": "Versions of `tar` prior to 2.0.0 are affected by an arbitrary file write vulnerability. The vulnerability occurs because `tar` does not verify that extracted symbolic links to not resolve to targets outside of the extraction root directory.\n\n\n\n## Recommendation\n\nUpdate to version 2.0.0 or later",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2017/10/GHSA-gfjr-3jmm-4g9v/GHSA-gfjr-3jmm-4g9v.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8860"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-gfjr-3jmm-4g9v"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/npm"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/releases/tag/v2.7.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/57"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2016/04/20/11"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:37:06Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-29T22:25:48Z",
+              "published": "2019-05-01T18:37:31Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j44m-qm6p-hp7m",
+              "aliases": [
+                "CVE-2018-20834"
+              ],
+              "summary": "Arbitrary File Overwrite in tar",
+              "details": "Versions of `tar` prior to 4.4.2 for 4.x and 2.2.2 for 2.x are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.\n\n\n## Recommendation\n\nFor tar 4.x, upgrade to version 4.4.2 or later.\nFor tar 2.x, upgrade to version 2.2.2 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "4.4.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/05/GHSA-j44m-qm6p-hp7m/GHSA-j44m-qm6p-hp7m.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/05/GHSA-j44m-qm6p-hp7m/GHSA-j44m-qm6p-hp7m.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Extract"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-20834"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/commit/7ecef07da6a9e72cc0c4d0c9c6a8e85b6b52395d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/commit/b0c58433c22f5e7fe8b1c76373f27e3f81dcd4c8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/344595"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2019:1821"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/node-tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/commits/v2.2.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/compare/58a8d43...a5f7779"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-05-01T18:35:41Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:06:23Z",
+              "published": "2021-08-31T16:05:17Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qq89-hq3f-393p",
+              "aliases": [
+                "CVE-2021-37712"
+              ],
+              "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links",
+              "details": "### Impact\nArbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution\n\nnode-tar aims to guarantee that any file whose location would be modified by a symbolic link is not extracted. This is, in part, achieved by ensuring that extracted directories are not symlinks. Additionally, in order to prevent unnecessary stat calls to determine whether a given path is a directory, paths are cached when directories are created.\n\nThis logic was insufficient when extracting tar files that contained two directories and a symlink with names containing unicode values that normalized to the same value. Additionally, on Windows systems, long path portions would resolve to the same file system entities as their 8.3 \"short path\" counterparts. A specially crafted tar archive could thus include directories with two forms of the path that resolve to the same file system entity, followed by a symbolic link with a name in the first form, lastly followed by a file using the second form. It led to bypassing node-tar symlink checks on directories, essentially allowing an untrusted tar file to symlink into an arbitrary location and subsequently extracting arbitrary files into that location, thus allowing arbitrary file creation and overwrite.\n\nThe v3 branch of `node-tar` has been deprecated and did not receive patches for these issues. If you are still using a v3 release we recommend you update to a more recent version of `node-tar`. If this is not possible, a workaround is available below.\n\n### Patches\n\n6.1.9 || 5.0.10 || 4.4.18\n\n### Workarounds\n\nUsers may work around this vulnerability without upgrading by creating a custom filter method which prevents the extraction of symbolic links.\n\n```js\nconst tar = require('tar')\n\ntar.x({\n  file: 'archive.tgz',\n  filter: (file, entry) =\u003e {\n    if (entry.type === 'SymbolicLink') {\n      return false\n    } else {\n      return true\n    }\n  }\n})\n```\n\nUsers are encouraged to upgrade to the latest patched versions, rather than attempt to sanitize tar input themselves.\n\n#### Fix\n\nThe problem is addressed in the following ways, when comparing paths in the directory cache and path reservation systems:\n\n1. The `String.normalize('NFKD')` method is used to first normalize all unicode to its maximally compatible and multi-code-point form.\n2. All slashes are normalized to `/` on Windows systems (on posix systems, `\\` is a valid filename character, and thus left intact).\n3. When a symbolic link is encountered on Windows systems, the entire directory cache is cleared.  Collisions related to use of 8.3 short names to replace directories with other (non-symlink) types of entries may make archives fail to extract properly, but will not result in arbitrary file writes.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "4.4.18"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-qq89-hq3f-393p/GHSA-qq89-hq3f-393p.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.0.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-qq89-hq3f-393p/GHSA-qq89-hq3f-393p.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.1.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-qq89-hq3f-393p/GHSA-qq89-hq3f-393p.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/security/advisories/GHSA-qq89-hq3f-393p"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-37712"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/1739408d3122af897caefd09662bce2ea477533b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/2f1bca027286c23e110b8dfc7efc10756fa3db5a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/3aaf19b2501bbddb145d92b3322c80dcaed3c35f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/b6162c7fafe797f856564ef37f4b82747f051455"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/bb93ba243746f705092905da1955ac3b0509ba1e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/d56f790bda9fea807dd80c5083f24771dbdd6eb1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/node-tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00023.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2021/dsa-5008"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-31T16:02:04Z",
+                "nvd_published_at": "2021-08-31T17:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:06:00Z",
+              "published": "2021-08-03T19:00:40Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r628-mhmh-qjhw",
+              "aliases": [
+                "CVE-2021-32803"
+              ],
+              "summary": "Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning",
+              "details": "### Impact\n\nArbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution\n\n`node-tar` aims to guarantee that any file whose location would be modified by a symbolic link is not extracted. This is, in part, achieved by ensuring that extracted directories are not symlinks.  Additionally, in order to prevent unnecessary `stat` calls to determine whether a given path is a directory, paths are cached when directories are created.\n\nThis logic was insufficient when extracting tar files that contained both a directory and a symlink with the same name as the directory. This order of operations resulted in the directory being created and added to the `node-tar` directory cache. When a directory is present in the directory cache, subsequent calls to mkdir for that directory are skipped. However, this is also where `node-tar` checks for symlinks occur.\n\nBy first creating a directory, and then replacing that directory with a symlink, it was thus possible to bypass `node-tar` symlink checks on directories, essentially allowing an untrusted tar file to symlink into an arbitrary location and subsequently extracting arbitrary files into that location, thus allowing arbitrary file creation and overwrite.\n\nThis issue was addressed in releases 3.2.3, 4.4.15, 5.0.7 and 6.1.2.\n\n### Patches\n\n3.2.3 || 4.4.15 || 5.0.7 || 6.1.2\n\n### Workarounds\n\nUsers may work around this vulnerability without upgrading by creating a custom `filter` method which prevents the extraction of symbolic links.\n\n```js\nconst tar = require('tar')\n\ntar.x({\n  file: 'archive.tgz',\n  filter: (file, entry) =\u003e {\n    if (entry.type === 'SymbolicLink') {\n      return false\n    } else {\n      return true\n    }\n  }\n})\n```\n\nUsers are encouraged to upgrade to the latest patch versions, rather than attempt to sanitize tar input themselves.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.2.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-r628-mhmh-qjhw/GHSA-r628-mhmh-qjhw.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.4.15"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-r628-mhmh-qjhw/GHSA-r628-mhmh-qjhw.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.0.0"
+                        },
+                        {
+                          "fixed": "5.0.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-r628-mhmh-qjhw/GHSA-r628-mhmh-qjhw.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "tar",
+                    "purl": "pkg:npm/tar"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/08/GHSA-r628-mhmh-qjhw/GHSA-r628-mhmh-qjhw.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(tar).Unpack"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/security/advisories/GHSA-r628-mhmh-qjhw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-32803"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/46fe35083e2676e31c4e0a81639dce6da7aaa356"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/5987d9a41f6bfbf1ddab1098e1fdcf1a5618f571"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/85d3a942b4064e4ff171f91696fced7975167349"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/isaacs/node-tar/commit/9dbdeb6df8e9dbd96fa9e84341b9d74734be6c20"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/node-tar/commit/9dbdeb6df8e9dbd96fa9e84341b9d74734be6c20"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/isaacs/node-tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1771"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/tar"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-23",
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-08-03T18:59:57Z",
+                "nvd_published_at": "2021-08-03T19:15:00Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-3jfq-g458-7qm9"
+              ],
+              "aliases": [
+                "CVE-2021-32804",
+                "GHSA-3jfq-g458-7qm9"
+              ],
+              "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "GHSA-5955-9wpr-37jh"
+              ],
+              "aliases": [
+                "CVE-2021-37713",
+                "GHSA-5955-9wpr-37jh"
+              ],
+              "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "GHSA-9r2w-394v-53qc"
+              ],
+              "aliases": [
+                "CVE-2021-37701",
+                "GHSA-9r2w-394v-53qc"
+              ],
+              "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "GHSA-f5x3-32g6-xq36"
+              ],
+              "aliases": [
+                "CVE-2024-28863",
+                "GHSA-f5x3-32g6-xq36"
+              ],
+              "max_severity": "6.5"
+            },
+            {
+              "ids": [
+                "GHSA-gfjr-3jmm-4g9v"
+              ],
+              "aliases": [
+                "CVE-2015-8860",
+                "GHSA-gfjr-3jmm-4g9v"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-j44m-qm6p-hp7m"
+              ],
+              "aliases": [
+                "CVE-2018-20834",
+                "GHSA-j44m-qm6p-hp7m"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-qq89-hq3f-393p"
+              ],
+              "aliases": [
+                "CVE-2021-37712",
+                "GHSA-qq89-hq3f-393p"
+              ],
+              "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "GHSA-r628-mhmh-qjhw"
+              ],
+              "aliases": [
+                "CVE-2021-32803",
+                "GHSA-r628-mhmh-qjhw"
+              ],
+              "max_severity": "8.2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

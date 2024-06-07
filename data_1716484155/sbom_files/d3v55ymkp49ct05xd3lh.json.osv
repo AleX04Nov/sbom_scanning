@@ -1,0 +1,220 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/data_1716484155/sbom_files/d3v55ymkp49ct05xd3lh.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "elliptic",
+            "version": "6.5.2",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:02:21Z",
+              "published": "2020-07-29T20:40:35Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vh7m-p724-62c2",
+              "aliases": [
+                "CVE-2020-13822"
+              ],
+              "summary": "Signature Malleabillity in elliptic",
+              "details": "The Elliptic package before version 6.5.3 for Node.js allows ECDSA signature malleability via variations in encoding, leading '\\0' bytes, or integer overflows. This could conceivably have a security-relevant impact if an application relied on a single canonical signature.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "elliptic",
+                    "purl": "pkg:npm/elliptic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.5.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-vh7m-p724-62c2/GHSA-vh7m-p724-62c2.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": [
+                      "(elliptic).ec"
+                    ]
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-13822"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/elliptic/issues/226"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/elliptic/commit/856fe4d99fe7b6200556e6400b3bf585b1721bec"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/indutny/elliptic"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://medium.com/@herman_10687/malleability-attack-why-it-matters-7b5f59fb99a4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/elliptic"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://yondon.blog/2019/01/01/how-not-to-use-ecdsa"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-190"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-07-29T20:39:31Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:03:28Z",
+              "published": "2021-03-08T16:06:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r9p9-mrjm-926w",
+              "aliases": [
+                "CVE-2020-28498",
+                "SNYK-JAVA-ORGWEBJARSNPM-1069836",
+                "SNYK-JS-ELLIPTIC-1064899"
+              ],
+              "summary": "Elliptic Uses a Broken or Risky Cryptographic Algorithm",
+              "details": "The npm package `elliptic` before version 6.5.4 are vulnerable to Cryptographic Issues via the secp256k1 implementation in elliptic/ec/key.js. There is no check to confirm that the public key point passed into the derive function actually exists on the secp256k1 curve. This results in the potential for the private key used in this implementation to be revealed after a number of ECDH operations are performed.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "elliptic",
+                    "purl": "pkg:npm/elliptic"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.5.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2021/03/GHSA-r9p9-mrjm-926w/GHSA-r9p9-mrjm-926w.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28498"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/elliptic/pull/244/commits"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/indutny/elliptic/commit/441b7428b0e8f6636c42118ad2aaa186d3c34c3f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/christianlundkvist/blog/blob/master/2020_05_26_secp256k1_twist_attacks/secp256k1_twist_attacks.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1069836"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/package/elliptic"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-327"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-03-08T16:02:43Z",
+                "nvd_published_at": "2021-02-02T19:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vh7m-p724-62c2"
+              ],
+              "aliases": [
+                "CVE-2020-13822",
+                "GHSA-vh7m-p724-62c2"
+              ],
+              "max_severity": "7.7"
+            },
+            {
+              "ids": [
+                "GHSA-r9p9-mrjm-926w"
+              ],
+              "aliases": [
+                "CVE-2020-28498",
+                "GHSA-r9p9-mrjm-926w",
+                "SNYK-JAVA-ORGWEBJARSNPM-1069836",
+                "SNYK-JS-ELLIPTIC-1064899"
+              ],
+              "max_severity": "6.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

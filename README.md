@@ -60,5 +60,9 @@ In order to use the SBOM analysis tools, you need to have a Software Bill of Mat
 
 You can also find a lot of other python files, which are named `XX_NUMBER.py`. These modules are used in the `main.py` . But the last three files (10, 11, 12) need to be run manually.
 
+# Jupyter Analysis Scripts
+
+You can find our jupyter analysis scripts in the `jupyter_scripts` folder. These scripts are used to analyze the data gathered by the main script. The script's name is `analysis.ipynb` and this script is used to analyze the data from the `sbom_list.csv` and `dependency_list.csv` files.
+
 # Misc
 In the `data_TIMESTAMP` folder, you can find all intermediate files created during the process. These files feed information between the modules and are indented for better human readability.

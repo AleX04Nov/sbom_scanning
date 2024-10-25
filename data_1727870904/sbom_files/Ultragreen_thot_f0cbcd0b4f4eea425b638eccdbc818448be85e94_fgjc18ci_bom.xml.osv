@@ -1,0 +1,1626 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/Ultragreen_thot_f0cbcd0b4f4eea425b638eccdbc818448be85e94_fgjc18ci_bom.xml",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "nokogiri",
+            "version": "1.15.2",
+            "ecosystem": "RubyGems"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-15T19:31:03Z",
+              "published": "2024-05-13T16:05:42Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r95h-9x8f-r3f7",
+              "related": [
+                "CGA-3p4r-wmm9-39fg",
+                "CGA-wj6m-hv3j-cqmr"
+              ],
+              "summary": "Nokogiri updates packaged libxml2 to v2.12.7 to resolve CVE-2024-34459",
+              "details": "## Summary\n\nNokogiri v1.16.5 upgrades its dependency libxml2 to [2.12.7](https://gitlab.gnome.org/GNOME/libxml2/-/releases/v2.12.7) from 2.12.6.\n\nlibxml2 v2.12.7 addresses CVE-2024-34459:\n\n- described at https://gitlab.gnome.org/GNOME/libxml2/-/issues/720\n- patched by https://gitlab.gnome.org/GNOME/libxml2/-/commit/2876ac53\n\n\n## Impact\n\nThere is no impact to Nokogiri users because the issue is present only in libxml2's `xmllint` tool which Nokogiri does not provide or expose.\n\n\n## Timeline\n\n- 2024-05-13 05:57 EDT, libxml2 2.12.7 release is announced\n- 2024-05-13 08:30 EDT, nokogiri maintainers begin triage\n- 2024-05-13 10:05 EDT, nokogiri [v1.16.5 is released](https://github.com/sparklemotion/nokogiri/releases/tag/v1.16.5) and this GHSA made public",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "nokogiri",
+                    "purl": "pkg:gem/nokogiri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.0.rc1",
+                    "1.10.1",
+                    "1.10.10",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.10.5",
+                    "1.10.6",
+                    "1.10.7",
+                    "1.10.8",
+                    "1.10.9",
+                    "1.11.0",
+                    "1.11.0.rc1",
+                    "1.11.0.rc2",
+                    "1.11.0.rc3",
+                    "1.11.0.rc4",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.11.5",
+                    "1.11.6",
+                    "1.11.7",
+                    "1.12.0",
+                    "1.12.0.rc1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.12.3",
+                    "1.12.4",
+                    "1.12.5",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.10",
+                    "1.13.2",
+                    "1.13.3",
+                    "1.13.4",
+                    "1.13.5",
+                    "1.13.6",
+                    "1.13.7",
+                    "1.13.8",
+                    "1.13.9",
+                    "1.14.0",
+                    "1.14.0.rc1",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.14.5",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.15.6",
+                    "1.16.0",
+                    "1.16.0.rc1",
+                    "1.16.1",
+                    "1.16.2",
+                    "1.16.3",
+                    "1.16.4",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.2.1",
+                    "1.4.3",
+                    "1.4.3.1",
+                    "1.4.4",
+                    "1.4.4.1",
+                    "1.4.4.2",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.0.beta.3",
+                    "1.5.0.beta.4",
+                    "1.5.1",
+                    "1.5.1.rc1",
+                    "1.5.10",
+                    "1.5.11",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.3.rc2",
+                    "1.5.3.rc3",
+                    "1.5.3.rc4",
+                    "1.5.3.rc5",
+                    "1.5.3.rc6",
+                    "1.5.4",
+                    "1.5.4.rc1",
+                    "1.5.4.rc2",
+                    "1.5.4.rc3",
+                    "1.5.5",
+                    "1.5.5.rc1",
+                    "1.5.5.rc2",
+                    "1.5.5.rc3",
+                    "1.5.6",
+                    "1.5.6.rc1",
+                    "1.5.6.rc2",
+                    "1.5.6.rc3",
+                    "1.5.7",
+                    "1.5.7.rc1",
+                    "1.5.7.rc2",
+                    "1.5.7.rc3",
+                    "1.5.8",
+                    "1.5.9",
+                    "1.6.0",
+                    "1.6.0.rc1",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.2.1",
+                    "1.6.2.rc1",
+                    "1.6.2.rc2",
+                    "1.6.2.rc3",
+                    "1.6.3",
+                    "1.6.3.1",
+                    "1.6.3.rc1",
+                    "1.6.3.rc2",
+                    "1.6.3.rc3",
+                    "1.6.4",
+                    "1.6.4.1",
+                    "1.6.5",
+                    "1.6.6.1",
+                    "1.6.6.2",
+                    "1.6.6.3",
+                    "1.6.6.4",
+                    "1.6.7",
+                    "1.6.7.1",
+                    "1.6.7.2",
+                    "1.6.7.rc2",
+                    "1.6.7.rc3",
+                    "1.6.7.rc4",
+                    "1.6.8",
+                    "1.6.8.1",
+                    "1.6.8.rc1",
+                    "1.6.8.rc2",
+                    "1.6.8.rc3",
+                    "1.7.0",
+                    "1.7.0.1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.9.0",
+                    "1.9.0.rc1",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-r95h-9x8f-r3f7/GHSA-r95h-9x8f-r3f7.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-r95h-9x8f-r3f7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/nokogiri/GHSA-r95h-9x8f-r3f7.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sparklemotion/nokogiri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sparklemotion/nokogiri/releases/tag/v1.16.5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.gnome.org/GNOME/libxml2/-/commit/2876ac53"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.gnome.org/GNOME/libxml2/-/issues/720"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-120"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-13T16:05:42Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2024-03-18T20:46:02Z",
+              "published": "2024-03-18T20:38:40Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vcc3-rw6f-jv97",
+              "summary": "Use-after-free in libxml2 via Nokogiri::XML::Reader",
+              "details": "### Summary\n\nNokogiri upgrades its dependency libxml2 as follows:\n- v1.15.6 upgrades libxml2 to 2.11.7 from 2.11.6\n- v1.16.2 upgrades libxml2 to 2.12.5 from 2.12.4\n\nlibxml2 v2.11.7 and v2.12.5 address the following vulnerability:\n\nCVE-2024-25062 / https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25062\n- described at https://gitlab.gnome.org/GNOME/libxml2/-/issues/604\n- patched by https://gitlab.gnome.org/GNOME/libxml2/-/commit/92721970\n\nPlease note that this advisory only applies to the CRuby implementation of Nokogiri, and only if\nthe packaged libraries are being used. If you've overridden defaults at installation time to use\nsystem libraries instead of packaged libraries, you should instead pay attention to your distro's\nlibxml2 release announcements.\n\nJRuby users are not affected.\n\n### Severity\n\nThe Nokogiri maintainers have evaluated this as **Moderate**.\n\n### Impact\n\nFrom the CVE description, this issue applies to the `xmlTextReader` module (which underlies\n`Nokogiri::XML::Reader`):\n\n\u003e When using the XML Reader interface with DTD validation and XInclude expansion enabled,\n\u003e processing crafted XML documents can lead to an xmlValidatePopElement use-after-free.\n\n### Mitigation\n\nUpgrade to Nokogiri `~\u003e 1.15.6` or `\u003e= 1.16.2`.\n\nUsers who are unable to upgrade Nokogiri may also choose a more complicated mitigation: compile\nand link Nokogiri against patched external libxml2 libraries which will also address these same\nissues.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "nokogiri",
+                    "purl": "pkg:gem/nokogiri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.0.rc1",
+                    "1.10.1",
+                    "1.10.10",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.10.5",
+                    "1.10.6",
+                    "1.10.7",
+                    "1.10.8",
+                    "1.10.9",
+                    "1.11.0",
+                    "1.11.0.rc1",
+                    "1.11.0.rc2",
+                    "1.11.0.rc3",
+                    "1.11.0.rc4",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.11.5",
+                    "1.11.6",
+                    "1.11.7",
+                    "1.12.0",
+                    "1.12.0.rc1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.12.3",
+                    "1.12.4",
+                    "1.12.5",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.10",
+                    "1.13.2",
+                    "1.13.3",
+                    "1.13.4",
+                    "1.13.5",
+                    "1.13.6",
+                    "1.13.7",
+                    "1.13.8",
+                    "1.13.9",
+                    "1.14.0",
+                    "1.14.0.rc1",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.14.5",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.2.1",
+                    "1.4.3",
+                    "1.4.3.1",
+                    "1.4.4",
+                    "1.4.4.1",
+                    "1.4.4.2",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.0.beta.3",
+                    "1.5.0.beta.4",
+                    "1.5.1",
+                    "1.5.1.rc1",
+                    "1.5.10",
+                    "1.5.11",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.3.rc2",
+                    "1.5.3.rc3",
+                    "1.5.3.rc4",
+                    "1.5.3.rc5",
+                    "1.5.3.rc6",
+                    "1.5.4",
+                    "1.5.4.rc1",
+                    "1.5.4.rc2",
+                    "1.5.4.rc3",
+                    "1.5.5",
+                    "1.5.5.rc1",
+                    "1.5.5.rc2",
+                    "1.5.5.rc3",
+                    "1.5.6",
+                    "1.5.6.rc1",
+                    "1.5.6.rc2",
+                    "1.5.6.rc3",
+                    "1.5.7",
+                    "1.5.7.rc1",
+                    "1.5.7.rc2",
+                    "1.5.7.rc3",
+                    "1.5.8",
+                    "1.5.9",
+                    "1.6.0",
+                    "1.6.0.rc1",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.2.1",
+                    "1.6.2.rc1",
+                    "1.6.2.rc2",
+                    "1.6.2.rc3",
+                    "1.6.3",
+                    "1.6.3.1",
+                    "1.6.3.rc1",
+                    "1.6.3.rc2",
+                    "1.6.3.rc3",
+                    "1.6.4",
+                    "1.6.4.1",
+                    "1.6.5",
+                    "1.6.6.1",
+                    "1.6.6.2",
+                    "1.6.6.3",
+                    "1.6.6.4",
+                    "1.6.7",
+                    "1.6.7.1",
+                    "1.6.7.2",
+                    "1.6.7.rc2",
+                    "1.6.7.rc3",
+                    "1.6.7.rc4",
+                    "1.6.8",
+                    "1.6.8.1",
+                    "1.6.8.rc1",
+                    "1.6.8.rc2",
+                    "1.6.8.rc3",
+                    "1.7.0",
+                    "1.7.0.1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.9.0",
+                    "1.9.0.rc1",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-vcc3-rw6f-jv97/GHSA-vcc3-rw6f-jv97.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "nokogiri",
+                    "purl": "pkg:gem/nokogiri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.16.0"
+                        },
+                        {
+                          "fixed": "1.16.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.16.0",
+                    "1.16.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-vcc3-rw6f-jv97/GHSA-vcc3-rw6f-jv97.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-xc9x-jj77-9p9j"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/nokogiri/GHSA-xc9x-jj77-9p9j.yml"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sparklemotion/nokogiri"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-416"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-18T20:38:40Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-03-19T18:46:26Z",
+              "published": "2024-02-05T20:22:56Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xc9x-jj77-9p9j",
+              "related": [
+                "CGA-7369-wc68-4626"
+              ],
+              "summary": "Nokogiri update packaged libxml2 to v2.12.5 to resolve CVE-2024-25062",
+              "details": "## Summary\n\nNokogiri upgrades its dependency libxml2 as follows:\n- Nokogiri v1.15.6 upgrades libxml2 to [2.11.7](https://gitlab.gnome.org/GNOME/libxml2/-/releases/v2.11.7) from 2.11.6\n- Nokogiri v1.16.2 upgrades libxml2 to [2.12.5](https://gitlab.gnome.org/GNOME/libxml2/-/releases/v2.12.5) from 2.12.4\n\nlibxml2 v2.11.7 and v2.12.5 address the following vulnerability:\n\n- CVE-2024-25062 / https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25062\n  - described at https://gitlab.gnome.org/GNOME/libxml2/-/issues/604\n  - patched by https://gitlab.gnome.org/GNOME/libxml2/-/commit/92721970\n\nPlease note that this advisory only applies to the CRuby implementation of Nokogiri, and only if the _packaged_ libraries are being used. If you've overridden defaults at installation time to use _system_ libraries instead of packaged libraries, you should instead pay attention to your distro's `libxml2` release announcements.\n\nJRuby users are not affected.\n\n## Mitigation\n\nUpgrade to Nokogiri `~\u003e 1.15.6` or `\u003e= 1.16.2`.\n\nUsers who are unable to upgrade Nokogiri may also choose a more complicated mitigation: compile\nand link Nokogiri against patched external libxml2 libraries which will also address these same\nissues.\n\n## Impact\n\nFrom the CVE description, this issue applies to the `xmlTextReader` module (which underlies `Nokogiri::XML::Reader`):\n\n\u003e When using the XML Reader interface with DTD validation and XInclude expansion enabled, processing crafted XML documents can lead to an xmlValidatePopElement use-after-free.\n\n## Timeline\n\n- 2024-02-04 10:35 EST - this GHSA is drafted without complete details about when the upstream issue was introduced; a request is made of libxml2 maintainers for more detailed information\n- 2024-02-04 10:48 EST - updated GHSA to reflect libxml2 maintainers' confirmation of affected versions\n- 2024-02-04 11:54 EST - v1.16.2 published, this GHSA made public\n- 2024-02-05 10:18 EST - updated with MITRE link to the CVE information, and updated \"Impact\" section\n- 2024-03-16 09:03 EDT - v1.15.6 published (see discussion at https://github.com/sparklemotion/nokogiri/discussions/3146), updated mitigation information\n- 2024-03-18 22:12 EDT - update \"affected products\" range with v1.15.6 information",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "nokogiri",
+                    "purl": "pkg:gem/nokogiri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.16.0"
+                        },
+                        {
+                          "fixed": "1.16.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.16.0",
+                    "1.16.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-xc9x-jj77-9p9j/GHSA-xc9x-jj77-9p9j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "nokogiri",
+                    "purl": "pkg:gem/nokogiri"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.0.rc1",
+                    "1.10.1",
+                    "1.10.10",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.10.5",
+                    "1.10.6",
+                    "1.10.7",
+                    "1.10.8",
+                    "1.10.9",
+                    "1.11.0",
+                    "1.11.0.rc1",
+                    "1.11.0.rc2",
+                    "1.11.0.rc3",
+                    "1.11.0.rc4",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.11.5",
+                    "1.11.6",
+                    "1.11.7",
+                    "1.12.0",
+                    "1.12.0.rc1",
+                    "1.12.1",
+                    "1.12.2",
+                    "1.12.3",
+                    "1.12.4",
+                    "1.12.5",
+                    "1.13.0",
+                    "1.13.1",
+                    "1.13.10",
+                    "1.13.2",
+                    "1.13.3",
+                    "1.13.4",
+                    "1.13.5",
+                    "1.13.6",
+                    "1.13.7",
+                    "1.13.8",
+                    "1.13.9",
+                    "1.14.0",
+                    "1.14.0.rc1",
+                    "1.14.1",
+                    "1.14.2",
+                    "1.14.3",
+                    "1.14.4",
+                    "1.14.5",
+                    "1.15.0",
+                    "1.15.1",
+                    "1.15.2",
+                    "1.15.3",
+                    "1.15.4",
+                    "1.15.5",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.2.1",
+                    "1.4.3",
+                    "1.4.3.1",
+                    "1.4.4",
+                    "1.4.4.1",
+                    "1.4.4.2",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.4.7",
+                    "1.5.0",
+                    "1.5.0.beta.1",
+                    "1.5.0.beta.2",
+                    "1.5.0.beta.3",
+                    "1.5.0.beta.4",
+                    "1.5.1",
+                    "1.5.1.rc1",
+                    "1.5.10",
+                    "1.5.11",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.3.rc2",
+                    "1.5.3.rc3",
+                    "1.5.3.rc4",
+                    "1.5.3.rc5",
+                    "1.5.3.rc6",
+                    "1.5.4",
+                    "1.5.4.rc1",
+                    "1.5.4.rc2",
+                    "1.5.4.rc3",
+                    "1.5.5",
+                    "1.5.5.rc1",
+                    "1.5.5.rc2",
+                    "1.5.5.rc3",
+                    "1.5.6",
+                    "1.5.6.rc1",
+                    "1.5.6.rc2",
+                    "1.5.6.rc3",
+                    "1.5.7",
+                    "1.5.7.rc1",
+                    "1.5.7.rc2",
+                    "1.5.7.rc3",
+                    "1.5.8",
+                    "1.5.9",
+                    "1.6.0",
+                    "1.6.0.rc1",
+                    "1.6.1",
+                    "1.6.2",
+                    "1.6.2.1",
+                    "1.6.2.rc1",
+                    "1.6.2.rc2",
+                    "1.6.2.rc3",
+                    "1.6.3",
+                    "1.6.3.1",
+                    "1.6.3.rc1",
+                    "1.6.3.rc2",
+                    "1.6.3.rc3",
+                    "1.6.4",
+                    "1.6.4.1",
+                    "1.6.5",
+                    "1.6.6.1",
+                    "1.6.6.2",
+                    "1.6.6.3",
+                    "1.6.6.4",
+                    "1.6.7",
+                    "1.6.7.1",
+                    "1.6.7.2",
+                    "1.6.7.rc2",
+                    "1.6.7.rc3",
+                    "1.6.7.rc4",
+                    "1.6.8",
+                    "1.6.8.1",
+                    "1.6.8.rc1",
+                    "1.6.8.rc2",
+                    "1.6.8.rc3",
+                    "1.7.0",
+                    "1.7.0.1",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.8.4",
+                    "1.8.5",
+                    "1.9.0",
+                    "1.9.0.rc1",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-xc9x-jj77-9p9j/GHSA-xc9x-jj77-9p9j.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-xc9x-jj77-9p9j"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-25062"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sparklemotion/nokogiri"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sparklemotion/nokogiri/discussions/3146"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.gnome.org/GNOME/libxml2/-/commit/92721970"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.gnome.org/GNOME/libxml2/-/issues/604"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.gnome.org/GNOME/libxml2/-/releases/v2.12.5"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-416"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-05T20:22:56Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-r95h-9x8f-r3f7"
+              ],
+              "aliases": [
+                "GHSA-r95h-9x8f-r3f7"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-vcc3-rw6f-jv97"
+              ],
+              "aliases": [
+                "GHSA-vcc3-rw6f-jv97"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-xc9x-jj77-9p9j"
+              ],
+              "aliases": [
+                "GHSA-xc9x-jj77-9p9j"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rexml",
+            "version": "3.2.5",
+            "ecosystem": "RubyGems"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-08-02T01:56:43Z",
+              "published": "2024-07-16T19:49:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4xqq-m2hx-25v8",
+              "aliases": [
+                "CVE-2024-35176",
+                "CVE-2024-39908",
+                "CVE-2024-41123",
+                "GHSA-r55c-59qm-vjw6",
+                "GHSA-vg3r-rm7w-2xgh"
+              ],
+              "related": [
+                "CGA-4rmx-pppm-689j",
+                "CGA-66f6-mmvj-jccw",
+                "CGA-h73m-7grg-q896",
+                "CGA-hwpc-r76r-hf4x",
+                "CGA-m89m-48x8-362j",
+                "CGA-px8g-qqwm-7v22",
+                "CGA-q3cr-cm78-x782"
+              ],
+              "summary": "REXML denial of service vulnerability",
+              "details": "### Impact\n\nThe REXML gem before 3.3.1 has some DoS vulnerabilities when it parses an XML that has many specific characters such as `\u003c`, `0` and `%\u003e`.\n\nIf you need to parse untrusted XMLs, you may be impacted to these vulnerabilities.\n\n### Patches\n\nThe REXML gem 3.3.2 or later include the patches to fix these vulnerabilities.\n\n### Workarounds\n\nDon't parse untrusted XMLs.\n\n### References\n\n* https://github.com/ruby/rexml/security/advisories/GHSA-vg3r-rm7w-2xgh : This is a similar vulnerability\n* https://www.ruby-lang.org/en/news/2024/07/16/dos-rexml-cve-2024-39908/",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rexml",
+                    "purl": "pkg:gem/rexml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.7.3",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.1.9.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.8",
+                    "3.2.9",
+                    "3.3.0",
+                    "3.3.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-4xqq-m2hx-25v8/GHSA-4xqq-m2hx-25v8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-4xqq-m2hx-25v8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39908"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rexml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/releases/tag/v3.3.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rexml/CVE-2024-39908.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2024/07/16/dos-rexml-cve-2024-39908"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-16T19:49:15Z",
+                "nvd_published_at": "2024-07-16T18:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-09-05T18:46:20Z",
+              "published": "2024-08-02T12:33:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5866-49gr-22v4",
+              "aliases": [
+                "CVE-2024-41946"
+              ],
+              "related": [
+                "CGA-3xr5-pwx9-qch9",
+                "CGA-crvw-4882-w64x",
+                "CGA-q9f2-m4xr-h5pc",
+                "CGA-v98j-mcmh-g897",
+                "CGA-vh8v-w8jp-44vq",
+                "CGA-w364-9xg9-2vmf"
+              ],
+              "summary": "REXML DoS vulnerability",
+              "details": "### Impact\n\nThe REXML gem before 3.3.2 has a DoS vulnerability when it parses an XML that has many entity expansions with SAX2 or pull parser API.\n\nIf you need to parse untrusted XMLs with SAX2 or pull parser API, you may be impacted to this vulnerability.\n\n### Patches\n\nThe REXML gem 3.3.3 or later include the patch to fix the vulnerability.\n\n### Workarounds\n\nDon't parse untrusted XMLs with SAX2 or pull parser API.\n\n### References\n\n* https://www.ruby-lang.org/en/news/2008/08/23/dos-vulnerability-in-rexml/ : This is a similar vulnerability\n* https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41946/: An announce on www.ruby-lang.org",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rexml",
+                    "purl": "pkg:gem/rexml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.7.3",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.1.9.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.8",
+                    "3.2.9",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-5866-49gr-22v4/GHSA-5866-49gr-22v4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-5866-49gr-22v4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41946"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/commit/033d1909a8f259d5a7c53681bcaf14f13bcf0368"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rexml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rexml/CVE-2024-41946.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2008/08/23/dos-vulnerability-in-rexml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41946"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-02T12:33:15Z",
+                "nvd_published_at": "2024-08-01T15:15:14Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-09-05T18:46:04Z",
+              "published": "2024-08-01T22:05:10Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r55c-59qm-vjw6",
+              "aliases": [
+                "CVE-2024-35176",
+                "CVE-2024-39908",
+                "CVE-2024-41123",
+                "GHSA-4xqq-m2hx-25v8",
+                "GHSA-vg3r-rm7w-2xgh"
+              ],
+              "related": [
+                "CGA-24jw-g87x-3mgj",
+                "CGA-6h5q-rgv8-vx5g",
+                "CGA-gvjv-4f2q-v69c",
+                "CGA-jxrj-xh37-f583",
+                "CGA-rf7h-9459-7pw9",
+                "CGA-vv4v-283v-49f3"
+              ],
+              "summary": "REXML DoS vulnerability",
+              "details": "### Impact\n\nThe REXML gem before 3.3.2 has some DoS vulnerabilities when it parses an XML that has many specific characters such as whitespace character, `\u003e]` and `]\u003e`.\n\nIf you need to parse untrusted XMLs, you may be impacted to these vulnerabilities.\n\n### Patches\n\nThe REXML gem 3.3.3 or later include the patches to fix these vulnerabilities.\n\n### Workarounds\n\nDon't parse untrusted XMLs.\n\n### References\n\n* https://github.com/ruby/rexml/security/advisories/GHSA-vg3r-rm7w-2xgh : This is a similar vulnerability\n* https://github.com/ruby/rexml/security/advisories/GHSA-4xqq-m2hx-25v8 : This is a similar vulnerability\n* https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41123/: An announce on www.ruby-lang.org",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rexml",
+                    "purl": "pkg:gem/rexml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.7.3",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.1.9.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.8",
+                    "3.2.9",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-r55c-59qm-vjw6/GHSA-r55c-59qm-vjw6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-4xqq-m2hx-25v8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-r55c-59qm-vjw6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-vg3r-rm7w-2xgh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41123"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rexml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rexml/CVE-2024-41123.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2024/08/01/dos-rexml-cve-2024-41123"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-01T22:05:10Z",
+                "nvd_published_at": "2024-08-01T15:15:13Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-08-02T01:56:43Z",
+              "published": "2024-05-16T17:44:04Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vg3r-rm7w-2xgh",
+              "aliases": [
+                "CVE-2024-35176",
+                "CVE-2024-39908",
+                "CVE-2024-41123",
+                "GHSA-4xqq-m2hx-25v8",
+                "GHSA-r55c-59qm-vjw6"
+              ],
+              "related": [
+                "CGA-2237-mq7r-x77x",
+                "CGA-2583-v855-mmq2",
+                "CGA-59pv-c77v-v47g",
+                "CGA-98r3-6hf8-2c4m",
+                "CGA-h6gp-72jh-xc9h",
+                "CGA-ppg3-gjfr-68f3",
+                "CGA-w995-jp2x-p8gc",
+                "CGA-wxwx-mfr5-9j7c"
+              ],
+              "summary": "REXML contains a denial of service vulnerability",
+              "details": "### Impact\n\nThe REXML gem before 3.2.6 has a DoS vulnerability when it parses an XML that has many `\u003c`s in an attribute value.\n\nIf you need to parse untrusted XMLs, you may be impacted to this vulnerability.\n\n### Patches\n\nThe REXML gem 3.2.7 or later include the patch to fix this vulnerability.\n\n### Workarounds\n\nDon't parse untrusted XMLs.\n\n### References\n\n* https://www.ruby-lang.org/en/news/2024/05/16/dos-rexml-cve-2024-35176/",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rexml",
+                    "purl": "pkg:gem/rexml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.2.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.7.3",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.1.9.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.2.6"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-vg3r-rm7w-2xgh/GHSA-vg3r-rm7w-2xgh.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-vg3r-rm7w-2xgh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35176"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/commit/4325835f92f3f142ebd91a3fdba4e1f1ab7f1cfb"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rexml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2024/05/16/dos-rexml-cve-2024-35176"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-16T17:44:04Z",
+                "nvd_published_at": "2024-05-16T16:15:09Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-08-28T20:21:45Z",
+              "published": "2024-08-22T16:40:46Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vmwr-mc7x-5vc3",
+              "aliases": [
+                "CVE-2024-43398"
+              ],
+              "related": [
+                "CGA-24v2-cqfr-9j2w",
+                "CGA-7wc8-57gp-j287",
+                "CGA-f9jf-pqxp-9c4f",
+                "CGA-fwcc-7mjx-4c8j",
+                "CGA-g699-9xhv-rx9c",
+                "CGA-m429-99wf-94v2",
+                "CGA-pg34-92v8-xj59"
+              ],
+              "summary": "REXML denial of service vulnerability",
+              "details": "### Impact\n\nThe REXML gem before 3.3.6 has a DoS vulnerability when it parses an XML that has many deep elements that have same local name attributes.\n\nIf you need to parse untrusted XMLs with tree parser API like `REXML::Document.new`, you may be impacted to this vulnerability. If you use other parser APIs such as stream parser API and SAX2 parser API, this vulnerability is not affected.\n\n### Patches\n\nThe REXML gem 3.3.6 or later include the patch to fix the vulnerability.\n\n### Workarounds\n\nDon't parse untrusted XMLs with tree parser API.\n\n### References\n\n* https://www.ruby-lang.org/en/news/2024/08/22/dos-rexml-cve-2024-43398/ : An announce on www.ruby-lang.org\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "rexml",
+                    "purl": "pkg:gem/rexml"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.3.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.1.7.3",
+                    "3.1.8",
+                    "3.1.9",
+                    "3.1.9.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.2.3",
+                    "3.2.4",
+                    "3.2.5",
+                    "3.2.6",
+                    "3.2.7",
+                    "3.2.8",
+                    "3.2.9",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.3",
+                    "3.3.4",
+                    "3.3.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-vmwr-mc7x-5vc3/GHSA-vmwr-mc7x-5vc3.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/security/advisories/GHSA-vmwr-mc7x-5vc3"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43398"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/commit/7cb5eaeb221c322b9912f724183294d8ce96bae3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/ruby/rexml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ruby/rexml/releases/tag/v3.3.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/rexml/CVE-2024-43398.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.ruby-lang.org/en/news/2024/08/22/dos-rexml-cve-2024-43398"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-776"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-22T16:40:46Z",
+                "nvd_published_at": "2024-08-22T15:15:16Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4xqq-m2hx-25v8",
+                "GHSA-r55c-59qm-vjw6",
+                "GHSA-vg3r-rm7w-2xgh"
+              ],
+              "aliases": [
+                "CVE-2024-35176",
+                "CVE-2024-39908",
+                "CVE-2024-41123",
+                "GHSA-4xqq-m2hx-25v8",
+                "GHSA-r55c-59qm-vjw6",
+                "GHSA-vg3r-rm7w-2xgh"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-5866-49gr-22v4"
+              ],
+              "aliases": [
+                "CVE-2024-41946",
+                "GHSA-5866-49gr-22v4"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-vmwr-mc7x-5vc3"
+              ],
+              "aliases": [
+                "CVE-2024-43398",
+                "GHSA-vmwr-mc7x-5vc3"
+              ],
+              "max_severity": "8.2"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "yard",
+            "version": "0.9.34",
+            "ecosystem": "RubyGems"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-25T17:20:03Z",
+              "published": "2024-02-28T18:57:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8mq4-9jjh-9xrc",
+              "aliases": [
+                "CVE-2024-27285"
+              ],
+              "summary": "YARD's default template vulnerable to Cross-site Scripting in generated frames.html",
+              "details": "### Summary\nThe \"frames.html\" file within the Yard Doc's generated documentation is vulnerable to Cross-Site Scripting (XSS) attacks due to inadequate sanitization of user input within the JavaScript segment of the \"frames.erb\" template file.\n\n### Details\nThe vulnerability stems from mishandling user-controlled data retrieved from the URL hash in the embedded JavaScript code within the \"frames.erb\" template file. Specifically, the script lacks proper sanitization of the hash data before utilizing it to establish the top-level window's location. This oversight permits an attacker to inject malicious JavaScript payloads through carefully crafted URLs.\n\nSnippet from \"frames.erb\":\n(v0.9.34)\n```erb\n\u003cscript type=\"text/javascript\"\u003e\n  var match = unescape(window.location.hash).match(/^#!(.+)/);\n  var name = match ? match[1] : '\u003c%= url_for_main %\u003e';\n  name = name.replace(/^(\\w+):\\/\\//, '').replace(/^\\/\\//, '');\n  window.top.location = name;\n\u003c/script\u003e\n```\n\n(v0.9.35)\n```erb\n\u003cscript type=\"text/javascript\"\u003e\n  var match = decodeURIComponent(window.location.hash).match(/^#!(.+)/);\n  var name = match ? match[1] : '\u003c%= url_for_main %\u003e';\n  name = name.replace(/^((\\w*):)?[\\/\\\\]*/gm, '').trim();\n  window.top.location.replace(name)\n\u003c/script\u003e\n```\n\n### PoC (Proof of Concept)\nTo exploit this vulnerability:\n1. Gain access to the generated Yard Doc.\n2. Locate and access the \"frames.html\" file.\n3. Construct a URL containing the malicious payload in the hash segment, for instance: `#!javascript:xss` for v0.9.34, and `#:javascript:xss` for v0.9.35\n\n### Impact\nThis XSS vulnerability presents a substantial threat by enabling an attacker to execute arbitrary JavaScript code within the user's session context. Potential ramifications include session hijacking, theft of sensitive data, unauthorized access to user accounts, and defacement of websites. Any user visiting the compromised page is susceptible to exploitation. It is critical to promptly address this vulnerability to mitigate potential harm to users and preserve the application's integrity.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "yard",
+                    "purl": "pkg:gem/yard"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.9.36"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.3.2",
+                    "0.2.3.3",
+                    "0.2.3.4",
+                    "0.2.3.5",
+                    "0.4.0",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.1p1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.5.6",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.6.7",
+                    "0.6.8",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.2.1",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.4.1",
+                    "0.8.5",
+                    "0.8.5.1",
+                    "0.8.5.2",
+                    "0.8.6",
+                    "0.8.6.1",
+                    "0.8.6.2",
+                    "0.8.7",
+                    "0.8.7.1",
+                    "0.8.7.2",
+                    "0.8.7.3",
+                    "0.8.7.4",
+                    "0.8.7.5",
+                    "0.8.7.6",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.12",
+                    "0.9.13",
+                    "0.9.14",
+                    "0.9.15",
+                    "0.9.16",
+                    "0.9.17",
+                    "0.9.18",
+                    "0.9.19",
+                    "0.9.2",
+                    "0.9.20",
+                    "0.9.21",
+                    "0.9.22",
+                    "0.9.23",
+                    "0.9.24",
+                    "0.9.25",
+                    "0.9.26",
+                    "0.9.27",
+                    "0.9.28",
+                    "0.9.29",
+                    "0.9.3",
+                    "0.9.30",
+                    "0.9.31",
+                    "0.9.32",
+                    "0.9.33",
+                    "0.9.34",
+                    "0.9.35",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-8mq4-9jjh-9xrc/GHSA-8mq4-9jjh-9xrc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lsegal/yard/security/advisories/GHSA-8mq4-9jjh-9xrc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27285"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lsegal/yard/pull/1538"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lsegal/yard/commit/1fcb2d8b316caf8779cfdcf910715e9ab583f0aa"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/lsegal/yard/commit/2069e2bf08293bda2fcc78f7d0698af6354054be"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-8mq4-9jjh-9xrc"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/lsegal/yard"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/yard/CVE-2024-27285.yml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/03/msg00006.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MR3Z2E2UIZZ7YOR7R645EVSBGWMB2RGA"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-28T18:57:19Z",
+                "nvd_published_at": "2024-02-28T20:15:41Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8mq4-9jjh-9xrc"
+              ],
+              "aliases": [
+                "CVE-2024-27285",
+                "GHSA-8mq4-9jjh-9xrc"
+              ],
+              "max_severity": "5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

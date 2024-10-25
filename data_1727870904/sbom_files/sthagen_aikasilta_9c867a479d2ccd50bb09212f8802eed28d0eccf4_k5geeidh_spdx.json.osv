@@ -1,0 +1,2713 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/sthagen_aikasilta_9c867a479d2ccd50bb09212f8802eed28d0eccf4_k5geeidh_spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "jinja2",
+            "version": "3.1.2",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-02-16T08:18:43Z",
+              "published": "2024-01-11T15:20:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h5c8-rqwp-cp95",
+              "aliases": [
+                "CVE-2024-22195"
+              ],
+              "related": [
+                "CGA-f27q-c9f6-2v7h",
+                "CGA-hgvf-wwm9-3343"
+              ],
+              "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+              "details": "The `xmlattr` filter in affected versions of Jinja accepts keys containing spaces. XML/HTML attributes cannot contain spaces, as each would then be interpreted as a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. Note that accepting keys as user input is not common or a particularly intended use case of the `xmlattr` filter, and an application doing so should already be verifying what keys are provided regardless of this fix.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.1.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.10",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.11.3",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6",
+                    "3.0.0",
+                    "3.0.0a1",
+                    "3.0.0rc1",
+                    "3.0.0rc2",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-h5c8-rqwp-cp95/GHSA-h5c8-rqwp-cp95.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h5c8-rqwp-cp95"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22195"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/commit/716795349a41d4983a9a4771f7d883c96ea17be7"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/jinja"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/releases/tag/3.1.3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00010.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/5XCWZD464AJJJUBOO7CMPXQ4ROBC6JX2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DELCVUUYX75I5K4Q5WMJG4MUZJA6VAIP"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/O7YWRBX6JQCWC2XXCTZ55C7DPMGICCN3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-11T15:20:48Z",
+                "nvd_published_at": "2024-01-11T03:15:11Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-10T19:01:19Z",
+              "published": "2024-05-06T14:20:59Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h75v-3vvj-5mfj",
+              "aliases": [
+                "CVE-2024-34064"
+              ],
+              "related": [
+                "CGA-3h69-x6cf-g5c9",
+                "CGA-8hp4-mxq9-cfjp",
+                "CGA-j4qq-j23r-522f",
+                "CGA-ph4r-hmw2-vp9r",
+                "CGA-rwrm-vm7r-mrmj",
+                "CGA-w4rq-c3cf-82f3",
+                "CGA-x9j2-vg55-h4p4"
+              ],
+              "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+              "details": "The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `\u003e`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for the previous GHSA-h5c8-rqwp-cp95 CVE-2024-22195 only addressed spaces but not other characters.\n\nAccepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.1.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.10",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.11.3",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6",
+                    "3.0.0",
+                    "3.0.0a1",
+                    "3.0.0rc1",
+                    "3.0.0rc2",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-h75v-3vvj-5mfj/GHSA-h75v-3vvj-5mfj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/jinja"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-06T14:20:59Z",
+                "nvd_published_at": "2024-05-06T15:15:23Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h5c8-rqwp-cp95"
+              ],
+              "aliases": [
+                "CVE-2024-22195",
+                "GHSA-h5c8-rqwp-cp95"
+              ],
+              "max_severity": "5.4"
+            },
+            {
+              "ids": [
+                "GHSA-h75v-3vvj-5mfj"
+              ],
+              "aliases": [
+                "CVE-2024-34064",
+                "GHSA-h75v-3vvj-5mfj"
+              ],
+              "max_severity": "5.4"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "aiohttp",
+            "version": "3.9.1",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-04T20:04:07Z",
+              "published": "2024-01-29T22:31:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5h86-8mv2-jq9f",
+              "aliases": [
+                "CVE-2024-23334",
+                "PYSEC-2024-24"
+              ],
+              "related": [
+                "CGA-c9gx-2cq5-2f2r",
+                "CGA-x8w7-vx7p-r8vf"
+              ],
+              "summary": "aiohttp is vulnerable to directory traversal",
+              "details": "### Summary\nImproperly configuring static resource resolution in aiohttp when used as a web server can result in the unauthorized reading of arbitrary files on the system.\n\n### Details\nWhen using aiohttp as a web server and configuring static routes, it is necessary to specify the root path for static files. Additionally, the option 'follow_symlinks' can be used to determine whether to follow symbolic links outside the static root directory. When 'follow_symlinks' is set to True, there is no validation to check if a given file path is within the root directory.This can lead to directory traversal vulnerabilities, resulting in unauthorized access to arbitrary files on the system, even when symlinks are not present.\n\ni.e. An application is only vulnerable with setup code like:\n```\napp.router.add_routes([\n    web.static(\"/static\", \"static/\", follow_symlinks=True),  # Remove follow_symlinks to avoid the vulnerability\n])\n```\n\n### Impact\nThis is a directory traversal vulnerability with CWE ID 22. When using aiohttp as a web server and enabling static resource resolution with `follow_symlinks` set to True, it can lead to this vulnerability. This vulnerability has been present since the introduction of the `follow_symlinks` parameter.\n\n### Workaround\nEven if upgrading to a patched version of aiohttp, we recommend following these steps regardless.\n\nIf using `follow_symlinks=True` outside of a restricted local development environment, disable the option immediately. This option is NOT needed to follow symlinks which point to a location _within_ the static root directory, it is _only_ intended to allow a symlink to break out of the static directory. Even with this CVE fixed, there is still a substantial risk of misconfiguration when using this option on a server that accepts requests from remote users.\n\nAdditionally, aiohttp has always recommended using a reverse proxy server (such as nginx) to handle static resources and _not_ to use these static resources in aiohttp for production environments. Doing so also protects against this vulnerability, and is why we expect the number of affected users to be very low.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8079/files",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.0.5"
+                        },
+                        {
+                          "fixed": "3.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-5h86-8mv2-jq9f/GHSA-5h86-8mv2-jq9f.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5h86-8mv2-jq9f"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23334"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8079"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8079/files"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/1c335944d6a8b1298baf179b7c0b3069f10c514b"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/aiohttp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2024-24.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ICUOCFGTB25WUT336BZ4UNYLSZOUVKBD"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-29T22:31:03Z",
+                "nvd_published_at": "2024-01-29T23:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-05-03T18:02:59Z",
+              "published": "2024-05-03T17:29:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5m98-qgg9-wh84",
+              "aliases": [
+                "CVE-2024-30251"
+              ],
+              "related": [
+                "CGA-2j5f-hmjp-gqjm",
+                "CGA-w2cp-3rgq-pfhv"
+              ],
+              "summary": "aiohttp vulnerable to Denial of Service when trying to parse malformed POST requests",
+              "details": "### Summary\nAn attacker can send a specially crafted POST (multipart/form-data) request. When the aiohttp server processes it, the server will enter an infinite loop and be unable to process any further requests.\n\n### Impact\nAn attacker can stop the application from serving requests after sending a single request.\n\n-------\n\nFor anyone needing to patch older versions of aiohttp, the minimum diff needed to resolve the issue is (located in `_read_chunk_from_length()`):\n\n```diff\ndiff --git a/aiohttp/multipart.py b/aiohttp/multipart.py\nindex 227be605c..71fc2654a 100644\n--- a/aiohttp/multipart.py\n+++ b/aiohttp/multipart.py\n@@ -338,6 +338,8 @@ class BodyPartReader:\n         assert self._length is not None, \"Content-Length required for chunked read\"\n         chunk_size = min(size, self._length - self._read_bytes)\n         chunk = await self._content.read(chunk_size)\n+        if self._content.at_eof():\n+            self._at_eof = True\n         return chunk\n \n     async def _read_chunk_from_stream(self, size: int) -\u003e bytes:\n```\n\nThis does however introduce some very minor issues with handling form data. So, if possible, it would be recommended to also backport the changes in:\nhttps://github.com/aio-libs/aiohttp/commit/cebe526b9c34dc3a3da9140409db63014bc4cf19\nhttps://github.com/aio-libs/aiohttp/commit/7eecdff163ccf029fbb1ddc9de4169d4aaeb6597\nhttps://github.com/aio-libs/aiohttp/commit/f21c6f2ca512a026ce7f0f6c6311f62d6a638866",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.9.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.14.4",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.16.4",
+                    "0.16.5",
+                    "0.16.6",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.18.0",
+                    "0.18.1",
+                    "0.18.2",
+                    "0.18.3",
+                    "0.18.4",
+                    "0.19.0",
+                    "0.2",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.21.0",
+                    "0.21.1",
+                    "0.21.2",
+                    "0.21.4",
+                    "0.21.5",
+                    "0.21.6",
+                    "0.22.0",
+                    "0.22.0a0",
+                    "0.22.0b0",
+                    "0.22.0b1",
+                    "0.22.0b2",
+                    "0.22.0b3",
+                    "0.22.0b4",
+                    "0.22.0b5",
+                    "0.22.0b6",
+                    "0.22.1",
+                    "0.22.2",
+                    "0.22.3",
+                    "0.22.4",
+                    "0.22.5",
+                    "0.3",
+                    "0.4",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1",
+                    "3.9.2",
+                    "3.9.3",
+                    "3.9.4rc0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-5m98-qgg9-wh84/GHSA-5m98-qgg9-wh84.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5m98-qgg9-wh84"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30251"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/7eecdff163ccf029fbb1ddc9de4169d4aaeb6597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/cebe526b9c34dc3a3da9140409db63014bc4cf19"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/f21c6f2ca512a026ce7f0f6c6311f62d6a638866"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/aiohttp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/05/02/4"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-03T17:29:54Z",
+                "nvd_published_at": "2024-05-02T14:15:09Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-05-02T03:49:07Z",
+              "published": "2024-04-18T13:45:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-7gpw-8wmc-pm8g",
+              "aliases": [
+                "CVE-2024-27306"
+              ],
+              "related": [
+                "CGA-692f-82fw-6r2x",
+                "CGA-9vpw-h525-h8jq",
+                "CGA-hvh4-9vf6-26pc",
+                "CGA-jrf3-556m-q585"
+              ],
+              "summary": "aiohttp Cross-site Scripting vulnerability on index pages for static file handling",
+              "details": "### Summary\n\nA XSS vulnerability exists on index pages for static file handling.\n\n### Details\n\nWhen using `web.static(..., show_index=True)`, the resulting index pages do not escape file names.\n\nIf users can upload files with arbitrary filenames to the static directory, the server is vulnerable to XSS attacks.\n\n### Workaround\n\nWe have always recommended using a reverse proxy server (e.g. nginx) for serving static files. Users following the recommendation are unaffected.\n\nOther users can disable `show_index` if unable to upgrade.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8319/files",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.9.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.14.4",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.16.4",
+                    "0.16.5",
+                    "0.16.6",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.18.0",
+                    "0.18.1",
+                    "0.18.2",
+                    "0.18.3",
+                    "0.18.4",
+                    "0.19.0",
+                    "0.2",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.21.0",
+                    "0.21.1",
+                    "0.21.2",
+                    "0.21.4",
+                    "0.21.5",
+                    "0.21.6",
+                    "0.22.0",
+                    "0.22.0a0",
+                    "0.22.0b0",
+                    "0.22.0b1",
+                    "0.22.0b2",
+                    "0.22.0b3",
+                    "0.22.0b4",
+                    "0.22.0b5",
+                    "0.22.0b6",
+                    "0.22.1",
+                    "0.22.2",
+                    "0.22.3",
+                    "0.22.4",
+                    "0.22.5",
+                    "0.3",
+                    "0.4",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1",
+                    "3.9.2",
+                    "3.9.3",
+                    "3.9.4rc0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-7gpw-8wmc-pm8g/GHSA-7gpw-8wmc-pm8g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-7gpw-8wmc-pm8g"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27306"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8319"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8319/files"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/28335525d1eac015a7e7584137678cbb6ff19397"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/aiohttp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/2EXRGTN2WG7VZLUZ7WOXU5GQJKCPPHKP"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/NWEI6NIHZ3G7DURDZVMRK7ZEFC2BTD3U"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZIVBMPEY7WWOFMC3CWXFBRQPFECV4SW3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-18T13:45:21Z",
+                "nvd_published_at": "2024-04-18T15:15:29Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-09-04T20:05:21Z",
+              "published": "2024-01-29T22:30:07Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8qpw-xqxj-h4r2",
+              "aliases": [
+                "CVE-2024-23829",
+                "PYSEC-2024-26"
+              ],
+              "related": [
+                "CGA-r956-q5vj-7j4r",
+                "CGA-xrrm-qghm-fwmv"
+              ],
+              "summary": "aiohttp's HTTP parser (the python one, not llhttp) still overly lenient about separators",
+              "details": "### Summary\nSecurity-sensitive parts of the *Python HTTP parser* retained minor differences in allowable character sets, that must trigger error handling to robustly match frame boundaries of proxies in order to protect against injection of additional requests. Additionally, validation could trigger exceptions that were not handled consistently with processing of other malformed input.\n\n### Details\nThese problems are rooted in pattern matching protocol elements, previously improved by PR #3235 and GHSA-gfw2-4jvh-wgfg:\n\n1. The expression `HTTP/(\\d).(\\d)` lacked another backslash to clarify that the separator should be a literal dot, not just *any* Unicode code point (result: `HTTP/(\\d)\\.(\\d)`).\n\n2. The HTTP version was permitting Unicode digits, where only ASCII digits are standards-compliant.\n\n3. Distinct regular expressions for validating HTTP Method and Header field names were used - though both should (at least) apply the common restrictions of rfc9110 `token`.\n\n### PoC\n`GET / HTTP/1ö1`\n`GET / HTTP/1.𝟙`\n`GET/: HTTP/1.1`\n`Content-Encoding?: chunked`\n\n### Impact\nPrimarily concerns running an aiohttp server without llhttp:\n 1. **behind a proxy**: Being more lenient than internet standards require could, depending on deployment environment, assist in request smuggling.\n 2. **directly accessible** or exposed behind proxies relaying malformed input: the unhandled exception could cause excessive resource consumption on the application server and/or its logging facilities.\n\n-----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8074/files",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.14.4",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.16.4",
+                    "0.16.5",
+                    "0.16.6",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.18.0",
+                    "0.18.1",
+                    "0.18.2",
+                    "0.18.3",
+                    "0.18.4",
+                    "0.19.0",
+                    "0.2",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.21.0",
+                    "0.21.1",
+                    "0.21.2",
+                    "0.21.4",
+                    "0.21.5",
+                    "0.21.6",
+                    "0.22.0",
+                    "0.22.0a0",
+                    "0.22.0b0",
+                    "0.22.0b1",
+                    "0.22.0b2",
+                    "0.22.0b3",
+                    "0.22.0b4",
+                    "0.22.0b5",
+                    "0.22.0b6",
+                    "0.22.1",
+                    "0.22.2",
+                    "0.22.3",
+                    "0.22.4",
+                    "0.22.5",
+                    "0.3",
+                    "0.4",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-8qpw-xqxj-h4r2/GHSA-8qpw-xqxj-h4r2.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8qpw-xqxj-h4r2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-gfw2-4jvh-wgfg"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23829"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/3235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8074"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8074/files"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/33ccdfb0a12690af5bb49bda2319ec0907fa7827"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/aiohttp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/aiohttp/PYSEC-2024-26.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ICUOCFGTB25WUT336BZ4UNYLSZOUVKBD"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-444"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-29T22:30:07Z",
+                "nvd_published_at": "2024-01-29T23:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-08-12T16:21:23Z",
+              "published": "2024-08-09T16:49:58Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jwhx-xcg6-8xhj",
+              "aliases": [
+                "CVE-2024-42367"
+              ],
+              "related": [
+                "CGA-4c39-3hr9-4cpw",
+                "CGA-4pvr-9jgj-4vq4",
+                "CGA-56r7-rm2g-8wcm",
+                "CGA-hc9m-rgpj-x5m5",
+                "CGA-qrpj-pqqw-g7wq",
+                "CGA-x335-cgg4-xc7c"
+              ],
+              "summary": "In aiohttp, compressed files as symlinks are not protected from path traversal",
+              "details": "### Summary\nStatic routes which contain files with compressed variants (`.gz` or `.br` extension) were vulnerable to path traversal outside the root directory if those variants are symbolic links.\n\n### Details\nThe server protects static routes from path traversal outside the root directory when `follow_symlinks=False` (default).  It does this by resolving the requested URL to an absolute path and then checking that path relative to the root.  However, these checks are not performed when looking for compressed variants in the `FileResponse` class, and symbolic links are then automatically followed when performing `Path.stat()` and `Path.open()` to send the file.\n\n### Impact\nServers with static routes that contain compressed variants as symbolic links, pointing outside the root directory, or that permit users to upload or create such links, are impacted.\n\n----\n\nPatch: https://github.com/aio-libs/aiohttp/pull/8653/files",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.10.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.14.4",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.16.4",
+                    "0.16.5",
+                    "0.16.6",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.18.0",
+                    "0.18.1",
+                    "0.18.2",
+                    "0.18.3",
+                    "0.18.4",
+                    "0.19.0",
+                    "0.2",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.21.0",
+                    "0.21.1",
+                    "0.21.2",
+                    "0.21.4",
+                    "0.21.5",
+                    "0.21.6",
+                    "0.22.0",
+                    "0.22.0a0",
+                    "0.22.0b0",
+                    "0.22.0b1",
+                    "0.22.0b2",
+                    "0.22.0b3",
+                    "0.22.0b4",
+                    "0.22.0b5",
+                    "0.22.0b6",
+                    "0.22.1",
+                    "0.22.2",
+                    "0.22.3",
+                    "0.22.4",
+                    "0.22.5",
+                    "0.3",
+                    "0.4",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.10.0",
+                    "3.10.0b1",
+                    "3.10.0rc0",
+                    "3.10.1",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1",
+                    "3.9.2",
+                    "3.9.3",
+                    "3.9.4",
+                    "3.9.4rc0",
+                    "3.9.5"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-jwhx-xcg6-8xhj/GHSA-jwhx-xcg6-8xhj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-jwhx-xcg6-8xhj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-42367"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8653"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/ce2e9758814527589b10759a20783fb03b98339f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aio-libs/aiohttp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/blob/e0ff5246e1d29b7710ab1a2bbc972b48169f1c05/aiohttp/web_fileresponse.py#L177"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aio-libs/aiohttp/blob/e0ff5246e1d29b7710ab1a2bbc972b48169f1c05/aiohttp/web_urldispatcher.py#L674"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-61"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-09T16:49:58Z",
+                "nvd_published_at": "2024-08-12T13:38:34Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-02-05T20:43:19Z",
+              "published": "2024-01-29T23:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2024-24",
+              "aliases": [
+                "CVE-2024-23334",
+                "GHSA-5h86-8mv2-jq9f"
+              ],
+              "details": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. When using aiohttp as a web server and configuring static routes, it is necessary to specify the root path for static files. Additionally, the option 'follow_symlinks' can be used to determine whether to follow symbolic links outside the static root directory. When 'follow_symlinks' is set to True, there is no validation to check if reading a file is within the root directory. This can lead to directory traversal vulnerabilities, resulting in unauthorized access to arbitrary files on the system, even when symlinks are not present.  Disabling follow_symlinks and using a reverse proxy are encouraged mitigations.  Version 3.9.2 fixes this issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1c335944d6a8b1298baf179b7c0b3069f10c514b"
+                        }
+                      ],
+                      "repo": "https://github.com/aio-libs/aiohttp"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.0.5"
+                        },
+                        {
+                          "fixed": "3.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/aiohttp/PYSEC-2024-24.yaml"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-5h86-8mv2-jq9f"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8079"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/1c335944d6a8b1298baf179b7c0b3069f10c514b"
+                },
+                {
+                  "type": "ARTICLE",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7/"
+                }
+              ]
+            },
+            {
+              "modified": "2024-02-06T20:41:46Z",
+              "published": "2024-01-29T23:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2024-26",
+              "aliases": [
+                "CVE-2024-23829",
+                "GHSA-8qpw-xqxj-h4r2"
+              ],
+              "details": "aiohttp is an asynchronous HTTP client/server framework for asyncio and Python. Security-sensitive parts of the Python HTTP parser retained minor differences in allowable character sets, that must trigger error handling to robustly match frame boundaries of proxies in order to protect against injection of additional requests. Additionally, validation could trigger exceptions that were not handled consistently with processing of other malformed input.  Being more lenient than internet standards require could, depending on deployment environment, assist in request smuggling. The unhandled exception could cause excessive resource consumption on the application server and/or its logging facilities. This vulnerability exists due to an incomplete fix for CVE-2023-47627. Version 3.9.2 fixes this vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "aiohttp",
+                    "purl": "pkg:pypi/aiohttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "GIT",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "33ccdfb0a12690af5bb49bda2319ec0907fa7827"
+                        }
+                      ],
+                      "repo": "https://github.com/aio-libs/aiohttp"
+                    },
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.11.0",
+                    "0.12.0",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.14.3",
+                    "0.14.4",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.16.2",
+                    "0.16.3",
+                    "0.16.4",
+                    "0.16.5",
+                    "0.16.6",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.17.2",
+                    "0.17.3",
+                    "0.17.4",
+                    "0.18.0",
+                    "0.18.1",
+                    "0.18.2",
+                    "0.18.3",
+                    "0.18.4",
+                    "0.19.0",
+                    "0.2",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.21.0",
+                    "0.21.1",
+                    "0.21.2",
+                    "0.21.4",
+                    "0.21.5",
+                    "0.21.6",
+                    "0.22.0",
+                    "0.22.0a0",
+                    "0.22.0b0",
+                    "0.22.0b1",
+                    "0.22.0b2",
+                    "0.22.0b3",
+                    "0.22.0b4",
+                    "0.22.0b5",
+                    "0.22.0b6",
+                    "0.22.1",
+                    "0.22.2",
+                    "0.22.3",
+                    "0.22.4",
+                    "0.22.5",
+                    "0.3",
+                    "0.4",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.5",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.1.4",
+                    "1.1.5",
+                    "1.1.6",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.2.4",
+                    "2.2.5",
+                    "2.3.0",
+                    "2.3.0a1",
+                    "2.3.0a2",
+                    "2.3.0a3",
+                    "2.3.0a4",
+                    "2.3.1",
+                    "2.3.10",
+                    "2.3.1a1",
+                    "2.3.2",
+                    "2.3.2b2",
+                    "2.3.2b3",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "2.3.9",
+                    "3.0.0",
+                    "3.0.0b0",
+                    "3.0.0b1",
+                    "3.0.0b2",
+                    "3.0.0b3",
+                    "3.0.0b4",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.5",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3",
+                    "3.2.0",
+                    "3.2.1",
+                    "3.3.0",
+                    "3.3.0a0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.3.2a0",
+                    "3.4.0",
+                    "3.4.0a0",
+                    "3.4.0a3",
+                    "3.4.0b1",
+                    "3.4.0b2",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.4.3",
+                    "3.4.4",
+                    "3.5.0",
+                    "3.5.0a1",
+                    "3.5.0b1",
+                    "3.5.0b2",
+                    "3.5.0b3",
+                    "3.5.1",
+                    "3.5.2",
+                    "3.5.3",
+                    "3.5.4",
+                    "3.6.0",
+                    "3.6.0a0",
+                    "3.6.0a1",
+                    "3.6.0a11",
+                    "3.6.0a12",
+                    "3.6.0a2",
+                    "3.6.0a3",
+                    "3.6.0a4",
+                    "3.6.0a5",
+                    "3.6.0a6",
+                    "3.6.0a7",
+                    "3.6.0a8",
+                    "3.6.0a9",
+                    "3.6.0b0",
+                    "3.6.1",
+                    "3.6.1b3",
+                    "3.6.1b4",
+                    "3.6.2",
+                    "3.6.2a0",
+                    "3.6.2a1",
+                    "3.6.2a2",
+                    "3.6.3",
+                    "3.7.0",
+                    "3.7.0b0",
+                    "3.7.0b1",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.7.3",
+                    "3.7.4",
+                    "3.7.4.post0",
+                    "3.8.0",
+                    "3.8.0a7",
+                    "3.8.0b0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3",
+                    "3.8.4",
+                    "3.8.5",
+                    "3.8.6",
+                    "3.9.0",
+                    "3.9.0b0",
+                    "3.9.0b1",
+                    "3.9.0rc0",
+                    "3.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/aiohttp/PYSEC-2024-26.yaml"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/aio-libs/aiohttp/security/advisories/GHSA-8qpw-xqxj-h4r2"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aio-libs/aiohttp/pull/8074"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aio-libs/aiohttp/commit/33ccdfb0a12690af5bb49bda2319ec0907fa7827"
+                },
+                {
+                  "type": "ARTICLE",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XXWVZIVAYWEBHNRIILZVB3R3SDQNNAA7/"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-5h86-8mv2-jq9f",
+                "PYSEC-2024-24"
+              ],
+              "aliases": [
+                "CVE-2024-23334",
+                "GHSA-5h86-8mv2-jq9f",
+                "PYSEC-2024-24"
+              ],
+              "max_severity": "8.2"
+            },
+            {
+              "ids": [
+                "GHSA-5m98-qgg9-wh84"
+              ],
+              "aliases": [
+                "CVE-2024-30251",
+                "GHSA-5m98-qgg9-wh84"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-7gpw-8wmc-pm8g"
+              ],
+              "aliases": [
+                "CVE-2024-27306",
+                "GHSA-7gpw-8wmc-pm8g"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-8qpw-xqxj-h4r2",
+                "PYSEC-2024-26"
+              ],
+              "aliases": [
+                "CVE-2024-23829",
+                "GHSA-8qpw-xqxj-h4r2",
+                "PYSEC-2024-26"
+              ],
+              "max_severity": "6.9"
+            },
+            {
+              "ids": [
+                "GHSA-jwhx-xcg6-8xhj"
+              ],
+              "aliases": [
+                "CVE-2024-42367",
+                "GHSA-jwhx-xcg6-8xhj"
+              ],
+              "max_severity": "6.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "starlette",
+            "version": "0.34.0",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-15T20:01:19Z",
+              "published": "2024-10-15T18:12:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-f96h-pmfr-66vw",
+              "aliases": [
+                "CVE-2024-47874"
+              ],
+              "summary": "Starlette Denial of service (DoS) via multipart/form-data",
+              "details": "### Summary\nStarlette treats `multipart/form-data` parts without a `filename` as text form fields and buffers those in byte strings with no size limit. This allows an attacker to upload arbitrary large form fields and cause Starlette to both slow down significantly due to excessive memory allocations and copy operations, and also consume more and more memory until the server starts swapping and grinds to a halt, or the OS terminates the server process with an OOM error. Uploading multiple such requests in parallel may be enough to render a service practically unusable, even if reasonable request size limits are enforced by a reverse proxy in front of Starlette.\n\n### PoC\n\n```python\nfrom starlette.applications import Starlette\nfrom starlette.routing import Route\n\nasync def poc(request):\n    async with request.form():\n        pass\n\napp = Starlette(routes=[\n    Route('/', poc, methods=[\"POST\"]),\n])\n```\n\n```sh\ncurl http://localhost:8000 -F 'big=\u003c/dev/urandom'\n```\n\n### Impact\nThis Denial of service (DoS) vulnerability affects all applications built with Starlette (or FastAPI) accepting form requests.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "starlette",
+                    "purl": "pkg:pypi/starlette"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.40.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.11",
+                    "0.1.12",
+                    "0.1.13",
+                    "0.1.14",
+                    "0.1.15",
+                    "0.1.16",
+                    "0.1.17",
+                    "0.1.2",
+                    "0.1.3",
+                    "0.1.4",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.5",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.11.0",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.11.3",
+                    "0.11.4",
+                    "0.12.0",
+                    "0.12.0b1",
+                    "0.12.0b2",
+                    "0.12.0b3",
+                    "0.12.1",
+                    "0.12.10",
+                    "0.12.11",
+                    "0.12.12",
+                    "0.12.13",
+                    "0.12.2",
+                    "0.12.3",
+                    "0.12.4",
+                    "0.12.5",
+                    "0.12.6",
+                    "0.12.7",
+                    "0.12.8",
+                    "0.12.9",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.15.0",
+                    "0.16.0",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.18.0",
+                    "0.19.0",
+                    "0.19.1",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.20.3",
+                    "0.20.4",
+                    "0.21.0",
+                    "0.22.0",
+                    "0.23.0",
+                    "0.23.1",
+                    "0.24.0",
+                    "0.25.0",
+                    "0.26.0",
+                    "0.26.0.post1",
+                    "0.26.1",
+                    "0.27.0",
+                    "0.28.0",
+                    "0.29.0",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.3.6",
+                    "0.3.7",
+                    "0.30.0",
+                    "0.31.0",
+                    "0.31.1",
+                    "0.32.0",
+                    "0.32.0.post1",
+                    "0.33.0",
+                    "0.34.0",
+                    "0.35.0",
+                    "0.35.1",
+                    "0.36.0",
+                    "0.36.1",
+                    "0.36.2",
+                    "0.36.3",
+                    "0.37.0",
+                    "0.37.1",
+                    "0.37.2",
+                    "0.38.0",
+                    "0.38.1",
+                    "0.38.2",
+                    "0.38.3",
+                    "0.38.4",
+                    "0.38.5",
+                    "0.38.6",
+                    "0.39.0",
+                    "0.39.1",
+                    "0.39.2",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-f96h-pmfr-66vw/GHSA-f96h-pmfr-66vw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/encode/starlette/security/advisories/GHSA-f96h-pmfr-66vw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47874"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/encode/starlette/commit/fd038f3070c302bff17ef7d173dbb0b007617733"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/encode/starlette"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-15T18:12:57Z",
+                "nvd_published_at": "2024-10-15T16:15:05Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-f96h-pmfr-66vw"
+              ],
+              "aliases": [
+                "CVE-2024-47874",
+                "GHSA-f96h-pmfr-66vw"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

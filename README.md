@@ -51,14 +51,7 @@ pip install ntia-conformance-checker
 
 # Usage
 In order to use the SBOM analysis tools, you need to have a Software Bill of Materials (SBOM) in either CycloneDX or SPDX format. The following commands can be used to run the tools:
-- `main.py` - do the creation of data folder (`data_TIMESTAMP`) and gathers information on where to find the SBOM files on the internet and their type (`SPDX`, `CycloneDX`, `XML`, `JSON`, `Tag/Value`, `YAML`);
-- `download_sboms_10.py` - download the SBOM files from the internet, based on the list from the main stage;
-- `sbom_external_assesment_11.py` - do the external assessment of the SBOM files with Third party and official tools (`osv-scanner`, `sbomqs`, etc.);
-- `sum_up_csv_12.py` - do the manual analysis and compile this data with an external assessment. After, do the summarization of the external assessment of the SBOM files. Output data in 2 files. Those files were used as a data source for our paper. And were described in our paper: 
-  - `sbom_list.csv`
-  - `dependency_list.json`;
-
-You can also find a lot of other python files, which are named `XX_NUMBER.py`. These modules are used in the `main.py` . But the last three files (10, 11, 12) need to be run manually.
+- `main.py` - does the creation of data folder (`data_TIMESTAMP`) and gathers information on where to find the SBOM files on the internet and their type (`SPDX`, `CycloneDX`, `XML`, `JSON`, `Tag/Value`, `YAML`). After that download the SBOM files from the GitHub Releases, Artifacts and Sourcecode. Then does the external assessment of the SBOM files with Third party and official tools (`osv-scanner`, `sbomqs`, etc.). Finally does the manual analysis and compile this data with an external assessment and the summarization of the external assessment of the SBOM files. Output data in 2 files (`sbom_list.csv`, `dependency_list.csv`). Those files were used as a data source for the paper;
 
 # Jupyter Analysis Scripts
 

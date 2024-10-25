@@ -1,0 +1,285 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/k8sgpt-ai_k8sgpt_release_hp1134fx_k8sgpt-ai_k8sgpt_release_v0.3.41.k8sgpt_Windows_i386.zip.sbom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/aquasecurity/trivy",
+            "version": "v0.47.0",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-22T17:44:36Z",
+              "published": "2024-05-20T20:36:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xcq4-m2r3-cmrj",
+              "aliases": [
+                "CVE-2024-35192",
+                "GO-2024-2870"
+              ],
+              "related": [
+                "CGA-6qw8-j782-qw9m",
+                "CGA-g4xv-7rvw-7vpj",
+                "CGA-h9gc-49r4-qcgj"
+              ],
+              "summary": "Trivy possibly leaks registry credential when scanning images from malicious registries",
+              "details": "## Impact\nIf a malicious actor is able to trigger Trivy to scan container images from a crafted malicious registry, it could result in the leakage of credentials for legitimate registries such as AWS Elastic Container Registry (ECR), Google Cloud Artifact/Container Registry, or Azure Container Registry (ACR). These tokens can then be used to push/pull images from those registries to which the identity/user running Trivy has access.\n\nTaking AWS as an example, the leakage only occurs when Trivy is able to transparently obtain registry credentials from the default [credential provider chain](https://aws.github.io/aws-sdk-go-v2/docs/configuring-sdk/#specifying-credentials). You are affected if Trivy is executed in any of the following situations:\n\n- The environment variables contain static AWS credentials (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN) that have access to ECR.\n- Within a Pod running on an EKS cluster that has been assigned a role with access to ECR using an [IAM Roles for Service Accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html) (IRSA) annotation.\n- etc.\n\nYou are not affected if the default credential provider chain is unable to obtain valid credentials. The same applies to GCP and Azure.\n\n## Workarounds\nIf you are using Trivy v0.51.2 or later, you are not affected. If you are using Trivy v0.51.1 or prior, you should ensure you only scan images from trusted registries.\n\nThis vulnerability only applies when scanning container images directly from a registry. If you use Docker, containerd or other runtime to pull images locally and scan them with Trivy, you are not affected. To enforce this behavior, you can use the `--image-src` flag to select which sources you trust. \n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aquasecurity/trivy",
+                    "purl": "pkg:golang/github.com/aquasecurity/trivy"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.51.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-xcq4-m2r3-cmrj/GHSA-xcq4-m2r3-cmrj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-xcq4-m2r3-cmrj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35192"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/aquasecurity/trivy/commit/e7f14f729de259551203f313e57d2d9d3aa2ff87"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/aquasecurity/trivy"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-522"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-20T20:36:53Z",
+                "nvd_published_at": "2024-05-20T21:15:09Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-05-22T17:44:36Z",
+              "published": "2024-05-22T16:46:37Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2870",
+              "aliases": [
+                "CVE-2024-35192",
+                "GHSA-xcq4-m2r3-cmrj"
+              ],
+              "summary": "Credential leakage in github.com/aquasecurity/trivy",
+              "details": "A malicious registry can cause Trivy to leak credentials for legitimate registries such as AWS Elastic Container Registry (ECR), Google Cloud Artifact/Container Registry, or Azure Container Registry (ACR) if the registry is scanned from directly using Trivy. These tokens can then be used to push/pull images from those registries to which the identity/user running Trivy has access. This vulnerability only applies when scanning container images directly from a registry. If you use Docker, containerd or other runtime to pull images locally and scan them with Trivy, you are not affected. To enforce this behavior, you can use the --image-src flag to select which sources you trust.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aquasecurity/trivy",
+                    "purl": "pkg:golang/github.com/aquasecurity/trivy"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.51.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2870.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aquasecurity/trivy/pkg/fanal/image/registry/azure"
+                      },
+                      {
+                        "path": "github.com/aquasecurity/trivy/pkg/fanal/image/registry/ecr",
+                        "symbols": [
+                          "ECR.CheckOptions"
+                        ]
+                      },
+                      {
+                        "path": "github.com/aquasecurity/trivy/pkg/fanal/image/registry/google",
+                        "symbols": [
+                          "Registry.CheckOptions"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-xcq4-m2r3-cmrj"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aquasecurity/trivy/commit/e7f14f729de259551203f313e57d2d9d3aa2ff87"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "@lyoung-confluent"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2870"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xcq4-m2r3-cmrj",
+                "GO-2024-2870"
+              ],
+              "aliases": [
+                "CVE-2024-35192",
+                "GHSA-xcq4-m2r3-cmrj",
+                "GO-2024-2870"
+              ],
+              "max_severity": "5.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/aws/aws-sdk-go",
+            "version": "v1.53.21",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2022-02-11T23:26:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0646",
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9"
+              ],
+              "summary": "Use of risky cryptographic algorithm in github.com/aws/aws-sdk-go",
+              "details": "The Go AWS S3 Crypto SDK contains vulnerabilities that can permit an attacker with write access to a bucket to decrypt files in that bucket.\n\nFiles encrypted by the V1 EncryptionClient using either the AES-CBC content cipher or the KMS key wrap algorithm are vulnerable. Users should migrate to the V1 EncryptionClientV2 API, which will not create vulnerable files. Old files will remain vulnerable until re-encrypted with the new client.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aws/aws-sdk-go",
+                    "purl": "pkg:golang/github.com/aws/aws-sdk-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0646.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aws/aws-sdk-go/service/s3/s3crypto",
+                        "symbols": [
+                          "NewDecryptionClient",
+                          "NewEncryptionClient"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://aws.amazon.com/blogs/developer/updates-to-the-amazon-s3-encryption-client/?s=09"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/pull/3403"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/commit/ae9b9fd92af132cfd8d879809d8611825ba135f4"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Sophie Schmieg from the Google ISE team"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2022-0646"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2022-0646"
+              ],
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9",
+                "GO-2022-0646"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

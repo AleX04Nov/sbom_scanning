@@ -1,0 +1,630 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/goreleaser_goreleaser_release_pswi44o0_goreleaser_goreleaser_release_nightly.goreleaser_Windows_x86_64.zip.sbom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/aws/aws-sdk-go",
+            "version": "v1.55.5",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2022-02-11T23:26:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0646",
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9"
+              ],
+              "summary": "Use of risky cryptographic algorithm in github.com/aws/aws-sdk-go",
+              "details": "The Go AWS S3 Crypto SDK contains vulnerabilities that can permit an attacker with write access to a bucket to decrypt files in that bucket.\n\nFiles encrypted by the V1 EncryptionClient using either the AES-CBC content cipher or the KMS key wrap algorithm are vulnerable. Users should migrate to the V1 EncryptionClientV2 API, which will not create vulnerable files. Old files will remain vulnerable until re-encrypted with the new client.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aws/aws-sdk-go",
+                    "purl": "pkg:golang/github.com/aws/aws-sdk-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0646.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aws/aws-sdk-go/service/s3/s3crypto",
+                        "symbols": [
+                          "NewDecryptionClient",
+                          "NewEncryptionClient"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://aws.amazon.com/blogs/developer/updates-to-the-amazon-s3-encryption-client/?s=09"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/pull/3403"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/commit/ae9b9fd92af132cfd8d879809d8611825ba135f4"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Sophie Schmieg from the Google ISE team"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2022-0646"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2022-0646"
+              ],
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9",
+                "GO-2022-0646"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/sigstore/cosign",
+            "version": "v2.2.4",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2023-11-09T18:40:33Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2181",
+              "aliases": [
+                "BIT-cosign-2023-46737",
+                "CVE-2023-46737",
+                "GHSA-vfp6-jrw2-99g9"
+              ],
+              "summary": "Denial of service attack from remote registry in github.com/sigstore/cosign",
+              "details": "An attacker who controls a remote registry can return a high number of attestations and/or signatures to cosign. This can cause cosign to enter a long loop resulting in a denial of service, i.e., endless data attack.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/sigstore/cosign",
+                    "purl": "pkg:golang/github.com/sigstore/cosign"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2181.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/sigstore/cosign/pkg/cosign",
+                        "symbols": [
+                          "FetchSignaturesForReference"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/sigstore/cosign/v2",
+                    "purl": "pkg:golang/github.com/sigstore/cosign/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2181.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/sigstore/cosign/v2/pkg/cosign",
+                        "symbols": [
+                          "FetchSignaturesForReference"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/sigstore/cosign/commit/8ac891ff0e29ddc67965423bee8f826219c6eb0f"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sigstore/cosign/releases/tag/v2.2.1"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2023-2181"
+              }
+            },
+            {
+              "modified": "2024-06-05T16:43:16Z",
+              "published": "2024-06-05T15:10:52Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2718",
+              "aliases": [
+                "BIT-cosign-2024-29902",
+                "CVE-2024-29902",
+                "GHSA-88jx-383q-w4qc"
+              ],
+              "summary": "Cosign malicious attachments can cause system-wide denial of service in github.com/sigstore/cosign",
+              "details": "Cosign malicious attachments can cause system-wide denial of service in github.com/sigstore/cosign",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/sigstore/cosign",
+                    "purl": "pkg:golang/github.com/sigstore/cosign"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2718.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/sigstore/cosign/v2",
+                    "purl": "pkg:golang/github.com/sigstore/cosign/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2718.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/sigstore/cosign/security/advisories/GHSA-88jx-383q-w4qc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29902"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/sigstore/cosign/commit/629f5f8fa672973503edde75f84dcd984637629e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/google/go-containerregistry/blob/a0658aa1d0cc7a7f1bcc4a3af9155335b6943f40/pkg/v1/remote/layer.go#L36-L40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sigstore/cosign/blob/9bc3ee309bf35d2f6e17f5d23f231a3d8bf580bc/pkg/oci/remote/remote.go#L228-L239"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sigstore/cosign/releases/tag/v2.2.4"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2718"
+              }
+            },
+            {
+              "modified": "2024-06-05T16:43:25Z",
+              "published": "2024-06-05T15:10:52Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2719",
+              "aliases": [
+                "BIT-cosign-2024-29903",
+                "CVE-2024-29903",
+                "GHSA-95pr-fxf5-86gv"
+              ],
+              "summary": "Cosign malicious artifacts can cause machine-wide DoS in github.com/sigstore/cosign",
+              "details": "Cosign malicious artifacts can cause machine-wide DoS in github.com/sigstore/cosign",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/sigstore/cosign",
+                    "purl": "pkg:golang/github.com/sigstore/cosign"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2719.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/sigstore/cosign/v2",
+                    "purl": "pkg:golang/github.com/sigstore/cosign/v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.2.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2719.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/sigstore/cosign/security/advisories/GHSA-95pr-fxf5-86gv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29903"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/sigstore/cosign/commit/629f5f8fa672973503edde75f84dcd984637629e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sigstore/cosign/blob/14795db16417579fac0c00c11e166868d7976b61/pkg/cosign/verify.go#L948-L955"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sigstore/cosign/blob/286a98a4a99c1b2f32f84b0d560e324100312280/pkg/oci/remote/signatures.go#L56-L70"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sigstore/cosign/releases/tag/v2.2.4"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2719"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2023-2181"
+              ],
+              "aliases": [
+                "BIT-cosign-2023-46737",
+                "CVE-2023-46737",
+                "GHSA-vfp6-jrw2-99g9",
+                "GO-2023-2181"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GO-2024-2718"
+              ],
+              "aliases": [
+                "BIT-cosign-2024-29902",
+                "CVE-2024-29902",
+                "GHSA-88jx-383q-w4qc",
+                "GO-2024-2718"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GO-2024-2719"
+              ],
+              "aliases": [
+                "BIT-cosign-2024-29903",
+                "CVE-2024-29903",
+                "GHSA-95pr-fxf5-86gv",
+                "GO-2024-2719"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "gopkg.in/go-jose/go-jose.v2",
+            "version": "v2.6.3",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:12:27Z",
+              "published": "2024-03-15T18:16:11Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2631",
+              "aliases": [
+                "CVE-2024-28180",
+                "GHSA-c5q2-7r4c-mv6g"
+              ],
+              "summary": "Decompression bomb vulnerability in github.com/go-jose/go-jose",
+              "details": "An attacker could send a JWE containing compressed data that used large amounts of memory and CPU when decompressed by Decrypt or DecryptMulti.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/go-jose/go-jose/v4",
+                    "purl": "pkg:golang/github.com/go-jose/go-jose/v4"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2631.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/go-jose/go-jose/v4",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "inflate"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/go-jose/go-jose/v3",
+                    "purl": "pkg:golang/github.com/go-jose/go-jose/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2631.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/go-jose/go-jose/v3",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "inflate"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "gopkg.in/go-jose/go-jose.v2",
+                    "purl": "pkg:golang/gopkg.in/go-jose/go-jose.v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.6.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2631.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "gopkg.in/go-jose/go-jose.v2",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "inflate"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "gopkg.in/square/go-jose.v2",
+                    "purl": "pkg:golang/gopkg.in/square/go-jose.v2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2631.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "gopkg.in/square/go-jose.v2",
+                        "symbols": [
+                          "JSONWebEncryption.Decrypt",
+                          "JSONWebEncryption.DecryptMulti",
+                          "inflate"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/go-jose/go-jose/security/advisories/GHSA-c5q2-7r4c-mv6g"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/go-jose/go-jose/commit/0dd4dd541c665fb292d664f77604ba694726f298"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/go-jose/go-jose/commit/add6a284ea0f844fd6628cba637be5451fe4b28a"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/go-jose/go-jose/commit/f4c051a0653d78199a053892f7619ebf96339502"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "zer0yu"
+                },
+                {
+                  "name": "chenjj"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2631"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2024-2631"
+              ],
+              "aliases": [
+                "CVE-2024-28180",
+                "GHSA-c5q2-7r4c-mv6g",
+                "GO-2024-2631"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

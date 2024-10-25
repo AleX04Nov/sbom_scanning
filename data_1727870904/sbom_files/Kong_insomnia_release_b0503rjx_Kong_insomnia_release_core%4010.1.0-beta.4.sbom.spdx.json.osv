@@ -1,0 +1,511 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/Kong_insomnia_release_b0503rjx_Kong_insomnia_release_core%4010.1.0-beta.4.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "@sentry/browser",
+            "version": "8.26.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-04T16:32:02Z",
+              "published": "2024-10-03T18:26:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-593m-55hh-j8gv",
+              "summary": "Sentry SDK Prototype Pollution gadget in JavaScript SDKs",
+              "details": "### Impact\nIn case a Prototype Pollution vulnerability is present in a user's application or bundled libraries, the Sentry SDK could potentially serve as a gadget to exploit that vulnerability. The exploitability depends on the specific details of the underlying Prototype Pollution issue.\n\n\u003e [!NOTE]\n\u003e This advisory does not indicate the presence of a Prototype Pollution within the Sentry SDK itself. Users are strongly advised to first address any Prototype Pollution vulnerabilities in their application, as they pose a more critical security risk.\n\n### Patches\nThe issue was patched in all Sentry JavaScript SDKs starting from the [8.33.0](https://github.com/getsentry/sentry-javascript/releases/tag/8.33.0) version.\nAlso, the fix was backported to SDK v7 in [7.119.1](https://github.com/getsentry/sentry-javascript/releases/tag/7.119.1).\n\n### References\n* [Prototype Pollution](https://portswigger.net/web-security/prototype-pollution)\n* [Prototype Pollution gadgets](https://portswigger.net/web-security/prototype-pollution#prototype-pollution-gadgets)\n* [sentry-javascript#13838](https://github.com/getsentry/sentry-javascript/pull/13838)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@sentry/browser",
+                    "purl": "pkg:npm/%40sentry/browser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-alpha.1"
+                        },
+                        {
+                          "fixed": "8.33.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-593m-55hh-j8gv/GHSA-593m-55hh-j8gv.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@sentry/browser",
+                    "purl": "pkg:npm/%40sentry/browser"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "7.119.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-593m-55hh-j8gv/GHSA-593m-55hh-j8gv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/getsentry/sentry-javascript/security/advisories/GHSA-593m-55hh-j8gv"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/getsentry/sentry-javascript/pull/13838"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/getsentry/sentry-javascript/commit/35bdc87dee3498794e34c1ad35dd9927950c8766"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/getsentry/sentry-javascript"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/getsentry/sentry-javascript/releases/tag/7.119.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/getsentry/sentry-javascript/releases/tag/8.33.0"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-913"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-03T18:26:53Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-593m-55hh-j8gv"
+              ],
+              "aliases": [
+                "GHSA-593m-55hh-j8gv"
+              ],
+              "max_severity": "6.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cookie",
+            "version": "0.4.1",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-04T20:57:03Z",
+              "published": "2024-10-04T20:31:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pxg6-pf52-xh8x",
+              "aliases": [
+                "CVE-2024-47764"
+              ],
+              "related": [
+                "CGA-56hq-34m4-pgc5",
+                "CGA-hchv-5xpf-mwj3"
+              ],
+              "summary": "cookie accepts cookie name, path, and domain with out of bounds characters",
+              "details": "### Impact\n\nThe cookie name could be used to set other fields of the cookie, resulting in an unexpected cookie value. For example, `serialize(\"userName=\u003cscript\u003ealert('XSS3')\u003c/script\u003e; Max-Age=2592000; a\", value)` would result in `\"userName=\u003cscript\u003ealert('XSS3')\u003c/script\u003e; Max-Age=2592000; a=test\"`, setting `userName` cookie to `\u003cscript\u003e` and ignoring `value`.\n\nA similar escape can be used for `path` and `domain`, which could be abused to alter other fields of the cookie.\n\n### Patches\n\nUpgrade to 0.7.0, which updates the validation for `name`, `path`, and `domain`.\n\n### Workarounds\n\nAvoid passing untrusted or arbitrary values for these fields, ensure they are set by the application instead of user input.\n\n### References\n\n* https://github.com/jshttp/cookie/pull/167",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cookie",
+                    "purl": "pkg:npm/cookie"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-pxg6-pf52-xh8x/GHSA-pxg6-pf52-xh8x.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/security/advisories/GHSA-pxg6-pf52-xh8x"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/pull/167"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/commit/e10042845354fea83bd8f34af72475eed1dadf5c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jshttp/cookie"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-04T20:31:00Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-pxg6-pf52-xh8x"
+              ],
+              "aliases": [
+                "CVE-2024-47764",
+                "GHSA-pxg6-pf52-xh8x"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cookie",
+            "version": "0.6.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-04T20:57:03Z",
+              "published": "2024-10-04T20:31:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pxg6-pf52-xh8x",
+              "aliases": [
+                "CVE-2024-47764"
+              ],
+              "related": [
+                "CGA-56hq-34m4-pgc5",
+                "CGA-hchv-5xpf-mwj3"
+              ],
+              "summary": "cookie accepts cookie name, path, and domain with out of bounds characters",
+              "details": "### Impact\n\nThe cookie name could be used to set other fields of the cookie, resulting in an unexpected cookie value. For example, `serialize(\"userName=\u003cscript\u003ealert('XSS3')\u003c/script\u003e; Max-Age=2592000; a\", value)` would result in `\"userName=\u003cscript\u003ealert('XSS3')\u003c/script\u003e; Max-Age=2592000; a=test\"`, setting `userName` cookie to `\u003cscript\u003e` and ignoring `value`.\n\nA similar escape can be used for `path` and `domain`, which could be abused to alter other fields of the cookie.\n\n### Patches\n\nUpgrade to 0.7.0, which updates the validation for `name`, `path`, and `domain`.\n\n### Workarounds\n\nAvoid passing untrusted or arbitrary values for these fields, ensure they are set by the application instead of user input.\n\n### References\n\n* https://github.com/jshttp/cookie/pull/167",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cookie",
+                    "purl": "pkg:npm/cookie"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-pxg6-pf52-xh8x/GHSA-pxg6-pf52-xh8x.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/security/advisories/GHSA-pxg6-pf52-xh8x"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/pull/167"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/commit/e10042845354fea83bd8f34af72475eed1dadf5c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jshttp/cookie"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-04T20:31:00Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-pxg6-pf52-xh8x"
+              ],
+              "aliases": [
+                "CVE-2024-47764",
+                "GHSA-pxg6-pf52-xh8x"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jsonpath-plus",
+            "version": "6.0.1",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-16T17:05:07Z",
+              "published": "2024-10-11T15:30:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pppg-cpfq-h7wr",
+              "aliases": [
+                "CVE-2024-21534"
+              ],
+              "summary": "JSONPath Plus Remote Code Execution (RCE) Vulnerability",
+              "details": "Versions of the package jsonpath-plus before 10.0.0 are vulnerable to Remote Code Execution (RCE) due to improper input sanitization. An attacker can execute aribitrary code on the system by exploiting the unsafe default usage of vm in Node.\n\n**Note:**\n\nThe unsafe behavior is still available after applying the fix but it is not turned on by default.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jsonpath-plus",
+                    "purl": "pkg:npm/jsonpath-plus"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "10.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-pppg-cpfq-h7wr/GHSA-pppg-cpfq-h7wr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21534"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JSONPath-Plus/JSONPath/commit/6b2f1b4c234292c75912b790bf7e2d7339d4ccd3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/JSONPath-Plus/JSONPath"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8185019"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-JSONPATHPLUS-7945884"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-14T16:27:22Z",
+                "nvd_published_at": "2024-10-11T13:15:15Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-pppg-cpfq-h7wr"
+              ],
+              "aliases": [
+                "CVE-2024-21534",
+                "GHSA-pppg-cpfq-h7wr"
+              ],
+              "max_severity": "9.8"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jsonpath-plus",
+            "version": "7.1.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-16T17:05:07Z",
+              "published": "2024-10-11T15:30:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pppg-cpfq-h7wr",
+              "aliases": [
+                "CVE-2024-21534"
+              ],
+              "summary": "JSONPath Plus Remote Code Execution (RCE) Vulnerability",
+              "details": "Versions of the package jsonpath-plus before 10.0.0 are vulnerable to Remote Code Execution (RCE) due to improper input sanitization. An attacker can execute aribitrary code on the system by exploiting the unsafe default usage of vm in Node.\n\n**Note:**\n\nThe unsafe behavior is still available after applying the fix but it is not turned on by default.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "jsonpath-plus",
+                    "purl": "pkg:npm/jsonpath-plus"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "10.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-pppg-cpfq-h7wr/GHSA-pppg-cpfq-h7wr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21534"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/JSONPath-Plus/JSONPath/commit/6b2f1b4c234292c75912b790bf7e2d7339d4ccd3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/JSONPath-Plus/JSONPath"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8185019"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-JSONPATHPLUS-7945884"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-94"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-14T16:27:22Z",
+                "nvd_published_at": "2024-10-11T13:15:15Z",
+                "severity": "CRITICAL"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-pppg-cpfq-h7wr"
+              ],
+              "aliases": [
+                "CVE-2024-21534",
+                "GHSA-pppg-cpfq-h7wr"
+              ],
+              "max_severity": "9.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

@@ -1,0 +1,801 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/qaul_qaul.net_release_4t33i7gz_qaul_qaul.net_release_v2.0.0-rc.1.sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "curve25519-dalek",
+            "version": "4.1.2",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-18T21:56:24Z",
+              "published": "2024-06-18T21:56:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x4gp-pqpj-f43q",
+              "related": [
+                "CGA-3fjx-3p86-j2mq",
+                "CGA-pqf5-73f6-2j68",
+                "CGA-rrxp-vx65-hrrv"
+              ],
+              "summary": "curve25519-dalek has timing variability in `curve25519-dalek`'s `Scalar29::sub`/`Scalar52::sub`",
+              "details": "Timing variability of any kind is problematic when working with  potentially secret values such as\nelliptic curve scalars, and such issues can potentially leak private keys and other secrets. Such a\nproblem was recently discovered in `curve25519-dalek`.\n\nThe `Scalar29::sub` (32-bit) and `Scalar52::sub` (64-bit) functions contained usage of a mask value\ninside a loop where LLVM saw an opportunity to insert a branch instruction (`jns` on x86) to\nconditionally bypass this code section when the mask value is set to zero as can be seen in godbolt:\n\n- 32-bit (see L106): https://godbolt.org/z/zvaWxzvqv\n- 64-bit (see L48): https://godbolt.org/z/PczYj7Pda\n\nA similar problem was recently discovered in the Kyber reference implementation:\n\nhttps://groups.google.com/a/list.nist.gov/g/pqc-forum/c/hqbtIGFKIpU/m/cnE3pbueBgAJ\n\nAs discussed on that thread, one portable solution, which is also used in this PR, is to introduce a\nvolatile read as an optimization barrier, which prevents the compiler from optimizing it away.\n\nThe fix can be validated in godbolt here:\n\n- 32-bit: https://godbolt.org/z/jc9j7eb8E\n- 64-bit: https://godbolt.org/z/x8d46Yfah\n\nThe problem was discovered and the solution independently verified by \nAlexander Wagner \u003calexander.wagner@aisec.fraunhofer.de\u003e and Lea Themint \u003clea.thiemt@tum.de\u003e using\ntheir DATA tool:\n\nhttps://github.com/Fraunhofer-AISEC/DATA\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "curve25519-dalek",
+                    "purl": "pkg:cargo/curve25519-dalek"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-x4gp-pqpj-f43q/GHSA-x4gp-pqpj-f43q.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek/pull/659"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek/commit/415892acf1cdf9161bd6a4c99bc2f4cb8fae5e6a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0344.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-203"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-18T21:56:24Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-19T00:10:32Z",
+              "published": "2024-06-18T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0344",
+              "summary": "Timing variability in `curve25519-dalek`'s `Scalar29::sub`/`Scalar52::sub`",
+              "details": "Timing variability of any kind is problematic when working with  potentially secret values such as\nelliptic curve scalars, and such issues can potentially leak private keys and other secrets. Such a\nproblem was recently discovered in `curve25519-dalek`.\n\nThe `Scalar29::sub` (32-bit) and `Scalar52::sub` (64-bit) functions contained usage of a mask value\ninside a loop where LLVM saw an opportunity to insert a branch instruction (`jns` on x86) to\nconditionally bypass this code section when the mask value is set to zero as can be seen in godbolt:\n\n- 32-bit (see L106): \u003chttps://godbolt.org/z/zvaWxzvqv\u003e\n- 64-bit (see L48): \u003chttps://godbolt.org/z/PczYj7Pda\u003e\n\nA similar problem was recently discovered in the Kyber reference implementation:\n\n\u003chttps://groups.google.com/a/list.nist.gov/g/pqc-forum/c/hqbtIGFKIpU/m/cnE3pbueBgAJ\u003e\n\nAs discussed on that thread, one portable solution, which is also used in this PR, is to introduce a\nvolatile read as an optimization barrier, which prevents the compiler from optimizing it away.\n\nThe fix can be validated in godbolt here:\n\n- 32-bit: \u003chttps://godbolt.org/z/jc9j7eb8E\u003e\n- 64-bit: \u003chttps://godbolt.org/z/x8d46Yfah\u003e\n\nThe problem was discovered and the solution independently verified by \nAlexander Wagner \u003calexander.wagner@aisec.fraunhofer.de\u003e and Lea Themint \u003clea.thiemt@tum.de\u003e using\ntheir DATA tool:\n\n\u003chttps://github.com/Fraunhofer-AISEC/DATA\u003e",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "curve25519-dalek",
+                    "purl": "pkg:cargo/curve25519-dalek"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "crypto-failure"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0344.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/curve25519-dalek"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0344.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek/pull/659"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-x4gp-pqpj-f43q"
+              ],
+              "aliases": [
+                "GHSA-x4gp-pqpj-f43q"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "RUSTSEC-2024-0344"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0344"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "quinn-proto",
+            "version": "0.11.3",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-09T14:20:32Z",
+              "published": "2024-09-03T20:49:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vr26-jcq5-fjj8",
+              "aliases": [
+                "CVE-2024-45311",
+                "RUSTSEC-2024-0373"
+              ],
+              "related": [
+                "CGA-6j6x-xqqf-gxgj",
+                "CGA-fmh7-xwqm-xf4p",
+                "CGA-fwmr-jxq6-6v7x",
+                "CGA-mmm5-8q9j-5wvr"
+              ],
+              "summary": "Denial of service in quinn-proto when using `Endpoint::retry()`",
+              "details": "### Summary\n\nAs of quinn-proto 0.11, it is possible for a server to `accept()`, `retry()`, `refuse()`, or `ignore()` an `Incoming` connection. However, calling `retry()` on an unvalidated connection exposes the server to a likely panic in the following situations:\n\n- Calling `refuse` or `ignore` on the resulting validated connection, if a duplicate initial packet is received\n  - This issue can go undetected until a server's `refuse()`/`ignore()` code path is exercised, such as to stop a denial of service attack.\n- Accepting when the initial packet for the resulting validated connection fails to decrypt or exhausts connection IDs, if a similar initial packet that successfully decrypts and doesn't exhaust connection IDs is received.\n  - This issue can go undetected if clients are well-behaved.\n\nThe former situation was observed in a real application, while the latter is only theoretical.\n\n### Details\n\nLocation of panic: https://github.com/quinn-rs/quinn/blob/bb02a12a8435a7732a1d762783eeacbb7e50418e/quinn-proto/src/endpoint.rs#L213\n\n### Impact\nDenial of service for internet-facing server",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "quinn-proto",
+                    "purl": "pkg:cargo/quinn-proto"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.11.0"
+                        },
+                        {
+                          "fixed": "0.11.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-vr26-jcq5-fjj8/GHSA-vr26-jcq5-fjj8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/quinn-rs/quinn/security/advisories/GHSA-vr26-jcq5-fjj8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45311"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/quinn-rs/quinn/commit/e01609ccd8738bd438d86fa7185a0f85598cb58f"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/quinn-rs/quinn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/quinn-rs/quinn/blob/bb02a12a8435a7732a1d762783eeacbb7e50418e/quinn-proto/src/endpoint.rs#L213"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0373.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-670"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-03T20:49:26Z",
+                "nvd_published_at": "2024-09-02T18:15:37Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-09-08T02:12:03Z",
+              "published": "2024-09-02T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0373",
+              "aliases": [
+                "CVE-2024-45311",
+                "GHSA-vr26-jcq5-fjj8"
+              ],
+              "summary": "`Endpoint::retry()` calls can lead to panicking",
+              "details": "In 0.11.0, we overhauled the server-side `Endpoint` implementation to enable\nmore careful handling of incoming connection attempts. However, some of the\ncode paths that cleaned up state after connection attempts were processed\nconfused the initial destination connection ID with the destination connection\nID of a substantial package. This resulted in the internal `Endpoint` state\nbecoming inconsistent, which could then lead to a panic.\n\nhttps://github.com/quinn-rs/quinn/commit/e01609ccd8738bd438d86fa7185a0f85598cb58f\n\nThanks to [@finbear](https://github.com/finnbear) for reporting and investingating,\nand to [@BiagoFesta](https://github.com/BiagoFesta) for coordinating.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "quinn-proto",
+                    "purl": "pkg:cargo/quinn-proto"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.11.0"
+                        },
+                        {
+                          "fixed": "0.11.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0373.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/quinn-proto"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0373.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/quinn-rs/quinn"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-vr26-jcq5-fjj8",
+                "RUSTSEC-2024-0373"
+              ],
+              "aliases": [
+                "CVE-2024-45311",
+                "GHSA-vr26-jcq5-fjj8",
+                "RUSTSEC-2024-0373"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "yaml-rust",
+            "version": "0.4.5",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-03-25T09:14:09Z",
+              "published": "2024-03-20T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0320",
+              "summary": "yaml-rust is unmaintained.",
+              "details": "The maintainer seems [unreachable](https://github.com/chyh1990/yaml-rust/issues/197).\n\nMany issues and pull requests have been submitted over the years\nwithout any [response](https://github.com/chyh1990/yaml-rust/issues/160).\n\n## Alternatives\n\nConsider switching to the actively maintained `yaml-rust2` fork of the original project:\n\n- [yaml-rust2](https://github.com/Ethiraric/yaml-rust2)\n- [yaml-rust2 @ crates.io](https://crates.io/crates/yaml-rust2))",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "yaml-rust",
+                    "purl": "pkg:cargo/yaml-rust"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0320.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/yaml-rust"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0320.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/rustsec/advisory-db/issues/1921"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "RUSTSEC-2024-0320"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0320"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "zerovec",
+            "version": "0.10.2",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-08T18:36:40Z",
+              "published": "2024-07-08T18:36:40Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xrv3-jmcp-374j",
+              "related": [
+                "CGA-4fhf-98hv-qppq"
+              ],
+              "summary": "zerovec incorrectly uses `#[repr(packed)]`",
+              "details": "The affected versions make unsafe memory accesses under the assumption that `#[repr(packed)]` has a guaranteed field order. \n\nThe Rust specification does not guarantee this, and https://github.com/rust-lang/rust/pull/125360 (1.80.0-beta) starts \nreordering fields of `#[repr(packed)]` structs, leading to illegal memory accesses.\n\nThe patched versions `0.9.7` and `0.10.4` use `#[repr(C, packed)]`, which guarantees field order.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "zerovec",
+                    "purl": "pkg:cargo/zerovec"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.10.0"
+                        },
+                        {
+                          "fixed": "0.10.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-xrv3-jmcp-374j/GHSA-xrv3-jmcp-374j.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "zerovec",
+                    "purl": "pkg:cargo/zerovec"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.9.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-xrv3-jmcp-374j/GHSA-xrv3-jmcp-374j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0347.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-120"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-08T18:36:40Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-08T14:45:30Z",
+              "published": "2024-07-01T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0347",
+              "summary": "Incorrect usage of `#[repr(packed)]`",
+              "details": "The affected versions make unsafe memory accesses under the assumption that `#[repr(packed)]` has a guaranteed field order. \n\nThe Rust specification does not guarantee this, and https://github.com/rust-lang/rust/pull/125360 (1.80.0-beta) starts \nreordering fields of `#[repr(packed)]` structs, leading to illegal memory accesses.\n\nThe patched versions `0.9.7` and `0.10.4` use `#[repr(C, packed)]`, which guarantees field order.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "zerovec",
+                    "purl": "pkg:cargo/zerovec"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.9.7"
+                        },
+                        {
+                          "introduced": "0.10.0"
+                        },
+                        {
+                          "fixed": "0.10.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "memory-corruption"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0347.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/zerovec"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0347.html"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xrv3-jmcp-374j"
+              ],
+              "aliases": [
+                "GHSA-xrv3-jmcp-374j"
+              ],
+              "max_severity": "6.9"
+            },
+            {
+              "ids": [
+                "RUSTSEC-2024-0347"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0347"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "zerovec-derive",
+            "version": "0.10.2",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-09T19:45:09Z",
+              "published": "2024-07-08T18:39:18Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-74r5-g7vc-j2v2",
+              "related": [
+                "CGA-w6c5-59gw-jcw8"
+              ],
+              "summary": "zerovec-derive incorrectly uses `#[repr(packed)]`",
+              "details": "The affected versions make unsafe memory accesses under the assumption that `#[repr(packed)]` has a guaranteed field order. \n\nThe Rust specification does not guarantee this, and https://github.com/rust-lang/rust/pull/125360 (1.80.0-beta) starts \nreordering fields of `#[repr(packed)]` structs, leading to illegal memory accesses.\n\nThe patched versions `0.9.7` and `0.10.3` use `#[repr(C, packed)]`, which guarantees field order.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "zerovec-derive",
+                    "purl": "pkg:cargo/zerovec-derive"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.10.0"
+                        },
+                        {
+                          "fixed": "0.10.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-74r5-g7vc-j2v2/GHSA-74r5-g7vc-j2v2.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "zerovec-derive",
+                    "purl": "pkg:cargo/zerovec-derive"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.9.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-74r5-g7vc-j2v2/GHSA-74r5-g7vc-j2v2.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/unicode-org/icu4x/issues/5196#issuecomment-2214711069"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustsec/advisory-db/pull/2007"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0346.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-120"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-08T18:39:18Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-08T17:05:42Z",
+              "published": "2024-07-01T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0346",
+              "summary": "Incorrect usage of `#[repr(packed)]`",
+              "details": "The affected versions make unsafe memory accesses under the assumption that `#[repr(packed)]` has a guaranteed field order. \n\nThe Rust specification does not guarantee this, and https://github.com/rust-lang/rust/pull/125360 (1.80.0-beta) starts \nreordering fields of `#[repr(packed)]` structs, leading to illegal memory accesses.\n\nThe patched versions `0.9.7` and `0.10.3` use `#[repr(C, packed)]`, which guarantees field order.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "zerovec-derive",
+                    "purl": "pkg:cargo/zerovec-derive"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.9.7"
+                        },
+                        {
+                          "introduced": "0.10.0"
+                        },
+                        {
+                          "fixed": "0.10.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "memory-corruption"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0346.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/zerovec-derive"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0346.html"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-74r5-g7vc-j2v2"
+              ],
+              "aliases": [
+                "GHSA-74r5-g7vc-j2v2"
+              ],
+              "max_severity": "6.9"
+            },
+            {
+              "ids": [
+                "RUSTSEC-2024-0346"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0346"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

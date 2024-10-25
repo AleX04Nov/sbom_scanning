@@ -1,0 +1,2182 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/microsoft_msstore-cli_release_h4f518iv_manifest.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "System.Text.Json",
+            "version": "8.0.0",
+            "ecosystem": "NuGet"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-09T01:26:25Z",
+              "published": "2024-10-08T20:25:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8g4q-xg66-9fp4",
+              "aliases": [
+                "CVE-2024-43485"
+              ],
+              "summary": "Microsoft Security Advisory CVE-2024-43485 | .NET Denial of Service Vulnerability",
+              "details": "# Microsoft Security Advisory CVE-2024-43485 | .NET Denial of Service Vulnerability\n\n## \u003ca name=\"executive-summary\"\u003e\u003c/a\u003eExecutive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in System.Text.Json 6.0.x and 8.0.x. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nIn System.Text.Json 6.0.x and 8.0.x, applications which deserialize input to a model with an `[ExtensionData]` property can be vulnerable to an algorithmic complexity attack resulting in Denial of Service.\n\n## Announcement\n\nAnnouncement for this issue can be found at https://github.com/dotnet/announcements/issues/329\n\n## \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nJSON models which do not utilize the `[ExtensionData]` feature are not impacted by this vulnerability.\n\n## \u003ca name=\"affected-software\"\u003e\u003c/a\u003eAffected software\n\n* Any .NET 8.0 application running on .NET 8.0.8 or earlier.\n* Any .NET 6.0 aplication running on .NET 6.0.33 or earlier.\n* Any application consuming one of the [vulnerable packages](affected-packages).\n\n## \u003ca name=\"affected-packages\"\u003e\u003c/a\u003eAffected Packages\nThe vulnerability affects any Microsoft .NET Core project if it uses any of affected packages versions listed below\n\n\n### \u003ca name=\".NET 8\"\u003e\u003c/a\u003e.NET 8\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.Text.Json](https://www.nuget.org/packages/System.Text.Json)                   | \u003e= 8.0.0, \u003c= 8.0.4 | 8.0.5\n\n### \u003ca name=\".NET 6\"\u003e\u003c/a\u003e.NET 6\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.Text.Json](https://www.nuget.org/packages/System.Text.Json)                   | \u003e= 6.0.0, \u003c= 6.0.9 | 6.0.10\n\n\n## Advisory FAQ\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\nIf you have a runtime or SDK with a version listed, or an affected package listed in [affected software](#affected-packages) or [affected packages](#affected-software), you're exposed to the vulnerability.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* To fix the issue please install the latest version of .NET 8.0 or .NET 6.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* .NET Framework-based applications and other application types need to perform a package update.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n\n Version:   8.0.200\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\6.0.300\\\n\nHost (useful for support):\n\n  Version: 8.0.3\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  8.0.200 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspAspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspAspNetCore.App]\n  Microsoft.AspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.WindowsDesktop.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 6.0, you should download and install .NET 6.0.35  Runtime or .NET 6.0.135 SDK (for Visual Studio 2022 v17.6) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n* If you're using .NET 8.0, you should download and install .NET 8.0.10  Runtime or .NET 8.0.110 SDK (for Visual Studio 2022 v17.8) from https://dotnet.microsoft.com/download/dotnet-core/8.0.\n\n.NET 8.0 and .NET 6.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 8.0 or .NET 6.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### External Links\n\n[CVE-2024-43485]( https://www.cve.org/CVERecord?id=CVE-2024-43485)\n\n### Revisions\n\nV1.0 (October 08, 2024): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2024-10-08_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Text.Json",
+                    "purl": "pkg:nuget/System.Text.Json"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0"
+                        },
+                        {
+                          "fixed": "8.0.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0",
+                    "8.0.1",
+                    "8.0.2",
+                    "8.0.3",
+                    "8.0.4"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-8g4q-xg66-9fp4/GHSA-8g4q-xg66-9fp4.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Text.Json",
+                    "purl": "pkg:nuget/System.Text.Json"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0"
+                        },
+                        {
+                          "fixed": "6.0.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0.5",
+                    "6.0.6",
+                    "6.0.7",
+                    "6.0.8",
+                    "6.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.9",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-8g4q-xg66-9fp4/GHSA-8g4q-xg66-9fp4.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-8g4q-xg66-9fp4"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43485"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/329"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/issues/108678"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/runtime"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43485"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-08T20:25:19Z",
+                "nvd_published_at": "2024-10-08T18:15:10Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-07-20T08:11:41Z",
+              "published": "2024-07-09T21:14:10Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hh2w-p6rv-4g7w",
+              "aliases": [
+                "BIT-dotnet-2024-30105",
+                "BIT-dotnet-sdk-2024-30105",
+                "CVE-2024-30105"
+              ],
+              "related": [
+                "CGA-jh5q-2rrw-hwjq"
+              ],
+              "summary": "Microsoft Security Advisory CVE-2024-30105 | .NET Denial of Service Vulnerability",
+              "details": "# Microsoft Security Advisory CVE-2024-30105 | .NET Denial of Service Vulnerability\n\n## \u003ca name=\"executive-summary\"\u003e\u003c/a\u003eExecutive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in  .NET 8.0. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nA vulnerability exists in .NET when calling the JsonSerializer.DeserializeAsyncEnumerable method against an untrusted input using System.Text.Json may result in Denial of Service.\n\n## Discussion\n\nDiscussion for this issue can be found at  https://github.com/dotnet/runtime/issues/104619\n\n## \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nMicrosoft has not identified any mitigating factors for this vulnerability.\n\n## \u003ca name=\"affected-software\"\u003e\u003c/a\u003eAffected software\n\n* Any .NET 8.0 application running on .NET 8.0.6 or earlier.\n\n## \u003ca name=\"affected-packages\"\u003e\u003c/a\u003eAffected Packages\nThe vulnerability affects any Microsoft .NET Core project if it uses any of affected packages versions listed below\n\n### \u003ca name=\".NET 8\"\u003e\u003c/a\u003e.NET 8\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.Text.Json](https://www.nuget.org/packages/System.Text.Json)               | \u003e= 7.0.0, \u003c =8.0.3 | 8.0.4\n\n\n## Advisory FAQ\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\nIf you have a runtime or SDK with a version listed, or an affected package listed in [affected software](#affected-packages) or [affected packages](#affected-software), you're exposed to the vulnerability.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* To fix the issue please install the latest version of .NET 8.0 . If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n\n Version:   8.0.200\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\6.0.300\\\n\nHost (useful for support):\n\n  Version: 8.0.3\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  8.0.200 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspAspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspAspNetCore.App]\n  Microsoft.AspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.WindowsDesktop.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 8.0, you should download and install .NET 8.0.7  Runtime or .NET 8.0.107 SDK (for Visual Studio 2022 v17.8) from https://dotnet.microsoft.com/download/dotnet-core/8.0.\n\n.NET 8.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 8.0 or .NET 7.0 or .NET 6.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### External Links\n\n[CVE-2024-30105]( https://www.cve.org/CVERecord?id=CVE-2024-30105)\n\n### Revisions\n\nV1.0 (July 09, 2024): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2024-07-09_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Text.Json",
+                    "purl": "pkg:nuget/System.Text.Json"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "8.0.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.0.4",
+                    "8.0.0",
+                    "8.0.1",
+                    "8.0.2",
+                    "8.0.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-hh2w-p6rv-4g7w/GHSA-hh2w-p6rv-4g7w.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-hh2w-p6rv-4g7w"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-30105"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/runtime"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30105"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-09T21:14:10Z",
+                "nvd_published_at": "2024-07-09T17:15:17Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-8g4q-xg66-9fp4"
+              ],
+              "aliases": [
+                "CVE-2024-43485",
+                "GHSA-8g4q-xg66-9fp4"
+              ],
+              "max_severity": "8.8"
+            },
+            {
+              "ids": [
+                "GHSA-hh2w-p6rv-4g7w"
+              ],
+              "aliases": [
+                "BIT-dotnet-2024-30105",
+                "BIT-dotnet-sdk-2024-30105",
+                "CVE-2024-30105",
+                "GHSA-hh2w-p6rv-4g7w"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "Microsoft.Identity.Client",
+            "version": "4.61.0",
+            "ecosystem": "NuGet"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:27:04Z",
+              "published": "2024-06-11T18:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m5vv-6r4h-3vj9",
+              "aliases": [
+                "CVE-2024-35255",
+                "GO-2024-2918"
+              ],
+              "related": [
+                "CGA-22v2-fxwf-9fr6",
+                "CGA-239r-c5f9-fpfj",
+                "CGA-23qm-339g-q5rq",
+                "CGA-24w3-c8cq-57qw",
+                "CGA-2692-hcq7-xjm8",
+                "CGA-28v8-7f8r-m9ww",
+                "CGA-295j-75j3-84vw",
+                "CGA-2cm4-vpc6-pv3j",
+                "CGA-2jpc-9pc4-35x9",
+                "CGA-2p8f-mv2m-8p2g",
+                "CGA-2q47-7rqc-rvpr",
+                "CGA-2r8r-8pf9-93p6",
+                "CGA-2whj-v58w-p3cw",
+                "CGA-2xfh-qmgq-vx5v",
+                "CGA-33cm-cxfp-hq9x",
+                "CGA-35qq-v4x7-g8hr",
+                "CGA-3gfh-xg79-64rx",
+                "CGA-3hgh-xw5g-q968",
+                "CGA-3mg9-gppp-p5xg",
+                "CGA-42mp-vp7j-m293",
+                "CGA-46jv-359v-37c2",
+                "CGA-48qh-3cmx-x3q7",
+                "CGA-4c8h-55mj-27g9",
+                "CGA-4cp8-v8x9-xf65",
+                "CGA-4g9m-vv8j-hw69",
+                "CGA-4gf6-v2x3-r55p",
+                "CGA-4hfg-7vmx-9jvw",
+                "CGA-4q6g-7c97-xpcc",
+                "CGA-525c-q846-rphh",
+                "CGA-562h-vqjm-ghfg",
+                "CGA-56xw-wjg8-j46r",
+                "CGA-5f2c-7cjw-vfxg",
+                "CGA-5hj9-rjqf-qcxc",
+                "CGA-5ppx-hc8c-fq3g",
+                "CGA-5qxp-943m-6pf3",
+                "CGA-5rw9-rrmv-pmfr",
+                "CGA-5xwc-hffc-phx4",
+                "CGA-63vw-p545-47gm",
+                "CGA-67hg-88j4-hpq8",
+                "CGA-6ppc-7w2f-hw86",
+                "CGA-6w2h-93jf-xf67",
+                "CGA-73qv-xhj6-j54c",
+                "CGA-7c7g-h9fv-q8j3",
+                "CGA-7f7r-5pp2-5g35",
+                "CGA-7g64-4rrc-2xmx",
+                "CGA-7qrr-xjp6-fjxm",
+                "CGA-7w94-v262-g4jv",
+                "CGA-84mf-6w7v-xpm3",
+                "CGA-87rr-22r2-g8x6",
+                "CGA-8mj5-qc52-76qf",
+                "CGA-8qw6-v3xw-qphj",
+                "CGA-8x4m-9598-h9g4",
+                "CGA-8xqf-2j7q-9gjw",
+                "CGA-925c-qrgr-37xp",
+                "CGA-94wr-fc7q-9496",
+                "CGA-96hr-8566-xc9j",
+                "CGA-98x5-2cwf-6r85",
+                "CGA-9932-7qxv-xj4w",
+                "CGA-99j2-2p96-3v6m",
+                "CGA-9mpm-96vr-8v53",
+                "CGA-9q5x-f9q6-j52q",
+                "CGA-9qh2-h2gh-qp89",
+                "CGA-9qwr-q2wh-qfvf",
+                "CGA-9x78-w7v8-whxf",
+                "CGA-c7cv-4x3g-mg7h",
+                "CGA-c8q8-c29m-7vmq",
+                "CGA-f2q2-cx8f-c86p",
+                "CGA-f42v-9vqh-cg28",
+                "CGA-f697-72xm-6h8m",
+                "CGA-f7gg-hgq4-hpf4",
+                "CGA-f87j-mwwr-p28x",
+                "CGA-fcv3-88m9-wp7j",
+                "CGA-ff6m-2686-9x3m",
+                "CGA-frrf-2vc3-mfr3",
+                "CGA-g7v9-vhpv-q43g",
+                "CGA-g9xv-mrf3-2jx9",
+                "CGA-h77w-v467-3cxg",
+                "CGA-h92v-4jxh-fr55",
+                "CGA-h96h-jwq9-2843",
+                "CGA-h97j-j3cx-2f23",
+                "CGA-hfq8-fhqg-qhqx",
+                "CGA-hjwx-8794-hj5w",
+                "CGA-hqvj-7964-g4jg",
+                "CGA-hvcv-mvpr-vc77",
+                "CGA-j3pv-xcfg-x4gc",
+                "CGA-jq77-vh5j-x3gh",
+                "CGA-m5m3-54c5-23rr",
+                "CGA-mc8m-44p5-273h",
+                "CGA-mf3v-prm8-j3gq",
+                "CGA-mg58-x2gv-pr6r",
+                "CGA-mhr5-mm59-g9v8",
+                "CGA-mpvw-q85f-chh9",
+                "CGA-mwp3-p76c-m3qq",
+                "CGA-p3w2-7jg8-hqrq",
+                "CGA-p5hj-4w5m-gvwp",
+                "CGA-p95p-m854-8783",
+                "CGA-p9mr-h84j-x2p6",
+                "CGA-pgfm-3gq9-vjmg",
+                "CGA-pvqw-fpfq-xh69",
+                "CGA-q5w3-f5vm-g9m3",
+                "CGA-q643-mc95-9f4f",
+                "CGA-q662-93cq-rqr3",
+                "CGA-q6c6-rcxj-5fmh",
+                "CGA-q97p-h56j-m4fv",
+                "CGA-qv5p-9m82-733m",
+                "CGA-r82q-hw76-gmrc",
+                "CGA-r84x-fv23-6q9m",
+                "CGA-rgv3-wg25-j59v",
+                "CGA-rm3q-73jc-4q9m",
+                "CGA-rq8w-587r-f9pm",
+                "CGA-rqxq-m4c2-x9ph",
+                "CGA-v3cj-jgcv-jmhw",
+                "CGA-v6vj-gm26-7r8p",
+                "CGA-vfm9-cgcj-prvp",
+                "CGA-vhj2-vrq8-mm67",
+                "CGA-vw5v-7qhc-9gg5",
+                "CGA-vw6g-89v3-x8pv",
+                "CGA-w34q-7mx6-527r",
+                "CGA-w6v8-wcmv-cfjx",
+                "CGA-wcmr-gjcv-ccpm",
+                "CGA-wqxh-m97h-j5f6",
+                "CGA-wwww-fc3r-f74g",
+                "CGA-wx3h-6vhc-mqpv",
+                "CGA-x3fq-g96j-xmjq",
+                "CGA-x6c3-p37f-phhf",
+                "CGA-x8q8-gpj4-r44c",
+                "CGA-xcg6-jg76-p7wq",
+                "CGA-xcmv-3hxx-7m2v",
+                "CGA-xj36-3hv3-chh7",
+                "CGA-xj6j-5vv8-pjv3",
+                "CGA-xvjv-2jwr-6897",
+                "CGA-xvp5-g73c-c5j4"
+              ],
+              "summary": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability",
+              "details": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "azure-identity",
+                    "purl": "pkg:pypi/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0b1",
+                    "1.0.0b2",
+                    "1.0.0b3",
+                    "1.0.0b4",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.0b1",
+                    "1.11.0",
+                    "1.11.0b1",
+                    "1.11.0b2",
+                    "1.11.0b3",
+                    "1.12.0",
+                    "1.12.0b1",
+                    "1.12.0b2",
+                    "1.13.0",
+                    "1.13.0b1",
+                    "1.13.0b2",
+                    "1.13.0b3",
+                    "1.13.0b4",
+                    "1.14.0",
+                    "1.14.0b1",
+                    "1.14.0b2",
+                    "1.14.1",
+                    "1.15.0",
+                    "1.15.0b1",
+                    "1.15.0b2",
+                    "1.16.0",
+                    "1.16.0b1",
+                    "1.16.0b2",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.0b1",
+                    "1.4.0b2",
+                    "1.4.0b3",
+                    "1.4.0b4",
+                    "1.4.0b5",
+                    "1.4.0b6",
+                    "1.4.0b7",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.5.0b1",
+                    "1.5.0b2",
+                    "1.6.0",
+                    "1.6.0b1",
+                    "1.6.0b2",
+                    "1.6.0b3",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0b1",
+                    "1.7.0b2",
+                    "1.7.0b3",
+                    "1.7.0b4",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.0b1",
+                    "1.9.0",
+                    "1.9.0b1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/identity",
+                    "purl": "pkg:npm/%40azure/identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.azure:azure-identity",
+                    "purl": "pkg:maven/com.azure/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.12.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0-preview.1",
+                    "1.0.0-preview.2",
+                    "1.0.0-preview.3",
+                    "1.0.0-preview.4",
+                    "1.0.0-preview.5",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.0-beta.1",
+                    "1.1.0-beta.2",
+                    "1.1.0-beta.3",
+                    "1.1.0-beta.4",
+                    "1.1.0-beta.5",
+                    "1.1.0-beta.6",
+                    "1.1.0-beta.7",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0-beta.1",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.0-beta.1",
+                    "1.11.0-beta.2",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.12.0",
+                    "1.12.0-beta.1",
+                    "1.12.1",
+                    "1.2.0",
+                    "1.2.0-beta.1",
+                    "1.2.0-beta.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.0-beta.1",
+                    "1.3.0-beta.2",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.4.0",
+                    "1.4.0-beta.1",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.5.0",
+                    "1.5.0-beta.1",
+                    "1.5.0-beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0-beta.1",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta.1",
+                    "1.7.0-beta.2",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.0-beta.1",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9.0",
+                    "1.9.0-beta.1",
+                    "1.9.0-beta.2",
+                    "1.9.0-beta.3",
+                    "1.9.1",
+                    "1.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/msal-node",
+                    "purl": "pkg:npm/%40azure/msal-node"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.7.0"
+                        },
+                        {
+                          "fixed": "2.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.49.1"
+                        },
+                        {
+                          "fixed": "4.60.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.49.1",
+                    "4.50.0",
+                    "4.51.0",
+                    "4.52.0",
+                    "4.53.0",
+                    "4.54.0",
+                    "4.54.1",
+                    "4.55.0",
+                    "4.55.0-TestPackage",
+                    "4.56.0",
+                    "4.57.0",
+                    "4.58.0",
+                    "4.58.1",
+                    "4.59.0",
+                    "4.59.1",
+                    "4.60.0",
+                    "4.60.0-netonly",
+                    "4.60.1",
+                    "4.60.2",
+                    "4.60.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/Azure/azure-sdk-for-go/sdk/azidentity",
+                    "purl": "pkg:golang/github.com/Azure/azure-sdk-for-go/sdk/azidentity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.microsoft.azure:msal4j",
+                    "purl": "pkg:maven/com.microsoft.azure/msal4j"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.14.4-beta"
+                        },
+                        {
+                          "fixed": "1.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.14.4-beta",
+                    "1.15.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Azure.Identity",
+                    "purl": "pkg:nuget/Azure.Identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.11.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.61.0"
+                        },
+                        {
+                          "fixed": "4.61.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.61.0",
+                    "4.61.1",
+                    "4.61.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35255"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/4806#issuecomment-2178960340"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-go/commit/50774cd9709905523136fb05e8c85a50e8984499"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-java/commit/5bf020d6ea056de40e2738e3647a4e06f902c18d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-js/commit/c6aa75d312ae463e744163cedfd8fc480cc8d492"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-net/commit/9279a4f38bf69b457cfb9b354f210e0a540a5c53"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-python/commit/cb065acd7d0f957327dc4f02d1646d4e51a94178"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35255"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-11T19:57:01Z",
+                "nvd_published_at": "2024-06-11T17:16:03Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m5vv-6r4h-3vj9"
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GHSA-m5vv-6r4h-3vj9",
+                "GO-2024-2918"
+              ],
+              "max_severity": "6.8"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "npm",
+            "version": "1.0.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T03:57:19Z",
+              "published": "2020-09-01T16:03:34Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v3jv-wrf4-5845",
+              "aliases": [
+                "CVE-2013-4116"
+              ],
+              "related": [
+                "CGA-3fhq-x3g3-xxpf",
+                "CGA-5cr8-cv92-8cjj",
+                "CGA-5pr3-fjwr-38q2",
+                "CGA-8gg5-rvx4-4g3v",
+                "CGA-gvfm-8c69-6984",
+                "CGA-x9wg-9p8q-6fmj"
+              ],
+              "summary": "Local Privilege Escalation in npm",
+              "details": "Affected versions of `npm` use predictable temporary file names during archive unpacking. If an attacker can create a symbolic link at the location of one of these temporary file names, the attacker can arbitrarily write to any file that the user which owns the `npm` process has permission to write to, potentially resulting in local privilege escalation.\n\n\n\n## Recommendation\n\nUpdate to version 1.3.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/09/GHSA-v3jv-wrf4-5845/GHSA-v3jv-wrf4-5845.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2013-4116"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/issues/3635"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/commit/f4d31693"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=715325"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=983917"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/87141"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/npm"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/152"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2013/07/10/17"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2013/07/11/9"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.securityfocus.com/bid/61083"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-08-31T18:12:39Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2023-11-08T03:58:27Z",
+              "published": "2018-07-31T22:58:35Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m5h6-hr3q-22h5",
+              "aliases": [
+                "CVE-2016-3956"
+              ],
+              "related": [
+                "CGA-23vm-87qj-2r94",
+                "CGA-4qf6-h3f5-p5h9",
+                "CGA-4wrw-mmw5-fwmq",
+                "CGA-9m4w-3mq6-f9p6",
+                "CGA-mcgc-qpmg-r674",
+                "CGA-pfmc-9pxp-xx2w"
+              ],
+              "summary": "npm Token Leak in npm",
+              "details": "Affected versions of the `npm` package include the bearer token of the logged in user in every request made by the CLI, even if the request is not directed towards the user's active registry. \n\nAn attacker could create an HTTP server to collect tokens, and by various means including but not limited to install scripts, cause the npm CLI to make a request to that server, which would compromise the user's token.\n\nThis compromised token could be used to do anything that the user could do, including publishing new packages.\n\n\n\n\n## Recommendation\n\n1. Update npm with `npm install npm@latest -g`\n2. [Revoke your Tokens](https://www.npmjs.com/settings/tokens)\n3. Enable [Two-Factor Authentication](https://docs.npmjs.com/getting-started/using-two-factor-authentication)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 2.15.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-m5h6-hr3q-22h5/GHSA-m5h6-hr3q-22h5.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.8.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 3.8.2",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2018/07/GHSA-m5h6-hr3q-22h5/GHSA-m5h6-hr3q-22h5.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-3956"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/issues/8380"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/commit/f67ecad59e99a03e5aad8e93cd1a086ae087cb29"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/commit/fea8cc92cee02c720b58f95f14d315507ccad401"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-m5h6-hr3q-22h5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://nodejs.org/en/blog/vulnerability/npm-tokens-leak-march-2016"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/98"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://blog.npmjs.org/post/142036323955/fixing-a-bearer-token-vulnerability"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21980827"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T21:45:00Z",
+                "nvd_published_at": "2016-07-02T14:59:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:00:22Z",
+              "published": "2022-05-13T01:53:21Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-ph34-pc88-72gc",
+              "aliases": [
+                "CVE-2018-7408"
+              ],
+              "related": [
+                "CGA-8pwj-3778-v2hp",
+                "CGA-jg82-r23r-xh4j",
+                "CGA-p4hp-wx23-27c2",
+                "CGA-vqfx-gxpp-3v29",
+                "CGA-whx9-452c-jg94",
+                "CGA-wwjq-7mg2-2vrf"
+              ],
+              "summary": "Incorrect Permission Assignment for Critical Resource in NPM",
+              "details": "An issue was discovered in an npm 5.7.0 2018-02-21 pre-release (marked as \"next: 5.7.0\" and therefore automatically installed by an \"npm upgrade -g npm\" command, and also announced in the vendor's blog without mention of pre-release status). It might allow local users to bypass intended filesystem access restrictions because ownerships of /etc and /usr directories are being changed unexpectedly, related to a \"correctMkdir\" issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-ph34-pc88-72gc/GHSA-ph34-pc88-72gc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-7408"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/issues/19883"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/npm/commit/74e149da6efe6ed89477faa81fef08eee7999ad0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "github.com/npm/cli"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://blog.npmjs.org/post/171169301000/v571"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-732"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-06-28T23:53:12Z",
+                "nvd_published_at": "2018-02-22T18:29:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-13T15:39:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m6cx-g6qm-p2cx",
+              "aliases": [
+                "CVE-2019-16775"
+              ],
+              "related": [
+                "CGA-8w94-pp46-7qvq",
+                "CGA-98vh-v44p-jcg7",
+                "CGA-9c47-rqw6-g736",
+                "CGA-qmx7-mqcq-3j68",
+                "CGA-r7x8-7xc9-5m6p",
+                "CGA-vw3x-pf52-29hf"
+              ],
+              "summary": "Arbitrary File Write in npm",
+              "details": "Versions of the npm CLI prior to 6.13.3 are vulnerable to an Arbitrary File Write. It fails to prevent access to folders outside of the intended node_modules folder through the bin field. A properly constructed entry in the package.json bin field would allow a package publisher to create files on a user's system when the package is installed. It is only possible to affect files that the user running `npm install` has access to and it is not possible to over write files that already exist on disk.\n\nThis behavior is still possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.13.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-m6cx-g6qm-p2cx/GHSA-m6cx-g6qm-p2cx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-m6cx-g6qm-p2cx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16775"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHEA-2020:0330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0602"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-m6cx-g6qm-p2cx"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/cli"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z36UKPO5F3PQ3Q2POMF5LEKXWAH5RUFP"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1434"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00027.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-59",
+                  "CWE-61"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-17T16:30:50Z",
+                "nvd_published_at": "2019-12-13T01:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-13T15:39:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x8qc-rrcw-4r46",
+              "aliases": [
+                "CVE-2019-16776"
+              ],
+              "related": [
+                "CGA-4g2v-q782-wxq4",
+                "CGA-7r52-gvrc-c3pv",
+                "CGA-f83r-hf7q-6c4p",
+                "CGA-hmq4-gm5h-hpvw",
+                "CGA-m78g-5rxq-8j78",
+                "CGA-v37g-xh3f-2mmr"
+              ],
+              "summary": "npm symlink reference outside of node_modules",
+              "details": "Versions of the npm CLI prior to 6.13.3 are vulnerable to a symlink reference outside of node_modules. It is possible for packages to create symlinks to files outside of the`node_modules` folder through the `bin` field upon installation. A properly constructed entry in the package.json bin field would allow a package publisher to create a symlink pointing to arbitrary files on a user’s system when the package is installed. Only files accessible by the user running the `npm install` are affected.  \n\nThis behavior is still possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.3 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.13.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-x8qc-rrcw-4r46/GHSA-x8qc-rrcw-4r46.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-x8qc-rrcw-4r46"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16776"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHEA-2020:0330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0602"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-x8qc-rrcw-4r46"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z36UKPO5F3PQ3Q2POMF5LEKXWAH5RUFP"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1436"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00027.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T22:02:49Z",
+                "nvd_published_at": "2019-12-13T01:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:21Z",
+              "published": "2019-12-13T15:39:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4328-8hgf-7wjr",
+              "aliases": [
+                "CVE-2019-16777"
+              ],
+              "related": [
+                "CGA-68fw-64g8-fqg5",
+                "CGA-mmjq-pqj4-93rw",
+                "CGA-pxvx-jqf5-49xg",
+                "CGA-qvmj-2q9c-8qfc",
+                "CGA-vr46-jcf4-m7q4",
+                "CGA-xcwj-8f4j-j7xg"
+              ],
+              "summary": "npm Vulnerable to Global node_modules Binary Overwrite",
+              "details": "Versions of  the npm CLI prior to 6.13.4 are vulnerable to a Global node_modules Binary Overwrite. It fails to prevent existing globally-installed binaries to be overwritten by other package installations. \n\nFor example, if a package was installed globally and created a `serve` binary, any subsequent installs of packages that also create a `serve` binary would overwrite the first binary. This will not overwrite system binaries but only binaries put into the global node_modules directory.\n\nThis behavior is still allowed in local installations and also through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.4 or later.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.13.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/12/GHSA-4328-8hgf-7wjr/GHSA-4328-8hgf-7wjr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-4328-8hgf-7wjr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16777"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHEA-2020:0330"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0579"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0597"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0602"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-4328-8hgf-7wjr"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/npm/cli"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/Z36UKPO5F3PQ3Q2POMF5LEKXWAH5RUFP"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202003-48"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.npmjs.com/advisories/1437"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.oracle.com/security-alerts/cpujan2020.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00027.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22",
+                  "CWE-269"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-06-16T20:57:02Z",
+                "nvd_published_at": "2019-12-13T01:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:02:28Z",
+              "published": "2020-07-07T18:56:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-93f3-23rq-pjfp",
+              "aliases": [
+                "CVE-2020-15095"
+              ],
+              "related": [
+                "CGA-23r5-3j95-frx5",
+                "CGA-5v4m-h7wv-6856",
+                "CGA-69vm-c6v8-vcfg",
+                "CGA-c9mp-gjvw-6fj5",
+                "CGA-p9wr-q6wq-r874",
+                "CGA-v346-hw2h-f389"
+              ],
+              "summary": "npm CLI exposing sensitive information through logs",
+              "details": "Versions of the npm CLI prior to 6.14.6 are vulnerable to an information exposure vulnerability through log files. The CLI supports URLs like `\u003cprotocol\u003e://[\u003cuser\u003e[:\u003cpassword\u003e]@]\u003chostname\u003e[:\u003cport\u003e][:][/]\u003cpath\u003e`. The password value is not redacted and is printed to stdout and also to any generated log files.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "npm",
+                    "purl": "pkg:npm/npm"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.14.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/07/GHSA-93f3-23rq-pjfp/GHSA-93f3-23rq-pjfp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/security/advisories/GHSA-93f3-23rq-pjfp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-15095"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/commit/a9857b8f6869451ff058789c4631fadfde5bbcbc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/npm/cli/blob/66aab417f836a901f8afb265251f761bb0422463/CHANGELOG.md#6146-2020-07-07"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4OOYAMJVLLCLXDTHW3V5UXNULZBBK4O6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202101-07"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00011.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00015.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://lists.opensuse.org/opensuse-security-announce/2020-10/msg00023.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-07-07T18:30:59Z",
+                "nvd_published_at": "2020-07-07T19:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v3jv-wrf4-5845"
+              ],
+              "aliases": [
+                "CVE-2013-4116",
+                "GHSA-v3jv-wrf4-5845"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-m5h6-hr3q-22h5"
+              ],
+              "aliases": [
+                "CVE-2016-3956",
+                "GHSA-m5h6-hr3q-22h5"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GHSA-ph34-pc88-72gc"
+              ],
+              "aliases": [
+                "CVE-2018-7408",
+                "GHSA-ph34-pc88-72gc"
+              ],
+              "max_severity": "7.8"
+            },
+            {
+              "ids": [
+                "GHSA-m6cx-g6qm-p2cx"
+              ],
+              "aliases": [
+                "CVE-2019-16775",
+                "GHSA-m6cx-g6qm-p2cx"
+              ],
+              "max_severity": "7.7"
+            },
+            {
+              "ids": [
+                "GHSA-x8qc-rrcw-4r46"
+              ],
+              "aliases": [
+                "CVE-2019-16776",
+                "GHSA-x8qc-rrcw-4r46"
+              ],
+              "max_severity": "7.7"
+            },
+            {
+              "ids": [
+                "GHSA-4328-8hgf-7wjr"
+              ],
+              "aliases": [
+                "CVE-2019-16777",
+                "GHSA-4328-8hgf-7wjr"
+              ],
+              "max_severity": "7.7"
+            },
+            {
+              "ids": [
+                "GHSA-93f3-23rq-pjfp"
+              ],
+              "aliases": [
+                "CVE-2020-15095",
+                "GHSA-93f3-23rq-pjfp"
+              ],
+              "max_severity": "4.4"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "yarn",
+            "version": "1.0.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:01:36Z",
+              "published": "2019-07-31T04:22:15Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wqfc-cr59-h64p",
+              "aliases": [
+                "CVE-2019-5448"
+              ],
+              "summary": "Missing Encryption of Sensitive Data in yarn",
+              "details": "Yarn before 1.17.3 is vulnerable to Missing Encryption of Sensitive Data due to HTTP URLs in lockfile causing unencrypted authentication data to be sent over the network.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "yarn",
+                    "purl": "pkg:npm/yarn"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.17.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2019/07/GHSA-wqfc-cr59-h64p/GHSA-wqfc-cr59-h64p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/640904"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ChALkeR/notes/blob/master/Yarn-vuln.md"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://yarnpkg.com/blog/2019/07/12/recommended-security-update"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-311",
+                  "CWE-319"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2019-07-31T03:41:57Z",
+                "nvd_published_at": "2019-07-30T21:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:01:14Z",
+              "published": "2022-02-09T22:49:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hjxc-462x-x77j",
+              "aliases": [
+                "CVE-2019-15608"
+              ],
+              "summary": "TOCTOU Race Condition in Yarn",
+              "details": "The package integrity validation in yarn \u003c 1.19.0 contains a TOCTOU vulnerability where the hash is computed before writing a package to cache. It's not computed again when reading from the cache. This may lead to a cache pollution attack. This issue is fixed in 1.19.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "yarn",
+                    "purl": "pkg:npm/yarn"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.19.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-hjxc-462x-x77j/GHSA-hjxc-462x-x77j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-15608"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/commit/0474b8c66a8ea298f5e4dedc67b2de464297ad1c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/703138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/blob/master/CHANGELOG.md#1190"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-367"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-04-08T22:21:40Z",
+                "nvd_published_at": "2020-03-15T18:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-08-01T07:56:53Z",
+              "published": "2020-02-14T23:10:16Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-5xf4-f2fq-f69j",
+              "aliases": [
+                "CVE-2019-10773",
+                "SNYK-JS-YARN-537806,"
+              ],
+              "summary": "Yarn Improper link resolution before file access (Link Following)",
+              "details": "In Yarn before 1.21.1, the package install functionality can be abused to generate arbitrary symlinks on the host filesystem by using specially crafted \"bin\" keys. Existing files could be overwritten depending on the current user permission set.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "yarn",
+                    "purl": "pkg:npm/yarn"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.21.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2020/02/GHSA-5xf4-f2fq-f69j/GHSA-5xf4-f2fq-f69j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10773"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/issues/7761#issuecomment-565493023"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/pull/7755"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/commit/039bafd74b7b1a88a53a54f8fa6fa872615e90e7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/errata/RHSA-2020:0475"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blog.daniel-ruf.de/critical-design-flaw-npm-pnpm-yarn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/3HIZW4NZVV5QY5WWGW2JRP3FHYKZ6ZJ5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ITY5BC63CCC647DFNUQRQ5AJDKUKUNBI"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://snyk.io/vuln/SNYK-JS-YARN-537806,"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-78"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2020-02-13T21:01:35Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2023-11-08T04:04:13Z",
+              "published": "2022-02-09T22:43:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-8mfc-v7wv-p62g",
+              "aliases": [
+                "CVE-2020-8131"
+              ],
+              "summary": "Path Traversal in Yarn",
+              "details": "Arbitrary filesystem write vulnerability in Yarn 1.21.1 and earlier allows attackers to write to any path on the filesystem and potentially lead to arbitrary code execution by forcing the user to install a malicious package.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "yarn",
+                    "purl": "pkg:npm/yarn"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.21.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/02/GHSA-8mfc-v7wv-p62g/GHSA-8mfc-v7wv-p62g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8131"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/pull/7831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/730239"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-22"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2021-04-08T20:35:01Z",
+                "nvd_published_at": "2020-02-24T15:15:00Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-02-05T20:43:27Z",
+              "published": "2024-02-04T21:30:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-mpwj-fcr6-x34c",
+              "aliases": [
+                "CVE-2021-4435"
+              ],
+              "summary": "Yarn untrusted search path vulnerability",
+              "details": "An untrusted search path vulnerability was found in Yarn. When a victim runs certain Yarn commands in a directory with attacker-controlled content, malicious commands could be executed in unexpected ways.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "yarn",
+                    "purl": "pkg:npm/yarn"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22.13"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-mpwj-fcr6-x34c/GHSA-mpwj-fcr6-x34c.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4435"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/commit/67fcce88935e45092ffa2674c08053f1ef5268a1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/CVE-2021-4435"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2262284"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/yarnpkg/yarn"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/yarnpkg/yarn/releases/tag/v1.22.13"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-426"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-05T20:20:29Z",
+                "nvd_published_at": "2024-02-04T20:15:45Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wqfc-cr59-h64p"
+              ],
+              "aliases": [
+                "CVE-2019-5448",
+                "GHSA-wqfc-cr59-h64p"
+              ],
+              "max_severity": "8.1"
+            },
+            {
+              "ids": [
+                "GHSA-hjxc-462x-x77j"
+              ],
+              "aliases": [
+                "CVE-2019-15608",
+                "GHSA-hjxc-462x-x77j"
+              ],
+              "max_severity": "5.9"
+            },
+            {
+              "ids": [
+                "GHSA-5xf4-f2fq-f69j"
+              ],
+              "aliases": [
+                "CVE-2019-10773",
+                "GHSA-5xf4-f2fq-f69j",
+                "SNYK-JS-YARN-537806,"
+              ],
+              "max_severity": "7.8"
+            },
+            {
+              "ids": [
+                "GHSA-8mfc-v7wv-p62g"
+              ],
+              "aliases": [
+                "CVE-2020-8131",
+                "GHSA-8mfc-v7wv-p62g"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-mpwj-fcr6-x34c"
+              ],
+              "aliases": [
+                "CVE-2021-4435",
+                "GHSA-mpwj-fcr6-x34c"
+              ],
+              "max_severity": "7.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

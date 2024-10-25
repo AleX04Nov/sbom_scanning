@@ -10,7 +10,8 @@ import utils
 QUERY_LIST = [
     ('spdx_yaml', (utils.SPDX_YAML_FILTERS, utils.SPDX_YAML_FILE_FILTERS)),
     ('spdx_json', (utils.SPDX_JSON_FILTERS, utils.SPDX_JSON_FILE_FILTERS)),
-    ('spdx_spdx', (utils.SPDX_SPDX_FILTERS, utils.SPDX_SPDX_FILE_FILTERS)),
+    ('spdx_spdx', (utils.SPDX_SPDX_FILTERS, utils.SPDX_SPDX_FILE_FILTERS, utils.SPDX_SPDX_AND_FILTERS)),
+    ('spdx_rdf', (utils.SPDX_RDF_FILTERS, utils.SPDX_RDF_FILE_FILTERS)),
     ('spdx_generic', (utils.SPDX_GENERIC_FILTERS, utils.SPDX_GENERIC_FILE_FILTERS)),
     ('cyclonedx_xml', (utils.CYCLONEDX_XML_FILTERS, utils.CYCLONEDX_XML_FILE_FILTERS)),
     ('cyclonedx_json', (utils.CYCLONEDX_JSON_FILTERS, utils.CYCLONEDX_JSON_FILE_FILTERS))
@@ -66,10 +67,26 @@ async def main(folder=''):
             query += f' -file:{filter}'
         for filter in utils.REPO_FILTERS:
             query += f' -repo:{filter}'
-        for filter in query_details[0]:
-            query += f' /{filter}/ OR'
         if len(query_details[0]) > 0:
+            if len(query_details[0]) > 1:
+                query += ' ('
+            for filter in query_details[0]:
+                query += f' /{filter}/ OR'
+            # remove the last OR
             query = query[:-3]
+            # close the brackets
+            if len(query_details[0]) > 1:
+                query += ' )'
+            # Add AND filter (for SPDX tag-value)
+            if len(query_details) > 2 and len(query_details[2]) > 0:
+                query += ' AND'
+                if len(query_details[2]) > 1:
+                    query += ' ('
+                for filter in query_details[2]:
+                    query += f' /{filter}/ OR'
+                query = query[:-3]
+                if len(query_details[2]) > 1:
+                    query += ' )'
         for filter in query_details[1]:
             query += f' file:{filter}'
         sbom_dict[query_name] = await sourcegraph_cli_get_sboms(query)

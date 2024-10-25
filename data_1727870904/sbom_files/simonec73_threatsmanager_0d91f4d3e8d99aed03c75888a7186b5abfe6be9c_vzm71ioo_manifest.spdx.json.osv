@@ -1,0 +1,1999 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/simonec73_threatsmanager_0d91f4d3e8d99aed03c75888a7186b5abfe6be9c_vzm71ioo_manifest.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "Microsoft.IdentityModel.JsonWebTokens",
+            "version": "6.30.1",
+            "ecosystem": "NuGet"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-04-11T20:56:41Z",
+              "published": "2024-01-09T19:35:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-59j7-ghrg-fj52",
+              "aliases": [
+                "BIT-dotnet-2024-21319",
+                "BIT-dotnet-sdk-2024-21319",
+                "CVE-2024-21319"
+              ],
+              "summary": "Microsoft ASP.NET Core project templates vulnerable to denial of service",
+              "details": "# Microsoft Security Advisory CVE-2024-21319: .NET Denial of Service Vulnerability\n\n## Executive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in the ASP.NET Core project templates. This advisory also provides guidance on what developers can do to update their applications to address this vulnerability.\n\nA Denial of Service vulnerability exists in ASP.NET Core project templates which utilize JWT-based authentication tokens. This vulnerability allows an unauthenticated client to consume arbitrarily large amounts of server memory, potentially triggering an out-of-memory condition on the server and making the server no longer able to respond to legitimate requests. \n\n## Announcement\n\nAnnouncement for this issue can be found at https://github.com/dotnet/announcements/issues/290\n\n### Mitigation factors\n\nThis impacts only .NET Core-based projects that were created using any version of project templates listed in [affected software](#affected-software). \nOther project templates e.g., console applications, MAUI applications, Windows Forms or WPF applications, are not affected.\n\n## Affected software\n\nThis impacts only .NET Core-based projects that were created using any version of the below project templates.\n\n-\tASP.NET Core Web App (Model-View-Controller)\n-\tASP.NET Core Web API\n-\tASP.NET Core Web App (Razor Pages)\n-\tBlazor Server App\n-\tBlazor WebAssembly App\n\n## Advisory FAQ\n\n### How do I know if I am affected?\n\nIf you are you using project templates listed in [affected software](#affected-software), you may be exposed to the vulnerability.\n\n### How do I fix the issue?\n\n#### For existing projects:\nIf you ever created any of these projects via the dotnet new command or via Visual Studio's File -\u003e New Project gesture, and if you enabled federated authentication at project creation time, your project may be vulnerable. To remediate the vulnerability, use your package manager to update any references you may have to the Microsoft.AspNetCore.Authentication.JwtBearer, Microsoft.AspNetCore.Authentication.OpenIdConnect, and Microsoft.IdentityModel.JsonWebTokens packages to their respective latest versions. \n- [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer/) \n- [Microsoft.AspNetCore.Authentication.OpenIdConnect](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.OpenIdConnect/) \n\nIf your project does not reference any of those three packages, you are not exposed to this vulnerability.\n\n#### For new projects:\nTo remediate this issue please update to the latest SDK listed below. Simply installing the SDK update is not sufficient to remediate projects already-created / already-deployed projects which existed prior to this update being released.\n\n* To fix the issue please install the latest version of .NET 6.0 or .NET 7.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* If you are using one of the affected packages, please update to the patched version listed above.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n Version:   7.0.200\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\7.0.300\\\n\nHost (useful for support):\n\n  Version: 76.0.5\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  7.0.200 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspNetCore.App 7.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.NETCore.App 7.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\n  Microsoft.WindowsDesktop.App 7.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 8.0, you should download and install .NET 8.0.101 SDK (for Visual Studio 2022 v17.8) from https://dotnet.microsoft.com/download/dotnet-core/8.0.\n* If you're using .NET 7.0, you should download and install .NET SDK 7.0.115 (for Visual Studio 2022 v17.4) from https://dotnet.microsoft.com/download/dotnet-core/7.0.\n* If you're using .NET 6.0, you should download and install .NET SDK 6.0.321 (for Visual Studio 2022 v17.2) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n.NET 6.0, .NET 7.0, .NET 8.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 8.0 or .NET 7.0 or .NET 6.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### Acknowledgement\n\nMorgan Brown, Microsoft Corp.\n\n### External Links\n\n[CVE-2024-21319]( https://www.cve.org/CVERecord?id=CVE-2024-21319)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IdentityModel.Tokens.Jwt",
+                    "purl": "pkg:nuget/System.IdentityModel.Tokens.Jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "4.0.0",
+                    "4.0.0-RC1",
+                    "4.0.0-RC1-10701-1147",
+                    "4.0.0-RC2",
+                    "4.0.0-alpha",
+                    "4.0.0-beta1",
+                    "4.0.1",
+                    "4.0.2.202250630",
+                    "4.0.2.202250711",
+                    "4.0.2.205111437",
+                    "4.0.2.206221351",
+                    "4.0.3.308261200",
+                    "4.0.4.402070948",
+                    "4.0.4.403061554",
+                    "5.0.0",
+                    "5.0.0-beta7-208241120",
+                    "5.0.0-beta8-210131116",
+                    "5.0.0-rc1-211161024",
+                    "5.0.0-rc2-305061149",
+                    "5.0.1-pre-310121323",
+                    "5.1.0",
+                    "5.1.1",
+                    "5.1.2",
+                    "5.1.3",
+                    "5.1.4",
+                    "5.1.5",
+                    "5.2.0",
+                    "5.2.0-preview1-408290725",
+                    "5.2.0-preview2-41113220915",
+                    "5.2.1",
+                    "5.2.2",
+                    "5.2.3",
+                    "5.2.4",
+                    "5.3.0",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.6.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IdentityModel.Tokens.Jwt",
+                    "purl": "pkg:nuget/System.IdentityModel.Tokens.Jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.5.0"
+                        },
+                        {
+                          "fixed": "6.34.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.10.0",
+                    "6.10.1",
+                    "6.10.2",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.12.1",
+                    "6.12.2",
+                    "6.13.0",
+                    "6.13.1",
+                    "6.14.0",
+                    "6.14.1",
+                    "6.15.0",
+                    "6.15.1",
+                    "6.16.0",
+                    "6.17.0",
+                    "6.18.0",
+                    "6.19.0",
+                    "6.20.0",
+                    "6.21.0",
+                    "6.22.0",
+                    "6.22.1",
+                    "6.23.0",
+                    "6.23.1",
+                    "6.24.0",
+                    "6.25.0",
+                    "6.25.1",
+                    "6.26.0",
+                    "6.26.1",
+                    "6.27.0",
+                    "6.28.0",
+                    "6.28.1",
+                    "6.29.0",
+                    "6.30.0",
+                    "6.30.1",
+                    "6.31.0",
+                    "6.32.0",
+                    "6.32.1",
+                    "6.32.2",
+                    "6.32.3",
+                    "6.33.0",
+                    "6.5.0",
+                    "6.5.1",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.1",
+                    "6.7.2-preview-10803222715",
+                    "6.8.0",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IdentityModel.Tokens.Jwt",
+                    "purl": "pkg:nuget/System.IdentityModel.Tokens.Jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0-preview"
+                        },
+                        {
+                          "fixed": "7.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.0-preview",
+                    "7.0.0-preview2",
+                    "7.0.0-preview3",
+                    "7.0.0-preview4",
+                    "7.0.0-preview5",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.1.0-preview"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.IdentityModel.JsonWebTokens",
+                    "purl": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.2.4",
+                    "5.3.0",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.6.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.IdentityModel.JsonWebTokens",
+                    "purl": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.5.0"
+                        },
+                        {
+                          "fixed": "6.34.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.10.0",
+                    "6.10.1",
+                    "6.10.2",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.12.1",
+                    "6.12.2",
+                    "6.13.0",
+                    "6.13.1",
+                    "6.14.0",
+                    "6.14.1",
+                    "6.15.0",
+                    "6.15.1",
+                    "6.16.0",
+                    "6.17.0",
+                    "6.18.0",
+                    "6.19.0",
+                    "6.20.0",
+                    "6.21.0",
+                    "6.22.0",
+                    "6.22.1",
+                    "6.23.0",
+                    "6.23.1",
+                    "6.24.0",
+                    "6.25.0",
+                    "6.25.1",
+                    "6.26.0",
+                    "6.26.1",
+                    "6.27.0",
+                    "6.28.0",
+                    "6.28.1",
+                    "6.29.0",
+                    "6.30.0",
+                    "6.30.1",
+                    "6.31.0",
+                    "6.32.0",
+                    "6.32.1",
+                    "6.32.2",
+                    "6.32.3",
+                    "6.33.0",
+                    "6.5.0",
+                    "6.5.1",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.1",
+                    "6.7.2-preview-10803222715",
+                    "6.8.0",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.IdentityModel.JsonWebTokens",
+                    "purl": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0-preview"
+                        },
+                        {
+                          "fixed": "7.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.0-preview",
+                    "7.0.0-preview2",
+                    "7.0.0-preview3",
+                    "7.0.0-preview4",
+                    "7.0.0-preview5",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.1.0-preview"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/security/advisories/GHSA-8g9c-28fc-mcx2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-59j7-ghrg-fj52"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/290"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/aspnetcore"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-09T19:35:02Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-59j7-ghrg-fj52"
+              ],
+              "aliases": [
+                "BIT-dotnet-2024-21319",
+                "BIT-dotnet-sdk-2024-21319",
+                "CVE-2024-21319",
+                "GHSA-59j7-ghrg-fj52"
+              ],
+              "max_severity": "6.8"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "Microsoft.Identity.Client",
+            "version": "4.54.1",
+            "ecosystem": "NuGet"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:27:04Z",
+              "published": "2024-06-11T18:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m5vv-6r4h-3vj9",
+              "aliases": [
+                "CVE-2024-35255",
+                "GO-2024-2918"
+              ],
+              "related": [
+                "CGA-22v2-fxwf-9fr6",
+                "CGA-239r-c5f9-fpfj",
+                "CGA-23qm-339g-q5rq",
+                "CGA-24w3-c8cq-57qw",
+                "CGA-2692-hcq7-xjm8",
+                "CGA-28v8-7f8r-m9ww",
+                "CGA-295j-75j3-84vw",
+                "CGA-2cm4-vpc6-pv3j",
+                "CGA-2jpc-9pc4-35x9",
+                "CGA-2p8f-mv2m-8p2g",
+                "CGA-2q47-7rqc-rvpr",
+                "CGA-2r8r-8pf9-93p6",
+                "CGA-2whj-v58w-p3cw",
+                "CGA-2xfh-qmgq-vx5v",
+                "CGA-33cm-cxfp-hq9x",
+                "CGA-35qq-v4x7-g8hr",
+                "CGA-3gfh-xg79-64rx",
+                "CGA-3hgh-xw5g-q968",
+                "CGA-3mg9-gppp-p5xg",
+                "CGA-42mp-vp7j-m293",
+                "CGA-46jv-359v-37c2",
+                "CGA-48qh-3cmx-x3q7",
+                "CGA-4c8h-55mj-27g9",
+                "CGA-4cp8-v8x9-xf65",
+                "CGA-4g9m-vv8j-hw69",
+                "CGA-4gf6-v2x3-r55p",
+                "CGA-4hfg-7vmx-9jvw",
+                "CGA-4q6g-7c97-xpcc",
+                "CGA-525c-q846-rphh",
+                "CGA-562h-vqjm-ghfg",
+                "CGA-56xw-wjg8-j46r",
+                "CGA-5f2c-7cjw-vfxg",
+                "CGA-5hj9-rjqf-qcxc",
+                "CGA-5ppx-hc8c-fq3g",
+                "CGA-5qxp-943m-6pf3",
+                "CGA-5rw9-rrmv-pmfr",
+                "CGA-5xwc-hffc-phx4",
+                "CGA-63vw-p545-47gm",
+                "CGA-67hg-88j4-hpq8",
+                "CGA-6ppc-7w2f-hw86",
+                "CGA-6w2h-93jf-xf67",
+                "CGA-73qv-xhj6-j54c",
+                "CGA-7c7g-h9fv-q8j3",
+                "CGA-7f7r-5pp2-5g35",
+                "CGA-7g64-4rrc-2xmx",
+                "CGA-7qrr-xjp6-fjxm",
+                "CGA-7w94-v262-g4jv",
+                "CGA-84mf-6w7v-xpm3",
+                "CGA-87rr-22r2-g8x6",
+                "CGA-8mj5-qc52-76qf",
+                "CGA-8qw6-v3xw-qphj",
+                "CGA-8x4m-9598-h9g4",
+                "CGA-8xqf-2j7q-9gjw",
+                "CGA-925c-qrgr-37xp",
+                "CGA-94wr-fc7q-9496",
+                "CGA-96hr-8566-xc9j",
+                "CGA-98x5-2cwf-6r85",
+                "CGA-9932-7qxv-xj4w",
+                "CGA-99j2-2p96-3v6m",
+                "CGA-9mpm-96vr-8v53",
+                "CGA-9q5x-f9q6-j52q",
+                "CGA-9qh2-h2gh-qp89",
+                "CGA-9qwr-q2wh-qfvf",
+                "CGA-9x78-w7v8-whxf",
+                "CGA-c7cv-4x3g-mg7h",
+                "CGA-c8q8-c29m-7vmq",
+                "CGA-f2q2-cx8f-c86p",
+                "CGA-f42v-9vqh-cg28",
+                "CGA-f697-72xm-6h8m",
+                "CGA-f7gg-hgq4-hpf4",
+                "CGA-f87j-mwwr-p28x",
+                "CGA-fcv3-88m9-wp7j",
+                "CGA-ff6m-2686-9x3m",
+                "CGA-frrf-2vc3-mfr3",
+                "CGA-g7v9-vhpv-q43g",
+                "CGA-g9xv-mrf3-2jx9",
+                "CGA-h77w-v467-3cxg",
+                "CGA-h92v-4jxh-fr55",
+                "CGA-h96h-jwq9-2843",
+                "CGA-h97j-j3cx-2f23",
+                "CGA-hfq8-fhqg-qhqx",
+                "CGA-hjwx-8794-hj5w",
+                "CGA-hqvj-7964-g4jg",
+                "CGA-hvcv-mvpr-vc77",
+                "CGA-j3pv-xcfg-x4gc",
+                "CGA-jq77-vh5j-x3gh",
+                "CGA-m5m3-54c5-23rr",
+                "CGA-mc8m-44p5-273h",
+                "CGA-mf3v-prm8-j3gq",
+                "CGA-mg58-x2gv-pr6r",
+                "CGA-mhr5-mm59-g9v8",
+                "CGA-mpvw-q85f-chh9",
+                "CGA-mwp3-p76c-m3qq",
+                "CGA-p3w2-7jg8-hqrq",
+                "CGA-p5hj-4w5m-gvwp",
+                "CGA-p95p-m854-8783",
+                "CGA-p9mr-h84j-x2p6",
+                "CGA-pgfm-3gq9-vjmg",
+                "CGA-pvqw-fpfq-xh69",
+                "CGA-q5w3-f5vm-g9m3",
+                "CGA-q643-mc95-9f4f",
+                "CGA-q662-93cq-rqr3",
+                "CGA-q6c6-rcxj-5fmh",
+                "CGA-q97p-h56j-m4fv",
+                "CGA-qv5p-9m82-733m",
+                "CGA-r82q-hw76-gmrc",
+                "CGA-r84x-fv23-6q9m",
+                "CGA-rgv3-wg25-j59v",
+                "CGA-rm3q-73jc-4q9m",
+                "CGA-rq8w-587r-f9pm",
+                "CGA-rqxq-m4c2-x9ph",
+                "CGA-v3cj-jgcv-jmhw",
+                "CGA-v6vj-gm26-7r8p",
+                "CGA-vfm9-cgcj-prvp",
+                "CGA-vhj2-vrq8-mm67",
+                "CGA-vw5v-7qhc-9gg5",
+                "CGA-vw6g-89v3-x8pv",
+                "CGA-w34q-7mx6-527r",
+                "CGA-w6v8-wcmv-cfjx",
+                "CGA-wcmr-gjcv-ccpm",
+                "CGA-wqxh-m97h-j5f6",
+                "CGA-wwww-fc3r-f74g",
+                "CGA-wx3h-6vhc-mqpv",
+                "CGA-x3fq-g96j-xmjq",
+                "CGA-x6c3-p37f-phhf",
+                "CGA-x8q8-gpj4-r44c",
+                "CGA-xcg6-jg76-p7wq",
+                "CGA-xcmv-3hxx-7m2v",
+                "CGA-xj36-3hv3-chh7",
+                "CGA-xj6j-5vv8-pjv3",
+                "CGA-xvjv-2jwr-6897",
+                "CGA-xvp5-g73c-c5j4"
+              ],
+              "summary": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability",
+              "details": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "azure-identity",
+                    "purl": "pkg:pypi/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0b1",
+                    "1.0.0b2",
+                    "1.0.0b3",
+                    "1.0.0b4",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.0b1",
+                    "1.11.0",
+                    "1.11.0b1",
+                    "1.11.0b2",
+                    "1.11.0b3",
+                    "1.12.0",
+                    "1.12.0b1",
+                    "1.12.0b2",
+                    "1.13.0",
+                    "1.13.0b1",
+                    "1.13.0b2",
+                    "1.13.0b3",
+                    "1.13.0b4",
+                    "1.14.0",
+                    "1.14.0b1",
+                    "1.14.0b2",
+                    "1.14.1",
+                    "1.15.0",
+                    "1.15.0b1",
+                    "1.15.0b2",
+                    "1.16.0",
+                    "1.16.0b1",
+                    "1.16.0b2",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.0b1",
+                    "1.4.0b2",
+                    "1.4.0b3",
+                    "1.4.0b4",
+                    "1.4.0b5",
+                    "1.4.0b6",
+                    "1.4.0b7",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.5.0b1",
+                    "1.5.0b2",
+                    "1.6.0",
+                    "1.6.0b1",
+                    "1.6.0b2",
+                    "1.6.0b3",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0b1",
+                    "1.7.0b2",
+                    "1.7.0b3",
+                    "1.7.0b4",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.0b1",
+                    "1.9.0",
+                    "1.9.0b1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/identity",
+                    "purl": "pkg:npm/%40azure/identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.azure:azure-identity",
+                    "purl": "pkg:maven/com.azure/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.12.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0-preview.1",
+                    "1.0.0-preview.2",
+                    "1.0.0-preview.3",
+                    "1.0.0-preview.4",
+                    "1.0.0-preview.5",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.0-beta.1",
+                    "1.1.0-beta.2",
+                    "1.1.0-beta.3",
+                    "1.1.0-beta.4",
+                    "1.1.0-beta.5",
+                    "1.1.0-beta.6",
+                    "1.1.0-beta.7",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0-beta.1",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.0-beta.1",
+                    "1.11.0-beta.2",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.12.0",
+                    "1.12.0-beta.1",
+                    "1.12.1",
+                    "1.2.0",
+                    "1.2.0-beta.1",
+                    "1.2.0-beta.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.0-beta.1",
+                    "1.3.0-beta.2",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.4.0",
+                    "1.4.0-beta.1",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.5.0",
+                    "1.5.0-beta.1",
+                    "1.5.0-beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0-beta.1",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta.1",
+                    "1.7.0-beta.2",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.0-beta.1",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9.0",
+                    "1.9.0-beta.1",
+                    "1.9.0-beta.2",
+                    "1.9.0-beta.3",
+                    "1.9.1",
+                    "1.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/msal-node",
+                    "purl": "pkg:npm/%40azure/msal-node"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.7.0"
+                        },
+                        {
+                          "fixed": "2.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.49.1"
+                        },
+                        {
+                          "fixed": "4.60.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.49.1",
+                    "4.50.0",
+                    "4.51.0",
+                    "4.52.0",
+                    "4.53.0",
+                    "4.54.0",
+                    "4.54.1",
+                    "4.55.0",
+                    "4.55.0-TestPackage",
+                    "4.56.0",
+                    "4.57.0",
+                    "4.58.0",
+                    "4.58.1",
+                    "4.59.0",
+                    "4.59.1",
+                    "4.60.0",
+                    "4.60.0-netonly",
+                    "4.60.1",
+                    "4.60.2",
+                    "4.60.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/Azure/azure-sdk-for-go/sdk/azidentity",
+                    "purl": "pkg:golang/github.com/Azure/azure-sdk-for-go/sdk/azidentity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.microsoft.azure:msal4j",
+                    "purl": "pkg:maven/com.microsoft.azure/msal4j"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.14.4-beta"
+                        },
+                        {
+                          "fixed": "1.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.14.4-beta",
+                    "1.15.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Azure.Identity",
+                    "purl": "pkg:nuget/Azure.Identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.11.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.61.0"
+                        },
+                        {
+                          "fixed": "4.61.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.61.0",
+                    "4.61.1",
+                    "4.61.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35255"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/4806#issuecomment-2178960340"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-go/commit/50774cd9709905523136fb05e8c85a50e8984499"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-java/commit/5bf020d6ea056de40e2738e3647a4e06f902c18d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-js/commit/c6aa75d312ae463e744163cedfd8fc480cc8d492"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-net/commit/9279a4f38bf69b457cfb9b354f210e0a540a5c53"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-python/commit/cb065acd7d0f957327dc4f02d1646d4e51a94178"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35255"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-11T19:57:01Z",
+                "nvd_published_at": "2024-06-11T17:16:03Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-04-23T20:45:58Z",
+              "published": "2024-04-16T21:41:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x674-v45j-fwxw",
+              "aliases": [
+                "CVE-2024-27086"
+              ],
+              "summary": "MSAL.NET applications targeting Xamarin Android and .NET Android (MAUI) susceptible to local denial of service",
+              "details": "\u003e[!IMPORTANT]\n\u003e**ONLY** applications targeting Xamarin Android and .NET Android (MAUI) are impacted. All others can safely dismiss this CVE.\n\n### Impact\n\n[MSAL.NET](https://www.nuget.org/packages/Microsoft.Identity.Client/) applications targeting Xamarin Android and .NET Android (e.g., MAUI) using the library from versions `4.48.0` to `4.60.3` (inclusive, except `4.59.1` and `4.60.3`) are impacted by a low severity vulnerability.   \n\nA malicious application running on a customer Android device can (1) inject HTML/JavaScript in an embedded web view exported by affected applications, or (2) cause local denial of service against applications that were built using MSAL.NET for authentication on the same device (i.e., prevent the user of the legitimate application from logging in) due to incorrect activity export configuration.\n\n### Patches\n\nMSAL.NET version 4.60.3 includes the fix. We recommend all users of MSAL.NET that are building public client applications for Android update to the latest version.\n\n### Workarounds\n\nWe recommend developers update to the latest version of MSAL.NET. If that is not possible, a developer may explicitly mark the MSAL.NET activity non-exported:\n\n```xml\n\u003cactivity android:name=\"microsoft.identity.client.AuthenticationAgentActivity\" android:configChanges=\"orientation|screenSize\" android:exported=\"false\"\u003e\n\u003cintent-filter\u003e\n\u003caction android:name=\"android.intent.action.VIEW\" /\u003e\n\u003ccategory android:name=\"android.intent.category.DEFAULT\" /\u003e\n\u003ccategory android:name=\"android.intent.category.BROWSABLE\" /\u003e\n\u003cdata android:scheme=\"msalYOUR_CLIENT_ID\" android:host=\"auth\" /\u003e\n\u003c/intent-filter\u003e\n\u003c/activity\u003e\n```\n\n### References\n\nRefer to [MSAL.NET documentation](https://learn.microsoft.com/entra/msal/dotnet/) for latest guidance and best practices on configuring client applications using the library.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.48.0"
+                        },
+                        {
+                          "fixed": "4.59.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.48.0",
+                    "4.48.1",
+                    "4.49.0",
+                    "4.49.1",
+                    "4.50.0",
+                    "4.51.0",
+                    "4.52.0",
+                    "4.53.0",
+                    "4.54.0",
+                    "4.54.1",
+                    "4.55.0",
+                    "4.55.0-TestPackage",
+                    "4.56.0",
+                    "4.57.0",
+                    "4.58.0",
+                    "4.58.1",
+                    "4.59.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-x674-v45j-fwxw/GHSA-x674-v45j-fwxw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.60.0"
+                        },
+                        {
+                          "fixed": "4.60.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.60.0",
+                    "4.60.1",
+                    "4.60.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-x674-v45j-fwxw/GHSA-x674-v45j-fwxw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/security/advisories/GHSA-x674-v45j-fwxw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27086"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/commit/413e319472ccf48c86647f19fa2aa49ff6038488"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://learn.microsoft.com/en-us/entra/msal/dotnet"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.nuget.org/packages/Microsoft.Identity.Client"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-863",
+                  "CWE-926"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-16T21:41:57Z",
+                "nvd_published_at": "2024-04-16T22:15:34Z",
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m5vv-6r4h-3vj9"
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GHSA-m5vv-6r4h-3vj9",
+                "GO-2024-2918"
+              ],
+              "max_severity": "6.8"
+            },
+            {
+              "ids": [
+                "GHSA-x674-v45j-fwxw"
+              ],
+              "aliases": [
+                "CVE-2024-27086",
+                "GHSA-x674-v45j-fwxw"
+              ],
+              "max_severity": "3.9"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "System.IO.Packaging",
+            "version": "8.0.0",
+            "ecosystem": "NuGet"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-09T01:42:08Z",
+              "published": "2024-10-08T20:24:56Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-f32c-w444-8ppv",
+              "aliases": [
+                "CVE-2024-43484"
+              ],
+              "summary": "Microsoft Security Advisory CVE-2024-43484 | .NET Denial of Service Vulnerability",
+              "details": "# Microsoft Security Advisory CVE-2024-43484 | .NET Denial of Service Vulnerability\n\n## \u003ca name=\"executive-summary\"\u003e\u003c/a\u003eExecutive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in System.IO.Packaging. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nThe System.IO.Packaging library may allow untrusted inputs to influence algorithmically complex operations, leading to denial of service.\n\n## Announcement\n\nAnnouncement for this issue can be found at  https://github.com/dotnet/announcements/issues/328\n\n## \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nMicrosoft has not identified any mitigating factors for this vulnerability.\n\n\n## \u003ca name=\"affected-packages\"\u003e\u003c/a\u003eAffected Packages\nThe vulnerability affects any Microsoft .NET Core project if it uses any of affected packages versions listed below\n\n### \u003ca name=\".NET 9\"\u003e\u003c/a\u003e.NET 9\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.IO.Packaging](https://www.nuget.org/packages/System.IO.Packaging)                   | \u003e= 9.0.0-preview.1.24080.9, \u003c= 9.0.0-rc.1.24431.7 | 9.0.0-rc.2.24473.5\n\n### \u003ca name=\".NET 8\"\u003e\u003c/a\u003e.NET 8\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.IO.Packaging](https://www.nuget.org/packages/System.IO.Packaging)                   | \u003e= 8.0.0-preview.1.23110.8, \u003c= 8.0.0 | 8.0.1\n\n### \u003ca name=\".NET 6\"\u003e\u003c/a\u003e.NET 6\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.IO.Packaging](https://www.nuget.org/packages/System.IO.Packaging)                   | \u003e= 6.0.0-preview.1.21102.12, \u003c= 6.0.0 | 6.0.1\n\n## Advisory FAQ\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\nIf you have a runtime or SDK with a version listed, or an affected package listed in [affected software](#affected-packages) or [affected packages](#affected-software), you're exposed to the vulnerability.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* To fix the issue please install the latest version of .NET 8.0 or .NET 6.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n\n Version:   8.0.200\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\6.0.300\\\n\nHost (useful for support):\n\n  Version: 8.0.3\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  8.0.200 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspAspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspAspNetCore.App]\n  Microsoft.AspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.WindowsDesktop.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 9.0, you should download and install .NET 9.0 RC 2  Runtime or .NET 9.0.100-rc.2.24474.11 SDK (for Visual Studio 2022 v17.12 latest Preview) from https://dotnet.microsoft.com/download/dotnet-core/9.0.\n* If you're using .NET 8.0, you should download and install .NET 8.0.10  Runtime or .NET 8.0.110 SDK (for Visual Studio 2022 v17.8) from https://dotnet.microsoft.com/download/dotnet-core/8.0.\n* If you're using .NET 6.0, you should download and install .NET 6.0.35  Runtime or .NET 6.0.135 SDK (for Visual Studio 2022 v17.6) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n.NET 8.0 and .NET 6.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 8.0 or .NET 6.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### External Links\n\n[CVE-2024-43484]( https://www.cve.org/CVERecord?id=CVE-2024-43484)\n\n### Revisions\n\nV1.0 (October 08, 2024): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2024-10-08_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IO.Packaging",
+                    "purl": "pkg:nuget/System.IO.Packaging"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0-preview.1.24080.9"
+                        },
+                        {
+                          "fixed": "9.0.0-rc.2.24473.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0-rc.1.24431.7",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-f32c-w444-8ppv/GHSA-f32c-w444-8ppv.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IO.Packaging",
+                    "purl": "pkg:nuget/System.IO.Packaging"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-preview.1.23110.8"
+                        },
+                        {
+                          "fixed": "8.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-f32c-w444-8ppv/GHSA-f32c-w444-8ppv.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IO.Packaging",
+                    "purl": "pkg:nuget/System.IO.Packaging"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0-preview.1.21102.12"
+                        },
+                        {
+                          "fixed": "6.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-f32c-w444-8ppv/GHSA-f32c-w444-8ppv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-f32c-w444-8ppv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43484"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/328"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/issues/108676"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/runtime"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43484"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-08T20:24:56Z",
+                "nvd_published_at": "2024-10-08T18:15:10Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-10-14T21:05:11Z",
+              "published": "2024-10-08T20:24:41Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qj66-m88j-hmgj",
+              "aliases": [
+                "CVE-2024-43483"
+              ],
+              "summary": "Microsoft Security Advisory CVE-2024-43483 | .NET Denial of Service Vulnerability",
+              "details": "# Microsoft Security Advisory CVE-2024-43483 | .NET Denial of Service Vulnerability\n\n## \u003ca name=\"executive-summary\"\u003e\u003c/a\u003eExecutive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in  System.Security.Cryptography.Cose, System.IO.Packaging, Microsoft.Extensions.Caching.Memory. This advisory also provides guidance on what developers can do to update their applications to remove this vulnerability.\n\nSystem.Security.Cryptography.Cose, System.IO.Packaging, Microsoft.Extensions.Caching.Memory may be exposed to a hostile input which may lead them to be susceptible to hash flooding attacks resulting in denial of service.\n\n## Announcement\n\nAnnouncement for this issue can be found at  https://github.com/dotnet/announcements/issues/327\n\n## \u003ca name=\"mitigation-factors\"\u003e\u003c/a\u003eMitigation factors\n\nMicrosoft has not identified any mitigating factors for this vulnerability.\n\n## \u003ca name=\"affected-software\"\u003e\u003c/a\u003eAffected software\n\n* Any .NET 8.0 application running on .NET 8.0.8 or earlier.\n* Any .NET 6.0 aplication running on .NET 6.0.33 or earlier.\n* Any application consuming one of the [vulnerable packages](affected-packages).\n\n\n## \u003ca name=\"affected-packages\"\u003e\u003c/a\u003eAffected Packages\n* Any .NET 6.0, 8.0, or 9.0 application.\n* Any application consuming one of the vulnerable packages.\n\n### \u003ca name=\".NET 9 \"\u003e\u003c/a\u003e.NET 9\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.Security.Cryptography.Cose](https://www.nuget.org/packages/System.Security.Cryptography.Cose)                   | \u003e= 9.0.0-preview.1.24080.9, \u003c= 9.0.0-rc.1.24431.7 | 9.0.0-rc.2.24473.5\n[System.IO.Packaging](https://www.nuget.org/packages/System.IO.Packaging)                   | \u003e= 9.0.0-preview.1.24080.9, \u003c= 9.0.0-rc.1.24431.7 | 9.0.0-rc.2.24473.5\n[Microsoft.Extensions.Caching.Memory](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Memory)                   | \u003e= 9.0.0-preview.1.24080.9, \u003c= 9.0.0-rc.1.24431.7 | 9.0.0-rc.2.24473.5\n\n### \u003ca name=\".NET 8\"\u003e\u003c/a\u003e.NET 8\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.Security.Cryptography.Cose](https://www.nuget.org/packages/System.Security.Cryptography.Cose)                   | \u003e= 8.0.0-preview.1.23110.8, \u003c= 8.0.0 | 8.0.1\n[System.IO.Packaging](https://www.nuget.org/packages/System.IO.Packaging)                   | \u003e= 8.0.0-preview.1.23110.8, \u003c= 8.0.0 | 8.0.1\n[Microsoft.Extensions.Caching.Memory](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Memory)                   | \u003e= 8.0.0-preview.1.23110.8, \u003c= 8.0.0 | 8.0.1\n\n### \u003ca name=\".NET 6\"\u003e\u003c/a\u003e.NET 6\nPackage name | Affected version | Patched version\n------------ | ---------------- | -------------------------\n[System.IO.Packaging](https://www.nuget.org/packages/System.IO.Packaging)                   | \u003e= 6.0.0-preview.1.21102.12, \u003c= 6.0.0 | 6.0.1\n[Microsoft.Extensions.Caching.Memory](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Memory)                   | \u003e=6.0.0-preview.1.21102.12 \u003c= 6.0.1 | 6.0.2\n\n\n## Advisory FAQ\n\n### \u003ca name=\"how-affected\"\u003e\u003c/a\u003eHow do I know if I am affected?\n\nIf you have a runtime or SDK with a version listed, or an affected package listed in [affected software](#affected-packages) or [affected packages](#affected-software), you're exposed to the vulnerability.\n\n### \u003ca name=\"how-fix\"\u003e\u003c/a\u003eHow do I fix the issue?\n\n* To fix the issue please install the latest version of .NET 8.0 or .NET 6.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* .NET Framework-based applications and other application types need to perform a package update.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n\n Version:   8.0.200\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\6.0.300\\\n\nHost (useful for support):\n\n  Version: 8.0.3\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  8.0.200 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspAspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspAspNetCore.App]\n  Microsoft.AspNetCore.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.WindowsDesktop.App 8.0.3 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 9.0, you should download and install .NET 9.0 RC 2  Runtime or .NET 9.0.100-rc.2.24474.11 SDK (for Visual Studio 2022 v17.12 latest Preview) from https://dotnet.microsoft.com/download/dotnet-core/9.0.\n* If you're using .NET 8.0, you should download and install .NET 8.0.10  Runtime or .NET 8.0.110 SDK (for Visual Studio 2022 v17.8) from https://dotnet.microsoft.com/download/dotnet-core/8.0.\n* If you're using .NET 6.0, you should download and install .NET 6.0.35  Runtime or .NET 6.0.135 SDK (for Visual Studio 2022 v17.6) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n.NET 6.0 and .NET 8.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 8.0 or .NET 6.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n\n### External Links\n\n[CVE-2024-43483]( https://www.cve.org/CVERecord?id=CVE-2024-43483)\n\n### Revisions\n\nV1.0 (October 08, 2024): Advisory published.\n\n_Version 1.0_\n\n_Last Updated 2024-10-08_",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Cose",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Cose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0-preview.1.24080.9"
+                        },
+                        {
+                          "fixed": "9.0.0-rc.2.24473.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0-rc.1.24431.7",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IO.Packaging",
+                    "purl": "pkg:nuget/System.IO.Packaging"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0-preview.1.24080.9"
+                        },
+                        {
+                          "fixed": "9.0.0-rc.2.24473.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0-rc.1.24431.7",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.Security.Cryptography.Cose",
+                    "purl": "pkg:nuget/System.Security.Cryptography.Cose"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-preview.1.23110.8"
+                        },
+                        {
+                          "fixed": "8.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IO.Packaging",
+                    "purl": "pkg:nuget/System.IO.Packaging"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0-preview.1.21102.12"
+                        },
+                        {
+                          "fixed": "6.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IO.Packaging",
+                    "purl": "pkg:nuget/System.IO.Packaging"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-preview.1.23110.8"
+                        },
+                        {
+                          "fixed": "8.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Extensions.Caching.Memory",
+                    "purl": "pkg:nuget/Microsoft.Extensions.Caching.Memory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "8.0.0-preview.1.23110.8"
+                        },
+                        {
+                          "fixed": "8.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "8.0.0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 8.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Extensions.Caching.Memory",
+                    "purl": "pkg:nuget/Microsoft.Extensions.Caching.Memory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.0.0-preview.1.24080.9"
+                        },
+                        {
+                          "fixed": "9.0.0-rc.2.24473.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.0.0-rc.1.24431.7",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Extensions.Caching.Memory",
+                    "purl": "pkg:nuget/Microsoft.Extensions.Caching.Memory"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.0.0-preview.1.21102.12"
+                        },
+                        {
+                          "fixed": "6.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.0.0",
+                    "6.0.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.0.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qj66-m88j-hmgj/GHSA-qj66-m88j-hmgj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/runtime/security/advisories/GHSA-qj66-m88j-hmgj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43483"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/runtime"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43483"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-407"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-08T20:24:41Z",
+                "nvd_published_at": "2024-10-08T18:15:10Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-f32c-w444-8ppv"
+              ],
+              "aliases": [
+                "CVE-2024-43484",
+                "GHSA-f32c-w444-8ppv"
+              ],
+              "max_severity": "8.8"
+            },
+            {
+              "ids": [
+                "GHSA-qj66-m88j-hmgj"
+              ],
+              "aliases": [
+                "CVE-2024-43483",
+                "GHSA-qj66-m88j-hmgj"
+              ],
+              "max_severity": "8.8"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "System.IdentityModel.Tokens.Jwt",
+            "version": "6.30.1",
+            "ecosystem": "NuGet"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-04-11T20:56:41Z",
+              "published": "2024-01-09T19:35:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-59j7-ghrg-fj52",
+              "aliases": [
+                "BIT-dotnet-2024-21319",
+                "BIT-dotnet-sdk-2024-21319",
+                "CVE-2024-21319"
+              ],
+              "summary": "Microsoft ASP.NET Core project templates vulnerable to denial of service",
+              "details": "# Microsoft Security Advisory CVE-2024-21319: .NET Denial of Service Vulnerability\n\n## Executive summary\n\nMicrosoft is releasing this security advisory to provide information about a vulnerability in the ASP.NET Core project templates. This advisory also provides guidance on what developers can do to update their applications to address this vulnerability.\n\nA Denial of Service vulnerability exists in ASP.NET Core project templates which utilize JWT-based authentication tokens. This vulnerability allows an unauthenticated client to consume arbitrarily large amounts of server memory, potentially triggering an out-of-memory condition on the server and making the server no longer able to respond to legitimate requests. \n\n## Announcement\n\nAnnouncement for this issue can be found at https://github.com/dotnet/announcements/issues/290\n\n### Mitigation factors\n\nThis impacts only .NET Core-based projects that were created using any version of project templates listed in [affected software](#affected-software). \nOther project templates e.g., console applications, MAUI applications, Windows Forms or WPF applications, are not affected.\n\n## Affected software\n\nThis impacts only .NET Core-based projects that were created using any version of the below project templates.\n\n-\tASP.NET Core Web App (Model-View-Controller)\n-\tASP.NET Core Web API\n-\tASP.NET Core Web App (Razor Pages)\n-\tBlazor Server App\n-\tBlazor WebAssembly App\n\n## Advisory FAQ\n\n### How do I know if I am affected?\n\nIf you are you using project templates listed in [affected software](#affected-software), you may be exposed to the vulnerability.\n\n### How do I fix the issue?\n\n#### For existing projects:\nIf you ever created any of these projects via the dotnet new command or via Visual Studio's File -\u003e New Project gesture, and if you enabled federated authentication at project creation time, your project may be vulnerable. To remediate the vulnerability, use your package manager to update any references you may have to the Microsoft.AspNetCore.Authentication.JwtBearer, Microsoft.AspNetCore.Authentication.OpenIdConnect, and Microsoft.IdentityModel.JsonWebTokens packages to their respective latest versions. \n- [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer/) \n- [Microsoft.AspNetCore.Authentication.OpenIdConnect](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.OpenIdConnect/) \n\nIf your project does not reference any of those three packages, you are not exposed to this vulnerability.\n\n#### For new projects:\nTo remediate this issue please update to the latest SDK listed below. Simply installing the SDK update is not sufficient to remediate projects already-created / already-deployed projects which existed prior to this update being released.\n\n* To fix the issue please install the latest version of .NET 6.0 or .NET 7.0. If you have installed one or more .NET SDKs through Visual Studio, Visual Studio will prompt you to update Visual Studio, which will also update your .NET  SDKs.\n* If you are using one of the affected packages, please update to the patched version listed above.\n* If you have .NET 6.0 or greater installed, you can list the versions you have installed by running the `dotnet --info` command. You will see output like the following;\n\n```\n.NET Core SDK (reflecting any global.json):\n\n Version:   7.0.200\n Commit:    8473146e7d\n\nRuntime Environment:\n\n OS Name:     Windows\n OS Version:  10.0.18363\n OS Platform: Windows\n RID:         win10-x64\n Base Path:   C:\\Program Files\\dotnet\\sdk\\7.0.300\\\n\nHost (useful for support):\n\n  Version: 76.0.5\n  Commit:  8473146e7d\n\n.NET Core SDKs installed:\n\n  7.0.200 [C:\\Program Files\\dotnet\\sdk]\n\n.NET Core runtimes installed:\n\n  Microsoft.AspNetCore.App 7.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\n  Microsoft.NETCore.App 7.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\n  Microsoft.WindowsDesktop.App 7.0.5 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\n\nTo install additional .NET Core runtimes or SDKs:\n  https://aka.ms/dotnet-download\n```\n\n* If you're using .NET 8.0, you should download and install .NET 8.0.101 SDK (for Visual Studio 2022 v17.8) from https://dotnet.microsoft.com/download/dotnet-core/8.0.\n* If you're using .NET 7.0, you should download and install .NET SDK 7.0.115 (for Visual Studio 2022 v17.4) from https://dotnet.microsoft.com/download/dotnet-core/7.0.\n* If you're using .NET 6.0, you should download and install .NET SDK 6.0.321 (for Visual Studio 2022 v17.2) from https://dotnet.microsoft.com/download/dotnet-core/6.0.\n\n.NET 6.0, .NET 7.0, .NET 8.0 updates are also available from Microsoft Update. To access this either type \"Check for updates\" in your Windows search, or open Settings, choose Update \u0026 Security and then click Check for Updates.\n\nOnce you have installed the updated runtime or SDK, restart your apps for the update to take effect.\n\nAdditionally, if you've deployed [self-contained applications](https://docs.microsoft.com/dotnet/core/deploying/#self-contained-deployments-scd) targeting any of the impacted versions, these applications are also vulnerable and must be recompiled and redeployed.\n\n## Other Information\n\n### Reporting Security Issues\n\nIf you have found a potential security issue in .NET 8.0 or .NET 7.0 or .NET 6.0, please email details to secure@microsoft.com. Reports may qualify for the Microsoft .NET Core \u0026 .NET 5 Bounty. Details of the Microsoft .NET Bounty Program including terms and conditions are at \u003chttps://aka.ms/corebounty\u003e.\n\n### Support\n\nYou can ask questions about this issue on GitHub in the .NET GitHub organization. The main repos are located at https://github.com/dotnet/runtime and https://github.com/dotnet/aspnet/. The Announcements repo (https://github.com/dotnet/Announcements) will contain this bulletin as an issue and will include a link to a discussion issue. You can ask questions in the linked discussion issue.\n\n### Disclaimer\n\nThe information provided in this advisory is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply.\n\n### Acknowledgement\n\nMorgan Brown, Microsoft Corp.\n\n### External Links\n\n[CVE-2024-21319]( https://www.cve.org/CVERecord?id=CVE-2024-21319)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IdentityModel.Tokens.Jwt",
+                    "purl": "pkg:nuget/System.IdentityModel.Tokens.Jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "4.0.0",
+                    "4.0.0-RC1",
+                    "4.0.0-RC1-10701-1147",
+                    "4.0.0-RC2",
+                    "4.0.0-alpha",
+                    "4.0.0-beta1",
+                    "4.0.1",
+                    "4.0.2.202250630",
+                    "4.0.2.202250711",
+                    "4.0.2.205111437",
+                    "4.0.2.206221351",
+                    "4.0.3.308261200",
+                    "4.0.4.402070948",
+                    "4.0.4.403061554",
+                    "5.0.0",
+                    "5.0.0-beta7-208241120",
+                    "5.0.0-beta8-210131116",
+                    "5.0.0-rc1-211161024",
+                    "5.0.0-rc2-305061149",
+                    "5.0.1-pre-310121323",
+                    "5.1.0",
+                    "5.1.1",
+                    "5.1.2",
+                    "5.1.3",
+                    "5.1.4",
+                    "5.1.5",
+                    "5.2.0",
+                    "5.2.0-preview1-408290725",
+                    "5.2.0-preview2-41113220915",
+                    "5.2.1",
+                    "5.2.2",
+                    "5.2.3",
+                    "5.2.4",
+                    "5.3.0",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.6.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IdentityModel.Tokens.Jwt",
+                    "purl": "pkg:nuget/System.IdentityModel.Tokens.Jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.5.0"
+                        },
+                        {
+                          "fixed": "6.34.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.10.0",
+                    "6.10.1",
+                    "6.10.2",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.12.1",
+                    "6.12.2",
+                    "6.13.0",
+                    "6.13.1",
+                    "6.14.0",
+                    "6.14.1",
+                    "6.15.0",
+                    "6.15.1",
+                    "6.16.0",
+                    "6.17.0",
+                    "6.18.0",
+                    "6.19.0",
+                    "6.20.0",
+                    "6.21.0",
+                    "6.22.0",
+                    "6.22.1",
+                    "6.23.0",
+                    "6.23.1",
+                    "6.24.0",
+                    "6.25.0",
+                    "6.25.1",
+                    "6.26.0",
+                    "6.26.1",
+                    "6.27.0",
+                    "6.28.0",
+                    "6.28.1",
+                    "6.29.0",
+                    "6.30.0",
+                    "6.30.1",
+                    "6.31.0",
+                    "6.32.0",
+                    "6.32.1",
+                    "6.32.2",
+                    "6.32.3",
+                    "6.33.0",
+                    "6.5.0",
+                    "6.5.1",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.1",
+                    "6.7.2-preview-10803222715",
+                    "6.8.0",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "System.IdentityModel.Tokens.Jwt",
+                    "purl": "pkg:nuget/System.IdentityModel.Tokens.Jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0-preview"
+                        },
+                        {
+                          "fixed": "7.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.0-preview",
+                    "7.0.0-preview2",
+                    "7.0.0-preview3",
+                    "7.0.0-preview4",
+                    "7.0.0-preview5",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.1.0-preview"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.IdentityModel.JsonWebTokens",
+                    "purl": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "5.2.4",
+                    "5.3.0",
+                    "5.4.0",
+                    "5.5.0",
+                    "5.6.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.IdentityModel.JsonWebTokens",
+                    "purl": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "6.5.0"
+                        },
+                        {
+                          "fixed": "6.34.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "6.10.0",
+                    "6.10.1",
+                    "6.10.2",
+                    "6.11.0",
+                    "6.11.1",
+                    "6.12.0",
+                    "6.12.1",
+                    "6.12.2",
+                    "6.13.0",
+                    "6.13.1",
+                    "6.14.0",
+                    "6.14.1",
+                    "6.15.0",
+                    "6.15.1",
+                    "6.16.0",
+                    "6.17.0",
+                    "6.18.0",
+                    "6.19.0",
+                    "6.20.0",
+                    "6.21.0",
+                    "6.22.0",
+                    "6.22.1",
+                    "6.23.0",
+                    "6.23.1",
+                    "6.24.0",
+                    "6.25.0",
+                    "6.25.1",
+                    "6.26.0",
+                    "6.26.1",
+                    "6.27.0",
+                    "6.28.0",
+                    "6.28.1",
+                    "6.29.0",
+                    "6.30.0",
+                    "6.30.1",
+                    "6.31.0",
+                    "6.32.0",
+                    "6.32.1",
+                    "6.32.2",
+                    "6.32.3",
+                    "6.33.0",
+                    "6.5.0",
+                    "6.5.1",
+                    "6.6.0",
+                    "6.7.0",
+                    "6.7.1",
+                    "6.7.2-preview-10803222715",
+                    "6.8.0",
+                    "6.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.IdentityModel.JsonWebTokens",
+                    "purl": "pkg:nuget/Microsoft.IdentityModel.JsonWebTokens"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0-preview"
+                        },
+                        {
+                          "fixed": "7.1.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "7.0.0",
+                    "7.0.0-preview",
+                    "7.0.0-preview2",
+                    "7.0.0-preview3",
+                    "7.0.0-preview4",
+                    "7.0.0-preview5",
+                    "7.0.1",
+                    "7.0.2",
+                    "7.0.3",
+                    "7.1.0-preview"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-59j7-ghrg-fj52/GHSA-59j7-ghrg-fj52.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/security/advisories/GHSA-8g9c-28fc-mcx2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/aspnetcore/security/advisories/GHSA-59j7-ghrg-fj52"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dotnet/announcements/issues/290"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dotnet/aspnetcore"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-09T19:35:02Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-59j7-ghrg-fj52"
+              ],
+              "aliases": [
+                "BIT-dotnet-2024-21319",
+                "BIT-dotnet-sdk-2024-21319",
+                "CVE-2024-21319",
+                "GHSA-59j7-ghrg-fj52"
+              ],
+              "max_severity": "6.8"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

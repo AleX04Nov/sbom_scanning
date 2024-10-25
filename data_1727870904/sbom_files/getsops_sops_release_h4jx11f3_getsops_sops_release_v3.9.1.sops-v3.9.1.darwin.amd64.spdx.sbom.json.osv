@@ -1,0 +1,1677 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/getsops_sops_release_h4jx11f3_getsops_sops_release_v3.9.1.sops-v3.9.1.darwin.amd64.spdx.sbom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/hashicorp/vault",
+            "version": "v1.15.0",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-08-21T14:56:44Z",
+              "published": "2023-11-09T21:30:39Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4qhc-v8r6-8vwm",
+              "aliases": [
+                "BIT-vault-2023-5954",
+                "CVE-2023-5954",
+                "GO-2023-2329"
+              ],
+              "related": [
+                "CGA-32p2-xw98-2447",
+                "CGA-398w-j583-p8jw",
+                "CGA-3rh5-7fx9-w6cf",
+                "CGA-q242-2q7p-8996",
+                "CGA-qfmf-mv8g-2mv9"
+              ],
+              "summary": "HashiCorp Vault Missing Release of Memory after Effective Lifetime vulnerability",
+              "details": "HashiCorp Vault and Vault Enterprise inbound client requests triggering a policy check can lead to an unbounded consumption of memory. A large number of these requests may lead to denial-of-service. Fixed in Vault 1.15.2, 1.14.6, and 1.13.10.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.13.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-4qhc-v8r6-8vwm/GHSA-4qhc-v8r6-8vwm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.14.0"
+                        },
+                        {
+                          "fixed": "1.14.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-4qhc-v8r6-8vwm/GHSA-4qhc-v8r6-8vwm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-4qhc-v8r6-8vwm/GHSA-4qhc-v8r6-8vwm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5954"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2023-33-vault-requests-triggering-policy-checks-may-lead-to-unbounded-memory-consumption/59926"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20231227-0001"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-401"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-10T00:43:02Z",
+                "nvd_published_at": "2023-11-09T21:15:25Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-08-21T14:56:44Z",
+              "published": "2024-08-21T14:30:22Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2329",
+              "aliases": [
+                "BIT-vault-2023-5954",
+                "CVE-2023-5954",
+                "GHSA-4qhc-v8r6-8vwm"
+              ],
+              "summary": "HashiCorp Vault Missing Release of Memory after Effective Lifetime vulnerability in github.com/hashicorp/vault",
+              "details": "HashiCorp Vault Missing Release of Memory after Effective Lifetime vulnerability in github.com/hashicorp/vault",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.13.10"
+                        },
+                        {
+                          "introduced": "1.14.0"
+                        },
+                        {
+                          "fixed": "1.14.6"
+                        },
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2329.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-4qhc-v8r6-8vwm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-5954"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2023-33-vault-requests-triggering-policy-checks-may-lead-to-unbounded-memory-consumption/59926"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20231227-0001"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2023-2329"
+              }
+            },
+            {
+              "modified": "2024-05-20T21:59:29Z",
+              "published": "2023-12-09T00:35:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6p62-6cg9-f5f5",
+              "aliases": [
+                "BIT-vault-2023-6337",
+                "CVE-2023-6337",
+                "GO-2023-2399"
+              ],
+              "summary": "Memory exhaustion in HashiCorp Vault",
+              "details": "HashiCorp Vault and Vault Enterprise 1.12.0 and newer are vulnerable to a denial of service through memory exhaustion of the host when handling large unauthenticated and authenticated HTTP requests from a client. Vault will attempt to map the request to memory, resulting in the exhaustion of available memory on the host, which may cause Vault to crash.\n\nFixed in Vault 1.15.4, 1.14.8, 1.13.12.\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-6p62-6cg9-f5f5/GHSA-6p62-6cg9-f5f5.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.14.0"
+                        },
+                        {
+                          "fixed": "1.14.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-6p62-6cg9-f5f5/GHSA-6p62-6cg9-f5f5.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "1.13.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-6p62-6cg9-f5f5/GHSA-6p62-6cg9-f5f5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6337"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hashicorp/vault/pull/24354"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2023-34-vault-vulnerable-to-denial-of-service-through-memory-exhaustion-when-handling-large-http-requests/60741"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240112-0006"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-12-12T00:50:13Z",
+                "nvd_published_at": "2023-12-08T22:15:07Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2024-01-03T22:56:19Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2399",
+              "aliases": [
+                "BIT-vault-2023-6337",
+                "CVE-2023-6337",
+                "GHSA-6p62-6cg9-f5f5"
+              ],
+              "summary": "Denial of service via memory exhaustion in github.com/hashicorp/vault",
+              "details": "Unauthenticated and authenticated HTTP requests from a client will be attempted to be mapped to memory. Large requests may result in the exhaustion of available memory on the host, which may cause crashes and denial of service.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.12.0"
+                        },
+                        {
+                          "fixed": "1.13.12"
+                        },
+                        {
+                          "introduced": "1.14.0"
+                        },
+                        {
+                          "fixed": "1.14.8"
+                        },
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2399.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/hashicorp/vault/helper/forwarding",
+                        "symbols": [
+                          "GenerateForwardedHTTPRequest",
+                          "GenerateForwardedRequest"
+                        ]
+                      },
+                      {
+                        "path": "github.com/hashicorp/vault/http",
+                        "symbols": [
+                          "HandlerAnchor.Handler",
+                          "TestServer",
+                          "TestServerWithListener",
+                          "TestServerWithListenerAndProperties",
+                          "handler",
+                          "parseFormRequest",
+                          "parseJSONRequest",
+                          "rateLimitQuotaWrapping",
+                          "wrapGenericHandler"
+                        ]
+                      },
+                      {
+                        "path": "github.com/hashicorp/vault/vault",
+                        "symbols": [
+                          "Core.DetermineRoleFromLoginRequest",
+                          "Core.DetermineRoleFromLoginRequestFromBytes",
+                          "Core.ForwardRequest",
+                          "Core.HandleRequest",
+                          "NewSystemBackend",
+                          "NewTestCluster",
+                          "SystemBackend.handleStorageRaftSnapshotWrite",
+                          "TestCluster.InitCores",
+                          "TestCoreUnsealed",
+                          "TestCoreUnsealedRaw",
+                          "TestCoreUnsealedWithConfig",
+                          "TestCoreUnsealedWithMetrics",
+                          "TestCoreWithCustomResponseHeaderAndUI"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6337"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2023-34-vault-vulnerable-to-denial-of-service-through-memory-exhaustion-when-handling-large-http-requests/60741"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/hashicorp/vault/pull/24354"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2023-2399"
+              }
+            },
+            {
+              "modified": "2024-06-10T18:30:52Z",
+              "published": "2024-03-04T21:31:11Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r3w7-mfpm-c2vw",
+              "aliases": [
+                "BIT-vault-2024-2048",
+                "CVE-2024-2048",
+                "GO-2024-2617"
+              ],
+              "related": [
+                "CGA-3jcq-jxvm-wwqq",
+                "CGA-4832-gcg9-6mhj",
+                "CGA-4q5p-5wg2-x27j",
+                "CGA-p735-8wc2-m9h8",
+                "CGA-rrg3-2x63-27xf"
+              ],
+              "summary": "Incorrect TLS certificate auth method in Vault",
+              "details": "Vault and Vault Enterprise (“Vault”) TLS certificate auth method did not correctly validate client certificates when configured with a non-CA certificate as trusted certificate. In this configuration, an attacker may be able to craft a malicious certificate that could be used to bypass authentication. Fixed in Vault 1.15.5 and 1.14.10. ",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r3w7-mfpm-c2vw/GHSA-r3w7-mfpm-c2vw.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.14.10"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r3w7-mfpm-c2vw/GHSA-r3w7-mfpm-c2vw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2048"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240524-0009"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-06T16:59:18Z",
+                "nvd_published_at": "2024-03-04T20:15:50Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-06-28T15:58:32Z",
+              "published": "2024-02-01T03:30:22Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-vgh3-mwxq-rcp8",
+              "aliases": [
+                "BIT-vault-2024-0831",
+                "CVE-2024-0831",
+                "GO-2024-2511"
+              ],
+              "summary": "Hashicorp Vault may expose sensitive log information",
+              "details": "Vault and Vault Enterprise (“Vault”) may expose sensitive information when enabling an audit device which specifies the `log_raw` option, which may log sensitive information to other audit devices, regardless of whether they are configured to use `log_raw`",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-vgh3-mwxq-rcp8/GHSA-vgh3-mwxq-rcp8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0831"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hashicorp/vault/commit/2a72f2a8a5b57de88c22a2a94c4a5f08c6f3770b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://developer.hashicorp.com/vault/docs/upgrading/upgrade-to-1.15.x#audit-devices-could-log-raw-data-despite-configuration"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-01-vault-may-expose-sensitive-information-when-configuring-an-audit-log-device/62311"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240223-0005"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-01T20:52:34Z",
+                "nvd_published_at": "2024-02-01T02:15:46Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-28T15:58:32Z",
+              "published": "2024-06-28T15:28:53Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2511",
+              "aliases": [
+                "BIT-vault-2024-0831",
+                "CVE-2024-0831",
+                "GHSA-vgh3-mwxq-rcp8"
+              ],
+              "summary": "Hashicorp Vault may expose sensitive log information in github.com/hashicorp/vault",
+              "details": "Hashicorp Vault may expose sensitive log information in github.com/hashicorp/vault",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2511.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-vgh3-mwxq-rcp8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-0831"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/hashicorp/vault/commit/2a72f2a8a5b57de88c22a2a94c4a5f08c6f3770b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://developer.hashicorp.com/vault/docs/upgrading/upgrade-to-1.15.x#audit-devices-could-log-raw-data-despite-configuration"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-01-vault-may-expose-sensitive-information-when-configuring-an-audit-log-device/62311"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240223-0005"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2511"
+              }
+            },
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2024-03-14T17:13:04Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2617",
+              "aliases": [
+                "BIT-vault-2024-2048",
+                "CVE-2024-2048",
+                "GHSA-r3w7-mfpm-c2vw"
+              ],
+              "summary": "Authentication bypass in github.com/hashicorp/vault",
+              "details": "The TLS certificate authentication method incorrectly validates client certificates when configured with a non-CA certificate as a trusted certificate. When configured this way, attackers may be able to craft a certificate that can be used to bypass authentication.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.14.10"
+                        },
+                        {
+                          "introduced": "1.15.0"
+                        },
+                        {
+                          "fixed": "1.15.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2617.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2048"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2617"
+              }
+            },
+            {
+              "modified": "2024-07-08T21:16:10Z",
+              "published": "2024-06-12T21:31:19Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-32cj-5wx4-gq8p",
+              "aliases": [
+                "BIT-vault-2024-5798",
+                "CVE-2024-5798",
+                "GO-2024-2921"
+              ],
+              "related": [
+                "CGA-5c6x-xwm6-g66f",
+                "CGA-ccrf-775v-573j"
+              ],
+              "summary": "HashiCorp Vault Incorrectly Validated JSON Web Tokens (JWT) Audience Claims",
+              "details": "Vault and Vault Enterprise did not properly validate the JSON Web Token (JWT) role-bound audience claim when using the Vault JWT auth method. This may have resulted in Vault validating a JWT the audience and role-bound claims do not match, allowing an invalid login to succeed when it should have been rejected.\n\nThis vulnerability, CVE-2024-5798, was fixed in Vault and Vault Enterprise 1.17.0, 1.16.3, and 1.15.9",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.17.0-rc1"
+                        },
+                        {
+                          "fixed": "1.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.17.0-rc1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-32cj-5wx4-gq8p/GHSA-32cj-5wx4-gq8p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.16.0-rc1"
+                        },
+                        {
+                          "fixed": "1.16.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-32cj-5wx4-gq8p/GHSA-32cj-5wx4-gq8p.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.11.0"
+                        },
+                        {
+                          "fixed": "1.15.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-32cj-5wx4-gq8p/GHSA-32cj-5wx4-gq8p.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:L/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:H/UI:P/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5798"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-11-vault-incorrectly-validated-json-web-tokens-jwt-audience-claims/67770"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-285"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-12T22:25:55Z",
+                "nvd_published_at": "2024-06-12T19:15:51Z",
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2024-09-06T21:38:47Z",
+              "published": "2024-07-11T21:31:13Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2qmw-pvf7-4mw6",
+              "aliases": [
+                "BIT-vault-2024-6468",
+                "CVE-2024-6468",
+                "GO-2024-2982"
+              ],
+              "related": [
+                "CGA-jf7r-3p4x-vgmm"
+              ],
+              "summary": "Hashicorp Vault vulnerable to Improper Check or Handling of Exceptional Conditions ",
+              "details": "Vault and Vault Enterprise did not properly handle requests originating from unauthorized IP addresses when the TCP listener option, proxy_protocol_behavior, was set to deny_unauthorized. When receiving a request from a source IP address that was not listed in proxy_protocol_authorized_addrs, the Vault API server would shut down and no longer respond to any HTTP requests, potentially resulting in denial of service.\n\nWhile this bug also affected versions of Vault up to 1.17.1 and 1.16.5, a separate regression in those release series did not allow Vault operators to configure the deny_unauthorized option, thus not allowing the conditions for the denial of service to occur.\n\nFixed in Vault and Vault Enterprise 1.17.2, 1.16.6, and 1.15.12",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.10.0"
+                        },
+                        {
+                          "fixed": "1.15.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-2qmw-pvf7-4mw6/GHSA-2qmw-pvf7-4mw6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.16.0-rc1"
+                        },
+                        {
+                          "fixed": "1.16.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-2qmw-pvf7-4mw6/GHSA-2qmw-pvf7-4mw6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.17.0-rc1"
+                        },
+                        {
+                          "fixed": "1.17.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-2qmw-pvf7-4mw6/GHSA-2qmw-pvf7-4mw6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6468"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-14-vault-vulnerable-to-denial-of-service-when-setting-a-proxy-protocol-behavior/68518"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-2qmw-pvf7-4mw6"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-703"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-12T14:02:32Z",
+                "nvd_published_at": "2024-07-11T21:15:12Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-09-26T16:45:51Z",
+              "published": "2024-04-04T18:30:34Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-j2rp-gmqv-frhv",
+              "aliases": [
+                "BIT-vault-2024-2660",
+                "CVE-2024-2660",
+                "GO-2024-2690"
+              ],
+              "related": [
+                "CGA-99hv-xqw5-j922",
+                "CGA-qwxw-2cf6-j68f",
+                "CGA-xxp5-jp4h-xgjm"
+              ],
+              "summary": "HashiCorpVault does not correctly validate OCSP responses",
+              "details": "Vault and Vault Enterprise TLS certificates auth method did not correctly validate OCSP responses when one or more OCSP sources were configured. Fixed in Vault 1.16.0 and Vault Enterprise 1.16.1, 1.15.7, and 1.14.11.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-j2rp-gmqv-frhv/GHSA-j2rp-gmqv-frhv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-07-vault-tls-cert-auth-method-did-not-correctly-validate-ocsp-responses/64573"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240524-0007"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-636",
+                  "CWE-703"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-04T22:10:49Z",
+                "nvd_published_at": "2024-04-04T18:15:14Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-28T15:28:40Z",
+              "published": "2024-06-04T15:19:21Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2690",
+              "aliases": [
+                "BIT-vault-2024-2660",
+                "CVE-2024-2660",
+                "GHSA-j2rp-gmqv-frhv"
+              ],
+              "summary": "HashiCorpVault does not correctly validate OCSP responses in github.com/hashicorp/vault",
+              "details": "HashiCorpVault does not correctly validate OCSP responses in github.com/hashicorp/vault",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2690.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-j2rp-gmqv-frhv"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-2660"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-07-vault-tls-cert-auth-method-did-not-correctly-validate-ocsp-responses/64573"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240524-0007"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2690"
+              }
+            },
+            {
+              "modified": "2024-07-09T19:33:56Z",
+              "published": "2024-07-01T19:59:12Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2921",
+              "aliases": [
+                "BIT-vault-2024-5798",
+                "CVE-2024-5798",
+                "GHSA-32cj-5wx4-gq8p"
+              ],
+              "summary": "HashiCorp Vault Incorrectly Validated JSON Web Tokens (JWT) Audience Claims in github.com/hashicorp/vault",
+              "details": "HashiCorp Vault Incorrectly Validated JSON Web Tokens (JWT) Audience Claims in github.com/hashicorp/vault.\n\nNOTE: The source advisory for this report contains additional versions that could not be automatically mapped to standard Go module versions.\n\n(If this is causing false-positive reports from vulnerability scanners, please suggest an edit to the report.)\n\nThe additional affected modules and versions are: github.com/hashicorp/vault before v1.15.9.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.11.0"
+                        },
+                        {
+                          "fixed": "1.16.3"
+                        },
+                        {
+                          "introduced": "1.17.0-rc1"
+                        },
+                        {
+                          "fixed": "1.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2921.json"
+                  },
+                  "ecosystem_specific": {
+                    "custom_ranges": [
+                      {
+                        "events": [
+                          {
+                            "introduced": "0"
+                          },
+                          {
+                            "fixed": "1.15.9"
+                          }
+                        ],
+                        "type": "ECOSYSTEM"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-32cj-5wx4-gq8p"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5798"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-11-vault-incorrectly-validated-json-web-tokens-jwt-audience-claims/67770"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2921"
+              }
+            },
+            {
+              "modified": "2024-08-19T17:26:30Z",
+              "published": "2024-07-12T16:45:14Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2982",
+              "aliases": [
+                "BIT-vault-2024-6468",
+                "CVE-2024-6468",
+                "GHSA-2qmw-pvf7-4mw6"
+              ],
+              "summary": "Hashicorp Vault vulnerable to Improper Check or Handling of Exceptional Conditions in github.com/hashicorp/vault",
+              "details": "Hashicorp Vault vulnerable to Improper Check or Handling of Exceptional Conditions in github.com/hashicorp/vault.\n\nNOTE: The source advisory for this report contains additional versions that could not be automatically mapped to standard Go module versions.\n\n(If this is causing false-positive reports from vulnerability scanners, please suggest an edit to the report.)\n\nThe additional affected modules and versions are: github.com/hashicorp/vault before v1.15.12.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.10.0"
+                        },
+                        {
+                          "fixed": "1.16.3"
+                        },
+                        {
+                          "introduced": "1.17.0-rc1"
+                        },
+                        {
+                          "fixed": "1.17.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2982.json"
+                  },
+                  "ecosystem_specific": {
+                    "custom_ranges": [
+                      {
+                        "events": [
+                          {
+                            "introduced": "0"
+                          },
+                          {
+                            "fixed": "1.15.12"
+                          }
+                        ],
+                        "type": "ECOSYSTEM"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-2qmw-pvf7-4mw6"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6468"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-14-vault-vulnerable-to-denial-of-service-when-setting-a-proxy-protocol-behavior/68518"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2982"
+              }
+            },
+            {
+              "modified": "2024-10-09T22:20:22Z",
+              "published": "2024-09-26T21:31:11Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jg74-mwgw-v6x3",
+              "aliases": [
+                "BIT-vault-2024-7594",
+                "CVE-2024-7594",
+                "GO-2024-3162"
+              ],
+              "summary": "Vault SSH Secrets Engine Configuration Did Not Restrict Valid Principals By Default",
+              "details": "Vault’s SSH secrets engine did not require the valid_principals list to contain a value by default. If the valid_principals and default_user fields of the SSH secrets engine configuration are not set, an SSH certificate requested by an authorized user to Vault’s SSH secrets engine could be used to authenticate as any user on the host. Fixed in Vault Community Edition 1.17.6, and in Vault Enterprise 1.17.6, 1.16.10, and 1.15.15.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.7.7"
+                        },
+                        {
+                          "fixed": "1.17.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-jg74-mwgw-v6x3/GHSA-jg74-mwgw-v6x3.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7594"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-20-vault-ssh-secrets-engine-configuration-did-not-restrict-valid-principals-by-default/70251"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2024-3162"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-732"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-26T21:53:43Z",
+                "nvd_published_at": "2024-09-26T20:15:07Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-10-09T20:59:17Z",
+              "published": "2024-10-09T20:29:23Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-3162",
+              "aliases": [
+                "BIT-vault-2024-7594",
+                "CVE-2024-7594",
+                "GHSA-jg74-mwgw-v6x3"
+              ],
+              "summary": "Vault SSH Secrets Engine Configuration Did Not Restrict Valid Principals By Default in github.com/hashicorp/vault",
+              "details": "Vault SSH Secrets Engine Configuration Did Not Restrict Valid Principals By Default in github.com/hashicorp/vault",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.7.7"
+                        },
+                        {
+                          "fixed": "1.17.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-3162.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-jg74-mwgw-v6x3"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7594"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-20-vault-ssh-secrets-engine-configuration-did-not-restrict-valid-principals-by-default/70251"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-3162"
+              }
+            },
+            {
+              "modified": "2024-10-18T21:48:29Z",
+              "published": "2024-10-10T21:30:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rr8j-7w34-xp5j",
+              "aliases": [
+                "BIT-vault-2024-9180",
+                "CVE-2024-9180",
+                "GO-2024-3191"
+              ],
+              "summary": "Vault Community Edition privilege escalation vulnerability",
+              "details": "A privileged Vault operator with write permissions to the root namespace’s identity endpoint could escalate their privileges to Vault’s root policy. Fixed in Vault Community Edition 1.18.0 and Vault Enterprise 1.18.0, 1.17.7, 1.16.11, and 1.15.16",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.18.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-rr8j-7w34-xp5j/GHSA-rr8j-7w34-xp5j.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9180"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-21-vault-operators-in-root-namespace-may-elevate-their-privileges/70565"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/vault"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://pkg.go.dev/vuln/GO-2024-3191"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-266"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-10T22:19:11Z",
+                "nvd_published_at": "2024-10-10T21:15:05Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-10-14T08:42:00Z",
+              "published": "2024-10-11T14:32:39Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-3191",
+              "aliases": [
+                "BIT-vault-2024-9180",
+                "CVE-2024-9180",
+                "GHSA-rr8j-7w34-xp5j"
+              ],
+              "summary": "Vault Community Edition privilege escalation vulnerability in github.com/hashicorp/vault",
+              "details": "Vault Community Edition privilege escalation vulnerability in github.com/hashicorp/vault",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/vault",
+                    "purl": "pkg:golang/github.com/hashicorp/vault"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.18.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-3191.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-rr8j-7w34-xp5j"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-9180"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-21-vault-operators-in-root-namespace-may-elevate-their-privileges/70565"
+                }
+              ],
+              "database_specific": {
+                "review_status": "UNREVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-3191"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4qhc-v8r6-8vwm",
+                "GO-2023-2329"
+              ],
+              "aliases": [
+                "BIT-vault-2023-5954",
+                "CVE-2023-5954",
+                "GHSA-4qhc-v8r6-8vwm",
+                "GO-2023-2329"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-6p62-6cg9-f5f5",
+                "GO-2023-2399"
+              ],
+              "aliases": [
+                "BIT-vault-2023-6337",
+                "CVE-2023-6337",
+                "GHSA-6p62-6cg9-f5f5",
+                "GO-2023-2399"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-r3w7-mfpm-c2vw",
+                "GO-2024-2617"
+              ],
+              "aliases": [
+                "BIT-vault-2024-2048",
+                "CVE-2024-2048",
+                "GHSA-r3w7-mfpm-c2vw",
+                "GO-2024-2617"
+              ],
+              "max_severity": "8.1"
+            },
+            {
+              "ids": [
+                "GHSA-vgh3-mwxq-rcp8",
+                "GO-2024-2511"
+              ],
+              "aliases": [
+                "BIT-vault-2024-0831",
+                "CVE-2024-0831",
+                "GHSA-vgh3-mwxq-rcp8",
+                "GO-2024-2511"
+              ],
+              "max_severity": "4.5"
+            },
+            {
+              "ids": [
+                "GHSA-32cj-5wx4-gq8p",
+                "GO-2024-2921"
+              ],
+              "aliases": [
+                "BIT-vault-2024-5798",
+                "CVE-2024-5798",
+                "GHSA-32cj-5wx4-gq8p",
+                "GO-2024-2921"
+              ],
+              "max_severity": "2.6"
+            },
+            {
+              "ids": [
+                "GHSA-2qmw-pvf7-4mw6",
+                "GO-2024-2982"
+              ],
+              "aliases": [
+                "BIT-vault-2024-6468",
+                "CVE-2024-6468",
+                "GHSA-2qmw-pvf7-4mw6",
+                "GO-2024-2982"
+              ],
+              "max_severity": "7.5"
+            },
+            {
+              "ids": [
+                "GHSA-j2rp-gmqv-frhv",
+                "GO-2024-2690"
+              ],
+              "aliases": [
+                "BIT-vault-2024-2660",
+                "CVE-2024-2660",
+                "GHSA-j2rp-gmqv-frhv",
+                "GO-2024-2690"
+              ],
+              "max_severity": "6.4"
+            },
+            {
+              "ids": [
+                "GHSA-jg74-mwgw-v6x3",
+                "GO-2024-3162"
+              ],
+              "aliases": [
+                "BIT-vault-2024-7594",
+                "CVE-2024-7594",
+                "GHSA-jg74-mwgw-v6x3",
+                "GO-2024-3162"
+              ],
+              "max_severity": "7.7"
+            },
+            {
+              "ids": [
+                "GHSA-rr8j-7w34-xp5j",
+                "GO-2024-3191"
+              ],
+              "aliases": [
+                "BIT-vault-2024-9180",
+                "CVE-2024-9180",
+                "GHSA-rr8j-7w34-xp5j",
+                "GO-2024-3191"
+              ],
+              "max_severity": "8.6"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

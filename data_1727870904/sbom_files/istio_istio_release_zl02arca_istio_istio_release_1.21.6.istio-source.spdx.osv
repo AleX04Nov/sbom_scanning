@@ -1,0 +1,378 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/istio_istio_release_zl02arca_istio_istio_release_1.21.6.istio-source.spdx",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "helm.sh/helm/v3",
+            "version": "v3.14.2",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:00:19Z",
+              "published": "2024-03-03T21:31:25Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jw44-4f3j-q396",
+              "aliases": [
+                "CVE-2019-25210"
+              ],
+              "related": [
+                "CGA-2359-w7f8-hwcm",
+                "CGA-2cj2-8mc2-3rx5",
+                "CGA-2w6c-9967-2m98",
+                "CGA-337p-jfx9-hj55",
+                "CGA-3765-975m-4wp2",
+                "CGA-4w9g-ffhm-3ppm",
+                "CGA-56xq-fvfc-hx7h",
+                "CGA-57wv-cx35-8wwj",
+                "CGA-594h-8wm6-67qq",
+                "CGA-5h54-6x82-6mj7",
+                "CGA-645w-jfx9-2mfx",
+                "CGA-6cw7-c57f-pcxw",
+                "CGA-6frq-wh54-6rc8",
+                "CGA-6j92-r524-vvrm",
+                "CGA-83w8-8q2w-9vvv",
+                "CGA-85vf-9g7x-h648",
+                "CGA-867p-28cp-c6wp",
+                "CGA-88p6-65c2-4888",
+                "CGA-8cpr-3643-vxw8",
+                "CGA-8m4j-r6jg-jf5v",
+                "CGA-c3vw-phcc-7vhv",
+                "CGA-fgqm-2j7g-887c",
+                "CGA-g3gc-4h77-ppj5",
+                "CGA-gggw-c957-cc4r",
+                "CGA-gm43-rf72-687v",
+                "CGA-h3mx-jvxm-3p75",
+                "CGA-h674-7fqh-7p26",
+                "CGA-h6vp-m9pp-mfxr",
+                "CGA-hggv-67cc-rjpf",
+                "CGA-jwpw-h2f3-frx4",
+                "CGA-m3fr-q79h-cxqv",
+                "CGA-mrx5-p97r-j2f3",
+                "CGA-mx5p-368g-j984",
+                "CGA-mxvx-4pcp-f7gc",
+                "CGA-q4m3-c6hw-6gvv",
+                "CGA-q85j-83g4-mpgh",
+                "CGA-r776-6mc7-f8cc",
+                "CGA-rjwg-33wh-5r8w",
+                "CGA-rp7w-g86x-hpg4",
+                "CGA-w3wh-5wj5-7fjq",
+                "CGA-wp67-cpgg-6hjq",
+                "CGA-wrq5-qjch-p7wf",
+                "CGA-x237-v27j-pwg7",
+                "CGA-x76g-3jw7-c6wg",
+                "CGA-x9pq-7c2p-q6j2",
+                "CGA-xj2h-hmvh-f742"
+              ],
+              "summary": "Helm shows secrets in clear text",
+              "details": "An issue was discovered in Cloud Native Computing Foundation (CNCF) Helm. It displays values of secrets when the --dry-run flag is used. This is a security concern in some use cases, such as a --dry-run call by a CI/CD tool. NOTE: the vendor's position is that this behavior was introduced intentionally, and cannot be removed without breaking backwards compatibility (some users may be relying on these values).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "helm.sh/helm/v3",
+                    "purl": "pkg:golang/helm.sh/helm/v3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "last_affected": "3.14.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-jw44-4f3j-q396/GHSA-jw44-4f3j-q396.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-25210"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/helm/helm/issues/7275"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/helm/helm"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://helm.sh/blog/response-cve-2019-25210"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.cncf.io/projects/helm"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-05T14:39:00Z",
+                "nvd_published_at": "2024-03-03T21:15:49Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jw44-4f3j-q396"
+              ],
+              "aliases": [
+                "CVE-2019-25210",
+                "GHSA-jw44-4f3j-q396"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/quic-go/quic-go",
+            "version": "v0.40.1",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-04-05T18:53:25Z",
+              "published": "2024-04-02T14:16:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-c33x-xqrf-c478",
+              "aliases": [
+                "CVE-2024-22189",
+                "GO-2024-2682"
+              ],
+              "related": [
+                "CGA-23gr-ph4g-w7pj",
+                "CGA-4gr3-q9wm-59rc",
+                "CGA-6f39-q23x-4jc3",
+                "CGA-9vmw-j6px-6mx7",
+                "CGA-c2xx-5x54-r22j",
+                "CGA-pf8v-p6rw-j9jp",
+                "CGA-ppc3-47rr-69m9",
+                "CGA-qhxv-h28x-32w2",
+                "CGA-x74p-fj93-mrmq"
+              ],
+              "summary": "QUIC's Connection ID Mechanism vulnerable to Memory Exhaustion Attack",
+              "details": "An attacker can cause its peer to run out of memory by sending a large number of NEW_CONNECTION_ID frames that retire old connection IDs. The receiver is supposed to respond to each retirement frame with a RETIRE_CONNECTION_ID frame. The attacker can prevent the receiver from sending out (the vast majority of) these RETIRE_CONNECTION_ID frames by collapsing the peers congestion window (by selectively acknowledging received packets) and by manipulating the peer's RTT estimate.\n\nI published a more detailed description of the attack and its mitigation in this blog post: https://seemann.io/posts/2024-03-19-exploiting-quics-connection-id-management/.\nI also presented this attack in the IETF QUIC working group session at IETF 119: https://youtu.be/JqXtYcZAtIA?si=nJ31QKLBSTRXY35U\u0026t=3683\n\nThere's no way to mitigate this attack, please update quic-go to a version that contains the fix.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/quic-go/quic-go",
+                    "purl": "pkg:golang/github.com/quic-go/quic-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.42.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-c33x-xqrf-c478/GHSA-c33x-xqrf-c478.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/quic-go/quic-go/security/advisories/GHSA-c33x-xqrf-c478"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-22189"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/quic-go/quic-go/commit/4a99b816ae3ab03ae5449d15aac45147c85ed47a"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/quic-go/quic-go"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seemann.io/posts/2024-03-19-exploiting-quics-connection-id-management"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.youtube.com/watch?v=JqXtYcZAtIA\u0026t=3683s"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-02T14:16:05Z",
+                "nvd_published_at": "2024-04-04T15:15:37Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2024-04-05T16:53:41Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2682",
+              "aliases": [
+                "CVE-2024-22189",
+                "GHSA-c33x-xqrf-c478"
+              ],
+              "summary": "Denial of service via connection starvation in github.com/quic-go/quic-go",
+              "details": "An attacker can cause its peer to run out of memory by sending a large number of NEW_CONNECTION_ID frames that retire old connection IDs. The receiver is supposed to respond to each retirement frame with a RETIRE_CONNECTION_ID frame. The attacker can prevent the receiver from sending out (the vast majority of) these RETIRE_CONNECTION_ID frames by collapsing the peers congestion window (by selectively acknowledging received packets) and by manipulating the peer's RTT estimate.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/quic-go/quic-go",
+                    "purl": "pkg:golang/github.com/quic-go/quic-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.42.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2682.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/quic-go/quic-go",
+                        "symbols": [
+                          "Dial",
+                          "DialAddr",
+                          "DialAddrEarly",
+                          "DialEarly",
+                          "Listen",
+                          "ListenAddr",
+                          "ListenAddrEarly",
+                          "ListenEarly",
+                          "Transport.Dial",
+                          "Transport.DialEarly",
+                          "Transport.Listen",
+                          "Transport.ListenEarly",
+                          "connIDGenerator.Retire",
+                          "connIDGenerator.SetMaxActiveConnIDs",
+                          "connIDManager.Add",
+                          "connIDManager.Get",
+                          "connection.AcceptStream",
+                          "connection.AcceptUniStream",
+                          "connection.OpenStream",
+                          "connection.OpenStreamSync",
+                          "connection.OpenUniStream",
+                          "connection.OpenUniStreamSync",
+                          "connection.run",
+                          "framerI.AppendStreamFrames",
+                          "framerI.QueueControlFrame",
+                          "packetPacker.AppendPacket",
+                          "packetPacker.MaybePackProbePacket",
+                          "packetPacker.PackAckOnlyPacket",
+                          "packetPacker.PackApplicationClose",
+                          "packetPacker.PackCoalescedPacket",
+                          "packetPacker.PackConnectionClose",
+                          "packetPacker.PackMTUProbePacket",
+                          "receiveStream.CancelRead",
+                          "receiveStream.CloseRemote",
+                          "receiveStream.Read",
+                          "sendStream.CancelWrite",
+                          "streamsMap.AcceptStream",
+                          "streamsMap.AcceptUniStream",
+                          "streamsMap.DeleteStream",
+                          "streamsMap.HandleMaxStreamsFrame",
+                          "streamsMap.OpenStream",
+                          "streamsMap.OpenStreamSync",
+                          "streamsMap.OpenUniStream",
+                          "streamsMap.OpenUniStreamSync",
+                          "streamsMap.UpdateLimits",
+                          "windowUpdateQueue.QueueAll"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/quic-go/quic-go/commit/4a99b816ae3ab03ae5449d15aac45147c85ed47a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seemann.io/posts/2024-03-19-exploiting-quics-connection-id-management"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "marten-seemann"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2682"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-c33x-xqrf-c478",
+                "GO-2024-2682"
+              ],
+              "aliases": [
+                "CVE-2024-22189",
+                "GHSA-c33x-xqrf-c478",
+                "GO-2024-2682"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

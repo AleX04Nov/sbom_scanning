@@ -1,0 +1,384 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/FraunhoferISST_diva_0c5e4cbed2ca197e77bb41d7ac875fbe4b655b61_f10cwuns_bom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "axios",
+            "version": "0.26.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-21T21:33:58Z",
+              "published": "2023-11-08T21:30:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-wf5p-g6vw-rhxx",
+              "aliases": [
+                "CVE-2023-45857"
+              ],
+              "related": [
+                "CGA-353m-v97c-f639",
+                "CGA-vgwv-2q7q-27h5"
+              ],
+              "summary": "Axios Cross-Site Request Forgery Vulnerability",
+              "details": "An issue discovered in Axios 0.8.1 through 1.5.1 inadvertently reveals the confidential XSRF-TOKEN stored in cookies by including it in the HTTP header X-XSRF-TOKEN for every request made to any host allowing attackers to view sensitive information.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "axios",
+                    "purl": "pkg:npm/axios"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "1.0.0"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "axios",
+                    "purl": "pkg:npm/axios"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.8.1"
+                        },
+                        {
+                          "fixed": "0.28.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/11/GHSA-wf5p-g6vw-rhxx/GHSA-wf5p-g6vw-rhxx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-45857"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/issues/6022"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/pull/6028"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/pull/6091"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/commit/2755df562b9c194fba6d8b609a383443f6a6e967"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/axios/axios"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/releases/tag/v0.28.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/axios/axios/releases/tag/v1.6.0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240621-0006"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-AXIOS-6032459"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-352"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-11-10T00:35:37Z",
+                "nvd_published_at": "2023-11-08T21:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-wf5p-g6vw-rhxx"
+              ],
+              "aliases": [
+                "CVE-2023-45857",
+                "GHSA-wf5p-g6vw-rhxx"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "follow-redirects",
+            "version": "1.14.9",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-01-09T19:03:24Z",
+              "published": "2024-01-02T06:30:30Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jchw-25xp-jwwc",
+              "aliases": [
+                "CVE-2023-26159"
+              ],
+              "related": [
+                "CGA-65j6-vpjf-wmcw",
+                "CGA-7g2g-v257-98w5",
+                "CGA-mxrc-77h6-935c",
+                "CGA-q66j-qggf-9r53",
+                "CGA-qhpw-vxjv-g4hr",
+                "CGA-rcv5-pp4p-xq9g",
+                "CGA-whm7-gm9q-6v85"
+              ],
+              "summary": "Follow Redirects improperly handles URLs in the url.parse() function",
+              "details": "Versions of the package follow-redirects before 1.15.4 are vulnerable to Improper Input Validation due to the improper handling of URLs by the url.parse() function. When new URL() throws an error, it can be manipulated to misinterpret the hostname. An attacker could exploit this weakness to redirect traffic to a malicious site, potentially leading to information disclosure, phishing attacks, or other security breaches.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "follow-redirects",
+                    "purl": "pkg:npm/follow-redirects"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-jchw-25xp-jwwc/GHSA-jchw-25xp-jwwc.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-26159"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/issues/235"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/pull/236"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/commit/7a6567e16dfa9ad18a70bfe91784c28653fbf19d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/follow-redirects/follow-redirects"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZZ425BFKNBQ6AK7I5SAM56TWON5OF2XM"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.snyk.io/vuln/SNYK-JS-FOLLOWREDIRECTS-6141137"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20",
+                  "CWE-601"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-08T22:01:39Z",
+                "nvd_published_at": "2024-01-02T05:15:08Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-04-02T17:54:20Z",
+              "published": "2024-03-14T17:19:42Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cxjh-pqwp-8mfp",
+              "aliases": [
+                "CVE-2024-28849"
+              ],
+              "related": [
+                "CGA-3qpx-2jp6-8w3m",
+                "CGA-7g4q-75vq-228c",
+                "CGA-896m-v6ff-2q96",
+                "CGA-8m86-gww5-8pm9",
+                "CGA-fp6h-638c-5c69",
+                "CGA-r834-rj47-cfj9",
+                "CGA-w43g-68f9-2mqp"
+              ],
+              "summary": "follow-redirects' Proxy-Authorization header kept across hosts",
+              "details": "When using [axios](https://github.com/axios/axios), its dependency follow-redirects only clears authorization header during cross-domain redirect, but allows the proxy-authentication header which contains credentials too.\n\n## Steps To Reproduce \u0026 PoC\n\nTest code:\n\n```js\nconst axios = require('axios');\n\naxios.get('http://127.0.0.1:10081/', {\n headers: {\n 'AuThorization': 'Rear Test',\n 'ProXy-AuthoriZation': 'Rear Test',\n 'coOkie': 't=1'\n }\n})\n .then((response) =\u003e {\n console.log(response);\n })\n```\n\nWhen I meet the cross-domain redirect, the sensitive headers like authorization and cookie are cleared, but proxy-authentication header is kept.\n\n## Impact\n\nThis vulnerability may lead to credentials leak.\n\n## Recommendations\n\nRemove proxy-authentication header during cross-domain redirect\n\n### Recommended Patch\n\n[follow-redirects/index.js:464](https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b)\n\n```diff\n- removeMatchingHeaders(/^(?:authorization|cookie)$/i, this._options.headers);\n+ removeMatchingHeaders(/^(?:authorization|proxy-authorization|cookie)$/i, this._options.headers);\n```",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "follow-redirects",
+                    "purl": "pkg:npm/follow-redirects"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.15.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 1.15.5",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-cxjh-pqwp-8mfp/GHSA-cxjh-pqwp-8mfp.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/security/advisories/GHSA-cxjh-pqwp-8mfp"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-28849"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/issues/1885"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/follow-redirects/follow-redirects/commit/c4f847f85176991f95ab9c88af63b1294de8649b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://hackerone.com/reports/2390009"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://fetch.spec.whatwg.org/#authentication-entries"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/follow-redirects/follow-redirects"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOIF4EPQUCKDBEVTGRQDZ3CGTYQHPO7Z"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-14T17:19:42Z",
+                "nvd_published_at": "2024-03-14T17:15:52Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jchw-25xp-jwwc"
+              ],
+              "aliases": [
+                "CVE-2023-26159",
+                "GHSA-jchw-25xp-jwwc"
+              ],
+              "max_severity": "6.1"
+            },
+            {
+              "ids": [
+                "GHSA-cxjh-pqwp-8mfp"
+              ],
+              "aliases": [
+                "CVE-2024-28849",
+                "GHSA-cxjh-pqwp-8mfp"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

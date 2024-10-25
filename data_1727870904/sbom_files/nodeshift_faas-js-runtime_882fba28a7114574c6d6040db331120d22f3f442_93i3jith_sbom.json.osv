@@ -1,0 +1,239 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/nodeshift_faas-js-runtime_882fba28a7114574c6d6040db331120d22f3f442_93i3jith_sbom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "find-my-way",
+            "version": "7.6.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-07T21:52:21Z",
+              "published": "2024-09-18T15:52:33Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-rrr8-f88r-h8q6",
+              "aliases": [
+                "CVE-2024-45813"
+              ],
+              "summary": "find-my-way has a ReDoS vulnerability in multiparametric routes",
+              "details": "### Impact\n\nA bad regular expression is generated any time you have two parameters within a single segment, when adding a `-` at the end, like `/:a-:b-`.\n\n### Patches\n\nUpdate to find-my-way v8.2.2 or v9.0.1. or subsequent versions.\n\n### Workarounds\n\nNo known workarounds.\n\n### References\n\n- [CVE-2024-45296](https://github.com/advisories/GHSA-9wv6-86v2-598j)\n- [Detailed blog post about `path-to-regexp` vulnerability](https://blakeembrey.com/posts/2024-09-web-redos/)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "find-my-way",
+                    "purl": "pkg:npm/find-my-way"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "5.5.0"
+                        },
+                        {
+                          "fixed": "8.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-rrr8-f88r-h8q6/GHSA-rrr8-f88r-h8q6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "find-my-way",
+                    "purl": "pkg:npm/find-my-way"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "9.0.0"
+                        },
+                        {
+                          "fixed": "9.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-rrr8-f88r-h8q6/GHSA-rrr8-f88r-h8q6.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/delvedor/find-my-way/security/advisories/GHSA-rrr8-f88r-h8q6"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45813"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/delvedor/find-my-way/commit/17fae694dcefc056045da201681c1530f0f80518"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/delvedor/find-my-way/commit/5e9e0eb5d8d438e06a185d5e536a896572dd0440"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/delvedor/find-my-way/commit/66fa03923355b8da1db4ba572d66a4fee4a57cf5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://blakeembrey.com/posts/2024-09-web-redos"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-9wv6-86v2-598j"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/delvedor/find-my-way"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-18T15:52:33Z",
+                "nvd_published_at": "2024-09-18T17:15:19Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-rrr8-f88r-h8q6"
+              ],
+              "aliases": [
+                "CVE-2024-45813",
+                "GHSA-rrr8-f88r-h8q6"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cookie",
+            "version": "0.5.0",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-04T20:57:03Z",
+              "published": "2024-10-04T20:31:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-pxg6-pf52-xh8x",
+              "aliases": [
+                "CVE-2024-47764"
+              ],
+              "related": [
+                "CGA-56hq-34m4-pgc5",
+                "CGA-hchv-5xpf-mwj3"
+              ],
+              "summary": "cookie accepts cookie name, path, and domain with out of bounds characters",
+              "details": "### Impact\n\nThe cookie name could be used to set other fields of the cookie, resulting in an unexpected cookie value. For example, `serialize(\"userName=\u003cscript\u003ealert('XSS3')\u003c/script\u003e; Max-Age=2592000; a\", value)` would result in `\"userName=\u003cscript\u003ealert('XSS3')\u003c/script\u003e; Max-Age=2592000; a=test\"`, setting `userName` cookie to `\u003cscript\u003e` and ignoring `value`.\n\nA similar escape can be used for `path` and `domain`, which could be abused to alter other fields of the cookie.\n\n### Patches\n\nUpgrade to 0.7.0, which updates the validation for `name`, `path`, and `domain`.\n\n### Workarounds\n\nAvoid passing untrusted or arbitrary values for these fields, ensure they are set by the application instead of user input.\n\n### References\n\n* https://github.com/jshttp/cookie/pull/167",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "cookie",
+                    "purl": "pkg:npm/cookie"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-pxg6-pf52-xh8x/GHSA-pxg6-pf52-xh8x.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/security/advisories/GHSA-pxg6-pf52-xh8x"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/pull/167"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jshttp/cookie/commit/e10042845354fea83bd8f34af72475eed1dadf5c"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jshttp/cookie"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-74"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-04T20:31:00Z",
+                "nvd_published_at": null,
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-pxg6-pf52-xh8x"
+              ],
+              "aliases": [
+                "CVE-2024-47764",
+                "GHSA-pxg6-pf52-xh8x"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

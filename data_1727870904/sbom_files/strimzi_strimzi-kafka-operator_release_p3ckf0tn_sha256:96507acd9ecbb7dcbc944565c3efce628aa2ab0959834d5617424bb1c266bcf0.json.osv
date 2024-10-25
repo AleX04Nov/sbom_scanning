@@ -1,0 +1,3634 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/strimzi_strimzi-kafka-operator_release_p3ckf0tn_sha256:96507acd9ecbb7dcbc944565c3efce628aa2ab0959834d5617424bb1c266bcf0.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "commons-io:commons-io",
+            "version": "2.11.0",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-03T17:27:19Z",
+              "published": "2024-10-03T12:30:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-78wr-2p64-hpwj",
+              "aliases": [
+                "CVE-2024-47554"
+              ],
+              "related": [
+                "CGA-252j-5hcw-3x22",
+                "CGA-9w8c-c5fw-q342",
+                "CGA-pwg2-7493-q9wm",
+                "CGA-v9q6-cg5v-8pf7"
+              ],
+              "summary": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+              "details": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "commons-io:commons-io",
+                    "purl": "pkg:maven/commons-io/commons-io"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0"
+                        },
+                        {
+                          "fixed": "2.14.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8.0",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-78wr-2p64-hpwj/GHSA-78wr-2p64-hpwj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47554"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-io"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/6ozr91rr9cj5lm0zyhv30bsp317hk5z1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-03T16:52:23Z",
+                "nvd_published_at": "2024-10-03T12:15:02Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "aliases": [
+                "CVE-2024-47554",
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "commons-io:commons-io",
+            "version": "2.11.0",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-03T17:27:19Z",
+              "published": "2024-10-03T12:30:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-78wr-2p64-hpwj",
+              "aliases": [
+                "CVE-2024-47554"
+              ],
+              "related": [
+                "CGA-252j-5hcw-3x22",
+                "CGA-9w8c-c5fw-q342",
+                "CGA-pwg2-7493-q9wm",
+                "CGA-v9q6-cg5v-8pf7"
+              ],
+              "summary": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+              "details": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "commons-io:commons-io",
+                    "purl": "pkg:maven/commons-io/commons-io"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0"
+                        },
+                        {
+                          "fixed": "2.14.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8.0",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-78wr-2p64-hpwj/GHSA-78wr-2p64-hpwj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47554"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-io"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/6ozr91rr9cj5lm0zyhv30bsp317hk5z1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-03T16:52:23Z",
+                "nvd_published_at": "2024-10-03T12:15:02Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "aliases": [
+                "CVE-2024-47554",
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.eclipse.jetty:jetty-http",
+            "version": "9.4.53.v20231009",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-14T21:27:23Z",
+              "published": "2024-10-14T21:11:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qh8g-58pp-2wxh",
+              "aliases": [
+                "CVE-2024-6763"
+              ],
+              "summary": "Eclipse Jetty URI parsing of invalid authority",
+              "details": "## Summary\n\nEclipse Jetty is a lightweight, highly scalable, Java-based web server and Servlet engine . It includes a utility class, `HttpURI`, for URI/URL parsing.\n\nThe `HttpURI` class does insufficient validation on the authority segment of a URI.  However the behaviour of `HttpURI` differs from the common browsers in how it handles a URI that would be considered invalid if fully validated against the RRC.  Specifically `HttpURI` and the browser may differ on the value of the host extracted from an invalid URI and thus a combination of Jetty and a vulnerable browser may be vulnerable to a open redirect attack or to a SSRF attack if the URI is used after passing validation checks.\n\n## Details\n\n### Affected components\n\nThe vulnerable component is the `HttpURI` class when used as a utility class in an application.  The Jetty usage of the class is not vulnerable.\n\n### Attack overview\n\nThe `HttpURI` class does not well validate the authority section of a URI. When presented with an illegal authority that may contain user info (eg username:password#@hostname:port), then the parsing of the URI is not failed.  Moreover, the interpretation of what part of the authority is the host name differs from a common browser in  that they also do not fail, but they select a different host name from the illegal URI.\n\n### Attack scenario\n\nA typical attack scenario is illustrated in the diagram below. The Validator checks whether the attacker-supplied URL is on the blocklist. If not, the URI is passed to the Requester for redirection. The Requester is responsible for sending requests to the hostname specified by the URI.\n\nThis attack occurs when the Validator is the `org.eclipse.jetty.http.HttpURI` class and the Requester is the `Browser` (include chrome, firefox and Safari). An attacker can send a malformed URI to the Validator (e.g., `http://browser.check%23%40vulndetector.com/` ). After validation, the Validator finds that the hostname is not on the blocklist. However, the Requester can still send requests to the domain with the hostname `vulndetector.com`.\n\n## PoC\n\npayloads:\n\n```\nhttp://browser.check \u0026@vulndetector.com/\nhttp://browser.check #@vulndetector.com/\nhttp://browser.check?@vulndetector.com/\nhttp://browser.check#@vulndetector.com/\nhttp://vulndetector.com\\\\/\n```\n\nThe problem of 302 redirect parsing in HTML tag scenarios. Below is a poc example. After clicking the button, the browser will open \"browser.check\", and jetty will parse this URL as \"vulndetector.com\".\n\n```\n\u003ca href=\"http://browser.check#@vulndetector.com/\"\u003e\u003c/a\u003e\n```\nA comparison of the parsing differences between Jetty and chrome is shown in the table below (note that neither should accept the URI as valid).\n\n| Invalid URI                                       | Jetty            | Chrome        |\n| ---------------------------------------------- | ---------------- | ------------- |\n| http://browser.check \u0026@vulndetector.com/ | vulndetector.com | browser.check |\n| http://browser.check #@vulndetector.com/ | vulndetector.com | browser.check |\n| http://browser.check?@vulndetector.com/    | vulndetector.com | browser.check |\n| http://browser.check#@vulndetector.com/    | vulndetector.com | browser.check |\n\nThe problem of 302 redirect parsing in HTTP 302 Location\n\n| Input                    | Jetty          | Chrome        |\n| ------------------------ | -------------- | ------------- |\n| http://browser.check%5c/ | browser.check\\ | browser.check |\n\nIt is noteworthy that Spring Web also faced similar security vulnerabilities, being affected by the aforementioned four types of payloads. These issues have since been resolved and have been assigned three CVE numbers [3-5].\n\n## Impact\n\nThe impact of this vulnerability is limited to developers that use the Jetty HttpURI directly.  Example: your project implemented a blocklist to block on some hosts based on HttpURI's handling of authority section.  The vulnerability will help attackers bypass the protections that developers have set up for hosts. The vulnerability will lead to **SSRF**[1] and **URL Redirection**[2] vulnerabilities in several cases. \n\n## Mitigation\n\nThe attacks outlined above rely on decoded user data being passed to the `HttpURI` class. Application should not pass decoded user data as an encoded URI to any URI class/method, including `HttpURI`.  Such applications are likely to be vulnerable in other ways. \nThe immediate solution is to upgrade to a version of the class that will fully validate the characters of the URI authority.  Ultimately, Jetty will deprecate and remove support for user info in the authority per [RFC9110 Section 4.2.4](https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.4). \n\nNote that the Chrome (and other browsers) parse the invalid user info section improperly as well (due to flawed WhatWG URL parsing rules that do not apply outside of a Web Browser).\n\n## Reference\n\n[1] https://cwe.mitre.org/data/definitions/918.html\n[2] https://cwe.mitre.org/data/definitions/601.html\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-http",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-http"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "12.0.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "10.0.0",
+                    "10.0.0-alpha0",
+                    "10.0.0.alpha1",
+                    "10.0.0.alpha2",
+                    "10.0.0.beta0",
+                    "10.0.0.beta1",
+                    "10.0.0.beta2",
+                    "10.0.0.beta3",
+                    "10.0.1",
+                    "10.0.10",
+                    "10.0.11",
+                    "10.0.12",
+                    "10.0.13",
+                    "10.0.14",
+                    "10.0.15",
+                    "10.0.16",
+                    "10.0.17",
+                    "10.0.18",
+                    "10.0.19",
+                    "10.0.2",
+                    "10.0.20",
+                    "10.0.21",
+                    "10.0.22",
+                    "10.0.23",
+                    "10.0.24",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.0.5",
+                    "10.0.6",
+                    "10.0.7",
+                    "10.0.8",
+                    "10.0.9",
+                    "11.0.0",
+                    "11.0.0-alpha0",
+                    "11.0.0.beta1",
+                    "11.0.0.beta2",
+                    "11.0.0.beta3",
+                    "11.0.1",
+                    "11.0.10",
+                    "11.0.11",
+                    "11.0.12",
+                    "11.0.13",
+                    "11.0.14",
+                    "11.0.15",
+                    "11.0.16",
+                    "11.0.17",
+                    "11.0.18",
+                    "11.0.19",
+                    "11.0.2",
+                    "11.0.20",
+                    "11.0.21",
+                    "11.0.22",
+                    "11.0.23",
+                    "11.0.24",
+                    "11.0.3",
+                    "11.0.4",
+                    "11.0.5",
+                    "11.0.6",
+                    "11.0.7",
+                    "11.0.8",
+                    "11.0.9",
+                    "12.0.0",
+                    "12.0.0.alpha0",
+                    "12.0.0.alpha1",
+                    "12.0.0.alpha2",
+                    "12.0.0.alpha3",
+                    "12.0.0.beta0",
+                    "12.0.0.beta1",
+                    "12.0.0.beta2",
+                    "12.0.0.beta3",
+                    "12.0.0.beta4",
+                    "12.0.1",
+                    "12.0.10",
+                    "12.0.11",
+                    "12.0.2",
+                    "12.0.3",
+                    "12.0.4",
+                    "12.0.5",
+                    "12.0.6",
+                    "12.0.7",
+                    "12.0.8",
+                    "12.0.9",
+                    "7.0.0.v20091005",
+                    "7.0.1.v20091125",
+                    "7.0.2.RC0",
+                    "7.0.2.v20100331",
+                    "7.1.0.RC0",
+                    "7.1.0.RC1",
+                    "7.1.0.v20100505",
+                    "7.1.1.v20100517",
+                    "7.1.2.v20100523",
+                    "7.1.3.v20100526",
+                    "7.1.4.v20100610",
+                    "7.1.5.v20100705",
+                    "7.1.6.v20100715",
+                    "7.2.0.RC0",
+                    "7.2.0.v20101020",
+                    "7.2.1.v20101111",
+                    "7.2.2.v20101205",
+                    "7.3.0.v20110203",
+                    "7.3.1.v20110307",
+                    "7.4.0.RC0",
+                    "7.4.0.v20110414",
+                    "7.4.1.v20110513",
+                    "7.4.2.v20110526",
+                    "7.4.3.v20110701",
+                    "7.4.4.v20110707",
+                    "7.4.5.v20110725",
+                    "7.5.0.RC0",
+                    "7.5.0.RC1",
+                    "7.5.0.RC2",
+                    "7.5.0.v20110901",
+                    "7.5.1.v20110908",
+                    "7.5.2.v20111006",
+                    "7.5.3.v20111011",
+                    "7.5.4.v20111024",
+                    "7.6.0.RC0",
+                    "7.6.0.RC1",
+                    "7.6.0.RC2",
+                    "7.6.0.RC3",
+                    "7.6.0.RC4",
+                    "7.6.0.RC5",
+                    "7.6.0.v20120127",
+                    "7.6.1.v20120215",
+                    "7.6.10.v20130312",
+                    "7.6.11.v20130520",
+                    "7.6.12.v20130726",
+                    "7.6.13.v20130916",
+                    "7.6.14.v20131031",
+                    "7.6.15.v20140411",
+                    "7.6.16.v20140903",
+                    "7.6.17.v20150415",
+                    "7.6.18.v20150929",
+                    "7.6.19.v20160209",
+                    "7.6.2.v20120308",
+                    "7.6.20.v20160902",
+                    "7.6.21.v20160908",
+                    "7.6.3.v20120416",
+                    "7.6.4.v20120524",
+                    "7.6.5.v20120716",
+                    "7.6.6.v20120903",
+                    "7.6.7.v20120910",
+                    "7.6.8.v20121106",
+                    "7.6.9.v20130131",
+                    "8.0.0.M0",
+                    "8.0.0.M1",
+                    "8.0.0.M2",
+                    "8.0.0.M3",
+                    "8.0.0.RC0",
+                    "8.0.0.v20110901",
+                    "8.0.1.v20110908",
+                    "8.0.2.v20111006",
+                    "8.0.3.v20111011",
+                    "8.0.4.v20111024",
+                    "8.1.0.RC0",
+                    "8.1.0.RC1",
+                    "8.1.0.RC2",
+                    "8.1.0.RC4",
+                    "8.1.0.RC5",
+                    "8.1.0.v20120127",
+                    "8.1.1.v20120215",
+                    "8.1.10.v20130312",
+                    "8.1.11.v20130520",
+                    "8.1.12.v20130726",
+                    "8.1.13.v20130916",
+                    "8.1.14.v20131031",
+                    "8.1.15.v20140411",
+                    "8.1.16.v20140903",
+                    "8.1.17.v20150415",
+                    "8.1.18.v20150929",
+                    "8.1.19.v20160209",
+                    "8.1.2.v20120308",
+                    "8.1.20.v20160902",
+                    "8.1.21.v20160908",
+                    "8.1.22.v20160922",
+                    "8.1.3.v20120416",
+                    "8.1.4.v20120524",
+                    "8.1.5.v20120716",
+                    "8.1.6.v20120903",
+                    "8.1.7.v20120910",
+                    "8.1.8.v20121106",
+                    "8.1.9.v20130131",
+                    "8.2.0.v20160908",
+                    "9.0.0.M0",
+                    "9.0.0.M1",
+                    "9.0.0.M2",
+                    "9.0.0.M3",
+                    "9.0.0.M4",
+                    "9.0.0.M5",
+                    "9.0.0.RC0",
+                    "9.0.0.RC1",
+                    "9.0.0.RC2",
+                    "9.0.0.v20130308",
+                    "9.0.1.v20130408",
+                    "9.0.2.v20130417",
+                    "9.0.3.v20130506",
+                    "9.0.4.v20130625",
+                    "9.0.5.v20130815",
+                    "9.0.6.v20130930",
+                    "9.0.7.v20131107",
+                    "9.1.0.M0",
+                    "9.1.0.RC0",
+                    "9.1.0.RC1",
+                    "9.1.0.RC2",
+                    "9.1.0.v20131115",
+                    "9.1.1.v20140108",
+                    "9.1.2.v20140210",
+                    "9.1.3.v20140225",
+                    "9.1.4.v20140401",
+                    "9.1.5.v20140505",
+                    "9.1.6.v20160112",
+                    "9.2.0.M0",
+                    "9.2.0.M1",
+                    "9.2.0.RC0",
+                    "9.2.0.v20140526",
+                    "9.2.1.v20140609",
+                    "9.2.10.v20150310",
+                    "9.2.11.M0",
+                    "9.2.11.v20150529",
+                    "9.2.12.M0",
+                    "9.2.12.v20150709",
+                    "9.2.13.v20150730",
+                    "9.2.14.v20151106",
+                    "9.2.15.v20160210",
+                    "9.2.16.v20160414",
+                    "9.2.17.v20160517",
+                    "9.2.18.v20160721",
+                    "9.2.19.v20160908",
+                    "9.2.2.v20140723",
+                    "9.2.20.v20161216",
+                    "9.2.21.v20170120",
+                    "9.2.22.v20170606",
+                    "9.2.23.v20171218",
+                    "9.2.24.v20180105",
+                    "9.2.25.v20180606",
+                    "9.2.26.v20180806",
+                    "9.2.27.v20190403",
+                    "9.2.28.v20190418",
+                    "9.2.29.v20191105",
+                    "9.2.3.v20140905",
+                    "9.2.30.v20200428",
+                    "9.2.4.v20141103",
+                    "9.2.5.v20141112",
+                    "9.2.6.v20141205",
+                    "9.2.7.v20150116",
+                    "9.2.8.v20150217",
+                    "9.2.9.v20150224",
+                    "9.3.0.M0",
+                    "9.3.0.M1",
+                    "9.3.0.M2",
+                    "9.3.0.RC0",
+                    "9.3.0.RC1",
+                    "9.3.0.v20150612",
+                    "9.3.1.v20150714",
+                    "9.3.10.M0",
+                    "9.3.10.v20160621",
+                    "9.3.11.M0",
+                    "9.3.11.v20160721",
+                    "9.3.12.v20160915",
+                    "9.3.13.M0",
+                    "9.3.13.v20161014",
+                    "9.3.14.v20161028",
+                    "9.3.15.v20161220",
+                    "9.3.16.v20170120",
+                    "9.3.17.RC0",
+                    "9.3.17.v20170317",
+                    "9.3.18.v20170406",
+                    "9.3.19.v20170502",
+                    "9.3.2.v20150730",
+                    "9.3.20.v20170531",
+                    "9.3.21.M0",
+                    "9.3.21.RC0",
+                    "9.3.21.v20170918",
+                    "9.3.22.v20171030",
+                    "9.3.23.v20180228",
+                    "9.3.24.v20180605",
+                    "9.3.25.v20180904",
+                    "9.3.26.v20190403",
+                    "9.3.27.v20190418",
+                    "9.3.28.v20191105",
+                    "9.3.29.v20201019",
+                    "9.3.3.v20150827",
+                    "9.3.30.v20211001",
+                    "9.3.4.RC0",
+                    "9.3.4.RC1",
+                    "9.3.4.v20151007",
+                    "9.3.5.v20151012",
+                    "9.3.6.v20151106",
+                    "9.3.7.RC0",
+                    "9.3.7.RC1",
+                    "9.3.7.v20160115",
+                    "9.3.8.RC0",
+                    "9.3.8.v20160314",
+                    "9.3.9.M0",
+                    "9.3.9.M1",
+                    "9.3.9.v20160517",
+                    "9.4.0.M0",
+                    "9.4.0.M1",
+                    "9.4.0.RC0",
+                    "9.4.0.RC1",
+                    "9.4.0.RC2",
+                    "9.4.0.RC3",
+                    "9.4.0.v20161208",
+                    "9.4.0.v20180619",
+                    "9.4.1.v20170120",
+                    "9.4.1.v20180619",
+                    "9.4.10.RC0",
+                    "9.4.10.RC1",
+                    "9.4.10.v20180503",
+                    "9.4.11.v20180605",
+                    "9.4.12.RC0",
+                    "9.4.12.RC1",
+                    "9.4.12.RC2",
+                    "9.4.12.v20180830",
+                    "9.4.13.v20181111",
+                    "9.4.14.v20181114",
+                    "9.4.15.v20190215",
+                    "9.4.16.v20190411",
+                    "9.4.17.v20190418",
+                    "9.4.18.v20190429",
+                    "9.4.19.v20190610",
+                    "9.4.2.v20170220",
+                    "9.4.2.v20180619",
+                    "9.4.20.v20190813",
+                    "9.4.21.v20190926",
+                    "9.4.22.v20191022",
+                    "9.4.23.v20191118",
+                    "9.4.24.v20191120",
+                    "9.4.25.v20191220",
+                    "9.4.26.v20200117",
+                    "9.4.27.v20200227",
+                    "9.4.28.v20200408",
+                    "9.4.29.v20200521",
+                    "9.4.3.v20170317",
+                    "9.4.3.v20180619",
+                    "9.4.30.v20200611",
+                    "9.4.31.v20200723",
+                    "9.4.32.v20200930",
+                    "9.4.33.v20201020",
+                    "9.4.34.v20201102",
+                    "9.4.35.v20201120",
+                    "9.4.36.v20210114",
+                    "9.4.37.v20210219",
+                    "9.4.38.v20210224",
+                    "9.4.39.v20210325",
+                    "9.4.4.v20170414",
+                    "9.4.4.v20180619",
+                    "9.4.40.v20210413",
+                    "9.4.41.v20210516",
+                    "9.4.42.v20210604",
+                    "9.4.43.v20210629",
+                    "9.4.44.v20210927",
+                    "9.4.45.v20220203",
+                    "9.4.46.v20220331",
+                    "9.4.47.v20220610",
+                    "9.4.48.v20220622",
+                    "9.4.49.v20220914",
+                    "9.4.5.v20170502",
+                    "9.4.5.v20180619",
+                    "9.4.50.v20221201",
+                    "9.4.51.v20230217",
+                    "9.4.52.v20230823",
+                    "9.4.53.v20231009",
+                    "9.4.54.v20240208",
+                    "9.4.55.v20240627",
+                    "9.4.56.v20240826",
+                    "9.4.6.v20170531",
+                    "9.4.6.v20180619",
+                    "9.4.7.RC0",
+                    "9.4.7.v20170914",
+                    "9.4.7.v20180619",
+                    "9.4.8.v20171121",
+                    "9.4.8.v20180619",
+                    "9.4.9.v20180320"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.0.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qh8g-58pp-2wxh/GHSA-qh8g-58pp-2wxh.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-qh8g-58pp-2wxh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6763"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/pull/12012"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jetty/jetty.project"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/25"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1286"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-14T21:11:43Z",
+                "nvd_published_at": "2024-10-14T16:15:04Z",
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qh8g-58pp-2wxh"
+              ],
+              "aliases": [
+                "CVE-2024-6763",
+                "GHSA-qh8g-58pp-2wxh"
+              ],
+              "max_severity": "3.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.eclipse.jetty:jetty-http",
+            "version": "9.4.54.v20240208",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-14T21:27:23Z",
+              "published": "2024-10-14T21:11:43Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-qh8g-58pp-2wxh",
+              "aliases": [
+                "CVE-2024-6763"
+              ],
+              "summary": "Eclipse Jetty URI parsing of invalid authority",
+              "details": "## Summary\n\nEclipse Jetty is a lightweight, highly scalable, Java-based web server and Servlet engine . It includes a utility class, `HttpURI`, for URI/URL parsing.\n\nThe `HttpURI` class does insufficient validation on the authority segment of a URI.  However the behaviour of `HttpURI` differs from the common browsers in how it handles a URI that would be considered invalid if fully validated against the RRC.  Specifically `HttpURI` and the browser may differ on the value of the host extracted from an invalid URI and thus a combination of Jetty and a vulnerable browser may be vulnerable to a open redirect attack or to a SSRF attack if the URI is used after passing validation checks.\n\n## Details\n\n### Affected components\n\nThe vulnerable component is the `HttpURI` class when used as a utility class in an application.  The Jetty usage of the class is not vulnerable.\n\n### Attack overview\n\nThe `HttpURI` class does not well validate the authority section of a URI. When presented with an illegal authority that may contain user info (eg username:password#@hostname:port), then the parsing of the URI is not failed.  Moreover, the interpretation of what part of the authority is the host name differs from a common browser in  that they also do not fail, but they select a different host name from the illegal URI.\n\n### Attack scenario\n\nA typical attack scenario is illustrated in the diagram below. The Validator checks whether the attacker-supplied URL is on the blocklist. If not, the URI is passed to the Requester for redirection. The Requester is responsible for sending requests to the hostname specified by the URI.\n\nThis attack occurs when the Validator is the `org.eclipse.jetty.http.HttpURI` class and the Requester is the `Browser` (include chrome, firefox and Safari). An attacker can send a malformed URI to the Validator (e.g., `http://browser.check%23%40vulndetector.com/` ). After validation, the Validator finds that the hostname is not on the blocklist. However, the Requester can still send requests to the domain with the hostname `vulndetector.com`.\n\n## PoC\n\npayloads:\n\n```\nhttp://browser.check \u0026@vulndetector.com/\nhttp://browser.check #@vulndetector.com/\nhttp://browser.check?@vulndetector.com/\nhttp://browser.check#@vulndetector.com/\nhttp://vulndetector.com\\\\/\n```\n\nThe problem of 302 redirect parsing in HTML tag scenarios. Below is a poc example. After clicking the button, the browser will open \"browser.check\", and jetty will parse this URL as \"vulndetector.com\".\n\n```\n\u003ca href=\"http://browser.check#@vulndetector.com/\"\u003e\u003c/a\u003e\n```\nA comparison of the parsing differences between Jetty and chrome is shown in the table below (note that neither should accept the URI as valid).\n\n| Invalid URI                                       | Jetty            | Chrome        |\n| ---------------------------------------------- | ---------------- | ------------- |\n| http://browser.check \u0026@vulndetector.com/ | vulndetector.com | browser.check |\n| http://browser.check #@vulndetector.com/ | vulndetector.com | browser.check |\n| http://browser.check?@vulndetector.com/    | vulndetector.com | browser.check |\n| http://browser.check#@vulndetector.com/    | vulndetector.com | browser.check |\n\nThe problem of 302 redirect parsing in HTTP 302 Location\n\n| Input                    | Jetty          | Chrome        |\n| ------------------------ | -------------- | ------------- |\n| http://browser.check%5c/ | browser.check\\ | browser.check |\n\nIt is noteworthy that Spring Web also faced similar security vulnerabilities, being affected by the aforementioned four types of payloads. These issues have since been resolved and have been assigned three CVE numbers [3-5].\n\n## Impact\n\nThe impact of this vulnerability is limited to developers that use the Jetty HttpURI directly.  Example: your project implemented a blocklist to block on some hosts based on HttpURI's handling of authority section.  The vulnerability will help attackers bypass the protections that developers have set up for hosts. The vulnerability will lead to **SSRF**[1] and **URL Redirection**[2] vulnerabilities in several cases. \n\n## Mitigation\n\nThe attacks outlined above rely on decoded user data being passed to the `HttpURI` class. Application should not pass decoded user data as an encoded URI to any URI class/method, including `HttpURI`.  Such applications are likely to be vulnerable in other ways. \nThe immediate solution is to upgrade to a version of the class that will fully validate the characters of the URI authority.  Ultimately, Jetty will deprecate and remove support for user info in the authority per [RFC9110 Section 4.2.4](https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.4). \n\nNote that the Chrome (and other browsers) parse the invalid user info section improperly as well (due to flawed WhatWG URL parsing rules that do not apply outside of a Web Browser).\n\n## Reference\n\n[1] https://cwe.mitre.org/data/definitions/918.html\n[2] https://cwe.mitre.org/data/definitions/601.html\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-http",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-http"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "7.0.0"
+                        },
+                        {
+                          "fixed": "12.0.12"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "10.0.0",
+                    "10.0.0-alpha0",
+                    "10.0.0.alpha1",
+                    "10.0.0.alpha2",
+                    "10.0.0.beta0",
+                    "10.0.0.beta1",
+                    "10.0.0.beta2",
+                    "10.0.0.beta3",
+                    "10.0.1",
+                    "10.0.10",
+                    "10.0.11",
+                    "10.0.12",
+                    "10.0.13",
+                    "10.0.14",
+                    "10.0.15",
+                    "10.0.16",
+                    "10.0.17",
+                    "10.0.18",
+                    "10.0.19",
+                    "10.0.2",
+                    "10.0.20",
+                    "10.0.21",
+                    "10.0.22",
+                    "10.0.23",
+                    "10.0.24",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.0.5",
+                    "10.0.6",
+                    "10.0.7",
+                    "10.0.8",
+                    "10.0.9",
+                    "11.0.0",
+                    "11.0.0-alpha0",
+                    "11.0.0.beta1",
+                    "11.0.0.beta2",
+                    "11.0.0.beta3",
+                    "11.0.1",
+                    "11.0.10",
+                    "11.0.11",
+                    "11.0.12",
+                    "11.0.13",
+                    "11.0.14",
+                    "11.0.15",
+                    "11.0.16",
+                    "11.0.17",
+                    "11.0.18",
+                    "11.0.19",
+                    "11.0.2",
+                    "11.0.20",
+                    "11.0.21",
+                    "11.0.22",
+                    "11.0.23",
+                    "11.0.24",
+                    "11.0.3",
+                    "11.0.4",
+                    "11.0.5",
+                    "11.0.6",
+                    "11.0.7",
+                    "11.0.8",
+                    "11.0.9",
+                    "12.0.0",
+                    "12.0.0.alpha0",
+                    "12.0.0.alpha1",
+                    "12.0.0.alpha2",
+                    "12.0.0.alpha3",
+                    "12.0.0.beta0",
+                    "12.0.0.beta1",
+                    "12.0.0.beta2",
+                    "12.0.0.beta3",
+                    "12.0.0.beta4",
+                    "12.0.1",
+                    "12.0.10",
+                    "12.0.11",
+                    "12.0.2",
+                    "12.0.3",
+                    "12.0.4",
+                    "12.0.5",
+                    "12.0.6",
+                    "12.0.7",
+                    "12.0.8",
+                    "12.0.9",
+                    "7.0.0.v20091005",
+                    "7.0.1.v20091125",
+                    "7.0.2.RC0",
+                    "7.0.2.v20100331",
+                    "7.1.0.RC0",
+                    "7.1.0.RC1",
+                    "7.1.0.v20100505",
+                    "7.1.1.v20100517",
+                    "7.1.2.v20100523",
+                    "7.1.3.v20100526",
+                    "7.1.4.v20100610",
+                    "7.1.5.v20100705",
+                    "7.1.6.v20100715",
+                    "7.2.0.RC0",
+                    "7.2.0.v20101020",
+                    "7.2.1.v20101111",
+                    "7.2.2.v20101205",
+                    "7.3.0.v20110203",
+                    "7.3.1.v20110307",
+                    "7.4.0.RC0",
+                    "7.4.0.v20110414",
+                    "7.4.1.v20110513",
+                    "7.4.2.v20110526",
+                    "7.4.3.v20110701",
+                    "7.4.4.v20110707",
+                    "7.4.5.v20110725",
+                    "7.5.0.RC0",
+                    "7.5.0.RC1",
+                    "7.5.0.RC2",
+                    "7.5.0.v20110901",
+                    "7.5.1.v20110908",
+                    "7.5.2.v20111006",
+                    "7.5.3.v20111011",
+                    "7.5.4.v20111024",
+                    "7.6.0.RC0",
+                    "7.6.0.RC1",
+                    "7.6.0.RC2",
+                    "7.6.0.RC3",
+                    "7.6.0.RC4",
+                    "7.6.0.RC5",
+                    "7.6.0.v20120127",
+                    "7.6.1.v20120215",
+                    "7.6.10.v20130312",
+                    "7.6.11.v20130520",
+                    "7.6.12.v20130726",
+                    "7.6.13.v20130916",
+                    "7.6.14.v20131031",
+                    "7.6.15.v20140411",
+                    "7.6.16.v20140903",
+                    "7.6.17.v20150415",
+                    "7.6.18.v20150929",
+                    "7.6.19.v20160209",
+                    "7.6.2.v20120308",
+                    "7.6.20.v20160902",
+                    "7.6.21.v20160908",
+                    "7.6.3.v20120416",
+                    "7.6.4.v20120524",
+                    "7.6.5.v20120716",
+                    "7.6.6.v20120903",
+                    "7.6.7.v20120910",
+                    "7.6.8.v20121106",
+                    "7.6.9.v20130131",
+                    "8.0.0.M0",
+                    "8.0.0.M1",
+                    "8.0.0.M2",
+                    "8.0.0.M3",
+                    "8.0.0.RC0",
+                    "8.0.0.v20110901",
+                    "8.0.1.v20110908",
+                    "8.0.2.v20111006",
+                    "8.0.3.v20111011",
+                    "8.0.4.v20111024",
+                    "8.1.0.RC0",
+                    "8.1.0.RC1",
+                    "8.1.0.RC2",
+                    "8.1.0.RC4",
+                    "8.1.0.RC5",
+                    "8.1.0.v20120127",
+                    "8.1.1.v20120215",
+                    "8.1.10.v20130312",
+                    "8.1.11.v20130520",
+                    "8.1.12.v20130726",
+                    "8.1.13.v20130916",
+                    "8.1.14.v20131031",
+                    "8.1.15.v20140411",
+                    "8.1.16.v20140903",
+                    "8.1.17.v20150415",
+                    "8.1.18.v20150929",
+                    "8.1.19.v20160209",
+                    "8.1.2.v20120308",
+                    "8.1.20.v20160902",
+                    "8.1.21.v20160908",
+                    "8.1.22.v20160922",
+                    "8.1.3.v20120416",
+                    "8.1.4.v20120524",
+                    "8.1.5.v20120716",
+                    "8.1.6.v20120903",
+                    "8.1.7.v20120910",
+                    "8.1.8.v20121106",
+                    "8.1.9.v20130131",
+                    "8.2.0.v20160908",
+                    "9.0.0.M0",
+                    "9.0.0.M1",
+                    "9.0.0.M2",
+                    "9.0.0.M3",
+                    "9.0.0.M4",
+                    "9.0.0.M5",
+                    "9.0.0.RC0",
+                    "9.0.0.RC1",
+                    "9.0.0.RC2",
+                    "9.0.0.v20130308",
+                    "9.0.1.v20130408",
+                    "9.0.2.v20130417",
+                    "9.0.3.v20130506",
+                    "9.0.4.v20130625",
+                    "9.0.5.v20130815",
+                    "9.0.6.v20130930",
+                    "9.0.7.v20131107",
+                    "9.1.0.M0",
+                    "9.1.0.RC0",
+                    "9.1.0.RC1",
+                    "9.1.0.RC2",
+                    "9.1.0.v20131115",
+                    "9.1.1.v20140108",
+                    "9.1.2.v20140210",
+                    "9.1.3.v20140225",
+                    "9.1.4.v20140401",
+                    "9.1.5.v20140505",
+                    "9.1.6.v20160112",
+                    "9.2.0.M0",
+                    "9.2.0.M1",
+                    "9.2.0.RC0",
+                    "9.2.0.v20140526",
+                    "9.2.1.v20140609",
+                    "9.2.10.v20150310",
+                    "9.2.11.M0",
+                    "9.2.11.v20150529",
+                    "9.2.12.M0",
+                    "9.2.12.v20150709",
+                    "9.2.13.v20150730",
+                    "9.2.14.v20151106",
+                    "9.2.15.v20160210",
+                    "9.2.16.v20160414",
+                    "9.2.17.v20160517",
+                    "9.2.18.v20160721",
+                    "9.2.19.v20160908",
+                    "9.2.2.v20140723",
+                    "9.2.20.v20161216",
+                    "9.2.21.v20170120",
+                    "9.2.22.v20170606",
+                    "9.2.23.v20171218",
+                    "9.2.24.v20180105",
+                    "9.2.25.v20180606",
+                    "9.2.26.v20180806",
+                    "9.2.27.v20190403",
+                    "9.2.28.v20190418",
+                    "9.2.29.v20191105",
+                    "9.2.3.v20140905",
+                    "9.2.30.v20200428",
+                    "9.2.4.v20141103",
+                    "9.2.5.v20141112",
+                    "9.2.6.v20141205",
+                    "9.2.7.v20150116",
+                    "9.2.8.v20150217",
+                    "9.2.9.v20150224",
+                    "9.3.0.M0",
+                    "9.3.0.M1",
+                    "9.3.0.M2",
+                    "9.3.0.RC0",
+                    "9.3.0.RC1",
+                    "9.3.0.v20150612",
+                    "9.3.1.v20150714",
+                    "9.3.10.M0",
+                    "9.3.10.v20160621",
+                    "9.3.11.M0",
+                    "9.3.11.v20160721",
+                    "9.3.12.v20160915",
+                    "9.3.13.M0",
+                    "9.3.13.v20161014",
+                    "9.3.14.v20161028",
+                    "9.3.15.v20161220",
+                    "9.3.16.v20170120",
+                    "9.3.17.RC0",
+                    "9.3.17.v20170317",
+                    "9.3.18.v20170406",
+                    "9.3.19.v20170502",
+                    "9.3.2.v20150730",
+                    "9.3.20.v20170531",
+                    "9.3.21.M0",
+                    "9.3.21.RC0",
+                    "9.3.21.v20170918",
+                    "9.3.22.v20171030",
+                    "9.3.23.v20180228",
+                    "9.3.24.v20180605",
+                    "9.3.25.v20180904",
+                    "9.3.26.v20190403",
+                    "9.3.27.v20190418",
+                    "9.3.28.v20191105",
+                    "9.3.29.v20201019",
+                    "9.3.3.v20150827",
+                    "9.3.30.v20211001",
+                    "9.3.4.RC0",
+                    "9.3.4.RC1",
+                    "9.3.4.v20151007",
+                    "9.3.5.v20151012",
+                    "9.3.6.v20151106",
+                    "9.3.7.RC0",
+                    "9.3.7.RC1",
+                    "9.3.7.v20160115",
+                    "9.3.8.RC0",
+                    "9.3.8.v20160314",
+                    "9.3.9.M0",
+                    "9.3.9.M1",
+                    "9.3.9.v20160517",
+                    "9.4.0.M0",
+                    "9.4.0.M1",
+                    "9.4.0.RC0",
+                    "9.4.0.RC1",
+                    "9.4.0.RC2",
+                    "9.4.0.RC3",
+                    "9.4.0.v20161208",
+                    "9.4.0.v20180619",
+                    "9.4.1.v20170120",
+                    "9.4.1.v20180619",
+                    "9.4.10.RC0",
+                    "9.4.10.RC1",
+                    "9.4.10.v20180503",
+                    "9.4.11.v20180605",
+                    "9.4.12.RC0",
+                    "9.4.12.RC1",
+                    "9.4.12.RC2",
+                    "9.4.12.v20180830",
+                    "9.4.13.v20181111",
+                    "9.4.14.v20181114",
+                    "9.4.15.v20190215",
+                    "9.4.16.v20190411",
+                    "9.4.17.v20190418",
+                    "9.4.18.v20190429",
+                    "9.4.19.v20190610",
+                    "9.4.2.v20170220",
+                    "9.4.2.v20180619",
+                    "9.4.20.v20190813",
+                    "9.4.21.v20190926",
+                    "9.4.22.v20191022",
+                    "9.4.23.v20191118",
+                    "9.4.24.v20191120",
+                    "9.4.25.v20191220",
+                    "9.4.26.v20200117",
+                    "9.4.27.v20200227",
+                    "9.4.28.v20200408",
+                    "9.4.29.v20200521",
+                    "9.4.3.v20170317",
+                    "9.4.3.v20180619",
+                    "9.4.30.v20200611",
+                    "9.4.31.v20200723",
+                    "9.4.32.v20200930",
+                    "9.4.33.v20201020",
+                    "9.4.34.v20201102",
+                    "9.4.35.v20201120",
+                    "9.4.36.v20210114",
+                    "9.4.37.v20210219",
+                    "9.4.38.v20210224",
+                    "9.4.39.v20210325",
+                    "9.4.4.v20170414",
+                    "9.4.4.v20180619",
+                    "9.4.40.v20210413",
+                    "9.4.41.v20210516",
+                    "9.4.42.v20210604",
+                    "9.4.43.v20210629",
+                    "9.4.44.v20210927",
+                    "9.4.45.v20220203",
+                    "9.4.46.v20220331",
+                    "9.4.47.v20220610",
+                    "9.4.48.v20220622",
+                    "9.4.49.v20220914",
+                    "9.4.5.v20170502",
+                    "9.4.5.v20180619",
+                    "9.4.50.v20221201",
+                    "9.4.51.v20230217",
+                    "9.4.52.v20230823",
+                    "9.4.53.v20231009",
+                    "9.4.54.v20240208",
+                    "9.4.55.v20240627",
+                    "9.4.56.v20240826",
+                    "9.4.6.v20170531",
+                    "9.4.6.v20180619",
+                    "9.4.7.RC0",
+                    "9.4.7.v20170914",
+                    "9.4.7.v20180619",
+                    "9.4.8.v20171121",
+                    "9.4.8.v20180619",
+                    "9.4.9.v20180320"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.0.11",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-qh8g-58pp-2wxh/GHSA-qh8g-58pp-2wxh.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-qh8g-58pp-2wxh"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6763"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/pull/12012"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jetty/jetty.project"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/25"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1286"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-14T21:11:43Z",
+                "nvd_published_at": "2024-10-14T16:15:04Z",
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-qh8g-58pp-2wxh"
+              ],
+              "aliases": [
+                "CVE-2024-6763",
+                "GHSA-qh8g-58pp-2wxh"
+              ],
+              "max_severity": "3.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.eclipse.jetty:jetty-server",
+            "version": "9.4.53.v20231009",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-14T21:27:23Z",
+              "published": "2024-10-14T21:08:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-g8m5-722r-8whq",
+              "aliases": [
+                "CVE-2024-8184"
+              ],
+              "related": [
+                "CGA-56m4-5757-c9j7"
+              ],
+              "summary": "Eclipse Jetty's ThreadLimitHandler.getRemote() vulnerable to remote DoS attacks",
+              "details": "### Impact\nRemote DOS attack can cause out of memory \n\n### Description\nThere exists a security vulnerability in Jetty's `ThreadLimitHandler.getRemote()` which\ncan be exploited by unauthorized users to cause remote denial-of-service (DoS) attack.  By\nrepeatedly sending crafted requests, attackers can trigger OutofMemory errors and exhaust the\nserver's memory.\n\n### Affected Versions\n\n* Jetty 12.0.0-12.0.8 (Supported)\n* Jetty 11.0.0-11.0.23 (EOL)\n* Jetty 10.0.0-10.0.23 (EOL)\n* Jetty 9.3.12-9.4.55 (EOL)\n\n### Patched Versions\n\n* Jetty 12.0.9\n* Jetty 11.0.24\n* Jetty 10.0.24\n* Jetty 9.4.56\n\n### Workarounds\n\nDo not use `ThreadLimitHandler`.  \nConsider use of `QoSHandler` instead to artificially limit resource utilization.\n\n### References\n\nJetty 12 - https://github.com/jetty/jetty.project/pull/11723",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "12.0.0"
+                        },
+                        {
+                          "fixed": "12.0.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "12.0.0",
+                    "12.0.1",
+                    "12.0.2",
+                    "12.0.3",
+                    "12.0.4",
+                    "12.0.5",
+                    "12.0.6",
+                    "12.0.7",
+                    "12.0.8"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.0.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "10.0.0"
+                        },
+                        {
+                          "fixed": "10.0.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "10.0.0",
+                    "10.0.1",
+                    "10.0.10",
+                    "10.0.11",
+                    "10.0.12",
+                    "10.0.13",
+                    "10.0.14",
+                    "10.0.15",
+                    "10.0.16",
+                    "10.0.17",
+                    "10.0.18",
+                    "10.0.19",
+                    "10.0.2",
+                    "10.0.20",
+                    "10.0.21",
+                    "10.0.22",
+                    "10.0.23",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.0.5",
+                    "10.0.6",
+                    "10.0.7",
+                    "10.0.8",
+                    "10.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 10.0.23",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "11.0.0"
+                        },
+                        {
+                          "fixed": "11.0.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "11.0.0",
+                    "11.0.1",
+                    "11.0.10",
+                    "11.0.11",
+                    "11.0.12",
+                    "11.0.13",
+                    "11.0.14",
+                    "11.0.15",
+                    "11.0.16",
+                    "11.0.17",
+                    "11.0.18",
+                    "11.0.19",
+                    "11.0.2",
+                    "11.0.20",
+                    "11.0.21",
+                    "11.0.22",
+                    "11.0.23",
+                    "11.0.3",
+                    "11.0.4",
+                    "11.0.5",
+                    "11.0.6",
+                    "11.0.7",
+                    "11.0.8",
+                    "11.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 11.0.23",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.3.12"
+                        },
+                        {
+                          "fixed": "9.4.56"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.3.12.v20160915",
+                    "9.3.13.M0",
+                    "9.3.13.v20161014",
+                    "9.3.14.v20161028",
+                    "9.3.15.v20161220",
+                    "9.3.16.v20170120",
+                    "9.3.17.RC0",
+                    "9.3.17.v20170317",
+                    "9.3.18.v20170406",
+                    "9.3.19.v20170502",
+                    "9.3.20.v20170531",
+                    "9.3.21.M0",
+                    "9.3.21.RC0",
+                    "9.3.21.v20170918",
+                    "9.3.22.v20171030",
+                    "9.3.23.v20180228",
+                    "9.3.24.v20180605",
+                    "9.3.25.v20180904",
+                    "9.3.26.v20190403",
+                    "9.3.27.v20190418",
+                    "9.3.28.v20191105",
+                    "9.3.29.v20201019",
+                    "9.3.30.v20211001",
+                    "9.4.0.M0",
+                    "9.4.0.M1",
+                    "9.4.0.RC0",
+                    "9.4.0.RC1",
+                    "9.4.0.RC2",
+                    "9.4.0.RC3",
+                    "9.4.0.v20161208",
+                    "9.4.0.v20180619",
+                    "9.4.1.v20170120",
+                    "9.4.1.v20180619",
+                    "9.4.10.RC0",
+                    "9.4.10.RC1",
+                    "9.4.10.v20180503",
+                    "9.4.11.v20180605",
+                    "9.4.12.RC0",
+                    "9.4.12.RC1",
+                    "9.4.12.RC2",
+                    "9.4.12.v20180830",
+                    "9.4.13.v20181111",
+                    "9.4.14.v20181114",
+                    "9.4.15.v20190215",
+                    "9.4.16.v20190411",
+                    "9.4.17.v20190418",
+                    "9.4.18.v20190429",
+                    "9.4.19.v20190610",
+                    "9.4.2.v20170220",
+                    "9.4.2.v20180619",
+                    "9.4.20.v20190813",
+                    "9.4.21.v20190926",
+                    "9.4.22.v20191022",
+                    "9.4.23.v20191118",
+                    "9.4.24.v20191120",
+                    "9.4.25.v20191220",
+                    "9.4.26.v20200117",
+                    "9.4.27.v20200227",
+                    "9.4.28.v20200408",
+                    "9.4.29.v20200521",
+                    "9.4.3.v20170317",
+                    "9.4.3.v20180619",
+                    "9.4.30.v20200611",
+                    "9.4.31.v20200723",
+                    "9.4.32.v20200930",
+                    "9.4.33.v20201020",
+                    "9.4.34.v20201102",
+                    "9.4.35.v20201120",
+                    "9.4.36.v20210114",
+                    "9.4.37.v20210219",
+                    "9.4.38.v20210224",
+                    "9.4.39.v20210325",
+                    "9.4.4.v20170414",
+                    "9.4.4.v20180619",
+                    "9.4.40.v20210413",
+                    "9.4.41.v20210516",
+                    "9.4.42.v20210604",
+                    "9.4.43.v20210629",
+                    "9.4.44.v20210927",
+                    "9.4.45.v20220203",
+                    "9.4.46.v20220331",
+                    "9.4.47.v20220610",
+                    "9.4.48.v20220622",
+                    "9.4.49.v20220914",
+                    "9.4.5.v20170502",
+                    "9.4.5.v20180619",
+                    "9.4.50.v20221201",
+                    "9.4.51.v20230217",
+                    "9.4.52.v20230823",
+                    "9.4.53.v20231009",
+                    "9.4.54.v20240208",
+                    "9.4.55.v20240627",
+                    "9.4.6.v20170531",
+                    "9.4.6.v20180619",
+                    "9.4.7.RC0",
+                    "9.4.7.v20170914",
+                    "9.4.7.v20180619",
+                    "9.4.8.v20171121",
+                    "9.4.8.v20180619",
+                    "9.4.9.v20180320"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.4.55",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-g8m5-722r-8whq"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8184"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/pull/11723"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jetty/jetty.project"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/30"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-14T21:08:38Z",
+                "nvd_published_at": "2024-10-14T16:15:04Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-g8m5-722r-8whq"
+              ],
+              "aliases": [
+                "CVE-2024-8184",
+                "GHSA-g8m5-722r-8whq"
+              ],
+              "max_severity": "5.9"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.eclipse.jetty:jetty-server",
+            "version": "9.4.54.v20240208",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-14T21:27:23Z",
+              "published": "2024-10-14T21:08:38Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-g8m5-722r-8whq",
+              "aliases": [
+                "CVE-2024-8184"
+              ],
+              "related": [
+                "CGA-56m4-5757-c9j7"
+              ],
+              "summary": "Eclipse Jetty's ThreadLimitHandler.getRemote() vulnerable to remote DoS attacks",
+              "details": "### Impact\nRemote DOS attack can cause out of memory \n\n### Description\nThere exists a security vulnerability in Jetty's `ThreadLimitHandler.getRemote()` which\ncan be exploited by unauthorized users to cause remote denial-of-service (DoS) attack.  By\nrepeatedly sending crafted requests, attackers can trigger OutofMemory errors and exhaust the\nserver's memory.\n\n### Affected Versions\n\n* Jetty 12.0.0-12.0.8 (Supported)\n* Jetty 11.0.0-11.0.23 (EOL)\n* Jetty 10.0.0-10.0.23 (EOL)\n* Jetty 9.3.12-9.4.55 (EOL)\n\n### Patched Versions\n\n* Jetty 12.0.9\n* Jetty 11.0.24\n* Jetty 10.0.24\n* Jetty 9.4.56\n\n### Workarounds\n\nDo not use `ThreadLimitHandler`.  \nConsider use of `QoSHandler` instead to artificially limit resource utilization.\n\n### References\n\nJetty 12 - https://github.com/jetty/jetty.project/pull/11723",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "12.0.0"
+                        },
+                        {
+                          "fixed": "12.0.9"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "12.0.0",
+                    "12.0.1",
+                    "12.0.2",
+                    "12.0.3",
+                    "12.0.4",
+                    "12.0.5",
+                    "12.0.6",
+                    "12.0.7",
+                    "12.0.8"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 12.0.8",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "10.0.0"
+                        },
+                        {
+                          "fixed": "10.0.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "10.0.0",
+                    "10.0.1",
+                    "10.0.10",
+                    "10.0.11",
+                    "10.0.12",
+                    "10.0.13",
+                    "10.0.14",
+                    "10.0.15",
+                    "10.0.16",
+                    "10.0.17",
+                    "10.0.18",
+                    "10.0.19",
+                    "10.0.2",
+                    "10.0.20",
+                    "10.0.21",
+                    "10.0.22",
+                    "10.0.23",
+                    "10.0.3",
+                    "10.0.4",
+                    "10.0.5",
+                    "10.0.6",
+                    "10.0.7",
+                    "10.0.8",
+                    "10.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 10.0.23",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "11.0.0"
+                        },
+                        {
+                          "fixed": "11.0.24"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "11.0.0",
+                    "11.0.1",
+                    "11.0.10",
+                    "11.0.11",
+                    "11.0.12",
+                    "11.0.13",
+                    "11.0.14",
+                    "11.0.15",
+                    "11.0.16",
+                    "11.0.17",
+                    "11.0.18",
+                    "11.0.19",
+                    "11.0.2",
+                    "11.0.20",
+                    "11.0.21",
+                    "11.0.22",
+                    "11.0.23",
+                    "11.0.3",
+                    "11.0.4",
+                    "11.0.5",
+                    "11.0.6",
+                    "11.0.7",
+                    "11.0.8",
+                    "11.0.9"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 11.0.23",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.eclipse.jetty:jetty-server",
+                    "purl": "pkg:maven/org.eclipse.jetty/jetty-server"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "9.3.12"
+                        },
+                        {
+                          "fixed": "9.4.56"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "9.3.12.v20160915",
+                    "9.3.13.M0",
+                    "9.3.13.v20161014",
+                    "9.3.14.v20161028",
+                    "9.3.15.v20161220",
+                    "9.3.16.v20170120",
+                    "9.3.17.RC0",
+                    "9.3.17.v20170317",
+                    "9.3.18.v20170406",
+                    "9.3.19.v20170502",
+                    "9.3.20.v20170531",
+                    "9.3.21.M0",
+                    "9.3.21.RC0",
+                    "9.3.21.v20170918",
+                    "9.3.22.v20171030",
+                    "9.3.23.v20180228",
+                    "9.3.24.v20180605",
+                    "9.3.25.v20180904",
+                    "9.3.26.v20190403",
+                    "9.3.27.v20190418",
+                    "9.3.28.v20191105",
+                    "9.3.29.v20201019",
+                    "9.3.30.v20211001",
+                    "9.4.0.M0",
+                    "9.4.0.M1",
+                    "9.4.0.RC0",
+                    "9.4.0.RC1",
+                    "9.4.0.RC2",
+                    "9.4.0.RC3",
+                    "9.4.0.v20161208",
+                    "9.4.0.v20180619",
+                    "9.4.1.v20170120",
+                    "9.4.1.v20180619",
+                    "9.4.10.RC0",
+                    "9.4.10.RC1",
+                    "9.4.10.v20180503",
+                    "9.4.11.v20180605",
+                    "9.4.12.RC0",
+                    "9.4.12.RC1",
+                    "9.4.12.RC2",
+                    "9.4.12.v20180830",
+                    "9.4.13.v20181111",
+                    "9.4.14.v20181114",
+                    "9.4.15.v20190215",
+                    "9.4.16.v20190411",
+                    "9.4.17.v20190418",
+                    "9.4.18.v20190429",
+                    "9.4.19.v20190610",
+                    "9.4.2.v20170220",
+                    "9.4.2.v20180619",
+                    "9.4.20.v20190813",
+                    "9.4.21.v20190926",
+                    "9.4.22.v20191022",
+                    "9.4.23.v20191118",
+                    "9.4.24.v20191120",
+                    "9.4.25.v20191220",
+                    "9.4.26.v20200117",
+                    "9.4.27.v20200227",
+                    "9.4.28.v20200408",
+                    "9.4.29.v20200521",
+                    "9.4.3.v20170317",
+                    "9.4.3.v20180619",
+                    "9.4.30.v20200611",
+                    "9.4.31.v20200723",
+                    "9.4.32.v20200930",
+                    "9.4.33.v20201020",
+                    "9.4.34.v20201102",
+                    "9.4.35.v20201120",
+                    "9.4.36.v20210114",
+                    "9.4.37.v20210219",
+                    "9.4.38.v20210224",
+                    "9.4.39.v20210325",
+                    "9.4.4.v20170414",
+                    "9.4.4.v20180619",
+                    "9.4.40.v20210413",
+                    "9.4.41.v20210516",
+                    "9.4.42.v20210604",
+                    "9.4.43.v20210629",
+                    "9.4.44.v20210927",
+                    "9.4.45.v20220203",
+                    "9.4.46.v20220331",
+                    "9.4.47.v20220610",
+                    "9.4.48.v20220622",
+                    "9.4.49.v20220914",
+                    "9.4.5.v20170502",
+                    "9.4.5.v20180619",
+                    "9.4.50.v20221201",
+                    "9.4.51.v20230217",
+                    "9.4.52.v20230823",
+                    "9.4.53.v20231009",
+                    "9.4.54.v20240208",
+                    "9.4.55.v20240627",
+                    "9.4.6.v20170531",
+                    "9.4.6.v20180619",
+                    "9.4.7.RC0",
+                    "9.4.7.v20170914",
+                    "9.4.7.v20180619",
+                    "9.4.8.v20171121",
+                    "9.4.8.v20180619",
+                    "9.4.9.v20180320"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 9.4.55",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-g8m5-722r-8whq/GHSA-g8m5-722r-8whq.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-g8m5-722r-8whq"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8184"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jetty/jetty.project/pull/11723"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jetty/jetty.project"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/30"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-14T21:08:38Z",
+                "nvd_published_at": "2024-10-14T16:15:04Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-g8m5-722r-8whq"
+              ],
+              "aliases": [
+                "CVE-2024-8184",
+                "GHSA-g8m5-722r-8whq"
+              ],
+              "max_severity": "5.9"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.bitbucket.b_c:jose4j",
+            "version": "0.9.3",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-08-14T22:22:21Z",
+              "published": "2024-02-29T03:33:14Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6qvw-249j-h44c",
+              "aliases": [
+                "CVE-2023-51775"
+              ],
+              "related": [
+                "CGA-gw52-mj78-8v54"
+              ],
+              "summary": "jose4j denial of service via specifically crafted JWE",
+              "details": "The jose4j component before 0.9.4 for Java allows attackers to cause a denial of service (CPU consumption) via a large p2c (aka PBES2 Count) value.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.bitbucket.b_c:jose4j",
+                    "purl": "pkg:maven/org.bitbucket.b_c/jose4j"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.9.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.3.6",
+                    "0.3.7",
+                    "0.3.8",
+                    "0.3.9",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.4.3",
+                    "0.4.4",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.5.6",
+                    "0.5.7",
+                    "0.5.8",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.10",
+                    "0.7.11",
+                    "0.7.12",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.7.7",
+                    "0.7.8",
+                    "0.7.9",
+                    "0.8.0",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-6qvw-249j-h44c/GHSA-6qvw-249j-h44c.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-51775"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/b_c/jose4j/commits/1afaa1e174b3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/b_c/jose4j/issues/212"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-29T20:10:44Z",
+                "nvd_published_at": "2024-02-29T01:42:05Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6qvw-249j-h44c"
+              ],
+              "aliases": [
+                "CVE-2023-51775",
+                "GHSA-6qvw-249j-h44c"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "com.nimbusds:nimbus-jose-jwt",
+            "version": "9.24",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-16T22:25:34Z",
+              "published": "2024-02-11T06:30:27Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gvpg-vgmx-xg6w",
+              "aliases": [
+                "CVE-2023-52428"
+              ],
+              "related": [
+                "CGA-63mv-w982-8q6x",
+                "CGA-7847-h394-6rg8",
+                "CGA-7v5w-r37c-32w7",
+                "CGA-7x8r-hc4w-927c",
+                "CGA-xqhq-97gr-pfg7"
+              ],
+              "summary": "Denial of Service in Connect2id Nimbus JOSE+JWT",
+              "details": "In Connect2id Nimbus JOSE+JWT before 9.37.2, an attacker can cause a denial of service (resource consumption) via a large JWE p2c header value (aka iteration count) for the PasswordBasedDecrypter (PBKDF2) component.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.nimbusds:nimbus-jose-jwt",
+                    "purl": "pkg:maven/com.nimbusds/nimbus-jose-jwt"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "9.37.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.10",
+                    "2.10.1",
+                    "2.11.0",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.13.1",
+                    "2.14.0",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.15.2",
+                    "2.16",
+                    "2.17",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.18",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.19",
+                    "2.19.1",
+                    "2.20",
+                    "2.21",
+                    "2.22",
+                    "2.22.1",
+                    "2.23",
+                    "2.24",
+                    "2.25",
+                    "2.26",
+                    "2.26.1",
+                    "2.9",
+                    "3.0",
+                    "3.1",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.10",
+                    "3.2",
+                    "3.2.1",
+                    "3.2.2",
+                    "3.3",
+                    "3.4",
+                    "3.5",
+                    "3.6",
+                    "3.7",
+                    "3.8",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.9",
+                    "3.9.1",
+                    "3.9.2",
+                    "4.0",
+                    "4.0-rc1",
+                    "4.0-rc2",
+                    "4.0-rc3",
+                    "4.0-rc4",
+                    "4.0.1",
+                    "4.1",
+                    "4.1.1",
+                    "4.10",
+                    "4.11",
+                    "4.11.1",
+                    "4.11.2",
+                    "4.12",
+                    "4.13",
+                    "4.13.1",
+                    "4.14",
+                    "4.15",
+                    "4.15.1",
+                    "4.16",
+                    "4.16.1",
+                    "4.16.2",
+                    "4.17",
+                    "4.18",
+                    "4.19",
+                    "4.2",
+                    "4.20",
+                    "4.21",
+                    "4.22",
+                    "4.23",
+                    "4.24",
+                    "4.25",
+                    "4.26",
+                    "4.26.1",
+                    "4.27",
+                    "4.27.1",
+                    "4.28",
+                    "4.29",
+                    "4.3",
+                    "4.3.1",
+                    "4.30",
+                    "4.31.1",
+                    "4.32",
+                    "4.33",
+                    "4.34",
+                    "4.34.1",
+                    "4.34.2",
+                    "4.35",
+                    "4.36",
+                    "4.36.1",
+                    "4.37",
+                    "4.37.1",
+                    "4.38",
+                    "4.39",
+                    "4.39.1",
+                    "4.39.2",
+                    "4.4",
+                    "4.40",
+                    "4.41",
+                    "4.41.1",
+                    "4.41.2",
+                    "4.41.3",
+                    "4.5",
+                    "4.6",
+                    "4.7",
+                    "4.8",
+                    "4.9",
+                    "5.0",
+                    "5.1",
+                    "5.10",
+                    "5.11",
+                    "5.12",
+                    "5.13",
+                    "5.14",
+                    "5.2",
+                    "5.3",
+                    "5.4",
+                    "5.5",
+                    "5.6",
+                    "5.7",
+                    "5.8",
+                    "5.9",
+                    "6.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.1",
+                    "6.1.1",
+                    "6.2",
+                    "6.3",
+                    "6.3.1",
+                    "6.4",
+                    "6.4.1",
+                    "6.4.2",
+                    "6.5",
+                    "6.5.1",
+                    "6.6",
+                    "6.7",
+                    "6.8",
+                    "7.0",
+                    "7.0.1",
+                    "7.1",
+                    "7.2.1",
+                    "7.3",
+                    "7.4",
+                    "7.5",
+                    "7.5.1",
+                    "7.6",
+                    "7.7",
+                    "7.8",
+                    "7.8.1",
+                    "7.9",
+                    "8.0",
+                    "8.1",
+                    "8.10",
+                    "8.11",
+                    "8.12",
+                    "8.13",
+                    "8.14",
+                    "8.14.1",
+                    "8.15",
+                    "8.16",
+                    "8.17",
+                    "8.17.1",
+                    "8.18",
+                    "8.18.1",
+                    "8.19",
+                    "8.2",
+                    "8.2.1",
+                    "8.20",
+                    "8.20.1",
+                    "8.20.2",
+                    "8.21",
+                    "8.21.1",
+                    "8.22",
+                    "8.22.1",
+                    "8.23",
+                    "8.3",
+                    "8.4",
+                    "8.4.1",
+                    "8.5",
+                    "8.5.1",
+                    "8.6",
+                    "8.7",
+                    "8.8",
+                    "8.9",
+                    "9.0",
+                    "9.0.1",
+                    "9.1",
+                    "9.1.1",
+                    "9.1.2",
+                    "9.1.3",
+                    "9.1.4",
+                    "9.1.5",
+                    "9.10",
+                    "9.10.1",
+                    "9.11",
+                    "9.11.1",
+                    "9.11.2",
+                    "9.11.3",
+                    "9.12",
+                    "9.12.1",
+                    "9.13",
+                    "9.14",
+                    "9.15",
+                    "9.15.1",
+                    "9.15.2",
+                    "9.16",
+                    "9.16-preview.1",
+                    "9.16.1",
+                    "9.17",
+                    "9.18",
+                    "9.19",
+                    "9.2",
+                    "9.20",
+                    "9.21",
+                    "9.21.1",
+                    "9.22",
+                    "9.23",
+                    "9.24",
+                    "9.24.1",
+                    "9.24.2",
+                    "9.24.3",
+                    "9.24.4",
+                    "9.25",
+                    "9.25.1",
+                    "9.25.2",
+                    "9.25.3",
+                    "9.25.4",
+                    "9.25.5",
+                    "9.25.6",
+                    "9.26",
+                    "9.27",
+                    "9.28",
+                    "9.29",
+                    "9.3",
+                    "9.30",
+                    "9.30.1",
+                    "9.30.2",
+                    "9.31",
+                    "9.32",
+                    "9.33",
+                    "9.34",
+                    "9.35",
+                    "9.36",
+                    "9.37",
+                    "9.37.1",
+                    "9.4",
+                    "9.4.1",
+                    "9.4.2",
+                    "9.5",
+                    "9.6",
+                    "9.6.1",
+                    "9.7",
+                    "9.8",
+                    "9.8.1",
+                    "9.9",
+                    "9.9.1",
+                    "9.9.2",
+                    "9.9.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-gvpg-vgmx-xg6w/GHSA-gvpg-vgmx-xg6w.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-52428"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt/commits/3b3b77e"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bitbucket.org/connect2id/nimbus-jose-jwt/issues/526"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://connect2id.com/products/nimbus-jose-jwt"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-15T14:23:03Z",
+                "nvd_published_at": "2024-02-11T05:15:08Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-gvpg-vgmx-xg6w"
+              ],
+              "aliases": [
+                "CVE-2023-52428",
+                "GHSA-gvpg-vgmx-xg6w"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "com.google.protobuf:protobuf-java",
+            "version": "3.23.4",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-23T20:24:56Z",
+              "published": "2024-09-19T16:06:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-735f-pc8j-v9w8",
+              "aliases": [
+                "CVE-2024-7254"
+              ],
+              "related": [
+                "CGA-3jqr-m622-9v65",
+                "CGA-c87c-r7j2-6c2f",
+                "CGA-r5c2-7p3p-gp53",
+                "CGA-v5fx-59qm-4247"
+              ],
+              "summary": "protobuf-java has potential Denial of Service issue",
+              "details": "### Summary\nWhen parsing unknown fields in the Protobuf Java Lite and Full library, a maliciously crafted message can cause a StackOverflow error and lead to a program crash.\n\nReporter: Alexis Challande, Trail of Bits Ecosystem Security Team \u003cecosystem@trailofbits.com\u003e\n\nAffected versions: This issue affects all versions of both the Java full and lite Protobuf runtimes, as well as Protobuf for Kotlin and JRuby, which themselves use the Java Protobuf runtime.\n\n### Severity\n[CVE-2024-7254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7254) **High** CVSS4.0 Score 8.7 (NOTE: there may be a delay in publication)\nThis is a potential Denial of Service. Parsing nested groups as unknown fields with DiscardUnknownFieldsParser or Java Protobuf Lite parser, or against Protobuf map fields, creates unbounded recursions that can be abused by an attacker.\n\n### Proof of Concept\nFor reproduction details, please refer to the unit tests (Protobuf Java [LiteTest](https://github.com/protocolbuffers/protobuf/blob/a037f28ff81ee45ebe008c64ab632bf5372242ce/java/lite/src/test/java/com/google/protobuf/LiteTest.java) and [CodedInputStreamTest](https://github.com/protocolbuffers/protobuf/blob/a037f28ff81ee45ebe008c64ab632bf5372242ce/java/core/src/test/java/com/google/protobuf/CodedInputStreamTest.java)) that identify the specific inputs that exercise this parsing weakness.\n\n### Remediation and Mitigation\nWe have been working diligently to address this issue and have released a mitigation that is available now. Please update to the latest available versions of the following packages:\n* protobuf-java (3.25.5, 4.27.5, 4.28.2)\n* protobuf-javalite (3.25.5, 4.27.5, 4.28.2)\n* protobuf-kotlin (3.25.5, 4.27.5, 4.28.2)\n* protobuf-kotlin-lite (3.25.5, 4.27.5, 4.28.2)\n* com-protobuf [JRuby gem only] (3.25.5, 4.27.5, 4.28.2)\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.1",
+                    "2.0.3",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.4.0a",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0-alpha-2",
+                    "3.0.0-alpha-3",
+                    "3.0.0-alpha-3.1",
+                    "3.0.0-beta-1",
+                    "3.0.0-beta-2",
+                    "3.0.0-beta-3",
+                    "3.0.0-beta-4",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.10.0",
+                    "3.10.0-rc-1",
+                    "3.11.0",
+                    "3.11.0-rc-1",
+                    "3.11.0-rc-2",
+                    "3.11.1",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0-rc-1",
+                    "3.12.0-rc-2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0-rc-3",
+                    "3.14.0",
+                    "3.14.0-rc-1",
+                    "3.14.0-rc-2",
+                    "3.14.0-rc-3",
+                    "3.15.0",
+                    "3.15.0-rc-1",
+                    "3.15.0-rc-2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0-rc-1",
+                    "3.16.0-rc-2",
+                    "3.16.1",
+                    "3.16.3",
+                    "3.17.0",
+                    "3.17.0-rc-1",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.2.0",
+                    "3.2.0-rc.1",
+                    "3.2.0rc2",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.4.0",
+                    "3.5.0",
+                    "3.5.1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0-rc1",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0-rc-1",
+                    "3.9.0",
+                    "3.9.0-rc-1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-javalite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-javalite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.10.0",
+                    "3.10.0-rc-1",
+                    "3.11.0",
+                    "3.11.0-rc-1",
+                    "3.11.0-rc-2",
+                    "3.11.1",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0-rc-1",
+                    "3.12.0-rc-2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0-rc-3",
+                    "3.14.0",
+                    "3.14.0-rc-1",
+                    "3.14.0-rc-2",
+                    "3.14.0-rc-3",
+                    "3.15.0",
+                    "3.15.0-rc-1",
+                    "3.15.0-rc-2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0-rc-1",
+                    "3.16.0-rc-2",
+                    "3.16.1",
+                    "3.16.3",
+                    "3.17.0",
+                    "3.17.0-rc-1",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4",
+                    "3.8.0",
+                    "3.8.0-rc-1",
+                    "3.9.0",
+                    "3.9.0-rc-1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.17.0",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin-lite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin-lite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.17.0",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "google-protobuf",
+                    "purl": "pkg:gem/google-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0",
+                    "3.0.0.alpha.1.0",
+                    "3.0.0.alpha.1.1",
+                    "3.0.0.alpha.2.0",
+                    "3.0.0.alpha.3",
+                    "3.0.0.alpha.3.1.pre",
+                    "3.0.0.alpha.4.0",
+                    "3.0.0.alpha.5.0.3",
+                    "3.0.0.alpha.5.0.4",
+                    "3.0.0.alpha.5.0.5",
+                    "3.0.0.alpha.5.0.5.1",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.1.0.0.pre",
+                    "3.10.0.rc.1",
+                    "3.10.1",
+                    "3.11.0",
+                    "3.11.0.rc.1",
+                    "3.11.0.rc.2",
+                    "3.11.1",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0.rc.1",
+                    "3.12.0.rc.2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0.rc.3",
+                    "3.14.0",
+                    "3.14.0.rc.1",
+                    "3.14.0.rc.2",
+                    "3.14.0.rc.3",
+                    "3.15.0",
+                    "3.15.0.rc.1",
+                    "3.15.0.rc.2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0.rc.1",
+                    "3.16.0.rc.2",
+                    "3.17.0",
+                    "3.17.0.rc.1",
+                    "3.17.0.rc.2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0.rc.1",
+                    "3.18.0.rc.2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0.rc.1",
+                    "3.19.0.rc.2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.2.0",
+                    "3.2.0.1",
+                    "3.2.0.2",
+                    "3.2.1.pre",
+                    "3.20.0",
+                    "3.20.0.rc.1",
+                    "3.20.0.rc.2",
+                    "3.20.1",
+                    "3.20.1.rc.1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0.rc.1",
+                    "3.21.0.rc.2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0.rc.2",
+                    "3.22.0.rc.3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0.rc.1",
+                    "3.23.0.rc.2",
+                    "3.23.0.rc.3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0.rc.2",
+                    "3.24.0.rc.3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0.rc.1",
+                    "3.25.0.rc.2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4",
+                    "3.3.0",
+                    "3.4.0.1",
+                    "3.4.0.2",
+                    "3.4.1.1",
+                    "3.5.0",
+                    "3.5.0.pre",
+                    "3.5.1",
+                    "3.5.1.1",
+                    "3.5.1.2",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0.rc.2",
+                    "3.7.0.rc.3",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0.rc.1",
+                    "3.9.0",
+                    "3.9.0.rc.1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "google-protobuf",
+                    "purl": "pkg:gem/google-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0.rc.1",
+                    "4.26.0.rc.2",
+                    "4.26.0.rc.3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0.rc.1",
+                    "4.27.0.rc.2",
+                    "4.27.0.rc.3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "google-protobuf",
+                    "purl": "pkg:gem/google-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.0.rc.1",
+                    "4.28.0.rc.2",
+                    "4.28.0.rc.3",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin-lite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin-lite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin-lite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin-lite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-javalite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-javalite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-javalite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-javalite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/security/advisories/GHSA-735f-pc8j-v9w8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7254"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/4728531c162f2f9e8c2ca1add713cfee2db6be3b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/850fcce9176e2c9070614dab53537760498c926b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/9a5f5fe752a20cbac2e722b06949ac985abdd534"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/ac9fb5b4c71b0dd80985b27684e265d1f03abf46"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/cc8b3483a5584b3301e3d43d17eb59704857ffaa"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/d6c82fc55a76481c676f541a255571e8950bb8c3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/protocolbuffers/protobuf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/google-protobuf/CVE-2024-7254.yml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-19T16:06:03Z",
+                "nvd_published_at": "2024-09-19T01:15:10Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-735f-pc8j-v9w8"
+              ],
+              "aliases": [
+                "CVE-2024-7254",
+                "GHSA-735f-pc8j-v9w8"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.apache.zookeeper:zookeeper",
+            "version": "3.8.3",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-02T19:03:17Z",
+              "published": "2024-03-15T12:30:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-r978-9m6m-6gm6",
+              "aliases": [
+                "BIT-zookeeper-2024-23944",
+                "CVE-2024-23944"
+              ],
+              "related": [
+                "CGA-7x45-jmmj-p4h3",
+                "CGA-h562-6hp9-9x2q",
+                "CGA-mrr6-55fr-72mh",
+                "CGA-rgr4-3vcx-cj8x",
+                "CGA-wvcw-6w45-h72m"
+              ],
+              "summary": "Apache ZooKeeper vulnerable to information disclosure in persistent watchers handling",
+              "details": "Information disclosure in persistent watchers handling in Apache ZooKeeper due to missing ACL check. It allows an attacker to monitor child znodes by attaching a persistent watcher (addWatch command) to a parent which the attacker has already access to. ZooKeeper server doesn't do ACL check when the persistent watcher is triggered and as a consequence, the full path of znodes that a watch event gets triggered upon is exposed to the owner of the watcher. It's important to note that only the path is exposed by this vulnerability, not the data of znode, but since znode path can contain sensitive information like user name or login ID, this issue is potentially critical.\n\nUsers are recommended to upgrade to version 3.9.2, 3.8.4 which fixes the issue.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.zookeeper:zookeeper",
+                    "purl": "pkg:maven/org.apache.zookeeper/zookeeper"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.8.0"
+                        },
+                        {
+                          "fixed": "3.8.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.8.0",
+                    "3.8.1",
+                    "3.8.2",
+                    "3.8.3"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 3.8.3",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r978-9m6m-6gm6/GHSA-r978-9m6m-6gm6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.zookeeper:zookeeper",
+                    "purl": "pkg:maven/org.apache.zookeeper/zookeeper"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.9.0"
+                        },
+                        {
+                          "fixed": "3.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.9.0",
+                    "3.9.1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 3.9.1",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r978-9m6m-6gm6/GHSA-r978-9m6m-6gm6.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.zookeeper:zookeeper",
+                    "purl": "pkg:maven/org.apache.zookeeper/zookeeper"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "3.6.0"
+                        },
+                        {
+                          "last_affected": "3.7.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.6.0",
+                    "3.6.1",
+                    "3.6.2",
+                    "3.6.3",
+                    "3.6.4",
+                    "3.7.0",
+                    "3.7.1",
+                    "3.7.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/03/GHSA-r978-9m6m-6gm6/GHSA-r978-9m6m-6gm6.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-23944"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/zookeeper/commit/29c7b9462681f47c2ac12e609341cf9f52abac5c"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/zookeeper/commit/65b91d2d9a56157285c2a86b106e67c26520b01d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/zookeeper/commit/daf7cfd04005cff1a4f7cab5ab13d41db88d0cd8"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/zookeeper"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/96s5nqssj03rznz9hv58txdb2k1lr79k"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/03/14/2"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-200"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-03-15T19:35:37Z",
+                "nvd_published_at": "2024-03-15T11:15:08Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-r978-9m6m-6gm6"
+              ],
+              "aliases": [
+                "BIT-zookeeper-2024-23944",
+                "CVE-2024-23944",
+                "GHSA-r978-9m6m-6gm6"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

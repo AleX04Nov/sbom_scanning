@@ -1,0 +1,1717 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/NationalSecurityAgency_ghidra_release_nr210znm_bom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "commons-io:commons-io",
+            "version": "2.11.0",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-03T17:27:19Z",
+              "published": "2024-10-03T12:30:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-78wr-2p64-hpwj",
+              "aliases": [
+                "CVE-2024-47554"
+              ],
+              "related": [
+                "CGA-252j-5hcw-3x22",
+                "CGA-9w8c-c5fw-q342",
+                "CGA-pwg2-7493-q9wm",
+                "CGA-v9q6-cg5v-8pf7"
+              ],
+              "summary": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+              "details": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "commons-io:commons-io",
+                    "purl": "pkg:maven/commons-io/commons-io"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0"
+                        },
+                        {
+                          "fixed": "2.14.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8.0",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-78wr-2p64-hpwj/GHSA-78wr-2p64-hpwj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47554"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-io"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/6ozr91rr9cj5lm0zyhv30bsp317hk5z1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-03T16:52:23Z",
+                "nvd_published_at": "2024-10-03T12:15:02Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "aliases": [
+                "CVE-2024-47554",
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "org.apache.commons:commons-compress",
+            "version": "1.21",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-08-27T15:30:50Z",
+              "published": "2024-02-19T09:30:52Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4265-ccf5-phj5",
+              "aliases": [
+                "CVE-2024-26308"
+              ],
+              "related": [
+                "CGA-5jhg-gjx7-pq4m",
+                "CGA-96mq-j5w6-4gc5",
+                "CGA-cm9w-hfx3-j2p6",
+                "CGA-ggv5-qcv7-p79c",
+                "CGA-gjfq-fj8p-3fpm",
+                "CGA-gp4f-pvwr-2rc6",
+                "CGA-j2pm-vhxf-h6gg",
+                "CGA-ppj7-32h7-rr4m",
+                "CGA-rq5c-r89h-7gmf",
+                "CGA-x85q-h487-67fx"
+              ],
+              "summary": "Apache Commons Compress: OutOfMemoryError unpacking broken Pack200 file",
+              "details": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Commons Compress. This issue affects Apache Commons Compress: from 1.21 before 1.26.\n\nUsers are recommended to upgrade to version 1.26, which fixes the issue.\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.commons:commons-compress",
+                    "purl": "pkg:maven/org.apache.commons/commons-compress"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.21"
+                        },
+                        {
+                          "fixed": "1.26.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.21",
+                    "1.22",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.25.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-4265-ccf5-phj5/GHSA-4265-ccf5-phj5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-26308"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-compress"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/ch5yo2d21p7vlqrhll9b17otbyq4npfg"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240307-0009"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/02/19/2"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-20T23:59:29Z",
+                "nvd_published_at": "2024-02-19T09:15:38Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-15T22:00:21Z",
+              "published": "2024-02-19T09:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-4g9r-vxhx-9pgx",
+              "aliases": [
+                "CVE-2024-25710"
+              ],
+              "related": [
+                "CGA-2xg7-8qm4-vx87",
+                "CGA-3wh2-6f5w-rxm4",
+                "CGA-679f-cjh5-5f6q",
+                "CGA-86rr-9236-xpq3",
+                "CGA-f3gh-9fhg-9hjp",
+                "CGA-gr35-gp4q-q78f",
+                "CGA-hw3c-xmgp-wcw7",
+                "CGA-jx86-68h8-6jqw",
+                "CGA-qm27-j3j5-mwr9",
+                "CGA-w8q8-p4r5-xxg9"
+              ],
+              "summary": "Apache Commons Compress: Denial of service caused by an infinite loop for a corrupted DUMP file",
+              "details": "Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in Apache Commons Compress. This issue affects Apache Commons Compress: from 1.3 through 1.25.0.\n\nUsers are recommended to upgrade to version 1.26.0 which fixes the issue.\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "org.apache.commons:commons-compress",
+                    "purl": "pkg:maven/org.apache.commons/commons-compress"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.3"
+                        },
+                        {
+                          "fixed": "1.26.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.10",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.14",
+                    "1.15",
+                    "1.16",
+                    "1.16.1",
+                    "1.17",
+                    "1.18",
+                    "1.19",
+                    "1.20",
+                    "1.21",
+                    "1.22",
+                    "1.23.0",
+                    "1.24.0",
+                    "1.25.0",
+                    "1.3",
+                    "1.4",
+                    "1.4.1",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.8",
+                    "1.8.1",
+                    "1.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/02/GHSA-4g9r-vxhx-9pgx/GHSA-4g9r-vxhx-9pgx.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-25710"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-compress"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240307-0010"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/02/19/1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-835"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-20T23:58:47Z",
+                "nvd_published_at": "2024-02-19T09:15:37Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-4265-ccf5-phj5"
+              ],
+              "aliases": [
+                "CVE-2024-26308",
+                "GHSA-4265-ccf5-phj5"
+              ],
+              "max_severity": "6.7"
+            },
+            {
+              "ids": [
+                "GHSA-4g9r-vxhx-9pgx"
+              ],
+              "aliases": [
+                "CVE-2024-25710",
+                "GHSA-4g9r-vxhx-9pgx"
+              ],
+              "max_severity": "8.1"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "commons-io:commons-io",
+            "version": "2.11.0",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-03T17:27:19Z",
+              "published": "2024-10-03T12:30:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-78wr-2p64-hpwj",
+              "aliases": [
+                "CVE-2024-47554"
+              ],
+              "related": [
+                "CGA-252j-5hcw-3x22",
+                "CGA-9w8c-c5fw-q342",
+                "CGA-pwg2-7493-q9wm",
+                "CGA-v9q6-cg5v-8pf7"
+              ],
+              "summary": "Apache Commons IO: Possible denial of service attack on untrusted input to XmlStreamReader",
+              "details": "Uncontrolled Resource Consumption vulnerability in Apache Commons IO.\n\nThe `org.apache.commons.io.input.XmlStreamReader` class may excessively consume CPU resources when processing maliciously crafted input.\n\n\nThis issue affects Apache Commons IO: from 2.0 before 2.14.0.\n\nUsers are recommended to upgrade to version 2.14.0 or later, which fixes the issue.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "commons-io:commons-io",
+                    "purl": "pkg:maven/commons-io/commons-io"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0"
+                        },
+                        {
+                          "fixed": "2.14.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0.1",
+                    "2.1",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.12.0",
+                    "2.13.0",
+                    "2.2",
+                    "2.3",
+                    "2.4",
+                    "2.5",
+                    "2.6",
+                    "2.7",
+                    "2.8.0",
+                    "2.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-78wr-2p64-hpwj/GHSA-78wr-2p64-hpwj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47554"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-io"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/6ozr91rr9cj5lm0zyhv30bsp317hk5z1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-03T16:52:23Z",
+                "nvd_published_at": "2024-10-03T12:15:02Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "aliases": [
+                "CVE-2024-47554",
+                "GHSA-78wr-2p64-hpwj"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "commons-net:commons-net",
+            "version": "3.2",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2023-11-08T04:06:18Z",
+              "published": "2022-12-03T15:30:26Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-cgp8-4m63-fhh5",
+              "aliases": [
+                "CVE-2021-37533"
+              ],
+              "summary": "Apache Commons Net vulnerable to information leakage via malicious server",
+              "details": "Prior to Apache Commons Net 3.9.0, Net's FTP client trusts the host from PASV response by default. A malicious server can redirect the Commons Net code to use a different host, but the user has to connect to the malicious server in the first place. This may lead to leakage of information about services running on the private network of the client.\nThe default in version 3.9.0 is now false to ignore such hosts, as cURL does. See https://issues.apache.org/jira/browse/NET-711.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "commons-net:commons-net",
+                    "purl": "pkg:maven/commons-net/commons-net"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.9.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "2.0",
+                    "2.2",
+                    "3.0",
+                    "3.0.1",
+                    "3.1",
+                    "3.2",
+                    "3.3",
+                    "3.4",
+                    "3.5",
+                    "3.6",
+                    "3.7",
+                    "3.7.1",
+                    "3.7.2",
+                    "3.8.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/12/GHSA-cgp8-4m63-fhh5/GHSA-cgp8-4m63-fhh5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-37533"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/commons-net/commit/4fe1bae56e53f32756b1ca3296f3dd2c45e3e060"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/apache/commons-net"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://issues.apache.org/jira/browse/NET-711"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.apache.org/thread/o6yn9r9x6s94v97264hmgol1sf48mvx7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2022/12/msg00038.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2022/dsa-5307"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2022/12/03/1"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2022-12-05T23:21:08Z",
+                "nvd_published_at": "2022-12-03T15:15:00Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-cgp8-4m63-fhh5"
+              ],
+              "aliases": [
+                "CVE-2021-37533",
+                "GHSA-cgp8-4m63-fhh5"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "com.google.protobuf:protobuf-java",
+            "version": "3.21.8",
+            "ecosystem": "Maven"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-23T20:24:56Z",
+              "published": "2024-09-19T16:06:03Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-735f-pc8j-v9w8",
+              "aliases": [
+                "CVE-2024-7254"
+              ],
+              "related": [
+                "CGA-3jqr-m622-9v65",
+                "CGA-c87c-r7j2-6c2f",
+                "CGA-r5c2-7p3p-gp53",
+                "CGA-v5fx-59qm-4247"
+              ],
+              "summary": "protobuf-java has potential Denial of Service issue",
+              "details": "### Summary\nWhen parsing unknown fields in the Protobuf Java Lite and Full library, a maliciously crafted message can cause a StackOverflow error and lead to a program crash.\n\nReporter: Alexis Challande, Trail of Bits Ecosystem Security Team \u003cecosystem@trailofbits.com\u003e\n\nAffected versions: This issue affects all versions of both the Java full and lite Protobuf runtimes, as well as Protobuf for Kotlin and JRuby, which themselves use the Java Protobuf runtime.\n\n### Severity\n[CVE-2024-7254](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-7254) **High** CVSS4.0 Score 8.7 (NOTE: there may be a delay in publication)\nThis is a potential Denial of Service. Parsing nested groups as unknown fields with DiscardUnknownFieldsParser or Java Protobuf Lite parser, or against Protobuf map fields, creates unbounded recursions that can be abused by an attacker.\n\n### Proof of Concept\nFor reproduction details, please refer to the unit tests (Protobuf Java [LiteTest](https://github.com/protocolbuffers/protobuf/blob/a037f28ff81ee45ebe008c64ab632bf5372242ce/java/lite/src/test/java/com/google/protobuf/LiteTest.java) and [CodedInputStreamTest](https://github.com/protocolbuffers/protobuf/blob/a037f28ff81ee45ebe008c64ab632bf5372242ce/java/core/src/test/java/com/google/protobuf/CodedInputStreamTest.java)) that identify the specific inputs that exercise this parsing weakness.\n\n### Remediation and Mitigation\nWe have been working diligently to address this issue and have released a mitigation that is available now. Please update to the latest available versions of the following packages:\n* protobuf-java (3.25.5, 4.27.5, 4.28.2)\n* protobuf-javalite (3.25.5, 4.27.5, 4.28.2)\n* protobuf-kotlin (3.25.5, 4.27.5, 4.28.2)\n* protobuf-kotlin-lite (3.25.5, 4.27.5, 4.28.2)\n* com-protobuf [JRuby gem only] (3.25.5, 4.27.5, 4.28.2)\n\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.1",
+                    "2.0.3",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.3.0",
+                    "2.4.0a",
+                    "2.4.1",
+                    "2.5.0",
+                    "2.6.0",
+                    "2.6.1",
+                    "3.0.0",
+                    "3.0.0-alpha-2",
+                    "3.0.0-alpha-3",
+                    "3.0.0-alpha-3.1",
+                    "3.0.0-beta-1",
+                    "3.0.0-beta-2",
+                    "3.0.0-beta-3",
+                    "3.0.0-beta-4",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.10.0",
+                    "3.10.0-rc-1",
+                    "3.11.0",
+                    "3.11.0-rc-1",
+                    "3.11.0-rc-2",
+                    "3.11.1",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0-rc-1",
+                    "3.12.0-rc-2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0-rc-3",
+                    "3.14.0",
+                    "3.14.0-rc-1",
+                    "3.14.0-rc-2",
+                    "3.14.0-rc-3",
+                    "3.15.0",
+                    "3.15.0-rc-1",
+                    "3.15.0-rc-2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0-rc-1",
+                    "3.16.0-rc-2",
+                    "3.16.1",
+                    "3.16.3",
+                    "3.17.0",
+                    "3.17.0-rc-1",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.2.0",
+                    "3.2.0-rc.1",
+                    "3.2.0rc2",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.4.0",
+                    "3.5.0",
+                    "3.5.1",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0-rc1",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0-rc-1",
+                    "3.9.0",
+                    "3.9.0-rc-1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-javalite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-javalite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.10.0",
+                    "3.10.0-rc-1",
+                    "3.11.0",
+                    "3.11.0-rc-1",
+                    "3.11.0-rc-2",
+                    "3.11.1",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0-rc-1",
+                    "3.12.0-rc-2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0-rc-3",
+                    "3.14.0",
+                    "3.14.0-rc-1",
+                    "3.14.0-rc-2",
+                    "3.14.0-rc-3",
+                    "3.15.0",
+                    "3.15.0-rc-1",
+                    "3.15.0-rc-2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0-rc-1",
+                    "3.16.0-rc-2",
+                    "3.16.1",
+                    "3.16.3",
+                    "3.17.0",
+                    "3.17.0-rc-1",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4",
+                    "3.8.0",
+                    "3.8.0-rc-1",
+                    "3.9.0",
+                    "3.9.0-rc-1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.17.0",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin-lite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin-lite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.17.0",
+                    "3.17.0-rc-2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0-rc-1",
+                    "3.18.0-rc-2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0-rc-1",
+                    "3.19.0-rc-2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.20.0",
+                    "3.20.0-rc-1",
+                    "3.20.1",
+                    "3.20.1-rc-1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0-rc-1",
+                    "3.21.0-rc-2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0-RC1",
+                    "3.22.0-RC3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.4",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0-RC2",
+                    "3.23.0-RC3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0-RC1",
+                    "3.24.0-RC2",
+                    "3.24.0-RC3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0-RC1",
+                    "3.25.0-RC2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "google-protobuf",
+                    "purl": "pkg:gem/google-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.25.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "3.0.0",
+                    "3.0.0.alpha.1.0",
+                    "3.0.0.alpha.1.1",
+                    "3.0.0.alpha.2.0",
+                    "3.0.0.alpha.3",
+                    "3.0.0.alpha.3.1.pre",
+                    "3.0.0.alpha.4.0",
+                    "3.0.0.alpha.5.0.3",
+                    "3.0.0.alpha.5.0.4",
+                    "3.0.0.alpha.5.0.5",
+                    "3.0.0.alpha.5.0.5.1",
+                    "3.0.2",
+                    "3.1.0",
+                    "3.1.0.0.pre",
+                    "3.10.0.rc.1",
+                    "3.10.1",
+                    "3.11.0",
+                    "3.11.0.rc.1",
+                    "3.11.0.rc.2",
+                    "3.11.1",
+                    "3.11.2",
+                    "3.11.3",
+                    "3.11.4",
+                    "3.12.0",
+                    "3.12.0.rc.1",
+                    "3.12.0.rc.2",
+                    "3.12.1",
+                    "3.12.2",
+                    "3.12.4",
+                    "3.13.0",
+                    "3.13.0.rc.3",
+                    "3.14.0",
+                    "3.14.0.rc.1",
+                    "3.14.0.rc.2",
+                    "3.14.0.rc.3",
+                    "3.15.0",
+                    "3.15.0.rc.1",
+                    "3.15.0.rc.2",
+                    "3.15.1",
+                    "3.15.2",
+                    "3.15.3",
+                    "3.15.4",
+                    "3.15.5",
+                    "3.15.6",
+                    "3.15.7",
+                    "3.15.8",
+                    "3.16.0",
+                    "3.16.0.rc.1",
+                    "3.16.0.rc.2",
+                    "3.17.0",
+                    "3.17.0.rc.1",
+                    "3.17.0.rc.2",
+                    "3.17.1",
+                    "3.17.2",
+                    "3.17.3",
+                    "3.18.0",
+                    "3.18.0.rc.1",
+                    "3.18.0.rc.2",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.18.3",
+                    "3.19.0",
+                    "3.19.0.rc.1",
+                    "3.19.0.rc.2",
+                    "3.19.1",
+                    "3.19.2",
+                    "3.19.3",
+                    "3.19.4",
+                    "3.19.5",
+                    "3.19.6",
+                    "3.2.0",
+                    "3.2.0.1",
+                    "3.2.0.2",
+                    "3.2.1.pre",
+                    "3.20.0",
+                    "3.20.0.rc.1",
+                    "3.20.0.rc.2",
+                    "3.20.1",
+                    "3.20.1.rc.1",
+                    "3.20.2",
+                    "3.20.3",
+                    "3.21.0",
+                    "3.21.0.rc.1",
+                    "3.21.0.rc.2",
+                    "3.21.1",
+                    "3.21.10",
+                    "3.21.11",
+                    "3.21.12",
+                    "3.21.2",
+                    "3.21.3",
+                    "3.21.4",
+                    "3.21.5",
+                    "3.21.6",
+                    "3.21.7",
+                    "3.21.8",
+                    "3.21.9",
+                    "3.22.0",
+                    "3.22.0.rc.2",
+                    "3.22.0.rc.3",
+                    "3.22.1",
+                    "3.22.2",
+                    "3.22.3",
+                    "3.22.5",
+                    "3.23.0",
+                    "3.23.0.rc.1",
+                    "3.23.0.rc.2",
+                    "3.23.0.rc.3",
+                    "3.23.1",
+                    "3.23.2",
+                    "3.23.3",
+                    "3.23.4",
+                    "3.24.0",
+                    "3.24.0.rc.2",
+                    "3.24.0.rc.3",
+                    "3.24.1",
+                    "3.24.2",
+                    "3.24.3",
+                    "3.24.4",
+                    "3.25.0",
+                    "3.25.0.rc.1",
+                    "3.25.0.rc.2",
+                    "3.25.1",
+                    "3.25.2",
+                    "3.25.3",
+                    "3.25.4",
+                    "3.3.0",
+                    "3.4.0.1",
+                    "3.4.0.2",
+                    "3.4.1.1",
+                    "3.5.0",
+                    "3.5.0.pre",
+                    "3.5.1",
+                    "3.5.1.1",
+                    "3.5.1.2",
+                    "3.6.0",
+                    "3.6.1",
+                    "3.7.0",
+                    "3.7.0.rc.2",
+                    "3.7.0.rc.3",
+                    "3.7.1",
+                    "3.8.0",
+                    "3.8.0.rc.1",
+                    "3.9.0",
+                    "3.9.0.rc.1",
+                    "3.9.1",
+                    "3.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "google-protobuf",
+                    "purl": "pkg:gem/google-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0.rc.1",
+                    "4.26.0.rc.2",
+                    "4.26.0.rc.3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0.rc.1",
+                    "4.27.0.rc.2",
+                    "4.27.0.rc.3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "RubyGems",
+                    "name": "google-protobuf",
+                    "purl": "pkg:gem/google-protobuf"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.0.rc.1",
+                    "4.28.0.rc.2",
+                    "4.28.0.rc.3",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin-lite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin-lite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin-lite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin-lite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-kotlin",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-kotlin"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-javalite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-javalite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-javalite",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-javalite"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.0.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.27.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.26.0",
+                    "4.26.0-RC1",
+                    "4.26.0-RC2",
+                    "4.26.0-RC3",
+                    "4.26.1",
+                    "4.27.0",
+                    "4.27.0-RC1",
+                    "4.27.0-RC2",
+                    "4.27.0-RC3",
+                    "4.27.1",
+                    "4.27.2",
+                    "4.27.3",
+                    "4.27.4"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.google.protobuf:protobuf-java",
+                    "purl": "pkg:maven/com.google.protobuf/protobuf-java"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.28.0.rc.1"
+                        },
+                        {
+                          "fixed": "4.28.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.28.0",
+                    "4.28.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-735f-pc8j-v9w8/GHSA-735f-pc8j-v9w8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/security/advisories/GHSA-735f-pc8j-v9w8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-7254"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/4728531c162f2f9e8c2ca1add713cfee2db6be3b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/850fcce9176e2c9070614dab53537760498c926b"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/9a5f5fe752a20cbac2e722b06949ac985abdd534"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/ac9fb5b4c71b0dd80985b27684e265d1f03abf46"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/cc8b3483a5584b3301e3d43d17eb59704857ffaa"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/protocolbuffers/protobuf/commit/d6c82fc55a76481c676f541a255571e8950bb8c3"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/protocolbuffers/protobuf"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/google-protobuf/CVE-2024-7254.yml"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-20"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-19T16:06:03Z",
+                "nvd_published_at": "2024-09-19T01:15:10Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-735f-pc8j-v9w8"
+              ],
+              "aliases": [
+                "CVE-2024-7254",
+                "GHSA-735f-pc8j-v9w8"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

@@ -1,0 +1,1622 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/mchmarny_reputer_release_28rdf3ul_reputer_0.1.2_windows_arm64.sbom",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/cloudflare/circl",
+            "version": "v1.3.3",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-20T22:00:44Z",
+              "published": "2024-01-08T16:45:05Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9763-4f94-gfch",
+              "aliases": [
+                "GO-2024-2453"
+              ],
+              "related": [
+                "CGA-32hv-8p45-fvrw",
+                "CGA-34mp-pgjp-cr35",
+                "CGA-3c7v-p5g9-f5wx",
+                "CGA-3j2f-79mr-gq32",
+                "CGA-3wj2-j6v6-26rc",
+                "CGA-43m3-v5r4-572q",
+                "CGA-443m-h4wm-4254",
+                "CGA-576x-v97x-j86m",
+                "CGA-5898-995w-v3xp",
+                "CGA-59m8-w4hr-q5v7",
+                "CGA-5h2m-47mc-j39v",
+                "CGA-5r5j-pgg9-j2cq",
+                "CGA-6gc9-796v-jj34",
+                "CGA-6hp4-4g6r-j529",
+                "CGA-6q2w-jcmq-mrhc",
+                "CGA-7jpf-5fxv-c8q6",
+                "CGA-7rmp-p4cv-7f76",
+                "CGA-88qh-268f-cxg7",
+                "CGA-8j3v-wc97-wxwv",
+                "CGA-8mx2-2g54-rc67",
+                "CGA-8r3x-wxp5-xcpp",
+                "CGA-8vxr-7c65-7cv3",
+                "CGA-95mf-g4g5-3583",
+                "CGA-989q-wp94-2cv8",
+                "CGA-9hm4-cpgg-786g",
+                "CGA-9vcv-g7q6-q9hj",
+                "CGA-c878-mf2j-gc32",
+                "CGA-ch79-8wjv-h735",
+                "CGA-cmfc-rwwp-j35g",
+                "CGA-crhh-qwj9-654h",
+                "CGA-fvwh-x5hf-34g9",
+                "CGA-gm8j-fprw-733c",
+                "CGA-gvj4-grx6-9q32",
+                "CGA-hf8x-55wx-3h8r",
+                "CGA-hx5f-9wf9-hqqq",
+                "CGA-hx6j-f4jm-xgqm",
+                "CGA-j95j-3qq8-8rxh",
+                "CGA-jf4x-jhjg-rqvw",
+                "CGA-jfmq-h56g-gvj2",
+                "CGA-jm52-75v4-g554",
+                "CGA-m2ph-q6mp-wv77",
+                "CGA-mqf3-36mv-qf65",
+                "CGA-mrgp-7qmf-5vmg",
+                "CGA-p7pg-p7jj-xh8g",
+                "CGA-ph7m-75mx-27vx",
+                "CGA-pp94-xv39-pxjw",
+                "CGA-pr86-rmx2-wm6f",
+                "CGA-pxgh-47rh-fwmf",
+                "CGA-q6gp-9rg9-8w4m",
+                "CGA-q8cg-653r-89r9",
+                "CGA-q969-vf57-mfg2",
+                "CGA-qpvx-98qp-jh29",
+                "CGA-qvj5-gr4p-9595",
+                "CGA-vhvw-4cmq-jvrp",
+                "CGA-vwrv-x875-377x",
+                "CGA-w383-9wx6-9qwj",
+                "CGA-wjjq-5f2f-jw8w",
+                "CGA-wmh8-rpp4-45r5",
+                "CGA-wqxr-65qm-jwmh",
+                "CGA-wrvw-cm98-67w8",
+                "CGA-x75x-r6x5-hpr2"
+              ],
+              "summary": "CIRCL's Kyber: timing side-channel (kyberslash2)",
+              "details": "### Impact\nOn some platforms, when an attacker can time decapsulation of Kyber on forged cipher texts, they could possibly learn (parts of) the secret key.\n\nDoes not apply to ephemeral usage, such as when used in the regular way in TLS.\n\n### Patches\nPatched in 1.3.7.\n\n### References\n- [kyberslash.cr.yp.to](https://kyberslash.cr.yp.to/)",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/cloudflare/circl",
+                    "purl": "pkg:golang/github.com/cloudflare/circl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/01/GHSA-9763-4f94-gfch/GHSA-9763-4f94-gfch.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudflare/circl/security/advisories/GHSA-9763-4f94-gfch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cloudflare/circl/commit/75ef91e8a2f438e6ce2b6e620d236add8be1887d"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/cloudflare/circl"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://kyberslash.cr.yp.to"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-01-08T16:45:05Z",
+                "nvd_published_at": null,
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2024-01-18T23:40:46Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2453",
+              "aliases": [
+                "GHSA-9763-4f94-gfch"
+              ],
+              "summary": "Timing side channel in github.com/cloudflare/circl",
+              "details": "Timing side channel in github.com/cloudflare/circl",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/cloudflare/circl",
+                    "purl": "pkg:golang/github.com/cloudflare/circl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.3.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2453.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/cloudflare/circl/pke/kyber/internal/common",
+                        "symbols": [
+                          "Poly.CompressTo"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/cloudflare/circl/security/advisories/GHSA-9763-4f94-gfch"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/cloudflare/circl/commit/75ef91e8a2f438e6ce2b6e620d236add8be1887d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://kyberslash.cr.yp.to/"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2453"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9763-4f94-gfch",
+                "GO-2024-2453"
+              ],
+              "aliases": [
+                "GHSA-9763-4f94-gfch",
+                "GO-2024-2453"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/hashicorp/go-retryablehttp",
+            "version": "v0.7.4",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:12:28Z",
+              "published": "2024-06-24T18:31:37Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-v6v8-xj6m-xwqh",
+              "aliases": [
+                "CVE-2024-6104",
+                "GO-2024-2947"
+              ],
+              "related": [
+                "CGA-23mp-53xj-rxq8",
+                "CGA-279c-c845-mg77",
+                "CGA-27mv-v84v-3r2r",
+                "CGA-2gpx-j9wf-x7gf",
+                "CGA-2jpm-8hrp-3x75",
+                "CGA-2mjc-pp8h-6x42",
+                "CGA-2pv3-mprq-h8r9",
+                "CGA-39vf-3fr9-fwq5",
+                "CGA-3f4q-g4mj-3x9x",
+                "CGA-3jg9-fc27-v269",
+                "CGA-3jjq-g42x-mm83",
+                "CGA-3r45-5277-prr2",
+                "CGA-3vh7-9jjm-44wp",
+                "CGA-3vmr-9w93-x3v7",
+                "CGA-433q-gpcg-p2vm",
+                "CGA-4847-vww5-7f48",
+                "CGA-4f27-r346-99m6",
+                "CGA-4h99-h5hq-crg2",
+                "CGA-4mqh-9jv6-4vx4",
+                "CGA-4vmm-7hrf-9rx6",
+                "CGA-4xr7-qfjp-f5x2",
+                "CGA-4xx5-vp4r-9vwm",
+                "CGA-5324-wm9h-4g68",
+                "CGA-582x-w3vf-832j",
+                "CGA-598r-p58j-7rqf",
+                "CGA-59jh-x873-28v5",
+                "CGA-5hm4-m7jw-3wg2",
+                "CGA-5vrr-fvvw-xjq3",
+                "CGA-62hv-g94q-j6m7",
+                "CGA-6423-6qh9-pm5w",
+                "CGA-6482-m2fr-9664",
+                "CGA-64gw-93r2-52qq",
+                "CGA-66j3-wf6m-5xqg",
+                "CGA-67j4-hqg7-xf3h",
+                "CGA-6hxc-j9xh-29f4",
+                "CGA-6j8x-q78q-cpp3",
+                "CGA-6mh4-qmrc-qf44",
+                "CGA-6r9r-jphg-6g39",
+                "CGA-768j-7gqg-gwr7",
+                "CGA-7f3j-5pqw-9q37",
+                "CGA-7fh2-vjf6-8w9f",
+                "CGA-7hh3-rfp4-w662",
+                "CGA-7jf5-mvx5-p5c7",
+                "CGA-7rr5-prcv-mjvc",
+                "CGA-8727-h7c4-fxp7",
+                "CGA-8x39-9j48-5wcw",
+                "CGA-94cp-87rf-r254",
+                "CGA-94fr-wpx9-g63r",
+                "CGA-96qq-mr6v-8845",
+                "CGA-9f9x-vf2h-x36g",
+                "CGA-9fc4-rvfx-v3pr",
+                "CGA-9j24-gq8r-3f3r",
+                "CGA-9mcq-hc99-m76g",
+                "CGA-9wqv-cffv-xmwf",
+                "CGA-cc4w-g258-gcp4",
+                "CGA-cf3g-r7gv-ccjc",
+                "CGA-cm7c-wjqw-rp4x",
+                "CGA-cqcr-2xfq-7j62",
+                "CGA-cxmc-fxpc-486c",
+                "CGA-cxv8-h2h8-29fj",
+                "CGA-f326-2grf-g7vv",
+                "CGA-f3mh-g5gm-j3pc",
+                "CGA-fp9g-64fq-gr4m",
+                "CGA-g4vm-x296-5cq9",
+                "CGA-gcf7-2j3w-86c7",
+                "CGA-gmc4-4vrp-848q",
+                "CGA-gww5-9mj4-pcr4",
+                "CGA-h3c6-m9gg-ffw2",
+                "CGA-hg3w-f2cx-vr9g",
+                "CGA-hh84-2wfx-r9gj",
+                "CGA-hmcq-g97h-vg2f",
+                "CGA-hp24-8c94-34qj",
+                "CGA-hpwx-25jh-jmh3",
+                "CGA-hwqp-mwvw-gjpg",
+                "CGA-j2qw-2x9r-mg22",
+                "CGA-j58j-mhqh-qx6x",
+                "CGA-j5wf-gj8h-f3rf",
+                "CGA-jj93-25vx-2v32",
+                "CGA-jr43-5p8x-5hw3",
+                "CGA-jwv3-3gjf-8pvc",
+                "CGA-jxrr-885m-5489",
+                "CGA-m43v-mcrg-pjxv",
+                "CGA-m524-pxgf-98hq",
+                "CGA-m597-crp6-vcmx",
+                "CGA-m9fq-hq52-q783",
+                "CGA-mcwh-jjhv-2cj7",
+                "CGA-mg73-r3cj-jq88",
+                "CGA-mgpc-vv6h-8j56",
+                "CGA-mgv2-vjm3-85cf",
+                "CGA-mjfg-m349-5324",
+                "CGA-p3x9-x9gw-22v7",
+                "CGA-p6w6-chq6-4cxx",
+                "CGA-p96m-7x99-267h",
+                "CGA-ph7q-c5j4-42rc",
+                "CGA-pwcc-4xxf-c48h",
+                "CGA-q3qv-24xp-wp35",
+                "CGA-q3v7-wmm2-mxff",
+                "CGA-qm5w-6gg9-7g6f",
+                "CGA-qx8w-jx2p-8mpm",
+                "CGA-qxhg-528v-hj9x",
+                "CGA-qxhj-fhq4-xhh4",
+                "CGA-r2qr-vh9v-529h",
+                "CGA-r4wf-2hv3-3jhg",
+                "CGA-r8q6-qjpg-f3v5",
+                "CGA-rgvj-fgvg-j6cx",
+                "CGA-rhq3-96hj-736x",
+                "CGA-rxr7-qjj9-xf8j",
+                "CGA-v32q-j5hh-xh3q",
+                "CGA-v39w-pgvg-cxxj",
+                "CGA-v47p-72fh-m2pm",
+                "CGA-v4vc-r6qw-58jm",
+                "CGA-v924-gcj3-ccj2",
+                "CGA-v9qm-hvh2-r7qp",
+                "CGA-vfw8-72mw-69j5",
+                "CGA-vh6x-4x32-xv8j",
+                "CGA-vr63-h43x-c39j",
+                "CGA-vw8v-jp5f-5j9h",
+                "CGA-vwqx-qf6m-p26p",
+                "CGA-w239-phx5-hvrh",
+                "CGA-w3gg-4vf6-j7v6",
+                "CGA-w5gj-whrm-qjww",
+                "CGA-w7pc-vv6c-4fmm",
+                "CGA-w9vv-57v9-38rf",
+                "CGA-wcpj-qm8j-v25h",
+                "CGA-wfv5-r384-hvr3",
+                "CGA-wj46-pxqf-q6hp",
+                "CGA-wmvv-wrch-6w2w",
+                "CGA-wxjg-ffgp-5j7p",
+                "CGA-x374-vg2f-v7w7",
+                "CGA-x49c-g9x8-x486",
+                "CGA-x5wg-hmpq-7x6f",
+                "CGA-x834-pfx6-mr5v",
+                "CGA-xjr4-v493-j9m5"
+              ],
+              "summary": "go-retryablehttp can leak basic auth credentials to log files",
+              "details": "go-retryablehttp prior to 0.7.7 did not sanitize urls when writing them to its log file. This could lead to go-retryablehttp writing sensitive HTTP basic auth credentials to its log file. This vulnerability, CVE-2024-6104, was fixed in go-retryablehttp 0.7.7.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/go-retryablehttp",
+                    "purl": "pkg:golang/github.com/hashicorp/go-retryablehttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-v6v8-xj6m-xwqh/GHSA-v6v8-xj6m-xwqh.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6104"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hashicorp/go-retryablehttp/commit/a99f07beb3c5faaa0a283617e6eb6bcf25f5049a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/c/security"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-12-go-retryablehttp-can-leak-basic-auth-credentials-to-log-files/68027"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-v6v8-xj6m-xwqh"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hashicorp/go-retryablehttp"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-532"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-24T21:32:07Z",
+                "nvd_published_at": "2024-06-24T17:15:11Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-15T22:12:28Z",
+              "published": "2024-06-25T19:47:45Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2947",
+              "aliases": [
+                "CVE-2024-6104",
+                "GHSA-v6v8-xj6m-xwqh"
+              ],
+              "summary": "Leak of sensitive information to log files in github.com/hashicorp/go-retryablehttp",
+              "details": "URLs were not sanitized when writing them to log files. This could lead to writing sensitive HTTP basic auth credentials to the log file.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/hashicorp/go-retryablehttp",
+                    "purl": "pkg:golang/github.com/hashicorp/go-retryablehttp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.7.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2947.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/hashicorp/go-retryablehttp",
+                        "symbols": [
+                          "Client.Do",
+                          "Client.Get",
+                          "Client.Head",
+                          "Client.Post",
+                          "Client.PostForm",
+                          "Get",
+                          "Head",
+                          "Post",
+                          "PostForm",
+                          "RoundTripper.RoundTrip"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-v6v8-xj6m-xwqh"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/hashicorp/go-retryablehttp/commit/a99f07beb3c5faaa0a283617e6eb6bcf25f5049a"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://discuss.hashicorp.com/t/hcsec-2024-12-go-retryablehttp-can-leak-basic-auth-credentials-to-log-files/68027"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2947"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-v6v8-xj6m-xwqh",
+                "GO-2024-2947"
+              ],
+              "aliases": [
+                "CVE-2024-6104",
+                "GHSA-v6v8-xj6m-xwqh",
+                "GO-2024-2947"
+              ],
+              "max_severity": "6.0"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "golang.org/x/crypto",
+            "version": "v0.9.0",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:00:20Z",
+              "published": "2023-12-18T19:22:09Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-45x7-px36-x8w8",
+              "aliases": [
+                "CVE-2023-48795",
+                "GO-2023-2402"
+              ],
+              "related": [
+                "CGA-2492-fp29-j2h7",
+                "CGA-277j-q722-58cx",
+                "CGA-2h9j-8q29-96fh",
+                "CGA-2jgg-m4pg-728h",
+                "CGA-2jgq-mqh9-h4w7",
+                "CGA-2mh5-3ghm-wxx8",
+                "CGA-2q6f-cm6g-w3f3",
+                "CGA-328h-w8g9-8xpv",
+                "CGA-334x-g5hp-4hpc",
+                "CGA-34v7-9wfw-22r7",
+                "CGA-34xj-gw5j-w6p4",
+                "CGA-3f4f-jrr6-cwvr",
+                "CGA-3f54-v7wq-px99",
+                "CGA-3fr8-cf59-58rg",
+                "CGA-3h9f-rjr4-86rw",
+                "CGA-3h9j-rhxp-mwx8",
+                "CGA-3m2v-954x-jv82",
+                "CGA-3mf3-62wc-gr85",
+                "CGA-3pqj-cmfm-r8jv",
+                "CGA-3vc9-ffh2-v232",
+                "CGA-4449-gjc8-88pf",
+                "CGA-44wp-2wwq-mx89",
+                "CGA-45hc-726p-2rrq",
+                "CGA-477f-48qm-vgqp",
+                "CGA-48fx-4272-c6m9",
+                "CGA-4c7q-5q3x-mwqw",
+                "CGA-4f72-5h35-crh4",
+                "CGA-4hjg-4m22-mv25",
+                "CGA-4jxp-pqx7-2wh9",
+                "CGA-4m34-28x9-hpgj",
+                "CGA-4ppm-vqvr-m6q7",
+                "CGA-4r43-r6g3-g2hx",
+                "CGA-4r8h-qgjr-j2fm",
+                "CGA-4wf5-cc6h-rcxw",
+                "CGA-4wvr-2h7r-6jpr",
+                "CGA-5372-6p8v-9xg8",
+                "CGA-53vg-2pc5-3jr9",
+                "CGA-56xm-g9pc-f9f7",
+                "CGA-5752-m78r-jhw5",
+                "CGA-57v6-x9px-rcg2",
+                "CGA-58ff-m6f8-rwxw",
+                "CGA-59p6-q37f-hh94",
+                "CGA-5jw7-q423-pv2p",
+                "CGA-5mwx-pvf3-2wxw",
+                "CGA-5q2q-h59p-w534",
+                "CGA-5qh6-5gfh-j93p",
+                "CGA-5qr2-mr82-493p",
+                "CGA-5w92-m5wm-c7vw",
+                "CGA-5xhr-w3v7-r8gj",
+                "CGA-653x-35qj-9r48",
+                "CGA-65qc-82vp-7pff",
+                "CGA-666j-m65g-mjc7",
+                "CGA-667j-8ch2-fxw4",
+                "CGA-6766-xpqf-v6pq",
+                "CGA-6847-57ww-4rj4",
+                "CGA-693g-7wg2-5v6r",
+                "CGA-6crg-mmpj-g522",
+                "CGA-6h2m-f47g-w95c",
+                "CGA-6jm9-j3j6-7fxh",
+                "CGA-6pq8-prc9-3m35",
+                "CGA-6q9p-vhvw-jp68",
+                "CGA-6v8q-9jxr-669v",
+                "CGA-6w4m-hhg4-ppjx",
+                "CGA-6wqw-9w3h-8769",
+                "CGA-6xw8-764h-6r7f",
+                "CGA-72pj-xw2v-9m77",
+                "CGA-75jg-gqqf-w2r6",
+                "CGA-78x5-43hv-2jgx",
+                "CGA-7953-vj8w-4h4w",
+                "CGA-7chx-w4hq-qw46",
+                "CGA-7cm3-ppfw-6mgr",
+                "CGA-7cx6-cjw8-gmx3",
+                "CGA-7f9v-f5c5-2rp7",
+                "CGA-7gcp-5jvh-rxqq",
+                "CGA-7hhj-79h8-9mf8",
+                "CGA-7p4p-w4w9-9f4q",
+                "CGA-7ppv-6mx6-pg37",
+                "CGA-7v6w-28ff-cf45",
+                "CGA-7v7g-3wj4-fph5",
+                "CGA-7vjq-fhpg-92x6",
+                "CGA-7x38-9344-h7f7",
+                "CGA-7x4c-fwj2-48qx",
+                "CGA-833j-8hj8-wm9f",
+                "CGA-83pc-g7x3-gjgm",
+                "CGA-83v9-4c8h-7585",
+                "CGA-85hw-w5q3-v6gw",
+                "CGA-879j-4wqj-qhh6",
+                "CGA-87vx-m7q5-9hq5",
+                "CGA-8843-x75p-f8hf",
+                "CGA-8cc2-v9p5-7298",
+                "CGA-8cvq-w625-hc7x",
+                "CGA-8jgr-3wp3-892g",
+                "CGA-8p8h-98f6-m866",
+                "CGA-8rxg-f6g8-wpqw",
+                "CGA-8v77-whr4-r9p4",
+                "CGA-8wx4-g2p6-8v3g",
+                "CGA-93jp-f7mc-h8mx",
+                "CGA-95px-9c34-rwxv",
+                "CGA-9725-rpj7-2g5j",
+                "CGA-98fh-pv4f-x8cq",
+                "CGA-9hxx-rg9g-xx6p",
+                "CGA-9j3p-4pc3-whpx",
+                "CGA-9jmq-843h-h7q4",
+                "CGA-9m47-j4pv-jwp9",
+                "CGA-9q59-3437-wcxg",
+                "CGA-9qrq-8v45-jh89",
+                "CGA-9wg8-587h-gg2q",
+                "CGA-9wxp-4hh5-c5vg",
+                "CGA-9xcx-hcxw-qmqh",
+                "CGA-c3xp-23cj-w2p4",
+                "CGA-c523-rx6r-5345",
+                "CGA-c567-j57p-9gp8",
+                "CGA-c5q9-6qx4-85r5",
+                "CGA-c729-2j8r-88ff",
+                "CGA-c7v7-959m-4j6c",
+                "CGA-c9m6-f7jr-8pjj",
+                "CGA-ccgg-cfxc-9744",
+                "CGA-cgx8-cgc6-3554",
+                "CGA-ch96-67vh-7363",
+                "CGA-chpw-hxjg-pmq9",
+                "CGA-cjq7-4pq6-h6r6",
+                "CGA-cm7r-4mj7-qhg4",
+                "CGA-cr23-7245-4599",
+                "CGA-cr28-42c8-8rhf",
+                "CGA-cw4r-8qhf-226c",
+                "CGA-cwx6-47q3-p258",
+                "CGA-f475-rj53-3rx7",
+                "CGA-f66w-28g6-58hq",
+                "CGA-f6qp-g44v-58gv",
+                "CGA-f7q5-3j2f-g45w",
+                "CGA-f8pg-6jr8-5wxr",
+                "CGA-f9g2-26qr-3m89",
+                "CGA-ffqq-43cr-m3vj",
+                "CGA-fgrp-cpw9-frm2",
+                "CGA-fjf9-c2hc-c553",
+                "CGA-fjq6-g66h-4hxx",
+                "CGA-fpjp-c59p-pc6f",
+                "CGA-fq3r-fjj5-cf72",
+                "CGA-fq4v-p567-g874",
+                "CGA-fqfx-82m5-r4gm",
+                "CGA-fvp6-ppp5-92v3",
+                "CGA-fvpc-54rc-7p74",
+                "CGA-fwfm-v5xp-g8xg",
+                "CGA-g46x-4prw-jw98",
+                "CGA-g72c-3j52-v3mm",
+                "CGA-g8mx-3vx3-8m92",
+                "CGA-g8w3-29r3-jfm6",
+                "CGA-g8ww-vwwm-8jpm",
+                "CGA-gg94-fcwr-4jmm",
+                "CGA-gm3h-mwv4-8xxf",
+                "CGA-gm4q-g424-p3xc",
+                "CGA-gmgf-ghq8-4wmm",
+                "CGA-gqqf-qqm8-rjm2",
+                "CGA-gxfq-rxwq-94cq",
+                "CGA-h2x3-j8m7-hx42",
+                "CGA-h437-rw82-45c8",
+                "CGA-h5m4-4hqx-g8jw",
+                "CGA-h678-4w9j-j6wr",
+                "CGA-h6cc-9pw3-rmh2",
+                "CGA-h7v3-56h4-gccp",
+                "CGA-hfgh-4r2q-p6hh",
+                "CGA-hh2q-gvvm-9gx3",
+                "CGA-hh6p-7cwc-jq66",
+                "CGA-hhpp-gmjf-m6xj",
+                "CGA-hqqq-gf45-qwqq",
+                "CGA-hvph-xp3p-cq8w",
+                "CGA-hxmx-5wgr-hhf4",
+                "CGA-j2fc-62xc-gghv",
+                "CGA-j3wx-fwjr-mcvv",
+                "CGA-j4vw-whvp-5jgf",
+                "CGA-j4w7-f2rx-qgg7",
+                "CGA-j54h-h9g9-4f32",
+                "CGA-j7jc-q6vr-4q67",
+                "CGA-jfjh-g47x-52j2",
+                "CGA-jgc7-cr25-pj56",
+                "CGA-jmh8-qfq3-hx5m",
+                "CGA-jq26-rpw3-j4vq",
+                "CGA-jqq9-64wr-ggxx",
+                "CGA-jv3v-8v55-4xv3",
+                "CGA-jv77-xj8r-j48x",
+                "CGA-jv95-x8v2-hww3",
+                "CGA-m57m-wrff-6872",
+                "CGA-m5q5-g7r2-f2rw",
+                "CGA-m77g-8gx6-xvfh",
+                "CGA-m78g-xq94-h3gv",
+                "CGA-m9pp-q898-9g58",
+                "CGA-mgq9-9h8m-p6mw",
+                "CGA-mgxc-pj4g-jp5q",
+                "CGA-mh76-5f3j-53h8",
+                "CGA-mhhr-wh2f-5wr6",
+                "CGA-mj2g-2g73-xhf7",
+                "CGA-mjgp-5cgf-8p8w",
+                "CGA-mmg6-c4j5-c72q",
+                "CGA-mvf4-v5wv-m85f",
+                "CGA-p3mm-g838-v8fg",
+                "CGA-p3wv-8h53-2hfm",
+                "CGA-p49j-g2gg-h892",
+                "CGA-p5cr-3f5q-x52x",
+                "CGA-p7f3-hwj6-2gg4",
+                "CGA-p84w-8xxg-7c4w",
+                "CGA-p9pj-2c5q-53vp",
+                "CGA-pcmg-5p64-vqhv",
+                "CGA-pg68-9cv5-cq38",
+                "CGA-pg7v-w585-jf46",
+                "CGA-pvw2-vf7p-hvqr",
+                "CGA-pw95-88v9-7qpc",
+                "CGA-pxcv-3h6p-cvx3",
+                "CGA-pxxw-qhj3-3f58",
+                "CGA-q4wq-chwp-mr49",
+                "CGA-q694-hcf3-63w6",
+                "CGA-q7f3-wcq6-fcq3",
+                "CGA-q8v7-pq46-xf26",
+                "CGA-q9m9-p9j9-g9vj",
+                "CGA-qc6h-xrfq-wppr",
+                "CGA-qhr7-r5fw-g27x",
+                "CGA-qhrp-7qwv-7hw6",
+                "CGA-qj3v-f67h-xx7v",
+                "CGA-qjg9-jjwv-xv5c",
+                "CGA-qq23-x4r8-qc75",
+                "CGA-qwfc-cqw5-v6qr",
+                "CGA-qwwx-q2h4-pq5m",
+                "CGA-qxcp-8jmf-cc9w",
+                "CGA-qxcr-857v-5pcp",
+                "CGA-r29x-h39p-8455",
+                "CGA-r436-58j4-jghr",
+                "CGA-r5jw-j266-rm5x",
+                "CGA-r5pc-cc48-6rvg",
+                "CGA-r5qv-phvj-v775",
+                "CGA-r5vq-q7x4-gmvw",
+                "CGA-r6vf-4qjv-mrhc",
+                "CGA-rf79-q5vw-cj4r",
+                "CGA-rh4j-32jj-59m3",
+                "CGA-rhwc-x7ww-2v77",
+                "CGA-rmh8-7vmp-fr93",
+                "CGA-rpqm-ggrx-ccxp",
+                "CGA-rqr4-jxg6-chr5",
+                "CGA-rqvh-82vx-5jcm",
+                "CGA-rvhg-mq98-xm8j",
+                "CGA-v2w8-3535-383x",
+                "CGA-v3cq-g4p9-888v",
+                "CGA-v5gm-5r76-p5cr",
+                "CGA-v737-x3p4-hw9g",
+                "CGA-v7gm-gqfj-8cc7",
+                "CGA-v7wh-qjcq-7qfw",
+                "CGA-v8pg-g99j-pp56",
+                "CGA-v9hm-5426-vrfx",
+                "CGA-vfgr-4fqm-w82v",
+                "CGA-vjwx-f87r-cmfj",
+                "CGA-vmmf-c34j-5cv3",
+                "CGA-vpmm-xhgv-4v6r",
+                "CGA-vqqw-j9r2-qpw9",
+                "CGA-vx3g-m66f-4mm3",
+                "CGA-vxhh-24cf-v4pg",
+                "CGA-w2q5-8jj5-cx88",
+                "CGA-w3vr-fxhc-4f7m",
+                "CGA-w3ww-h5w7-xp2m",
+                "CGA-w47w-88r5-p4gf",
+                "CGA-w4fv-7j26-mq53",
+                "CGA-w67f-g7xj-xjhv",
+                "CGA-w69m-j62x-gggr",
+                "CGA-w6p4-75fw-pr57",
+                "CGA-w76r-rh89-j85h",
+                "CGA-wcv7-7wfc-jgmh",
+                "CGA-wgvg-xm3f-h925",
+                "CGA-wh9f-q7mf-hchh",
+                "CGA-wj7j-89x6-c6wc",
+                "CGA-wjgr-c88f-ch75",
+                "CGA-wjmv-p4vm-qvm9",
+                "CGA-wmjp-f7q5-w65w",
+                "CGA-wr3c-5f8x-xpqf",
+                "CGA-ww4v-5qh8-jvpx",
+                "CGA-wwr9-qf7q-6jqm",
+                "CGA-wxvm-f23g-5xgq",
+                "CGA-x343-vm5h-f9w3",
+                "CGA-x54v-h4qh-2466",
+                "CGA-x68g-qmf2-vhpx",
+                "CGA-x69j-449j-f37g",
+                "CGA-xc48-24mh-c3jm",
+                "CGA-xc4m-6pwq-xfx2",
+                "CGA-xc4q-2ggf-44w2",
+                "CGA-xfw2-pp3q-2vr9",
+                "CGA-xm7f-47qw-j5hm",
+                "CGA-xmhx-5hq2-jjp7",
+                "CGA-xp4m-3h5r-qh7v",
+                "CGA-xv2r-75ch-26f4"
+              ],
+              "summary": "Prefix Truncation Attack against ChaCha20-Poly1305 and Encrypt-then-MAC aka Terrapin",
+              "details": "### Summary\n\nTerrapin is a prefix truncation attack targeting the SSH protocol. More precisely, Terrapin breaks the integrity of SSH's secure channel. By carefully adjusting the sequence numbers during the handshake, an attacker can remove an arbitrary amount of messages sent by the client or server at the beginning of the secure channel without the client or server noticing it.\n\n### Mitigations\n\nTo mitigate this protocol vulnerability, OpenSSH suggested a so-called \"strict kex\" which alters the SSH handshake to ensure a Man-in-the-Middle attacker cannot introduce unauthenticated messages as well as convey sequence number manipulation across handshakes.\n\n**Warning: To take effect, both the client and server must support this countermeasure.** \n\nAs a stop-gap measure, peers may also (temporarily) disable the affected algorithms and use unaffected alternatives like AES-GCM instead until patches are available.\n\n### Details\n\nThe SSH specifications of ChaCha20-Poly1305 (chacha20-poly1305@openssh.com) and Encrypt-then-MAC (*-etm@openssh.com MACs) are vulnerable against an arbitrary prefix truncation attack (a.k.a. Terrapin attack). This allows for an extension negotiation downgrade by stripping the SSH_MSG_EXT_INFO sent after the first message after SSH_MSG_NEWKEYS, downgrading security, and disabling attack countermeasures in some versions of OpenSSH. When targeting Encrypt-then-MAC, this attack requires the use of a CBC cipher to be practically exploitable due to the internal workings of the cipher mode. Additionally, this novel attack technique can be used to exploit previously unexploitable implementation flaws in a Man-in-the-Middle scenario.\n\nThe attack works by an attacker injecting an arbitrary number of SSH_MSG_IGNORE messages during the initial key exchange and consequently removing the same number of messages just after the initial key exchange has concluded. This is possible due to missing authentication of the excess SSH_MSG_IGNORE messages and the fact that the implicit sequence numbers used within the SSH protocol are only checked after the initial key exchange.\n\nIn the case of ChaCha20-Poly1305, the attack is guaranteed to work on every connection as this cipher does not maintain an internal state other than the message's sequence number. In the case of Encrypt-Then-MAC, practical exploitation requires the use of a CBC cipher; while theoretical integrity is broken for all ciphers when using this mode, message processing will fail at the application layer for CTR and stream ciphers.\n\nFor more details see [https://terrapin-attack.com](https://terrapin-attack.com). \n\n### Impact\n\nThis attack targets the specification of ChaCha20-Poly1305 (chacha20-poly1305@openssh.com) and Encrypt-then-MAC (*-etm@openssh.com), which are widely adopted by well-known SSH implementations and can be considered de-facto standard. These algorithms can be practically exploited; however, in the case of Encrypt-Then-MAC, we additionally require the use of a CBC cipher. As a consequence, this attack works against all well-behaving SSH implementations supporting either of those algorithms and can be used to downgrade (but not fully strip) connection security in case SSH extension negotiation (RFC8308) is supported. The attack may also enable attackers to exploit certain implementation flaws in a man-in-the-middle (MitM) scenario.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "russh",
+                    "purl": "pkg:cargo/russh"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.40.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-45x7-px36-x8w8/GHSA-45x7-px36-x8w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/crypto",
+                    "purl": "pkg:golang/golang.org/x/crypto"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-45x7-px36-x8w8/GHSA-45x7-px36-x8w8.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "paramiko",
+                    "purl": "pkg:pypi/paramiko"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.5.0"
+                        },
+                        {
+                          "fixed": "3.4.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.10.0",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.10.4",
+                    "2.10.5",
+                    "2.10.6",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.6.0",
+                    "2.7.0",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "3.0.0",
+                    "3.1.0",
+                    "3.2.0",
+                    "3.3.0",
+                    "3.3.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2023/12/GHSA-45x7-px36-x8w8/GHSA-45x7-px36-x8w8.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/warp-tech/russh/security/advisories/GHSA-45x7-px36-x8w8"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-48795"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ssh-mitm/ssh-mitm/issues/165"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/janmojzis/tinyssh/issues/81"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/proftpd/proftpd/issues/456"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/hierynomus/sshj/issues/916"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/paramiko/paramiko/issues/2337#issuecomment-1887642773"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/paramiko/paramiko/issues/2337"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/cyd01/KiTTY/issues/520"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PowerShell/Win32-OpenSSH/issues/2189"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mwiede/jsch/issues/457"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/apache/mina-sshd/issues/445"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/libssh2/libssh2/pull/1291"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mwiede/jsch/pull/461"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/NixOS/nixpkgs/pull/275249"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TeraTermProject/teraterm/commit/7279fbd6ef4d0c8bdd6a90af4ada2899d786eec0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/connectbot/sshlib/commit/5c8b534f6e97db7ac0e0e579331213aa25c173ab"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mscdex/ssh2/commit/97b223f8891b96d6fc054df5ab1d5a1a545da2a3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/golang/crypto/commit/9d2ee975ef9fe627bf0a6f01c1f69e8ef1d4f05d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/warp-tech/russh/commit/1aa340a7df1d5be1c0f4a9e247aade76dfdd2951"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jtesta/ssh-audit/commit/8e972c5e94b460379fe0c7d20209c16df81538a5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security-tracker.debian.org/tracker/CVE-2023-48795"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security-tracker.debian.org/tracker/source-package/libssh2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://roumenpetrov.info/secsh/#news20231220"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security-tracker.debian.org/tracker/source-package/proftpd-dfsg"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security-tracker.debian.org/tracker/source-package/trilead-ssh2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202312-16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2024-0002"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://oryx-embedded.com/download/#changelog"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://nova.app/releases/#v11.8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=38732005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=38685286"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://news.ycombinator.com/item?id=38684904"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://nest.pijul.com/pijul/thrussh/changes/D6H7OWTTMHHX6BTB3B6MNBOBX2L66CBL4LGSEUSAI2MCRCJDQFRQC"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://matt.ucc.asn.au/dropbear/CHANGES"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QI3EHAHABFQK7OABNCSF5GMYP6TONTI7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MKQRBF3DWMWPH36LBCOBUTSIZRTPEZXB"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/LZQVUHWVWRH73YBXUQJOD6CKHDQBU3DM"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/L5Y6MNNVAPIJSXJERQ6PKZVCIUXSNJK7"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KMZCVGUGJZZVDPCVDA7TEB22VUCNEXDD"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KEOTKBUPZXHE3F352JBYNTSNRXYLWD6P"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/I724O3LSRCPO4WNVIXTZCT4VVRMXMMSG"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HYEDEXIKFKTUJIN43RG4B7T5ZS6MHUSP"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.vandyke.com/products/securecrt/history.txt"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.theregister.com/2023/12/20/terrapin_attack_ssh"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.terrapin-attack.com"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.suse.com/c/suse-addresses-the-ssh-v2-protocol-terrapin-attack-aka-cve-2023-48795"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.reddit.com/r/sysadmin/comments/18idv52/cve202348795_why_is_this_cve_still_undisclosed"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.paramiko.org/changelog.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openwall.com/lists/oss-security/2023/12/20/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openwall.com/lists/oss-security/2023/12/18/2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssh.com/txt/release-9.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssh.com/openbsd.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.netsarang.com/en/xshell-update-history"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.lancom-systems.de/service-support/allgemeine-sicherheitshinweise#c243508"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.freebsd.org/security/advisories/FreeBSD-SA-23:19.openssh.asc"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5588"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.debian.org/security/2023/dsa-5586"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.crushftp.com/crush10wiki/Wiki.jsp?page=Update"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.bitvise.com/ssh-server-version-history"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.bitvise.com/ssh-client-version-history#933"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://winscp.net/eng/docs/history#6.2.2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://ubuntu.com/security/CVE-2023-48795"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://twitter.com/TrueSkrillor/status/1736774389725565005"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://thorntech.com/cve-2023-48795-and-sftp-gateway"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://support.apple.com/kb/HT214084"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240105-0004"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.gentoo.org/glsa/202312-17"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/F7EYCFQCTSGJXWO3ZZ44MGKFC5HA7G3Y"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rapier1/hpn-ssh/releases"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/proftpd/proftpd/blob/master/RELEASE_NOTES"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/proftpd/proftpd/blob/d21e7a2e47e9b38f709bec58e3fa711f759ad0e1/RELEASE_NOTES"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/proftpd/proftpd/blob/0a7ea9b0ba9fcdf368374a226370d08f10397d99/RELEASE_NOTES"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/openssh/openssh-portable/commits/master"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/net-ssh/net-ssh/blob/2e65064a52d73396bfc3806c9196fc8108f33cd8/CHANGES.txt#L14-L16"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mwiede/jsch/compare/jsch-0.2.14...jsch-0.2.15"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mkj/dropbear/blob/17657c36cce6df7716d5ff151ec09a665382d5dd/CHANGES#L25"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/erlang/otp/releases/tag/OTP-26.2.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/erlang/otp/blob/d1b43dc0f1361d2ad67601169e90a7fc50bb0369/lib/ssh/doc/src/notes.xml#L39-L42"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/drakkan/sftpgo/releases/tag/v2.5.6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/connectbot/sshlib/compare/2.2.21...2.2.22"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-45x7-px36-x8w8"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/TeraTermProject/teraterm/releases/tag/v5.1"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/PowerShell/Win32-OpenSSH/releases/tag/v9.5.0.0p1-Beta"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://git.libssh.org/projects/libssh.git/commit/?h=stable-0.10\u0026id=10e09e273f69e149389b3e0e5d44b8c221c2e7f6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://forum.netgate.com/topic/184941/terrapin-ssh-attack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://filezilla-project.org/versions.php"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://crates.io/crates/thrussh/versions"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.suse.com/show_bug.cgi?id=1217950"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2254210"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://bugs.gentoo.org/920280"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://arstechnica.com/security/2023/12/hackers-can-break-ssh-channel-integrity-using-novel-data-corruption-attack"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://access.redhat.com/security/cve/cve-2023-48795"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/CHHITS4PUOZAKFIUBQAQZC7JWXMOYE4B"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/C3AFMZ6MH2UHHOPIWT5YLSFV3D2VB3AC"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/BL5KTLOSLH2KHRN4HCXJPK3JUVLDGEL6"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/APYIXIQOVDCRWLHTGB4VYMAUIAQLKYJ3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/6Y74KVCPEPT4MVU3LHDWCNNOXOE5ZLUR"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3YQLUQWLIHDB5QCXQEX7HXHAWMOKPP5O"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3JIMLVBDWOP4FUPXPTB4PGHHIOMGFLQE"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/3CAYYW35MUTNO65RVAELICTNZZFMT2XS"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/33XHJUB6ROFUOH2OQNENFROTVH6MHSHA"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/04/msg00016.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00014.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2024/01/msg00013.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.debian.org/debian-lts-announce/2023/12/msg00017.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jadaptive.com/important-java-ssh-security-update-new-ssh-vulnerability-discovered-cve-2023-48795"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://help.panic.com/releasenotes/transmit5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/qA3XtxvMUyg"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/-n5WqVC18LQ"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/issue/64784"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://go.dev/cl/550715"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://gitlab.com/libssh/libssh-mirror/-/tags"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/warp-tech/russh/releases/tag/v0.40.2"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/warp-tech/russh"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ronf/asyncssh/tags"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/ronf/asyncssh/blob/develop/docs/changes.rst"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://packetstormsecurity.com/files/176280/Terrapin-SSH-Connection-Weakening.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://seclists.org/fulldisclosure/2024/Mar/21"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/12/18/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/12/19/5"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2023/12/20/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/03/06/3"
+                },
+                {
+                  "type": "WEB",
+                  "url": "http://www.openwall.com/lists/oss-security/2024/04/17/8"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-345",
+                  "CWE-354"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2023-12-18T19:22:09Z",
+                "nvd_published_at": "2023-12-18T16:15:10Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-15T22:00:20Z",
+              "published": "2023-12-18T21:18:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2023-2402",
+              "aliases": [
+                "CVE-2023-48795",
+                "GHSA-45x7-px36-x8w8"
+              ],
+              "summary": "Man-in-the-middle attacker can compromise integrity of secure channel in golang.org/x/crypto",
+              "details": "A protocol weakness allows a MITM attacker to compromise the integrity of the secure channel before it is established, allowing the attacker to prevent transmission of a number of messages immediately after the secure channel is established without either side being aware.\n\nThe impact of this attack is relatively limited, as it does not compromise confidentiality of the channel. Notably this attack would allow an attacker to prevent the transmission of the SSH2_MSG_EXT_INFO message, disabling a handful of newer security features.\n\nThis protocol weakness was also fixed in OpenSSH 9.6.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "golang.org/x/crypto",
+                    "purl": "pkg:golang/golang.org/x/crypto"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.17.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2023-2402.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "golang.org/x/crypto/ssh",
+                        "symbols": [
+                          "Client.Dial",
+                          "Client.DialContext",
+                          "Client.DialTCP",
+                          "Client.Listen",
+                          "Client.ListenTCP",
+                          "Client.ListenUnix",
+                          "Client.NewSession",
+                          "Dial",
+                          "DiscardRequests",
+                          "NewClient",
+                          "NewClientConn",
+                          "NewServerConn",
+                          "Request.Reply",
+                          "Session.Close",
+                          "Session.CombinedOutput",
+                          "Session.Output",
+                          "Session.RequestPty",
+                          "Session.RequestSubsystem",
+                          "Session.Run",
+                          "Session.SendRequest",
+                          "Session.Setenv",
+                          "Session.Shell",
+                          "Session.Signal",
+                          "Session.Start",
+                          "Session.WindowChange",
+                          "channel.Accept",
+                          "channel.Close",
+                          "channel.CloseWrite",
+                          "channel.Read",
+                          "channel.ReadExtended",
+                          "channel.Reject",
+                          "channel.SendRequest",
+                          "channel.Write",
+                          "channel.WriteExtended",
+                          "connectionState.readPacket",
+                          "connectionState.writePacket",
+                          "curve25519sha256.Client",
+                          "curve25519sha256.Server",
+                          "dhGEXSHA.Client",
+                          "dhGEXSHA.Server",
+                          "dhGroup.Client",
+                          "dhGroup.Server",
+                          "ecdh.Client",
+                          "ecdh.Server",
+                          "extChannel.Read",
+                          "extChannel.Write",
+                          "handshakeTransport.enterKeyExchange",
+                          "handshakeTransport.readLoop",
+                          "handshakeTransport.sendKexInit",
+                          "mux.OpenChannel",
+                          "mux.SendRequest",
+                          "sessionStdin.Close",
+                          "sshClientKeyboardInteractive.Challenge",
+                          "tcpListener.Accept",
+                          "tcpListener.Close",
+                          "transport.readPacket",
+                          "transport.writePacket",
+                          "unixListener.Accept",
+                          "unixListener.Close"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/64784"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/550715"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/golang/crypto/commit/9d2ee975ef9fe627bf0a6f01c1f69e8ef1d4f05d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-announce/c/qA3XtxvMUyg"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.openssh.com/txt/release-9.6"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Fabian Bäumer (Ruhr University Bochum)"
+                },
+                {
+                  "name": "Marcus Brinkmann (Ruhr University Bochum)"
+                },
+                {
+                  "name": "Jörg Schwenk (Ruhr University Bochum)"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2023-2402"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-45x7-px36-x8w8",
+                "GO-2023-2402"
+              ],
+              "aliases": [
+                "CVE-2023-48795",
+                "GHSA-45x7-px36-x8w8",
+                "GO-2023-2402"
+              ],
+              "max_severity": "5.9"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

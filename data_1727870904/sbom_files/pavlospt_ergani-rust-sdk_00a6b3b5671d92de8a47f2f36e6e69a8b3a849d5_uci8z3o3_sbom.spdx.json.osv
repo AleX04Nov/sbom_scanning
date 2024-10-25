@@ -1,0 +1,384 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/pavlospt_ergani-rust-sdk_00a6b3b5671d92de8a47f2f36e6e69a8b3a849d5_uci8z3o3_sbom.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "openssl",
+            "version": "0.10.64",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-22T17:34:53Z",
+              "published": "2024-07-22T17:34:53Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q445-7m23-qrmw",
+              "related": [
+                "CGA-258f-538f-r23g",
+                "CGA-5rm6-834r-w797",
+                "CGA-8h9x-542r-q5h9",
+                "CGA-8pf9-6852-jjrp",
+                "CGA-9rq2-7hpq-g65f",
+                "CGA-wc5p-vj8w-jm26"
+              ],
+              "summary": "openssl's `MemBio::get_buf` has undefined behavior with empty buffers",
+              "details": "Previously, `MemBio::get_buf` called `slice::from_raw_parts` with a null-pointer, which violates the functions invariants, leading to undefined behavior. In debug builds this would produce an assertion failure. This is now fixed.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "openssl",
+                    "purl": "pkg:cargo/openssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.10.66"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-q445-7m23-qrmw/GHSA-q445-7m23-qrmw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sfackler/rust-openssl/pull/2266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sfackler/rust-openssl/commit/aef36e0f3950653148d6644309ee41ccf16e02bb"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/sfackler/rust-openssl"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sfackler/rust-openssl/releases/tag/openssl-v0.10.66"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0357.html"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-476"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-22T17:34:53Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-21T17:28:48Z",
+              "published": "2024-07-21T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0357",
+              "summary": "`MemBio::get_buf` has undefined behavior with empty buffers",
+              "details": "Previously, `MemBio::get_buf` called `slice::from_raw_parts` with a null-pointer, which violates the functions invariants, leading to undefined behavior. In debug builds this would produce an assertion failure. This is now fixed.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "openssl",
+                    "purl": "pkg:cargo/openssl"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.10.66"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0357.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [
+                        "openssl::bio::MemBio::get_buf"
+                      ],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/openssl"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0357.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/sfackler/rust-openssl/pull/2266"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-q445-7m23-qrmw"
+              ],
+              "aliases": [
+                "GHSA-q445-7m23-qrmw"
+              ],
+              "max_severity": "6.9"
+            },
+            {
+              "ids": [
+                "RUSTSEC-2024-0357"
+              ],
+              "aliases": [
+                "RUSTSEC-2024-0357"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "h2",
+            "version": "0.4.3",
+            "ecosystem": "crates.io"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-04-11T16:41:43Z",
+              "published": "2024-04-05T15:05:32Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-q6cp-qfwq-4gcv",
+              "aliases": [
+                "RUSTSEC-2024-0332"
+              ],
+              "related": [
+                "CGA-7fxq-h3g4-vjvf",
+                "CGA-c89c-rjjg-7xff",
+                "CGA-pwww-2g56-2xx7"
+              ],
+              "summary": "h2 servers vulnerable to degradation of service with CONTINUATION Flood",
+              "details": "An attacker can send a flood of CONTINUATION frames, causing `h2` to process them indefinitely. This results in an increase in CPU usage.\n\nTokio task budget helps prevent this from a complete denial-of-service, as the server can still respond to legitimate requests, albeit with increased latency.\n\nMore details at https://seanmonstar.com/blog/hyper-http2-continuation-flood/.\n\nPatches available for 0.4.x and 0.3.x versions.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.3.26"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-q6cp-qfwq-4gcv/GHSA-q6cp-qfwq-4gcv.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.4.0"
+                        },
+                        {
+                          "fixed": "0.4.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-q6cp-qfwq-4gcv/GHSA-q6cp-qfwq-4gcv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/hyperium/h2"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0332.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seanmonstar.com/blog/hyper-http2-continuation-flood"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://www.kb.cert.org/vuls/id/421644"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400",
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-05T15:05:32Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-04-11T16:41:43Z",
+              "published": "2024-04-03T12:00:00Z",
+              "schema_version": "1.6.0",
+              "id": "RUSTSEC-2024-0332",
+              "aliases": [
+                "GHSA-q6cp-qfwq-4gcv"
+              ],
+              "summary": "Degradation of service in h2 servers with CONTINUATION Flood",
+              "details": "An attacker can send a flood of CONTINUATION frames, causing `h2` to process them indefinitely.\nThis results in an increase in CPU usage.\n\nTokio task budget helps prevent this from a complete denial-of-service, as the server can still\nrespond to legitimate requests, albeit with increased latency.\n\nMore details at \"https://seanmonstar.com/blog/hyper-http2-continuation-flood/.\n\nPatches available for 0.4.x and 0.3.x versions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "crates.io",
+                    "name": "h2",
+                    "purl": "pkg:cargo/h2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0.0.0-0"
+                        },
+                        {
+                          "fixed": "0.3.26"
+                        },
+                        {
+                          "introduced": "0.4.0-0"
+                        },
+                        {
+                          "fixed": "0.4.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "categories": [
+                      "denial-of-service"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "source": "https://github.com/rustsec/advisory-db/blob/osv/crates/RUSTSEC-2024-0332.json"
+                  },
+                  "ecosystem_specific": {
+                    "affected_functions": null,
+                    "affects": {
+                      "arch": [],
+                      "functions": [],
+                      "os": []
+                    }
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "PACKAGE",
+                  "url": "https://crates.io/crates/h2"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://rustsec.org/advisories/RUSTSEC-2024-0332.html"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://seanmonstar.com/blog/hyper-http2-continuation-flood/"
+                }
+              ],
+              "database_specific": {
+                "license": "CC0-1.0"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-q6cp-qfwq-4gcv",
+                "RUSTSEC-2024-0332"
+              ],
+              "aliases": [
+                "GHSA-q6cp-qfwq-4gcv",
+                "RUSTSEC-2024-0332"
+              ],
+              "max_severity": "5.3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

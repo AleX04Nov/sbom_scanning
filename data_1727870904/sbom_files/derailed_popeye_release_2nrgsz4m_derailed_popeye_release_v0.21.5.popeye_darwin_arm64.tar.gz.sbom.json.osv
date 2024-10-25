@@ -1,0 +1,385 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/derailed_popeye_release_2nrgsz4m_derailed_popeye_release_v0.21.5.popeye_darwin_arm64.tar.gz.sbom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/aws/aws-sdk-go",
+            "version": "v1.55.5",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2022-02-11T23:26:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0646",
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9"
+              ],
+              "summary": "Use of risky cryptographic algorithm in github.com/aws/aws-sdk-go",
+              "details": "The Go AWS S3 Crypto SDK contains vulnerabilities that can permit an attacker with write access to a bucket to decrypt files in that bucket.\n\nFiles encrypted by the V1 EncryptionClient using either the AES-CBC content cipher or the KMS key wrap algorithm are vulnerable. Users should migrate to the V1 EncryptionClientV2 API, which will not create vulnerable files. Old files will remain vulnerable until re-encrypted with the new client.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aws/aws-sdk-go",
+                    "purl": "pkg:golang/github.com/aws/aws-sdk-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0646.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aws/aws-sdk-go/service/s3/s3crypto",
+                        "symbols": [
+                          "NewDecryptionClient",
+                          "NewEncryptionClient"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://aws.amazon.com/blogs/developer/updates-to-the-amazon-s3-encryption-client/?s=09"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/pull/3403"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/commit/ae9b9fd92af132cfd8d879809d8611825ba135f4"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Sophie Schmieg from the Google ISE team"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2022-0646"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2022-0646"
+              ],
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9",
+                "GO-2022-0646"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "stdlib",
+            "version": "1.23.0",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-09-10T08:12:19Z",
+              "published": "2024-09-06T19:15:23Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-3105",
+              "aliases": [
+                "BIT-golang-2024-34155",
+                "CVE-2024-34155"
+              ],
+              "summary": "Stack exhaustion in all Parse functions in go/parser",
+              "details": "Calling any of the Parse functions on Go source code which contains deeply nested literals can cause a panic due to stack exhaustion.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22.7"
+                        },
+                        {
+                          "introduced": "1.23.0-0"
+                        },
+                        {
+                          "fixed": "1.23.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-3105.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "go/parser",
+                        "symbols": [
+                          "ParseDir",
+                          "ParseExpr",
+                          "ParseExprFrom",
+                          "ParseFile",
+                          "parser.parseLiteralValue"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/611238"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/69138"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/S9POB9NCTdk"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-3105"
+              }
+            },
+            {
+              "modified": "2024-09-10T08:12:21Z",
+              "published": "2024-09-06T19:15:23Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-3106",
+              "aliases": [
+                "BIT-golang-2024-34156",
+                "CVE-2024-34156"
+              ],
+              "related": [
+                "CVE-2022-30635"
+              ],
+              "summary": "Stack exhaustion in Decoder.Decode in encoding/gob",
+              "details": "Calling Decoder.Decode on a message which contains deeply nested structures can cause a panic due to stack exhaustion. This is a follow-up to CVE-2022-30635.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22.7"
+                        },
+                        {
+                          "introduced": "1.23.0-0"
+                        },
+                        {
+                          "fixed": "1.23.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-3106.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "encoding/gob",
+                        "symbols": [
+                          "Decoder.Decode",
+                          "Decoder.DecodeValue",
+                          "Decoder.decIgnoreOpFor"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/611239"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/69139"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/S9POB9NCTdk"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Md Sakib Anwar of The Ohio State University (anwar.40@osu.edu)"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-3106"
+              }
+            },
+            {
+              "modified": "2024-09-10T08:12:21Z",
+              "published": "2024-09-06T19:15:23Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-3107",
+              "aliases": [
+                "BIT-golang-2024-34158",
+                "CVE-2024-34158"
+              ],
+              "summary": "Stack exhaustion in Parse in go/build/constraint",
+              "details": "Calling Parse on a \"// +build\" build tag line with deeply nested expressions can cause a panic due to stack exhaustion.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "stdlib",
+                    "purl": "pkg:golang/stdlib"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "1.22.7"
+                        },
+                        {
+                          "introduced": "1.23.0-0"
+                        },
+                        {
+                          "fixed": "1.23.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-3107.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "go/build/constraint",
+                        "symbols": [
+                          "Parse",
+                          "exprParser.not",
+                          "parsePlusBuildExpr"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "FIX",
+                  "url": "https://go.dev/cl/611240"
+                },
+                {
+                  "type": "REPORT",
+                  "url": "https://go.dev/issue/69141"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://groups.google.com/g/golang-dev/c/S9POB9NCTdk"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-3107"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2024-3105"
+              ],
+              "aliases": [
+                "BIT-golang-2024-34155",
+                "CVE-2024-34155",
+                "GO-2024-3105"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GO-2024-3106"
+              ],
+              "aliases": [
+                "BIT-golang-2024-34156",
+                "CVE-2024-34156",
+                "GO-2024-3106"
+              ],
+              "max_severity": ""
+            },
+            {
+              "ids": [
+                "GO-2024-3107"
+              ],
+              "aliases": [
+                "BIT-golang-2024-34158",
+                "CVE-2024-34158",
+                "GO-2024-3107"
+              ],
+              "max_severity": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

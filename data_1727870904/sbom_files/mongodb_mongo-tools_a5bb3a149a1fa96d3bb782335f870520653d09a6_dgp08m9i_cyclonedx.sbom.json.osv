@@ -1,0 +1,297 @@
+{
+  "results": [
+    {
+      "source": {
+        "path": "/home/ooe/sbom_scanning/v2/data_1727870904/sbom_files/mongodb_mongo-tools_a5bb3a149a1fa96d3bb782335f870520653d09a6_dgp08m9i_cyclonedx.sbom.json",
+        "type": "sbom"
+      },
+      "packages": [
+        {
+          "package": {
+            "name": "github.com/aws/aws-sdk-go",
+            "version": "v1.53.11",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-05-20T16:03:47Z",
+              "published": "2022-02-11T23:26:26Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2022-0646",
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9"
+              ],
+              "summary": "Use of risky cryptographic algorithm in github.com/aws/aws-sdk-go",
+              "details": "The Go AWS S3 Crypto SDK contains vulnerabilities that can permit an attacker with write access to a bucket to decrypt files in that bucket.\n\nFiles encrypted by the V1 EncryptionClient using either the AES-CBC content cipher or the KMS key wrap algorithm are vulnerable. Users should migrate to the V1 EncryptionClientV2 API, which will not create vulnerable files. Old files will remain vulnerable until re-encrypted with the new client.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/aws/aws-sdk-go",
+                    "purl": "pkg:golang/github.com/aws/aws-sdk-go"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2022-0646.json"
+                  },
+                  "ecosystem_specific": {
+                    "imports": [
+                      {
+                        "path": "github.com/aws/aws-sdk-go/service/s3/s3crypto",
+                        "symbols": [
+                          "NewDecryptionClient",
+                          "NewEncryptionClient"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://aws.amazon.com/blogs/developer/updates-to-the-amazon-s3-encryption-client/?s=09"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/pull/3403"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/aws/aws-sdk-go/commit/ae9b9fd92af132cfd8d879809d8611825ba135f4"
+                }
+              ],
+              "credits": [
+                {
+                  "name": "Sophie Schmieg from the Google ISE team"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2022-0646"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GO-2022-0646"
+              ],
+              "aliases": [
+                "CVE-2020-8911",
+                "CVE-2020-8912",
+                "GHSA-7f33-f4f5-xwgw",
+                "GHSA-f5pg-7wfw-84q9",
+                "GO-2022-0646"
+              ],
+              "max_severity": ""
+            }
+          ]
+        },
+        {
+          "package": {
+            "name": "github.com/mongodb/mongo-tools",
+            "version": "",
+            "ecosystem": "Go"
+          },
+          "vulnerabilities": [
+            {
+              "modified": "2024-07-03T21:05:45Z",
+              "published": "2022-05-24T17:47:06Z",
+              "schema_version": "1.6.0",
+              "id": "GHSA-6cwm-wm82-hgrw",
+              "aliases": [
+                "CVE-2020-7924",
+                "GO-2024-2550"
+              ],
+              "summary": "MongoDB Tools Improper Certificate Validation vulnerability",
+              "details": "Usage of specific command line parameter in MongoDB Tools which was originally intended to just skip hostname checks, may result in MongoDB skipping all certificate validation. This may result in accepting invalid certificates.This issue affects: MongoDB Inc. MongoDB Database Tools 3.6 versions later than 3.6.5; 3.6 versions prior to 3.6.21; 4.0 versions prior to 4.0.21; 4.2 versions prior to 4.2.11; 100 versions prior to 100.2.0. MongoDB Inc. Mongomirror 0 versions later than 0.6.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/mongodb/mongo-tools",
+                    "purl": "pkg:golang/github.com/mongodb/mongo-tools"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "100.0.0"
+                        },
+                        {
+                          "fixed": "100.2.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://github.com/github/advisory-database/blob/main/advisories/github-reviewed/2022/05/GHSA-6cwm-wm82-hgrw/GHSA-6cwm-wm82-hgrw.json"
+                  }
+                }
+              ],
+              "severity": [
+                {
+                  "type": "CVSS_V3",
+                  "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7924"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://github.com/mongodb/mongo-tools/commit/8c1800b5155084f954a39a1f2f259efac3bb86de"
+                },
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-6cwm-wm82-hgrw"
+                },
+                {
+                  "type": "PACKAGE",
+                  "url": "https://github.com/mongodb/mongo-tools"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/TOOLS-2587"
+                }
+              ],
+              "database_specific": {
+                "cwe_ids": [
+                  "CWE-295"
+                ],
+                "github_reviewed": true,
+                "github_reviewed_at": "2024-02-13T20:32:52Z",
+                "nvd_published_at": "2021-04-12T17:15:00Z",
+                "severity": "MODERATE"
+              }
+            },
+            {
+              "modified": "2024-07-09T19:33:56Z",
+              "published": "2024-06-28T15:28:53Z",
+              "schema_version": "1.6.0",
+              "id": "GO-2024-2550",
+              "aliases": [
+                "CVE-2020-7924",
+                "GHSA-6cwm-wm82-hgrw"
+              ],
+              "summary": "MongoDB Tools Improper Certificate Validation vulnerability in github.com/mongodb/mongo-tools",
+              "details": "Usage of specific command line parameter in MongoDB Tools which was originally intended to just skip hostname checks, may result in MongoDB skipping all certificate validation. This may result in accepting invalid certificates.\n\nNOTE: this module uses its own versioning scheme that is not fully compatible with standard Go module versioning, so the affected versions in this report may differ from the versions listed in other advisories.\n\nAccording to the advisory, the affected versions are as follows: MongoDB Inc. MongoDB Database Tools 3.6 versions later than 3.6.5; 3.6 versions prior to 3.6.21; 4.0 versions prior to 4.0.21; 4.2 versions prior to 4.2.11; 100 versions prior to 100.2.0. MongoDB Inc. Mongomirror 0 versions later than 0.6.0.",
+              "affected": [
+                {
+                  "package": {
+                    "ecosystem": "Go",
+                    "name": "github.com/mongodb/mongo-tools",
+                    "purl": "pkg:golang/github.com/mongodb/mongo-tools"
+                  },
+                  "ranges": [
+                    {
+                      "type": "SEMVER",
+                      "events": [
+                        {
+                          "introduced": "0"
+                        },
+                        {
+                          "fixed": "0.0.0-20200819165540-8c1800b51550"
+                        }
+                      ]
+                    }
+                  ],
+                  "database_specific": {
+                    "source": "https://vuln.go.dev/ID/GO-2024-2550.json"
+                  },
+                  "ecosystem_specific": {
+                    "custom_ranges": [
+                      {
+                        "events": [
+                          {
+                            "introduced": "3.6.5"
+                          },
+                          {
+                            "fixed": "3.6.21"
+                          },
+                          {
+                            "introduced": "4.0.0"
+                          },
+                          {
+                            "fixed": "4.0.21"
+                          },
+                          {
+                            "introduced": "4.2.0"
+                          },
+                          {
+                            "fixed": "4.2.11"
+                          },
+                          {
+                            "introduced": "100.0.0"
+                          },
+                          {
+                            "fixed": "100.2.0"
+                          }
+                        ],
+                        "type": "ECOSYSTEM"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "ADVISORY",
+                  "url": "https://github.com/advisories/GHSA-6cwm-wm82-hgrw"
+                },
+                {
+                  "type": "FIX",
+                  "url": "https://github.com/mongodb/mongo-tools/commit/8c1800b5155084f954a39a1f2f259efac3bb86de"
+                },
+                {
+                  "type": "WEB",
+                  "url": "https://jira.mongodb.org/browse/TOOLS-2587"
+                }
+              ],
+              "database_specific": {
+                "review_status": "REVIEWED",
+                "url": "https://pkg.go.dev/vuln/GO-2024-2550"
+              }
+            }
+          ],
+          "groups": [
+            {
+              "ids": [
+                "GHSA-6cwm-wm82-hgrw",
+                "GO-2024-2550"
+              ],
+              "aliases": [
+                "CVE-2020-7924",
+                "GHSA-6cwm-wm82-hgrw",
+                "GO-2024-2550"
+              ],
+              "max_severity": "6.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "experimental_config": {
+    "licenses": {
+      "summary": false,
+      "allowlist": null
+    }
+  }
+}

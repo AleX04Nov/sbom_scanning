@@ -1,0 +1,93 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:2de997bf-8fca-4708-9427-034336020e6e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-10-07T08:20:07.242254+00:00",
+    "tools": [
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-bom",
+        "version": "3.11.2"
+      },
+      {
+        "vendor": "CycloneDX",
+        "name": "cyclonedx-python-lib",
+        "version": "3.1.5",
+        "externalReferences": [
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+            "type": "build-system"
+          },
+          {
+            "url": "https://pypi.org/project/cyclonedx-python-lib/",
+            "type": "distribution"
+          },
+          {
+            "url": "https://cyclonedx.github.io/cyclonedx-python-lib/",
+            "type": "documentation"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+            "type": "issue-tracker"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+            "type": "license"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+            "type": "release-notes"
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+            "type": "vcs"
+          },
+          {
+            "url": "https://cyclonedx.org",
+            "type": "website"
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "dc311d33-3aee-4c54-bae7-2eae27d516e9",
+      "name": "geotiff",
+      "version": "0.2.10",
+      "purl": "pkg:pypi/geotiff@0.2.10"
+    },
+    {
+      "type": "library",
+      "bom-ref": "0e1afc6d-92f8-4edf-bf9f-c8db722be723",
+      "name": "pyshp",
+      "version": "2.3.1",
+      "purl": "pkg:pypi/pyshp@2.3.1"
+    },
+    {
+      "type": "library",
+      "bom-ref": "8c77e716-3628-4c35-b28b-7934ef5f2503",
+      "name": "typer",
+      "version": "0.9.0",
+      "purl": "pkg:pypi/typer@0.9.0"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "dc311d33-3aee-4c54-bae7-2eae27d516e9",
+      "dependsOn": []
+    },
+    {
+      "ref": "0e1afc6d-92f8-4edf-bf9f-c8db722be723",
+      "dependsOn": []
+    },
+    {
+      "ref": "8c77e716-3628-4c35-b28b-7934ef5f2503",
+      "dependsOn": []
+    }
+  ]
+}

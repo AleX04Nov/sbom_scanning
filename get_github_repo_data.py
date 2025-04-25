@@ -169,7 +169,17 @@ async def get_info(author, repo, repo_object) -> None:
             latest_artifact_commit_sha = ''
             the_biggest_artifact = {}
             for artifact in artifacts['artifacts']:
-                if artifact['workflow_run']['head_branch'] != repo_object['default_branch']:
+                # we need to do those checks, because enountered with this error:
+                #     if artifact['workflow_run']['head_branch'] != repo_object['default_branch']:
+                # TypeError: 'NoneType' object is not subscriptable
+                # and we dont know in what variable the None is stored
+                if artifact is None:
+                    continue
+                if artifact.get('workflow_run', None) is None:
+                    continue
+                if repo_object is None:
+                    continue
+                if artifact.get('workflow_run').get('head_branch', -1) != repo_object['default_branch']:
                     continue
                 if artifact['expired']:
                     continue
@@ -194,32 +204,91 @@ async def get_info(author, repo, repo_object) -> None:
         else:
             repo_object['artifacts'] = []
 
-    checked_repos_count += 1
-    if checked_repos_count % 100 == 0:
-        print(f"Checked {checked_repos_count}/{repos_to_check_count} repositories")
-        dump_repo_info(f"repos_info_dump_{checked_repos_count}.json")
+        checked_repos_count += 1
+        if checked_repos_count % 100 == 0:
+            print(f"Checked {checked_repos_count}/{repos_to_check_count} repositories")
+            dump_repo_info(f"repos_info_dump_{checked_repos_count}.json")
 
     return
 
 
 
 async def get_info_all(repos_to_check: list[str]) -> dict:
-    global repo_info
+    global repo_info, data_folder, dump_folder, checked_repos_count
     # asyncio gather list of tasks
     tasks = []
     repo_info = {}
-    #repos_already_checked = []
 
+    # Find the latest dump file in the dump_folder
+    dump_path = os.path.join(data_folder, dump_folder)
+    if os.path.exists(dump_path) and os.path.isdir(dump_path):
+        print(f"Looking for latest repository information in: {dump_path}")
+        
+        # Find all files matching the dump pattern
+        dump_files = []
+        for filename in os.listdir(dump_path):
+            if filename.startswith("repos_info_dump_") and filename.endswith(".json"):
+                try:
+                    # Extract the number part from filename
+                    count_str = filename.replace("repos_info_dump_", "").replace(".json", "")
+                    count = int(count_str)
+                    dump_files.append((count, filename))
+                except ValueError:
+                    continue
+
+        num_repos = 0
+        # Sort by count (descending) and get the latest
+        if dump_files:
+            dump_files.sort(reverse=True)
+            latest_count, latest_filename = dump_files[0]
+            latest_dump_path = os.path.join(dump_path, latest_filename)
+            
+            print(f"Found latest dump file: {latest_filename} with count {latest_count}")
+            
+            # Load the data from this file
+            try:
+                with open(latest_dump_path, 'r') as f:
+                    repo_info = json.load(f)
+                    
+                    # Update checked_repos_count to continue from where we left off
+                    checked_repos_count = latest_count
+                    print(f"Loaded repository info from dump file. Continuing from repo count: {checked_repos_count}")
+
+                    for author in repo_info:
+                        for repo in repo_info[author]:
+                            # Check if the repository is in the repos_to_check list
+                            num_repos += 1
+                    
+            except Exception as e:
+                print(f"Error loading dump file {latest_dump_path}: {str(e)}")
+                # Reset repo_info if loading failed
+                repo_info = {}
+    
+    processed_repos = 0
+    skipped_repos = 0
+    # Process repositories that weren't found in the dump file
     for repo_link in repos_to_check:
+        processed_repos += 1
+
         # remove the "https://" from the beginning of the repo name
         repo_link = repo_link[8:] if repo_link.startswith("https://") else repo_link
         # get the author and repo name
         author, repo_name = repo_link.split('/')[1:]
-        # init the repo_info dict
+        
+        # init the repo_info dict for repositories not in dump files
         if author not in repo_info:
             repo_info[author] = {}
+        # Skip if this repository was already processed
+        if repo_info[author].get(repo_name, None) is not None:
+            skipped_repos += 1
+            continue 
         repo_info[author][repo_name] = {}
+        
+        # Add task to process this repository
         tasks.append(get_info(author, repo_name, repo_info[author][repo_name]))
+
+    print("Processed repos ", processed_repos)
+    print("Skipped repos ", skipped_repos)
 
     await asyncio.gather(*tasks, return_exceptions=False)
 
@@ -248,6 +317,7 @@ async def main(folder='', github_token='') -> dict:
             github_token = f.readline().strip()
 
     repos_to_check = []
+    '''
     # read top1k repos
     filename = 'top1k_repos'
     filename = os.path.join(data_folder, 'popular_repos', filename)
@@ -257,6 +327,7 @@ async def main(folder='', github_token='') -> dict:
     for repo in top1k_repos:
         # remove the "https://" from the beginning of the repo name
         repos_to_check.append(repo[8:] if repo.startswith("https://") else repo)
+    '''
 
     # read repos from sourcegraph_init_repos
     filename = 'sourcegraph_init_repos'
@@ -266,6 +337,18 @@ async def main(folder='', github_token='') -> dict:
         sourcegraph_init_repos = json.load(f)
     repos_to_check.extend(sourcegraph_init_repos)
     repos_to_check = list(set(repos_to_check))
+
+    '''
+    # read repos from may 2023 run (previous SG configuration)
+    filename = 'may_2023_repos'
+    filename = os.path.join(data_folder, filename)
+    # open and read json data from file
+    with open(filename, 'r') as f:
+        sourcegraph_init_repos = json.load(f)
+    repos_to_check.extend(sourcegraph_init_repos)
+    repos_to_check = list(set(repos_to_check))
+    '''
+
     # sort the repos
     repos_to_check.sort()
     repos_to_check_count = len(repos_to_check)

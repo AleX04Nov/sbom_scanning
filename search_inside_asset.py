@@ -2,6 +2,7 @@ import os
 import re
 import tarfile
 import zipfile
+from os import WCONTINUED
 from shutil import ReadError
 from zipfile import ZipFile
 from py7zr import unpack_7zarchive, UnsupportedCompressionMethodError
@@ -23,18 +24,23 @@ spdx_spdx_and_filters       = [re.compile(regex_filter, re.I) for regex_filter i
 spdx_spdx_file_filters      = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_SPDX_FILE_FILTERS]
 spdx_rdf_filters            = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_RDF_FILTERS]
 spdx_rdf_file_filters       = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_RDF_FILE_FILTERS]
+spdx_3_filters              = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_3_FILTERS]
+spdx_3_file_filters         = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_3_FILE_FILTERS]
 spdx_generic_filters        = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_GENERIC_FILTERS]
 spdx_generic_file_filters   = [re.compile(regex_filter, re.I) for regex_filter in utils.SPDX_GENERIC_FILE_FILTERS]
 cyclonedx_xml_filters       = [re.compile(regex_filter, re.I) for regex_filter in utils.CYCLONEDX_XML_FILTERS]
 cyclonedx_xml_file_filters  = [re.compile(regex_filter, re.I) for regex_filter in utils.CYCLONEDX_XML_FILE_FILTERS]
 cyclonedx_json_filters      = [re.compile(regex_filter, re.I) for regex_filter in utils.CYCLONEDX_JSON_FILTERS]
 cyclonedx_json_file_filters = [re.compile(regex_filter, re.I) for regex_filter in utils.CYCLONEDX_JSON_FILE_FILTERS]
+sbom_whitleist_extensions   = [re.compile(regex_filter, re.I) for regex_filter in utils.SBOM_WHITELIST_EXTENSIONS]
+sbom_name_whitelist_no_extensions = [re.compile(regex_filter, re.I) for regex_filter in utils.SBOM_NAME_WHITELIST_NO_EXTENSIONS]
 
 SBOM_TYPES_LIST = [
     'spdx_yaml',
     'spdx_json',
     'spdx_spdx',
     'spdx_rdf',
+    'spdx_3',
     'spdx_generic',
     'cyclonedx_xml',
     'cyclonedx_json',
@@ -42,8 +48,20 @@ SBOM_TYPES_LIST = [
 
 ARCHIVE_EXTENSIONS = [".zip", ".tar", ".tgz", ".7z", ".rar", ".gz", ".xz"]
 
+filtered_files_not_sbom_count = 0
+filtered_files_not_wild_sbom_count = 0
+
 
 async def check_spdx_file_with_re(filepath, content_filters, file_filters, and_filters) -> bool:
+    # check if file has whitelist extension
+    # get filename
+    filename = os.path.basename(filepath)
+    if all(regex_filter.search(filename) is None for regex_filter in sbom_whitleist_extensions):
+        return False
+    if all(regex_filter.search(filename) is None for regex_filter in sbom_name_whitelist_no_extensions):
+        return False
+
+    # check if the file is not filtered by the format file filters
     if any(path_filter.match(filepath) is not None for path_filter in file_filters):
         async with aiofiles.open(filepath, "r", errors='ignore') as f:
             content = await f.read()
@@ -57,6 +75,18 @@ async def check_spdx_file_with_re(filepath, content_filters, file_filters, and_f
 
 
 async def check_file_with_re(filepath, content_filters, file_filters) -> bool:
+    # check if file has whitelist extension
+    # get filename
+    filename = os.path.basename(filepath)
+    if all(regex_filter.search(filename) is None for regex_filter in sbom_whitleist_extensions):
+        return False
+
+    # if file has no extension, then check if it is in the whitelist
+    if len(filename.split('.')) == 1:
+        if all(regex_filter.search(filename) is None for regex_filter in sbom_name_whitelist_no_extensions):
+            return False
+
+    # check if the file is not filtered by the format file filters
     if any(path_filter.match(filepath) is not None for path_filter in file_filters):
         async with aiofiles.open(filepath, "r", errors='ignore') as f:
             content = await f.read()
@@ -74,30 +104,44 @@ async def check_file(filepath) -> str:
         return SBOM_TYPES_LIST[2]
     if await check_file_with_re(filepath, spdx_rdf_filters, spdx_rdf_file_filters):
         return SBOM_TYPES_LIST[3]
-    if await check_file_with_re(filepath, spdx_generic_filters, spdx_generic_file_filters):
+    if await check_file_with_re(filepath, spdx_3_filters, spdx_3_file_filters):
         return SBOM_TYPES_LIST[4]
-    if await check_file_with_re(filepath, cyclonedx_xml_filters, cyclonedx_xml_file_filters):
+    if await check_file_with_re(filepath, spdx_generic_filters, spdx_generic_file_filters):
         return SBOM_TYPES_LIST[5]
-    if await check_file_with_re(filepath, cyclonedx_json_filters, cyclonedx_json_file_filters):
+    if await check_file_with_re(filepath, cyclonedx_xml_filters, cyclonedx_xml_file_filters):
         return SBOM_TYPES_LIST[6]
+    if await check_file_with_re(filepath, cyclonedx_json_filters, cyclonedx_json_file_filters):
+        return SBOM_TYPES_LIST[7]
     return ''
 
 
 # Dont extract archives recursively
 async def check_directory_on_sbom(directory):
+    global filtered_files_not_sbom_count, filtered_files_not_wild_sbom_count
+
     sbom_files = []
+    fixtures_sbom_files = []
     directory = os.path.abspath(directory)
     # find all files with json extension in the current directory
     for root, dirs, files in os.walk(directory):
         for file in files:
             full_file_path = os.path.join(root, file)
             full_file_path_abs = os.path.abspath(full_file_path)
+
+            # check if directory has write permissions
+            # if not then add the permission to the directory
+            # without this permission we cannot delete the directory and files
+            current_dir = os.path.dirname(full_file_path_abs)
+            if not os.access(current_dir, os.W_OK):
+                os.chmod(current_dir, 0o755)
+
             # remove part of directory path from the full path
             full_file_path = full_file_path_abs.replace(directory + '/', "")
-            if any(path_filter.match(full_file_path) is not None for path_filter in global_file_filters):
-                continue
 
-            # IM DUMB. JUST IN CASE SEVERAL CHECKS
+            filtered_path = False
+            if any(path_filter.match(full_file_path) is not None for path_filter in global_file_filters):
+                filtered_path = True
+
             # if the is a link, skip it
             if os.path.islink(full_file_path_abs):
                 continue
@@ -108,12 +152,21 @@ async def check_directory_on_sbom(directory):
             sbom_type = await check_file(full_file_path_abs)
             if sbom_type:
                 sbom_file = {"path": full_file_path, "type": sbom_type}
-                sbom_files.append(sbom_file)
-    return sbom_files
+                if filtered_path:
+                    filtered_files_not_wild_sbom_count += 1
+                    fixtures_sbom_files.append(sbom_file)
+                else:
+                    sbom_files.append(sbom_file)
+            else:
+                filtered_files_not_sbom_count += 1
+    return sbom_files, fixtures_sbom_files
 
 
-async def main(data_folder, asset_to_check_path: str, asset_name: str) -> tuple[bool, list[dict]]:
+async def main(data_folder, asset_to_check_path: str, asset_name: str) -> tuple[bool, list[dict], list[dict]]:
+    global filtered_files_not_sbom_count
+
     detected_sboms = []
+    fixture_sboms = []
 
     # get current unpack formats
     # add 7zip to the list of unpack formats
@@ -149,46 +202,54 @@ async def main(data_folder, asset_to_check_path: str, asset_name: str) -> tuple[
                 if not unpacked:
                     print(f"Could not extract the archive: {asset_to_check_path}")
                     if not os.path.exists(unpacked_dir):
-                        return False, []
+                        return False, [], []
             except Exception as e:
                 print(f"Error: {e}")
                 print(f"Could not extract the archive: {asset_to_check_path}")
                 if not os.path.exists(unpacked_dir):
-                    return False, []
+                    return False, [], []
         except UnsupportedCompressionMethodError as e:
             if "py7zr" in e.args[1]:
                 # check if unpacked_dir exists
                 # because sometimes this tool can extract at least some data
                 if not os.path.exists(unpacked_dir):
-                    return False, []
+                    return False, [], []
         except Exception as e:
             print(f"Error: {e}")
             print(f"Could not extract the archive: {asset_to_check_path}")
             if not os.path.exists(unpacked_dir):
-                return False, []
+                return False, [], []
         # check if unpacked_dir exists
         # because some archives may be empty
         if not os.path.exists(unpacked_dir):
-            return False, []
+            return False, [], []
         # check if unpacked_dir contains only one folder
         # if it does, then check the files in that folder
         # if it does not, then check the files in the unpacked_dir
+        # we need this to maintain the correct file path for the sbom from the archive
         unpacked_dir_contents = os.listdir(unpacked_dir)
         if len(unpacked_dir_contents) == 1 and os.path.isdir(os.path.join(unpacked_dir, unpacked_dir_contents[0])):
-            detected_sboms = await check_directory_on_sbom(os.path.join(unpacked_dir, unpacked_dir_contents[0]))
+            detected_sboms, fixture_sboms = await check_directory_on_sbom(os.path.join(unpacked_dir, unpacked_dir_contents[0]))
         else:
-            detected_sboms = await check_directory_on_sbom(unpacked_dir)
+            detected_sboms, fixture_sboms = await check_directory_on_sbom(unpacked_dir)
         # Remove folder after check
         # check if unpacked_dir exists
         # because some archives may be empty
         if os.path.exists(unpacked_dir):
-            await aioshutil.rmtree(unpacked_dir)
+            try:
+                await aioshutil.rmtree(unpacked_dir)
+            except Exception as e:
+                print(f"Error: {e}")
+                print(f"Could not remove the folder: {unpacked_dir}")
     else:
         # if this is not an archive, then check the file
         sbom_type = await check_file(asset_to_check_path)
         if sbom_type:
             detected_sboms = [{"path": asset_name, "type": sbom_type}]
-    return True, detected_sboms
+        else:
+            filtered_files_not_sbom_count += 1
+
+    return True, detected_sboms, fixture_sboms
 
 
 if __name__ == '__main__':

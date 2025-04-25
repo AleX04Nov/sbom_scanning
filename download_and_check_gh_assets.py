@@ -9,8 +9,10 @@ import aiofiles as aiof
 import aiohttp
 import gidgethub.aiohttp
 
+import search_inside_asset
 import utils
 from search_inside_asset import main as search_inside_asset_main
+#from search_inside_asset import filtered_files_not_sbom_count, filtered_files_not_wild_sbom_count
 
 DOWNLOADED_ASSET_FILE_LOCK = asyncio.Lock()
 DOWNLOADED_ASSET_FILE_NAME = 'downloaded_assets.txt'
@@ -90,6 +92,8 @@ async def send_gh_request(url: str) -> dict:
                     return {}
                 elif 'Repository access blocked' in e.args[0]:
                     return {}
+                elif 'No commit found for SHA:' in e.args[0]:
+                    return {}
                 else:
                     print(f"Error: {e.args[0]}")
                 time_to_sleep = random.uniform(MIN_TIMEOUT, MAX_TIMEOUT)
@@ -106,16 +110,16 @@ async def download_gh_file(url: str, filepath: str) -> int:
     conn_refused_count = 0
     async with DOWNLOAD_SEM:
         while True:
-            if conn_refused_count > 30:
+            if conn_refused_count > 15:
                 print(f"Connection refused error count exceeded 15 times. Stopping download {url}")
                 return 0
             try:
                 time_to_sleep = random.uniform(MIN_TIMEOUT, MAX_TIMEOUT)
                 await asyncio.sleep(time_to_sleep)
-                async with session.get(url, timeout=None, headers={
+                async with session.get(url, timeout=30*60, headers={
                     'Accept': 'application/vnd.github.v3.raw',
                     'Authorization': f'Bearer {gh_token}',
-                    'X-GitHub-Api-Version': '2022-11-28'
+                    'X-GitHub-Api-Version': '2022-11-28',
                 }) as response:
                     async with aiof.open(filepath, 'wb') as f:
                         await f.write(await response.read())
@@ -132,6 +136,8 @@ async def download_gh_file(url: str, filepath: str) -> int:
                 # check if the file exists and remove it
                 if os.path.exists(filepath):
                     os.remove(filepath)
+                time_to_sleep = random.uniform(MIN_TIMEOUT, MAX_TIMEOUT)
+                await asyncio.sleep(time_to_sleep)
                 continue
             except Exception as e:
                 print(f"Error: {e}")
@@ -177,11 +183,21 @@ def add_full_checked_repo(repo_url: str):
     with open(os.path.join(dump_folder, 'full_checked_repos.json'), 'w') as f:
         json.dump(full_checked_repos, f, indent=4)
 
+    # make dump of assets_info
+    dump_data = [{}, assets_info]
+    dump_data[0]['filtered_files_not_sbom_count'] = search_inside_asset.filtered_files_not_sbom_count
+    dump_data[0]['filtered_files_not_wild_sbom_count'] = search_inside_asset.filtered_files_not_wild_sbom_count
+
+    # if the number of checked repos is a multiple of 100, save the dump in a new file
     if len(full_checked_repos) % 100 == 0:
         print(f"Checked {len(full_checked_repos)} repos")
-        # make dump of assets_info
         with open(os.path.join(dump_folder, f'assets_info_{len(full_checked_repos)}.json'), 'w') as f:
-            json.dump(assets_info, f, indent=4)
+            json.dump(dump_data, f, indent=4)
+    elif len(full_checked_repos) > 100:
+        last_dump_name = len(full_checked_repos) - len(full_checked_repos) % 100
+        # save the dump in the same file
+        with open(os.path.join(dump_folder, f'assets_info_{last_dump_name}.json'), 'w') as f:
+            json.dump(dump_data, f, indent=4)
 
 
 async def download_and_check_sourcecode_repo(author, repo, repo_info, assets_info):
@@ -202,11 +218,17 @@ async def download_and_check_sourcecode_repo(author, repo, repo_info, assets_inf
         # get latest commit hash
         get_latest_commit_info_url = f"/repos/{author}/{repo}/commits/{default_branch}?per_page=1"
         latest_commit_info = await send_gh_request(get_latest_commit_info_url)
-        latest_commit_hash = latest_commit_info['sha']
+        latest_commit_hash = latest_commit_info.get('sha')
+        if latest_commit_hash is None:
+            print(f"Failed to get latest commit hash for {author}/{repo} at {default_branch}")
+            print(f"/repos/{author}/{repo}/commits/{default_branch}?per_page=1")
+            add_failed_sourcecode_repo(f"github.com/{author}/{repo}")
+            return
         sourcecode_info['sha'] = latest_commit_hash
         sourcecode_info['branch'] = default_branch
         sourcecode_info['url'] = repo_code_url
         sourcecode_info['sboms'] = []
+        sourcecode_info['fixture_sboms'] = []
 
         # download source code archive
         # prepare folder for source code
@@ -228,9 +250,10 @@ async def download_and_check_sourcecode_repo(author, repo, repo_info, assets_inf
                 os.remove(sourcecode_archive_path)
             return
         # check archive with asset SBOM detector
-        res_bool, detected_sboms = await search_inside_asset_main(data_folder, sourcecode_archive_path, sourcecode_archive_filename)
+        res_bool, detected_sboms, fixture_sboms = await search_inside_asset_main(data_folder, sourcecode_archive_path, sourcecode_archive_filename)
         if res_bool:
             sourcecode_info['sboms'].extend(detected_sboms)
+            sourcecode_info['fixture_sboms'].extend(fixture_sboms)
         else:
             add_failed_sourcecode_repo(f"github.com/{author}/{repo}")
 
@@ -265,6 +288,7 @@ async def download_and_check_assets_repo(author, repo, repo_info, assets_info):
 
                 artifact_info['url'] = artifact['download_url']
                 artifact_info['sboms'] = []
+                artifact_info['fixture_sboms'] = []
 
                 # download artifact
                 artifact_url = artifact['download_url']
@@ -288,9 +312,10 @@ async def download_and_check_assets_repo(author, repo, repo_info, assets_info):
                     continue
 
                 # check artifact with asset SBOM detector
-                res_bool, detected_sboms = await search_inside_asset_main(data_folder, artifact_path, artifact_filename)
+                res_bool, detected_sboms, fixture_sboms = await search_inside_asset_main(data_folder, artifact_path, artifact_filename)
                 if res_bool:
                     artifact['sboms'] = detected_sboms
+                    artifact['fixture_sboms'] = fixture_sboms
                 else:
                     add_failed_asset(artifact_url)
 
@@ -314,6 +339,7 @@ async def download_and_check_assets_repo(author, repo, repo_info, assets_info):
 
                 release_info['url'] = release_file['download_url']
                 release_info['sboms'] = []
+                release_info['fixture_sboms'] = []
 
                 # download release
                 release_url = release_file['download_url']
@@ -331,9 +357,10 @@ async def download_and_check_assets_repo(author, repo, repo_info, assets_info):
                     continue
 
                 # check release with asset SBOM detector
-                res_bool, detected_sboms = await search_inside_asset_main(data_folder, release_path, release_filename)
+                res_bool, detected_sboms, fixture_sboms = await search_inside_asset_main(data_folder, release_path, release_filename)
                 if res_bool:
                     release_info['sboms'] = detected_sboms
+                    release_info['fixture_sboms'] = fixture_sboms
                 else:
                     add_failed_asset(release_url)
 
@@ -402,6 +429,10 @@ async def main(folder='', github_token=''):
         print("Waiting for reset...")
 
     assets_info = await download_and_check_assets_all(repos_info)
+
+    print("Finished downloading and checking assets")
+    print(f"Filtered files not SBOM count: {search_inside_asset.filtered_files_not_sbom_count}")
+    print(f"Filtered files not wild SBOM count: {search_inside_asset.filtered_files_not_wild_sbom_count}")
 
     # save assets_info to file
     with open(os.path.join(data_folder, 'assets_info.json'), 'w') as f:

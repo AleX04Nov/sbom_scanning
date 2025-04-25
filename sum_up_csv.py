@@ -499,6 +499,7 @@ async def get_csv_from_cyclonedx_xml(sbom, repo_name):
             '''
 
     if sbom.get('sbomqs_file'):
+        sbom_sbomqs_processed = True
         sbomqs_file_path = os.path.join(sbom_folder, sbom["sbomqs_file"].split('/')[-1])
         sbom_quality = sbomqs_get_quality(sbomqs_file_path)
 
@@ -599,6 +600,8 @@ async def get_csv_from_cyclonedx_xml(sbom, repo_name):
                             if license_name:
                                 csv_licenses_list.append(license_name)
                 break
+            if license_obj is None:
+                continue
             license_name = license_obj.get('id', '')
             if license_name:
                 csv_licenses_list.append(license_name)
@@ -658,6 +661,8 @@ async def get_csv_from_cyclonedx_xml(sbom, repo_name):
         relationship_types = []
 
         checksum_list = dependency.get('hashes', {})
+        if checksum_list is None:
+            checksum_list = {}
         checksum_list = checksum_list.get('hash', [])
         if isinstance(checksum_list, dict):
             checksum_list = [checksum_list]
@@ -783,6 +788,7 @@ async def get_csv_from_spdx_rdf(sbom, repo_name):
             '''
 
     if sbom.get('sbomqs_file'):
+        sbom_sbomqs_processed = True
         sbomqs_file_path = os.path.join(sbom_folder, sbom["sbomqs_file"].split('/')[-1])
         sbom_quality = sbomqs_get_quality(sbomqs_file_path)
 
@@ -1045,6 +1051,7 @@ async def get_csv_from_spdx_json(sbom, repo_name):
             '''
 
     if sbom.get('sbomqs_file'):
+        sbom_sbomqs_processed = True
         sbomqs_file_path = os.path.join(sbom_folder, sbom["sbomqs_file"].split('/')[-1])
         sbom_quality = sbomqs_get_quality(sbomqs_file_path)
 
@@ -1316,6 +1323,7 @@ async def get_csv_from_spdx_yaml(sbom, repo_name):
             '''
 
     if sbom.get('sbomqs_file'):
+        sbom_sbomqs_processed = True
         sbomqs_file_path = os.path.join(sbom_folder, sbom["sbomqs_file"].split('/')[-1])
         sbom_quality = sbomqs_get_quality(sbomqs_file_path)
 
@@ -1560,6 +1568,7 @@ async def get_csv_from_spdx_spdx(sbom, repo_name):
             '''
 
     if sbom.get('sbomqs_file'):
+        sbom_sbomqs_processed = True
         sbomqs_file_path = os.path.join(sbom_folder, sbom["sbomqs_file"].split('/')[-1])
         sbom_quality = sbomqs_get_quality(sbomqs_file_path)
 
@@ -1922,6 +1931,7 @@ async def main(folder=''):
                             sbom_per_language[language] += 1
                             sbom_repo_language = language
                             detected = True
+                            print(github_url, language)
                             break
                     if not detected:
                         sbom_repo_language = 'other'

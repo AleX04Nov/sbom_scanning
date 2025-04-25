@@ -148,6 +148,8 @@ async def main():
                 # if repo name starts with 'github.com', add it to the list
                 if repo_name.startswith('github.com'):
                     gh_repos.append(repo_name)
+        # remove duplicates
+        gh_repos = list(set(gh_repos))
         # save the repos to a file
         with open(os.path.join(data_folder, 'sourcegraph_init_repos'), 'w') as f:
             json.dump(gh_repos, f, indent=4)
@@ -169,7 +171,7 @@ async def main():
                 new_assets = []
                 for asset in assets_info[author][repo]['assets']:
                     # if there are no sboms, remove the asset
-                    if len(asset['sboms']) > 0:
+                    if len(asset.get('sboms', [])) > 0:
                         new_assets.append(asset)
                 assets_info[author][repo]['assets'] = new_assets
                 # if there are no assets, remove the repo
